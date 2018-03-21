@@ -1,0 +1,1521 @@
+
+
+U-Boot 2016.11+fslc+g80c3bd6 (Jan 02 2018 - 11:32:06 +0100)
+
+CPU:   Freescale i.MX6Q rev1.5 at 792 MHz
+Reset cause: POR
+I2C:   ready
+DRAM:  2 GiB
+PMIC:  device id: 0x10, revision id: 0x21, programmed
+M“j:   FSL_SDHC: 0, FSL_SDHC: 1, FSL_SDHC: 2
+auto-detected panel vga-rgb
+Display: vga-rgb (640x480)
+In:    serial
+Out:   serial
+Err:   serial
+Model: Toradex Apalis iMX6 Quad 2GB IT V1.1C, Serial# 05139699
+Net:   using PHY at 7
+FEC [PRIME]
+Hit any key to stop autoboot:  1  0 
+Booting from internal eMMC chip...
+reading imx6q-apalis-ixora-v1_1.dtb
+48970 bytes read in 22 ms (2.1 MiB/s)
+reading uImage
+5943928 bytes read in 172 ms (33 MiB/s)
+## Booting kernel from Legacy Image at 10800000 ...
+   Image Name:   Linux-4.1.41-v2.7b1+g82f0f4f
+   Image Type:   ARM Linux Kernel Image (uncompressed)
+   Data Size:    5943864 Bytes = 5.7 MiB
+   Load Address: 10008000
+   Entry Point:  10008000
+   Verifying Checksum ... OK
+## Flattened Device Tree blob at 12000000
+   Booting using the fdt blob at 0x12000000
+   Loading Kernel Image ... OK
+   Using Device Tree in place at 12000000, end 1200ef49
+
+Starting kernel ...
+
+[    0.000000] Booting Linux on physical CPU 0x0
+[    0.000000] Initializing cgroup subsys cpu
+[    0.000000] Initializing cgroup subsys cpuacct
+[    0.000000] Linux version 4.1.41-v2.7b1+g82f0f4f (behlingc@mplan-ubuntu-1610-dev) (gcc version 5.3.0 (GCC) ) #1 SMP Wed Jan 31 17:39:36 CET 2018
+[    0.000000] CPU: ARMv7 Processor [412fc09a] revision 10 (ARMv7), cr=10c5387d
+[    0.000000] CPU: PIPT / VIPT nonaliasing data cache, VIPT aliasing instruction cache
+[    0.000000] Machine model: Toradex Apalis iMX6Q/D Module on Ixora V1.1 Carrier Board
+[    0.000000] Reserved memory: created CMA memory pool at 0x62000000, size 320 MiB
+[    0.000000] Reserved memory: initialized node linux,cma, compatible id shared-dma-pool
+[    0.000000] Memory policy: Data cache writealloc
+[    0.000000] PERCPU: Embedded 12 pages/cpu @d0efd000 s16908 r8192 d24052 u49152
+[    0.000000] Built 1 zonelists in Zone order, mobility grouping on.  Total pages: 521024
+[    0.000000] Kernel command line: enable_wait_mode=off vmalloc=400M ip=off root=/dev/mmcblk0p2 rw,noatime rootfstype=ext4 rootwait fec_mac=00:14:2d:4e:6c:f3 consoleblank=0 no_console_suspend=1 console=tty1 console=ttymxc0,115200n8 mxc_hdmi.only_cea=1 video=mxcfb1:dev=hdmi,1920x1080M@60,if=RGB24 video=mxcfb0:dev=ldb,800x480M@60,if=RGB666 video=mxcfb2:off video=mxcfb3:off fbmem=32M
+[    0.000000] PID hash table entries: 4096 (order: 2, 16384 bytes)
+[    0.000000] Dentry cache hash table entries: 262144 (order: 8, 1048576 bytes)
+[    0.000000] Inode-cache hash table entries: 131072 (order: 7, 524288 bytes)
+[    0.000000] Memory: 1738972K/2097152K available (7679K kernel code, 330K rwdata, 2648K rodata, 372K init, 423K bss, 30500K reserved, 327680K cma-reserved, 425984K highmem)
+[    0.000000] Virtual kernel memory layout:
+[    0.000000]     vector  : 0xffff0000 - 0xffff1000   (   4 kB)
+[    0.000000]     fixmap  : 0xffc00000 - 0xfff00000   (3072 kB)
+[    0.000000]     vmalloc : 0xe6800000 - 0xff000000   ( 392 MB)
+[    0.000000]     lowmem  : 0x80000000 - 0xe6000000   (1632 MB)
+[    0.000000]     pkmap   : 0x7fe00000 - 0x80000000   (   2 MB)
+[    0.000000]     modules : 0x7f000000 - 0x7fe00000   (  14 MB)
+[    0.000000]       .text : 0x80008000 - 0x80a1e0a4   (10329 kB)
+[    0.000000]       .init : 0x80a1f000 - 0x80a7c000   ( 372 kB)
+[    0.000000]       .data : 0x80a7c000 - 0x80ace8c0   ( 331 kB)
+[    0.000000]        .bss : 0x80ad1000 - 0x80b3ae1c   ( 424 kB)
+[    0.000000] SLUB: HWalign=64, Order=0-3, MinObjects=0, CPUs=4, Nodes=1
+[    0.000000] Hierarchical RCU implementation.
+[    0.000000] NR_IRQS:16 nr_irqs:16 16
+[    0.000000] L2C-310 erratum 769419 enabled
+[    0.000000] L2C-310 enabling early BRESP for Cortex-A9
+[    0.000000] L2C-310 full line of zeros enabled for Cortex-A9
+[    0.000000] L2C-310 ID prefetch enabled, offset 16 lines
+[    0.000000] L2C-310 dynamic clock gating enabled, standby mode enabled
+[    0.000000] L2C-310 cache controller enabled, 16 ways, 1024 kB
+[    0.000000] L2C-310: CACHE_ID 0x410000c7, AUX_CTRL 0x76470001
+[    0.000000] mxc_clocksource_init 3000000
+[    0.000000] Switching to timer-based delay loop, resolution 333ns
+[    0.000006] sched_clock: 32 bits at 3000kHz, resolution 333ns, wraps every 715827882841ns
+[    0.000023] clocksource mxc_timer1: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 637086815595 ns
+[    0.001225] Console: colour dummy device 80x30
+[    0.001871] console [tty1] enabled
+[    0.001899] Calibrating delay loop (skipped), value calculated using timer frequency.. 6.00 BogoMIPS (lpj=30000)
+[    0.001943] pid_max: default: 32768 minimum: 301
+[    0.002058] Mount-cache hash table entries: 4096 (order: 2, 16384 bytes)
+[    0.002087] Mountpoint-cache hash table entries: 4096 (order: 2, 16384 bytes)
+[    0.002674] Initializing cgroup subsys freezer
+[    0.002713] Initializing cgroup subsys debug
+[    0.002766] CPU: Testing write buffer coherency: ok
+[    0.003041] Setting up static identity map for 0x10008280 - 0x100082d8
+[    0.006325] Brought up 4 CPUs
+[    0.006361] SMP: Total of 4 processors activated (24.00 BogoMIPS).
+[    0.006385] CPU: All CPU(s) started in SVC mode.
+[    0.006875] devtmpfs: initialized
+[    0.019410] VFP support v0.3: implementor 41 architecture 3 part 30 variant 9 rev 4
+[    0.019847] clocksource jiffies: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 19112604462750000 ns
+[    0.019904] futex hash table entries: 1024 (order: 4, 65536 bytes)
+[    0.039702] pinctrl core: initialized pinctrl subsystem
+[    0.040968] NET: Registered protocol family 16
+[    0.049338] DMA: preallocated 256 KiB pool for atomic coherent allocations
+[    0.079659] cpuidle: using governor ladder
+[    0.109653] cpuidle: using governor menu
+[    0.110047] CPU identified as i.MX6Q, silicon rev 1.5
+[    0.134587] hw-breakpoint: found 5 (+1 reserved) breakpoint and 1 watchpoint registers.
+[    0.134636] hw-breakpoint: maximum watchpoint size is 4 bytes.
+[    0.135761] imx6q-pinctrl 20e0000.iomuxc: initialized IMX pinctrl driver
+[    0.137742] imx-gpc 20dc000.gpc: no fsl,ldo-bypass found!
+[    0.147955] mxs-dma 110000.dma-apbh: initialized
+[    0.150472] usb_host_vbus: supplied by usb_host_vbus_hub
+[    0.150828] vgaarb: loaded
+[    0.151655] SCSI subsystem initialized
+[    0.152156] usbcore: registered new interface driver usbfs
+[    0.152250] usbcore: registered new interface driver hub
+[    0.152352] usbcore: registered new device driver usb
+[    0.152582] 2000000.aips-bus:usbphy_nop1 supply vcc not found, using dummy regulator
+[    0.152761] 2000000.aips-bus:usbphy_nop2 supply vcc not found, using dummy regulator
+[    0.153536] i2c-gpio i2c@0: using pins 80 (SDA) and 62 (SCL)
+[    0.154404] i2c i2c-1: IMX I2C adapter registered
+[    0.154439] i2c i2c-1: can't use DMA
+[    0.155999] stmpe-i2c 2-0041: stmpe811 detected, chip id: 0x811
+[    0.157939] i2c i2c-2: IMX I2C adapter registered
+[    0.157977] i2c i2c-2: can't use DMA
+[    0.158456] i2c i2c-3: IMX I2C adapter registered
+[    0.158490] i2c i2c-3: can't use DMA
+[    0.158652] Linux video capture interface: v2.00
+[    0.158726] pps_core: LinuxPPS API ver. 1 registered
+[    0.158750] pps_core: Software ver. 5.3.6 - Copyright 2005-2007 Rodolfo Giometti <giometti@linux.it>
+[    0.158803] PTP clock support registered
+[    0.179702] imx-ipuv3 2400000.ipu: IPU DMFC NORMAL mode: 1(0~1), 5B(4,5), 5F(6,7)
+[    0.199699] imx-ipuv3 2800000.ipu: IPU DMFC NORMAL mode: 1(0~1), 5B(4,5), 5F(6,7)
+[    0.200630] mxc_mipi_csi2 21dc000.mipi_csi: i.MX MIPI CSI2 driver probed ipu0 csi1
+[    0.200676] mxc_mipi_csi2 21dc000.mipi_csi: i.MX MIPI CSI2 dphy version is 0x3130302a
+[    0.200790] MIPI CSI2 driver module loaded
+[    0.201080] Advanced Linux Sound Architecture Driver Initialized.
+[    0.202331] Bluetooth: Core ver 2.20
+[    0.202394] NET: Registered protocol family 31
+[    0.202415] Bluetooth: HCI device and connection manager initialized
+[    0.202444] Bluetooth: HCI socket layer initialized
+[    0.202475] Bluetooth: L2CAP socket layer initialized
+[    0.202522] Bluetooth: SCO socket layer initialized
+[    0.203121] Switched to clocksource mxc_timer1
+[    0.213923] NET: Registered protocol family 2
+[    0.214702] TCP established hash table entries: 16384 (order: 4, 65536 bytes)
+[    0.214876] TCP bind hash table entries: 16384 (order: 5, 131072 bytes)
+[    0.215138] TCP: Hash tables configured (established 16384 bind 16384)
+[    0.215232] UDP hash table entries: 1024 (order: 3, 32768 bytes)
+[    0.215326] UDP-Lite hash table entries: 1024 (order: 3, 32768 bytes)
+[    0.215588] NET: Registered protocol family 1
+[    0.215911] RPC: Registered named UNIX socket transport module.
+[    0.215943] RPC: Registered udp transport module.
+[    0.215963] RPC: Registered tcp transport module.
+[    0.215982] RPC: Registered tcp NFSv4.1 backchannel transport module.
+[    0.216768] CPU PMU: Failed to parse /soc/pmu/interrupt-affinity[0]
+[    0.216839] hw perfevents: enabled with armv7_cortex_a9 PMU driver, 7 counters available
+[    0.217877] imx rpmsg driver is registered.
+[    0.218923] Bus freq driver module loaded
+[    0.225922] VFS: Disk quotas dquot_6.6.0
+[    0.226118] VFS: Dquot-cache hash table entries: 1024 (order 0, 4096 bytes)
+[    0.227178] squashfs: version 4.0 (2009/01/31) Phillip Lougher
+[    0.227971] NFS: Registering the id_resolver key type
+[    0.228027] Key type id_resolver registered
+[    0.228050] Key type id_legacy registered
+[    0.228093] nfs4filelayout_init: NFSv4 File Layout Driver Registering...
+[    0.228615] ntfs: driver 2.1.32 [Flags: R/W].
+[    0.229101] fuse init (API version 7.23)
+[    0.233264] bounce: pool size: 64 pages
+[    0.233306] io scheduler noop registered
+[    0.233333] io scheduler deadline registered
+[    0.233501] io scheduler cfq registered (default)
+[    0.236257] backlight supply power not found, using dummy regulator
+[    0.237881] MIPI DSI driver module loaded
+[    0.239259] 20e0000.hdmi_video supply HDMI not found, using dummy regulator
+[    0.240744] fbcvt: 800x480@60: CVT Name - .384M9
+[    0.240790] mxc_sdc_fb fb@0: registered mxc display driver ldb
+[    0.244905] mxc_sdc_fb fb@0: 800x480 h_sync,r,l: 72,24,96  v_sync,l,u: 7,3,10 pixclock=29500000 Hz
+[    0.266807] mxc_hdmi 20e0000.hdmi_video: Detected HDMI controller 0x13:0xa:0xa0:0xc1
+[    0.266866] fbcvt: 1920x1080@60: CVT Name - 2.073M9
+[    0.266986] mxc_sdc_fb fb@1: registered mxc display driver hdmi
+[    0.282248] mxc_sdc_fb fb@1: 1920x1080 h_sync,r,l: 44,88,148  v_sync,l,u: 5,4,36 pixclock=148500000 Hz
+[    0.293205] imx-ipuv3 2400000.ipu: IPU DMFC DP HIGH RESOLUTION: 1(0,1), 5B(2~5), 5F(6,7)
+[    0.296877] mxc_sdc_fb fb@2: mxcfb2 is turned off!
+[    0.296970] mxc_sdc_fb fb@3: mxcfb3 is turned off!
+[    0.298478] imx-sdma 20ec000.sdma: no iram assigned, using external mem
+[    0.298901] imx-sdma 20ec000.sdma: no event needs to be remapped
+[    0.299205] imx-sdma 20ec000.sdma: loaded firmware 3.3
+[    0.301800] imx-sdma 20ec000.sdma: initialized
+[    0.303495] pfuze100-regulator 2-0008: Full layer: 2, Metal layer: 1
+[    0.304132] pfuze100-regulator 2-0008: FAB: 0, FIN: 0
+[    0.304160] pfuze100-regulator 2-0008: pfuze100 found.
+[    0.318714] 2020000.serial: ttymxc0 at MMIO 0x2020000 (irq = 26, base_baud = 5000000) is a IMX
+[    1.225202] console [ttymxc0] enabled
+[    1.229739] 21e8000.serial: ttymxc1 at MMIO 0x21e8000 (irq = 301, base_baud = 5000000) is a IMX
+[    1.239000] 21f0000.serial: ttymxc3 at MMIO 0x21f0000 (irq = 302, base_baud = 5000000) is a IMX
+[    1.248238] 21f4000.serial: ttymxc4 at MMIO 0x21f4000 (irq = 303, base_baud = 5000000) is a IMX
+[    1.258983] [drm] Initialized drm 1.1.0 20060810
+[    1.264100] [drm] Initialized vivante 1.0.0 20120216 on minor 0
+[    1.278177] brd: module loaded
+[    1.286326] loop: module loaded
+[    1.290752] ahci-imx 2200000.sata: fsl,transmit-level-mV not specified, using 00000024
+[    1.298760] ahci-imx 2200000.sata: fsl,transmit-boost-mdB not specified, using 00000480
+[    1.306825] ahci-imx 2200000.sata: fsl,transmit-atten-16ths not specified, using 00002000
+[    1.315055] ahci-imx 2200000.sata: fsl,receive-eq-mdB not specified, using 05000000
+[    1.326242] ahci-imx 2200000.sata: SSS flag set, parallel bus scan disabled
+[    1.333299] ahci-imx 2200000.sata: AHCI 0001.0300 32 slots 1 ports 3 Gbps 0x1 impl platform mode
+[    1.342126] ahci-imx 2200000.sata: flags: ncq sntf stag pm led clo only pmp pio slum part ccc apst 
+[    1.352640] scsi host0: ahci-imx
+[    1.356224] ata1: SATA max UDMA/133 mmio [mem 0x02200000-0x02203fff] port 0x100 irq 313
+[    1.367605] spi_imx 2008000.ecspi: probed
+[    1.372564] vcan: Virtual CAN interface driver
+[    1.377095] CAN device driver interface
+[    1.381202] 2090000.flexcan supply xceiver not found, using dummy regulator
+[    1.388996] flexcan 2090000.flexcan: device registered (reg_base=e6aa8000, irq=35)
+[    1.396747] 2094000.flexcan supply xceiver not found, using dummy regulator
+[    1.404444] flexcan 2094000.flexcan: device registered (reg_base=e6ab0000, irq=36)
+[    1.413213] 2188000.ethernet supply phy not found, using dummy regulator
+[    1.433540] pps pps0: new PPS source ptp0
+[    1.438797] libphy: fec_enet_mii_bus: probed
+[    1.444884] fec 2188000.ethernet eth0: registered PHC device 0
+[    1.451015] PPP generic driver version 2.4.2
+[    1.455566] ehci_hcd: USB 2.0 'Enhanced' Host Controller (EHCI) Driver
+[    1.462127] ehci-pci: EHCI PCI platform driver
+[    1.466686] ehci-mxc: Freescale On-Chip EHCI Host driver
+[    1.472227] usbcore: registered new interface driver usb-storage
+[    1.478416] usbcore: registered new interface driver usbserial
+[    1.484334] usbcore: registered new interface driver usbserial_generic
+[    1.490923] usbserial: USB Serial support registered for generic
+[    1.497015] usbcore: registered new interface driver ftdi_sio
+[    1.502826] usbserial: USB Serial support registered for FTDI USB Serial Device
+[    1.510241] usbcore: registered new interface driver option
+[    1.515886] usbserial: USB Serial support registered for GSM modem (1-port)
+[    1.522911] usbcore: registered new interface driver pl2303
+[    1.528558] usbserial: USB Serial support registered for pl2303
+[    1.535870] 2184800.usbmisc supply vbus-wakeup not found, using dummy regulator
+[    1.555005] ci_hdrc ci_hdrc.1: EHCI Host Controller
+[    1.559943] ci_hdrc ci_hdrc.1: new USB bus registered, assigned bus number 1
+[    1.583160] ci_hdrc ci_hdrc.1: USB 2.0 started, EHCI 1.00
+[    1.589376] hub 1-0:1.0: USB hub found
+[    1.593231] hub 1-0:1.0: 1 port detected
+[    1.598154] mousedev: PS/2 mouse device common for all mice
+[    1.604352] [PENMOUNT] Loading penmount_i2c V1.15.0
+[    1.609400] [PENMOUNT] Probing for device ...
+[    1.633087] [PENMOUNT] PM2204.D01.1.0.0
+[    1.639834] [PENMOUNT] Supports 5 touch contacts
+[    1.647359] [PENMOUNT] Supports WD mode
+[    1.651215] [PENMOUNT] Supports WP mode
+[    1.657952] [PENMOUNT] Use WP mode !
+[    1.664440] [PENMOUNT] Sensitivity Level : 0 (max: 2)
+[    1.672378] [PENMOUNT] irq already specified !!
+[    1.677084] [PENMOUNT] Using IRQ 219
+[    1.680919] input: PenMount I2C Touch Screen as /devices/soc0/soc/2100000.aips-bus/21a0000.i2c/i2c-1/1-0038/input/input0
+[    1.692333] input: PenMount I2C Touch Key as /devices/soc0/soc/2100000.aips-bus/21a0000.i2c/i2c-1/1-0038/input/input1
+[    1.706522] rtc-ds1307 1-0068: rtc core: registered m41t0 as rtc0
+[    1.713163] ata1: SATA link down (SStatus 0 SControl 300)
+[    1.713324] snvs_rtc 20cc000.snvs:snvs-rtc-lp: rtc core: registered 20cc000.snvs:snvs-r as rtc1
+[    1.713463] i2c /dev entries driver
+[    1.715208] mxc_v4l2_output v4l2_out: V4L2 device registered as video16
+[    1.715365] mxc_v4l2_output v4l2_out: V4L2 device registered as video17
+[    1.715528] mxc_v4l2_output v4l2_out: V4L2 device registered as video18
+[    1.715690] mxc_v4l2_output v4l2_out: V4L2 device registered as video19
+[    1.717803] imx2-wdt 20bc000.wdog: timeout 60 sec (nowayout=0)
+[    1.718035] usbcore: registered new interface driver btusb
+[    1.718234] sdhci: Secure Digital Host Controller Interface driver
+[    1.718236] sdhci: Copyright(c) Pierre Ossman
+[    1.718245] sdhci-pltfm: SDHCI platform and OF driver helper
+[    1.719172] /soc/aips-bus@02100000/usdhc@02190000: voltage-ranges unspecified
+[    1.719202] sdhci-esdhc-imx 2190000.usdhc: Got CD GPIO
+[    1.720707] sdhci-esdhc-imx 2190000.usdhc: No vqmmc regulator found
+[    1.763288] mmc1: SDHCI controller on 2190000.usdhc [2190000.usdhc] using ADMA
+[    1.765947] /soc/aips-bus@02100000/usdhc@02198000: voltage-ranges unspecified
+[    1.766380] sdhci-esdhc-imx 2198000.usdhc: No vqmmc regulator found
+[    1.803156] mmc0: SDHCI controller on 2198000.usdhc [2198000.usdhc] using ADMA
+[    1.818064] mxc_vpu 2040000.vpu_fsl: VPU initialized
+[    1.822716] mxc_vdoa 21e4000.vdoa: i.MX Video Data Order Adapter(VDOA) driver probed
+[    1.844452] ahci-imx 2200000.sata: no device found, disabling link.
+[    1.845020] caam 2100000.caam: Entropy delay = 3200
+[    1.845048] caam 2100000.caam: Instantiated RNG4 SH0
+[    1.860644] ahci-imx 2200000.sata: pass ahci_imx..hotplug=1 to enable hotplug
+[    1.888388] mmc0: MAN_BKOPS_EN bit is not set
+[    1.905814] caam 2100000.caam: Instantiated RNG4 SH1
+[    1.910828] caam 2100000.caam: device ID = 0x0a16010000000000 (Era -524)
+[    1.917590] caam 2100000.caam: job rings = 2, qi = 0
+[    1.923627] usb 1-1: new high-speed USB device number 2 using ci_hdrc
+[    1.923940] mmc0: new DDR MMC card at address 0001
+[    1.935027] mmcblk0: mmc0:0001 Q2J54A 3.59 GiB 
+[    1.939709] mmcblk0boot0: mmc0:0001 Q2J54A partition 1 16.0 MiB
+[    1.945836] mmcblk0boot1: mmc0:0001 Q2J54A partition 2 16.0 MiB
+[    1.952848]  mmcblk0: p1 p2
+[    1.988886] caam algorithms registered in /proc/crypto
+[    1.998105] caam_jr 2101000.jr0: registering rng-caam
+[    2.004153] snvs-secvio 20cc000.caam-snvs: can't get snvs clock
+[    2.010159] snvs-secvio 20cc000.caam-snvs: violation handlers armed - non-secure state
+[    2.018378] hidraw: raw HID events driver (C) Jiri Kosina
+[    2.024045] usbcore: registered new interface driver usbhid
+[    2.029642] usbhid: USB HID core driver
+[    2.039006] stmpe-adc stmpe-adc: Initialized
+[    2.046837] sgtl5000 2-000a: sgtl5000 revision 0x11
+[    2.078207] fsl-asrc 2034000.asrc: driver registered
+[    2.084379] hub 1-1:1.0: USB hub found
+[    2.088328] hub 1-1:1.0: 4 ports detected
+[    2.223238] imx-sgtl5000 sound: sgtl5000 <-> 2028000.ssi mapping ok
+[    2.232244] imx-spdif sound-spdif: snd-soc-dummy-dai <-> 2004000.spdif mapping ok
+[    2.242753] imx-audio-hdmi sound-hdmi: hdmi-hifi <-> soc:hdmi_audio@00120000 mapping ok
+[    2.251548] Netfilter messages via NETLINK v0.30.
+[    2.256326] nfnl_acct: registering with nfnetlink.
+[    2.261155] nf_conntrack version 0.5.0 (16384 buckets, 65536 max)
+[    2.267795] nf_tables: (c) 2007-2009 Patrick McHardy <kaber@trash.net>
+[    2.274788] ip_tables: (C) 2000-2006 Netfilter Core Team
+[    2.280783] NET: Registered protocol family 10
+[    2.286288] ip6_tables: (C) 2000-2006 Netfilter Core Team
+[    2.291738] NET: Registered protocol family 17
+[    2.296356] bridge: automatic filtering via arp/ip/ip6tables has been deprecated. Update your scripts to load br_netfilter if you need this.
+[    2.309104] Bridge firewalling registered
+[    2.313195] can: controller area network core (rev 20120528 abi 9)
+[    2.319475] NET: Registered protocol family 29
+[    2.323999] can: raw protocol (rev 20120528)
+[    2.328300] can: broadcast manager protocol (rev 20120528 t)
+[    2.334049] can: netlink gateway (rev 20130117) max_hops=1
+[    2.339883] Bluetooth: RFCOMM TTY layer initialized
+[    2.344829] Bluetooth: RFCOMM socket layer initialized
+[    2.350004] Bluetooth: RFCOMM ver 1.11
+[    2.353830] Bluetooth: BNEP (Ethernet Emulation) ver 1.3
+[    2.359168] Bluetooth: BNEP filters: protocol multicast
+[    2.364441] Bluetooth: BNEP socket layer initialized
+[    2.369434] Bluetooth: HIDP (Human Interface Emulation) ver 1.2
+[    2.375399] Bluetooth: HIDP socket layer initialized
+[    2.380451] 8021q: 802.1Q VLAN Support v1.8
+[    2.385027] Key type dns_resolver registered
+[    2.391278] Registering SWP/SWPB emulation handler
+[    2.396179] usb 1-1.3: new high-speed USB device number 3 using ci_hdrc
+[    2.403482] registered taskstats version 1
+[    2.408502] 1ffc000.pcie supply pcie-bus not found, using dummy regulator
+[    2.828421] imx6q-pcie 1ffc000.pcie: phy link never came up
+[    2.834081] imx6q-pcie 1ffc000.pcie: failed to initialize host
+[    2.840085] imx6q-pcie: probe of 1ffc000.pcie failed with error -22
+[    2.850322] rtc-ds1307 1-0068: setting system clock to 2018-02-08 10:33:41 UTC (1518086021)
+[    2.868833] usb_otg_vbus: disabling
+[    2.872626] ALSA device list:
+[    2.875680]   #0: imx6q-apalis-sgtl5000
+[    2.879539]   #1: imx-spdif
+[    2.882351]   #2: imx-hdmi-soc
+[    2.896994] EXT4-fs (mmcblk0p2): INFO: recovery required on readonly filesystem
+[    2.904396] EXT4-fs (mmcblk0p2): write access will be enabled during recovery
+[    3.236240] EXT4-fs (mmcblk0p2): recovery complete
+[    3.241878] EXT4-fs (mmcblk0p2): mounted filesystem with ordered data mode. Opts: (null)
+[    3.250167] VFS: Mounted root (ext4 filesystem) readonly on device 179:2.
+[    3.257708] devtmpfs: mounted
+[    3.261037] Freeing unused kernel memory: 372K (80a1f000 - 80a7c000)
+[    3.403434] random: systemd urandom read with 22 bits of entropy available
+[    3.415022] systemd[1]: systemd 229 running in system mode. (-PAM -AUDIT -SELINUX +IMA -APPARMOR +SMACK +SYSVINIT +UTMP -LIBCRYPTSETUP -GCRYPT -GNUTLS +ACL +XZ -LZ4 -SECCOMP +BLKID -ELFUTILS +KMOD -IDN)
+[    3.434143] systemd[1]: Detected architecture arm.
+
+Welcome to Boot to Qt for Embedded Linux 2.1.1 (krogoth)!
+
+[    3.473669] systemd[1]: Set hostname to <b2qt-apalis-imx6>.
+[    3.701251] systemd[1]: Reached target Remote File Systems.
+[  OK  ] Reached target Remote File Systems.
+[    3.723461] systemd[1]: Listening on /dev/initctl Compatibility Named Pipe.
+[  OK  ] Listening on /dev/initctl Compatibility Named Pipe.
+[    3.753682] systemd[1]: Created slice System Slice.
+[  OK  ] Created slice System Slice.
+[    3.773537] systemd[1]: Started Dispatch Password Requests to Console Directory Watch.
+[  OK  ] Started Dispatch Password Requests to Console Directory Watch.
+[    3.803298] systemd[1]: Reached target Swap.
+[  OK  ] Reached target Swap.
+[    3.824025] systemd[1]: Created slice system-serial\x2dgetty.slice.
+[  OK  ] Created slice system-serial\x2dgetty.slice.
+[    3.853861] systemd[1]: Listening on Journal Socket.
+[  OK  ] Listening on Journal Socket.
+[    3.887172] systemd[1]: Starting Load Kernel Modules...
+         Starting Load Kernel Modules...
+[    3.919152] systemd[1]: Mounting Temporary Directory...
+         Mounting Temporary Directory...
+[    3.940625] systemd[1]: Mounting Debug File System...
+         Mounting Debug File System...
+[    3.966895] systemd[1]: Starting Setup Virtual Console...
+         Starting Setup Virtual Console...
+[    3.976588] RTL871X: module init start
+[    3.980450] RTL871X: rtl8723bu v4.3.6.11_12942.20141204_BTCOEX20140507-4E40
+[    3.980454] RTL871X: rtl8723bu BT-Coex version = BTCOEX20140507-4E40
+[    4.022573] systemd[1]: Starting Create list of required static device nodes for the current kernel...
+         Starting Create list of required st... nodes for the current kernel...
+[    4.053528] systemd[1]: Listening on udev Control Socket.
+[  OK  ] Listening on udev Control Socket.
+[    4.073677] systemd[1]: Created slice User and Session Slice.
+[  OK  ] Created slice User and Session Slice.
+[    4.093361] systemd[1]: Reached target Slices.
+[  OK  ] Reached target Slices.
+[    4.113448] systemd[1]: Listening on udev Kernel Socket.
+[  OK  ] Listening on udev Kernel Socket.
+[    4.133525] systemd[1]: Listening on Syslog Socket.
+[  OK  ] Listening on Syslog Socket.
+[    4.157217] systemd[1]: Starting File System Check on Root Device...
+         Starting File System Check on Root Device...
+[    4.183707] systemd[1]: Listening on Network Service Netlink Socket.
+[  OK  ] Listening on N[    4.190647] systemd[1]: Listening on Journal Socket (/dev/log).
+etwork Service Netlink Socket.
+[  OK  ] Listening on Journal Socket (/[    4.216532] systemd[1]: Starting Journal Service...
+dev/log).
+         Starting Journal Servic[    4.223615] systemd[1]: Started Forward Password Requests to Wall Directory Watch.
+e...
+[    4.234408] systemd[1]: Reached target Paths.
+[  OK  ] Started Forward Password Requests to Wall Dir[    4.243420] systemd[1]: Mounted Debug File System.
+ectory Watch.
+[  OK  [    4.249631] systemd[1]: Mounted Temporary Directory.
+] Reached target Paths.
+[[    4.259074] systemd[1]: Started Setup Virtual Console.
+  OK  ] Mounted Debug File Sy[    4.266463] systemd[1]: Started Create list of required static device nodes for the current kernel.
+stem.
+[  OK  ] Mounted Temporary Directory.
+[  OK  ] Started Setup Virtual Console.
+[  OK  ] Started Create list of required sta...ce nodes for the current kernel.
+[    4.303484] RTL871X: rtw_ndev_init(wlan0)
+[    4.308715] RTL871X: rtw_ndev_init(wlan1)
+[    4.314035] usbcore: registered new interface driver rtl8723bu
+[    4.319925] RTL871X: module init ret=0
+[    4.322739] systemd[1]: Started File System Check on Root Device.
+[  OK  ] Started File System Check on Root Device.
+[    4.363730] Galcore version 5.0.11.41671
+[    4.421338] systemd[1]: Starting Remount Root and Kernel File Systems...
+         Starting Remount Root and Kernel File Systems...
+[    4.447604] systemd[1]: Started Journal Service.
+[  OK  ] Started Journal Service.
+[    4.473045] EXT4-fs (mmcblk0p2): re-mounted. Opts: (null)
+[  OK  ] Started Remount Root and Kernel File Systems.
+         Starting Create Static Device Nodes in /dev...
+         Starting udev Coldplug all Devices...
+         Starting Flush Journal to Persistent Storage...
+[  OK  ] Started Create Static Device Nodes in /dev.
+         Starting udev Kernel Device Manager...
+[  OK  ] Reached target Local File Systems (Pre).
+         Mounting /var/volatile...
+[  OK  ] Mounted /var/volatile.
+[  OK  ] Started udev Kernel Device Manager.
+[    4.902785] systemd-journald[202]: Received request to flush runtime journal from PID 1
+[  OK  ] Started Flush Journal to Persistent Storage.
+         Starting Load/Save Random Seed...
+[  OK  ] Reached target Local File Systems.
+         Starting Create Volatile Files and Directories...
+[  OK  ] Started Load/Save Random Seed.
+[    5.191105] tty0tty null modem driver v1.2
+[  OK  ] Started Create Volatile Files and Directories.
+[  OK  ] Started Load Kernel Modules.
+         Mounting FUSE Control File System...
+         Starting Apply Kernel Variables...
+         Mounting Configuration File System...
+         Starting Update UTMP about System Boot/Shutdown...
+         Starting Network Time Synchronization...
+[  OK  ] Mounted Configuration File System.
+[  OK  ] Mounted FUSE Control File System.
+[  OK  ] Started Network Time Synchronization.
+[  OK  ] Started udev Coldplug all Devices.
+[  OK  ] Started Apply Kernel Variables.
+[  OK  ] Found device /dev/ttymxc0.
+[  OK  ] Found device /dev/ttymxc1.
+[    5.827911] ov5647_read_reg(mipi):reg=300a ret=-5
+[    5.832676] camera ov5647_mipi is not found
+[  OK  ] Started Update UTMP about System Boot/Shutdown.
+[    5.892393] ERROR: v4l2 capture: slave not found!
+[    5.894085] ERROR: v4l2 capture: slave not found!
+[  OK  ] Listening on Load/Save RF Kill Switch Status /dev/rfkill Watch.
+[  OK  ] Reached target Sound Card.
+[  OK  ] Created slice system-systemd\x2dbacklight.slice.
+         Starting Load/Save Screen Backlight...htness of backlight:backlight...
+[  OK  ] Reached target System Time Synchronized.
+[  OK  ] Started Load/Save Screen Backlight Brightness of backlight:backlight.
+         Starting Load/Save RF Kill Switch Status...
+[  OK  ] Reached target System Initialization.
+[  OK  ] Listening on RPCbind Server Activation Socket.
+[  OK  ] Started Daily Cleanup of Temporary Directories.
+[  OK  ] Reached target Timers.
+[  OK  ] Listening on D-Bus System Message Bus Socket.
+[  OK  ] Listening on dropbear.socket.
+[  OK  ] Reached target Sockets.
+[  OK  ] Reached target Basic System.
+         Starting Login Service...
+[  OK  ] Started System Logging Service.
+[  OK  ] Started Serial Getty on ttymxc0.
+[  OK  ] Started Kernel Logging Service.
+[  OK  ] Started Serial Getty on ttymxc1.
+[  OK  ] Reached target Login Prompts.
+         Starting Save/Restore Sound Card State...
+[  OK  ] Started B2Qt user application.
+[  OK  ] Started D-Bus System Message Bus.
+[    6.673202] usb 1-1.1: new high-speed USB device number 4 using ci_hdrc
+[    6.810403] option 1-1.1:1.0: GSM modem (1-port) converter detected
+[    6.818938] usb 1-1.1: GSM modem (1-port) converter now attached to ttyUSB0
+[    6.828165] option 1-1.1:1.1: GSM modem (1-port) converter detected
+[    6.839114] usb 1-1.1: GSM modem (1-port) converter now attached to ttyUSB1
+[    6.847988] option 1-1.1:1.2: GSM modem (1-port) converter detected
+[    6.857705] usb 1-1.1: GSM modem (1-port) converter now attached to ttyUSB2
+[    6.866060] option 1-1.1:1.3: GSM modem (1-port) converter detected
+[    6.874411] usb 1-1.1: GSM modem (1-port) converter now attached to ttyUSB3
+[    6.882623] option 1-1.1:1.4: GSM modem (1-port) converter detected
+[    6.890752] usb 1-1.1: GSM modem (1-port) converter now attached to ttyUSB4
+         Starting Network Service...
+         Starting D-BUS Session Message Bus....
+[  OK  ] Started Load/Save RF Kill Switch Status.
+[  OK  ] Started Network Service.
+[  OK  ] Started Save/Restore Sound Card State.
+[  OK  ] Started D-BUS Session Message Bus..
+[  OK  ] Started Login Service.
+[  OK  ] Reached target Network.
+         Starting Network Time Service...
+         Starting ADB Server Daemon...
+[    7.276519] flexcan 2090000.flexcan can0: writing ctrl=0x01232084
+[  OK  ] Started Network Time Service.
+[    7.318431] file system registered
+[  OK  ] Started ADB Server Daemon.
+[  OK  ] Reached target Multi-User System.
+         Starting Update UTMP about System Runlevel Changes...
+[    7.412666] read descriptors
+[  OK  ] Started Ujet C[    7.419328] read strings
+loud Service.
+[    7.425094] g_ffs gadget: g_ffs ready
+[  OK  ] Started Ujet Telemetry Service.
+[  OK  ] Started Ujet HTTPD Service.
+[  OK  ] Started Ujet Ble Service.
+         Starting Ujet Identify Service...
+[  OK  ] Started Ujet Bluetooth Audio Service.
+[  OK  ] Reached target Custom Target.
+[  OK  ] Started Update UTMP about System Runlevel Changes.
+[  OK  ] Stopped Bluetooth service.
+[    8.031273] mxc_sdc_fb fb@0: 800x480 h_sync,r,l: 72,24,96  v_sync,l,u: 7,3,10 pixclock=29500000 Hz
+[    8.869665] random: nonblocking pool is initialized
+
+Boot to Qt for Embedded Linux 2.1.1 b2qt-apalis-imx6 ttymxc0
+
+b2qt-apalis-imx6 login: [   14.438233] ci_hdrc ci_hdrc.0: Device No Response
+root
+root@b2qt-apalis-imx6:~# cd /
+root@b2qt-apalis-imx6:/# 
+root@b2qt-apalis-imx6:/# 
+root@b2qt-apalis-imx6:/# 
+root@b2qt-apalis-imx6:/# cat /dev/ttymxc3 | tee -a BT-Headset-mxc3.txt &
+[1] 476
+root@b2qt-apalis-imx6:/# ls
+BT-Headset-mxc3.txt  bin  boot	data  dev  etc	home  lib  lost+found  media  mnt  proc  root  run  sbin  srv  sys  tmp  ujet  ujet.db	unit_tests  usr  var
+root@b2qt-apalis-imx6:/# lscat /dev/ttymxc3 | tee -a BT-Headset-mxc3.txt & 4c4 M o b i l e 4
+[2] 481
+root@b2qt-apalis-imx6:/# ps
+  PID USER       VSZ STAT COMMAND
+    1 root      5000 S    {systemd} /sbin/init rw,noatime
+    2 root         0 SW   [kthreadd]
+    3 root         0 SW   [ksoftirqd/0]
+    4 root         0 SW   [kworker/0:0]
+    5 root         0 SW<  [kworker/0:0H]
+    6 root         0 SW   [kworker/u8:0]
+    7 root         0 SW   [rcu_sched]
+    8 root         0 SW   [rcu_bh]
+    9 root         0 SW   [migration/0]
+   10 root         0 SW   [watchdog/0]
+   11 root         0 SW   [watchdog/1]
+   12 root         0 SW   [migration/1]
+   13 root         0 SW   [ksoftirqd/1]
+   14 root         0 SW   [kworker/1:0]
+   15 root         0 SW<  [kworker/1:0H]
+   16 root         0 SW   [watchdog/2]
+   17 root         0 SW   [migration/2]
+   18 root         0 SW   [ksoftirqd/2]
+   19 root         0 SW   [kworker/2:0]
+   20 root         0 SW<  [kworker/2:0H]
+   21 root         0 SW   [watchdog/3]
+   22 root         0 SW   [migration/3]
+   23 root         0 SW   [ksoftirqd/3]
+   24 root         0 SW   [kworker/3:0]
+   25 root         0 SW<  [kworker/3:0H]
+   26 root         0 SW<  [khelper]
+   27 root         0 SW   [kdevtmpfs]
+   28 root         0 SW<  [netns]
+   29 root         0 SW<  [perf]
+   30 root         0 SW   [khungtaskd]
+   31 root         0 SW<  [writeback]
+   32 root         0 SW<  [crypto]
+   33 root         0 SW<  [bioset]
+   34 root         0 SW<  [kblockd]
+   35 root         0 SW<  [ata_sff]
+   36 root         0 SW   [irq/151-stmpe]
+   37 root         0 SW   [ipu1_task]
+   38 root         0 SW   [ipu1_task]
+   39 root         0 SW   [ipu2_task]
+   40 root         0 SW   [ipu2_task]
+   41 root         0 SW   [cfinteractive]
+   42 root         0 SW   [kworker/0:1]
+   43 root         0 SW<  [rpciod]
+   44 root         0 SW   [kswapd0]
+   45 root         0 SW   [fsnotify_mark]
+   46 root         0 SW<  [nfsiod]
+   47 root         0 SW<  [cifsiod]
+   84 root         0 SW   [kworker/1:1]
+   85 root         0 SW   [scsi_eh_0]
+   86 root         0 SW<  [scsi_tmf_0]
+   87 root         0 SW   [kworker/u8:1]
+   88 root         0 SW   [spi0]
+   89 root         0 SW   [kworker/u8:2]
+   92 root         0 SW<  [ci_otg]
+   93 root         0 SW   [irq/219-penmoun]
+   94 root         0 SW   [irq/293-mmc1]
+   95 root         0 SW   [irq/161-2190000]
+   96 root         0 SW   [irq/294-mmc0]
+   97 root         0 SW<  [vpu_wq]
+   98 root         0 SW   [kworker/1:2]
+   99 root         0 SW   [mmcqd/0]
+  100 root         0 SW   [mmcqd/0boot0]
+  101 root         0 SW   [mmcqd/0boot1]
+  164 root         0 SW   [kworker/3:1]
+  165 root         0 SW   [kworker/2:1]
+  166 root         0 SW<  [ipv6_addrconf]
+  167 root         0 SW<  [krfcommd]
+  168 root         0 SW<  [deferwq]
+  169 root         0 SW   [irq/278-imx_the]
+  170 root         0 SW<  [kworker/0:1H]
+  171 root         0 SW   [jbd2/mmcblk0p2-]
+  172 root         0 SW<  [ext4-rsv-conver]
+  173 root         0 SW<  [kworker/1:1H]
+  179 root         0 SW<  [kworker/3:1H]
+  183 root         0 SW<  [kworker/2:1H]
+  188 root         0 SW<  [cfg80211]
+  191 root         0 SW   [kworker/3:2]
+  199 root         0 SW   [kworker/2:2]
+  202 root     10952 S    /lib/systemd/systemd-journald
+  205 root         0 SW<  [galcore workque]
+  206 root         0 SW   [Vivante Kernel ]
+  217 root     10672 S    /lib/systemd/systemd-udevd
+  244 root         0 SW   [kworker/0:2]
+  245 root         0 SW   [galcore daemon ]
+  246 root         0 SW   [galcore daemon ]
+  247 root         0 SW   [galcore daemon ]
+  269 systemd- 12696 S    /lib/systemd/systemd-timesyncd
+  312 root      2808 S    /lib/systemd/systemd-logind
+  313 root      2788 S    /sbin/syslogd -n -C
+  314 root      3004 S    -sh
+  315 root      2724 S    /sbin/klogd -n
+  316 root      1960 S    /sbin/agetty -8 -L ttymxc1 115200 xterm
+  318 root     39800 S    /usr/bin/appcontroller /usr/bin/b2qt
+  319 messageb  4504 S    /usr/bin/dbus-daemon --system --address=systemd: --nofork --nopidfile --systemd-activation
+  321 root      3004 S    {b2qt} /bin/bash /usr/bin/b2qt
+  323 systemd-  3208 S    /lib/systemd/systemd-networkd
+  328 root      4384 S    /usr/bin/dbus-daemon --fork --print-pid 4 --print-address 6 --session
+  336 root      3180 S    /usr/sbin/pppd call provider
+  337 root      156m S    /usr/bin/bcu
+  338 root      484m S    /usr/bin/hu
+  339 root      4384 S    /usr/bin/dbus-daemon --fork --print-pid 4 --print-address 6 --session
+  354 ntp       5180 S    /usr/sbin/ntpd -u ntp:ntp -p /run/ntpd.pid -g
+  383 root     38448 S    /usr/bin/adbd
+  387 root      3004 S    {run.sh} /bin/bash /ujet/cloud/run.sh
+  390 root      825m S    ./main
+  391 root      3004 S    {run.sh} /bin/bash /ujet/telemetry/run.sh
+  392 root      824m S    ./main
+  393 root      3004 S    {run.sh} /bin/bash /ujet/httpd/run.sh
+  394 root      3004 S    {run.sh} /bin/bash /ujet/ble/run.sh
+  395 root      826m S    ./main
+  396 root      3004 S    {run.sh} /bin/bash /ujet/identify/run.sh
+  398 root      3004 S    {run.sh} /bin/bash /ujet/btaudio/run.sh
+  405 root      839m S    ./main
+  420 root      814m S    ./main
+  468 root      824m S    ./main
+  475 root      1864 S    cat /dev/ttymxc3
+  476 root      1712 S    tee -a BT-Headset-mxc3.txt
+  480 root      1864 S    cat /dev/ttymxc4
+  481 root      1712 S    tee -a BT-Mobile-mxc4.txt
+  482 root      2964 R    ps
+root@b2qt-apalis-imx6:/# ^C
+root@b2qt-apalis-imx6:/# 
+root@b2qt-apalis-imx6:/# 
+root@b2qt-apalis-imx6:/# 
+root@b2qt-apalis-imx6:/# ps
+  PID USER       VSZ STAT COMMAND
+    1 root      5000 S    {systemd} /sbin/init rw,noatime
+    2 root         0 SW   [kthreadd]
+    3 root         0 SW   [ksoftirqd/0]
+    4 root         0 SW   [kworker/0:0]
+    5 root         0 SW<  [kworker/0:0H]
+    6 root         0 SW   [kworker/u8:0]
+    7 root         0 SW   [rcu_sched]
+    8 root         0 SW   [rcu_bh]
+    9 root         0 SW   [migration/0]
+   10 root         0 SW   [watchdog/0]
+   11 root         0 SW   [watchdog/1]
+   12 root         0 SW   [migration/1]
+   13 root         0 SW   [ksoftirqd/1]
+   14 root         0 SW   [kworker/1:0]
+   15 root         0 SW<  [kworker/1:0H]
+   16 root         0 SW   [watchdog/2]
+   17 root         0 SW   [migration/2]
+   18 root         0 SW   [ksoftirqd/2]
+   19 root         0 SW   [kworker/2:0]
+   20 root         0 SW<  [kworker/2:0H]
+   21 root         0 SW   [watchdog/3]
+   22 root         0 SW   [migration/3]
+   23 root         0 SW   [ksoftirqd/3]
+   24 root         0 SW   [kworker/3:0]
+   25 root         0 SW<  [kworker/3:0H]
+   26 root         0 SW<  [khelper]
+   27 root         0 SW   [kdevtmpfs]
+   28 root         0 SW<  [netns]
+   29 root         0 SW<  [perf]
+   30 root         0 SW   [khungtaskd]
+   31 root         0 SW<  [writeback]
+   32 root         0 SW<  [crypto]
+   33 root         0 SW<  [bioset]
+   34 root         0 SW<  [kblockd]
+   35 root         0 SW<  [ata_sff]
+   36 root         0 SW   [irq/151-stmpe]
+   37 root         0 SW   [ipu1_task]
+   38 root         0 SW   [ipu1_task]
+   39 root         0 SW   [ipu2_task]
+   40 root         0 SW   [ipu2_task]
+   41 root         0 SW   [cfinteractive]
+   42 root         0 SW   [kworker/0:1]
+   43 root         0 SW<  [rpciod]
+   44 root         0 SW   [kswapd0]
+   45 root         0 SW   [fsnotify_mark]
+   46 root         0 SW<  [nfsiod]
+   47 root         0 SW<  [cifsiod]
+   84 root         0 SW   [kworker/1:1]
+   85 root         0 SW   [scsi_eh_0]
+   86 root         0 SW<  [scsi_tmf_0]
+   87 root         0 SW   [kworker/u8:1]
+   88 root         0 SW   [spi0]
+   89 root         0 SW   [kworker/u8:2]
+   92 root         0 SW<  [ci_otg]
+   93 root         0 SW   [irq/219-penmoun]
+   94 root         0 SW   [irq/293-mmc1]
+   95 root         0 SW   [irq/161-2190000]
+   96 root         0 SW   [irq/294-mmc0]
+   97 root         0 SW<  [vpu_wq]
+   98 root         0 SW   [kworker/1:2]
+   99 root         0 SW   [mmcqd/0]
+  100 root         0 SW   [mmcqd/0boot0]
+  101 root         0 SW   [mmcqd/0boot1]
+  164 root         0 SW   [kworker/3:1]
+  165 root         0 SW   [kworker/2:1]
+  166 root         0 SW<  [ipv6_addrconf]
+  167 root         0 SW<  [krfcommd]
+  168 root         0 SW<  [deferwq]
+  169 root         0 SW   [irq/278-imx_the]
+  170 root         0 SW<  [kworker/0:1H]
+  171 root         0 SW   [jbd2/mmcblk0p2-]
+  172 root         0 SW<  [ext4-rsv-conver]
+  173 root         0 SW<  [kworker/1:1H]
+  179 root         0 SW<  [kworker/3:1H]
+  183 root         0 SW<  [kworker/2:1H]
+  188 root         0 SW<  [cfg80211]
+  191 root         0 SW   [kworker/3:2]
+  199 root         0 SW   [kworker/2:2]
+  202 root     10952 S    /lib/systemd/systemd-journald
+  205 root         0 SW<  [galcore workque]
+  206 root         0 SW   [Vivante Kernel ]
+  217 root     10672 S    /lib/systemd/systemd-udevd
+  244 root         0 SW   [kworker/0:2]
+  245 root         0 SW   [galcore daemon ]
+  246 root         0 SW   [galcore daemon ]
+  247 root         0 SW   [galcore daemon ]
+  269 systemd- 12696 S    /lib/systemd/systemd-timesyncd
+  312 root      2808 S    /lib/systemd/systemd-logind
+  313 root      2788 S    /sbin/syslogd -n -C
+  314 root      3004 S    -sh
+  315 root      2724 S    /sbin/klogd -n
+  316 root      1960 S    /sbin/agetty -8 -L ttymxc1 115200 xterm
+  318 root     39800 S    /usr/bin/appcontroller /usr/bin/b2qt
+  319 messageb  4504 S    /usr/bin/dbus-daemon --system --address=systemd: --nofork --nopidfile --systemd-activation
+  321 root      3004 S    {b2qt} /bin/bash /usr/bin/b2qt
+  323 systemd-  3208 S    /lib/systemd/systemd-networkd
+  328 root      4384 S    /usr/bin/dbus-daemon --fork --print-pid 4 --print-address 6 --session
+  336 root      3180 S    /usr/sbin/pppd call provider
+  337 root      156m S    /usr/bin/bcu
+  338 root      484m S    /usr/bin/hu
+  339 root      4384 S    /usr/bin/dbus-daemon --fork --print-pid 4 --print-address 6 --session
+  354 ntp       5180 S    /usr/sbin/ntpd -u ntp:ntp -p /run/ntpd.pid -g
+  383 root     38448 S    /usr/bin/adbd
+  387 root      3004 S    {run.sh} /bin/bash /ujet/cloud/run.sh
+  390 root      825m S    ./main
+  391 root      3004 S    {run.sh} /bin/bash /ujet/telemetry/run.sh
+  392 root      824m S    ./main
+  393 root      3004 S    {run.sh} /bin/bash /ujet/httpd/run.sh
+  394 root      3004 S    {run.sh} /bin/bash /ujet/ble/run.sh
+  395 root      826m S    ./main
+  396 root      3004 S    {run.sh} /bin/bash /ujet/identify/run.sh
+  398 root      3004 S    {run.sh} /bin/bash /ujet/btaudio/run.sh
+  405 root      839m S    ./main
+  420 root      814m S    ./main
+  468 root      824m S    ./main
+  475 root      1864 S    cat /dev/ttymxc3
+  476 root      1712 S    tee -a BT-Headset-mxc3.txt
+  480 root      1864 S    cat /dev/ttymxc4
+  481 root      1712 S    tee -a BT-Mobile-mxc4.txt
+  483 root      2964 R    ps
+root@b2qt-apalis-imx6:/# ls
+BT-Headset-mxc3.txt  bin   data  etc   lib	   media  proc	run   srv  tmp	 ujet.db     usr
+BT-Mobile-mxc4.txt   boot  dev	 home  lost+found  mnt	  root	sbin  sys  ujet  unit_tests  var
+root@b2qt-apalis-imx6:/# 
+root@b2qt-apalis-imx6:/# 
+root@b2qt-apalis-imx6:/# 
+root@b2qt-apalis-imx6:/# 
+root@b2qt-apalis-imx6:/# 
+root@b2qt-apalis-imx6:/# 
+root@b2qt-apalis-imx6:/# 
+root@b2qt-apalis-imx6:/#  
+LLIST 0
+
+root@b2qt-apalis-imx6:/# 
+root@b2qt-apalis-imx6:/# 
+root@b2qt-apalis-imx6:/# INQUIRY_PARTIAL 01:01:01:01:05:76 240418
+INQUIRY_PARTIAL 4c:49:e3:6e:06:92 5a020c
+INQUIRY_PARTIAL 88:6b:0f:62:71:86 280428
+INQUIRY_PARTIAL d0:53:49:e5:59:26 6c0100
+INQUIRY 6
+INQUIRY 00:1b:10:00:2a:ec 6e0100
+INQUIRY f6:b0:46:03:35:c1 5a020c
+INQUIRY 01:01:01:01:05:76 240418
+INQUIRY 4c:49:e3:6e:06:92 5a020c
+INQUIRY 88:6b:0f:62:71:86 280428
+INQUIRY d0:53:49:e5:59:26 6c0100
+NAME 00:1b:10:00:2a:ec "emb-ban-227-0"
+NAME ERROR 0x104 f6:b0:46:03:35:c1 HCI_ERROR_PAGE_TIMEOUT
+NAME 01:01:01:01:05:76 "Bluetooth music"
+NAME 4c:49:e3:6e:06:92 "Garg's Android"
+NAME 88:6b:0f:62:71:86 "WT32i-A"
+NAME ERROR 0x104 d0:53:49:e5:59:26 HCI_ERROR_PAGE_TIMEOUT
+
+root@b2qt-apalis-imx6:/# INQUIRY 7 NAME
+INQUIRY_PARTIAL 01:01:01:01:05:76 240418
+INQUIRY_PARTIAL 4c:49:e3:6e:06:92 5a020c
+INQUIRY_PARTIAL f6:b0:46:03:35:c1 5a020c
+INQUIRY_PARTIAL 00:1b:10:00:2a:ec 6e0100
+INQUIRY_PARTIAL d0:53:49:e5:59:26 6c0100
+INQUIRY_PARTIAL 88:6b:0f:62:71:86 280428
+INQUIRY 6
+INQUIRY 01:01:01:01:05:76 240418
+INQUIRY 4c:49:e3:6e:06:92 5a020c
+INQUIRY f6:b0:46:03:35:c1 5a020c
+INQUIRY 00:1b:10:00:2a:ec 6e0100
+INQUIRY d0:53:49:e5:59:26 6c0100
+INQUIRY 88:6b:0f:62:71:86 280428
+NAME 01:01:01:01:05:76 "Bluetooth music"
+NAME 4c:49:e3:6e:06:92 "Garg's Android"
+NAME f6:b0:46:03:35:c1 "Color X5.5"
+
+root@b2qt-apalis-imx6:/# 
+root@b2qt-apalis-imx6:/# 
+root@b2qt-apalis-imx6:/# RING 0 01:01:01:01:05:76 19 A2DP 
+NO CARRIER 0 ERROR 0 
+
+root@b2qt-apalis-imx6:/# 
+root@b2qt-apalis-imx6:/# 
+root@b2qt-apalis-imx6:/# 
+root@b2qt-apalis-imx6:/# CALL 01:01:01:01:05:76 111F HFP
+CALL 0
+CALL 01:01:01:01:05:76 19 A2DP
+CALL 1
+CALL 01:01:01:01:05:76 17 AVRCP
+CALL 2
+CALL 01:01:01:01:05:76 112F PBAP
+CALL 3
+NO CARRIER 3 ERROR 1 BOCK_ERR_RESOURCES
+NO CARRIER 0 ERROR 1b04 SDC_NO_RESPONSE_DATA
+CONNECT 2 AVRCP 17
+CONNECT 1 A2DP 19
+NO CARRIER 1 ERROR 0 
+AVRCP 2 GET_CAPABILITIES 3
+
+root@b2qt-apalis-imx6:/# 
+root@b2qt-apalis-imx6:/# 
+root@b2qt-apalis-imx6:/# 
+root@b2qt-apalis-imx6:/# 
+root@b2qt-apalis-imx6:/# 
+root@b2qt-apalis-imx6:/# 
+root@b2qt-apalis-imx6:/# 
+root@b2qt-apalis-imx6:/# 
+root@b2qt-apalis-imx6:/# 
+root@b2qt-apalis-imx6:/# 
+root@b2qt-apalis-imx6:/# 
+root@b2qt-apalis-imx6:/# 
+root@b2qt-apalis-imx6:/# AVRCP PDU 30
+LIST 0 CONNECTED A2DP 672 0 0 0 0 0 bc:d1:1f:5b:f2:c1 19 INCOMING ACTIVE SLAVE ENCRYPTED 3
+AVRCP 2 GET_PLAY_STATUS_RSP REJ
+ 
+P 
+A2DP STREAMING START 0
+A2DP STREAMING STOP 0
+A2DP STREAMING START 0
+A2DP STREAMING STOP 0
+A2DP STREAMING START 0
+A2DP STREAMING STOP 0
+A2DP STREAMING START 0
+A2DP STREAMING STOP 0
+A2DP STREAMING START 0
+A2DP STREAMING STOP 0
+A2DP STREAMING START 0
+A2DP STREAMING STOP 0
+A2DP STREAMING START 0
+A2DP STREAMING STOP 0
+NO CARRIER 1 ERROR 0 
+NO CARRIER 2 ERROR 0 
+NO CARRIER 0 ERROR 0 
+
+root@b2qt-apalis-imx6:/# 
+root@b2qt-apalis-imx6:/# 
+root@b2qt-apalis-imx6:/# 
+root@b2qt-apalis-imx6:/# 
+root@b2qt-apalis-imx6:/# 
+root@b2qt-apalis-imx6:/# 
+root@b2qt-apalis-imx6:/# 
+root@b2qt-apalis-imx6:/# 
+root@b2qt-apalis-imx6:/# CALL 01:01:01:01:05:76 111F HFP
+CALL 0
+CALL 01:01:01:01:05:76 19 A2DP
+CALL 1
+CALL 01:01:01:01:05:76 17 AVRCP
+CALL 3
+CALL 01:01:01:01:05:76 112F PBAP
+CALL 4
+NO CARRIER 4 ERROR 1 BOCK_ERR_RESOURCES
+CONNECT 1 A2DP 19
+CONNECT 3 AVRCP 17
+NO CARRIER 0 ERROR 1b04 SDC_NO_RESPONSE_DATA
+NO CARRIER 1 ERROR 0 
+AVRCP 3 GET_CAPABILITIES 3
+
+root@b2qt-apalis-imx6:/# 
+root@b2qt-apalis-imx6:/# 
+root@b2qt-apalis-imx6:/# CALL 01:01:01:01:05:76 111F HFP
+CALL 0
+CALL 01:01:01:01:05:76 19 A2DP
+CALL 1
+CALL 01:01:01:01:05:76 17 AVRCP
+CALL 4
+CALL 01:01:01:01:05:76 112F PBAP
+CALL 5
+NO CARRIER 5 ERROR 1 BOCK_ERR_RESOURCES
+CONNECT 1 A2DP 19
+CONNECT 4 AVRCP 17
+NO CARRIER 0 ERROR 1b04 SDC_NO_RESPONSE_DATA
+NO CARRIER 1 ERROR 0 
+AVRCP 4 GET_CAPABILITIES 3
+
+root@b2qt-apalis-imx6:/# 
+root@b2qt-apalis-imx6:/# 
+root@b2qt-apalis-imx6:/# RING 0 44:04:44:ee:03:df 19 A2DP 
+RING 1 44:04:44:ee:03:df 19 A2DP 
+A2DP STREAMING START 0
+A2DP STREAMING STOP 0
+
+root@b2qt-apalis-imx6:/# 
+root@b2qt-apalis-imx6:/# 
+root@b2qt-apalis-imx6:/# 
+root@b2qt-apalis-imx6:/# NO CARRIER 4 ERROR a80c L2CAP_DISCONNECT_LINK_LOSS
+NO CARRIER 3 ERROR a80c L2CAP_DISCONNECT_LINK_LOSS
+NO CARRIER 2 ERROR a80c L2CAP_DISCONNECT_LINK_LOSS
+
+root@b2qt-apalis-imx6:/# 
+root@b2qt-apalis-imx6:/# 
+root@b2qt-apalis-imx6:/# 
+root@b2qt-apalis-imx6:/# 
+root@b2qt-apalis-imx6:/# INQUIRY 7 NAME
+INQUIRY_PARTIAL 44:04:44:ee:03:df 5a020c
+INQUIRY_PARTIAL bc:d1:1f:5b:f2:c1 5a020c
+INQUIRY_PARTIAL f6:b0:46:03:35:c1 5a020c
+INQUIRY_PARTIAL 4c:49:e3:6e:06:92 5a020c
+INQUIRY_PARTIAL 00:1b:10:00:2a:ec 6e0100
+
+root@b2qt-apalis-imx6:/# 
+root@b2qt-apalis-imx6:/# INQUIRY 5
+INQUIRY 44:04:44:ee:03:df 5a020c
+INQUIRY bc:d1:1f:5b:f2:c1 5a020c
+INQUIRY f6:b0:46:03:35:c1 5a020c
+INQUIRY 4c:49:e3:6e:06:92 5a020c
+INQUIRY 00:1b:10:00:2a:ec 6e0100
+NAME 44:04:44:ee:03:df "Aravinth"
+NAME bc:d1:1f:5b:f2:c1 "Galaxy S5"
+NAME f6:b0:46:03:35:c1 "Color X5.5"
+NAME 4c:49:e3:6e:06:92 "Garg's Android"
+NAME 00:1b:10:00:2a:ec "emb-ban-227-0"
+
+root@b2qt-apalis-imx6:/# 
+root@b2qt-apalis-imx6:/# 
+root@b2qt-apalis-imx6:/# RING 0 bc:d1:1f:5b:f2:c1 19 A2DP 
+RING 1 bc:d1:1f:5b:f2:c1 19 A2DP 
+A2DP STREAMING START 0
+A2DP STREAMING START 0
+A2DP STREAMING STOP 0
+A2DP STREAMING START 0
+A2DP STREAMING STOP 0
+A2DP STREAMING START 0
+A2DP STREAMING STOP 0
+A2DP STREAMING STOP 0
+A2DP STREAMING START 0
+
+root@b2qt-apalis-imx6:/# 
+root@b2qt-apalis-imx6:/# 
+root@b2qt-apalis-imx6:/# 
+root@b2qt-apalis-imx6:/# 
+root@b2qt-apalis-imx6:/# 
+root@b2qt-apalis-imx6:/# 
+root@b2qt-apalis-imx6:/# A2DP STREAMING START 0
+A2DP STREAMING STOP 0
+A2DP STREAMING STOP 0
+NO CARRIER 1 ERROR 0 
+NO CARRIER 0 ERROR 0 
+
+root@b2qt-apalis-imx6:/# 
+root@b2qt-apalis-imx6:/# 
+root@b2qt-apalis-imx6:/# 
+root@b2qt-apalis-imx6:/# 
+root@b2qt-apalis-imx6:/# 
+root@b2qt-apalis-imx6:/# 
+root@b2qt-apalis-imx6:/# NO CARRIER 1 ERROR a80c L2CAP_DISCONNECT_LINK_LOSS
+NO CARRIER 0 ERROR a80c L2CAP_DISCONNECT_LINK_LOSS
+INQUIRY 7 NAME
+INQUIRY_PARTIAL d0:53:49:e5:59:26 6c0100
+INQUIRY_PARTIAL 00:1b:10:00:2a:ec 6e0100
+INQUIRY_PARTIAL 4c:49:e3:6e:06:92 5a020c
+INQUIRY_PARTIAL f6:b0:46:03:35:c1 5a020c
+INQUIRY_PARTIAL 44:04:44:ee:03:df 5a020c
+INQUIRY_PARTIAL 88:6b:0f:62:71:86 280428
+INQUIRY 6
+INQUIRY d0:53:49:e5:59:26 6c0100
+INQUIRY 00:1b:10:00:2a:ec 6e0100
+INQUIRY 4c:49:e3:6e:06:92 5a020c
+INQUIRY f6:b0:46:03:35:c1 5a020c
+INQUIRY 44:04:44:ee:03:df 5a020c
+INQUIRY 88:6b:0f:62:71:86 280428
+NAME ERROR 0x104 d0:53:49:e5:59:26 HCI_ERROR_PAGE_TIMEOUT
+NAME 00:1b:10:00:2a:ec "emb-ban-227-0"
+NAME 4c:49:e3:6e:06:92 "Garg's Android"
+NAME f6:b0:46:03:35:c1 "Color X5.5"
+NAME 44:04:44:ee:03:df "Aravinth"
+NAME 88:6b:0f:62:71:86 "WT32i-A"
+RING 0 44:04:44:ee:03:df 19 A2DP 
+RING 1 44:04:44:ee:03:df 19 A2DP 
+
+root@b2qt-apalis-imx6:/# 
+root@b2qt-apalis-imx6:/# 
+root@b2qt-apalis-imx6:/# 
+root@b2qt-apalis-imx6:/# CALL 01:01:01:01:05:76 111F HFP
+CALL 2
+CALL 01:01:01:01:05:76 19 A2DP
+CALL 3
+CALL 01:01:01:01:05:76 17 AVRCP
+CALL 4
+CALL 01:01:01:01:05:76 112F PBAP
+CALL 5
+NO CARRIER 5 ERROR 1 BOCK_ERR_RESOURCES
+NO CARRIER 2 ERROR 1b04 SDC_NO_RESPONSE_DATA
+CONNECT 4 AVRCP 17
+CONNECT 3 A2DP 19
+NO CARRIER 3 ERROR 0 
+AVRCP 4 GET_CAPABILITIES 3
+
+root@b2qt-apalis-imx6:/# 
+root@b2qt-apalis-imx6:/# 
+root@b2qt-apalis-imx6:/# 
+root@b2qt-apalis-imx6:/# 
+root@b2qt-apalis-imx6:/# 
+root@b2qt-apalis-imx6:/# A2DP STREAMING START 0
+
+root@b2qt-apalis-imx6:/# 
+root@b2qt-apalis-imx6:/# 
+root@b2qt-apalis-imx6:/# 
+root@b2qt-apalis-imx6:/# 
+root@b2qt-apalis-imx6:/# 
+root@b2qt-apalis-imx6:/# cat BT-
+BT-Headset-mxc3.txt  BT-Mobile-mxc4.txt   
+root@b2qt-apalis-imx6:/# cat BT-Headset-mxc3.txt 
+INQUIRY_PARTIAL 01:01:01:01:05:76 240418
+INQUIRY_PARTIAL 4c:49:e3:6e:06:92 5a020c
+INQUIRY_PARTIAL 88:6b:0f:62:71:86 280428
+INQUIRY_PARTIAL d0:53:49:e5:59:26 6c0100
+INQUIRY 6
+INQUIRY 00:1b:10:00:2a:ec 6e0100
+INQUIRY f6:b0:46:03:35:c1 5a020c
+INQUIRY 01:01:01:01:05:76 240418
+INQUIRY 4c:49:e3:6e:06:92 5a020c
+INQUIRY 88:6b:0f:62:71:86 280428
+INQUIRY d0:53:49:e5:59:26 6c0100
+NAME 00:1b:10:00:2a:ec "emb-ban-227-0"
+NAME ERROR 0x104 f6:b0:46:03:35:c1 HCI_ERROR_PAGE_TIMEOUT
+NAME 01:01:01:01:05:76 "Bluetooth music"
+NAME 4c:49:e3:6e:06:92 "Garg's Android"
+NAME 88:6b:0f:62:71:86 "WT32i-A"
+NAME ERROR 0x104 d0:53:49:e5:59:26 HCI_ERROR_PAGE_TIMEOUT
+INQUIRY 7 NAME
+INQUIRY_PARTIAL 01:01:01:01:05:76 240418
+INQUIRY_PARTIAL 4c:49:e3:6e:06:92 5a020c
+INQUIRY_PARTIAL f6:b0:46:03:35:c1 5a020c
+INQUIRY_PARTIAL 00:1b:10:00:2a:ec 6e0100
+INQUIRY_PARTIAL d0:53:49:e5:59:26 6c0100
+INQUIRY_PARTIAL 88:6b:0f:62:71:86 280428
+INQUIRY 6
+INQUIRY 01:01:01:01:05:76 240418
+INQUIRY 4c:49:e3:6e:06:92 5a020c
+INQUIRY f6:b0:46:03:35:c1 5a020c
+INQUIRY 00:1b:10:00:2a:ec 6e0100
+INQUIRY d0:53:49:e5:59:26 6c0100
+INQUIRY 88:6b:0f:62:71:86 280428
+NAME 01:01:01:01:05:76 "Bluetooth music"
+NAME 4c:49:e3:6e:06:92 "Garg's Android"
+NAME f6:b0:46:03:35:c1 "Color X5.5"
+LIST 0 CONNECTED A2DP 672 0 0 0 0 0 bc:d1:1f:5b:f2:c1 19 INCOMING ACTIVE SLAVE ENCRYPTED 3
+ 
+P 
+A2DP STREAMING START 0
+A2DP STREAMING STOP 0
+A2DP STREAMING START 0
+A2DP STREAMING STOP 0
+A2DP STREAMING START 0
+A2DP STREAMING STOP 0
+A2DP STREAMING START 0
+A2DP STREAMING STOP 0
+A2DP STREAMING START 0
+A2DP STREAMING STOP 0
+A2DP STREAMING START 0
+A2DP STREAMING STOP 0
+A2DP STREAMING START 0
+A2DP STREAMING STOP 0
+NO CARRIER 1 ERROR 0 
+NO CARRIER 2 ERROR 0 
+NO CARRIER 0 ERROR 0 
+RING 0 44:04:44:ee:03:df 19 A2DP 
+RING 1 44:04:44:ee:03:df 19 A2DP 
+A2DP STREAMING START 0
+A2DP STREAMING STOP 0
+INQUIRY 7 NAME
+INQUIRY_PARTIAL 44:04:44:ee:03:df 5a020c
+INQUIRY_PARTIAL bc:d1:1f:5b:f2:c1 5a020c
+INQUIRY_PARTIAL f6:b0:46:03:35:c1 5a020c
+INQUIRY_PARTIAL 4c:49:e3:6e:06:92 5a020c
+INQUIRY_PARTIAL 00:1b:10:00:2a:ec 6e0100
+INQUIRY 5
+INQUIRY 44:04:44:ee:03:df 5a020c
+INQUIRY bc:d1:1f:5b:f2:c1 5a020c
+INQUIRY f6:b0:46:03:35:c1 5a020c
+INQUIRY 4c:49:e3:6e:06:92 5a020c
+INQUIRY 00:1b:10:00:2a:ec 6e0100
+NAME 44:04:44:ee:03:df "Aravinth"
+NAME bc:d1:1f:5b:f2:c1 "Galaxy S5"
+NAME f6:b0:46:03:35:c1 "Color X5.5"
+NAME 4c:49:e3:6e:06:92 "Garg's Android"
+NAME 00:1b:10:00:2a:ec "emb-ban-227-0"
+A2DP STREAMING START 0
+A2DP STREAMING STOP 0
+A2DP STREAMING START 0
+A2DP STREAMING STOP 0
+NO CARRIER 1 ERROR a80c L2CAP_DISCONNECT_LINK_LOSS
+NO CARRIER 0 ERROR a80c L2CAP_DISCONNECT_LINK_LOSS
+INQUIRY 7 NAME
+INQUIRY_PARTIAL d0:53:49:e5:59:26 6c0100
+INQUIRY_PARTIAL 00:1b:10:00:2a:ec 6e0100
+INQUIRY_PARTIAL 4c:49:e3:6e:06:92 5a020c
+INQUIRY_PARTIAL f6:b0:46:03:35:c1 5a020c
+INQUIRY_PARTIAL 44:04:44:ee:03:df 5a020c
+INQUIRY_PARTIAL 88:6b:0f:62:71:86 280428
+INQUIRY 6
+INQUIRY d0:53:49:e5:59:26 6c0100
+INQUIRY 00:1b:10:00:2a:ec 6e0100
+INQUIRY 4c:49:e3:6e:06:92 5a020c
+INQUIRY f6:b0:46:03:35:c1 5a020c
+INQUIRY 44:04:44:ee:03:df 5a020c
+INQUIRY 88:6b:0f:62:71:86 280428
+NAME ERROR 0x104 d0:53:49:e5:59:26 HCI_ERROR_PAGE_TIMEOUT
+NAME 00:1b:10:00:2a:ec "emb-ban-227-0"
+NAME 4c:49:e3:6e:06:92 "Garg's Android"
+NAME f6:b0:46:03:35:c1 "Color X5.5"
+NAME 44:04:44:ee:03:df "Aravinth"
+NAME 88:6b:0f:62:71:86 "WT32i-A"
+root@b2qt-apalis-imx6:/# 
+root@b2qt-apalis-imx6:/# cat BT-Headset-mxc3.txt  4.txt       -
+BT-Headset-mxc3.txt  BT-Mobile-mxc4.txt   
+root@b2qt-apalis-imx6:/# cat BT-Mobile-mxc4.txt 
+ 
+LLIST 0
+RING 0 01:01:01:01:05:76 19 A2DP 
+NO CARRIER 0 ERROR 0 
+CALL 01:01:01:01:05:76 111F HFP
+CALL 0
+CALL 01:01:01:01:05:76 19 A2DP
+CALL 1
+CALL 01:01:01:01:05:76 17 AVRCP
+CALL 2
+CALL 01:01:01:01:05:76 112F PBAP
+CALL 3
+NO CARRIER 3 ERROR 1 BOCK_ERR_RESOURCES
+NO CARRIER 0 ERROR 1b04 SDC_NO_RESPONSE_DATA
+CONNECT 2 AVRCP 17
+CONNECT 1 A2DP 19
+NO CARRIER 1 ERROR 0 
+AVRCP 2 GET_CAPABILITIES 3
+AVRCP PDU 30
+AVRCP 2 GET_PLAY_STATUS_RSP REJ
+CALL 01:01:01:01:05:76 111F HFP
+CALL 0
+CALL 01:01:01:01:05:76 19 A2DP
+CALL 1
+CALL 01:01:01:01:05:76 17 AVRCP
+CALL 3
+CALL 01:01:01:01:05:76 112F PBAP
+CALL 4
+NO CARRIER 4 ERROR 1 BOCK_ERR_RESOURCES
+CONNECT 1 A2DP 19
+CONNECT 3 AVRCP 17
+NO CARRIER 0 ERROR 1b04 SDC_NO_RESPONSE_DATA
+NO CARRIER 1 ERROR 0 
+AVRCP 3 GET_CAPABILITIES 3
+CALL 01:01:01:01:05:76 111F HFP
+CALL 0
+CALL 01:01:01:01:05:76 19 A2DP
+CALL 1
+CALL 01:01:01:01:05:76 17 AVRCP
+CALL 4
+CALL 01:01:01:01:05:76 112F PBAP
+CALL 5
+NO CARRIER 5 ERROR 1 BOCK_ERR_RESOURCES
+CONNECT 1 A2DP 19
+CONNECT 4 AVRCP 17
+NO CARRIER 0 ERROR 1b04 SDC_NO_RESPONSE_DATA
+NO CARRIER 1 ERROR 0 
+AVRCP 4 GET_CAPABILITIES 3
+NO CARRIER 4 ERROR a80c L2CAP_DISCONNECT_LINK_LOSS
+NO CARRIER 3 ERROR a80c L2CAP_DISCONNECT_LINK_LOSS
+NO CARRIER 2 ERROR a80c L2CAP_DISCONNECT_LINK_LOSS
+RING 0 bc:d1:1f:5b:f2:c1 19 A2DP 
+RING 1 bc:d1:1f:5b:f2:c1 19 A2DP 
+A2DP STREAMING START 0
+A2DP STREAMING STOP 0
+A2DP STREAMING START 0
+A2DP STREAMING STOP 0
+A2DP STREAMING START 0
+A2DP STREAMING STOP 0
+A2DP STREAMING START 0
+A2DP STREAMING STOP 0
+NO CARRIER 1 ERROR 0 
+NO CARRIER 0 ERROR 0 
+RING 0 44:04:44:ee:03:df 19 A2DP 
+RING 1 44:04:44:ee:03:df 19 A2DP 
+CALL 01:01:01:01:05:76 111F HFP
+CALL 2
+CALL 01:01:01:01:05:76 19 A2DP
+CALL 3
+CALL 01:01:01:01:05:76 17 AVRCP
+CALL 4
+CALL 01:01:01:01:05:76 112F PBAP
+CALL 5
+NO CARRIER 5 ERROR 1 BOCK_ERR_RESOURCES
+NO CARRIER 2 ERROR 1b04 SDC_NO_RESPONSE_DATA
+CONNECT 4 AVRCP 17
+CONNECT 3 A2DP 19
+NO CARRIER 3 ERROR 0 
+AVRCP 4 GET_CAPABILITIES 3
+A2DP STREAMING START 0
+root@b2qt-apalis-imx6:/# A2DP STREAMING STOP 0
+
+root@b2qt-apalis-imx6:/# 
+root@b2qt-apalis-imx6:/# 
+root@b2qt-apalis-imx6:/# 
+root@b2qt-apalis-imx6:/# NO CARRIER 1 ERROR 0 
+NO CARRIER 0 ERROR 0 
+CALL 01:01:01:01:05:76 111F HFP
+CALL 0
+CALL 01:01:01:01:05:76 19 A2DP
+CALL 1
+CALL 01:01:01:01:05:76 17 AVRCP
+CALL 2
+CALL 01:01:01:01:05:76 112F PBAP
+CALL 3
+NO CARRIER 3 ERROR 1 BOCK_ERR_RESOURCES
+CONNECT 1 A2DP 19
+CONNECT 2 AVRCP 17
+NO CARRIER 0 ERROR 1b04 SDC_NO_RESPONSE_DATA
+NO CARRIER 1 ERROR 0 
+AVRCP 2 GET_CAPABILITIES 3
+SET BT PAIR 50:c9:71:4c:e0:10
+SET BT PAIR
+SET BT PAIR 01:01:01:01:05:76 9146ca5cc17d95c549f6ceec16168a78
+SET BT PAIR bc:d1:1f:5b:f2:c1 aa8d7cdfed80406569d93eebb7225ceb
+SET BT PAIR 44:04:44:ee:03:df 69719f8b8c4580294552d20f5fd642f1
+SET
+NO CARRIER 2 ERROR a80c L2CAP_DISCONNECT_LINK_LOSS
+NO CARRIER 4 ERROR a80c L2CAP_DISCONNECT_LINK_LOSS
+
+root@b2qt-apalis-imx6:/# 
+root@b2qt-apalis-imx6:/# 
+root@b2qt-apalis-imx6:/# cat BT-Mobile-mxc4.txt  Headset-mxc3.txt 
+INQUIRY_PARTIAL 01:01:01:01:05:76 240418
+INQUIRY_PARTIAL 4c:49:e3:6e:06:92 5a020c
+INQUIRY_PARTIAL 88:6b:0f:62:71:86 280428
+INQUIRY_PARTIAL d0:53:49:e5:59:26 6c0100
+INQUIRY 6
+INQUIRY 00:1b:10:00:2a:ec 6e0100
+INQUIRY f6:b0:46:03:35:c1 5a020c
+INQUIRY 01:01:01:01:05:76 240418
+INQUIRY 4c:49:e3:6e:06:92 5a020c
+INQUIRY 88:6b:0f:62:71:86 280428
+INQUIRY d0:53:49:e5:59:26 6c0100
+NAME 00:1b:10:00:2a:ec "emb-ban-227-0"
+NAME ERROR 0x104 f6:b0:46:03:35:c1 HCI_ERROR_PAGE_TIMEOUT
+NAME 01:01:01:01:05:76 "Bluetooth music"
+NAME 4c:49:e3:6e:06:92 "Garg's Android"
+NAME 88:6b:0f:62:71:86 "WT32i-A"
+NAME ERROR 0x104 d0:53:49:e5:59:26 HCI_ERROR_PAGE_TIMEOUT
+INQUIRY 7 NAME
+INQUIRY_PARTIAL 01:01:01:01:05:76 240418
+INQUIRY_PARTIAL 4c:49:e3:6e:06:92 5a020c
+INQUIRY_PARTIAL f6:b0:46:03:35:c1 5a020c
+INQUIRY_PARTIAL 00:1b:10:00:2a:ec 6e0100
+INQUIRY_PARTIAL d0:53:49:e5:59:26 6c0100
+INQUIRY_PARTIAL 88:6b:0f:62:71:86 280428
+INQUIRY 6
+INQUIRY 01:01:01:01:05:76 240418
+INQUIRY 4c:49:e3:6e:06:92 5a020c
+INQUIRY f6:b0:46:03:35:c1 5a020c
+INQUIRY 00:1b:10:00:2a:ec 6e0100
+INQUIRY d0:53:49:e5:59:26 6c0100
+INQUIRY 88:6b:0f:62:71:86 280428
+NAME 01:01:01:01:05:76 "Bluetooth music"
+NAME 4c:49:e3:6e:06:92 "Garg's Android"
+NAME f6:b0:46:03:35:c1 "Color X5.5"
+LIST 0 CONNECTED A2DP 672 0 0 0 0 0 bc:d1:1f:5b:f2:c1 19 INCOMING ACTIVE SLAVE ENCRYPTED 3
+ 
+P 
+A2DP STREAMING START 0
+A2DP STREAMING STOP 0
+A2DP STREAMING START 0
+A2DP STREAMING STOP 0
+A2DP STREAMING START 0
+A2DP STREAMING STOP 0
+A2DP STREAMING START 0
+A2DP STREAMING STOP 0
+A2DP STREAMING START 0
+A2DP STREAMING STOP 0
+A2DP STREAMING START 0
+A2DP STREAMING STOP 0
+A2DP STREAMING START 0
+A2DP STREAMING STOP 0
+NO CARRIER 1 ERROR 0 
+NO CARRIER 2 ERROR 0 
+NO CARRIER 0 ERROR 0 
+RING 0 44:04:44:ee:03:df 19 A2DP 
+RING 1 44:04:44:ee:03:df 19 A2DP 
+A2DP STREAMING START 0
+A2DP STREAMING STOP 0
+INQUIRY 7 NAME
+INQUIRY_PARTIAL 44:04:44:ee:03:df 5a020c
+INQUIRY_PARTIAL bc:d1:1f:5b:f2:c1 5a020c
+INQUIRY_PARTIAL f6:b0:46:03:35:c1 5a020c
+INQUIRY_PARTIAL 4c:49:e3:6e:06:92 5a020c
+INQUIRY_PARTIAL 00:1b:10:00:2a:ec 6e0100
+INQUIRY 5
+INQUIRY 44:04:44:ee:03:df 5a020c
+INQUIRY bc:d1:1f:5b:f2:c1 5a020c
+INQUIRY f6:b0:46:03:35:c1 5a020c
+INQUIRY 4c:49:e3:6e:06:92 5a020c
+INQUIRY 00:1b:10:00:2a:ec 6e0100
+NAME 44:04:44:ee:03:df "Aravinth"
+NAME bc:d1:1f:5b:f2:c1 "Galaxy S5"
+NAME f6:b0:46:03:35:c1 "Color X5.5"
+NAME 4c:49:e3:6e:06:92 "Garg's Android"
+NAME 00:1b:10:00:2a:ec "emb-ban-227-0"
+A2DP STREAMING START 0
+A2DP STREAMING STOP 0
+A2DP STREAMING START 0
+A2DP STREAMING STOP 0
+NO CARRIER 1 ERROR a80c L2CAP_DISCONNECT_LINK_LOSS
+NO CARRIER 0 ERROR a80c L2CAP_DISCONNECT_LINK_LOSS
+INQUIRY 7 NAME
+INQUIRY_PARTIAL d0:53:49:e5:59:26 6c0100
+INQUIRY_PARTIAL 00:1b:10:00:2a:ec 6e0100
+INQUIRY_PARTIAL 4c:49:e3:6e:06:92 5a020c
+INQUIRY_PARTIAL f6:b0:46:03:35:c1 5a020c
+INQUIRY_PARTIAL 44:04:44:ee:03:df 5a020c
+INQUIRY_PARTIAL 88:6b:0f:62:71:86 280428
+INQUIRY 6
+INQUIRY d0:53:49:e5:59:26 6c0100
+INQUIRY 00:1b:10:00:2a:ec 6e0100
+INQUIRY 4c:49:e3:6e:06:92 5a020c
+INQUIRY f6:b0:46:03:35:c1 5a020c
+INQUIRY 44:04:44:ee:03:df 5a020c
+INQUIRY 88:6b:0f:62:71:86 280428
+NAME ERROR 0x104 d0:53:49:e5:59:26 HCI_ERROR_PAGE_TIMEOUT
+NAME 00:1b:10:00:2a:ec "emb-ban-227-0"
+NAME 4c:49:e3:6e:06:92 "Garg's Android"
+NAME f6:b0:46:03:35:c1 "Color X5.5"
+NAME 44:04:44:ee:03:df "Aravinth"
+NAME 88:6b:0f:62:71:86 "WT32i-A"
+SET BT PAIR 50:c9:71:4c:e0:10
+SET BT PAIR
+SET BT PAIR 01:01:01:01:05:76 9146ca5cc17d95c549f6ceec16168a78
+SET BT PAIR bc:d1:1f:5b:f2:c1 aa8d7cdfed80406569d93eebb7225ceb
+SET BT PAIR 44:04:44:ee:03:df 69719f8b8c4580294552d20f5fd642f1
+SET
+root@b2qt-apalis-imx6:/# cat BT-Headset-mxc3.txt Mobile-mxc4.txt 
+ 
+LLIST 0
+RING 0 01:01:01:01:05:76 19 A2DP 
+NO CARRIER 0 ERROR 0 
+CALL 01:01:01:01:05:76 111F HFP
+CALL 0
+CALL 01:01:01:01:05:76 19 A2DP
+CALL 1
+CALL 01:01:01:01:05:76 17 AVRCP
+CALL 2
+CALL 01:01:01:01:05:76 112F PBAP
+CALL 3
+NO CARRIER 3 ERROR 1 BOCK_ERR_RESOURCES
+NO CARRIER 0 ERROR 1b04 SDC_NO_RESPONSE_DATA
+CONNECT 2 AVRCP 17
+CONNECT 1 A2DP 19
+NO CARRIER 1 ERROR 0 
+AVRCP 2 GET_CAPABILITIES 3
+AVRCP PDU 30
+AVRCP 2 GET_PLAY_STATUS_RSP REJ
+CALL 01:01:01:01:05:76 111F HFP
+CALL 0
+CALL 01:01:01:01:05:76 19 A2DP
+CALL 1
+CALL 01:01:01:01:05:76 17 AVRCP
+CALL 3
+CALL 01:01:01:01:05:76 112F PBAP
+CALL 4
+NO CARRIER 4 ERROR 1 BOCK_ERR_RESOURCES
+CONNECT 1 A2DP 19
+CONNECT 3 AVRCP 17
+NO CARRIER 0 ERROR 1b04 SDC_NO_RESPONSE_DATA
+NO CARRIER 1 ERROR 0 
+AVRCP 3 GET_CAPABILITIES 3
+CALL 01:01:01:01:05:76 111F HFP
+CALL 0
+CALL 01:01:01:01:05:76 19 A2DP
+CALL 1
+CALL 01:01:01:01:05:76 17 AVRCP
+CALL 4
+CALL 01:01:01:01:05:76 112F PBAP
+CALL 5
+NO CARRIER 5 ERROR 1 BOCK_ERR_RESOURCES
+CONNECT 1 A2DP 19
+CONNECT 4 AVRCP 17
+NO CARRIER 0 ERROR 1b04 SDC_NO_RESPONSE_DATA
+NO CARRIER 1 ERROR 0 
+AVRCP 4 GET_CAPABILITIES 3
+NO CARRIER 4 ERROR a80c L2CAP_DISCONNECT_LINK_LOSS
+NO CARRIER 3 ERROR a80c L2CAP_DISCONNECT_LINK_LOSS
+NO CARRIER 2 ERROR a80c L2CAP_DISCONNECT_LINK_LOSS
+RING 0 bc:d1:1f:5b:f2:c1 19 A2DP 
+RING 1 bc:d1:1f:5b:f2:c1 19 A2DP 
+A2DP STREAMING START 0
+A2DP STREAMING STOP 0
+A2DP STREAMING START 0
+A2DP STREAMING STOP 0
+A2DP STREAMING START 0
+A2DP STREAMING STOP 0
+A2DP STREAMING START 0
+A2DP STREAMING STOP 0
+NO CARRIER 1 ERROR 0 
+NO CARRIER 0 ERROR 0 
+RING 0 44:04:44:ee:03:df 19 A2DP 
+RING 1 44:04:44:ee:03:df 19 A2DP 
+CALL 01:01:01:01:05:76 111F HFP
+CALL 2
+CALL 01:01:01:01:05:76 19 A2DP
+CALL 3
+CALL 01:01:01:01:05:76 17 AVRCP
+CALL 4
+CALL 01:01:01:01:05:76 112F PBAP
+CALL 5
+NO CARRIER 5 ERROR 1 BOCK_ERR_RESOURCES
+NO CARRIER 2 ERROR 1b04 SDC_NO_RESPONSE_DATA
+CONNECT 4 AVRCP 17
+CONNECT 3 A2DP 19
+NO CARRIER 3 ERROR 0 
+AVRCP 4 GET_CAPABILITIES 3
+A2DP STREAMING START 0
+A2DP STREAMING STOP 0
+NO CARRIER 1 ERROR 0 
+NO CARRIER 0 ERROR 0 
+CALL 01:01:01:01:05:76 111F HFP
+CALL 0
+CALL 01:01:01:01:05:76 19 A2DP
+CALL 1
+CALL 01:01:01:01:05:76 17 AVRCP
+CALL 2
+CALL 01:01:01:01:05:76 112F PBAP
+CALL 3
+NO CARRIER 3 ERROR 1 BOCK_ERR_RESOURCES
+CONNECT 1 A2DP 19
+CONNECT 2 AVRCP 17
+NO CARRIER 0 ERROR 1b04 SDC_NO_RESPONSE_DATA
+NO CARRIER 1 ERROR 0 
+AVRCP 2 GET_CAPABILITIES 3
+NO CARRIER 2 ERROR a80c L2CAP_DISCONNECT_LINK_LOSS
+NO CARRIER 4 ERROR a80c L2CAP_DISCONNECT_LINK_LOSS
+root@b2qt-apalis-imx6:/# 
+root@b2qt-apalis-imx6:/# 
+root@b2qt-apalis-imx6:/# 
+root@b2qt-apalis-imx6:/# cat BT-Mobile-mxc4.txt 
+root@b2qt-apalis-imx6:/# 
+root@b2qt-apalis-imx6:/# RING 0 01:01:01:01:05:76 19 A2DP 
+NO CARRIER 0 ERROR 0 
+SET BT PAIR 01:01:01:01:05:76
+SET BT PAIR
+SET BT PAIR 44:04:44:ee:03:df b4e64ba44e5a4cc189acb291662cf98e
+SET BT PAIR bc:d1:1f:5b:f2:c1 66c553740643c39338b79a5d32c77751
+SET
+INQUIRY 7 NAME
+INQUIRY_PARTIAL 01:01:01:01:05:76 240418
+INQUIRY_PARTIAL f6:b0:46:03:35:c1 5a020c
+INQUIRY_PARTIAL 4c:49:e3:6e:06:92 5a020c
+INQUIRY_PARTIAL 88:6b:0f:62:71:86 280428
+INQUIRY_PARTIAL 00:1b:10:00:2a:ec 6e0100
+INQUIRY_PARTIAL d0:53:49:e5:59:26 6c0100
+INQUIRY 6
+INQUIRY 01:01:01:01:05:76 240418
+INQUIRY f6:b0:46:03:35:c1 5a020c
+INQUIRY 4c:49:e3:6e:06:92 5a020c
+INQUIRY 88:6b:0f:62:71:86 280428
+INQUIRY 00:1b:10:00:2a:ec 6e0100
+INQUIRY d0:53:49:e5:59:26 6c0100
+NAME 01:01:01:01:05:76 "Bluetooth music"
+NAME f6:b0:46:03:35:c1 "Color X5.5"
+NAME 4c:49:e3:6e:06:92 "Garg's Android"
+NAME 88:6b:0f:62:71:86 "WT32i-A"
+NAME 00:1b:10:00:2a:ec "emb-ban-227-0"
+NAME ERROR 0x104 d0:53:49:e5:59:26 HCI_ERROR_PAGE_TIMEOUT

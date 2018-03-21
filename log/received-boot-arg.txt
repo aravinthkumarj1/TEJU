@@ -1,0 +1,45 @@
+board_name=apalis_imx6
+board_rev=011b
+boot_file=uImage
+bootcmd=run sdboot
+bootdelay=1
+console=ttymxc0
+cpu=armv7
+defargs=enable_wait_mode=off vmalloc=400M
+dfu_alt_info=u-boot.imx raw 0x2 0x3ff mmcpart 0;boot part 0 1;rootfs part 0 2;uImage fat 0 1;imx6q-colibri-eval-v3.dtb fat 0 1;imx6q-colibri-cam-eval-v3.dtb fat 0 1
+emmcargs=ip=off root=/dev/mmcblk0p2 rw,noatime rootfstype=ext3 rootwait
+emmcboot=run setup; setenv bootargs ${defargs} ${emmcargs} ${setupargs} ${vidargs}; echo Booting from internal eMMC chip...; run emmcdtbload; load mmc 0:1 ${kernel_addr_r} ${boot_file} && bootm ${kernel_addr_r} ${dtbparam}
+emmcdtbload=setenv dtbparam; load mmc 0:1 ${fdt_addr_r} ${fdt_file} && setenv dtbparam " - ${fdt_addr_r}" && true
+ethact=FEC
+ethaddr=00:14:2d:4d:47:55
+ethprime=FEC
+fdt_addr_r=0x12000000
+fdt_file=imx6q-apalis-ixora-v1_1.dtb
+fdt_high=0xffffffff
+initrd_high=0xffffffff
+ipaddr=192.168.10.2
+kernel_addr_r=0x10800000
+loadaddr=0x12000000
+netmask=255.255.255.0
+nfsargs=ip=:::::eth0:on root=/dev/nfs rw netdevwait
+nfsboot=run setup; setenv bootargs ${defargs} ${nfsargs} ${setupargs} ${vidargs}; echo Booting via DHCP/TFTP/NFS...; run nfsdtbload; dhcp ${kernel_addr_r} && bootm ${kernel_addr_r} ${dtbparam}
+nfsdtbload=setenv dtbparam; tftp ${fdt_addr_r} ${fdt_file} && setenv dtbparam " - ${fdt_addr_r}" && true
+ramdisk_addr_r=0x12100000
+sdargs=ip=off root=/dev/mmcblk1p2 rw,noatime rootfstype=ext3 rootwait
+sdboot=run setup; setenv bootargs ${defargs} ${sdargs} ${setupargs} ${vidargs}; echo Booting from SD card in 8bit slot...; run sddtbload; load mmc 1:1 ${kernel_addr_r} ${boot_file} && bootm ${kernel_addr_r} ${dtbparam}
+sddtbload=setenv dtbparam; load mmc 1:1 ${fdt_addr_r} ${fdt_file} && setenv dtbparam " - ${fdt_addr_r}" && true
+serial#=05064533
+serverip=192.168.10.1
+setethupdate=tftpboot ${kernel_addr_r} flash_eth.img
+setsdupdate=setenv interface mmc; setenv drive 1; mmc rescan; load ${interface} ${drive}:1 ${kernel_addr_r} flash_blk.img || setenv drive 2; load ${interface} ${drive}:1 ${kernel_addr_r} flash_blk.img
+setup=setenv setupargs fec_mac=${ethaddr} consoleblank=0  no_console_suspend=1 console=tty1 console=${console},${baudrate}n8
+setupdate=run setsdupdate || run setusbupdate || run setethupdate; source ${kernel_addr_r}
+setusbupdate=usb start && setenv interface usb; setenv drive 0; load ${interface} ${drive}:1 ${kernel_addr_r} flash_blk.img
+soc=mx6
+splashpos=m,m
+vendor=toradex
+ver=U-Boot 2015.04 (May 18 2015 - 13:08:37)
+vidargs=video=mxcfb0:ldb video=mxcfb1:off video=mxcfb2:off video=mxcfb3:off fbmem=32M
+
+Environment size: 2678/8188 bytes
+

@@ -1,0 +1,3423 @@
+
+
+U-Boot 2017.03-00002-gebf9dc2527 (Jan 29 2018 - 17:39:17 +0530)
+
+CPU:   Freescale i.MX6Q rev1.5 at 792 MHz
+Reset cause: POR
+I2C:   ready
+DRAM:  2 GiB
+PMIC: device id: 0x10, revision id: 0x21
+PMIC: programmed
+MMC:   FSL_SDHC: 0, FSL_SDHC: 1, FSL_SDHC: 2
+Unable to allocate framebuffer memory
+In:    serial
+Out:   serial
+Err:   serial
+Model: Toradex Apalis iMX6 Quad 2GB IT V1.1C, Serial# 05146387
+flash target is MMC:0
+Net:   using PHY at 7
+FEC [PRIME]
+Fastboot: Normal
+Hit any key to stop autoboot:  1  0 
+boota mmc0 
+CACHE: Misaligned operation at range [8ffb79a0, 8ffb7a20]
+CACHE: Misaligned operation at range [8ffb79a0, 8ffb7a20]
+kernel   @ 14008000 (9802160)
+ramdisk  @ 15000000 (1628983)
+fdt      @ 14f00000 (53981)
+## Booting Android Image at 0x12000000 ...
+Kernel load addr 0x14008000 size 9573 KiB
+Kernel command line: console=ttymxc0,115200 init=/init video=mxcfb0:dev=ldb,fbpix=RGB32,bpp=32 video=mxcfb1:dev=hdmi,640x480M@60,if=RGB24,bpp=16 video=mxcfb2:off video=mxcfb3:off vmalloc=256M androidboot.console=ttymxc0 consoleblank=0 androidboot.hardware=freescale cma=448M androidboot.selinux=permissive androidboot.dm_verity=disabled buildvariant=user androidboot.serialno=1b2429d4ea997115 androidboot.storage_type=emmc
+## Flattened Device Tree blob at 14f00000
+   Booting using the fdt blob at 0x14f00000
+   Loading Kernel Image ... OK
+   Using Device Tree in place at 14f00000, end 14f102dc
+
+Starting kernel ...
+
+Booting Linux on physical CPU 0x0
+Linux version 4.9.67-07229-gdc6c16ec0433 (embadmin@ubuntu) (gcc version 4.9 20150123 (prerelease) (GCC) ) #73 SMP PREEMPT Mon Feb 19 12:20:06 IST 2018
+CPU: ARMv7 Processor [412fc09a] revision 10 (ARMv7), cr=10c53c7d
+CPU: PIPT / VIPT nonaliasing data cache, VIPT aliasing instruction cache
+OF: fdt:Machine model: Aravinth : Toradex Apalis iMX6Q/D Module on Ixora V1.1 Carrier Board
+cma: Reserved 448 MiB at 0x22000000
+Memory policy: Data cache writealloc
+percpu: Embedded 15 pages/cpu @ee6b3000 s31040 r8192 d22208 u61440
+Built 1 zonelists in Zone order, mobility grouping on.  Total pages: 522768
+Kernel command line: console=ttymxc0,115200 init=/init video=mxcfb0:dev=ldb,fbpix=RGB32,bpp=32 video=mxcfb1:dev=hdmi,640x480M@60,if=RGB24,bpp=16 video=mxcfb2:off video=mxcfb3:off vmalloc=256M androidboot.console=ttymxc0 consoleblank=0 androidboot.hardware=freescale cma=448M androidboot.selinux=permissive androidboot.dm_verity=disabled buildvariant=user androidboot.serialno=1b2429d4ea997115 androidboot.storage_type=emmc
+PID hash table entries: 4096 (order: 2, 16384 bytes)
+Dentry cache hash table entries: 131072 (order: 7, 524288 bytes)
+Inode-cache hash table entries: 65536 (order: 6, 262144 bytes)
+Memory: 1597048K/2097152K available (13312K kernel code, 1128K rwdata, 4016K rodata, 1024K init, 606K bss, 41352K reserved, 458752K cma-reserved, 1318912K highmem)
+Virtual kernel memory layout:
+    vector  : 0xffff0000 - 0xffff1000   (   4 kB)
+    fixmap  : 0xffc00000 - 0xfff00000   (3072 kB)
+    vmalloc : 0xf0000000 - 0xff800000   ( 248 MB)
+    lowmem  : 0xc0000000 - 0xef800000   ( 760 MB)
+    pkmap   : 0xbfe00000 - 0xc0000000   (   2 MB)
+    modules : 0xbf000000 - 0xbfe00000   (  14 MB)
+      .text : 0xc0008000 - 0xc0e00000   (14304 kB)
+      .init : 0xc1300000 - 0xc1400000   (1024 kB)
+      .data : 0xc1400000 - 0xc151a218   (1129 kB)
+       .bss : 0xc151a218 - 0xc15b1be0   ( 607 kB)
+SLUB: HWalign=64, Order=0-3, MinObjects=0, CPUs=4, Nodes=1
+Preemptible hierarchical RCU implementation.
+	Build-time adjustment of leaf fanout to 32.
+NR_IRQS:16 nr_irqs:16 16
+L2C-310 errata 752271 769419 enabled
+L2C-310 enabling early BRESP for Cortex-A9
+L2C-310 full line of zeros enabled for Cortex-A9
+L2C-310 ID prefetch enabled, offset 16 lines
+L2C-310 dynamic clock gating enabled, standby mode enabled
+L2C-310 cache controller enabled, 16 ways, 1024 kB
+L2C-310: CACHE_ID 0x410000c7, AUX_CTRL 0x76470001
+Switching to timer-based delay loop, resolution 333ns
+sched_clock: 32 bits at 3000kHz, resolution 333ns, wraps every 715827882841ns
+clocksource: mxc_timer1: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 637086815595 ns
+Console: colour dummy device 80x30
+Calibrating delay loop (skipped), value calculated using timer frequency.. 6.00 BogoMIPS (lpj=30000)
+pid_max: default: 32768 minimum: 301
+Security Framework initialized
+SELinux:  Initializing.
+Mount-cache hash table entries: 2048 (order: 1, 8192 bytes)
+Mountpoint-cache hash table entries: 2048 (order: 1, 8192 bytes)
+CPU: Testing write buffer coherency: ok
+CPU0: update cpu_capacity 1024
+CPU0: thread -1, cpu 0, socket 0, mpidr 80000000
+Setting up static identity map for 0x10100000 - 0x10100058
+CPU1: update cpu_capacity 1024
+CPU1: thread -1, cpu 1, socket 0, mpidr 80000001
+CPU2: update cpu_capacity 1024
+CPU2: thread -1, cpu 2, socket 0, mpidr 80000002
+CPU3: update cpu_capacity 1024
+CPU3: thread -1, cpu 3, socket 0, mpidr 80000003
+Brought up 4 CPUs
+SMP: Total of 4 processors activated (24.00 BogoMIPS).
+CPU: All CPU(s) started in SVC mode.
+CPU3: update max cpu_capacity 1024
+devtmpfs: initialized
+CPU2: update max cpu_capacity 1024
+VFP support v0.3: implementor 41 architecture 3 part 30 variant 9 rev 4
+clocksource: jiffies: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 19112604462750000 ns
+futex hash table entries: 1024 (order: 4, 65536 bytes)
+pinctrl core: initialized pinctrl subsystem
+NET: Registered protocol family 16
+DMA: preallocated 256 KiB pool for atomic coherent allocations
+cpuidle: using governor menu
+CPU identified as i.MX6Q, silicon rev 1.5
+hw-breakpoint: found 5 (+1 reserved) breakpoint and 1 watchpoint registers.
+hw-breakpoint: maximum watchpoint size is 4 bytes.
+imx6q-pinctrl 20e0000.iomuxc: initialized IMX pinctrl driver
+imx-gpc 20dc000.gpc: no fsl,ldo-bypass found!
+imx-gpc 20dc000.gpc: Registered imx-gpc
+mxs-dma 110000.dma-apbh: initialized
+usb_host_vbus: supplied by usb_host_vbus_hub
+SCSI subsystem initialized
+usbcore: registered new interface driver usbfs
+usbcore: registered new interface driver hub
+usbcore: registered new device driver usb
+2000000.aips-bus:usbphy_nop1 supply vcc not found, using dummy regulator
+2000000.aips-bus:usbphy_nop2 supply vcc not found, using dummy regulator
+i2c i2c-1: IMX I2C adapter registered
+i2c i2c-1: can't use DMA, using PIO instead.
+stmpe-i2c 2-0041: stmpe811 detected, chip id: 0x811
+i2c i2c-2: IMX I2C adapter registered
+i2c i2c-2: can't use DMA, using PIO instead.
+i2c i2c-3: IMX I2C adapter registered
+i2c i2c-3: can't use DMA, using PIO instead.
+Linux video capture interface: v2.00
+pps_core: LinuxPPS API ver. 1 registered
+pps_core: Software ver. 5.3.6 - Copyright 2005-2007 Rodolfo Giometti <giometti@linux.it>
+PTP clock support registered
+imx-ipuv3 2400000.ipu: IPU DMFC NORMAL mode: 1(0~1), 5B(4,5), 5F(6,7)
+imx-ipuv3 2800000.ipu: IPU DMFC NORMAL mode: 1(0~1), 5B(4,5), 5F(6,7)
+mxc_mipi_csi2 21dc000.mipi_csi: i.MX MIPI CSI2 driver probed ipu0 csi1
+mxc_mipi_csi2 21dc000.mipi_csi: i.MX MIPI CSI2 dphy version is 0x3130302a
+MIPI CSI2 driver module loaded
+imx rpmsg driver is registered.
+Advanced Linux Sound Architecture Driver Initialized.
+Bluetooth: Core ver 2.22
+NET: Registered protocol family 31
+Bluetooth: HCI device and connection manager initialized
+Bluetooth: HCI socket layer initialized
+Bluetooth: L2CAP socket layer initialized
+Bluetooth: SCO socket layer initialized
+clocksource: Switched to clocksource mxc_timer1
+VFS: Disk quotas dquot_6.6.0
+VFS: Dquot-cache hash table entries: 1024 (order 0, 4096 bytes)
+NET: Registered protocol family 2
+TCP established hash table entries: 8192 (order: 3, 32768 bytes)
+TCP bind hash table entries: 8192 (order: 4, 65536 bytes)
+TCP: Hash tables configured (established 8192 bind 8192)
+UDP hash table entries: 512 (order: 2, 16384 bytes)
+UDP-Lite hash table entries: 512 (order: 2, 16384 bytes)
+NET: Registered protocol family 1
+RPC: Registered named UNIX socket transport module.
+RPC: Registered udp transport module.
+RPC: Registered tcp transport module.
+RPC: Registered tcp NFSv4.1 backchannel transport module.
+Trying to unpack rootfs image as initramfs...
+Freeing initrd memory: 1592K
+hw perfevents: enabled with armv7_cortex_a9 PMU driver, 7 counters available
+Bus freq driver module loaded
+audit: initializing netlink subsys (disabled)
+audit: type=2000 audit(0.880:1): initialized
+workingset: timestamp_bits=30 max_order=19 bucket_order=0
+NFS: Registering the id_resolver key type
+Key type id_resolver registered
+Key type id_legacy registered
+ntfs: driver 2.1.32 [Flags: R/W DEBUG].
+jffs2: version 2.2. (NAND) © 2001-2006 Red Hat, Inc.
+fuse init (API version 7.26)
+bounce: pool size: 64 pages
+io scheduler noop registered
+io scheduler deadline registered
+io scheduler cfq registered (default)
+backlight supply power not found, using dummy regulator
+20e0000.hdmi_video supply HDMI not found, using dummy regulator
+mxc_sdc_fb fb@0: registered mxc display driver ldb
+imx-ipuv3 2800000.ipu: IPU DMFC DP HIGH RESOLUTION: 1(0,1), 5B(2~5), 5F(6,7)
+Console: switching to colour frame buffer device 128x48
+mxc_hdmi 20e0000.hdmi_video: Detected HDMI controller 0x13:0xa:0xa0:0xc1
+fbcvt: 640x480@60: CVT Name - .307M3
+mxc_sdc_fb fb@1: registered mxc display driver hdmi
+mxc_sdc_fb fb@2: Can't get fb option for mxcfb2!
+mxc_sdc_fb fb@3: Can't get fb option for mxcfb3!
+imx-sdma 20ec000.sdma: no iram assigned, using external mem
+imx-sdma 20ec000.sdma: loaded firmware 3.3
+pfuze100-regulator 2-0008: Full layer: 2, Metal layer: 1
+pfuze100-regulator 2-0008: FAB: 0, FIN: 0
+pfuze100-regulator 2-0008: pfuze100 found.
+2020000.serial: ttymxc0 at MMIO 0x2020000 (irq = 29, base_baud = 5000000) is a IMX
+console [ttymxc0] enabled
+21e8000.serial: ttymxc1 at MMIO 0x21e8000 (irq = 78, base_baud = 5000000) is a IMX
+21f0000.serial: ttymxc3 at MMIO 0x21f0000 (irq = 79, base_baud = 5000000) is a IMX
+21f4000.serial: ttymxc4 at MMIO 0x21f4000 (irq = 80, base_baud = 5000000) is a IMX
+imx sema4 driver is registered.
+[drm] Initialized
+[drm] Initialized vivante 1.0.0 20120216 on minor 0
+brd: module loaded
+loop: module loaded
+zram: Added device: zram0
+ahci-imx 2200000.sata: fsl,transmit-level-mV not specified, using 00000024
+ahci-imx 2200000.sata: fsl,transmit-boost-mdB not specified, using 00000480
+ahci-imx 2200000.sata: fsl,transmit-atten-16ths not specified, using 00002000
+ahci-imx 2200000.sata: fsl,receive-eq-mdB not specified, using 05000000
+ahci-imx 2200000.sata: SSS flag set, parallel bus scan disabled
+ahci-imx 2200000.sata: AHCI 0001.0300 32 slots 1 ports 3 Gbps 0x1 impl platform mode
+ahci-imx 2200000.sata: flags: ncq sntf stag pm led clo only pmp pio slum part ccc apst 
+scsi host0: ahci-imx
+ata1: SATA max UDMA/133 mmio [mem 0x02200000-0x02203fff] port 0x100 irq 87
+spi_imx 2008000.ecspi: probed
+libphy: Fixed MDIO Bus: probed
+tun: Universal TUN/TAP device driver, 1.6
+tun: (C) 1999-2004 Max Krasnyansky <maxk@qualcomm.com>
+CAN device driver interface
+2090000.flexcan supply xceiver not found, using dummy regulator
+flexcan 2090000.flexcan: device registered (reg_base=f02f4000, irq=38)
+2094000.flexcan supply xceiver not found, using dummy regulator
+flexcan 2094000.flexcan: device registered (reg_base=f02fc000, irq=39)
+2188000.ethernet supply phy not found, using dummy regulator
+pps pps0: new PPS source ptp0
+libphy: fec_enet_mii_bus: probed
+fec 2188000.ethernet eth0: registered PHC device 0
+PPP generic driver version 2.4.2
+PPP BSD Compression module registered
+PPP Deflate Compression module registered
+PPP MPPE Compression module registered
+NET: Registered protocol family 24
+usbcore: registered new interface driver kaweth
+pegasus: v0.9.3 (2013/04/25), Pegasus/Pegasus II USB Ethernet driver
+usbcore: registered new interface driver pegasus
+usbcore: registered new interface driver rtl8150
+usbcore: registered new interface driver r8152
+usbcore: registered new interface driver asix
+usbcore: registered new interface driver ax88179_178a
+usbcore: registered new interface driver cdc_ether
+usbcore: registered new interface driver cdc_eem
+usbcore: registered new interface driver net1080
+usbcore: registered new interface driver cdc_subset
+usbcore: registered new interface driver zaurus
+usbcore: registered new interface driver cdc_ncm
+ehci_hcd: USB 2.0 'Enhanced' Host Controller (EHCI) Driver
+ehci-mxc: Freescale On-Chip EHCI Host driver
+usbcore: registered new interface driver cdc_acm
+cdc_acm: USB Abstract Control Model driver for USB modems and ISDN adapters
+usbcore: registered new interface driver usb-storage
+usbcore: registered new interface driver usbserial
+usbcore: registered new interface driver usbserial_generic
+usbserial: USB Serial support registered for generic
+usbcore: registered new interface driver ftdi_sio
+usbserial: USB Serial support registered for FTDI USB Serial Device
+usbcore: registered new interface driver option
+usbserial: USB Serial support registered for GSM modem (1-port)
+usbcore: registered new interface driver usbtest
+usbcore: registered new interface driver usb_ehset_test
+2184800.usbmisc supply vbus-wakeup not found, using dummy regulator
+ci_hdrc ci_hdrc.1: EHCI Host Controller
+ci_hdrc ci_hdrc.1: new USB bus registered, assigned bus number 1
+ci_hdrc ci_hdrc.1: USB 2.0 started, EHCI 1.00
+usb usb1: New USB device found, idVendor=1d6b, idProduct=0002
+usb usb1: New USB device strings: Mfr=3, Product=2, SerialNumber=1
+usb usb1: Product: EHCI Host Controller
+usb usb1: Manufacturer: Linux 4.9.67-07229-gdc6c16ec0433 ehci_hcd
+usb usb1: SerialNumber: ci_hdrc.1
+hub 1-0:1.0: USB hub found
+hub 1-0:1.0: 1 port detected
+ata1: SATA link down (SStatus 0 SControl 300)
+ahci-imx 2200000.sata: no device found, disabling link.
+ahci-imx 2200000.sata: pass ahci_imx..hotplug=1 to enable hotplug
+mousedev: PS/2 mouse device common for all mice
+usbcore: registered new interface driver xpad
+usbcore: registered new interface driver usb_acecad
+usbcore: registered new interface driver aiptek
+usbcore: registered new interface driver gtco
+usbcore: registered new interface driver hanwang
+usbcore: registered new interface driver kbtab
+input: stmpe-ts as /devices/soc0/soc/2100000.aips-bus/21a4000.i2c/i2c-2/2-0041/stmpe-ts/input/input0
+snvs_rtc 20cc000.snvs:snvs-rtc-lp: rtc core: registered 20cc000.snvs:snvs-r as rtc0
+i2c /dev entries driver
+IR NEC protocol handler initialized
+IR RC5(x/sz) protocol handler initialized
+IR RC6 protocol handler initialized
+IR JVC protocol handler initialized
+IR Sony protocol handler initialized
+IR SANYO protocol handler initialized
+IR Sharp protocol handler initialized
+IR MCE Keyboard/mouse protocol handler initialized
+IR XMP protocol handler initialized
+mxc_v4l2_output v4l2_out: V4L2 device registered as video16
+mxc_v4l2_output v4l2_out: V4L2 device registered as video17
+mxc_v4l2_output v4l2_out: V4L2 device registered as video18
+mxc_v4l2_output v4l2_out: V4L2 device registered as video19
+ov564x_mipi 3-003c: found pwm2, period=0
+usb 1-1: new high-speed USB device number 2 using ci_hdrc
+ov5640_read_reg:write reg error:reg=300a
+camera ov5640_mipi is not found
+usbcore: registered new interface driver uvcvideo
+USB Video Class driver (1.1.1)
+imx2-wdt 20bc000.wdog: timeout 60 sec (nowayout=0)
+device-mapper: uevent: version 1.0.3
+device-mapper: ioctl: 4.35.0-ioctl (2016-06-23) initialised: dm-devel@redhat.com
+Bluetooth: HCI UART driver ver 2.3
+Bluetooth: HCI UART protocol H4 registered
+Bluetooth: HCI UART protocol BCSP registered
+Bluetooth: HCI UART protocol ATH3K registered
+usbcore: registered new interface driver btusb
+sdhci: Secure Digital Host Controller Interface driver
+sdhci: Copyright(c) Pierre Ossman
+sdhci-pltfm: SDHCI platform and OF driver helper
+sdhci-esdhc-imx 2190000.usdhc: could not get ultra high speed state, work on normal mode
+sdhci-esdhc-imx 2190000.usdhc: Got CD GPIO
+mmc1: SDHCI controller on 2190000.usdhc [2190000.usdhc] using ADMA
+sdhci-esdhc-imx 2198000.usdhc: could not get ultra high speed state, work on normal mode
+usb 1-1: New USB device found, idVendor=0424, idProduct=2514
+usb 1-1: New USB device strings: Mfr=0, Product=0, SerialNumber=0
+hub 1-1:1.0: USB hub found
+hub 1-1:1.0: 4 ports detected
+mmc0: SDHCI controller on 2198000.usdhc [2198000.usdhc] using ADMA
+mxc_vpu 2040000.vpu_fsl: VPU initialized
+mxc_vdoa 21e4000.vdoa: i.MX Video Data Order Adapter(VDOA) driver probed
+mxc_hdmi_cec soc:hdmi_cec@00120000: HDMI CEC initialized
+Galcore version 6.2.2.96445
+mmc0: new DDR MMC card at address 0001
+mmcblk0: mmc0:0001 Q2J54A 3.59 GiB 
+mmcblk0boot0: mmc0:0001 Q2J54A partition 1 16.0 MiB
+mmcblk0boot1: mmc0:0001 Q2J54A partition 2 16.0 MiB
+random: fast init done
+Alternate GPT is invalid, using primary GPT.
+ mmcblk0: p1 p2 p3 p4 p5 p6 p7 p8 p9 p10 p11
+caam 2100000.caam: ERA source: CAAMVID.
+caam 2100000.caam: AXI pipeline throttling enabled.
+caam 2100000.caam: Instantiated RNG4 SH1
+caam 2100000.caam: device ID = 0x0a16010000000000 (Era 4)
+caam 2100000.caam: job rings = 2, qi = 0
+caam algorithms registered in /proc/crypto
+caam_jr 2101000.jr0: registering rng-caam
+platform caam_sm: blkkey_ex: 4 keystore units available
+platform caam_sm: 64-bit clear key:
+platform caam_sm: [0000] 00 01 02 03 04 0f 06 07
+platform caam_sm: 64-bit black key:
+platform caam_sm: [0000] ac df b7 48 79 18 82 44
+platform caam_sm: [0008] 88 53 4e 33 67 3c df 94
+platform caam_sm: 128-bit clear key:
+platform caam_sm: [0000] 00 01 02 03 04 0f 06 07
+platform caam_sm: [0008] 08 09 0a 0b 0c 0d 0e 0f
+platform caam_sm: 128-bit black key:
+platform caam_sm: [0000] ed a7 33 7e c7 ac 7e 78
+platform caam_sm: [0008] 92 da b6 3b 73 a5 33 66
+platform caam_sm: 192-bit clear key:
+platform caam_sm: [0000] 00 01 02 03 04 0f 06 07
+platform caam_sm: [0008] 08 09 0a 0b 0c 0d 0e 0f
+platform caam_sm: [0016] 10 11 12 13 14 15 16 17
+platform caam_sm: 192-bit black key:
+platform caam_sm: [0000] 8f 00 46 1f d1 33 0b 18
+platform caam_sm: [0008] 63 0e 62 39 bd 6d 00 4a
+platform caam_sm: [0016] 43 66 16 42 16 93 33 63
+platform caam_sm: [0024] 5a 17 91 05 02 c2 24 6c
+platform caam_sm: 256-bit clear key:
+platform caam_sm: [0000] 00 01 02 03 04 0f 06 07
+platform caam_sm: [0008] 08 09 0a 0b 0c 0d 0e 0f
+platform caam_sm: [0016] 10 11 12 13 14 15 16 17
+platform caam_sm: [0024] 18 19 1a 1b 1c 1d 1e 1f
+platform caam_sm: 256-bit black key:
+platform caam_sm: [0000] 1d 1a 34 e8 75 2b 73 dd
+platform caam_sm: [0008] 32 74 7d 1a c5 94 cc 5a
+platform caam_sm: [0016] cd b3 f6 51 9f 9a cf ec
+platform caam_sm: [0024] e0 f5 41 74 a5 67 1b f1
+platform caam_sm: 64-bit unwritten blob:
+platform caam_sm: [0000] 00 00 00 00 00 00 00 00
+platform caam_sm: [0008] 00 00 00 00 00 00 00 00
+platform caam_sm: [0016] 00 00 00 00 00 00 00 00
+platform caam_sm: [0024] 00 00 00 00 00 00 00 00
+platform caam_sm: [0032] 00 00 00 00 00 00 00 00
+platform caam_sm: [0040] 00 00 00 00 00 00 00 00
+platform caam_sm: [0048] 00 00 00 00 00 00 00 00
+platform caam_sm: [0056] 00 00 00 00 00 00 00 00
+platform caam_sm: [0064] 00 00 00 00 00 00 00 00
+platform caam_sm: [0072] 00 00 00 00 00 00 00 00
+platform caam_sm: [0080] 00 00 00 00 00 00 00 00
+platform caam_sm: [0088] 00 00 00 00 00 00 00 00
+platform caam_sm: 128-bit unwritten blob:
+platform caam_sm: [0000] 00 00 00 00 00 00 00 00
+platform caam_sm: [0008] 00 00 00 00 00 00 00 00
+platform caam_sm: [0016] 00 00 00 00 00 00 00 00
+platform caam_sm: [0024] 00 00 00 00 00 00 00 00
+platform caam_sm: [0032] 00 00 00 00 00 00 00 00
+platform caam_sm: [0040] 00 00 00 00 00 00 00 00
+platform caam_sm: [0048] 00 00 00 00 00 00 00 00
+platform caam_sm: [0056] 00 00 00 00 00 00 00 00
+platform caam_sm: [0064] 00 00 00 00 00 00 00 00
+platform caam_sm: [0072] 00 00 00 00 00 00 00 00
+platform caam_sm: [0080] 00 00 00 00 00 00 00 00
+platform caam_sm: [0088] 00 00 00 00 00 00 00 00
+platform caam_sm: 196-bit unwritten blob:
+platform caam_sm: [0000] 00 00 00 00 00 00 00 00
+platform caam_sm: [0008] 00 00 00 00 00 00 00 00
+platform caam_sm: [0016] 00 00 00 00 00 00 00 00
+platform caam_sm: [0024] 00 00 00 00 00 00 00 00
+platform caam_sm: [0032] 00 00 00 00 00 00 00 00
+platform caam_sm: [0040] 00 00 00 00 00 00 00 00
+platform caam_sm: [0048] 00 00 00 00 00 00 00 00
+platform caam_sm: [0056] 00 00 00 00 00 00 00 00
+platform caam_sm: [0064] 00 00 00 00 00 00 00 00
+platform caam_sm: [0072] 00 00 00 00 00 00 00 00
+platform caam_sm: [0080] 00 00 00 00 00 00 00 00
+platform caam_sm: [0088] 00 00 00 00 00 00 00 00
+platform caam_sm: 256-bit unwritten blob:
+platform caam_sm: [0000] 00 00 00 00 00 00 00 00
+platform caam_sm: [0008] 00 00 00 00 00 00 00 00
+platform caam_sm: [0016] 00 00 00 00 00 00 00 00
+platform caam_sm: [0024] 00 00 00 00 00 00 00 00
+platform caam_sm: [0032] 00 00 00 00 00 00 00 00
+platform caam_sm: [0040] 00 00 00 00 00 00 00 00
+platform caam_sm: [0048] 00 00 00 00 00 00 00 00
+platform caam_sm: [0056] 00 00 00 00 00 00 00 00
+platform caam_sm: [0064] 00 00 00 00 00 00 00 00
+platform caam_sm: [0072] 00 00 00 00 00 00 00 00
+platform caam_sm: [0080] 00 00 00 00 00 00 00 00
+platform caam_sm: [0088] 00 00 00 00 00 00 00 00
+platform caam_sm: 64-bit black key in blob:
+platform caam_sm: [0000] 86 88 42 42 ec 15 ac 3f
+platform caam_sm: [0008] e3 bf e6 5f e0 e8 c3 4f
+platform caam_sm: [0016] 85 ab 39 bd e7 ad 75 43
+platform caam_sm: [0024] 4d 28 b3 36 0a ff c1 48
+platform caam_sm: [0032] c9 03 40 e9 dd dd c8 aa
+platform caam_sm: [0040] a4 cb 77 ca f6 f2 1d 90
+platform caam_sm: [0048] 63 3d 13 a9 e6 9d 21 fa
+platform caam_sm: [0056] 00 00 00 00 00 00 00 00
+platform caam_sm: [0064] 00 00 00 00 00 00 00 00
+platform caam_sm: [0072] 00 00 00 00 00 00 00 00
+platform caam_sm: [0080] 00 00 00 00 00 00 00 00
+platform caam_sm: [0088] 00 00 00 00 00 00 00 00
+platform caam_sm: 128-bit black key in blob:
+platform caam_sm: [0000] 4b 0e 4a 23 70 06 75 38
+platform caam_sm: [0008] c2 c3 a3 af 2e 88 7e f8
+platform caam_sm: [0016] 3f 70 f9 1f 49 c5 3c 2d
+platform caam_sm: [0024] 6a de a5 7d af 95 0b 77
+platform caam_sm: [0032] b6 a5 98 97 d8 b3 05 c7
+platform caam_sm: [0040] 65 e1 c3 93 b9 b2 3a 80
+platform caam_sm: [0048] cb e1 e3 65 34 26 28 f9
+platform caam_sm: [0056] 02 d6 02 64 71 7f 14 62
+platform caam_sm: [0064] 00 00 00 00 00 00 00 00
+platform caam_sm: [0072] 00 00 00 00 00 00 00 00
+platform caam_sm: [0080] 00 00 00 00 00 00 00 00
+platform caam_sm: [0088] 00 00 00 00 00 00 00 00
+platform caam_sm: 192-bit black key in blob:
+platform caam_sm: [0000] a3 9b 13 7c 6c f2 05 9e
+platform caam_sm: [0008] 92 15 f9 8d e4 03 60 46
+platform caam_sm: [0016] 03 10 3a 44 2f 50 39 86
+platform caam_sm: [0024] 68 13 35 ef a5 5e 0a 4f
+platform caam_sm: [0032] 2d 50 13 f2 5d ca 80 a4
+platform caam_sm: [0040] 92 be f0 df 5f f8 47 2b
+platform caam_sm: [0048] 62 50 30 2f d6 3c bc 12
+platform caam_sm: [0056] bc ee f0 bf 77 00 34 7e
+platform caam_sm: [0064] fe cb 4b f9 85 36 df a1
+platform caam_sm: [0072] 00 00 00 00 00 00 00 00
+platform caam_sm: [0080] 00 00 00 00 00 00 00 00
+platform caam_sm: [0088] 00 00 00 00 00 00 00 00
+platform caam_sm: 256-bit black key in blob:
+platform caam_sm: [0000] da 88 05 10 34 59 f5 aa
+platform caam_sm: [0008] 4c 4c f1 1f 49 fa fe 7b
+platform caam_sm: [0016] 8d bc 7d 6e 61 e4 1c bf
+platform caam_sm: [0024] 27 2f ce 5e 36 7d 0e e1
+platform caam_sm: [0032] eb a2 3e 0d bd d6 b7 83
+platform caam_sm: [0040] fd 34 7c ca d9 07 67 ed
+platform caam_sm: [0048] e2 3b 66 b4 76 19 f3 1d
+platform caam_sm: [0056] e9 cb a9 56 3d ef 00 63
+platform caam_sm: [0064] f2 73 21 a7 02 f2 0a 3b
+platform caam_sm: [0072] e3 17 21 56 86 23 f6 75
+platform caam_sm: [0080] 00 00 00 00 00 00 00 00
+platform caam_sm: [0088] 00 00 00 00 00 00 00 00
+platform caam_sm: restored 64-bit black key:
+platform caam_sm: [0000] 04 20 7d 94 fc 89 14 48
+platform caam_sm: [0008] ee 08 45 ca 47 0e f2 8c
+platform caam_sm: restored 128-bit black key:
+platform caam_sm: [0000] ed a7 33 7e c7 ac 7e 78
+platform caam_sm: [0008] 92 da b6 3b 73 a5 33 66
+platform caam_sm: restored 192-bit black key:
+platform caam_sm: [0000] 8f 00 46 1f d1 33 0b 18
+platform caam_sm: [0008] 63 0e 62 39 bd 6d 00 4a
+platform caam_sm: [0016] fe 62 63 51 db 79 bb 9a
+platform caam_sm: [0024] fe 05 85 b1 ab b7 c2 a4
+platform caam_sm: restored 256-bit black key:
+platform caam_sm: [0000] 1d 1a 34 e8 75 2b 73 dd
+platform caam_sm: [0008] 32 74 7d 1a c5 94 cc 5a
+platform caam_sm: [0016] cd b3 f6 51 9f 9a cf ec
+platform caam_sm: [0024] e0 f5 41 74 a5 67 1b f1
+snvs-secvio 20cc000.caam-snvs: can't get snvs clock
+snvs-secvio 20cc000.caam-snvs: violation handlers armed - non-secure state
+hidraw: raw HID events driver (C) Jiri Kosina
+usbcore: registered new interface driver usbhid
+usbhid: USB HID core driver
+ashmem: initialized
+usbcore: registered new interface driver snd-usb-audio
+sgtl5000 2-000a: sgtl5000 revision 0x11
+fsl-ssi-dai 2028000.ssi: No cache defaults, reading back from HW
+imx-sgtl5000 sound: sgtl5000 <-> 2028000.ssi mapping ok
+imx-spdif sound-spdif: snd-soc-dummy-dai <-> 2004000.spdif mapping ok
+imx-audio-hdmi sound-hdmi: hdmi-hifi.0 <-> soc:hdmi_audio@00120000 mapping ok
+NET: Registered protocol family 26
+u32 classifier
+    Actions configured
+Netfilter messages via NETLINK v0.30.
+nf_conntrack version 0.5.0 (16384 buckets, 65536 max)
+ctnetlink v0.93: registering with nfnetlink.
+xt_time: kernel timezone is -0000
+ip_tables: (C) 2000-2006 Netfilter Core Team
+arp_tables: arp_tables: (C) 2002 David S. Miller
+Initializing XFRM netlink socket
+NET: Registered protocol family 10
+mip6: Mobile IPv6
+ip6_tables: (C) 2000-2006 Netfilter Core Team
+sit: IPv6, IPv4 and MPLS over IPv4 tunneling driver
+NET: Registered protocol family 17
+NET: Registered protocol family 15
+can: controller area network core (rev 20120528 abi 9)
+NET: Registered protocol family 29
+can: raw protocol (rev 20120528)
+can: broadcast manager protocol (rev 20161123 t)
+can: netlink gateway (rev 20130117) max_hops=1
+Bluetooth: RFCOMM TTY layer initialized
+Bluetooth: RFCOMM socket layer initialized
+Bluetooth: RFCOMM ver 1.11
+Bluetooth: BNEP (Ethernet Emulation) ver 1.3
+Bluetooth: BNEP filters: protocol multicast
+Bluetooth: BNEP socket layer initialized
+Bluetooth: HIDP (Human Interface Emulation) ver 1.2
+Bluetooth: HIDP socket layer initialized
+8021q: 802.1Q VLAN Support v1.8
+Key type dns_resolver registered
+cpu cpu0: Registered imx6q-cpufreq
+registered taskstats version 1
+imx_thermal 2000000.aips-bus:tempmon: Industrial CPU temperature grade - max:105C critical:100C passive:95C
+dhd_module_init in
+input: gpio-keys as /devices/soc0/gpio-keys/input/input1
+snvs_rtc 20cc000.snvs:snvs-rtc-lp: setting system clock to 1970-01-01 00:00:02 UTC (2)
+usb_otg_vbus: disabling
+ALSA device list:
+  #0: imx6q-apalis-sgtl5000
+  #1: imx-spdif
+  #2: imx-hdmi-soc
+Freeing unused kernel memory: 1024K
+init: init first stage started!
+SELinux:  Permission validate_trans in class security not defined in policy.
+SELinux:  Class cap_userns not defined in policy.
+SELinux:  Class cap2_userns not defined in policy.
+SELinux: the above unknown classes and permissions will be denied
+audit: type=1403 audit(4.998:2): policy loaded auid=4294967295 ses=4294967295
+init: (Initializing SELinux non-enforcing took 0.10s.)
+init: init second stage started!
+init: Running restorecon...
+init: waitpid failed: No child processes
+init: (Loading properties from /default.prop took 0.00s.)
+init: (Parsing /init.environ.rc took 0.00s.)
+init: (Parsing /init.usb.rc took 0.00s.)
+init: (Parsing init.freescale.usb.rc took 0.00s.)
+init: (Parsing init.freescale.i.MX6Q.rc took 0.00s.)
+init: (Parsing init.freescale.emmc.rc took 0.00s.)
+init: (Parsing /init.freescale.rc took 0.02s.)
+ueventd: ueventd started!
+ueventd: Coldboot took 0.43s.
+Console: switching to colour dummy device 80x30
+watchdogd: started (interval 10, margin 20)!
+EXT4-fs (mmcblk0p3): mounted filesystem with ordered data mode. Opts: barrier=1
+EXT4-fs (mmcblk0p10): Ignoring removed nomblk_io_submit option
+EXT4-fs (mmcblk0p10): recovery complete
+EXT4-fs (mmcblk0p10): mounted filesystem with ordered data mode. Opts: nomblk_io_submit,noauto_da_alloc,errors=panic
+EXT4-fs (mmcblk0p4): Ignoring removed nomblk_io_submit option
+EXT4-fs (mmcblk0p4): recovery complete
+EXT4-fs (mmcblk0p4): mounted filesystem with ordered data mode. Opts: nomblk_io_submit
+EXT4-fs (mmcblk0p5): mounted filesystem with ordered data mode. Opts: (null)
+file system registered
+using random self ethernet address
+using random host ethernet address
+zram0: detected capacity change from 0 to 314572800
+logd.auditd: start
+logd.klogd: 7579601334
+Adding 307196k swap on /dev/block/zram0.  Priority:-1 extents:1 across:307196k SS
+binder: 253:253 transaction failed 29189, size 0-0
+logd.daemon: reinit
+type=1400 audit(8.088:3): avc: denied { entrypoint } for pid=259 comm="init" path="/system/bin/can-config.sh" dev="mmcblk0p3" ino=255 scontext=u:r:obd:s0 tcontext=u:object_r:system_file:s0 tclass=file permissive=1
+toradex_apalis6q:/ # type=1400 audit(8.088:4): avc: denied { getattr } for pid=260 comm="obd" path="/vendor" dev="rootfs" ino=6500 scontext=u:r:obd:s0 tcontext=u:object_r:rootfs:s0 tclass=lnk_file permissive=1
+type=1400 audit(8.098:5): avc: denied { read execute } for pid=259 comm="can-config.sh" path="/system/bin/sh" dev="mmcblk0p3" ino=442 scontext=u:r:obd:s0 tcontext=u:object_r:shell_exec:s0 tclass=file permissive=1
+type=1400 audit(8.098:6): avc: denied { getattr } for pid=259 comm="can-config.sh" path="/system/bin/sh" dev="mmcblk0p3" ino=442 scontext=u:r:obd:s0 tcontext=u:object_r:shell_exec:s0 tclass=file permissive=1
+type=1400 audit(8.158:7): avc: denied { create } for pid=260 comm="obd" scontext=u:r:obd:s0 tcontext=u:r:obd:s0 tclass=socket permissive=1
+type=1400 audit(8.158:8): avc: denied { ioctl } for pid=260 comm="obd" path="socket:[6934]" dev="sockfs" ino=6934 ioctlcmd=0x8933 scontext=u:r:obd:s0 tcontext=u:r:obd:s0 tclass=socket permissive=1
+type=1400 audit(8.158:9): avc: denied { bind } for pid=260 comm="obd" scontext=u:r:obd:s0 tcontext=u:r:obd:s0 tclass=socket permissive=1
+IPv6: ADDRCONF(NETDEV_CHANGE): can0: link becomes ready
+healthd: No battery devices found
+ERROR: v4l2 capture: slave not found! V4L2_CID_HUE
+ERROR: v4l2 capture: slave not found! V4L2_CID_HUE
+imx-hdmi-audio imx-hdmi-audio: HDMI Video is not ready!
+imx-hdmi-audio imx-hdmi-audio: ASoC: can't open platform imx-hdmi-audio: -22
+imx-hdmi-audio imx-hdmi-audio: HDMI Video is not ready!
+imx-hdmi-audio imx-hdmi-audio: ASoC: can't open platform imx-hdmi-audio: -22
+init: Starting service 'bootanim'...
+capability: warning: `main' uses 32-bit capabilities (legacy support in use)
+type=1400 audit(16.598:36): avc: denied { write } for pid=260 comm="obd" path="socket:[6934]" dev="sockfs" ino=6934 scontext=u:r:obd:s0 tcontext=u:r:obd:s0 tclass=socket permissive=1
+init: write_file: Unable to open '/sys/devices/system/cpu/cpufreq/interactive/timer_rate': No such file or directory
+init: write_file: Unable to open '/sys/devices/system/cpu/cpufreq/interactive/min_sample_time': No such file or directory
+init: write_file: Unable to open '/sys/devices/system/cpu/cpufreq/interactive/go_hispeed_load': No such file or directory
+init: write_file: Unable to open '/proc/sys/vm/extra_free_kbytes': No such file or directory
+init: write_file: Unable to write to '/config/usb_gadget/g1/UDC': No such device
+acc_open
+acc_release
+random: crng init done
+Micrel KSZ9031 Gigabit PHY 2188000.ethernet-1:07: attached PHY driver [Micrel KSZ9031 Gigabit PHY] (mii_bus:phy_addr=2188000.ethernet-1:07, irq=120)
+IPv6: ADDRCONF(NETDEV_UP): eth0: link is not ready
+type=1400 audit(25.228:37): avc: denied { write } for pid=260 comm="obd" path="socket:[6934]" dev="sockfs" ino=6934 scontext=u:r:obd:s0 tcontext=u:r:obd:s0 tclass=socket permissive=1
+init: Service 'bootanim' (pid 336) exited with status 0
+init: Starting service 'exec 3 (/system/bin/bootstat)'...
+init: Service 'exec 3 (/system/bin/bootstat)' (pid 951) exited with status 0
+init: Starting service 'exec 4 (/system/bin/bootstat)'...
+init: Service 'exec 4 (/system/bin/bootstat)' (pid 962) exited with status 0
+init: Starting service 'exec 5 (/system/bin/bootstat)'...
+init: Service 'exec 5 (/system/bin/bootstat)' (pid 964) exited with status 0
+init: Starting service 'exec 6 (/system/bin/bootstat)'...
+init: Service 'exec 6 (/system/bin/bootstat)' (pid 965) exited with status 0
+type=1400 audit(30.258:38): avc: denied { write } for pid=260 comm="obd" path="socket:[6934]" dev="sockfs" ino=6934 scontext=u:r:obd:s0 tcontext=u:r:obd:s0 tclass=socket permissive=1
+type=1400 audit(34.868:39): avc: denied { write } for pid=1210 comm="Thread-2" name="vcan" dev="tmpfs" ino=6936 scontext=u:r:untrusted_app:s0:c512,c768 tcontext=u:object_r:socket_device:s0 tclass=sock_file permissive=1
+type=1400 audit(34.888:40): avc: denied { connectto } for pid=1210 comm="Thread-2" path="/dev/socket/vcan" scontext=u:r:untrusted_app:s0:c512,c768 tcontext=u:r:obd:s0 tclass=unix_stream_socket permissive=1
+type=1400 audit(40.238:41): avc: denied { write } for pid=260 comm="obd" path="socket:[6934]" dev="sockfs" ino=6934 scontext=u:r:obd:s0 tcontext=u:r:obd:s0 tclass=socket permissive=1
+
+
+U-Boot 2017.03-00002-gebf9dc2527 (Jan 29 2018 - 17:39:17 +0530)
+
+CPU:   Freescale i.MX6Q rev1.5 at 792 MHz
+Reset cause: POR
+I2C:   ready
+DRAM:  2 GiB
+PMIC: device id: 0x10, revision id: 0x21
+PMIC: programmed
+MMC:   FSL_SDHC: 0, FSL_SDHC: 1, FSL_SDHC: 2
+Unable to allocate framebuffer memory
+In:    serial
+Out:   serial
+Err:   serial
+Model: Toradex Apalis iMX6 Quad 2GB IT V1.1C, Serial# 05146387
+flash target is MMC:0
+Net:   using PHY at 7
+FEC [PRIME]
+Fastboot: Normal
+Hit any key to stop autoboot:  1  0 
+boota mmc0 
+CACHE: Misaligned operation at range [8ffb79a0, 8ffb7a20]
+CACHE: Misaligned operation at range [8ffb79a0, 8ffb7a20]
+kernel   @ 14008000 (9802160)
+ramdisk  @ 15000000 (1628983)
+fdt      @ 14f00000 (53981)
+## Booting Android Image at 0x12000000 ...
+Kernel load addr 0x14008000 size 9573 KiB
+Kernel command line: console=ttymxc0,115200 init=/init video=mxcfb0:dev=ldb,fbpix=RGB32,bpp=32 video=mxcfb1:dev=hdmi,640x480M@60,if=RGB24,bpp=16 video=mxcfb2:off video=mxcfb3:off vmalloc=256M androidboot.console=ttymxc0 consoleblank=0 androidboot.hardware=freescale cma=448M androidboot.selinux=permissive androidboot.dm_verity=disabled buildvariant=user androidboot.serialno=1b2429d4ea997115 androidboot.storage_type=emmc
+## Flattened Device Tree blob at 14f00000
+   Booting using the fdt blob at 0x14f00000
+   Loading Kernel Image ... OK
+   Using Device Tree in place at 14f00000, end 14f102dc
+
+Starting kernel ...
+
+Booting Linux on physical CPU 0x0
+Linux version 4.9.67-07229-gdc6c16ec0433 (embadmin@ubuntu) (gcc version 4.9 20150123 (prerelease) (GCC) ) #73 SMP PREEMPT Mon Feb 19 12:20:06 IST 2018
+CPU: ARMv7 Processor [412fc09a] revision 10 (ARMv7), cr=10c53c7d
+CPU: PIPT / VIPT nonaliasing data cache, VIPT aliasing instruction cache
+OF: fdt:Machine model: Aravinth : Toradex Apalis iMX6Q/D Module on Ixora V1.1 Carrier Board
+cma: Reserved 448 MiB at 0x22000000
+Memory policy: Data cache writealloc
+percpu: Embedded 15 pages/cpu @ee6b3000 s31040 r8192 d22208 u61440
+Built 1 zonelists in Zone order, mobility grouping on.  Total pages: 522768
+Kernel command line: console=ttymxc0,115200 init=/init video=mxcfb0:dev=ldb,fbpix=RGB32,bpp=32 video=mxcfb1:dev=hdmi,640x480M@60,if=RGB24,bpp=16 video=mxcfb2:off video=mxcfb3:off vmalloc=256M androidboot.console=ttymxc0 consoleblank=0 androidboot.hardware=freescale cma=448M androidboot.selinux=permissive androidboot.dm_verity=disabled buildvariant=user androidboot.serialno=1b2429d4ea997115 androidboot.storage_type=emmc
+PID hash table entries: 4096 (order: 2, 16384 bytes)
+Dentry cache hash table entries: 131072 (order: 7, 524288 bytes)
+Inode-cache hash table entries: 65536 (order: 6, 262144 bytes)
+Memory: 1597048K/2097152K available (13312K kernel code, 1128K rwdata, 4016K rodata, 1024K init, 606K bss, 41352K reserved, 458752K cma-reserved, 1318912K highmem)
+Virtual kernel memory layout:
+    vector  : 0xffff0000 - 0xffff1000   (   4 kB)
+    fixmap  : 0xffc00000 - 0xfff00000   (3072 kB)
+    vmalloc : 0xf0000000 - 0xff800000   ( 248 MB)
+    lowmem  : 0xc0000000 - 0xef800000   ( 760 MB)
+    pkmap   : 0xbfe00000 - 0xc0000000   (   2 MB)
+    modules : 0xbf000000 - 0xbfe00000   (  14 MB)
+      .text : 0xc0008000 - 0xc0e00000   (14304 kB)
+      .init : 0xc1300000 - 0xc1400000   (1024 kB)
+      .data : 0xc1400000 - 0xc151a218   (1129 kB)
+       .bss : 0xc151a218 - 0xc15b1be0   ( 607 kB)
+SLUB: HWalign=64, Order=0-3, MinObjects=0, CPUs=4, Nodes=1
+Preemptible hierarchical RCU implementation.
+	Build-time adjustment of leaf fanout to 32.
+NR_IRQS:16 nr_irqs:16 16
+L2C-310 errata 752271 769419 enabled
+L2C-310 enabling early BRESP for Cortex-A9
+L2C-310 full line of zeros enabled for Cortex-A9
+L2C-310 ID prefetch enabled, offset 16 lines
+L2C-310 dynamic clock gating enabled, standby mode enabled
+L2C-310 cache controller enabled, 16 ways, 1024 kB
+L2C-310: CACHE_ID 0x410000c7, AUX_CTRL 0x76470001
+Switching to timer-based delay loop, resolution 333ns
+sched_clock: 32 bits at 3000kHz, resolution 333ns, wraps every 715827882841ns
+clocksource: mxc_timer1: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 637086815595 ns
+Console: colour dummy device 80x30
+Calibrating delay loop (skipped), value calculated using timer frequency.. 6.00 BogoMIPS (lpj=30000)
+pid_max: default: 32768 minimum: 301
+Security Framework initialized
+SELinux:  Initializing.
+Mount-cache hash table entries: 2048 (order: 1, 8192 bytes)
+Mountpoint-cache hash table entries: 2048 (order: 1, 8192 bytes)
+CPU: Testing write buffer coherency: ok
+CPU0: update cpu_capacity 1024
+CPU0: thread -1, cpu 0, socket 0, mpidr 80000000
+Setting up static identity map for 0x10100000 - 0x10100058
+CPU1: update cpu_capacity 1024
+CPU1: thread -1, cpu 1, socket 0, mpidr 80000001
+CPU2: update cpu_capacity 1024
+CPU2: thread -1, cpu 2, socket 0, mpidr 80000002
+CPU3: update cpu_capacity 1024
+CPU3: thread -1, cpu 3, socket 0, mpidr 80000003
+Brought up 4 CPUs
+SMP: Total of 4 processors activated (24.00 BogoMIPS).
+CPU: All CPU(s) started in SVC mode.
+CPU3: update max cpu_capacity 1024
+devtmpfs: initialized
+CPU2: update max cpu_capacity 1024
+VFP support v0.3: implementor 41 architecture 3 part 30 variant 9 rev 4
+clocksource: jiffies: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 19112604462750000 ns
+futex hash table entries: 1024 (order: 4, 65536 bytes)
+pinctrl core: initialized pinctrl subsystem
+NET: Registered protocol family 16
+DMA: preallocated 256 KiB pool for atomic coherent allocations
+cpuidle: using governor menu
+CPU identified as i.MX6Q, silicon rev 1.5
+hw-breakpoint: found 5 (+1 reserved) breakpoint and 1 watchpoint registers.
+hw-breakpoint: maximum watchpoint size is 4 bytes.
+imx6q-pinctrl 20e0000.iomuxc: initialized IMX pinctrl driver
+imx-gpc 20dc000.gpc: no fsl,ldo-bypass found!
+imx-gpc 20dc000.gpc: Registered imx-gpc
+mxs-dma 110000.dma-apbh: initialized
+usb_host_vbus: supplied by usb_host_vbus_hub
+SCSI subsystem initialized
+usbcore: registered new interface driver usbfs
+usbcore: registered new interface driver hub
+usbcore: registered new device driver usb
+2000000.aips-bus:usbphy_nop1 supply vcc not found, using dummy regulator
+2000000.aips-bus:usbphy_nop2 supply vcc not found, using dummy regulator
+i2c i2c-1: IMX I2C adapter registered
+i2c i2c-1: can't use DMA, using PIO instead.
+stmpe-i2c 2-0041: stmpe811 detected, chip id: 0x811
+i2c i2c-2: IMX I2C adapter registered
+i2c i2c-2: can't use DMA, using PIO instead.
+i2c i2c-3: IMX I2C adapter registered
+i2c i2c-3: can't use DMA, using PIO instead.
+Linux video capture interface: v2.00
+pps_core: LinuxPPS API ver. 1 registered
+pps_core: Software ver. 5.3.6 - Copyright 2005-2007 Rodolfo Giometti <giometti@linux.it>
+PTP clock support registered
+imx-ipuv3 2400000.ipu: IPU DMFC NORMAL mode: 1(0~1), 5B(4,5), 5F(6,7)
+imx-ipuv3 2800000.ipu: IPU DMFC NORMAL mode: 1(0~1), 5B(4,5), 5F(6,7)
+mxc_mipi_csi2 21dc000.mipi_csi: i.MX MIPI CSI2 driver probed ipu0 csi1
+mxc_mipi_csi2 21dc000.mipi_csi: i.MX MIPI CSI2 dphy version is 0x3130302a
+MIPI CSI2 driver module loaded
+imx rpmsg driver is registered.
+Advanced Linux Sound Architecture Driver Initialized.
+Bluetooth: Core ver 2.22
+NET: Registered protocol family 31
+Bluetooth: HCI device and connection manager initialized
+Bluetooth: HCI socket layer initialized
+Bluetooth: L2CAP socket layer initialized
+Bluetooth: SCO socket layer initialized
+clocksource: Switched to clocksource mxc_timer1
+VFS: Disk quotas dquot_6.6.0
+VFS: Dquot-cache hash table entries: 1024 (order 0, 4096 bytes)
+NET: Registered protocol family 2
+TCP established hash table entries: 8192 (order: 3, 32768 bytes)
+TCP bind hash table entries: 8192 (order: 4, 65536 bytes)
+TCP: Hash tables configured (established 8192 bind 8192)
+UDP hash table entries: 512 (order: 2, 16384 bytes)
+UDP-Lite hash table entries: 512 (order: 2, 16384 bytes)
+NET: Registered protocol family 1
+RPC: Registered named UNIX socket transport module.
+RPC: Registered udp transport module.
+RPC: Registered tcp transport module.
+RPC: Registered tcp NFSv4.1 backchannel transport module.
+Trying to unpack rootfs image as initramfs...
+Freeing initrd memory: 1592K
+hw perfevents: enabled with armv7_cortex_a9 PMU driver, 7 counters available
+Bus freq driver module loaded
+audit: initializing netlink subsys (disabled)
+audit: type=2000 audit(0.890:1): initialized
+workingset: timestamp_bits=30 max_order=19 bucket_order=0
+NFS: Registering the id_resolver key type
+Key type id_resolver registered
+Key type id_legacy registered
+ntfs: driver 2.1.32 [Flags: R/W DEBUG].
+jffs2: version 2.2. (NAND) © 2001-2006 Red Hat, Inc.
+fuse init (API version 7.26)
+bounce: pool size: 64 pages
+io scheduler noop registered
+io scheduler deadline registered
+io scheduler cfq registered (default)
+backlight supply power not found, using dummy regulator
+20e0000.hdmi_video supply HDMI not found, using dummy regulator
+mxc_sdc_fb fb@0: registered mxc display driver ldb
+imx-ipuv3 2800000.ipu: IPU DMFC DP HIGH RESOLUTION: 1(0,1), 5B(2~5), 5F(6,7)
+Console: switching to colour frame buffer device 128x48
+mxc_hdmi 20e0000.hdmi_video: Detected HDMI controller 0x13:0xa:0xa0:0xc1
+fbcvt: 640x480@60: CVT Name - .307M3
+mxc_sdc_fb fb@1: registered mxc display driver hdmi
+mxc_sdc_fb fb@2: Can't get fb option for mxcfb2!
+mxc_sdc_fb fb@3: Can't get fb option for mxcfb3!
+imx-sdma 20ec000.sdma: no iram assigned, using external mem
+imx-sdma 20ec000.sdma: loaded firmware 3.3
+pfuze100-regulator 2-0008: Full layer: 2, Metal layer: 1
+pfuze100-regulator 2-0008: FAB: 0, FIN: 0
+pfuze100-regulator 2-0008: pfuze100 found.
+2020000.serial: ttymxc0 at MMIO 0x2020000 (irq = 29, base_baud = 5000000) is a IMX
+console [ttymxc0] enabled
+21e8000.serial: ttymxc1 at MMIO 0x21e8000 (irq = 78, base_baud = 5000000) is a IMX
+21f0000.serial: ttymxc3 at MMIO 0x21f0000 (irq = 79, base_baud = 5000000) is a IMX
+21f4000.serial: ttymxc4 at MMIO 0x21f4000 (irq = 80, base_baud = 5000000) is a IMX
+imx sema4 driver is registered.
+[drm] Initialized
+[drm] Initialized vivante 1.0.0 20120216 on minor 0
+brd: module loaded
+loop: module loaded
+zram: Added device: zram0
+ahci-imx 2200000.sata: fsl,transmit-level-mV not specified, using 00000024
+ahci-imx 2200000.sata: fsl,transmit-boost-mdB not specified, using 00000480
+ahci-imx 2200000.sata: fsl,transmit-atten-16ths not specified, using 00002000
+ahci-imx 2200000.sata: fsl,receive-eq-mdB not specified, using 05000000
+ahci-imx 2200000.sata: SSS flag set, parallel bus scan disabled
+ahci-imx 2200000.sata: AHCI 0001.0300 32 slots 1 ports 3 Gbps 0x1 impl platform mode
+ahci-imx 2200000.sata: flags: ncq sntf stag pm led clo only pmp pio slum part ccc apst 
+scsi host0: ahci-imx
+ata1: SATA max UDMA/133 mmio [mem 0x02200000-0x02203fff] port 0x100 irq 87
+spi_imx 2008000.ecspi: probed
+libphy: Fixed MDIO Bus: probed
+tun: Universal TUN/TAP device driver, 1.6
+tun: (C) 1999-2004 Max Krasnyansky <maxk@qualcomm.com>
+CAN device driver interface
+2090000.flexcan supply xceiver not found, using dummy regulator
+flexcan 2090000.flexcan: device registered (reg_base=f02f4000, irq=38)
+2094000.flexcan supply xceiver not found, using dummy regulator
+flexcan 2094000.flexcan: device registered (reg_base=f02fc000, irq=39)
+2188000.ethernet supply phy not found, using dummy regulator
+pps pps0: new PPS source ptp0
+libphy: fec_enet_mii_bus: probed
+fec 2188000.ethernet eth0: registered PHC device 0
+PPP generic driver version 2.4.2
+PPP BSD Compression module registered
+PPP Deflate Compression module registered
+PPP MPPE Compression module registered
+NET: Registered protocol family 24
+usbcore: registered new interface driver kaweth
+pegasus: v0.9.3 (2013/04/25), Pegasus/Pegasus II USB Ethernet driver
+usbcore: registered new interface driver pegasus
+usbcore: registered new interface driver rtl8150
+usbcore: registered new interface driver r8152
+usbcore: registered new interface driver asix
+usbcore: registered new interface driver ax88179_178a
+usbcore: registered new interface driver cdc_ether
+usbcore: registered new interface driver cdc_eem
+usbcore: registered new interface driver net1080
+usbcore: registered new interface driver cdc_subset
+usbcore: registered new interface driver zaurus
+usbcore: registered new interface driver cdc_ncm
+ehci_hcd: USB 2.0 'Enhanced' Host Controller (EHCI) Driver
+ehci-mxc: Freescale On-Chip EHCI Host driver
+usbcore: registered new interface driver cdc_acm
+cdc_acm: USB Abstract Control Model driver for USB modems and ISDN adapters
+usbcore: registered new interface driver usb-storage
+usbcore: registered new interface driver usbserial
+usbcore: registered new interface driver usbserial_generic
+usbserial: USB Serial support registered for generic
+usbcore: registered new interface driver ftdi_sio
+usbserial: USB Serial support registered for FTDI USB Serial Device
+usbcore: registered new interface driver option
+usbserial: USB Serial support registered for GSM modem (1-port)
+usbcore: registered new interface driver usbtest
+usbcore: registered new interface driver usb_ehset_test
+2184800.usbmisc supply vbus-wakeup not found, using dummy regulator
+ci_hdrc ci_hdrc.1: EHCI Host Controller
+ci_hdrc ci_hdrc.1: new USB bus registered, assigned bus number 1
+ci_hdrc ci_hdrc.1: USB 2.0 started, EHCI 1.00
+usb usb1: New USB device found, idVendor=1d6b, idProduct=0002
+usb usb1: New USB device strings: Mfr=3, Product=2, SerialNumber=1
+usb usb1: Product: EHCI Host Controller
+usb usb1: Manufacturer: Linux 4.9.67-07229-gdc6c16ec0433 ehci_hcd
+usb usb1: SerialNumber: ci_hdrc.1
+hub 1-0:1.0: USB hub found
+hub 1-0:1.0: 1 port detected
+ata1: SATA link down (SStatus 0 SControl 300)
+ahci-imx 2200000.sata: no device found, disabling link.
+ahci-imx 2200000.sata: pass ahci_imx..hotplug=1 to enable hotplug
+mousedev: PS/2 mouse device common for all mice
+usbcore: registered new interface driver xpad
+usbcore: registered new interface driver usb_acecad
+usbcore: registered new interface driver aiptek
+usbcore: registered new interface driver gtco
+usbcore: registered new interface driver hanwang
+usbcore: registered new interface driver kbtab
+input: stmpe-ts as /devices/soc0/soc/2100000.aips-bus/21a4000.i2c/i2c-2/2-0041/stmpe-ts/input/input0
+snvs_rtc 20cc000.snvs:snvs-rtc-lp: rtc core: registered 20cc000.snvs:snvs-r as rtc0
+i2c /dev entries driver
+IR NEC protocol handler initialized
+IR RC5(x/sz) protocol handler initialized
+IR RC6 protocol handler initialized
+IR JVC protocol handler initialized
+IR Sony protocol handler initialized
+IR SANYO protocol handler initialized
+IR Sharp protocol handler initialized
+IR MCE Keyboard/mouse protocol handler initialized
+IR XMP protocol handler initialized
+mxc_v4l2_output v4l2_out: V4L2 device registered as video16
+mxc_v4l2_output v4l2_out: V4L2 device registered as video17
+mxc_v4l2_output v4l2_out: V4L2 device registered as video18
+mxc_v4l2_output v4l2_out: V4L2 device registered as video19
+ov564x_mipi 3-003c: found pwm2, period=0
+usb 1-1: new high-speed USB device number 2 using ci_hdrc
+ov5640_read_reg:write reg error:reg=300a
+camera ov5640_mipi is not found
+usbcore: registered new interface driver uvcvideo
+USB Video Class driver (1.1.1)
+imx2-wdt 20bc000.wdog: timeout 60 sec (nowayout=0)
+device-mapper: uevent: version 1.0.3
+device-mapper: ioctl: 4.35.0-ioctl (2016-06-23) initialised: dm-devel@redhat.com
+Bluetooth: HCI UART driver ver 2.3
+Bluetooth: HCI UART protocol H4 registered
+Bluetooth: HCI UART protocol BCSP registered
+Bluetooth: HCI UART protocol ATH3K registered
+usbcore: registered new interface driver btusb
+sdhci: Secure Digital Host Controller Interface driver
+sdhci: Copyright(c) Pierre Ossman
+sdhci-pltfm: SDHCI platform and OF driver helper
+sdhci-esdhc-imx 2190000.usdhc: could not get ultra high speed state, work on normal mode
+sdhci-esdhc-imx 2190000.usdhc: Got CD GPIO
+mmc1: SDHCI controller on 2190000.usdhc [2190000.usdhc] using ADMA
+sdhci-esdhc-imx 2198000.usdhc: could not get ultra high speed state, work on normal mode
+usb 1-1: New USB device found, idVendor=0424, idProduct=2514
+usb 1-1: New USB device strings: Mfr=0, Product=0, SerialNumber=0
+hub 1-1:1.0: USB hub found
+hub 1-1:1.0: 4 ports detected
+mmc0: SDHCI controller on 2198000.usdhc [2198000.usdhc] using ADMA
+mxc_vpu 2040000.vpu_fsl: VPU initialized
+mxc_vdoa 21e4000.vdoa: i.MX Video Data Order Adapter(VDOA) driver probed
+mxc_hdmi_cec soc:hdmi_cec@00120000: HDMI CEC initialized
+Galcore version 6.2.2.96445
+mmc0: new DDR MMC card at address 0001
+mmcblk0: mmc0:0001 Q2J54A 3.59 GiB 
+mmcblk0boot0: mmc0:0001 Q2J54A partition 1 16.0 MiB
+mmcblk0boot1: mmc0:0001 Q2J54A partition 2 16.0 MiB
+random: fast init done
+Alternate GPT is invalid, using primary GPT.
+ mmcblk0: p1 p2 p3 p4 p5 p6 p7 p8 p9 p10 p11
+caam 2100000.caam: ERA source: CAAMVID.
+caam 2100000.caam: AXI pipeline throttling enabled.
+caam 2100000.caam: Instantiated RNG4 SH1
+caam 2100000.caam: device ID = 0x0a16010000000000 (Era 4)
+caam 2100000.caam: job rings = 2, qi = 0
+caam algorithms registered in /proc/crypto
+caam_jr 2101000.jr0: registering rng-caam
+platform caam_sm: blkkey_ex: 4 keystore units available
+platform caam_sm: 64-bit clear key:
+platform caam_sm: [0000] 00 01 02 03 04 0f 06 07
+platform caam_sm: 64-bit black key:
+platform caam_sm: [0000] 52 6a 0e 7c 8d 86 ab 7d
+platform caam_sm: [0008] 98 fd 2b 9d a5 81 e6 b4
+platform caam_sm: 128-bit clear key:
+platform caam_sm: [0000] 00 01 02 03 04 0f 06 07
+platform caam_sm: [0008] 08 09 0a 0b 0c 0d 0e 0f
+platform caam_sm: 128-bit black key:
+platform caam_sm: [0000] 7a 7f 63 ea 75 77 83 66
+platform caam_sm: [0008] 37 fe f8 16 cb 77 be fd
+platform caam_sm: 192-bit clear key:
+platform caam_sm: [0000] 00 01 02 03 04 0f 06 07
+platform caam_sm: [0008] 08 09 0a 0b 0c 0d 0e 0f
+platform caam_sm: [0016] 10 11 12 13 14 15 16 17
+platform caam_sm: 192-bit black key:
+platform caam_sm: [0000] 67 4d e0 91 2d fa a6 4a
+platform caam_sm: [0008] 4f 19 f2 0a 2b 01 ea c4
+platform caam_sm: [0016] 8e c6 bf 60 1e 68 0e 35
+platform caam_sm: [0024] 9d 54 7a 7a 4d fc b1 db
+platform caam_sm: 256-bit clear key:
+platform caam_sm: [0000] 00 01 02 03 04 0f 06 07
+platform caam_sm: [0008] 08 09 0a 0b 0c 0d 0e 0f
+platform caam_sm: [0016] 10 11 12 13 14 15 16 17
+platform caam_sm: [0024] 18 19 1a 1b 1c 1d 1e 1f
+platform caam_sm: 256-bit black key:
+platform caam_sm: [0000] ed 7c ab 95 d1 7d d9 d2
+platform caam_sm: [0008] 67 0f 4b a2 0b 7b 28 73
+platform caam_sm: [0016] 5a f6 7c dd 1f f3 22 e4
+platform caam_sm: [0024] b0 33 c8 75 cb 47 c9 d0
+platform caam_sm: 64-bit unwritten blob:
+platform caam_sm: [0000] 00 00 00 00 00 00 00 00
+platform caam_sm: [0008] 00 00 00 00 00 00 00 00
+platform caam_sm: [0016] 00 00 00 00 00 00 00 00
+platform caam_sm: [0024] 00 00 00 00 00 00 00 00
+platform caam_sm: [0032] 00 00 00 00 00 00 00 00
+platform caam_sm: [0040] 00 00 00 00 00 00 00 00
+platform caam_sm: [0048] 00 00 00 00 00 00 00 00
+platform caam_sm: [0056] 00 00 00 00 00 00 00 00
+platform caam_sm: [0064] 00 00 00 00 00 00 00 00
+platform caam_sm: [0072] 00 00 00 00 00 00 00 00
+platform caam_sm: [0080] 00 00 00 00 00 00 00 00
+platform caam_sm: [0088] 00 00 00 00 00 00 00 00
+platform caam_sm: 128-bit unwritten blob:
+platform caam_sm: [0000] 00 00 00 00 00 00 00 00
+platform caam_sm: [0008] 00 00 00 00 00 00 00 00
+platform caam_sm: [0016] 00 00 00 00 00 00 00 00
+platform caam_sm: [0024] 00 00 00 00 00 00 00 00
+platform caam_sm: [0032] 00 00 00 00 00 00 00 00
+platform caam_sm: [0040] 00 00 00 00 00 00 00 00
+platform caam_sm: [0048] 00 00 00 00 00 00 00 00
+platform caam_sm: [0056] 00 00 00 00 00 00 00 00
+platform caam_sm: [0064] 00 00 00 00 00 00 00 00
+platform caam_sm: [0072] 00 00 00 00 00 00 00 00
+platform caam_sm: [0080] 00 00 00 00 00 00 00 00
+platform caam_sm: [0088] 00 00 00 00 00 00 00 00
+platform caam_sm: 196-bit unwritten blob:
+platform caam_sm: [0000] 00 00 00 00 00 00 00 00
+platform caam_sm: [0008] 00 00 00 00 00 00 00 00
+platform caam_sm: [0016] 00 00 00 00 00 00 00 00
+platform caam_sm: [0024] 00 00 00 00 00 00 00 00
+platform caam_sm: [0032] 00 00 00 00 00 00 00 00
+platform caam_sm: [0040] 00 00 00 00 00 00 00 00
+platform caam_sm: [0048] 00 00 00 00 00 00 00 00
+platform caam_sm: [0056] 00 00 00 00 00 00 00 00
+platform caam_sm: [0064] 00 00 00 00 00 00 00 00
+platform caam_sm: [0072] 00 00 00 00 00 00 00 00
+platform caam_sm: [0080] 00 00 00 00 00 00 00 00
+platform caam_sm: [0088] 00 00 00 00 00 00 00 00
+platform caam_sm: 256-bit unwritten blob:
+platform caam_sm: [0000] 00 00 00 00 00 00 00 00
+platform caam_sm: [0008] 00 00 00 00 00 00 00 00
+platform caam_sm: [0016] 00 00 00 00 00 00 00 00
+platform caam_sm: [0024] 00 00 00 00 00 00 00 00
+platform caam_sm: [0032] 00 00 00 00 00 00 00 00
+platform caam_sm: [0040] 00 00 00 00 00 00 00 00
+platform caam_sm: [0048] 00 00 00 00 00 00 00 00
+platform caam_sm: [0056] 00 00 00 00 00 00 00 00
+platform caam_sm: [0064] 00 00 00 00 00 00 00 00
+platform caam_sm: [0072] 00 00 00 00 00 00 00 00
+platform caam_sm: [0080] 00 00 00 00 00 00 00 00
+platform caam_sm: [0088] 00 00 00 00 00 00 00 00
+platform caam_sm: 64-bit black key in blob:
+platform caam_sm: [0000] e9 56 71 d8 72 fa bd ba
+platform caam_sm: [0008] fe fb dc af 27 f6 2b 35
+platform caam_sm: [0016] 9d ff ef bb 2a 40 c2 23
+platform caam_sm: [0024] 5f 28 97 62 4f 49 cc 4b
+platform caam_sm: [0032] ff 34 4b e6 64 88 aa 9b
+platform caam_sm: [0040] 47 33 04 fa 72 ed 2b 9d
+platform caam_sm: [0048] c1 8a 80 c9 07 ec e6 f3
+platform caam_sm: [0056] 00 00 00 00 00 00 00 00
+platform caam_sm: [0064] 00 00 00 00 00 00 00 00
+platform caam_sm: [0072] 00 00 00 00 00 00 00 00
+platform caam_sm: [0080] 00 00 00 00 00 00 00 00
+platform caam_sm: [0088] 00 00 00 00 00 00 00 00
+platform caam_sm: 128-bit black key in blob:
+platform caam_sm: [0000] 07 15 b1 f0 fd 6f d8 14
+platform caam_sm: [0008] 3e ea ce d0 38 67 39 ec
+platform caam_sm: [0016] 9e e1 f6 3d e5 4e 81 f9
+platform caam_sm: [0024] 1e dd 6e b9 2e df af 5b
+platform caam_sm: [0032] a2 4a b7 c0 bf 9f 64 54
+platform caam_sm: [0040] 8b 44 29 02 38 2e e2 ef
+platform caam_sm: [0048] 8e e2 8f b8 51 aa a9 ca
+platform caam_sm: [0056] 1b f2 bb e2 78 2d a1 07
+platform caam_sm: [0064] 00 00 00 00 00 00 00 00
+platform caam_sm: [0072] 00 00 00 00 00 00 00 00
+platform caam_sm: [0080] 00 00 00 00 00 00 00 00
+platform caam_sm: [0088] 00 00 00 00 00 00 00 00
+platform caam_sm: 192-bit black key in blob:
+platform caam_sm: [0000] ed eb c6 5e 67 58 51 ae
+platform caam_sm: [0008] a9 09 7e 78 87 d4 38 7f
+platform caam_sm: [0016] 93 19 12 69 99 5f af 25
+platform caam_sm: [0024] 3e 4e c0 0b 6d 52 52 eb
+platform caam_sm: [0032] 8d c8 f6 dc 6a 7f 33 c4
+platform caam_sm: [0040] f1 75 df 10 c0 2c f2 45
+platform caam_sm: [0048] 0e 02 20 e4 db 7b c4 2f
+platform caam_sm: [0056] 2f 54 ad 5a 39 76 d0 33
+platform caam_sm: [0064] 1e 72 dc 2f 3f be 3b 94
+platform caam_sm: [0072] 00 00 00 00 00 00 00 00
+platform caam_sm: [0080] 00 00 00 00 00 00 00 00
+platform caam_sm: [0088] 00 00 00 00 00 00 00 00
+platform caam_sm: 256-bit black key in blob:
+platform caam_sm: [0000] 7e 5c 74 95 f3 2a 08 af
+platform caam_sm: [0008] 98 10 d4 fd ce 66 69 e2
+platform caam_sm: [0016] 6a 4e 01 45 70 8d e1 02
+platform caam_sm: [0024] d5 27 8a a9 0a 73 9c 57
+platform caam_sm: [0032] 32 10 4e ee 07 7c 6a 79
+platform caam_sm: [0040] 2d 04 3e 7e 02 5d 3e 68
+platform caam_sm: [0048] bc 71 cd ed 5e 40 ac bd
+platform caam_sm: [0056] fb e3 69 4d 25 f9 b9 3d
+platform caam_sm: [0064] cb 99 96 01 4a 35 00 ba
+platform caam_sm: [0072] ce de ab de 83 70 14 ed
+platform caam_sm: [0080] 00 00 00 00 00 00 00 00
+platform caam_sm: [0088] 00 00 00 00 00 00 00 00
+platform caam_sm: restored 64-bit black key:
+platform caam_sm: [0000] c4 1a e8 ba 86 ea 9d 0c
+platform caam_sm: [0008] 39 58 37 97 ba 7d bc 63
+platform caam_sm: restored 128-bit black key:
+platform caam_sm: [0000] 7a 7f 63 ea 75 77 83 66
+platform caam_sm: [0008] 37 fe f8 16 cb 77 be fd
+platform caam_sm: restored 192-bit black key:
+platform caam_sm: [0000] 67 4d e0 91 2d fa a6 4a
+platform caam_sm: [0008] 4f 19 f2 0a 2b 01 ea c4
+platform caam_sm: [0016] b0 aa 1b 4c 72 7a a7 35
+platform caam_sm: [0024] 5f a1 25 af 12 80 84 c5
+platform caam_sm: restored 256-bit black key:
+platform caam_sm: [0000] ed 7c ab 95 d1 7d d9 d2
+platform caam_sm: [0008] 67 0f 4b a2 0b 7b 28 73
+platform caam_sm: [0016] 5a f6 7c dd 1f f3 22 e4
+platform caam_sm: [0024] b0 33 c8 75 cb 47 c9 d0
+snvs-secvio 20cc000.caam-snvs: can't get snvs clock
+snvs-secvio 20cc000.caam-snvs: violation handlers armed - non-secure state
+hidraw: raw HID events driver (C) Jiri Kosina
+usbcore: registered new interface driver usbhid
+usbhid: USB HID core driver
+ashmem: initialized
+usbcore: registered new interface driver snd-usb-audio
+sgtl5000 2-000a: sgtl5000 revision 0x11
+fsl-ssi-dai 2028000.ssi: No cache defaults, reading back from HW
+imx-sgtl5000 sound: sgtl5000 <-> 2028000.ssi mapping ok
+imx-spdif sound-spdif: snd-soc-dummy-dai <-> 2004000.spdif mapping ok
+imx-audio-hdmi sound-hdmi: hdmi-hifi.0 <-> soc:hdmi_audio@00120000 mapping ok
+NET: Registered protocol family 26
+u32 classifier
+    Actions configured
+Netfilter messages via NETLINK v0.30.
+nf_conntrack version 0.5.0 (16384 buckets, 65536 max)
+ctnetlink v0.93: registering with nfnetlink.
+xt_time: kernel timezone is -0000
+ip_tables: (C) 2000-2006 Netfilter Core Team
+arp_tables: arp_tables: (C) 2002 David S. Miller
+Initializing XFRM netlink socket
+NET: Registered protocol family 10
+mip6: Mobile IPv6
+ip6_tables: (C) 2000-2006 Netfilter Core Team
+sit: IPv6, IPv4 and MPLS over IPv4 tunneling driver
+NET: Registered protocol family 17
+NET: Registered protocol family 15
+can: controller area network core (rev 20120528 abi 9)
+NET: Registered protocol family 29
+can: raw protocol (rev 20120528)
+can: broadcast manager protocol (rev 20161123 t)
+can: netlink gateway (rev 20130117) max_hops=1
+Bluetooth: RFCOMM TTY layer initialized
+Bluetooth: RFCOMM socket layer initialized
+Bluetooth: RFCOMM ver 1.11
+Bluetooth: BNEP (Ethernet Emulation) ver 1.3
+Bluetooth: BNEP filters: protocol multicast
+Bluetooth: BNEP socket layer initialized
+Bluetooth: HIDP (Human Interface Emulation) ver 1.2
+Bluetooth: HIDP socket layer initialized
+8021q: 802.1Q VLAN Support v1.8
+Key type dns_resolver registered
+cpu cpu0: Registered imx6q-cpufreq
+registered taskstats version 1
+imx_thermal 2000000.aips-bus:tempmon: Industrial CPU temperature grade - max:105C critical:100C passive:95C
+dhd_module_init in
+input: gpio-keys as /devices/soc0/gpio-keys/input/input1
+snvs_rtc 20cc000.snvs:snvs-rtc-lp: setting system clock to 1970-01-01 00:00:02 UTC (2)
+usb_otg_vbus: disabling
+ALSA device list:
+  #0: imx6q-apalis-sgtl5000
+  #1: imx-spdif
+  #2: imx-hdmi-soc
+Freeing unused kernel memory: 1024K
+init: init first stage started!
+SELinux:  Permission validate_trans in class security not defined in policy.
+SELinux:  Class cap_userns not defined in policy.
+SELinux:  Class cap2_userns not defined in policy.
+SELinux: the above unknown classes and permissions will be denied
+audit: type=1403 audit(5.039:2): policy loaded auid=4294967295 ses=4294967295
+init: (Initializing SELinux non-enforcing took 0.11s.)
+init: init second stage started!
+init: Running restorecon...
+init: waitpid failed: No child processes
+init: (Loading properties from /default.prop took 0.00s.)
+init: (Parsing /init.environ.rc took 0.00s.)
+init: (Parsing /init.usb.rc took 0.00s.)
+init: (Parsing init.freescale.usb.rc took 0.00s.)
+init: (Parsing init.freescale.i.MX6Q.rc took 0.00s.)
+init: (Parsing init.freescale.emmc.rc took 0.00s.)
+init: (Parsing /init.freescale.rc took 0.02s.)
+ueventd: ueventd started!
+ueventd: Coldboot took 0.43s.
+Console: switching to colour dummy device 80x30
+watchdogd: started (interval 10, margin 20)!
+EXT4-fs (mmcblk0p3): mounted filesystem with ordered data mode. Opts: barrier=1
+EXT4-fs (mmcblk0p10): Ignoring removed nomblk_io_submit option
+EXT4-fs (mmcblk0p10): recovery complete
+EXT4-fs (mmcblk0p10): mounted filesystem with ordered data mode. Opts: nomblk_io_submit,noauto_da_alloc,errors=panic
+EXT4-fs (mmcblk0p4): Ignoring removed nomblk_io_submit option
+EXT4-fs (mmcblk0p4): recovery complete
+EXT4-fs (mmcblk0p4): mounted filesystem with ordered data mode. Opts: nomblk_io_submit
+EXT4-fs (mmcblk0p5): mounted filesystem with ordered data mode. Opts: (null)
+file system registered
+using random self ethernet address
+using random host ethernet address
+zram0: detected capacity change from 0 to 314572800
+logd.auditd: start
+logd.klogd: 7526484334
+Adding 307196k swap on /dev/block/zram0.  Priority:-1 extents:1 across:307196k SS
+binder: 253:253 transaction failed 29189, size 0-0
+logd.daemon: reinit
+type=1400 audit(8.049:3): avc: denied { entrypoint } for pid=259 comm="init" path="/system/bin/can-config.sh" dev="mmcblk0p3" ino=255 scontext=u:r:obd:s0 tcontext=u:object_r:system_file:s0 tclass=file permissive=1
+type=1400 audit(8.049:4): avc: denied { read execute } for pid=259 comm="can-config.sh" path="/system/bin/sh" dev="mmcblk0p3" ino=442 scontext=u:r:obd:s0 tcontext=u:object_r:shell_exec:s0 tclass=file permissive=1
+type=1400 audit(8.049:5): avc: denied { getattr } for pid=259 comm="can-config.sh" path="/system/bin/sh" dev="mmcblk0p3" ino=442 scontext=u:r:obd:s0 tcontext=u:object_r:shell_exec:s0 tclass=file permissive=1
+type=1400 audit(8.049:6): avc: denied { getattr } for pid=259 comm="can-config.sh" path="/vendor" dev="rootfs" ino=6500 scontext=u:r:obd:s0 tcontext=u:object_r:rootfs:s0 tclass=lnk_file permissive=1
+type=1400 audit(8.169:7): avc: denied { execute_no_trans } for pid=274 comm="can-config.sh" path="/system/bin/ip" dev="mmcblk0p3" ino=334 scontext=u:r:obd:s0 tcontext=u:object_r:system_file:s0 tclass=file permissive=1
+type=1400 audit(8.179:8): avc: denied { create } for pid=260 comm="obd" scontext=u:r:obd:s0 tcontext=u:r:obd:s0 tclass=socket permissive=1
+type=1400 audit(8.179:9): avc: denied { ioctl } for pid=260 comm="obd" path="socket:[10360]" dev="sockfs" ino=10360 ioctlcmd=0x8933 scontext=u:r:obd:s0 tcontext=u:r:obd:s0 tclass=socket permissive=1
+IPv6: ADDRCONF(NETDEV_CHANGE): can0: link becomes ready
+toradex_apalis6q:/ # healthd: No battery devices found
+ERROR: v4l2 capture: slave not found! V4L2_CID_HUE
+ERROR: v4l2 capture: slave not found! V4L2_CID_HUE
+imx-hdmi-audio imx-hdmi-audio: HDMI Video is not ready!
+imx-hdmi-audio imx-hdmi-audio: ASoC: can't open platform imx-hdmi-audio: -22
+imx-hdmi-audio imx-hdmi-audio: HDMI Video is not ready!
+imx-hdmi-audio imx-hdmi-audio: ASoC: can't open platform imx-hdmi-audio: -22
+capability: warning: `main' uses 32-bit capabilities (legacy support in use)
+init: write_file: Unable to open '/sys/devices/system/cpu/cpufreq/interactive/timer_rate': No such file or directory
+init: write_file: Unable to open '/sys/devices/system/cpu/cpufreq/interactive/min_sample_time': No such file or directory
+init: write_file: Unable to open '/sys/devices/system/cpu/cpufreq/interactive/go_hispeed_load': No such file or directory
+init: write_file: Unable to open '/proc/sys/vm/extra_free_kbytes': No such file or directory
+type=1400 audit(21.739:36): avc: denied { write } for pid=260 comm="obd" path="socket:[10360]" dev="sockfs" ino=10360 scontext=u:r:obd:s0 tcontext=u:r:obd:s0 tclass=socket permissive=1
+init: write_file: Unable to write to '/config/usb_gadget/g1/UDC': No such device
+acc_open
+acc_release
+Micrel KSZ9031 Gigabit PHY 2188000.ethernet-1:07: attached PHY driver [Micrel KSZ9031 Gigabit PHY] (mii_bus:phy_addr=2188000.ethernet-1:07, irq=120)
+IPv6: ADDRCONF(NETDEV_UP): eth0: link is not ready
+random: crng init done
+type=1400 audit(25.149:37): avc: denied { write } for pid=260 comm="obd" path="socket:[10360]" dev="sockfs" ino=10360 scontext=u:r:obd:s0 tcontext=u:r:obd:s0 tclass=socket permissive=1
+init: Service 'bootanim' (pid 335) exited with status 0
+init: Starting service 'exec 3 (/system/bin/bootstat)'...
+init: Service 'exec 3 (/system/bin/bootstat)' (pid 948) exited with status 0
+init: Starting service 'exec 4 (/system/bin/bootstat)'...
+init: Service 'exec 4 (/system/bin/bootstat)' (pid 958) exited with status 0
+init: Starting service 'exec 5 (/system/bin/bootstat)'...
+init: Service 'exec 5 (/system/bin/bootstat)' (pid 960) exited with status 0
+init: Starting service 'exec 6 (/system/bin/bootstat)'...
+init: Service 'exec 6 (/system/bin/bootstat)' (pid 961) exited with status 0
+type=1400 audit(30.479:38): avc: denied { write } for pid=260 comm="obd" path="socket:[10360]" dev="sockfs" ino=10360 scontext=u:r:obd:s0 tcontext=u:r:obd:s0 tclass=socket permissive=1
+type=1400 audit(34.489:39): avc: denied { write } for pid=1206 comm="Thread-2" name="vcan" dev="tmpfs" ino=11613 scontext=u:r:untrusted_app:s0:c512,c768 tcontext=u:object_r:socket_device:s0 tclass=sock_file permissive=1
+type=1400 audit(34.499:40): avc: denied { connectto } for pid=1206 comm="Thread-2" path="/dev/socket/vcan" scontext=u:r:untrusted_app:s0:c512,c768 tcontext=u:r:obd:s0 tclass=unix_stream_socket permissive=1
+
+toradex_apalis6q:/ # 
+toradex_apalis6q:/ # 
+toradex_apalis6q:/ # 
+toradex_apalis6q:/ # roo   bustoradex_apalis6q:/ # busybox                                                    s microcom -s 12 152000  /e dev/ttymx
+ttymxc0  ttymxc1  ttymxc3  ttymtype=1400 audit(546.349:41): avc: denied { read } for pid=254 comm="sh" name="/" dev="tmpfs" ino=10241 scontext=u:r:shell:s0 tcontext=u:object_r:device:s0 tclass=dir permissive=1
+xc4
+usybox microcom -s 115200 /type=1400 audit(546.349:42): avc: denied { open } for pid=254 comm="sh" path="/dev" dev="tmpfs" ino=10241 scontext=u:r:shell:s0 tcontext=u:object_r:device:s0 tclass=dir permissive=1
+dev/ttymxc                                         <4usybox microcom -s 115200 /dev/ttymxc4                                        < 
+RING 0 94:65:2d:d1:25:16 3 HFP 
+HFP 0 CODEC NEGOTIATION
+HFP 0 BRSF 871
+HFP 0 STATUS "call" 0
+HFP 0 STATUS "callsetup" 0
+HFP 0 STATUS "service" 1
+HFP 0 STATUS "signal" 3
+HFP 0 STATUS "roam" 0
+HFP 0 STATUS "battchg" 2
+HFP 0 STATUS "callheld" 0
+HFP 0 CHLD (0,1,2,3)
+HFP 0 READY
+HFP 0 NETWORK "airtel"
+RING 1 94:65:2d:d1:25:16 19 A2DP 
+RING 2 94:65:2d:d1:25:16 19 A2DP 
+HFP 0 STATUS "signal" 4
+RING 3 94:65:2d:d1:25:16 17 AVRCP 
+HFP 0 STATUS "signal" 3
+A2DP STREAMING START 1
+A2DP STREAMING STOP 1
+HFP 0 STATUS "signal" 2
+HFP 0 STATUS "signal" 3
+HFP 0 STATUS "signal" 4
+HFP 0 STATUS "signal" 3
+HFP 0 STATUS "signal" 4
+HFP 0 STATUS "signal" 3
+A2DP STREAMING START 1
+A2DP STREAMING STOP 1
+A2DP STREAMING START 1
+A2DP STREAMING STOP 1
+A2DP STREAMING START 1
+A2DP STREAMING STOP 1
+HFP 0 STATUS "signal" 2
+A2DP STREAMING START 1
+HFP 0 STATUS "signal" 4
+HFP 0 STATUS "signal" 3
+A2DP STREAMING STOP 1
+HFP 0 STATUS "signal" 2
+HFP 0 STATUS "signal" 3
+HFP 0 STATUS "signal" 4
+HFP 0 STATUS "signal" 3
+HFP 0 STATUS "signal" 4
+NO CARRIER 0 ERROR 0 
+NO CARRIER 2 ERROR 0 
+NO CARRIER 3 ERROR 0 
+NO CARRIER 1 ERROR 0 
+
+
+RING 0 bc:d1:1f:5b:f2:c1 19 A2DP 
+RING 1 bc:d1:1f:5b:f2:c1 19 A2DP 
+RING 2 bc:d1:1f:5b:f2:c1 17 AVRCP 
+A2DP STREAMING START 0
+A2DP STREAMING STOP 0
+A2DP STREAMING START 0
+
+
+
+
+
+CALL bc:d1:1f:5b:f2:c1 111F HFP
+CALL 3
+CONNECT 3 HFP 3
+HFP 3 CODEC NEGOTIATION
+HFP 3 BRSF 4071
+HFP 3 STATUS "call" 0
+HFP 3 STATUS "callsetup" 0
+HFP 3 STATUS "service" 1
+HFP 3 STATUS "signal" 4
+HFP 3 STATUS "roam" 0
+HFP 3 STATUS "battchg" 3
+HFP 3 STATUS "callheld" 0
+HFP 3 CHLD (0,1,2,3)
+HFP 3 READY
+HFP 3 UNKNOWN (8): \r\n+COPS: 0,0,"idea | Idea"\r\n
+
+
+
+HFP 3 STATUS "callsetup" 1
+A2DP STREAMING STOP 0
+HFP 3 RING
+HFP 3 CALLERID "+918508139500" "" 91
+HFP 3 RING
+HFP 3 CALLERID "+918508139500" "" 91
+HFP 3 CODEC MSBC
+HFP 3 STATUS "call" 1
+HFP 3 STATUS "callsetup" 0
+RING 4 bc:d1:1f:5b:f2:c1 SCO
+NO CARRIER 4 ERROR 113 HCI_ERROR_OETC_USER
+RING 4 bc:d1:1f:5b:f2:c1 SCO
+NO CARRIER 4 ERROR 113 HCI_ERROR_OETC_USER
+RING 4 bc:d1:1f:5b:f2:c1 SCO
+NO CARRIER 4 ERROR 113 HCI_ERROR_OETC_USER
+HFP 3 STATUS "call" 0
+A2DP STREAMING START 0
+
+
+
+SYNTAX ERROR
+
+
+
+SYNTAX ERROR
+
+
+
+toradex_apalis6q:/ # 
+toradex_apalis6q:/ # 
+toradex_apalis6q:/ # toradex_apalis6q:/ # busybox microcom -s 115200 /dev/ttymxc4                     3
+
+
+set
+SET BT BDADDR 88:6b:0f:62:71:88
+SET BT NAME WT32i-AJ
+SET BT CLASS 280428
+SET BT IDENT BT:47 f000 6.0.0 Bluegiga iWRAP
+SET BT LAP 9e8b33
+SET BT PAGEMODE 4 2000 1
+SET BT PAIR 01:01:01:01:05:76 50515562d8c29439dd91cf4fbb2385aa
+SET BT POWER 6 6 6
+SET BT ROLE 0 f 2580
+SET BT SNIFF 0 20 1 8
+SET BT SSP 3 0
+SET BT MTU 667
+SET CONTROL AUDIO INTERNAL INTERNAL
+SET CONTROL BAUD 115200,8n1
+SET CONTROL CD 00 0
+SET CONTROL CODEC SBC JOINT_STEREO 44100 0
+SET CONTROL CONFIG 0000 0000 0000 1100
+SET CONTROL ECHO 7
+SET CONTROL ESCAPE 43 00 1
+SET CONTROL GAIN 8 8
+SET CONTROL MICBIAS b 0
+SET CONTROL MSC DTE 00 00 00 00 00 00
+SET CONTROL PIO 00 00 00
+SET CONTROL PREAMP 1 1
+SET CONTROL READY 00
+SET CONTROL VREGEN 0 00
+SET PROFILE A2DP SOURCE
+SET PROFILE SPP Bluetooth Serial Port
+SET PROFILE HSP-AG Voice Gateway
+SET PROFILE AVRCP TARGET 07
+SET
+list
+LIST 3
+LIST 0 CONNECTED A2DP 716 0 0 60 0 0 01:01:01:01:05:76 19 INCOMING ACTIVE SLAVE ENCRYPTED 0
+LIST 1 CONNECTED A2DP 716 0 0 59 0 0 01:01:01:01:05:76 19 INCOMING ACTIVE SLAVE ENCRYPTED 0
+LIST 2 CONNECTED AVRCP 672 0 0 58 0 0 01:01:01:01:05:76 17 INCOMING ACTIVE SLAVE ENCRYPTED 0
+
+NO CARRIER 2 ERROR a80c L2CAP_DISCONNECT_LINK_LOSS
+NO CARRIER 1 ERROR a80c L2CAP_DISCONNECT_LINK_LOSS
+NO CARRIER 0 ERROR a80c L2CAP_DISCONNECT_LINK_LOSS
+RING 0 01:01:01:01:05:76 19 A2DP 
+RING 1 01:01:01:01:05:76 19 A2DP 
+RING 2 01:01:01:01:05:76 17 AVRCP 
+
+AVRCP 2 GET_CAPABILITIES 3
+
+set
+SET BT BDADDR 88:6b:0f:62:71:88
+SET BT NAME WT32i-AJ
+SET BT CLASS 280428
+SET BT IDENT BT:47 f000 6.0.0 Bluegiga iWRAP
+SET BT LAP 9e8b33
+SET BT PAGEMODE 4 2000 1
+SET BT PAIR 01:01:01:01:05:76 50515562d8c29439dd91cf4fbb2385aa
+SET BT POWER 6 6 6
+SET BT ROLE 0 f 2580
+SET BT SNIFF 0 20 1 8
+SET BT SSP 3 0
+SET BT MTU 667
+SET CONTROL AUDIO INTERNAL INTERNAL
+SET CONTROL BAUD 115200,8n1
+SET CONTROL CD 00 0
+SET CONTROL CODEC SBC JOINT_STEREO 44100 0
+SET CONTROL CONFIG 0000 0000 0000 1100
+SET CONTROL ECHO 7
+SET CONTROL ESCAPE 43 00 1
+SET CONTROL GAIN 8 8
+SET CONTROL MICBIAS b 0
+SET CONTROL MSC DTE 00 00 00 00 00 00
+SET CONTROL PIO 00 00 00
+SET CONTROL PREAMP 1 1
+SET CONTROL READY 00
+SET CONTROL VREGEN 0 00
+SET PROFILE A2DP SOURCE
+SET PROFILE SPP Bluetooth Serial Port
+SET PROFILE HSP-AG Voice Gateway
+SET PROFILE AVRCP TARGET 07
+SET
+echo "SET PROFILE A2DP SOURCE" > /dev/ttymxc3
+SYNTAX ERROR
+
+
+
+
+INQUIRY 7 NAME
+INQUIRY_PARTIAL bc:d1:1f:5b:f2:c1 5a020c
+INQUIRY_PARTIAL 4c:bb:58:66:9f:a9 2a010c
+INQUIRY_PARTIAL f8:2f:a8:c9:79:12 3e010c
+INQUIRY_PARTIAL 94:65:2d:d1:25:16 5a020c
+INQUIRY_PARTIAL 00:1b:10:00:2a:ec 6e0100
+INQUIRY 5
+INQUIRY bc:d1:1f:5b:f2:c1 5a020c
+INQUIRY 4c:bb:58:66:9f:a9 2a010c
+INQUIRY f8:2f:a8:c9:79:12 3e010c
+INQUIRY 94:65:2d:d1:25:16 5a020c
+INQUIRY 00:1b:10:00:2a:ec 6e0100
+NAME bc:d1:1f:5b:f2:c1 "Galaxy S5"
+NAME ERROR 0x10c f8:2f:a8:c9:79:12 HCI_ERROR_COMMAND_DISALLOWED
+NAME 4c:bb:58:66:9f:a9 "HYDLAPVELUGAAN"
+NAME 94:65:2d:d1:25:16 "OnePlus 5T"
+
+
+CALL 01:01:01:01:05:76 19 A2DP
+CALL 3
+NAME 00:1b:10:00:2a:ec "emb-ban-227-0"
+
+
+NO CARRIER 3 ERROR 9803 L2CAP_CONNECTION_TIMEOUT
+
+
+NO CARRIER 2 ERROR a80c L2CAP_DISCONNECT_LINK_LOSS
+NO CARRIER 1 ERROR a80c L2CAP_DISCONNECT_LINK_LOSS
+NO CARRIER 0 ERROR a80c L2CAP_DISCONNECT_LINK_LOSS
+
+
+U-Boot 2017.03-00002-gebf9dc2527 (Jan 29 2018 - 17:39:17 +0530)
+
+CPU:   Freescale i.MX6Q rev1.5 at 792 MHz
+Reset cause: POR
+I2C:   ready
+DRAM:  2 GiB
+PMIC: device id: 0x10, revision id: 0x21
+PMIC: programmed
+MMC:   FSL_SDHC: 0, FSL_SDHC: 1, FSL_SDHC: 2
+Unable to allocate framebuffer memory
+In:    serial
+Out:   serial
+Err:   serial
+Model: Toradex Apalis iMX6 Quad 2GB IT V1.1C, Serial# 05146387
+flash target is MMC:0
+Net:   using PHY at 7
+FEC [PRIME]
+Fastboot: Normal
+Hit any key to stop autoboot:  1  0 
+boota mmc0 
+CACHE: Misaligned operation at range [8ffb79a0, 8ffb7a20]
+CACHE: Misaligned operation at range [8ffb79a0, 8ffb7a20]
+kernel   @ 14008000 (9802160)
+ramdisk  @ 15000000 (1628983)
+fdt      @ 14f00000 (53981)
+## Booting Android Image at 0x12000000 ...
+Kernel load addr 0x14008000 size 9573 KiB
+Kernel command line: console=ttymxc0,115200 init=/init video=mxcfb0:dev=ldb,fbpix=RGB32,bpp=32 video=mxcfb1:dev=hdmi,640x480M@60,if=RGB24,bpp=16 video=mxcfb2:off video=mxcfb3:off vmalloc=256M androidboot.console=ttymxc0 consoleblank=0 androidboot.hardware=freescale cma=448M androidboot.selinux=permissive androidboot.dm_verity=disabled buildvariant=user androidboot.serialno=1b2429d4ea997115 androidboot.storage_type=emmc
+## Flattened Device Tree blob at 14f00000
+   Booting using the fdt blob at 0x14f00000
+   Loading Kernel Image ... OK
+   Using Device Tree in place at 14f00000, end 14f102dc
+
+Starting kernel ...
+
+Booting Linux on physical CPU 0x0
+Linux version 4.9.67-07229-gdc6c16ec0433 (embadmin@ubuntu) (gcc version 4.9 20150123 (prerelease) (GCC) ) #73 SMP PREEMPT Mon Feb 19 12:20:06 IST 2018
+CPU: ARMv7 Processor [412fc09a] revision 10 (ARMv7), cr=10c53c7d
+CPU: PIPT / VIPT nonaliasing data cache, VIPT aliasing instruction cache
+OF: fdt:Machine model: Aravinth : Toradex Apalis iMX6Q/D Module on Ixora V1.1 Carrier Board
+cma: Reserved 448 MiB at 0x22000000
+Memory policy: Data cache writealloc
+percpu: Embedded 15 pages/cpu @ee6b3000 s31040 r8192 d22208 u61440
+Built 1 zonelists in Zone order, mobility grouping on.  Total pages: 522768
+Kernel command line: console=ttymxc0,115200 init=/init video=mxcfb0:dev=ldb,fbpix=RGB32,bpp=32 video=mxcfb1:dev=hdmi,640x480M@60,if=RGB24,bpp=16 video=mxcfb2:off video=mxcfb3:off vmalloc=256M androidboot.console=ttymxc0 consoleblank=0 androidboot.hardware=freescale cma=448M androidboot.selinux=permissive androidboot.dm_verity=disabled buildvariant=user androidboot.serialno=1b2429d4ea997115 androidboot.storage_type=emmc
+PID hash table entries: 4096 (order: 2, 16384 bytes)
+Dentry cache hash table entries: 131072 (order: 7, 524288 bytes)
+Inode-cache hash table entries: 65536 (order: 6, 262144 bytes)
+Memory: 1597048K/2097152K available (13312K kernel code, 1128K rwdata, 4016K rodata, 1024K init, 606K bss, 41352K reserved, 458752K cma-reserved, 1318912K highmem)
+Virtual kernel memory layout:
+    vector  : 0xffff0000 - 0xffff1000   (   4 kB)
+    fixmap  : 0xffc00000 - 0xfff00000   (3072 kB)
+    vmalloc : 0xf0000000 - 0xff800000   ( 248 MB)
+    lowmem  : 0xc0000000 - 0xef800000   ( 760 MB)
+    pkmap   : 0xbfe00000 - 0xc0000000   (   2 MB)
+    modules : 0xbf000000 - 0xbfe00000   (  14 MB)
+      .text : 0xc0008000 - 0xc0e00000   (14304 kB)
+      .init : 0xc1300000 - 0xc1400000   (1024 kB)
+      .data : 0xc1400000 - 0xc151a218   (1129 kB)
+       .bss : 0xc151a218 - 0xc15b1be0   ( 607 kB)
+SLUB: HWalign=64, Order=0-3, MinObjects=0, CPUs=4, Nodes=1
+Preemptible hierarchical RCU implementation.
+	Build-time adjustment of leaf fanout to 32.
+NR_IRQS:16 nr_irqs:16 16
+L2C-310 errata 752271 769419 enabled
+L2C-310 enabling early BRESP for Cortex-A9
+L2C-310 full line of zeros enabled for Cortex-A9
+L2C-310 ID prefetch enabled, offset 16 lines
+L2C-310 dynamic clock gating enabled, standby mode enabled
+L2C-310 cache controller enabled, 16 ways, 1024 kB
+L2C-310: CACHE_ID 0x410000c7, AUX_CTRL 0x76470001
+Switching to timer-based delay loop, resolution 333ns
+sched_clock: 32 bits at 3000kHz, resolution 333ns, wraps every 715827882841ns
+clocksource: mxc_timer1: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 637086815595 ns
+Console: colour dummy device 80x30
+Calibrating delay loop (skipped), value calculated using timer frequency.. 6.00 BogoMIPS (lpj=30000)
+pid_max: default: 32768 minimum: 301
+Security Framework initialized
+SELinux:  Initializing.
+Mount-cache hash table entries: 2048 (order: 1, 8192 bytes)
+Mountpoint-cache hash table entries: 2048 (order: 1, 8192 bytes)
+CPU: Testing write buffer coherency: ok
+CPU0: update cpu_capacity 1024
+CPU0: thread -1, cpu 0, socket 0, mpidr 80000000
+Setting up static identity map for 0x10100000 - 0x10100058
+CPU1: update cpu_capacity 1024
+CPU1: thread -1, cpu 1, socket 0, mpidr 80000001
+CPU2: update cpu_capacity 1024
+CPU2: thread -1, cpu 2, socket 0, mpidr 80000002
+CPU3: update cpu_capacity 1024
+CPU3: thread -1, cpu 3, socket 0, mpidr 80000003
+Brought up 4 CPUs
+SMP: Total of 4 processors activated (24.00 BogoMIPS).
+CPU: All CPU(s) started in SVC mode.
+CPU3: update max cpu_capacity 1024
+devtmpfs: initialized
+CPU2: update max cpu_capacity 1024
+VFP support v0.3: implementor 41 architecture 3 part 30 variant 9 rev 4
+clocksource: jiffies: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 19112604462750000 ns
+futex hash table entries: 1024 (order: 4, 65536 bytes)
+pinctrl core: initialized pinctrl subsystem
+NET: Registered protocol family 16
+DMA: preallocated 256 KiB pool for atomic coherent allocations
+cpuidle: using governor menu
+CPU identified as i.MX6Q, silicon rev 1.5
+hw-breakpoint: found 5 (+1 reserved) breakpoint and 1 watchpoint registers.
+hw-breakpoint: maximum watchpoint size is 4 bytes.
+imx6q-pinctrl 20e0000.iomuxc: initialized IMX pinctrl driver
+imx-gpc 20dc000.gpc: no fsl,ldo-bypass found!
+imx-gpc 20dc000.gpc: Registered imx-gpc
+mxs-dma 110000.dma-apbh: initialized
+usb_host_vbus: supplied by usb_host_vbus_hub
+SCSI subsystem initialized
+usbcore: registered new interface driver usbfs
+usbcore: registered new interface driver hub
+usbcore: registered new device driver usb
+2000000.aips-bus:usbphy_nop1 supply vcc not found, using dummy regulator
+2000000.aips-bus:usbphy_nop2 supply vcc not found, using dummy regulator
+i2c i2c-1: IMX I2C adapter registered
+i2c i2c-1: can't use DMA, using PIO instead.
+stmpe-i2c 2-0041: stmpe811 detected, chip id: 0x811
+i2c i2c-2: IMX I2C adapter registered
+i2c i2c-2: can't use DMA, using PIO instead.
+i2c i2c-3: IMX I2C adapter registered
+i2c i2c-3: can't use DMA, using PIO instead.
+Linux video capture interface: v2.00
+pps_core: LinuxPPS API ver. 1 registered
+pps_core: Software ver. 5.3.6 - Copyright 2005-2007 Rodolfo Giometti <giometti@linux.it>
+PTP clock support registered
+imx-ipuv3 2400000.ipu: IPU DMFC NORMAL mode: 1(0~1), 5B(4,5), 5F(6,7)
+imx-ipuv3 2800000.ipu: IPU DMFC NORMAL mode: 1(0~1), 5B(4,5), 5F(6,7)
+mxc_mipi_csi2 21dc000.mipi_csi: i.MX MIPI CSI2 driver probed ipu0 csi1
+mxc_mipi_csi2 21dc000.mipi_csi: i.MX MIPI CSI2 dphy version is 0x3130302a
+MIPI CSI2 driver module loaded
+imx rpmsg driver is registered.
+Advanced Linux Sound Architecture Driver Initialized.
+Bluetooth: Core ver 2.22
+NET: Registered protocol family 31
+Bluetooth: HCI device and connection manager initialized
+Bluetooth: HCI socket layer initialized
+Bluetooth: L2CAP socket layer initialized
+Bluetooth: SCO socket layer initialized
+clocksource: Switched to clocksource mxc_timer1
+VFS: Disk quotas dquot_6.6.0
+VFS: Dquot-cache hash table entries: 1024 (order 0, 4096 bytes)
+NET: Registered protocol family 2
+TCP established hash table entries: 8192 (order: 3, 32768 bytes)
+TCP bind hash table entries: 8192 (order: 4, 65536 bytes)
+TCP: Hash tables configured (established 8192 bind 8192)
+UDP hash table entries: 512 (order: 2, 16384 bytes)
+UDP-Lite hash table entries: 512 (order: 2, 16384 bytes)
+NET: Registered protocol family 1
+RPC: Registered named UNIX socket transport module.
+RPC: Registered udp transport module.
+RPC: Registered tcp transport module.
+RPC: Registered tcp NFSv4.1 backchannel transport module.
+Trying to unpack rootfs image as initramfs...
+Freeing initrd memory: 1592K
+hw perfevents: enabled with armv7_cortex_a9 PMU driver, 7 counters available
+Bus freq driver module loaded
+audit: initializing netlink subsys (disabled)
+audit: type=2000 audit(0.870:1): initialized
+workingset: timestamp_bits=30 max_order=19 bucket_order=0
+NFS: Registering the id_resolver key type
+Key type id_resolver registered
+Key type id_legacy registered
+ntfs: driver 2.1.32 [Flags: R/W DEBUG].
+jffs2: version 2.2. (NAND) © 2001-2006 Red Hat, Inc.
+fuse init (API version 7.26)
+bounce: pool size: 64 pages
+io scheduler noop registered
+io scheduler deadline registered
+io scheduler cfq registered (default)
+backlight supply power not found, using dummy regulator
+20e0000.hdmi_video supply HDMI not found, using dummy regulator
+mxc_sdc_fb fb@0: registered mxc display driver ldb
+imx-ipuv3 2800000.ipu: IPU DMFC DP HIGH RESOLUTION: 1(0,1), 5B(2~5), 5F(6,7)
+Console: switching to colour frame buffer device 128x48
+mxc_hdmi 20e0000.hdmi_video: Detected HDMI controller 0x13:0xa:0xa0:0xc1
+fbcvt: 640x480@60: CVT Name - .307M3
+mxc_sdc_fb fb@1: registered mxc display driver hdmi
+mxc_sdc_fb fb@2: Can't get fb option for mxcfb2!
+mxc_sdc_fb fb@3: Can't get fb option for mxcfb3!
+imx-sdma 20ec000.sdma: no iram assigned, using external mem
+imx-sdma 20ec000.sdma: loaded firmware 3.3
+pfuze100-regulator 2-0008: Full layer: 2, Metal layer: 1
+pfuze100-regulator 2-0008: FAB: 0, FIN: 0
+pfuze100-regulator 2-0008: pfuze100 found.
+2020000.serial: ttymxc0 at MMIO 0x2020000 (irq = 29, base_baud = 5000000) is a IMX
+console [ttymxc0] enabled
+21e8000.serial: ttymxc1 at MMIO 0x21e8000 (irq = 78, base_baud = 5000000) is a IMX
+21f0000.serial: ttymxc3 at MMIO 0x21f0000 (irq = 79, base_baud = 5000000) is a IMX
+21f4000.serial: ttymxc4 at MMIO 0x21f4000 (irq = 80, base_baud = 5000000) is a IMX
+imx sema4 driver is registered.
+[drm] Initialized
+[drm] Initialized vivante 1.0.0 20120216 on minor 0
+brd: module loaded
+loop: module loaded
+zram: Added device: zram0
+ahci-imx 2200000.sata: fsl,transmit-level-mV not specified, using 00000024
+ahci-imx 2200000.sata: fsl,transmit-boost-mdB not specified, using 00000480
+ahci-imx 2200000.sata: fsl,transmit-atten-16ths not specified, using 00002000
+ahci-imx 2200000.sata: fsl,receive-eq-mdB not specified, using 05000000
+ahci-imx 2200000.sata: SSS flag set, parallel bus scan disabled
+ahci-imx 2200000.sata: AHCI 0001.0300 32 slots 1 ports 3 Gbps 0x1 impl platform mode
+ahci-imx 2200000.sata: flags: ncq sntf stag pm led clo only pmp pio slum part ccc apst 
+scsi host0: ahci-imx
+ata1: SATA max UDMA/133 mmio [mem 0x02200000-0x02203fff] port 0x100 irq 87
+spi_imx 2008000.ecspi: probed
+libphy: Fixed MDIO Bus: probed
+tun: Universal TUN/TAP device driver, 1.6
+tun: (C) 1999-2004 Max Krasnyansky <maxk@qualcomm.com>
+CAN device driver interface
+2090000.flexcan supply xceiver not found, using dummy regulator
+flexcan 2090000.flexcan: device registered (reg_base=f02f4000, irq=38)
+2094000.flexcan supply xceiver not found, using dummy regulator
+flexcan 2094000.flexcan: device registered (reg_base=f02fc000, irq=39)
+2188000.ethernet supply phy not found, using dummy regulator
+pps pps0: new PPS source ptp0
+libphy: fec_enet_mii_bus: probed
+fec 2188000.ethernet eth0: registered PHC device 0
+PPP generic driver version 2.4.2
+PPP BSD Compression module registered
+PPP Deflate Compression module registered
+PPP MPPE Compression module registered
+NET: Registered protocol family 24
+usbcore: registered new interface driver kaweth
+pegasus: v0.9.3 (2013/04/25), Pegasus/Pegasus II USB Ethernet driver
+usbcore: registered new interface driver pegasus
+usbcore: registered new interface driver rtl8150
+usbcore: registered new interface driver r8152
+usbcore: registered new interface driver asix
+usbcore: registered new interface driver ax88179_178a
+usbcore: registered new interface driver cdc_ether
+usbcore: registered new interface driver cdc_eem
+usbcore: registered new interface driver net1080
+usbcore: registered new interface driver cdc_subset
+usbcore: registered new interface driver zaurus
+usbcore: registered new interface driver cdc_ncm
+ehci_hcd: USB 2.0 'Enhanced' Host Controller (EHCI) Driver
+ehci-mxc: Freescale On-Chip EHCI Host driver
+usbcore: registered new interface driver cdc_acm
+cdc_acm: USB Abstract Control Model driver for USB modems and ISDN adapters
+usbcore: registered new interface driver usb-storage
+usbcore: registered new interface driver usbserial
+usbcore: registered new interface driver usbserial_generic
+usbserial: USB Serial support registered for generic
+usbcore: registered new interface driver ftdi_sio
+usbserial: USB Serial support registered for FTDI USB Serial Device
+usbcore: registered new interface driver option
+usbserial: USB Serial support registered for GSM modem (1-port)
+usbcore: registered new interface driver usbtest
+usbcore: registered new interface driver usb_ehset_test
+2184800.usbmisc supply vbus-wakeup not found, using dummy regulator
+ci_hdrc ci_hdrc.1: EHCI Host Controller
+ci_hdrc ci_hdrc.1: new USB bus registered, assigned bus number 1
+ci_hdrc ci_hdrc.1: USB 2.0 started, EHCI 1.00
+usb usb1: New USB device found, idVendor=1d6b, idProduct=0002
+usb usb1: New USB device strings: Mfr=3, Product=2, SerialNumber=1
+usb usb1: Product: EHCI Host Controller
+usb usb1: Manufacturer: Linux 4.9.67-07229-gdc6c16ec0433 ehci_hcd
+usb usb1: SerialNumber: ci_hdrc.1
+hub 1-0:1.0: USB hub found
+hub 1-0:1.0: 1 port detected
+ata1: SATA link down (SStatus 0 SControl 300)
+ahci-imx 2200000.sata: no device found, disabling link.
+ahci-imx 2200000.sata: pass ahci_imx..hotplug=1 to enable hotplug
+mousedev: PS/2 mouse device common for all mice
+usbcore: registered new interface driver xpad
+usbcore: registered new interface driver usb_acecad
+usbcore: registered new interface driver aiptek
+usbcore: registered new interface driver gtco
+usbcore: registered new interface driver hanwang
+usbcore: registered new interface driver kbtab
+input: stmpe-ts as /devices/soc0/soc/2100000.aips-bus/21a4000.i2c/i2c-2/2-0041/stmpe-ts/input/input0
+snvs_rtc 20cc000.snvs:snvs-rtc-lp: rtc core: registered 20cc000.snvs:snvs-r as rtc0
+i2c /dev entries driver
+IR NEC protocol handler initialized
+IR RC5(x/sz) protocol handler initialized
+IR RC6 protocol handler initialized
+IR JVC protocol handler initialized
+IR Sony protocol handler initialized
+IR SANYO protocol handler initialized
+IR Sharp protocol handler initialized
+IR MCE Keyboard/mouse protocol handler initialized
+IR XMP protocol handler initialized
+mxc_v4l2_output v4l2_out: V4L2 device registered as video16
+mxc_v4l2_output v4l2_out: V4L2 device registered as video17
+mxc_v4l2_output v4l2_out: V4L2 device registered as video18
+mxc_v4l2_output v4l2_out: V4L2 device registered as video19
+ov564x_mipi 3-003c: found pwm2, period=0
+usb 1-1: new high-speed USB device number 2 using ci_hdrc
+ov5640_read_reg:write reg error:reg=300a
+camera ov5640_mipi is not found
+usbcore: registered new interface driver uvcvideo
+USB Video Class driver (1.1.1)
+imx2-wdt 20bc000.wdog: timeout 60 sec (nowayout=0)
+device-mapper: uevent: version 1.0.3
+device-mapper: ioctl: 4.35.0-ioctl (2016-06-23) initialised: dm-devel@redhat.com
+Bluetooth: HCI UART driver ver 2.3
+Bluetooth: HCI UART protocol H4 registered
+Bluetooth: HCI UART protocol BCSP registered
+Bluetooth: HCI UART protocol ATH3K registered
+usbcore: registered new interface driver btusb
+sdhci: Secure Digital Host Controller Interface driver
+sdhci: Copyright(c) Pierre Ossman
+sdhci-pltfm: SDHCI platform and OF driver helper
+sdhci-esdhc-imx 2190000.usdhc: could not get ultra high speed state, work on normal mode
+sdhci-esdhc-imx 2190000.usdhc: Got CD GPIO
+mmc1: SDHCI controller on 2190000.usdhc [2190000.usdhc] using ADMA
+sdhci-esdhc-imx 2198000.usdhc: could not get ultra high speed state, work on normal mode
+usb 1-1: New USB device found, idVendor=0424, idProduct=2514
+usb 1-1: New USB device strings: Mfr=0, Product=0, SerialNumber=0
+hub 1-1:1.0: USB hub found
+hub 1-1:1.0: 4 ports detected
+mmc0: SDHCI controller on 2198000.usdhc [2198000.usdhc] using ADMA
+mxc_vpu 2040000.vpu_fsl: VPU initialized
+mxc_vdoa 21e4000.vdoa: i.MX Video Data Order Adapter(VDOA) driver probed
+mxc_hdmi_cec soc:hdmi_cec@00120000: HDMI CEC initialized
+Galcore version 6.2.2.96445
+mmc0: new DDR MMC card at address 0001
+mmcblk0: mmc0:0001 Q2J54A 3.59 GiB 
+mmcblk0boot0: mmc0:0001 Q2J54A partition 1 16.0 MiB
+mmcblk0boot1: mmc0:0001 Q2J54A partition 2 16.0 MiB
+random: fast init done
+Alternate GPT is invalid, using primary GPT.
+ mmcblk0: p1 p2 p3 p4 p5 p6 p7 p8 p9 p10 p11
+caam 2100000.caam: ERA source: CAAMVID.
+caam 2100000.caam: AXI pipeline throttling enabled.
+caam 2100000.caam: Instantiated RNG4 SH1
+caam 2100000.caam: device ID = 0x0a16010000000000 (Era 4)
+caam 2100000.caam: job rings = 2, qi = 0
+caam algorithms registered in /proc/crypto
+caam_jr 2101000.jr0: registering rng-caam
+platform caam_sm: blkkey_ex: 4 keystore units available
+platform caam_sm: 64-bit clear key:
+platform caam_sm: [0000] 00 01 02 03 04 0f 06 07
+platform caam_sm: 64-bit black key:
+platform caam_sm: [0000] ab 82 d2 31 6a bb e1 07
+platform caam_sm: [0008] 75 47 af dc d4 d6 f5 5c
+platform caam_sm: 128-bit clear key:
+platform caam_sm: [0000] 00 01 02 03 04 0f 06 07
+platform caam_sm: [0008] 08 09 0a 0b 0c 0d 0e 0f
+platform caam_sm: 128-bit black key:
+platform caam_sm: [0000] 76 be 40 bc a5 a6 72 6a
+platform caam_sm: [0008] c8 88 a5 7c 87 95 13 5f
+platform caam_sm: 192-bit clear key:
+platform caam_sm: [0000] 00 01 02 03 04 0f 06 07
+platform caam_sm: [0008] 08 09 0a 0b 0c 0d 0e 0f
+platform caam_sm: [0016] 10 11 12 13 14 15 16 17
+platform caam_sm: 192-bit black key:
+platform caam_sm: [0000] 3c 60 00 11 8e e2 40 e1
+platform caam_sm: [0008] c0 63 07 f7 6c 0e 2e 76
+platform caam_sm: [0016] 08 5c 0f 0b bc df bd e8
+platform caam_sm: [0024] 30 dc 09 9e fb 99 86 22
+platform caam_sm: 256-bit clear key:
+platform caam_sm: [0000] 00 01 02 03 04 0f 06 07
+platform caam_sm: [0008] 08 09 0a 0b 0c 0d 0e 0f
+platform caam_sm: [0016] 10 11 12 13 14 15 16 17
+platform caam_sm: [0024] 18 19 1a 1b 1c 1d 1e 1f
+platform caam_sm: 256-bit black key:
+platform caam_sm: [0000] eb 9a 8b 0d ea b5 04 bf
+platform caam_sm: [0008] 01 c9 51 13 21 12 a3 eb
+platform caam_sm: [0016] ee 80 52 1f 9b 8f 1b 92
+platform caam_sm: [0024] 84 01 20 e9 22 16 50 8c
+platform caam_sm: 64-bit unwritten blob:
+platform caam_sm: [0000] 00 00 00 00 00 00 00 00
+platform caam_sm: [0008] 00 00 00 00 00 00 00 00
+platform caam_sm: [0016] 00 00 00 00 00 00 00 00
+platform caam_sm: [0024] 00 00 00 00 00 00 00 00
+platform caam_sm: [0032] 00 00 00 00 00 00 00 00
+platform caam_sm: [0040] 00 00 00 00 00 00 00 00
+platform caam_sm: [0048] 00 00 00 00 00 00 00 00
+platform caam_sm: [0056] 00 00 00 00 00 00 00 00
+platform caam_sm: [0064] 00 00 00 00 00 00 00 00
+platform caam_sm: [0072] 00 00 00 00 00 00 00 00
+platform caam_sm: [0080] 00 00 00 00 00 00 00 00
+platform caam_sm: [0088] 00 00 00 00 00 00 00 00
+platform caam_sm: 128-bit unwritten blob:
+platform caam_sm: [0000] 00 00 00 00 00 00 00 00
+platform caam_sm: [0008] 00 00 00 00 00 00 00 00
+platform caam_sm: [0016] 00 00 00 00 00 00 00 00
+platform caam_sm: [0024] 00 00 00 00 00 00 00 00
+platform caam_sm: [0032] 00 00 00 00 00 00 00 00
+platform caam_sm: [0040] 00 00 00 00 00 00 00 00
+platform caam_sm: [0048] 00 00 00 00 00 00 00 00
+platform caam_sm: [0056] 00 00 00 00 00 00 00 00
+platform caam_sm: [0064] 00 00 00 00 00 00 00 00
+platform caam_sm: [0072] 00 00 00 00 00 00 00 00
+platform caam_sm: [0080] 00 00 00 00 00 00 00 00
+platform caam_sm: [0088] 00 00 00 00 00 00 00 00
+platform caam_sm: 196-bit unwritten blob:
+platform caam_sm: [0000] 00 00 00 00 00 00 00 00
+platform caam_sm: [0008] 00 00 00 00 00 00 00 00
+platform caam_sm: [0016] 00 00 00 00 00 00 00 00
+platform caam_sm: [0024] 00 00 00 00 00 00 00 00
+platform caam_sm: [0032] 00 00 00 00 00 00 00 00
+platform caam_sm: [0040] 00 00 00 00 00 00 00 00
+platform caam_sm: [0048] 00 00 00 00 00 00 00 00
+platform caam_sm: [0056] 00 00 00 00 00 00 00 00
+platform caam_sm: [0064] 00 00 00 00 00 00 00 00
+platform caam_sm: [0072] 00 00 00 00 00 00 00 00
+platform caam_sm: [0080] 00 00 00 00 00 00 00 00
+platform caam_sm: [0088] 00 00 00 00 00 00 00 00
+platform caam_sm: 256-bit unwritten blob:
+platform caam_sm: [0000] 00 00 00 00 00 00 00 00
+platform caam_sm: [0008] 00 00 00 00 00 00 00 00
+platform caam_sm: [0016] 00 00 00 00 00 00 00 00
+platform caam_sm: [0024] 00 00 00 00 00 00 00 00
+platform caam_sm: [0032] 00 00 00 00 00 00 00 00
+platform caam_sm: [0040] 00 00 00 00 00 00 00 00
+platform caam_sm: [0048] 00 00 00 00 00 00 00 00
+platform caam_sm: [0056] 00 00 00 00 00 00 00 00
+platform caam_sm: [0064] 00 00 00 00 00 00 00 00
+platform caam_sm: [0072] 00 00 00 00 00 00 00 00
+platform caam_sm: [0080] 00 00 00 00 00 00 00 00
+platform caam_sm: [0088] 00 00 00 00 00 00 00 00
+platform caam_sm: 64-bit black key in blob:
+platform caam_sm: [0000] 21 10 8d 60 11 3d ac 34
+platform caam_sm: [0008] 7b 98 72 dd 90 f2 4e 74
+platform caam_sm: [0016] 38 7a f4 67 9a 00 a9 89
+platform caam_sm: [0024] 3e 01 23 1d 65 39 c9 27
+platform caam_sm: [0032] 64 2a 6e 88 fd 27 25 57
+platform caam_sm: [0040] 42 cd 88 ae 5e 20 99 4e
+platform caam_sm: [0048] 6a 72 e7 d6 be 56 fd c2
+platform caam_sm: [0056] 00 00 00 00 00 00 00 00
+platform caam_sm: [0064] 00 00 00 00 00 00 00 00
+platform caam_sm: [0072] 00 00 00 00 00 00 00 00
+platform caam_sm: [0080] 00 00 00 00 00 00 00 00
+platform caam_sm: [0088] 00 00 00 00 00 00 00 00
+platform caam_sm: 128-bit black key in blob:
+platform caam_sm: [0000] 3a 01 b0 26 c7 2b 8d 8a
+platform caam_sm: [0008] 44 25 b3 70 fe b7 35 9d
+platform caam_sm: [0016] fb bf 8f fa b9 c5 8a 6e
+platform caam_sm: [0024] 8b 6d 15 fa 30 30 26 db
+platform caam_sm: [0032] cf 5d 33 9c fa 31 79 56
+platform caam_sm: [0040] fe a2 33 b3 48 fe 56 01
+platform caam_sm: [0048] 66 a0 a1 b8 6f f4 fd ec
+platform caam_sm: [0056] 2c ef b7 dd cb 10 6e db
+platform caam_sm: [0064] 00 00 00 00 00 00 00 00
+platform caam_sm: [0072] 00 00 00 00 00 00 00 00
+platform caam_sm: [0080] 00 00 00 00 00 00 00 00
+platform caam_sm: [0088] 00 00 00 00 00 00 00 00
+platform caam_sm: 192-bit black key in blob:
+platform caam_sm: [0000] 8e 1b a4 e2 52 49 e8 78
+platform caam_sm: [0008] 73 b9 32 a1 43 4c d8 5e
+platform caam_sm: [0016] 86 31 e9 5c 9b 01 c3 89
+platform caam_sm: [0024] aa ee 88 6e 5b 24 76 45
+platform caam_sm: [0032] d3 b9 4e 78 59 54 b2 e2
+platform caam_sm: [0040] 98 e0 90 ce 46 83 76 52
+platform caam_sm: [0048] f8 bd b4 25 8b a0 26 52
+platform caam_sm: [0056] 7e c7 65 d4 8e 15 6a 7f
+platform caam_sm: [0064] 67 2c 6d e6 13 a2 c3 28
+platform caam_sm: [0072] 00 00 00 00 00 00 00 00
+platform caam_sm: [0080] 00 00 00 00 00 00 00 00
+platform caam_sm: [0088] 00 00 00 00 00 00 00 00
+platform caam_sm: 256-bit black key in blob:
+platform caam_sm: [0000] 16 35 84 5b 05 d7 63 16
+platform caam_sm: [0008] 2d 9d 77 ab 6d 3d 01 0e
+platform caam_sm: [0016] fb 15 fb 3b 98 32 d2 77
+platform caam_sm: [0024] 36 d3 85 74 6f d1 64 10
+platform caam_sm: [0032] 2b 31 8f 74 62 e1 45 06
+platform caam_sm: [0040] 03 61 f0 2b 0d 09 a1 8d
+platform caam_sm: [0048] 01 9b 31 28 2c 8d 0d 1e
+platform caam_sm: [0056] 10 35 c6 67 50 27 43 33
+platform caam_sm: [0064] d6 6c ff 3c 38 29 4a 03
+platform caam_sm: [0072] df 8f dd 68 cd 25 4a 95
+platform caam_sm: [0080] 00 00 00 00 00 00 00 00
+platform caam_sm: [0088] 00 00 00 00 00 00 00 00
+platform caam_sm: restored 64-bit black key:
+platform caam_sm: [0000] 56 c9 70 f1 d3 66 c8 28
+platform caam_sm: [0008] 84 1f 94 4b f7 bf fc f2
+platform caam_sm: restored 128-bit black key:
+platform caam_sm: [0000] 76 be 40 bc a5 a6 72 6a
+platform caam_sm: [0008] c8 88 a5 7c 87 95 13 5f
+platform caam_sm: restored 192-bit black key:
+platform caam_sm: [0000] 3c 60 00 11 8e e2 40 e1
+platform caam_sm: [0008] c0 63 07 f7 6c 0e 2e 76
+platform caam_sm: [0016] ef 49 3d cc ad a9 9e 6e
+platform caam_sm: [0024] 49 17 55 9b 18 e9 dc b1
+platform caam_sm: restored 256-bit black key:
+platform caam_sm: [0000] eb 9a 8b 0d ea b5 04 bf
+platform caam_sm: [0008] 01 c9 51 13 21 12 a3 eb
+platform caam_sm: [0016] ee 80 52 1f 9b 8f 1b 92
+platform caam_sm: [0024] 84 01 20 e9 22 16 50 8c
+snvs-secvio 20cc000.caam-snvs: can't get snvs clock
+snvs-secvio 20cc000.caam-snvs: violation handlers armed - non-secure state
+hidraw: raw HID events driver (C) Jiri Kosina
+usbcore: registered new interface driver usbhid
+usbhid: USB HID core driver
+ashmem: initialized
+usbcore: registered new interface driver snd-usb-audio
+sgtl5000 2-000a: sgtl5000 revision 0x11
+fsl-ssi-dai 2028000.ssi: No cache defaults, reading back from HW
+imx-sgtl5000 sound: sgtl5000 <-> 2028000.ssi mapping ok
+imx-spdif sound-spdif: snd-soc-dummy-dai <-> 2004000.spdif mapping ok
+imx-audio-hdmi sound-hdmi: hdmi-hifi.0 <-> soc:hdmi_audio@00120000 mapping ok
+NET: Registered protocol family 26
+u32 classifier
+    Actions configured
+Netfilter messages via NETLINK v0.30.
+nf_conntrack version 0.5.0 (16384 buckets, 65536 max)
+ctnetlink v0.93: registering with nfnetlink.
+xt_time: kernel timezone is -0000
+ip_tables: (C) 2000-2006 Netfilter Core Team
+arp_tables: arp_tables: (C) 2002 David S. Miller
+Initializing XFRM netlink socket
+NET: Registered protocol family 10
+mip6: Mobile IPv6
+ip6_tables: (C) 2000-2006 Netfilter Core Team
+sit: IPv6, IPv4 and MPLS over IPv4 tunneling driver
+NET: Registered protocol family 17
+NET: Registered protocol family 15
+can: controller area network core (rev 20120528 abi 9)
+NET: Registered protocol family 29
+can: raw protocol (rev 20120528)
+can: broadcast manager protocol (rev 20161123 t)
+can: netlink gateway (rev 20130117) max_hops=1
+Bluetooth: RFCOMM TTY layer initialized
+Bluetooth: RFCOMM socket layer initialized
+Bluetooth: RFCOMM ver 1.11
+Bluetooth: BNEP (Ethernet Emulation) ver 1.3
+Bluetooth: BNEP filters: protocol multicast
+Bluetooth: BNEP socket layer initialized
+Bluetooth: HIDP (Human Interface Emulation) ver 1.2
+Bluetooth: HIDP socket layer initialized
+8021q: 802.1Q VLAN Support v1.8
+Key type dns_resolver registered
+cpu cpu0: Registered imx6q-cpufreq
+registered taskstats version 1
+imx_thermal 2000000.aips-bus:tempmon: Industrial CPU temperature grade - max:105C critical:100C passive:95C
+dhd_module_init in
+input: gpio-keys as /devices/soc0/gpio-keys/input/input1
+snvs_rtc 20cc000.snvs:snvs-rtc-lp: setting system clock to 1970-01-01 00:00:02 UTC (2)
+usb_otg_vbus: disabling
+ALSA device list:
+  #0: imx6q-apalis-sgtl5000
+  #1: imx-spdif
+  #2: imx-hdmi-soc
+Freeing unused kernel memory: 1024K
+init: init first stage started!
+SELinux:  Permission validate_trans in class security not defined in policy.
+SELinux:  Class cap_userns not defined in policy.
+SELinux:  Class cap2_userns not defined in policy.
+SELinux: the above unknown classes and permissions will be denied
+audit: type=1403 audit(4.997:2): policy loaded auid=4294967295 ses=4294967295
+init: (Initializing SELinux non-enforcing took 0.10s.)
+init: init second stage started!
+init: Running restorecon...
+init: waitpid failed: No child processes
+init: (Loading properties from /default.prop took 0.00s.)
+init: (Parsing /init.environ.rc took 0.00s.)
+init: (Parsing /init.usb.rc took 0.00s.)
+init: (Parsing init.freescale.usb.rc took 0.00s.)
+init: (Parsing init.freescale.i.MX6Q.rc took 0.00s.)
+init: (Parsing init.freescale.emmc.rc took 0.00s.)
+init: (Parsing /init.freescale.rc took 0.02s.)
+ueventd: ueventd started!
+ueventd: Coldboot took 0.43s.
+Console: switching to colour dummy device 80x30
+watchdogd: started (interval 10, margin 20)!
+EXT4-fs (mmcblk0p3): mounted filesystem with ordered data mode. Opts: barrier=1
+EXT4-fs (mmcblk0p10): Ignoring removed nomblk_io_submit option
+EXT4-fs (mmcblk0p10): recovery complete
+EXT4-fs (mmcblk0p10): mounted filesystem with ordered data mode. Opts: nomblk_io_submit,noauto_da_alloc,errors=panic
+EXT4-fs (mmcblk0p4): Ignoring removed nomblk_io_submit option
+EXT4-fs (mmcblk0p4): recovery complete
+EXT4-fs (mmcblk0p4): mounted filesystem with ordered data mode. Opts: nomblk_io_submit
+EXT4-fs (mmcblk0p5): mounted filesystem with ordered data mode. Opts: (null)
+file system registered
+using random self ethernet address
+using random host ethernet address
+zram0: detected capacity change from 0 to 314572800
+logd.auditd: start
+logd.klogd: 7661582667
+Adding 307196k swap on /dev/block/zram0.  Priority:-1 extents:1 across:307196k SS
+binder: 253:253 transaction failed 29189, size 0-0
+type=1400 audit(8.177:3): avc: denied { entrypoint } for pid=259 comm="init" path="/system/bin/can-config.sh" dev="mmcblk0p3" ino=255 scontext=u:r:obd:s0 tcontext=u:object_r:system_file:s0 tclass=file permissive=1
+logd.daemon: reinit
+type=1400 audit(8.187:4): avc: denied { read execute } for pid=259 comm="can-config.sh" path="/system/bin/sh" dev="mmcblk0p3" ino=442 scontext=u:r:obd:s0 tcontext=u:object_r:shell_exec:s0 tclass=file permissive=1
+type=1400 audit(8.187:5): avc: denied { getattr } for pid=259 comm="can-config.sh" path="/system/bin/sh" dev="mmcblk0p3" ino=442 scontext=u:r:obd:s0 tcontext=u:object_r:shell_exec:s0 tclass=file permissive=1
+type=1400 audit(8.187:6): avc: denied { getattr } for pid=259 comm="can-config.sh" path="/vendor" dev="rootfs" ino=6500 scontext=u:r:obd:s0 tcontext=u:object_r:rootfs:s0 tclass=lnk_file permissive=1
+type=1400 audit(8.267:7): avc: denied { execute_no_trans } for pid=274 comm="can-config.sh" path="/system/bin/ip" dev="mmcblk0p3" ino=334 scontext=u:r:obd:s0 tcontext=u:object_r:system_file:s0 tclass=file permissive=1
+type=1400 audit(8.277:8): avc: denied { create } for pid=260 comm="obd" scontext=u:r:obd:s0 tcontext=u:r:obd:s0 tclass=socket permissive=1
+type=1400 audit(8.277:9): avc: denied { ioctl } for pid=260 comm="obd" path="socket:[9866]" dev="sockfs" ino=9866 ioctlcmd=0x8933 scontext=u:r:obd:s0 tcontext=u:r:obd:s0 tclass=socket permissive=1
+IPv6: ADDRCONF(NETDEV_CHANGE): can0: link becomes ready
+toradex_apalis6q:/ # healthd: No battery devices found
+ERROR: v4l2 capture: slave not found! V4L2_CID_HUE
+ERROR: v4l2 capture: slave not found! V4L2_CID_HUE
+imx-hdmi-audio imx-hdmi-audio: HDMI Video is not ready!
+imx-hdmi-audio imx-hdmi-audio: ASoC: can't open platform imx-hdmi-audio: -22
+imx-hdmi-audio imx-hdmi-audio: HDMI Video is not ready!
+imx-hdmi-audio imx-hdmi-audio: ASoC: can't open platform imx-hdmi-audio: -22
+init: Starting service 'bootanim'...
+
+toradex_apalis6q:/ # bustoradex_apalis6q:/ # busybox                                                    miccapability: warning: `main' uses 32-bit capabilities (legacy support in use)
+rocom type=1400 audit(17.417:36): avc: denied { write } for pid=260 comm="obd" path="socket:[9866]" dev="sockfs" ino=9866 scontext=u:r:obd:s0 tcontext=u:r:obd:s0 tclass=socket permissive=1
+init: write_file: Unable to open '/sys/devices/system/cpu/cpufreq/interactive/timer_rate': No such file or directory
+init: write_file: Unable to open '/sys/devices/system/cpu/cpufreq/interactive/min_sample_time': No such file or directory
+init: write_file: Unable to open '/sys/devices/system/cpu/cpufreq/interactive/go_hispeed_load': No such file or directory
+-s 115200 /init: write_file: Unable to open '/proc/sys/vm/extra_free_kbytes': No such file or directory
+dev/tinit: write_file: Unable to write to '/config/usb_gadget/g1/UDC': No such device
+acc_open
+acc_release
+trandom: crng init done
+yMicrel KSZ9031 Gigabit PHY 2188000.ethernet-1:07: attached PHY driver [Micrel KSZ9031 Gigabit PHY] (mii_bus:phy_addr=2188000.ethernet-1:07, irq=120)
+IPv6: ADDRCONF(NETDEV_UP): eth0: link is not ready
+mxc3
+alloc_contig_range: [2aa20, 2aa34) PFNs busy
+type=1400 audit(24.937:37): avc: denied { write } for pid=260 comm="obd" path="socket:[9866]" dev="sockfs" ino=9866 scontext=u:r:obd:s0 tcontext=u:r:obd:s0 tclass=socket permissive=1
+
+set
+SET BT BDADDR 88:6b:0f:62:71:88
+SET BT NAME WT32i-AJ
+SET BT CLASS 280428
+SET BT IDENT BT:47 f000 6.0.0 Bluegiga iWRAP
+SET BT LAP 9e8b33
+SET BT PAGEMODE 4 2000 1
+SET BT PAIR 01:01:01:01:05:76 50515562d8c29439dd91cf4fbb2385aa
+SET BT POWER 6 6 6
+SET BT ROLE 0 f 2580
+SET BT SNIFF 0 20 1 8
+SET BT SSP 3 0
+SET BT MTU 667
+SET Cinit: Service 'bootanim' (pid 335) exited with status 0
+ONTROL AUDIO INTERNAL INTERNAL
+SET CONTROL BAUD 115200,8n1
+SET CONTROL CD 00 0
+SET CONTROL CODEC SBC JOINT_STEREO 44100 0
+SET CONTROL CONFIG 0000 0000 0000 1100
+SET CONTROL ECHO 7
+SET CONTROL ESCAPE 43 00 1
+SET CONTROL GAIN 8 8
+SET CONTROL MICBIAS b 0
+SET CONTROL MSC DTE 00 00 00 00 00 00
+SET CONTROL PIO 00 00 00
+SET CONTROL PREAMP 1 1
+SET CONTROL READY 00
+SET CONTROL VREGEN 0 00
+SET PROFILE A2DP SOURCE
+SET PROFILE SPP Bluetooth Serial Port
+SET PROFILE HSP-AG Voice Gateway
+SET PROFILE AVRCP TARGET 07
+SET
+init: Starting service 'exec 3 (/system/bin/bootstat)'...
+init: Service 'exec 3 (/system/bin/bootstat)' (pid 936) exited with status 0
+init: Starting service 'exec 4 (/system/bin/bootstat)'...
+init: Service 'exec 4 (/system/bin/bootstat)' (pid 954) exited with status 0
+init: Starting service 'exec 5 (/system/bin/bootstat)'...
+init: Service 'exec 5 (/system/bin/bootstat)' (pid 959) exited with status 0
+init: Starting service 'exec 6 (/system/bin/bootstat)'...
+init: Service 'exec 6 (/system/bin/bootstat)' (pid 960) exited with status 0
+type=1400 audit(29.697:38): avc: denied { write } for pid=260 comm="obd" path="socket:[9866]" dev="sockfs" ino=9866 scontext=u:r:obd:s0 tcontext=u:r:obd:s0 tclass=socket permissive=1
+
+set
+SET BT BDADDR 88:6b:0f:62:71:88
+SET BT NAME WT32i-AJ
+SET BT CLASS 280428
+SET BT IDENT BT:47 f000 6.0.0 Bluegiga iWRAP
+SET BT LAP 9e8b33
+SET BT PAGEMODE 4 2000 1
+SET BT PAIR 01:01:01:01:05:76 50515562d8c29439dd91cf4fbb2385aa
+SET BT POWER 6 6 6
+SET BT ROLE 0 f 2580
+SET BT SNIFF 0 20 1 8
+SET BT SSP 3 0
+SET BT MTU 667
+SET CONTROL AUDIO INTERNAL INTERNAL
+SET CONTROL BAUD 115200,8n1
+SET CONTROL CD 00 0
+SET CONTROL CODEC SBC JOINT_STEREO 44100 0
+SET CONTROL CONFIG 0000 0000 0000 1100
+SET CONTROL ECHO 7
+SET CONTROL ESCAPE 43 00 1
+SET CONTROL GAIN 8 8
+SET CONTROL MICBIAS b 0
+SET CONTROL MSC DTE 00 00 00 00 00 00
+SET CONTROL PIO 00 00 00
+SET CONTROL PREAMP 1 1
+SET CONTROL READY 00
+SET CONTROL VREGEN 0 00
+SET PROFILE A2DP SOURCE
+SET PROFILE SPP Bluetooth Serial Port
+type=1400 audit(35.657:39): avc: denied { write } for pid=1208 comm="Thread-2" name="vcan" dev="tmpfs" ino=10416 scontext=u:r:untrusted_app:s0:c512,c768 tcontext=u:object_r:socket_device:s0 tclass=sock_file permissive=1
+SET PROFILE HSP-AG Voice Gatewaytype=1400 audit(35.657:40): avc: denied { connectto } for pid=1208 comm="Thread-2" path="/dev/socket/vcan" scontext=u:r:untrusted_app:s0:c512,c768 tcontext=u:r:obd:s0 tclass=unix_stream_socket permissive=1
+
+SET PROFILE AVRCP TARGET 07
+SET
+
+
+type=1400 audit(39.227:41): avc: denied { write } for pid=260 comm="obd" path="socket:[9866]" dev="sockfs" ino=9866 scontext=u:r:obd:s0 tcontext=u:r:obd:s0 tclass=socket permissive=1
+CALL 01:01:01:01:05:76 19 A2DP
+CALL 0
+CONNECT 0 A2DP 19
+CONNECT 1 A2DP 19
+A2DP STREAMING START 0
+RING 2 01:01:01:01:05:76 17 AVRCP 
+
+AVRCP 2 GET_CAPABILITIES 3
+
+
+toradex_apalis6q:/ # 
+toradex_apalis6q:/ # 
+toradex_apalis6q:/ # 
+toradex_apalis6q:/ # toradex_apalis6q:/ # busybox microcom -s 115200 /dev/ttymxc3                    4
+RING 0 bc:d1:1f:5b:f2:c1 19 A2DP 
+RING 1 bc:d1:1f:5b:f2:c1 19 A2DP 
+RING 2 bc:d1:1f:5b:f2:c1 17 AVRCP 
+A2DP STREAMING START 0
+RING 3 bc:d1:1f:5b:f2:c1 3 HFP 
+HFP 3 CODEC NEGOTIATION
+HFP 3 BRSF 4071
+HFP 3 STATUS "call" 0
+HFP 3 STATUS "callsetup" 0
+HFP 3 STATUS "service" 1
+HFP 3 STATUS "signal" 4
+HFP 3 STATUS "roam" 0
+HFP 3 STATUS "battchg" 3
+HFP 3 STATUS "callheld" 0
+HFP 3 CHLD (0,1,2,3)
+HFP 3 READY
+HFP 3 UNKNOWN (8): \r\n+COPS: 0,0,"idea | Idea"\r\n
+A2DP STREAMING STOP 0
+A2DP STREAMING START 0
+A2DP STREAMING STOP 0
+HFP 3 STATUS "callsetup" 1
+HFP 3 RING
+HFP 3 CALLERID "+918508139500" "" 91
+HFP 3 RING
+HFP 3 CALLERID "+918508139500" "" 91
+HFP 3 RING
+HFP 3 CALLERID "+918508139500" "" 91
+HFP 3 CODEC MSBC
+HFP 3 STATUS "call" 1
+HFP 3 STATUS "callsetup" 0
+RING 4 bc:d1:1f:5b:f2:c1 SCO
+NO CARRIER 4 ERROR 113 HCI_ERROR_OETC_USER
+HFP 3 STATUS "call" 0
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+HFP 3 STATUS "callsetup" 1
+HFP 3 RING
+HFP 3 CALLERID "+918508139500" "" 91
+ANSWER
+HFP 3 RING
+HFP 3 CALLERID "+918508139500" "" 91
+HFP 3 STATUS "call" 1
+HFP 3 STATUS "callsetup" 0
+RING 4 bc:d1:1f:5b:f2:c1 SCO
+NO CARRIER 4 ERROR 113 HCI_ERROR_OETC_USER
+HFP 3 STATUS "call" 0
+A2DP STREAMING START 0
+A2DP STREAMING STOP 0
+A2DP STREAMING START 0
+
+SYNTAX ERROR
+
+
+toradex_apalis6q:/ # 
+toradex_apalis6q:/ # 
+toradex_apalis6q:/ # 
+toradex_apalis6q:/ # toradex_apalis6q:/ # busybox microcom -s 115200 /dev/ttymxc4                    3
+
+
+
+ININQUIRY 7 NAME
+INQUIRY_PARTIAL f8:2f:a8:c9:79:12 3e010c
+INQUIRY_PARTIAL bc:d1:1f:5b:f2:c1 5a020c
+INQUIRY_PARTIAL 4c:bb:58:66:9f:a9 2a010c
+INQUIRY 3
+INQUIRY f8:2f:a8:c9:79:12 3e010c
+INQUIRY bc:d1:1f:5b:f2:c1 5a020c
+INQUIRY 4c:bb:58:66:9f:a9 2a010c
+NAME f8:2f:a8:c9:79:12 "INRD-NTB-0008"
+NAME bc:d1:1f:5b:f2:c1 "Galaxy S5"
+NAME 4c:bb:58:66:9f:a9 "HYDLAPVELUGAAN"
+
+
+
+INQUIRY 7 NAME
+INQUIRY_PARTIAL 30:c0:1b:03:12:a8 240404
+INQUIRY_PARTIAL 4c:bb:58:66:9f:a9 2a010c
+INQUIRY_PARTIAL bc:d1:1f:5b:f2:c1 5a020c
+INQUIRY 3
+INQUIRY 30:c0:1b:03:12:a8 240404
+INQUIRY 4c:bb:58:66:9f:a9 2a010c
+INQUIRY bc:d1:1f:5b:f2:c1 5a020c
+NAME 30:c0:1b:03:12:a8 "JBL T110BT"
+NAME 4c:bb:58:66:9f:a9 "HYDLAPVELUGAAN"
+NAME bc:d1:1f:5b:f2:c1 "Galaxy S5"
+NO CARRIER 2 ERROR a80c L2CAP_DISCONNECT_LINK_LOSS
+A2DP STREAMING STOP 1
+NO CARRIER 1 ERROR a80c L2CAP_DISCONNECT_LINK_LOSS
+NO CARRIER 0 ERROR a80c L2CAP_DISCONNECT_LINK_LOSS
+
+
+
+PAIR 30:c0:1b:03:12:a8
+PAIR 30:c0:1b:03:12:a8 OK
+
+CALL 30:c0:1b:03:12:a8 19 A2DP
+CALL 0
+CONNECT 0 A2DP 19
+CONNECT 1 A2DP 19
+A2DP STREAMING START 0
+RING 2 30:c0:1b:03:12:a8 17 AVRCP 
+AVRCP 2 PDU_REGISTER_NOTIFICATION 3 PLAYBACK_STATUS_CHANGED 0
+
+
+
+CALL 30:c0:1b:03:12:a8 17 AVRCP
+CALL 3
+NO CARRIER 3 ERROR 9004 L2CAP_CONNECTION_REJ_RESOURCES
+
+
+
+toradex_apalis6q:/ # 
+toradex_apalis6q:/ # 
+toradex_apalis6q:/ # 
+toradex_apalis6q:/ # 
+toradex_apalis6q:/ # ls
+type=1400 audit(1041.347:42): avc: denied { getattr } for pid=1272 comm="ls" path="/init" dev="rootfs" ino=6456 scontext=u:r:shell:s0 tcontext=u:object_r:init_exec:s0 tclass=file permissive=1
+acct              init.freescale.emmc.rc     res                  
+bugreports        init.freescale.i.MX6DL.rc  root                 
+cache             init.freescale.i.MX6Q.rc   sbin                 
+charger           init.freescale.i.MX6QP.rc  sdcard               
+config            init.freescale.rc          seapp_contexts       
+d                 init.freescale.sd.rc       selinux_version      
+data              init.freescale.usb.rc      sepolicy             
+default.prop      init.rc                    service_contexts     
+dev               init.recovery.freescale.rc storage              
+device            init.usb.configfs.rc       sys                  
+etc               init.usb.rc                system               
+file_contexts.bin init.zygote32.rc           ueventd.freescale.rc 
+fstab.freescale   mnt                        ueventd.rc           
+init              oem                        vendor               
+init.bluetooth.rc proc                       verity_key           
+init.environ.rc   property_contexts          
+toradex_apalis6q:/ # cd    mmc1: Switching to 3.3V signalling voltage failed
+usb 1-1.3: new high-speed USB device number 3 using ci_hdrc
+usb 1-1.3: New USB device found, idVendor=8564, idProduct=1000
+usb 1-1.3: New USB device strings: Mfr=1, Product=2, SerialNumber=3
+usb 1-1.3: Product: Mass Storage Device
+usb 1-1.3: Manufacturer: JetFlash
+usb 1-1.3: SerialNumber: RNKRQHY1
+usb-storage 1-1.3:1.0: USB Mass Storage device detected
+scsi host1: usb-storage 1-1.3:1.0
+scsi 1:0:0:0: Direct-Access     JetFlash Transcend 8GB    8.07 PQ: 0 ANSI: 4
+sd 1:0:0:0: [sda] 15261696 512-byte logical blocks: (7.81 GB/7.28 GiB)
+sd 1:0:0:0: [sda] Write Protect is off
+sd 1:0:0:0: [sda] Write cache: disabled, read cache: enabled, doesn't support DPO or FUA
+
+ sda: sda1
+sd 1:0:0:0: [sda] Attached SCSI removable disk
+toradex_apalis6q:/ # 
+toradex_apalis6q:/ # 
+toradex_apalis6q:/ # 
+toradex_apalis6q:/ # df
+type=1400 audit(1387.797:43): avc: denied { getattr } for pid=1301 comm="df" path="/dev/block" dev="tmpfs" ino=9653 scontext=u:r:shell:s0 tcontext=u:object_r:block_device:s0 tclass=dir permissive=1
+Filesystem            1K-blocks  type=1400 audit(1387.797:44): avc: denied { getattr } for pid=1301 comm="df" path="/dev/block/mmcblk0p3" dev="tmpfs" ino=9763 scontext=u:r:shell:s0 tcontext=u:object_r:system_block_device:s0 tclass=blk_file permissive=1
+ Used Available Use% Mounted on
+type=1400 audit(1387.797:45): avc: denied { getattr } for pid=1301 comm="df" path="/dev/block/mmcblk0p10" dev="tmpfs" ino=9745 scontext=u:r:shell:s0 tcontext=u:object_r:userdata_block_device:s0 tclass=blk_file permissive=1
+rootfs                   798524  type=1400 audit(1387.797:46): avc: denied { getattr } for pid=1301 comm="df" path="/dev/block/mmcblk0p4" dev="tmpfs" ino=9735 scontext=u:r:shell:s0 tcontext=u:object_r:cache_block_device:s0 tclass=blk_file permissive=1
+ 3004    795520   1% /
+tmpfs    type=1400 audit(1387.797:47): avc: denied { getattr } for pid=1301 comm="df" path="/dev/block/mmcblk0p5" dev="tmpfs" ino=9759 scontext=u:r:shell:s0 tcontext=u:object_r:block_device:s0 tclass=blk_file permissive=1
+               1029208    456   1type=1400 audit(1387.797:48): avc: denied { getattr } for pid=1301 comm="df" path="/dev/fuse" dev="tmpfs" ino=9572 scontext=u:r:shell:s0 tcontext=u:object_r:fuse_device:s0 tclass=chr_file permissive=1
+028752   1% /dev
+tmpfs                   1029208      4   1029204   1% /mnt
+/dev/block/mmcblk0p3    1499760 628360    871400  42% /system
+/dev/block/mmcblk0p10   1430704 103576   1327128   8% /data
+/dev/block/mmcblk0p4     499656    424    499232   1% /cache
+/dev/block/mmcblk0p5       6907     45      6862   1% /device
+/dev/fuse               1430704 103576   1327128   8% /mnt/runtime/default/emulated
+/dev/fuse               1430704 103576   1327128   8% /mnt/runtime/read/emulated
+/dev/fuse               1430704 103576   1327128   8% /mnt/runtime/write/emulated
+toradex_apalis6q:/ # FAT-fs (sda1): Volume was not properly unmounted. Some data may be corrupt. Please run fsck.
+
+toradex_apalis6q:/ # 
+toradex_apalis6q:/ # df
+Filesystem                 1K-blotype=1400 audit(1390.077:49): avc: denied { getattr } for pid=1316 comm="df" path="/dev/block/vold/public:8:1" dev="tmpfs" ino=16910 scontext=u:r:shell:s0 tcontext=u:object_r:vold_device:s0 tclass=blk_file permissive=1
+cks    Used Available Use% Mounted on
+rootfs                        798524    3004    795520   1% /
+tmpfs                        1029208     456   1028752   1% /dev
+tmpfs                        1029208       4   1029204   1% /mnt
+/dev/block/mmcblk0p3         1499760  628360    871400  42% /system
+/dev/block/mmcblk0p10        1430704  103584   1327120   8% /data
+/dev/block/mmcblk0p4          499656     424    499232   1% /cache
+/dev/block/mmcblk0p5            6907      45      6862   1% /device
+/dev/fuse                    1430704  103584   1327120   8% /mnt/runtime/default/emulated
+/dev/fuse                    1430704  103584   1327120   8% /mnt/runtime/read/emulated
+/dev/fuse                    1430704  103584   1327120   8% /mnt/runtime/write/emulated
+/dev/block/vold/public:8:1   7613400 7450296    163104  98% /mnt/media_rw/2188-36A3
+toradex_apalis6q:/ # cd /mnt/media_rw/2188-36A3
+toradex_apalis6q:/mnt/media_rw/2188-36A3 # ls
+type=1400 audit(1394.067:50): avc: denied { getattr } for pid=1317 comm="ls" path="/mnt/media_rw" dev="tmpfs" ino=11326 scontext=u:r:shell:s0 tcontext=u:object_r:mnt_media_rw_file:s0 tclass=dir permissive=1
+1                                                UjetLauncher.apk             
+6.0                                              Untitled Folder              
+CAN                                              Untitled Folder 2            
+GPS Test.apk                                     app-debug.apk                
+HUDMediaPlayBackService.java                     jeevan                       
+IN.png                                           krishna                      
+INDIEVLauncher                                   last_log                     
+IN_1.png                                         no                           
+IndEV                                            oat                          
+Khol_Botal.mp3                                   ota                          
+LOST.DIR                                         ota_recovery                 
+Main Sharabi - Cocktail.mp3                      sabresd_6dq-ota-20160331.zip 
+Mera Jee Karda - Yo Yo Honey Singh Ft Rimz J.mp3 songs                        
+Music_Test                                       update.zip                   
+Sygic1363_Android_r100424_v900_TA_2016.12_IND    update_inc.zip               
+System Volume Information                        videos                       
+toradex_apalis6q:/mnt/media_rw/2188-36A3 # cd Mud Music_Test/                                                                 <
+toradex_apalis6q:/mnt/media_rw/2188-36A3/Music_Test # ;s  ls
+Enai_Noki_Paayum_Thota_Single-4 SmileSettai.mp4       Tik_Tik_Tik 
+OhPenne.mp4                     Thaana_Serndha_Kootam 
+toradex_apalis6q:/mnt/media_rw/2188-36A3/Music_Test # 
+toradex_apalis6q:/mnt/media_rw/2188-36A3/Music_Test # 
+toradex_apalis6q:/mnt/media_rw/2188-36A3/Music_Test # cd End Enai_Noki_Paayum_Thota_Single-4/                                            <
+toradex_apalis6q:/mnt/media_rw/2188-36A3/Music_Test/Enai_Noki_Paayum_Thota_Single-4 # ls
+Maru_Varthai_Pesathey-5StarMusiQ.Com.mp3           
+Maruvaarthai_(Restrung_Version)-5StarMusiQ.Com.mp3 
+Naan_Pizhaippeno-5StarMusiQ.Com.mp3                
+Naan_Than_Inge_Visiri-5StarMusiQ.Com.mp3           
+toradex_apalis6q:/mnt/media_rw/2188-36A3/Music_Test/Enai_Noki_Paayum_Thota_Single-4 # 
+toradex_apalis6q:/mnt/media_rw/2188-36A3/Music_Test/Enai_Noki_Paayum_Thota_Single-4 # 
+toradex_apalis6q:/mnt/media_rw/2188-36A3/Music_Test/Enai_Noki_Paayum_Thota_Single-4 # atype=1400 audit(1409.877:51): avc: denied { execute } for pid=254 comm="sh" name="adbd" dev="rootfs" ino=6484 scontext=u:r:shell:s0 tcontext=u:object_r:rootfs:s0 tclass=file permissive=1
+
+acpi            am             type=1400 audit(1409.877:52): avc: denied { getattr } for pid=254 comm="sh" path="/system/bin/audioserver" dev="mmcblk0p3" ino=239 scontext=u:r:shell:s0 tcontext=u:object_r:audioserver_exec:s0 tclass=file permissive=1
+ applypatch      atrace          type=1400 audit(1409.877:53): avc: denied { execute } for pid=254 comm="sh" name="audioserver" dev="mmcblk0p3" ino=239 scontext=u:r:shell:s0 tcontext=u:object_r:audioserver_exec:s0 tclass=file permissive=1
+avdtptest
+adbd            app_process     appops          audioserver     avinfo
+alias           app_process32   appwidget       autoload        avtest
+e-4 # a                                                                        
+acpi            am              applypatch      atrace          avdtptest
+adbd            app_process     appops          audioserver     avinfo
+alias           app_process32   appwidget       autoload        avtest
+e-4 # a                                                                        pl   gs  bu
+bu           bugreport    bugreportz   builtin      busybox
+e-4 # bu                                                                       se-4 # busybox                                                                   
+BusyBox v1.22.1 (2014-02-14 10:20:10 CST) multi-call binary.
+BusyBox is copyrighted by many authors between 1998-2012.
+Licensed under GPLv2. See source distribution for detailed
+copyright notices.
+
+Usage: busybox [function [arguments]...]
+   or: busybox --list[-full]
+   or: busybox --install [-s] [DIR]
+   or: function [arguments]...
+
+	BusyBox is a multi-call binary that combines many common Unix
+	utilities into a single executable.  Most people will create a
+	link to busybox for each function they wish to use and BusyBox
+	will act like whatever it was invoked as.
+
+Currently defined functions:
+	[, [[, acpid, add-shell, addgroup, adduser, adjtimex, arp, arping, ash,
+	awk, base64, basename, beep, blkid, blockdev, bootchartd, brctl,
+	bunzip2, bzcat, bzip2, cal, cat, catv, chat, chattr, chgrp, chmod,
+	chown, chpasswd, chpst, chroot, chrt, chvt, cksum, clear, cmp, comm,
+	conspy, cp, cpio, crond, crontab, cryptpw, cttyhack, cut, date, dc, dd,
+	deallocvt, delgroup, deluser, depmod, devmem, df, dhcprelay, diff,
+	dirname, dmesg, dnsd, dnsdomainname, dos2unix, du, dumpkmap,
+	dumpleases, echo, ed, egrep, eject, env, envdir, envuidgid, ether-wake,
+	expand, expr, fakeidentd, false, fbset, fbsplash, fdflush, fdformat,
+	fdisk, fgconsole, fgrep, find, findfs, flock, fold, free, freeramdisk,
+	fsck, fsck.minix, fstrim, fsync, ftpd, ftpget, ftpput, fuser, getopt,
+	getty, grep, groups, gunzip, gzip, halt, hd, hdparm, head, hexdump,
+	hostid, hostname, httpd, hush, hwclock, id, ifconfig, ifdown,
+	ifenslave, ifplugd, ifup, inetd, init, insmod, install, ionice, iostat,
+	ip, ipaddr, ipcalc, ipcrm, ipcs, iplink, iproute, iprule, iptunnel,
+	kbd_mode, kill, killall, killall5, klogd, last, less, linux32, linux64,
+	linuxrc, ln, loadfont, loadkmap, logger, login, logname, logread,
+	losetup, lpd, lpq, lpr, ls, lsattr, lsmod, lsof, lspci, lsusb, lzcat,
+	lzma, lzop, lzopcat, makedevs, makemime, man, md5sum, mdev, mesg,
+	microcom, mkdir, mkdosfs, mke2fs, mkfifo, mkfs.ext2, mkfs.minix,
+	mkfs.vfat, mknod, mkpasswd, mkswap, mktemp, modinfo, modprobe, more,
+	mount, mountpoint, mpstat, mt, mv, nameif, nanddump, nandwrite,
+	nbd-client, nc, netstat, nice, nmeter, nohup, nslookup, ntpd, od,
+	openvt, passwd, patch, pgrep, pidof, ping, ping6, pipe_progress,
+	pivot_root, pkill, pmap, popmaildir, poweroff, powertop, printenv,
+	printf, ps, pscan, pstree, pwd, pwdx, raidautorun, rdate, rdev,
+	readahead, readlink, readprofile, realpath, reboot, reformime,
+	remove-shell, renice, reset, resize, rev, rm, rmdir, rmmod, route, rpm,
+	rpm2cpio, rtcwake, run-parts, runlevel, runsv, runsvdir, rx, script,
+	scriptreplay, sed, sendmail, seq, setarch, setconsole, setfont,
+	setkeycodes, setlogcons, setserial, setsid, setuidgid, sh, sha1sum,
+	sha256sum, sha3sum, sha512sum, showkey, slattach, sleep, smemcap,
+	softlimit, sort, split, start-stop-daemon, stat, strings, stty, su,
+	sulogin, sum, sv, svlogd, swapoff, swapon, switch_root, sync, sysctl,
+	syslogd, tac, tail, tar, taskset, tcpsvd, tee, telnet, telnetd, test,
+	tftp, tftpd, time, timeout, top, touch, tr, traceroute, traceroute6,
+	true, tty, ttysize, tunctl, ubiattach, ubidetach, ubimkvol, ubirmvol,
+	ubirsvol, ubiupdatevol, udhcpc, udhcpd, udpsvd, umount, uname,
+	unexpand, uniq, unix2dos, unlzma, unlzop, unxz, unzip, uptime, users,
+	usleep, uudecode, uuencode, vconfig, vi, vlock, volname, wall, watch,
+	watchdog, wc, wget, which, who, whoami, whois, xargs, xz, xzcat, yes,
+	zcat, zcip
+
+toradex_apalis6q:/mnt/media_rw/2188-36A3/Music_Test/Enai_Noki_Paayum_Thota_Single-4 # mxc_hdmi 20e0000.hdmi_video: Read EDID again
+mxc_hdmi 20e0000.hdmi_video: create default modelist
+mxc_hdmi 20e0000.hdmi_video: Read EDID again
+mxc_hdmi 20e0000.hdmi_video: create default modelist
+mxc_hdmi 20e0000.hdmi_video: Read EDID again
+mxc_hdmi 20e0000.hdmi_video: create default modelist
+mxc_hdmi 20e0000.hdmi_video: Modelist is already default, no need to re-create!
+usb 1-1.2: new low-speed USB device number 4 using ci_hdrc
+usb 1-1.2: New USB device found, idVendor=413c, idProduct=301a
+usb 1-1.2: New USB device strings: Mfr=1, Product=2, SerialNumber=0
+usb 1-1.2: Product: Dell MS116 USB Optical Mouse
+usb 1-1.2: Manufacturer: PixArt
+input: PixArt Dell MS116 USB Optical Mouse as /devices/soc0/soc/2100000.aips-bus/2184200.usb/ci_hdrc.1/usb1/1-1/1-1.2/1-1.2:1.0/0003:413C:301A.0001/input/input2
+hid-generic 0003:413C:301A.0001: input,hidraw0: USB HID v1.11 Mouse [PixArt Dell MS116 USB Optical Mouse] on usb-ci_hdrc.1-1.2/input0
+type=1400 audit(1754.267:54): avc: denied { write } for pid=260 comm="obd" path="socket:[9866]" dev="sockfs" ino=9866 scontext=u:r:obd:s0 tcontext=u:r:obd:s0 tclass=socket permissive=1
+
+toradex_apalis6q:/mnt/media_rw/2188-36A3/Music_Test/Enai_Noki_Paayum_Thota_Single-4 # 
+toradex_apalis6q:/mnt/media_rw/2188-36A3/Music_Test/Enai_Noki_Paayum_Thota_Single-4 # 
+toradex_apalis6q:/mnt/media_rw/2188-36A3/Music_Test/Enai_Noki_Paayum_Thota_Single-4 # imx-hdmi-audio imx-hdmi-audio: HDMI Video is not ready!
+imx-hdmi-audio imx-hdmi-audio: ASoC: can't open platform imx-hdmi-audio: -22
+imx-hdmi-audio imx-hdmi-audio: HDMI Video is not ready!
+imx-hdmi-audio imx-hdmi-audio: ASoC: can't open platform imx-hdmi-audio: -22
+imx-hdmi-audio imx-hdmi-audio: HDMI Video is not ready!
+imx-hdmi-audio imx-hdmi-audio: ASoC: can't open platform imx-hdmi-audio: -22
+imx-hdmi-audio imx-hdmi-audio: HDMI Video is not ready!
+imx-hdmi-audio imx-hdmi-audio: ASoC: can't open platform imx-hdmi-audio: -22
+imx-hdmi-audio imx-hdmi-audio: HDMI Video is not ready!
+imx-hdmi-audio imx-hdmi-audio: ASoC: can't open platform imx-hdmi-audio: -22
+imx-hdmi-audio imx-hdmi-audio: HDMI Video is not ready!
+imx-hdmi-audio imx-hdmi-audio: ASoC: can't open platform imx-hdmi-audio: -22
+imx-hdmi-audio imx-hdmi-audio: HDMI Video is not ready!
+imx-hdmi-audio imx-hdmi-audio: ASoC: can't open platform imx-hdmi-audio: -22
+imx-hdmi-audio imx-hdmi-audio: HDMI Video is not ready!
+imx-hdmi-audio imx-hdmi-audio: ASoC: can't open platform imx-hdmi-audio: -22
+imx-hdmi-audio imx-hdmi-audio: HDMI Video is not ready!
+imx-hdmi-audio imx-hdmi-audio: ASoC: can't open platform imx-hdmi-audio: -22
+imx-hdmi-audio imx-hdmi-audio: HDMI Video is not ready!
+imx-hdmi-audio imx-hdmi-audio: ASoC: can't open platform imx-hdmi-audio: -22
+imx-hdmi-audio imx-hdmi-audio: HDMI Video is not ready!
+imx-hdmi-audio imx-hdmi-audio: ASoC: can't open platform imx-hdmi-audio: -22
+imx-hdmi-audio imx-hdmi-audio: HDMI Video is not ready!
+imx-hdmi-audio imx-hdmi-audio: ASoC: can't open platform imx-hdmi-audio: -22
+imx-hdmi-audio imx-hdmi-audio: HDMI Video is not ready!
+imx-hdmi-audio imx-hdmi-audio: ASoC: can't open platform imx-hdmi-audio: -22
+imx-hdmi-audio imx-hdmi-audio: HDMI Video is not ready!
+imx-hdmi-audio imx-hdmi-audio: ASoC: can't open platform imx-hdmi-audio: -22
+imx-hdmi-audio imx-hdmi-audio: HDMI Video is not ready!
+imx-hdmi-audio imx-hdmi-audio: ASoC: can't open platform imx-hdmi-audio: -22
+imx-hdmi-audio imx-hdmi-audio: HDMI Video is not ready!
+imx-hdmi-audio imx-hdmi-audio: ASoC: can't open platform imx-hdmi-audio: -22
+imx-hdmi-audio imx-hdmi-audio: HDMI Video is not ready!
+imx-hdmi-audio imx-hdmi-audio: ASoC: can't open platform imx-hdmi-audio: -22
+imx-hdmi-audio imx-hdmi-audio: HDMI Video is not ready!
+imx-hdmi-audio imx-hdmi-audio: ASoC: can't open platform imx-hdmi-audio: -22
+imx-hdmi-audio imx-hdmi-audio: HDMI Video is not ready!
+imx-hdmi-audio imx-hdmi-audio: ASoC: can't open platform imx-hdmi-audio: -22
+imx-hdmi-audio imx-hdmi-audio: HDMI Video is not ready!
+imx-hdmi-audio imx-hdmi-audio: ASoC: can't open platform imx-hdmi-audio: -22
+imx-hdmi-audio imx-hdmi-audio: HDMI Video is not ready!
+imx-hdmi-audio imx-hdmi-audio: ASoC: can't open platform imx-hdmi-audio: -22
+imx-hdmi-audio imx-hdmi-audio: HDMI Video is not ready!
+imx-hdmi-audio imx-hdmi-audio: ASoC: can't open platform imx-hdmi-audio: -22
+imx-hdmi-audio imx-hdmi-audio: HDMI Video is not ready!
+imx-hdmi-audio imx-hdmi-audio: ASoC: can't open platform imx-hdmi-audio: -22
+imx-hdmi-audio imx-hdmi-audio: HDMI Video is not ready!
+imx-hdmi-audio imx-hdmi-audio: ASoC: can't open platform imx-hdmi-audio: -22
+imx-hdmi-audio imx-hdmi-audio: HDMI Video is not ready!
+imx-hdmi-audio imx-hdmi-audio: ASoC: can't open platform imx-hdmi-audio: -22
+imx-hdmi-audio imx-hdmi-audio: HDMI Video is not ready!
+imx-hdmi-audio imx-hdmi-audio: ASoC: can't open platform imx-hdmi-audio: -22
+imx-hdmi-audio imx-hdmi-audio: HDMI Video is not ready!
+imx-hdmi-audio imx-hdmi-audio: ASoC: can't open platform imx-hdmi-audio: -22
+imx-hdmi-audio imx-hdmi-audio: HDMI Video is not ready!
+imx-hdmi-audio imx-hdmi-audio: ASoC: can't open platform imx-hdmi-audio: -22
+imx-hdmi-audio imx-hdmi-audio: HDMI Video is not ready!
+imx-hdmi-audio imx-hdmi-audio: ASoC: can't open platform imx-hdmi-audio: -22
+imx-hdmi-audio imx-hdmi-audio: HDMI Video is not ready!
+imx-hdmi-audio imx-hdmi-audio: ASoC: can't open platform imx-hdmi-audio: -22
+imx-hdmi-audio imx-hdmi-audio: HDMI Video is not ready!
+imx-hdmi-audio imx-hdmi-audio: ASoC: can't open platform imx-hdmi-audio: -22
+imx-hdmi-audio imx-hdmi-audio: HDMI Video is not ready!
+imx-hdmi-audio imx-hdmi-audio: ASoC: can't open platform imx-hdmi-audio: -22
+imx-hdmi-audio imx-hdmi-audio: HDMI Video is not ready!
+imx-hdmi-audio imx-hdmi-audio: ASoC: can't open platform imx-hdmi-audio: -22
+imx-hdmi-audio imx-hdmi-audio: HDMI Video is not ready!
+imx-hdmi-audio imx-hdmi-audio: ASoC: can't open platform imx-hdmi-audio: -22
+imx-hdmi-audio imx-hdmi-audio: HDMI Video is not ready!
+imx-hdmi-audio imx-hdmi-audio: ASoC: can't open platform imx-hdmi-audio: -22
+imx-hdmi-audio imx-hdmi-audio: HDMI Video is not ready!
+imx-hdmi-audio imx-hdmi-audio: ASoC: can't open platform imx-hdmi-audio: -22
+imx-hdmi-audio imx-hdmi-audio: HDMI Video is not ready!
+imx-hdmi-audio imx-hdmi-audio: ASoC: can't open platform imx-hdmi-audio: -22
+imx-hdmi-audio imx-hdmi-audio: HDMI Video is not ready!
+imx-hdmi-audio imx-hdmi-audio: ASoC: can't open platform imx-hdmi-audio: -22
+imx-hdmi-audio imx-hdmi-audio: HDMI Video is not ready!
+imx-hdmi-audio imx-hdmi-audio: ASoC: can't open platform imx-hdmi-audio: -22
+imx-hdmi-audio imx-hdmi-audio: HDMI Video is not ready!
+imx-hdmi-audio imx-hdmi-audio: ASoC: can't open platform imx-hdmi-audio: -22
+imx-hdmi-audio imx-hdmi-audio: HDMI Video is not ready!
+imx-hdmi-audio imx-hdmi-audio: ASoC: can't open platform imx-hdmi-audio: -22
+imx-hdmi-audio imx-hdmi-audio: HDMI Video is not ready!
+imx-hdmi-audio imx-hdmi-audio: ASoC: can't open platform imx-hdmi-audio: -22
+imx-hdmi-audio imx-hdmi-audio: HDMI Video is not ready!
+imx-hdmi-audio imx-hdmi-audio: ASoC: can't open platform imx-hdmi-audio: -22
+imx-hdmi-audio imx-hdmi-audio: HDMI Video is not ready!
+imx-hdmi-audio imx-hdmi-audio: ASoC: can't open platform imx-hdmi-audio: -22
+imx-hdmi-audio imx-hdmi-audio: HDMI Video is not ready!
+imx-hdmi-audio imx-hdmi-audio: ASoC: can't open platform imx-hdmi-audio: -22
+imx-hdmi-audio imx-hdmi-audio: HDMI Video is not ready!
+imx-hdmi-audio imx-hdmi-audio: ASoC: can't open platform imx-hdmi-audio: -22
+imx-hdmi-audio imx-hdmi-audio: HDMI Video is not ready!
+imx-hdmi-audio imx-hdmi-audio: ASoC: can't open platform imx-hdmi-audio: -22
+imx-hdmi-audio imx-hdmi-audio: HDMI Video is not ready!
+imx-hdmi-audio imx-hdmi-audio: ASoC: can't open platform imx-hdmi-audio: -22
+imx-hdmi-audio imx-hdmi-audio: HDMI Video is not ready!
+imx-hdmi-audio imx-hdmi-audio: ASoC: can't open platform imx-hdmi-audio: -22
+imx-hdmi-audio imx-hdmi-audio: HDMI Video is not ready!
+imx-hdmi-audio imx-hdmi-audio: ASoC: can't open platform imx-hdmi-audio: -22
+imx-hdmi-audio imx-hdmi-audio: HDMI Video is not ready!
+imx-hdmi-audio imx-hdmi-audio: ASoC: can't open platform imx-hdmi-audio: -22
+imx-hdmi-audio imx-hdmi-audio: HDMI Video is not ready!
+imx-hdmi-audio imx-hdmi-audio: ASoC: can't open platform imx-hdmi-audio: -22
+imx-hdmi-audio imx-hdmi-audio: HDMI Video is not ready!
+imx-hdmi-audio imx-hdmi-audio: ASoC: can't open platform imx-hdmi-audio: -22
+imx-hdmi-audio imx-hdmi-audio: HDMI Video is not ready!
+imx-hdmi-audio imx-hdmi-audio: ASoC: can't open platform imx-hdmi-audio: -22
+imx-hdmi-audio imx-hdmi-audio: HDMI Video is not ready!
+imx-hdmi-audio imx-hdmi-audio: ASoC: can't open platform imx-hdmi-audio: -22
+imx-hdmi-audio imx-hdmi-audio: HDMI Video is not ready!
+imx-hdmi-audio imx-hdmi-audio: ASoC: can't open platform imx-hdmi-audio: -22
+imx-hdmi-audio imx-hdmi-audio: HDMI Video is not ready!
+imx-hdmi-audio imx-hdmi-audio: ASoC: can't open platform imx-hdmi-audio: -22
+imx-hdmi-audio imx-hdmi-audio: HDMI Video is not ready!
+imx-hdmi-audio imx-hdmi-audio: ASoC: can't open platform imx-hdmi-audio: -22
+imx-hdmi-audio imx-hdmi-audio: HDMI Video is not ready!
+imx-hdmi-audio imx-hdmi-audio: ASoC: can't open platform imx-hdmi-audio: -22
+imx-hdmi-audio imx-hdmi-audio: HDMI Video is not ready!
+imx-hdmi-audio imx-hdmi-audio: ASoC: can't open platform imx-hdmi-audio: -22
+imx-hdmi-audio imx-hdmi-audio: HDMI Video is not ready!
+imx-hdmi-audio imx-hdmi-audio: ASoC: can't open platform imx-hdmi-audio: -22
+imx-hdmi-audio imx-hdmi-audio: HDMI Video is not ready!
+imx-hdmi-audio imx-hdmi-audio: ASoC: can't open platform imx-hdmi-audio: -22
+imx-hdmi-audio imx-hdmi-audio: HDMI Video is not ready!
+imx-hdmi-audio imx-hdmi-audio: ASoC: can't open platform imx-hdmi-audio: -22
+imx-hdmi-audio imx-hdmi-audio: HDMI Video is not ready!
+imx-hdmi-audio imx-hdmi-audio: ASoC: can't open platform imx-hdmi-audio: -22
+imx-hdmi-audio imx-hdmi-audio: HDMI Video is not ready!
+imx-hdmi-audio imx-hdmi-audio: ASoC: can't open platform imx-hdmi-audio: -22
+imx-hdmi-audio imx-hdmi-audio: HDMI Video is not ready!
+imx-hdmi-audio imx-hdmi-audio: ASoC: can't open platform imx-hdmi-audio: -22
+imx-hdmi-audio imx-hdmi-audio: HDMI Video is not ready!
+imx-hdmi-audio imx-hdmi-audio: ASoC: can't open platform imx-hdmi-audio: -22
+imx-hdmi-audio imx-hdmi-audio: HDMI Video is not ready!
+imx-hdmi-audio imx-hdmi-audio: ASoC: can't open platform imx-hdmi-audio: -22
+imx-hdmi-audio imx-hdmi-audio: HDMI Video is not ready!
+imx-hdmi-audio imx-hdmi-audio: ASoC: can't open platform imx-hdmi-audio: -22
+imx-hdmi-audio imx-hdmi-audio: HDMI Video is not ready!
+imx-hdmi-audio imx-hdmi-audio: ASoC: can't open platform imx-hdmi-audio: -22
+imx-hdmi-audio imx-hdmi-audio: HDMI Video is not ready!
+imx-hdmi-audio imx-hdmi-audio: ASoC: can't open platform imx-hdmi-audio: -22
+imx-hdmi-audio imx-hdmi-audio: HDMI Video is not ready!
+imx-hdmi-audio imx-hdmi-audio: ASoC: can't open platform imx-hdmi-audio: -22
+imx-hdmi-audio imx-hdmi-audio: HDMI Video is not ready!
+imx-hdmi-audio imx-hdmi-audio: ASoC: can't open platform imx-hdmi-audio: -22
+imx-hdmi-audio imx-hdmi-audio: HDMI Video is not ready!
+imx-hdmi-audio imx-hdmi-audio: ASoC: can't open platform imx-hdmi-audio: -22
+imx-hdmi-audio imx-hdmi-audio: HDMI Video is not ready!
+imx-hdmi-audio imx-hdmi-audio: ASoC: can't open platform imx-hdmi-audio: -22
+imx-hdmi-audio imx-hdmi-audio: HDMI Video is not ready!
+imx-hdmi-audio imx-hdmi-audio: ASoC: can't open platform imx-hdmi-audio: -22
+imx-hdmi-audio imx-hdmi-audio: HDMI Video is not ready!
+imx-hdmi-audio imx-hdmi-audio: ASoC: can't open platform imx-hdmi-audio: -22
+imx-hdmi-audio imx-hdmi-audio: HDMI Video is not ready!
+imx-hdmi-audio imx-hdmi-audio: ASoC: can't open platform imx-hdmi-audio: -22
+imx-hdmi-audio imx-hdmi-audio: HDMI Video is not ready!
+imx-hdmi-audio imx-hdmi-audio: ASoC: can't open platform imx-hdmi-audio: -22
+imx-hdmi-audio imx-hdmi-audio: HDMI Video is not ready!
+imx-hdmi-audio imx-hdmi-audio: ASoC: can't open platform imx-hdmi-audio: -22
+imx-hdmi-audio imx-hdmi-audio: HDMI Video is not ready!
+imx-hdmi-audio imx-hdmi-audio: ASoC: can't open platform imx-hdmi-audio: -22
+imx-hdmi-audio imx-hdmi-audio: HDMI Video is not ready!
+imx-hdmi-audio imx-hdmi-audio: ASoC: can't open platform imx-hdmi-audio: -22
+imx-hdmi-audio imx-hdmi-audio: HDMI Video is not ready!
+imx-hdmi-audio imx-hdmi-audio: ASoC: can't open platform imx-hdmi-audio: -22
+imx-hdmi-audio imx-hdmi-audio: HDMI Video is not ready!
+imx-hdmi-audio imx-hdmi-audio: ASoC: can't open platform imx-hdmi-audio: -22
+imx-hdmi-audio imx-hdmi-audio: HDMI Video is not ready!
+imx-hdmi-audio imx-hdmi-audio: ASoC: can't open platform imx-hdmi-audio: -22
+imx-hdmi-audio imx-hdmi-audio: HDMI Video is not ready!
+imx-hdmi-audio imx-hdmi-audio: ASoC: can't open platform imx-hdmi-audio: -22
+imx-hdmi-audio imx-hdmi-audio: HDMI Video is not ready!
+imx-hdmi-audio imx-hdmi-audio: ASoC: can't open platform imx-hdmi-audio: -22
+imx-hdmi-audio imx-hdmi-audio: HDMI Video is not ready!
+imx-hdmi-audio imx-hdmi-audio: ASoC: can't open platform imx-hdmi-audio: -22
+imx-hdmi-audio imx-hdmi-audio: HDMI Video is not ready!
+imx-hdmi-audio imx-hdmi-audio: ASoC: can't open platform imx-hdmi-audio: -22
+imx-hdmi-audio imx-hdmi-audio: HDMI Video is not ready!
+imx-hdmi-audio imx-hdmi-audio: ASoC: can't open platform imx-hdmi-audio: -22
+imx-hdmi-audio imx-hdmi-audio: HDMI Video is not ready!
+imx-hdmi-audio imx-hdmi-audio: ASoC: can't open platform imx-hdmi-audio: -22
+imx-hdmi-audio imx-hdmi-audio: HDMI Video is not ready!
+imx-hdmi-audio imx-hdmi-audio: ASoC: can't open platform imx-hdmi-audio: -22
+imx-hdmi-audio imx-hdmi-audio: HDMI Video is not ready!
+imx-hdmi-audio imx-hdmi-audio: ASoC: can't open platform imx-hdmi-audio: -22
+imx-hdmi-audio imx-hdmi-audio: HDMI Video is not ready!
+imx-hdmi-audio imx-hdmi-audio: ASoC: can't open platform imx-hdmi-audio: -22
+imx-hdmi-audio imx-hdmi-audio: HDMI Video is not ready!
+imx-hdmi-audio imx-hdmi-audio: ASoC: can't open platform imx-hdmi-audio: -22
+imx-hdmi-audio imx-hdmi-audio: HDMI Video is not ready!
+imx-hdmi-audio imx-hdmi-audio: ASoC: can't open platform imx-hdmi-audio: -22
+imx-hdmi-audio imx-hdmi-audio: HDMI Video is not ready!
+imx-hdmi-audio imx-hdmi-audio: ASoC: can't open platform imx-hdmi-audio: -22
+imx-hdmi-audio imx-hdmi-audio: HDMI Video is not ready!
+imx-hdmi-audio imx-hdmi-audio: ASoC: can't open platform imx-hdmi-audio: -22
+imx-hdmi-audio imx-hdmi-audio: HDMI Video is not ready!
+imx-hdmi-audio imx-hdmi-audio: ASoC: can't open platform imx-hdmi-audio: -22
+imx-hdmi-audio imx-hdmi-audio: HDMI Video is not ready!
+imx-hdmi-audio imx-hdmi-audio: ASoC: can't open platform imx-hdmi-audio: -22
+imx-hdmi-audio imx-hdmi-audio: HDMI Video is not ready!
+imx-hdmi-audio imx-hdmi-audio: ASoC: can't open platform imx-hdmi-audio: -22
+imx-hdmi-audio imx-hdmi-audio: HDMI Video is not ready!
+imx-hdmi-audio imx-hdmi-audio: ASoC: can't open platform imx-hdmi-audio: -22
+imx-hdmi-audio imx-hdmi-audio: HDMI Video is not ready!
+imx-hdmi-audio imx-hdmi-audio: ASoC: can't open platform imx-hdmi-audio: -22
+imx-hdmi-audio imx-hdmi-audio: HDMI Video is not ready!
+imx-hdmi-audio imx-hdmi-audio: ASoC: can't open platform imx-hdmi-audio: -22
+imx-hdmi-audio imx-hdmi-audio: HDMI Video is not ready!
+imx-hdmi-audio imx-hdmi-audio: ASoC: can't open platform imx-hdmi-audio: -22
+imx-hdmi-audio imx-hdmi-audio: HDMI Video is not ready!
+imx-hdmi-audio imx-hdmi-audio: ASoC: can't open platform imx-hdmi-audio: -22
+imx-hdmi-audio imx-hdmi-audio: HDMI Video is not ready!
+imx-hdmi-audio imx-hdmi-audio: ASoC: can't open platform imx-hdmi-audio: -22
+imx-hdmi-audio imx-hdmi-audio: HDMI Video is not ready!
+imx-hdmi-audio imx-hdmi-audio: ASoC: can't open platform imx-hdmi-audio: -22
+imx-hdmi-audio imx-hdmi-audio: HDMI Video is not ready!
+imx-hdmi-audio imx-hdmi-audio: ASoC: can't open platform imx-hdmi-audio: -22
+imx-hdmi-audio imx-hdmi-audio: HDMI Video is not ready!
+imx-hdmi-audio imx-hdmi-audio: ASoC: can't open platform imx-hdmi-audio: -22
+imx-hdmi-audio imx-hdmi-audio: HDMI Video is not ready!
+imx-hdmi-audio imx-hdmi-audio: ASoC: can't open platform imx-hdmi-audio: -22
+imx-hdmi-audio imx-hdmi-audio: HDMI Video is not ready!
+imx-hdmi-audio imx-hdmi-audio: ASoC: can't open platform imx-hdmi-audio: -22
+imx-hdmi-audio imx-hdmi-audio: HDMI Video is not ready!
+imx-hdmi-audio imx-hdmi-audio: ASoC: can't open platform imx-hdmi-audio: -22
+imx-hdmi-audio imx-hdmi-audio: HDMI Video is not ready!
+imx-hdmi-audio imx-hdmi-audio: ASoC: can't open platform imx-hdmi-audio: -22
+imx-hdmi-audio imx-hdmi-audio: HDMI Video is not ready!
+imx-hdmi-audio imx-hdmi-audio: ASoC: can't open platform imx-hdmi-audio: -22
+imx-hdmi-audio imx-hdmi-audio: HDMI Video is not ready!
+imx-hdmi-audio imx-hdmi-audio: ASoC: can't open platform imx-hdmi-audio: -22
+imx-hdmi-audio imx-hdmi-audio: HDMI Video is not ready!
+imx-hdmi-audio imx-hdmi-audio: ASoC: can't open platform imx-hdmi-audio: -22
+imx-hdmi-audio imx-hdmi-audio: HDMI Video is not ready!
+imx-hdmi-audio imx-hdmi-audio: ASoC: can't open platform imx-hdmi-audio: -22
+imx-hdmi-audio imx-hdmi-audio: HDMI Video is not ready!
+imx-hdmi-audio imx-hdmi-audio: ASoC: can't open platform imx-hdmi-audio: -22
+imx-hdmi-audio imx-hdmi-audio: HDMI Video is not ready!
+imx-hdmi-audio imx-hdmi-audio: ASoC: can't open platform imx-hdmi-audio: -22
+imx-hdmi-audio imx-hdmi-audio: HDMI Video is not ready!
+imx-hdmi-audio imx-hdmi-audio: ASoC: can't open platform imx-hdmi-audio: -22
+imx-hdmi-audio imx-hdmi-audio: HDMI Video is not ready!
+imx-hdmi-audio imx-hdmi-audio: ASoC: can't open platform imx-hdmi-audio: -22
+imx-hdmi-audio imx-hdmi-audio: HDMI Video is not ready!
+imx-hdmi-audio imx-hdmi-audio: ASoC: can't open platform imx-hdmi-audio: -22
+imx-hdmi-audio imx-hdmi-audio: HDMI Video is not ready!
+imx-hdmi-audio imx-hdmi-audio: ASoC: can't open platform imx-hdmi-audio: -22
+imx-hdmi-audio imx-hdmi-audio: HDMI Video is not ready!
+imx-hdmi-audio imx-hdmi-audio: ASoC: can't open platform imx-hdmi-audio: -22
+imx-hdmi-audio imx-hdmi-audio: HDMI Video is not ready!
+imx-hdmi-audio imx-hdmi-audio: ASoC: can't open platform imx-hdmi-audio: -22
+imx-hdmi-audio imx-hdmi-audio: HDMI Video is not ready!
+imx-hdmi-audio imx-hdmi-audio: ASoC: can't open platform imx-hdmi-audio: -22
+imx-hdmi-audio imx-hdmi-audio: HDMI Video is not ready!
+imx-hdmi-audio imx-hdmi-audio: ASoC: can't open platform imx-hdmi-audio: -22
+imx-hdmi-audio imx-hdmi-audio: HDMI Video is not ready!
+imx-hdmi-audio imx-hdmi-audio: ASoC: can't open platform imx-hdmi-audio: -22
+imx-hdmi-audio imx-hdmi-audio: HDMI Video is not ready!
+imx-hdmi-audio imx-hdmi-audio: ASoC: can't open platform imx-hdmi-audio: -22
+imx-hdmi-audio imx-hdmi-audio: HDMI Video is not ready!
+imx-hdmi-audio imx-hdmi-audio: ASoC: can't open platform imx-hdmi-audio: -22
+imx-hdmi-audio imx-hdmi-audio: HDMI Video is not ready!
+imx-hdmi-audio imx-hdmi-audio: ASoC: can't open platform imx-hdmi-audio: -22
+imx-hdmi-audio imx-hdmi-audio: HDMI Video is not ready!
+imx-hdmi-audio imx-hdmi-audio: ASoC: can't open platform imx-hdmi-audio: -22
+imx-hdmi-audio imx-hdmi-audio: HDMI Video is not ready!
+imx-hdmi-audio imx-hdmi-audio: ASoC: can't open platform imx-hdmi-audio: -22
+imx-hdmi-audio imx-hdmi-audio: HDMI Video is not ready!
+imx-hdmi-audio imx-hdmi-audio: ASoC: can't open platform imx-hdmi-audio: -22
+imx-hdmi-audio imx-hdmi-audio: HDMI Video is not ready!
+imx-hdmi-audio imx-hdmi-audio: ASoC: can't open platform imx-hdmi-audio: -22
+imx-hdmi-audio imx-hdmi-audio: HDMI Video is not ready!
+imx-hdmi-audio imx-hdmi-audio: ASoC: can't open platform imx-hdmi-audio: -22
+imx-hdmi-audio imx-hdmi-audio: HDMI Video is not ready!
+imx-hdmi-audio imx-hdmi-audio: ASoC: can't open platform imx-hdmi-audio: -22
+imx-hdmi-audio imx-hdmi-audio: HDMI Video is not ready!
+imx-hdmi-audio imx-hdmi-audio: ASoC: can't open platform imx-hdmi-audio: -22
+imx-hdmi-audio imx-hdmi-audio: HDMI Video is not ready!
+imx-hdmi-audio imx-hdmi-audio: ASoC: can't open platform imx-hdmi-audio: -22
+imx-hdmi-audio imx-hdmi-audio: HDMI Video is not ready!
+imx-hdmi-audio imx-hdmi-audio: ASoC: can't open platform imx-hdmi-audio: -22
+imx-hdmi-audio imx-hdmi-audio: HDMI Video is not ready!
+imx-hdmi-audio imx-hdmi-audio: ASoC: can't open platform imx-hdmi-audio: -22
+imx-hdmi-audio imx-hdmi-audio: HDMI Video is not ready!
+imx-hdmi-audio imx-hdmi-audio: ASoC: can't open platform imx-hdmi-audio: -22
+imx-hdmi-audio imx-hdmi-audio: HDMI Video is not ready!
+imx-hdmi-audio imx-hdmi-audio: ASoC: can't open platform imx-hdmi-audio: -22
+imx-hdmi-audio imx-hdmi-audio: HDMI Video is not ready!
+imx-hdmi-audio imx-hdmi-audio: ASoC: can't open platform imx-hdmi-audio: -22
+imx-hdmi-audio imx-hdmi-audio: HDMI Video is not ready!
+imx-hdmi-audio imx-hdmi-audio: ASoC: can't open platform imx-hdmi-audio: -22
+imx-hdmi-audio imx-hdmi-audio: HDMI Video is not ready!
+imx-hdmi-audio imx-hdmi-audio: ASoC: can't open platform imx-hdmi-audio: -22
+imx-hdmi-audio imx-hdmi-audio: HDMI Video is not ready!
+imx-hdmi-audio imx-hdmi-audio: ASoC: can't open platform imx-hdmi-audio: -22
+imx-hdmi-audio imx-hdmi-audio: HDMI Video is not ready!
+imx-hdmi-audio imx-hdmi-audio: ASoC: can't open platform imx-hdmi-audio: -22
+imx-hdmi-audio imx-hdmi-audio: HDMI Video is not ready!
+imx-hdmi-audio imx-hdmi-audio: ASoC: can't open platform imx-hdmi-audio: -22
+imx-hdmi-audio imx-hdmi-audio: HDMI Video is not ready!
+imx-hdmi-audio imx-hdmi-audio: ASoC: can't open platform imx-hdmi-audio: -22
+imx-hdmi-audio imx-hdmi-audio: HDMI Video is not ready!
+imx-hdmi-audio imx-hdmi-audio: ASoC: can't open platform imx-hdmi-audio: -22
+imx-hdmi-audio imx-hdmi-audio: HDMI Video is not ready!
+imx-hdmi-audio imx-hdmi-audio: ASoC: can't open platform imx-hdmi-audio: -22
+imx-hdmi-audio imx-hdmi-audio: HDMI Video is not ready!
+imx-hdmi-audio imx-hdmi-audio: ASoC: can't open platform imx-hdmi-audio: -22
+imx-hdmi-audio imx-hdmi-audio: HDMI Video is not ready!
+imx-hdmi-audio imx-hdmi-audio: ASoC: can't open platform imx-hdmi-audio: -22
+imx-hdmi-audio imx-hdmi-audio: HDMI Video is not ready!
+imx-hdmi-audio imx-hdmi-audio: ASoC: can't open platform imx-hdmi-audio: -22
+caam 2100000.caam: ERA source: CAAMVID.
+caam 2100000.caam: AXI pipeline throttling enabled.
+caam 2100000.caam: Instantiated RNG4 SH1
+caam 2100000.caam: device ID = 0x0a16010000000000 (Era 4)
+caam 2100000.caam: job rings = 2, qi = 0
+caam algorithms registered in /proc/crypto
+caam_jr 2101000.jr0: registering rng-caam
+platform caam_sm: blkkey_ex: 4 keystore units available
+platform caam_sm: 64-bit clear key:
+platform caam_sm: [0000] 00 01 02 03 04 0f 06 07
+platform caam_sm: 64-bit black key:
+platform caam_sm: [0000] 94 c5 2b 58 0c 7b 8c 28
+platform caam_sm: [0008] 51 1e 64 61 06 69 43 31
+platform caam_sm: 128-bit clear key:
+platform caam_sm: [0000] 00 01 02 03 04 0f 06 07
+platform caam_sm: [0008] 08 09 0a 0b 0c 0d 0e 0f
+platform caam_sm: 128-bit black key:
+platform caam_sm: [0000] f6 08 c0 e7 81 14 3c 8a
+platform caam_sm: [0008] 62 09 b2 44 f1 dd 4f 73
+platform caam_sm: 192-bit clear key:
+platform caam_sm: [0000] 00 01 02 03 04 0f 06 07
+platform caam_sm: [0008] 08 09 0a 0b 0c 0d 0e 0f
+platform caam_sm: [0016] 10 11 12 13 14 15 16 17
+platform caam_sm: 192-bit black key:
+platform caam_sm: [0000] ce 17 42 79 69 95 65 c3
+platform caam_sm: [0008] 22 24 e6 85 7f ea 6e 03
+platform caam_sm: [0016] 8e f2 fa 3c 0d d8 4b 82
+platform caam_sm: [0024] 76 1f 08 b3 47 04 3b 86
+platform caam_sm: 256-bit clear key:
+platform caam_sm: [0000] 00 01 02 03 04 0f 06 07
+platform caam_sm: [0008] 08 09 0a 0b 0c 0d 0e 0f
+platform caam_sm: [0016] 10 11 12 13 14 15 16 17
+platform caam_sm: [0024] 18 19 1a 1b 1c 1d 1e 1f
+platform caam_sm: 256-bit black key:
+platform caam_sm: [0000] 96 aa 16 d8 09 63 40 05
+platform caam_sm: [0008] 1e 0d 90 dd 27 53 c3 5d
+platform caam_sm: [0016] f2 8e 34 9a b3 43 45 f6
+platform caam_sm: [0024] 14 ae fc 95 cd 1e 58 6b
+platform caam_sm: 64-bit unwritten blob:
+platform caam_sm: [0000] 00 00 00 00 00 00 00 00
+platform caam_sm: [0008] 00 00 00 00 00 00 00 00
+platform caam_sm: [0016] 00 00 00 00 00 00 00 00
+platform caam_sm: [0024] 00 00 00 00 00 00 00 00
+platform caam_sm: [0032] 00 00 00 00 00 00 00 00
+platform caam_sm: [0040] 00 00 00 00 00 00 00 00
+platform caam_sm: [0048] 00 00 00 00 00 00 00 00
+platform caam_sm: [0056] 00 00 00 00 00 00 00 00
+platform caam_sm: [0064] 00 00 00 00 00 00 00 00
+platform caam_sm: [0072] 00 00 00 00 00 00 00 00
+platform caam_sm: [0080] 00 00 00 00 00 00 00 00
+platform caam_sm: [0088] 00 00 00 00 00 00 00 00
+platform caam_sm: 128-bit unwritten blob:
+platform caam_sm: [0000] 00 00 00 00 00 00 00 00
+platform caam_sm: [0008] 00 00 00 00 00 00 00 00
+platform caam_sm: [0016] 00 00 00 00 00 00 00 00
+platform caam_sm: [0024] 00 00 00 00 00 00 00 00
+platform caam_sm: [0032] 00 00 00 00 00 00 00 00
+platform caam_sm: [0040] 00 00 00 00 00 00 00 00
+platform caam_sm: [0048] 00 00 00 00 00 00 00 00
+platform caam_sm: [0056] 00 00 00 00 00 00 00 00
+platform caam_sm: [0064] 00 00 00 00 00 00 00 00
+platform caam_sm: [0072] 00 00 00 00 00 00 00 00
+platform caam_sm: [0080] 00 00 00 00 00 00 00 00
+platform caam_sm: [0088] 00 00 00 00 00 00 00 00
+platform caam_sm: 196-bit unwritten blob:
+platform caam_sm: [0000] 00 00 00 00 00 00 00 00
+platform caam_sm: [0008] 00 00 00 00 00 00 00 00
+platform caam_sm: [0016] 00 00 00 00 00 00 00 00
+platform caam_sm: [0024] 00 00 00 00 00 00 00 00
+platform caam_sm: [0032] 00 00 00 00 00 00 00 00
+platform caam_sm: [0040] 00 00 00 00 00 00 00 00
+platform caam_sm: [0048] 00 00 00 00 00 00 00 00
+platform caam_sm: [0056] 00 00 00 00 00 00 00 00
+platform caam_sm: [0064] 00 00 00 00 00 00 00 00
+platform caam_sm: [0072] 00 00 00 00 00 00 00 00
+platform caam_sm: [0080] 00 00 00 00 00 00 00 00
+platform caam_sm: [0088] 00 00 00 00 00 00 00 00
+platform caam_sm: 256-bit unwritten blob:
+platform caam_sm: [0000] 00 00 00 00 00 00 00 00
+platform caam_sm: [0008] 00 00 00 00 00 00 00 00
+platform caam_sm: [0016] 00 00 00 00 00 00 00 00
+platform caam_sm: [0024] 00 00 00 00 00 00 00 00
+platform caam_sm: [0032] 00 00 00 00 00 00 00 00
+platform caam_sm: [0040] 00 00 00 00 00 00 00 00
+platform caam_sm: [0048] 00 00 00 00 00 00 00 00
+platform caam_sm: [0056] 00 00 00 00 00 00 00 00
+platform caam_sm: [0064] 00 00 00 00 00 00 00 00
+platform caam_sm: [0072] 00 00 00 00 00 00 00 00
+platform caam_sm: [0080] 00 00 00 00 00 00 00 00
+platform caam_sm: [0088] 00 00 00 00 00 00 00 00
+platform caam_sm: 64-bit black key in blob:
+platform caam_sm: [0000] ff 99 1f af ea 9b 1f 26
+platform caam_sm: [0008] df ff 13 cb 4e f1 12 74
+platform caam_sm: [0016] 88 ce 3f d8 3c 45 a7 2d
+platform caam_sm: [0024] 4c 97 77 49 26 1d ea 4c
+platform caam_sm: [0032] 79 b0 2e 8d 62 cc 26 2c
+platform caam_sm: [0040] 17 20 5f 1f 1b da 9a 27
+platform caam_sm: [0048] a9 e5 ab bd d6 17 5c 26
+platform caam_sm: [0056] 00 00 00 00 00 00 00 00
+platform caam_sm: [0064] 00 00 00 00 00 00 00 00
+platform caam_sm: [0072] 00 00 00 00 00 00 00 00
+platform caam_sm: [0080] 00 00 00 00 00 00 00 00
+platform caam_sm: [0088] 00 00 00 00 00 00 00 00
+platform caam_sm: 128-bit black key in blob:
+platform caam_sm: [0000] 44 c4 a5 5c 15 c0 2a 5b
+platform caam_sm: [0008] 8e 36 eb dc 16 39 b9 36
+platform caam_sm: [0016] f8 c5 46 fe 8d 4b f8 68
+platform caam_sm: [0024] 2b 50 16 2c 72 ca 76 d3
+platform caam_sm: [0032] 78 94 8a 8f b7 8b 6f 3c
+platform caam_sm: [0040] d8 0f 85 99 cb 07 75 c4
+platform caam_sm: [0048] 7b e1 75 2b e0 5e 76 e9
+platform caam_sm: [0056] e6 ea ac 57 f7 5d 3b 5a
+platform caam_sm: [0064] 00 00 00 00 00 00 00 00
+platform caam_sm: [0072] 00 00 00 00 00 00 00 00
+platform caam_sm: [0080] 00 00 00 00 00 00 00 00
+platform caam_sm: [0088] 00 00 00 00 00 00 00 00
+platform caam_sm: 192-bit black key in blob:
+platform caam_sm: [0000] 7b 7c f5 f2 02 43 a5 c0
+platform caam_sm: [0008] 49 2e 1c e1 7f 4a b8 57
+platform caam_sm: [0016] f8 80 a3 48 0a 14 b0 b3
+platform caam_sm: [0024] 0f fb be 97 b3 49 58 6d
+platform caam_sm: [0032] f1 d2 c2 3f 6c cd 74 3c
+platform caam_sm: [0040] b8 a0 3f b6 1c 71 32 ec
+platform caam_sm: [0048] b3 88 01 11 63 94 ee a8
+platform caam_sm: [0056] 4b 77 e6 b2 9b 5a 5d e4
+platform caam_sm: [0064] 5f f7 f4 94 83 ea 9e 95
+platform caam_sm: [0072] 00 00 00 00 00 00 00 00
+platform caam_sm: [0080] 00 00 00 00 00 00 00 00
+platform caam_sm: [0088] 00 00 00 00 00 00 00 00
+platform caam_sm: 256-bit black key in blob:
+platform caam_sm: [0000] 18 6a 41 8f f5 93 94 0c
+platform caam_sm: [0008] c8 6b 7c 76 45 32 b0 51
+platform caam_sm: [0016] 75 a0 63 3d d4 e2 5d 2f
+platform caam_sm: [0024] dc 7f 0c 60 d4 d5 6f 82
+platform caam_sm: [0032] f4 41 00 c4 a3 c3 6d 31
+platform caam_sm: [0040] 2c 61 60 21 db eb 3a 3e
+platform caam_sm: [0048] 57 13 a5 a6 9f eb 7e 96
+platform caam_sm: [0056] c0 ce f0 d8 cf 67 54 96
+platform caam_sm: [0064] 84 57 3e 86 99 46 80 27
+platform caam_sm: [0072] 9b 6d a9 9c e8 72 ad 29
+platform caam_sm: [0080] 00 00 00 00 00 00 00 00
+platform caam_sm: [0088] 00 00 00 00 00 00 00 00
+platform caam_sm: restored 64-bit black key:
+platform caam_sm: [0000] 7e b7 dc 34 4c e8 70 33
+platform caam_sm: [0008] 9d be 2b 2a d8 e9 4d 66
+platform caam_sm: restored 128-bit black key:
+platform caam_sm: [0000] f6 08 c0 e7 81 14 3c 8a
+platform caam_sm: [0008] 62 09 b2 44 f1 dd 4f 73
+platform caam_sm: restored 192-bit black key:
+platform caam_sm: [0000] ce 17 42 79 69 95 65 c3
+platform caam_sm: [0008] 22 24 e6 85 7f ea 6e 03
+platform caam_sm: [0016] cc a1 19 68 97 03 83 ad
+platform caam_sm: [0024] e9 5f e0 71 80 a3 bc 72
+platform caam_sm: restored 256-bit black key:
+platform caam_sm: [0000] 96 aa 16 d8 09 63 40 05
+platform caam_sm: [0008] 1e 0d 90 dd 27 53 c3 5d
+platform caam_sm: [0016] f2 8e 34 9a b3 43 45 f6
+platform caam_sm: [0024] 14 ae fc 95 cd 1e 58 6b
+snvs-secvio 20cc000.caam-snvs: can't get snvs clock
+snvs-secvio 20cc000.caam-snvs: violation handlers armed - non-secure state
+hidraw: raw HID events driver (C) Jiri Kosina
+input: PixArt Dell MS116 USB Optical Mouse as /devices/soc0/soc/2100000.aips-bus/2184200.usb/ci_hdrc.1/usb1/1-1/1-1.2/1-1.2:1.0/0003:413C:301A.0001/input/input1
+hid-generic 0003:413C:301A.0001: input,hidraw0: USB HID v1.11 Mouse [PixArt Dell MS116 USB Optical Mouse] on usb-ci_hdrc.1-1.2/input0
+usbcore: registered new interface driver usbhid
+usbhid: USB HID core driver
+ashmem: initialized
+usbcore: registered new interface driver snd-usb-audio
+sgtl5000 2-000a: sgtl5000 revision 0x11
+fsl-ssi-dai 2028000.ssi: No cache defaults, reading back from HW
+imx-sgtl5000 sound: sgtl5000 <-> 2028000.ssi mapping ok
+imx-spdif sound-spdif: snd-soc-dummy-dai <-> 2004000.spdif mapping ok
+imx-audio-hdmi sound-hdmi: hdmi-hifi.0 <-> soc:hdmi_audio@00120000 mapping ok
+NET: Registered protocol family 26
+u32 classifier
+    Actions configured
+Netfilter messages via NETLINK v0.30.
+nf_conntrack version 0.5.0 (16384 buckets, 65536 max)
+ctnetlink v0.93: registering with nfnetlink.
+xt_time: kernel timezone is -0000
+ip_tables: (C) 2000-2006 Netfilter Core Team
+arp_tables: arp_tables: (C) 2002 David S. Miller
+Initializing XFRM netlink socket
+NET: Registered protocol family 10
+mip6: Mobile IPv6
+ip6_tables: (C) 2000-2006 Netfilter Core Team
+sit: IPv6, IPv4 and MPLS over IPv4 tunneling driver
+NET: Registered protocol family 17
+NET: Registered protocol family 15
+can: controller area network core (rev 20120528 abi 9)
+NET: Registered protocol family 29
+can: raw protocol (rev 20120528)
+can: broadcast manager protocol (rev 20161123 t)
+can: netlink gateway (rev 20130117) max_hops=1
+Bluetooth: RFCOMM TTY layer initialized
+Bluetooth: RFCOMM socket layer initialized
+Bluetooth: RFCOMM ver 1.11
+Bluetooth: BNEP (Ethernet Emulation) ver 1.3
+Bluetooth: BNEP filters: protocol multicast
+Bluetooth: BNEP socket layer initialized
+Bluetooth: HIDP (Human Interface Emulation) ver 1.2
+Bluetooth: HIDP socket layer initialized
+8021q: 802.1Q VLAN Support v1.8
+Key type dns_resolver registered
+cpu cpu0: Registered imx6q-cpufreq
+registered taskstats version 1
+imx_thermal 2000000.aips-bus:tempmon: Industrial CPU temperature grade - max:105C critical:100C passive:95C
+dhd_module_init in
+input: gpio-keys as /devices/soc0/gpio-keys/input/input2
+snvs_rtc 20cc000.snvs:snvs-rtc-lp: setting system clock to 1970-01-01 00:33:59 UTC (2039)
+usb_otg_vbus: disabling
+ALSA device list:
+  #0: imx6q-apalis-sgtl5000
+  #1: imx-spdif
+  #2: imx-hdmi-soc
+Freeing unused kernel memory: 1024K
+init: init first stage started!
+SELinux:  Permission validate_trans in class security not defined in policy.
+SELinux:  Class cap_userns not defined in policy.
+SELinux:  Class cap2_userns not defined in policy.
+SELinux: the above unknown classes and permissions will be denied
+audit: type=1403 audit(2039.630:2): policy loaded auid=4294967295 ses=4294967295
+init: (Initializing SELinux non-enforcing took 0.11s.)
+init: init second stage started!
+init: Running restorecon...
+init: waitpid failed: No child processes
+init: (Loading properties from /default.prop took 0.00s.)
+init: (Parsing /init.environ.rc took 0.00s.)
+init: (Parsing /init.usb.rc took 0.00s.)
+init: (Parsing init.freescale.usb.rc took 0.00s.)
+init: (Parsing init.freescale.i.MX6Q.rc took 0.00s.)
+init: (Parsing init.freescale.emmc.rc took 0.00s.)
+init: (Parsing /init.freescale.rc took 0.02s.)
+ueventd: ueventd started!
+ueventd: Coldboot took 0.44s.
+Console: switching to colour dummy device 80x30
+watchdogd: started (interval 10, margin 20)!
+EXT4-fs (mmcblk0p3): mounted filesystem with ordered data mode. Opts: barrier=1
+EXT4-fs (mmcblk0p10): Ignoring removed nomblk_io_submit option
+EXT4-fs (mmcblk0p10): recovery complete
+EXT4-fs (mmcblk0p10): mounted filesystem with ordered data mode. Opts: nomblk_io_submit,noauto_da_alloc,errors=panic
+EXT4-fs (mmcblk0p4): Ignoring removed nomblk_io_submit option
+EXT4-fs (mmcblk0p4): recovery complete
+EXT4-fs (mmcblk0p4): mounted filesystem with ordered data mode. Opts: nomblk_io_submit
+EXT4-fs (mmcblk0p5): mounted filesystem with ordered data mode. Opts: (null)
+file system registered
+using random self ethernet address
+using random host ethernet address
+zram0: detected capacity change from 0 to 314572800
+logd.auditd: start
+logd.klogd: 7424569000
+Adding 307196k swap on /dev/block/zram0.  Priority:-1 extents:1 across:307196k SS
+binder: 253:253 transaction failed 29189, size 0-0
+logd.daemon: reinit
+type=1400 audit(2042.500:3): avc: denied { entrypoint } for pid=260 comm="init" path="/system/bin/can-config.sh" dev="mmcblk0p3" ino=255 scontext=u:r:obd:s0 tcontext=u:object_r:system_file:s0 tclass=file permissive=1
+type=1400 audit(2042.500:4): avc: denied { read execute } for pid=260 comm="can-config.sh" path="/system/bin/sh" dev="mmcblk0p3" ino=442 scontext=u:r:obd:s0 tcontext=u:object_r:shell_exec:s0 tclass=file permissive=1
+toradex_apalis6q:/ # type=1400 audit(2042.510:5): avc: denied { getattr } for pid=261 comm="obd" path="/vendor" dev="rootfs" ino=6500 scontext=u:r:obd:s0 tcontext=u:object_r:rootfs:s0 tclass=lnk_file permissive=1
+type=1400 audit(2042.560:6): avc: denied { getattr } for pid=260 comm="can-config.sh" path="/system/bin/sh" dev="mmcblk0p3" ino=442 scontext=u:r:obd:s0 tcontext=u:object_r:shell_exec:s0 tclass=file permissive=1
+type=1400 audit(2042.590:7): avc: denied { create } for pid=261 comm="obd" scontext=u:r:obd:s0 tcontext=u:r:obd:s0 tclass=socket permissive=1
+type=1400 audit(2042.590:8): avc: denied { ioctl } for pid=261 comm="obd" path="socket:[11515]" dev="sockfs" ino=11515 ioctlcmd=0x8933 scontext=u:r:obd:s0 tcontext=u:r:obd:s0 tclass=socket permissive=1
+type=1400 audit(2042.590:9): avc: denied { bind } for pid=261 comm="obd" scontext=u:r:obd:s0 tcontext=u:r:obd:s0 tclass=socket permissive=1
+IPv6: ADDRCONF(NETDEV_CHANGE): can0: link becomes ready
+healthd: No battery devices found
+ERROR: v4l2 capture: slave not found! V4L2_CID_HUE
+ERROR: v4l2 capture: slave not found! V4L2_CID_HUE
+imx-hdmi-audio imx-hdmi-audio: HDMI Video is not ready!
+imx-hdmi-audio imx-hdmi-audio: ASoC: can't open platform imx-hdmi-audio: -22
+imx-hdmi-audio imx-hdmi-audio: HDMI Video is not ready!
+imx-hdmi-audio imx-hdmi-audio: ASoC: can't open platform imx-hdmi-audio: -22
+
+toradex_apalis6q:/ # 
+toradex_apalis6q:/ # 
+toradex_apalis6q:/ # 
+toradex_apalis6q:/ # 
+toradex_apalis6q:/ # 
+toradex_apalis6q:/ # 
+toradex_apalis6q:/ # capability: warning: `main' uses 32-bit capabilities (legacy support in use)
+type=1400 audit(2051.720:36): avc: denied { write } for pid=261 comm="obd" path="socket:[11515]" dev="sockfs" ino=11515 scontext=u:r:obd:s0 tcontext=u:r:obd:s0 tclass=socket permissive=1
+init: write_file: Unable to open '/sys/devices/system/cpu/cpufreq/interactive/timer_rate': No such file or directory
+init: write_file: Unable to open '/sys/devices/system/cpu/cpufreq/interactive/min_sample_time': No such file or directory
+init: write_file: Unable to open '/sys/devices/system/cpu/cpufreq/interactive/go_hispeed_load': No such file or directory
+init: write_file: Unable to open '/proc/sys/vm/extra_free_kbytes': No such file or directory
+random: crng init done
+init: write_file: Unable to write to '/config/usb_gadget/g1/UDC': No such device
+acc_open
+acc_release
+Micrel KSZ9031 Gigabit PHY 2188000.ethernet-1:07: attached PHY driver [Micrel KSZ9031 Gigabit PHY] (mii_bus:phy_addr=2188000.ethernet-1:07, irq=120)
+IPv6: ADDRCONF(NETDEV_UP): eth0: link is not ready
+type=1400 audit(2059.750:37): avc: denied { write } for pid=261 comm="obd" path="socket:[11515]" dev="sockfs" ino=11515 scontext=u:r:obd:s0 tcontext=u:r:obd:s0 tclass=socket permissive=1
+init: Service 'bootanim' (pid 343) exited with status 0
+init: Starting service 'exec 3 (/system/bin/bootstat)'...
+init: Service 'exec 3 (/system/bin/bootstat)' (pid 932) exited with status 0
+init: Starting service 'exec 4 (/system/bin/bootstat)'...
+init: Service 'exec 4 (/system/bin/bootstat)' (pid 948) exited with status 0
+init: Starting service 'exec 5 (/system/bin/bootstat)'...
+init: Service 'exec 5 (/system/bin/bootstat)' (pid 954) exited with status 0
+init: Starting service 'exec 6 (/system/bin/bootstat)'...
+init: Service 'exec 6 (/system/bin/bootstat)' (pid 955) exited with status 0
+type=1400 audit(2064.370:38): avc: denied { write } for pid=261 comm="obd" path="socket:[11515]" dev="sockfs" ino=11515 scontext=u:r:obd:s0 tcontext=u:r:obd:s0 tclass=socket permissive=1
+type=1400 audit(2070.800:39): avc: denied { write } for pid=261 comm="obd" path="socket:[11515]" dev="sockfs" ino=11515 scontext=u:r:obd:s0 tcontext=u:r:obd:s0 tclass=socket permissive=1
+type=1400 audit(2071.530:40): avc: denied { write } for pid=1213 comm="Thread-2" name="vcan" dev="tmpfs" ino=11517 scontext=u:r:untrusted_app:s0:c512,c768 tcontext=u:object_r:socket_device:s0 tclass=sock_file permissive=1
+type=1400 audit(2071.540:41): avc: denied { connectto } for pid=1213 comm="Thread-2" path="/dev/socket/vcan" scontext=u:r:untrusted_app:s0:c512,c768 tcontext=u:r:obd:s0 tclass=unix_stream_socket permissive=1
+
+toradex_apalis6q:/ # 
+toradex_apalis6q:/ # 
+toradex_apalis6q:/ # bustoradex_apalis6q:/ # busybox                                                    microcom -s 115200 /dev/ttymxc4
+set
+SET BT BDADDR 88:6b:0f:62:71:86
+SET BT NAME WT32i-A
+SET BT CLASS 240438
+SET BT IDENT BT:47 f000 6.0.0 Bluegiga iWRAP
+SET BT LAP 9e8b33
+SET BT PAGEMODE 4 2000 1
+SET BT PAIR 94:65:2d:d1:25:16 f6187d06d851480047dd745c79e152e8
+SET BT PAIR bc:d1:1f:5b:f2:c1 8b5db582e3882c8260b2b23d1634719f
+SET BT POWER 6 6 6
+SET BT ROLE 0 f 2580
+SET BT SNIFF 0 20 1 8
+SET BT SSP 3 0
+SET BT MTU 667
+SET CONTROL AUDIO INTERNAL INTERNAL
+SET CONTROL BAUD 115200,8n1
+SET CONTROL BIND 0 20 F CLOSE 0
+SET CONTROL BIND 1 20 F SET BT PAIR *
+SET CONTROL CD 00 0
+SET CONTROL CODEC SBC JOINT_STEREO 44100 0
+SET CONTROL CONFIG 0000 0000 0000 1100
+SET CONTROL ECHO 7
+SET CONTROL ESCAPE 43 00 1
+SET CONTROL GAIN 8 8
+SET CONTROL MICBIAS b 0
+SET CONTROL MSC DTE 00 00 00 00 00 00
+SET CONTROL PIO 00 00 00
+SET CONTROL PREAMP 1 1
+SET CONTROL READY 00
+SET CONTROL VREGEN 0 00
+SET PROFILE A2DP SINK
+SET PROFILE HFP Hands-Free
+SET PROFILE SPP Bluetooth Serial Port
+SET PROFILE HSP Headset
+SET PROFILE PBAP ON
+SET PROFILE AVRCP CONTROLLER 03
+SET
+
+
+
+
+AVRCP UP
+
+
+
+
+
+
+
+
+
+RING
+SYNTAX ERROR
+ATA
+HFP 3 OK
+AVRCP PDU 20 2 1 2
+AVRCP 2 GET_ELEMENT_ATTRIBUTES_RSP COUNT 2 TITLE 31 "Unn Badhil Vendi [Starmusiq.cc]" ARTIST 34 "Siddharth, Sruthi S [Starmusiq.cc]"
+
+
+AVRCP PDU 31 1 1
+AVRCP 2 REGISTER_NOTIFICATION_RSP INTERIM PLAYBACK_STATUS_CHANGED PLAYING
+
+AVRXP CP UP
+
+AVRCP UP
+AVRCP PDU 10 3
+AVRCP 2 GET_CAPABILITIES_RSP EVENT COUNT 7 PLAYBACK_STATUS_CHANGED TRACK_CHANGED PLAYBACK_POSITION_CHANGED PLAYER_APP_SETTING_CHANGED NOW_PLAYING_CHANGED AVAILABLE_PLAYERS_CHANGED ADDRESSED_PLAYER_CHANGED
+
+AVRCP 0 PDU_GET_ELEMENT_ATTRIBUTES 3 1 2 3
+
+@1 AVRCP BROWSE LIST 1 4 6 2 1 2
+SYNTAX ERROR
+AVRCP BROWSE LIST 1 4 6 2 1 2
+SYNTAX ERROR
+
+
+AVRCP BROWSE GET 1 42 33 0
+SYNTAX ERROR
+1 AVRCP BROWSE GET 1 42 33 0
+SYNTAX ERROR
+AVRCP 2 REGISTER_NOTIFICATION_RSP CHANGED PLAYBACK_STATUS_CHANGED PAUSED
+
+
+
+
+
+A2DP STREAMING STOP 0
+A2DP STREAMING START 0
+
+
+AVCP 
+SYNTAX ERROR
+AVRCUP 
+SYNTAX ERROR
+AVRCP PLAYA2DP STREAMING STOP 0
+
+A2DP STREAMING START 0
+
+
+
+AVRCP MUTE
+AVRCP STOP
+A2DP STREAMING STOP 0
+AVRCP PAUSE
+AVRCP PLAY
+A2DP STREAMING START 0
+
+
+
+AVRCP PAUSE
+AVRCPA2DP STREAMING STOP 0
+ PLAY
+A2DP STREAMING START 0
+AVRCP FAST_FORWARD
+
+
+
+AVRCP FAST_FORWARD
+
+
+AVRCP FORWARD
+
+
+AVRCP FORWARD
+
+
+AVRCP FORWARD
+
+
+AVRCP FORWARD
+
+
+
+AVRCP FORWARD
+
+
+
+
+AVRCP BACKWARD
+AVRCP BACKWARD
+
+
+AVRCP PDU 10 2
+AVRCP 2 GET_CAPABILITIES_RSP COMPANY COUNT 2 1958 1018
+
+
+AVRCP PDU 10 3
+AVRCP 2 GET_CAPABILITIES_RSP EVENT COUNT 7 PLAYBACK_STATUS_CHANGED TRACK_CHANGED PLAYBACK_POSITION_CHANGED PLAYER_APP_SETTING_CHANGED NOW_PLAYING_CHANGED AVAILABLE_PLAYERS_CHANGED ADDRESSED_PLAYER_CHANGED
+AVRCP PDU 11
+AVRCP 2 LIST_APPLICATION_SETTING_ATTRIBUTES_RSP COUNT 2 REPEAT SHUFFLE
+
+
+
+AVRCP PDU 20
+SYNTAX ERROR
+
+AVRCP PDU 20 1 1
+AVRCP 2 GET_ELEMENT_ATTRIBUTES_RSP COUNT 1 TITLE 14 "07. Happy Hour"
+
+SYNTAX ERROR
+AVAVRCP PDU
+SYNTAX ERROR
+AVRCP PDU 20 1 123  
+SYNTAX ERROR
+
+AVRCP PDU 20 1 1 2 3
+AVRCP 2 GET_ELEMENT_ATTRIBUTES_RSP COUNT 1 TITLE 14 "07. Happy Hour"
+AVRCP PDU 20 1 4
+AVRCP 2 GET_ELEMENT_ATTRIBUTES_RSP COUNT 1 TRACK_NUMBER 1 "6"
+AVRCP PDU 20 4 4 4
+SYNTAX ERROR
+
+AVRCP PDU 20 4  4
+SYNTAX ERROR
+AVRCP PDU 20 2 2
+SYNTAX ERROR
+AVRCP PDU 20 2 1 2
+AVRCP 2 GET_ELEMENT_ATTRIBUTES_RSP COUNT 2 TITLE 19 "08. Naach Meri Jaan" ARTIST 42 "Benny Dayal, Siddharth Basrur & Rimi Nique"
+
+
+AVRCP PDU 20 2 1 4
+AVRCP 2 GET_ELEMENT_ATTRIBUTES_RSP COUNT 2 TITLE 19 "08. Naach Meri Jaan" TRACK_NUMBER 1 "7"
+
+
+AVRCP PDU 20 2 1 1
+AVRCP 2 GET_ELEMENT_ATTRIBUTES_RSP COUNT 1 TITLE 19 "08. Naach Meri Jaan"
+AVRCP PDU 20 2 1 2
+AVRCP 2 GET_ELEMENT_ATTRIBUTES_RSP COUNT 2 TITLE 19 "08. Naach Meri Jaan" ARTIST 42 "Benny Dayal, Siddharth Basrur & Rimi Nique"
+
+
+
+AVRCP PDU 20 2 1 3
+AVRCP 2 GET_ELEMENT_ATTRIBUTES_RSP COUNT 2 TITLE 19 "08. Naach Meri Jaan" ALBUM 6 "ABCD 2"
+AVRCP PDU 20 2 1 4
+AVRCP 2 GET_ELEMENT_ATTRIBUTES_RSP COUNT 2 TITLE 19 "08. Naach Meri Jaan" TRACK_NUMBER 1 "7"
+AVRCP PDU 20 2 1 7
+AVRCP 2 GET_ELEMENT_ATTRIBUTES_RSP COUNT 2 TITLE 19 "08. Naach Meri Jaan" PLAYING_TIME 6 "244169"
+AVRCP PDU 20 2 1 5
+AVRCP 2 GET_ELEMENT_ATTRIBUTES_RSP COUNT 2 TITLE 19 "08. Naach Meri Jaan" TOTAL_TRACK_NUMBER 2 "23"
+AVRCP PDU 20 2 1 6
+AVRCP 2 GET_ELEMENT_ATTRIBUTES_RSP COUNT 2 TITLE 19 "08. Naach Meri Jaan" GENRE 21 "Bollywood Music Songs"
+AVRCP PDU 20 2 1 7
+AVRCP 2 GET_ELEMENT_ATTRIBUTES_RSP COUNT 2 TITLE 19 "08. Naach Meri Jaan" PLAYING_TIME 6 "244169"
+AVRCP PDU 20 2 1 8
+SYNTAX ERROR
+
+AVRCP PDU 20 2 13 3
+AVRCP 2 GET_ELEMENT_ATTRIBUTES_RSP COUNT 1 ALBUM 6 "ABCD 2"
+AVRCP PDU 20 2 13
+SYNTAX ERROR
+AVRCP PDU 20 2 1 2
+AVRCP 2 GET_ELEMENT_ATTRIBUTES_RSP COUNT 2 TITLE 19 "08. Naach Meri Jaan" ARTIST 42 "Benny Dayal, Siddharth Basrur & Rimi Nique"
+
+
+AVRCP PDU 20 0
+AVRCP 2 GET_ELEMENT_ATTRIBUTES_RSP COUNT 7 TITLE 19 "08. Naach Meri Jaan" ARTIST 42 "Benny Dayal, Siddharth Basrur & Rimi Nique" ALBUM 6 "ABCD 2" TRACK_NUMBER 1 "7" TOTAL_TRACK_NUMBER 2 "23" GENRE 21 "Bollywood Music Songs" PLAYING_TIME 6 "244169"
+
+
+
+
+AVRCP PDU 20 0
+AVRCP 2 GET_ELEMENT_ATTRIBUTES_RSP COUNT 7 TITLE 10 "09. Tattoo" ARTIST 15 "Shefali Alvares" ALBUM 6 "ABCD 2" TRACK_NUMBER 1 "8" TOTAL_TRACK_NUMBER 2 "23" GENRE 21 "Bollywood Music Songs" PLAYING_TIME 6 "259999"
+AVRCP PDU 20 0
+AVRCP 2 GET_ELEMENT_ATTRIBUTES_RSP COUNT 7 TITLE 10 "09. Tattoo" ARTIST 15 "Shefali Alvares" ALBUM 6 "ABCD 2" TRACK_NUMBER 1 "8" TOTAL_TRACK_NUMBER 2 "23" GENRE 21 "Bollywood Music Songs" PLAYING_TIME 6 "259999"
+
+
+AVRCP PDU 20 0
+AVRCP 2 GET_ELEMENT_ATTRIBUTES_RSP COUNT 7 TITLE 10 "09. Tattoo" ARTIST 15 "Shefali Alvares" ALBUM 6 "ABCD 2" TRACK_NUMBER 1 "8" TOTAL_TRACK_NUMBER 2 "23" GENRE 21 "Bollywood Music Songs" PLAYING_TIME 6 "259999"
+AVRCP PDU 20 0
+AVRCP 2 GET_ELEMENT_ATTRIBUTES_RSP COUNT 7 TITLE 10 "09. Tattoo" ARTIST 15 "Shefali Alvares" ALBUM 6 "ABCD 2" TRACK_NUMBER 1 "8" TOTAL_TRACK_NUMBER 2 "23" GENRE 21 "Bollywood Music Songs" PLAYING_TIME 6 "259999"
+
+
+AVRCP PDU 20 0
+AVRCP 2 GET_ELEMENT_ATTRIBUTES_RSP COUNT 7 TITLE 10 "09. Tattoo" ARTIST 15 "Shefali Alvares" ALBUM 6 "ABCD 2" TRACK_NUMBER 1 "8" TOTAL_TRACK_NUMBER 2 "23" GENRE 21 "Bollywood Music Songs" PLAYING_TIME 6 "259999"
+
+
+AVRCP PDU 20 0
+AVRCP 2 GET_ELEMENT_ATTRIBUTES_RSP COUNT 7 TITLE 10 "09. Tattoo" ARTIST 15 "Shefali Alvares" ALBUM 6 "ABCD 2" TRACK_NUMBER 1 "8" TOTAL_TRACK_NUMBER 2 "23" GENRE 21 "Bollywood Music Songs" PLAYING_TIME 6 "259999"
+AVRCP PDU 20 0
+AVRCP 2 GET_ELEMENT_ATTRIBUTES_RSP COUNT 7 TITLE 10 "09. Tattoo" ARTIST 15 "Shefali Alvares" ALBUM 6 "ABCD 2" TRACK_NUMBER 1 "8" TOTAL_TRACK_NUMBER 2 "23" GENRE 21 "Bollywood Music Songs" PLAYING_TIME 6 "259999"
+
+
+AVRCP PDU 20 0
+AVRCP 2 GET_ELEMENT_ATTRIBUTES_RSP COUNT 7 TITLE 22 "Aaj Phir - DJMaza.Info" ARTIST 30 "Arijit Singh & Samira Koppikar" ALBUM 19 "Hate Story 2 (2014)" TRACK_NUMBER 1 "9" TOTAL_TRACK_NUMBER 2 "23" GENRE 15 "Bollywood Music" PLAYING_TIME 6 "261955"
+AVRCP PDU 20 0
+AVRCP 2 GET_ELEMENT_ATTRIBUTES_RSP COUNT 7 TITLE 22 "Aaj Phir - DJMaza.Info" ARTIST 30 "Arijit Singh & Samira Koppikar" ALBUM 19 "Hate Story 2 (2014)" TRACK_NUMBER 1 "9" TOTAL_TRACK_NUMBER 2 "23" GENRE 15 "Bollywood Music" PLAYING_TIME 6 "261955"
+AVRCP PDU 20 0
+AVRCP 2 GET_ELEMENT_ATTRIBUTES_RSP COUNT 7 TITLE 22 "Aaj Phir - DJMaza.Info" ARTIST 30 "Arijit Singh & Samira Koppikar" ALBUM 19 "Hate Story 2 (2014)" TRACK_NUMBER 1 "9" TOTAL_TRACK_NUMBER 2 "23" GENRE 15 "Bollywood Music" PLAYING_TIME 6 "261955"
+
+
+AVRCP PDU 20 0
+AVRCP 2 GET_ELEMENT_ATTRIBUTES_RSP COUNT 7 TITLE 22 "Aaj Phir - DJMaza.Info" ARTIST 30 "Arijit Singh & Samira Koppikar" ALBUM 19 "Hate Story 2 (2014)" TRACK_NUMBER 1 "9" TOTAL_TRACK_NUMBER 2 "23" GENRE 15 "Bollywood Music" PLAYING_TIME 6 "261955"
+
+
+AVRCP PDU 20 0
+AVRCP 2 GET_ELEMENT_ATTRIBUTES_RSP COUNT 7 TITLE 22 "Aaj Phir - DJMaza.Info" ARTIST 30 "Arijit Singh & Samira Koppikar" ALBUM 19 "Hate Story 2 (2014)" TRACK_NUMBER 1 "9" TOTAL_TRACK_NUMBER 2 "23" GENRE 15 "Bollywood Music" PLAYING_TIME 6 "261955"
+
+
+
+AVRCP PDU 20 0
+AVRCP 2 GET_ELEMENT_ATTRIBUTES_RSP COUNT 7 TITLE 22 "Aaj Phir - DJMaza.Info" ARTIST 30 "Arijit Singh & Samira Koppikar" ALBUM 19 "Hate Story 2 (2014)" TRACK_NUMBER 1 "9" TOTAL_TRACK_NUMBER 2 "23" GENRE 15 "Bollywood Music" PLAYING_TIME 6 "261955"
+
+
+AVRCP PDU 20 0
+AVRCP 2 GET_ELEMENT_ATTRIBUTES_RSP COUNT 7 TITLE 22 "Aaj Phir - DJMaza.Info" ARTIST 30 "Arijit Singh & Samira Koppikar" ALBUM 19 "Hate Story 2 (2014)" TRACK_NUMBER 1 "9" TOTAL_TRACK_NUMBER 2 "23" GENRE 15 "Bollywood Music" PLAYING_TIME 6 "261955"
+
+
+
+AVRCP PDU 20 0
+AVRCP 2 GET_ELEMENT_ATTRIBUTES_RSP COUNT 7 TITLE 22 "Aaj Phir - DJMaza.Info" ARTIST 30 "Arijit Singh & Samira Koppikar" ALBUM 19 "Hate Story 2 (2014)" TRACK_NUMBER 1 "9" TOTAL_TRACK_NUMBER 2 "23" GENRE 15 "Bollywood Music" PLAYING_TIME 6 "261955"
+
+
+
+1
+AVRCP PDU 20 0
+AVRCP 2 GET_ELEMENT_ATTRIBUTES_RSP COUNT 7 TITLE 22 "Aaj Phir - DJMaza.Info" ARTIST 30 "Arijit Singh & Samira Koppikar" ALBUM 19 "Hate Story 2 (2014)" TRACK_NUMBER 1 "9" TOTAL_TRACK_NUMBER 2 "23" GENRE 15 "Bollywood Music" PLAYING_TIME 6 "261955"
+
+
+AVRCP PDU 20 0
+AVRCP 2 GET_ELEMENT_ATTRIBUTES_RSP COUNT 7 TITLE 22 "Aaj Phir - DJMaza.Info" ARTIST 30 "Arijit Singh & Samira Koppikar" ALBUM 19 "Hate Story 2 (2014)" TRACK_NUMBER 1 "9" TOTAL_TRACK_NUMBER 2 "23" GENRE 15 "Bollywood Music" PLAYING_TIME 6 "261955"
+
+
+
+252600
+SYNTAX ERROR
+AVRCP PDU 20 0
+AVRCP 2 GET_ELEMENT_ATTRIBUTES_RSP COUNT 7 TITLE 30 "Aaj Phir (Remix) - DJMaza.Info" ARTIST 30 "Arijit Singh & Samira Koppikar" ALBUM 19 "Hate Story 2 (2014)" TRACK_NUMBER 2 "10" TOTAL_TRACK_NUMBER 2 "23" GENRE 15 "Bollywood Music" PLAYING_TIME 6 "236799"
+
+
+
+
+AVRCP PDU 20 0
+AVRCP 2 GET_ELEMENT_ATTRIBUTES_RSP COUNT 7 TITLE 44 "Aashiqui - The Love Theme - www.SongsPK.info" ARTIST 15 "Various Artists" ALBUM 10 "Aashiqui 2" TRACK_NUMBER 2 "12" TOTAL_TRACK_NUMBER 2 "23" GENRE 15 "Bollywood Music" PLAYING_TIME 6 "162690"
+A2DP STREAMING STOP 0
+A2DP STREAMING START 0
+A2DP STREAMING STOP 0
+NO CARRIER 2 ERROR 0 
+NO CARRIER 1 ERROR 0 
+NO CARRIER 0 ERROR 0 
+NO CARRIER 3 ERROR 0 

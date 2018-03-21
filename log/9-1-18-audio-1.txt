@@ -1,0 +1,1668 @@
+
+
+U-Boot 2017.03-00002-gebf9dc2527 (Jan 05 2018 - 12:43:45 +0530)
+
+CPU:   Freescale i.MX6Q rev1.5 at 792 MHz
+Reset cause: POR
+I2C:   ready
+DRAM:  2 GiB
+PMIC: device id: 0x10, revision id: 0x21
+PMIC: programmed
+MMC:   FSL_SDHC: 0, FSL_SDHC: 1, FSL_SDHC: 2
+Unable to allocate framebuffer memory
+In:    serial
+Out:   serial
+Err:   serial
+Model: Toradex Apalis iMX6 Quad 2GB IT V1.1C, Serial# 05146387
+flash target is MMC:0
+Net:   using PHY at 7
+FEC [PRIME]
+Fastboot: Normal
+Hit any key to stop autoboot:  1  0 
+Apalis iMX6 # bmode usb
+resetting ...
+
+
+U-Boot 2017.03-dirty (Dec 14 2017 - 17:25:07 +0530)
+
+CPU:   Freescale i.MX6Q rev1.5 at 792 MHz
+Reset cause: WDOG
+I2C:   ready
+DRAM:  2 GiB
+PMIC: device id: 0x10, revision id: 0x21
+PMIC: programmed
+MMC:   FSL_SDHC: 0, FSL_SDHC: 1, FSL_SDHC: 2
+auto-detected panel HDMI
+Aravinth: Display: HDMI (1024x768)
+In:    serial
+Out:   serial
+Err:   serial
+Model: Toradex Apalis iMX6 Quad 2GB IT V1.1C, Serial# 05146387
+Net:   using PHY at 7
+FEC [PRIME]
+Boot from USB for mfgtools
+Use default environment for 				 mfgtools
+Run bootcmd_mfg: run mfgtool_args;bootz 0x12000000 0x12C00000 0x18000000;
+Hit any key to stop autoboot:  0 
+Kernel image @ 0x12000000 [ 0x000000 - 0x5f06e8 ]
+## Loading init Ramdisk from Legacy Image at 12c00000 ...
+   Image Name:   fsl-image-mfgtool-initramfs-imx6
+   Image Type:   ARM Linux RAMDisk Image (gzip compressed)
+   Data Size:    8597466 Bytes = 8.2 MiB
+   Load Address: 00000000
+   Entry Point:  00000000
+   Verifying Checksum ... OK
+## Flattened Device Tree blob at 18000000
+   Booting using the fdt blob at 0x18000000
+   Using Device Tree in place at 18000000, end 180102d8
+
+Starting kernel ...
+
+Booting Linux on physical CPU 0x0
+Linux version 4.9.67+ (embadmin@ubuntu) (gcc version 4.9 20150123 (prerelease) (GCC) ) #9 SMP PREEMPT Fri Dec 22 16:56:14 IST 2017
+CPU: ARMv7 Processor [412fc09a] revision 10 (ARMv7), cr=10c5387d
+CPU: PIPT / VIPT nonaliasing data cache, VIPT aliasing instruction cache
+OF: fdt:Machine model: Aravinth Toradex Apalis iMX6Q/D Module on Ixora V1.1 Carrier Board
+cma: Reserved 320 MiB at 0x6c000000
+Memory policy: Data cache writealloc
+percpu: Embedded 14 pages/cpu @daef7000 s25728 r8192 d23424 u57344
+Built 1 zonelists in Zone order, mobility grouping on.  Total pages: 520704
+Kernel command line: console=ttymxc0,115200 rdinit=/linuxrc g_mass_storage.stall=0 g_mass_storage.removable=1 g_mass_storage.file=/fat g_mass_storage.ro=1 g_mass_storage.idVendor=0x066F g_mass_storage.idProduct=0x37FF g_mass_storage.iSerialNumber= enable_wait_mode=off
+PID hash table entries: 4096 (order: 2, 16384 bytes)
+Dentry cache hash table entries: 262144 (order: 8, 1048576 bytes)
+Inode-cache hash table entries: 131072 (order: 7, 524288 bytes)
+Memory: 1728936K/2097152K available (8192K kernel code, 334K rwdata, 2548K rodata, 1024K init, 448K bss, 40536K reserved, 327680K cma-reserved, 262144K highmem)
+Virtual kernel memory layout:
+    vector  : 0xffff0000 - 0xffff1000   (   4 kB)
+    fixmap  : 0xffc00000 - 0xfff00000   (3072 kB)
+    vmalloc : 0xf0800000 - 0xff800000   ( 240 MB)
+    lowmem  : 0x80000000 - 0xf0000000   (1792 MB)
+    pkmap   : 0x7fe00000 - 0x80000000   (   2 MB)
+    modules : 0x7f000000 - 0x7fe00000   (  14 MB)
+      .text : 0x80008000 - 0x80900000   (9184 kB)
+      .init : 0x80c00000 - 0x80d00000   (1024 kB)
+      .data : 0x80d00000 - 0x80d539c0   ( 335 kB)
+       .bss : 0x80d539c0 - 0x80dc3aac   ( 449 kB)
+SLUB: HWalign=64, Order=0-3, MinObjects=0, CPUs=4, Nodes=1
+Preemptible hierarchical RCU implementation.
+	Build-time adjustment of leaf fanout to 32.
+NR_IRQS:16 nr_irqs:16 16
+L2C-310 errata 752271 769419 enabled
+L2C-310 enabling early BRESP for Cortex-A9
+L2C-310 full line of zeros enabled for Cortex-A9
+L2C-310 ID prefetch enabled, offset 16 lines
+L2C-310 dynamic clock gating enabled, standby mode enabled
+L2C-310 cache controller enabled, 16 ways, 1024 kB
+L2C-310: CACHE_ID 0x410000c7, AUX_CTRL 0x76470001
+Switching to timer-based delay loop, resolution 333ns
+sched_clock: 32 bits at 3000kHz, resolution 333ns, wraps every 715827882841ns
+clocksource: mxc_timer1: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 637086815595 ns
+Console: colour dummy device 80x30
+Calibrating delay loop (skipped), value calculated using timer frequency.. 6.00 BogoMIPS (lpj=30000)
+pid_max: default: 32768 minimum: 301
+Mount-cache hash table entries: 4096 (order: 2, 16384 bytes)
+Mountpoint-cache hash table entries: 4096 (order: 2, 16384 bytes)
+CPU: Testing write buffer coherency: ok
+CPU0: update cpu_capacity 1024
+CPU0: thread -1, cpu 0, socket 0, mpidr 80000000
+Setting up static identity map for 0x10100000 - 0x10100070
+CPU1: update cpu_capacity 1024
+CPU1: thread -1, cpu 1, socket 0, mpidr 80000001
+CPU2: update cpu_capacity 1024
+CPU2: thread -1, cpu 2, socket 0, mpidr 80000002
+CPU3: update cpu_capacity 1024
+CPU3: thread -1, cpu 3, socket 0, mpidr 80000003
+Brought up 4 CPUs
+SMP: Total of 4 processors activated (24.00 BogoMIPS).
+CPU: All CPU(s) started in SVC mode.
+devtmpfs: initialized
+VFP support v0.3: implementor 41 architecture 3 part 30 variant 9 rev 4
+clocksource: jiffies: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 19112604462750000 ns
+futex hash table entries: 1024 (order: 4, 65536 bytes)
+pinctrl core: initialized pinctrl subsystem
+NET: Registered protocol family 16
+DMA: preallocated 256 KiB pool for atomic coherent allocations
+cpuidle: using governor menu
+CPU identified as i.MX6Q, silicon rev 1.5
+hw-breakpoint: found 5 (+1 reserved) breakpoint and 1 watchpoint registers.
+hw-breakpoint: maximum watchpoint size is 4 bytes.
+imx6q-pinctrl 20e0000.iomuxc: initialized IMX pinctrl driver
+imx-gpc 20dc000.gpc: no fsl,ldo-bypass found!
+imx-gpc 20dc000.gpc: Registered imx-gpc
+mxs-dma 110000.dma-apbh: initialized
+usb_host_vbus: supplied by usb_host_vbus_hub
+SCSI subsystem initialized
+usbcore: registered new interface driver usbfs
+usbcore: registered new interface driver hub
+usbcore: registered new device driver usb
+2000000.aips-bus:usbphy_nop1 supply vcc not found, using dummy regulator
+2000000.aips-bus:usbphy_nop2 supply vcc not found, using dummy regulator
+i2c i2c-1: IMX I2C adapter registered
+i2c i2c-1: can't use DMA, using PIO instead.
+stmpe-i2c 2-0041: stmpe811 detected, chip id: 0x811
+i2c i2c-2: IMX I2C adapter registered
+i2c i2c-2: can't use DMA, using PIO instead.
+i2c i2c-3: IMX I2C adapter registered
+i2c i2c-3: can't use DMA, using PIO instead.
+Linux video capture interface: v2.00
+pps_core: LinuxPPS API ver. 1 registered
+pps_core: Software ver. 5.3.6 - Copyright 2005-2007 Rodolfo Giometti <giometti@linux.it>
+PTP clock support registered
+imx-ipuv3 2400000.ipu: IPU DMFC NORMAL mode: 1(0~1), 5B(4,5), 5F(6,7)
+imx-ipuv3 2800000.ipu: IPU DMFC NORMAL mode: 1(0~1), 5B(4,5), 5F(6,7)
+imx rpmsg driver is registered.
+Advanced Linux Sound Architecture Driver Initialized.
+clocksource: Switched to clocksource mxc_timer1
+VFS: Disk quotas dquot_6.6.0
+VFS: Dquot-cache hash table entries: 1024 (order 0, 4096 bytes)
+NET: Registered protocol family 2
+TCP established hash table entries: 16384 (order: 4, 65536 bytes)
+TCP bind hash table entries: 16384 (order: 5, 131072 bytes)
+TCP: Hash tables configured (established 16384 bind 16384)
+UDP hash table entries: 1024 (order: 3, 32768 bytes)
+UDP-Lite hash table entries: 1024 (order: 3, 32768 bytes)
+NET: Registered protocol family 1
+RPC: Registered named UNIX socket transport module.
+RPC: Registered udp transport module.
+RPC: Registered tcp transport module.
+RPC: Registered tcp NFSv4.1 backchannel transport module.
+Trying to unpack rootfs image as initramfs...
+Freeing initrd memory: 8400K
+hw perfevents: enabled with armv7_cortex_a9 PMU driver, 7 counters available
+Bus freq driver module loaded
+workingset: timestamp_bits=30 max_order=19 bucket_order=0
+NFS: Registering the id_resolver key type
+Key type id_resolver registered
+Key type id_legacy registered
+jffs2: version 2.2. (NAND) © 2001-2006 Red Hat, Inc.
+fuse init (API version 7.26)
+bounce: pool size: 64 pages
+io scheduler noop registered
+io scheduler deadline registered
+io scheduler cfq registered (default)
+backlight supply power not found, using dummy regulator
+Aravinth: mxcfb_probe ---->
+mxc_sdc_fb fb@0: NO mxc display driver found!
+Aravinth: mxcfb_probe ---->
+mxc_sdc_fb fb@1: NO mxc display driver found!
+Aravinth: mxcfb_probe ---->
+mxc_sdc_fb fb@2: registered mxc display driver lcd
+Console: switching to colour frame buffer device 100x30
+Aravinth: mxcfb_probe Done ---->
+Aravinth: mxcfb_probe ---->
+mxc_sdc_fb fb@3: NO mxc display driver found!
+imx-sdma 20ec000.sdma: no iram assigned, using external mem
+imx-sdma 20ec000.sdma: loaded firmware 3.3
+pfuze100-regulator 2-0008: Full layer: 2, Metal layer: 1
+pfuze100-regulator 2-0008: FAB: 0, FIN: 0
+pfuze100-regulator 2-0008: pfuze100 found.
+2020000.serial: ttymxc0 at MMIO 0x2020000 (irq = 29, base_baud = 5000000) is a IMX
+console [ttymxc0] enabled
+21e8000.serial: ttymxc1 at MMIO 0x21e8000 (irq = 78, base_baud = 5000000) is a IMX
+21f0000.serial: ttymxc3 at MMIO 0x21f0000 (irq = 79, base_baud = 5000000) is a IMX
+21f4000.serial: ttymxc4 at MMIO 0x21f4000 (irq = 80, base_baud = 5000000) is a IMX
+imx sema4 driver is registered.
+[drm] Initialized
+[drm] Initialized vivante 1.0.0 20120216 on minor 0
+brd: module loaded
+loop: module loaded
+ahci-imx 2200000.sata: fsl,transmit-level-mV not specified, using 00000024
+ahci-imx 2200000.sata: fsl,transmit-boost-mdB not specified, using 00000480
+ahci-imx 2200000.sata: fsl,transmit-atten-16ths not specified, using 00002000
+ahci-imx 2200000.sata: fsl,receive-eq-mdB not specified, using 05000000
+ahci-imx 2200000.sata: SSS flag set, parallel bus scan disabled
+ahci-imx 2200000.sata: AHCI 0001.0300 32 slots 1 ports 3 Gbps 0x1 impl platform mode
+ahci-imx 2200000.sata: flags: ncq sntf stag pm led clo only pmp pio slum part ccc apst 
+scsi host0: ahci-imx
+ata1: SATA max UDMA/133 mmio [mem 0x02200000-0x02203fff] port 0x100 irq 87
+spi_imx 2008000.ecspi: probed
+libphy: Fixed MDIO Bus: probed
+2188000.ethernet supply phy not found, using dummy regulator
+pps pps0: new PPS source ptp0
+libphy: fec_enet_mii_bus: probed
+fec 2188000.ethernet eth0: registered PHC device 0
+ehci_hcd: USB 2.0 'Enhanced' Host Controller (EHCI) Driver
+ehci-mxc: Freescale On-Chip EHCI Host driver
+usbcore: registered new interface driver usb-storage
+2184800.usbmisc supply vbus-wakeup not found, using dummy regulator
+ci_hdrc ci_hdrc.1: EHCI Host Controller
+ci_hdrc ci_hdrc.1: new USB bus registered, assigned bus number 1
+ci_hdrc ci_hdrc.1: USB 2.0 started, EHCI 1.00
+hub 1-0:1.0: USB hub found
+hub 1-0:1.0: 1 port detected
+Mass Storage Function, version: 2009/09/11
+LUN: removable file: (no medium)
+LUN: removable read only file: /fat
+Number of LUNs=1
+g_mass_storage gadget: Mass Storage Gadget, version: 2009/09/11
+g_mass_storage gadget: g_mass_storage ready
+mousedev: PS/2 mouse device common for all mice
+input: stmpe-ts as /devices/soc0/soc/2100000.aips-bus/21a4000.i2c/i2c-2/2-0041/stmpe-ts/input/input0
+snvs_rtc 20cc000.snvs:snvs-rtc-lp: rtc core: registered 20cc000.snvs:snvs-r as rtc0
+i2c /dev entries driver
+IR NEC protocol handler initialized
+IR RC5(x/sz) protocol handler initialized
+IR RC6 protocol handler initialized
+IR JVC protocol handler initialized
+IR Sony protocol handler initialized
+IR SANYO protocol handler initialized
+IR Sharp protocol handler initialized
+IR MCE Keyboard/mouse protocol handler initialized
+IR XMP protocol handler initialized
+imx2-wdt 20bc000.wdog: timeout 60 sec (nowayout=0)
+sdhci: Secure Digital Host Controller Interface driver
+sdhci: Copyright(c) Pierre Ossman
+sdhci-pltfm: SDHCI platform and OF driver helper
+sdhci-esdhc-imx 2190000.usdhc: could not get ultra high speed state, work on normal mode
+sdhci-esdhc-imx 2190000.usdhc: Got CD GPIO
+ata1: SATA link down (SStatus 0 SControl 300)
+ahci-imx 2200000.sata: no device found, disabling link.
+mmc1: SDHCI controller on 2190000.usdhc [2190000.usdhc] using ADMA
+sdhci-esdhc-imx 2198000.usdhc: could not get ultra high speed state, work on normal mode
+ahci-imx 2200000.sata: pass ahci_imx..hotplug=1 to enable hotplug
+g_mass_storage gadget: high-speed config #1: Linux File-Backed Storage
+mmc0: SDHCI controller on 2198000.usdhc [2198000.usdhc] using ADMA
+mxc_vpu 2040000.vpu_fsl: VPU initialized
+mxc_vdoa 21e4000.vdoa: i.MX Video Data Order Adapter(VDOA) driver probed
+usbcore: registered new interface driver usbhid
+usbhid: USB HID core driver
+random: fast init done
+sgtl5000 2-000a: sgtl5000 revision 0x11
+fsl-ssi-dai 2028000.ssi: No cache defaults, reading back from HW
+usb 1-1: new high-speed USB device number 2 using ci_hdrc
+mmc0: new DDR MMC card at address 0001
+mmc1: host does not support reading read-only switch, assuming write-enable
+mmcblk0: mmc0:0001 Q2J54A 3.59 GiB 
+mmc1: new high speed SDHC card at address 59b4
+mmcblk0boot0: mmc0:0001 Q2J54A partition 1 16.0 MiB
+mmcblk1: mmc1:59b4 USD   7.48 GiB 
+mmcblk0boot1: mmc0:0001 Q2J54A partition 2 16.0 MiB
+ mmcblk1: p1
+Alternate GPT is invalid, using primary GPT.
+ mmcblk0: p1 p2 p3 p4 p5 p6 p7 p8 p9 p10 p11
+imx-sgtl5000 sound: sgtl5000 <-> 2028000.ssi mapping ok
+imx-spdif sound-spdif: snd-soc-dummy-dai <-> 2004000.spdif mapping ok
+NET: Registered protocol family 10
+sit: IPv6, IPv4 and MPLS over IPv4 tunneling driver
+NET: Registered protocol family 17
+Key type dns_resolver registered
+cpu cpu0: Registered imx6q-cpufreq
+Registering SWP/SWPB emulation handler
+imx_thermal 2000000.aips-bus:tempmon: Industrial CPU temperature grade - max:105C critical:100C passive:95C
+hub 1-1:1.0: USB hub found
+hub 1-1:1.0: 4 ports detected
+input: gpio-keys as /devices/soc0/gpio-keys/input/input1
+snvs_rtc 20cc000.snvs:snvs-rtc-lp: setting system clock to 1970-01-01 00:00:00 UTC (0)
+usb_otg_vbus: disabling
+ALSA device list:
+  #0: imx6q-apalis-sgtl5000
+  #1: imx-spdif
+Freeing unused kernel memory: 1024K
+Starting UTP
+uuc 0.5 [built Apr 27 2017 13:40:16]
+UTP: Waiting for device to appear
+UTP: file/device node /dev/utp already exists
+cpu_id is 0
+UTP: received command '$ while [ ! -e /dev/mmcblk0 ]; do sleep 1; echo waiting...; done '
+UTP: executing "while [ ! -e /dev/mmcblk0 ]; do sleep 1; echo waiting...; done "
+UTP: sending Success to kernel for command $ while [ ! -e /dev/mmcblk0 ]; do sleep 1; echo waiting...; done .
+usb 1-1.3: new low-speed USB device number 3 using ci_hdrc
+utp_poll: pass returned.
+UTP: received command '$ ls -l /dev/mmc* '
+UTP: executing "ls -l /dev/mmc* "
+brw------- 1 root root 179,  0 Jan  1 00:00 /dev/mmcblk0
+brw------- 1 root root 179, 16 Jan  1 00:00 /dev/mmcblk0boot0
+brw------- 1 root root 179, 32 Jan  1 00:00 /dev/mmcblk0boot1
+brw------- 1 root root 179,  1 Jan  1 00:00 /dev/mmcblk0p1
+brw------- 1 root root 179, 10 Jan  1 00:00 /dev/mmcblk0p10
+brw------- 1 root root 179, 11 Jan  1 00:00 /dev/mmcblk0p11
+brw------- 1 root root 179,  2 Jan  1 00:00 /dev/mmcblk0p2
+brw------- 1 root root 179,  3 Jan  1 00:00 /dev/mmcblk0p3
+brw------- 1 root root 179,  4 Jan  1 00:00 /dev/mmcblk0p4
+brw------- 1 root root 179,  5 Jan  1 00:00 /dev/mmcblk0p5
+brw------- 1 root root 179,  6 Jan  1 00:00 /dev/mmcblk0p6
+brw------- 1 root root 179,  7 Jan  1 00:00 /dev/mmcblk0p7
+brw------- 1 root root 179,  8 Jan  1 00:00 /dev/mmcblk0p8
+brw------- 1 root root 179,  9 Jan  1 00:00 /dev/mmcblk0p9
+brw------- 1 root root 179, 64 Jan  1 00:00 /dev/mmcblk1
+brw------- 1 root root 179, 65 Jan  1 00:00 /dev/mmcblk1p1
+UTP: sending Success to kernel for command $ ls -l /dev/mmc* .
+input: PixArt Dell MS116 USB Optical Mouse as /devices/soc0/soc/2100000.aips-bus/2184200.usb/ci_hdrc.1/usb1/1-1/1-1.3/1-1.3:1.0/0003:413C:301A.0001/input/input2
+hid-generic 0003:413C:301A.0001: input: USB HID v1.11 Mouse [PixArt Dell MS116 USB Optical Mouse] on usb-ci_hdrc.1-1.3/input0
+utp_poll: pass returned.
+UTP: received command '$ dd if=/dev/zero of=/dev/mmcblk0 bs=1k seek=768 conv=fsync count=136'
+UTP: executing "dd if=/dev/zero of=/dev/mmcblk0 bs=1k seek=768 conv=fsync count=136"
+136+0 records in
+136+0 records out
+139264 bytes (139 kB, 136 KiB) copied, 0.0639017 s, 2.2 MB/s
+UTP: sending Success to kernel for command $ dd if=/dev/zero of=/dev/mmcblk0 bs=1k seek=768 conv=fsync count=136.
+utp_poll: pass returned.
+UTP: received command '$ echo 0 > /sys/block/mmcblk0boot0/force_ro'
+UTP: executing "echo 0 > /sys/block/mmcblk0boot0/force_ro"
+UTP: sending Success to kernel for command $ echo 0 > /sys/block/mmcblk0boot0/force_ro.
+utp_poll: pass returned.
+UTP: received command 'send'
+UTP: sending Success to kernel for command send.
+UTP: received command '$ dd if=$FILE of=/dev/mmcblk0boot0 bs=512 seek=2'
+UTP: executing "dd if=$FILE of=/dev/mmcblk0boot0 bs=512 seek=2"
+686+0 records in
+686+0 records out
+351232 bytes (351 kB, 343 KiB) copied, 0.13505 s, 2.6 MB/s
+UTP: sending Success to kernel for command $ dd if=$FILE of=/dev/mmcblk0boot0 bs=512 seek=2.
+utp_poll: pass returned.
+UTP: received command '$ echo 1 > /sys/block/mmcblk0boot0/force_ro'
+UTP: executing "echo 1 > /sys/block/mmcblk0boot0/force_ro"
+UTP: sending Success to kernel for command $ echo 1 > /sys/block/mmcblk0boot0/force_ro.
+utp_poll: pass returned.
+UTP: received command '$ mmc bootpart enable 1 1 /dev/mmcblk0'
+UTP: executing "mmc bootpart enable 1 1 /dev/mmcblk0"
+UTP: sending Success to kernel for command $ mmc bootpart enable 1 1 /dev/mmcblk0.
+utp_poll: pass returned.
+UTP: received command '$ ls -l /dev/mmc* '
+UTP: executing "ls -l /dev/mmc* "
+brw------- 1 root root 179,  0 Jan  1 00:00 /dev/mmcblk0
+brw------- 1 root root 179, 16 Jan  1 00:00 /dev/mmcblk0boot0
+brw------- 1 root root 179, 32 Jan  1 00:00 /dev/mmcblk0boot1
+brw------- 1 root root 179,  1 Jan  1 00:00 /dev/mmcblk0p1
+brw------- 1 root root 179, 10 Jan  1 00:00 /dev/mmcblk0p10
+brw------- 1 root root 179, 11 Jan  1 00:00 /dev/mmcblk0p11
+brw------- 1 root root 179,  2 Jan  1 00:00 /dev/mmcblk0p2
+brw------- 1 root root 179,  3 Jan  1 00:00 /dev/mmcblk0p3
+brw------- 1 root root 179,  4 Jan  1 00:00 /dev/mmcblk0p4
+brw------- 1 root root 179,  5 Jan  1 00:00 /dev/mmcblk0p5
+brw------- 1 root root 179,  6 Jan  1 00:00 /dev/mmcblk0p6
+brw------- 1 root root 179,  7 Jan  1 00:00 /dev/mmcblk0p7
+brw------- 1 root root 179,  8 Jan  1 00:00 /dev/mmcblk0p8
+brw------- 1 root root 179,  9 Jan  1 00:00 /dev/mmcblk0p9
+brw------- 1 root root 179, 64 Jan  1 00:00 /dev/mmcblk1
+brw------- 1 root root 179, 65 Jan  1 00:00 /dev/mmcblk1p1
+UTP: sending Success to kernel for command $ ls -l /dev/mmc* .
+utp_poll: pass returned.
+UTP: received command 'send'
+UTP: sending Success to kernel for command send.
+UTP: received command '$ dd if=$FILE of=/dev/mmcblk0'
+UTP: executing "dd if=$FILE of=/dev/mmcblk0"
+67+0 records in
+67+0 records out
+34304 bytes (34 kB, 34 KiB) copied, 0.0149283 s, 2.3 MB/s
+UTP: sending Success to kernel for command $ dd if=$FILE of=/dev/mmcblk0.
+utp_poll: pass returned.
+UTP: received command '$ hdparm -z /dev/mmcblk0'
+UTP: executing "hdparm -z /dev/mmcblk0"
+
+/dev/mmcblk0:
+ re-reading partition table
+Alternate GPT is invalid, using primary GPT.
+ mmcblk0: p1 p2 p3 p4 p5 p6 p7 p8 p9 p10 p11
+UTP: sending Success to kernel for command $ hdparm -z /dev/mmcblk0.
+utp_poll: pass returned.
+UTP: received command '$ gdisk -l /dev/mmcblk0 '
+UTP: executing "gdisk -l /dev/mmcblk0 "
+GPT fdisk (gdisk) version 1.0.1
+
+Caution: invalid backup GPT header, but valid main header; regenerating
+backup header from main header.
+
+Warning! One or more CRCs don't match. You should repair the disk!
+
+Partition table scan:
+  MBR: protective
+  BSD: not present
+  APM: not present
+  GPT: damaged
+
+****************************************************************************
+Caution: Found protective or hybrid MBR and corrupt GPT. Using GPT, but disk
+verification and recovery are STRONGLY recommended.
+****************************************************************************
+Disk /dev/mmcblk0: 7520256 sectors, 3.6 GiB
+Logical sector size: 512 bytes
+Disk identifier (GUID): 491994C0-85C2-42C1-BE49-13D04A3EF49B
+Partition table holds up to 128 entries
+First usable sector is 34, last usable sector is 7339998
+Partitions will be aligned on 2048-sector boundaries
+Total free space is 4029 sectors (2.0 MiB)
+
+Number  Start (sector)    End (sector)  Size       Code  Name
+   1            2048           67583   32.0 MiB    FFFF  boot
+   2           67584          133119   32.0 MiB    8300  recovery
+   3          133120         3278847   1.5 GiB     FFFF  system
+   4         3278848         4327423   512.0 MiB   FFFF  cache
+   5         4327424         4343807   8.0 MiB     FFFF  device
+   6         4343808         4351999   4.0 MiB     FFFF  misc
+   7         4352000         4356095   2.0 MiB     FFFF  datafooter
+   8         4356096         4360191   2.0 MiB     FFFF  metadata
+   9         4360192         4362239   1024.0 KiB  FFFF  presistdata
+  10         4362240         7335935   1.4 GiB     FFFF  userdata
+  11         7335936         7337983   1024.0 KiB  0700  fbmisc
+UTP: sending Success to kernel for command $ gdisk -l /dev/mmcblk0 .
+utp_poll: pass returned.
+UTP: received command 'send'
+UTP: sending Success to kernel for command send.
+UTP: received command '$ echo `gdisk -l /dev/mmcblk0 | grep -w boot | awk '{print $1}'` > /tmp/partIdx'
+UTP: executing "echo `gdisk -l /dev/mmcblk0 | grep -w boot | awk '{print $1}'` > /tmp/partIdx"
+Caution: invalid backup GPT header, but valid main header; regenerating
+backup header from main header.
+
+Warning! One or more CRCs don't match. You should repair the disk!
+
+UTP: sending Success to kernel for command $ echo `gdisk -l /dev/mmcblk0 | grep -w boot | awk '{print $1}'` > /tmp/partIdx.
+utp_poll: pass returned.
+UTP: received command '$ dd if=$FILE of=/dev/mmcblk0p`cat /tmp/partIdx`'
+UTP: executing "dd if=$FILE of=/dev/mmcblk0p`cat /tmp/partIdx`"
+22446+1 records in
+22446+1 records out
+11492648 bytes (11 MB, 11 MiB) copied, 1.79095 s, 6.4 MB/s
+UTP: sending Success to kernel for command $ dd if=$FILE of=/dev/mmcblk0p`cat /tmp/partIdx`.
+utp_poll: pass returned.
+UTP: received command '$ ls -l /dev/mmc* '
+UTP: executing "ls -l /dev/mmc* "
+brw------- 1 root root 179,  0 Jan  1 00:00 /dev/mmcblk0
+brw------- 1 root root 179, 16 Jan  1 00:00 /dev/mmcblk0boot0
+brw------- 1 root root 179, 32 Jan  1 00:00 /dev/mmcblk0boot1
+brw------- 1 root root 179,  1 Jan  1 00:00 /dev/mmcblk0p1
+brw------- 1 root root 179, 10 Jan  1 00:00 /dev/mmcblk0p10
+brw------- 1 root root 179, 11 Jan  1 00:00 /dev/mmcblk0p11
+brw------- 1 root root 179,  2 Jan  1 00:00 /dev/mmcblk0p2
+brw------- 1 root root 179,  3 Jan  1 00:00 /dev/mmcblk0p3
+brw------- 1 root root 179,  4 Jan  1 00:00 /dev/mmcblk0p4
+brw------- 1 root root 179,  5 Jan  1 00:00 /dev/mmcblk0p5
+brw------- 1 root root 179,  6 Jan  1 00:00 /dev/mmcblk0p6
+brw------- 1 root root 179,  7 Jan  1 00:00 /dev/mmcblk0p7
+brw------- 1 root root 179,  8 Jan  1 00:00 /dev/mmcblk0p8
+brw------- 1 root root 179,  9 Jan  1 00:00 /dev/mmcblk0p9
+brw------- 1 root root 179, 64 Jan  1 00:00 /dev/mmcblk1
+brw------- 1 root root 179, 65 Jan  1 00:00 /dev/mmcblk1p1
+UTP: sending Success to kernel for command $ ls -l /dev/mmc* .
+utp_poll: pass returned.
+UTP: received command '$ echo `gdisk -l /dev/mmcblk0 | grep -w cache | awk '{print $1}'` > /tmp/partIdx'
+UTP: executing "echo `gdisk -l /dev/mmcblk0 | grep -w cache | awk '{print $1}'` > /tmp/partIdx"
+Caution: invalid backup GPT header, but valid main header; regenerating
+backup header from main header.
+
+Warning! One or more CRCs don't match. You should repair the disk!
+
+UTP: sending Success to kernel for command $ echo `gdisk -l /dev/mmcblk0 | grep -w cache | awk '{print $1}'` > /tmp/partIdx.
+utp_poll: pass returned.
+UTP: received command '$ mkfs.ext4 -F -E nodiscard /dev/mmcblk0p`cat /tmp/partIdx`'
+UTP: executing "mkfs.ext4 -F -E nodiscard /dev/mmcblk0p`cat /tmp/partIdx`"
+mke2fs 1.43 (17-May-2016)
+/dev/mmcblk0p4 contains a ext4 file system
+	last mounted on Thu Jan  1 00:00:06 1970
+Creating filesystem with 131072 4k blocks and 32768 inodes
+Filesystem UUID: 7762d1b3-761b-403d-ac2b-f4302adcf948
+Superblock backups stored on blocks: 
+	32768, 98304
+
+Allocating group tables: 0/4   done                            
+Writing inode tables: 0/4   done                            
+Creating journal (4096 blocks): done
+Writing superblocks and filesystem accounting information: 0/4   done
+
+UTP: sending Success to kernel for command $ mkfs.ext4 -F -E nodiscard /dev/mmcblk0p`cat /tmp/partIdx`.
+utp_poll: pass returned.
+UTP: received command '$ echo `gdisk -l /dev/mmcblk0 | grep -w device | awk '{print $1}'` > /tmp/partIdx'
+UTP: executing "echo `gdisk -l /dev/mmcblk0 | grep -w device | awk '{print $1}'` > /tmp/partIdx"
+Caution: invalid backup GPT header, but valid main header; regenerating
+backup header from main header.
+
+Warning! One or more CRCs don't match. You should repair the disk!
+
+UTP: sending Success to kernel for command $ echo `gdisk -l /dev/mmcblk0 | grep -w device | awk '{print $1}'` > /tmp/partIdx.
+utp_poll: pass returned.
+UTP: received command '$ mkfs.ext4 -F -E nodiscard /dev/mmcblk0p`cat /tmp/partIdx`'
+UTP: executing "mkfs.ext4 -F -E nodiscard /dev/mmcblk0p`cat /tmp/partIdx`"
+mke2fs 1.43 (17-May-2016)
+/dev/mmcblk0p5 contains a ext4 file system
+	created on Thu Jan  1 00:00:11 1970
+Creating filesystem with 8192 1k blocks and 2048 inodes
+
+Allocating group tables: 0/1   done                            
+Writing inode tables: 0/1   done                            
+Creating journal (1024 blocks): done
+Writing superblocks and filesystem accounting information: 0/1   done
+
+UTP: sending Success to kernel for command $ mkfs.ext4 -F -E nodiscard /dev/mmcblk0p`cat /tmp/partIdx`.
+utp_poll: pass returned.
+UTP: received command '$ echo `gdisk -l /dev/mmcblk0 | grep -w userdata | awk '{print $1}'` > /tmp/partIdx'
+UTP: executing "echo `gdisk -l /dev/mmcblk0 | grep -w userdata | awk '{print $1}'` > /tmp/partIdx"
+Caution: invalid backup GPT header, but valid main header; regenerating
+backup header from main header.
+
+Warning! One or more CRCs don't match. You should repair the disk!
+
+UTP: sending Success to kernel for command $ echo `gdisk -l /dev/mmcblk0 | grep -w userdata | awk '{print $1}'` > /tmp/partIdx.
+utp_poll: pass returned.
+UTP: received command '$ mkfs.ext4 -F -E nodiscard -b 4096 -m 0 -O ^flex_bg,^uninit_bg /dev/mmcblk0p`cat /tmp/partIdx`'
+UTP: executing "mkfs.ext4 -F -E nodiscard -b 4096 -m 0 -O ^flex_bg,^uninit_bg /dev/mmcblk0p`cat /tmp/partIdx`"
+mke2fs 1.43 (17-May-2016)
+/dev/mmcblk0p10 contains a ext4 file system
+	last mounted on /data on Thu Jan  1 00:00:06 1970
+Creating filesystem with 371712 4k blocks and 92928 inodes
+Filesystem UUID: 546dd627-398f-46c6-8a7a-f8978b0205fc
+Superblock backups stored on blocks: 
+	32768, 98304, 163840, 229376, 294912
+
+Allocating group tables:  0/12     done                            
+Writing inode tables:  0/12     done                            
+Creating journal (8192 blocks): done
+Writing superblocks and filesystem accounting information:  0/12     done
+
+UTP: sending Success to kernel for command $ mkfs.ext4 -F -E nodiscard -b 4096 -m 0 -O ^flex_bg,^uninit_bg /dev/mmcblk0p`cat /tmp/partIdx`.
+utp_poll: pass returned.
+UTP: received command '$ mount -o remount,size=1024M rootfs /'
+UTP: executing "mount -o remount,size=1024M rootfs /"
+UTP: sending Success to kernel for command $ mount -o remount,size=1024M rootfs /.
+utp_poll: pass returned.
+UTP: received command 'send'
+UTP: sending Success to kernel for command send.
+random: crng init done
+UTP: received command '$ echo `gdisk -l /dev/mmcblk0 | grep -w system | awk '{print $1}'` > /tmp/partIdx'
+UTP: executing "echo `gdisk -l /dev/mmcblk0 | grep -w system | awk '{print $1}'` > /tmp/partIdx"
+Caution: invalid backup GPT header, but valid main header; regenerating
+backup header from main header.
+
+Warning! One or more CRCs don't match. You should repair the disk!
+
+UTP: sending Success to kernel for command $ echo `gdisk -l /dev/mmcblk0 | grep -w system | awk '{print $1}'` > /tmp/partIdx.
+utp_poll: pass returned.
+UTP: received command '$ simg2img $FILE /dev/mmcblk0p`cat /tmp/partIdx`'
+UTP: executing "simg2img $FILE /dev/mmcblk0p`cat /tmp/partIdx`"
+UTP: sending Success to kernel for command $ simg2img $FILE /dev/mmcblk0p`cat /tmp/partIdx`.
+utp_poll: pass returned.
+UTP: received command 'send'
+UTP: sending Success to kernel for command send.
+UTP: received command '$ echo `gdisk -l /dev/mmcblk0 | grep -w 'recovery$' | awk '{print $1}'` > /tmp/partIdx'
+UTP: executing "echo `gdisk -l /dev/mmcblk0 | grep -w 'recovery$' | awk '{print $1}'` > /tmp/partIdx"
+Caution: invalid backup GPT header, but valid main header; regenerating
+backup header from main header.
+
+Warning! One or more CRCs don't match. You should repair the disk!
+
+UTP: sending Success to kernel for command $ echo `gdisk -l /dev/mmcblk0 | grep -w 'recovery$' | awk '{print $1}'` > /tmp/partIdx.
+utp_poll: pass returned.
+UTP: received command '$ dd if=$FILE of=/dev/mmcblk0p`cat /tmp/partIdx`'
+UTP: executing "dd if=$FILE of=/dev/mmcblk0p`cat /tmp/partIdx`"
+27218+1 records in
+27218+1 records out
+13935916 bytes (14 MB, 13 MiB) copied, 2.18646 s, 6.4 MB/s
+UTP: sending Success to kernel for command $ dd if=$FILE of=/dev/mmcblk0p`cat /tmp/partIdx`.
+utp_poll: pass returned.
+UTP: received command '$ sync'
+UTP: executing "sync"
+UTP: sending Success to kernel for command $ sync.
+utp_poll: pass returned.
+UTP: received command 'frf'
+UTP: closing the file
+UTP: sending Success to kernel for command frf.
+utp_poll: pass returned.
+UTP: received command '$ echo Update Complete!'
+UTP: executing "echo Update Complete!"
+Update Complete!
+UTP: sending Success to kernel for command $ echo Update Complete!.
+utp_poll: pass returned.
+
+
+U-Boot 2017.03-00002-gebf9dc2527 (Jan 05 2018 - 12:43:45 +0530)
+
+CPU:   Freescale i.MX6Q rev1.5 at 792 MHz
+Reset cause: POR
+I2C:   ready
+DRAM:  2 GiB
+PMIC: device id: 0x10, revision id: 0x21
+PMIC: programmed
+MMC:   FSL_SDHC: 0, FSL_SDHC: 1, FSL_SDHC: 2
+Unable to allocate framebuffer memory
+In:    serial
+Out:   serial
+Err:   serial
+Model: Toradex Apalis iMX6 Quad 2GB IT V1.1C, Serial# 05146387
+flash target is MMC:0
+Net:   using PHY at 7
+FEC [PRIME]
+Fastboot: Normal
+Hit any key to stop autoboot:  1  0 
+boota mmc0 
+CACHE: Misaligned operation at range [8ffb79a0, 8ffb7a20]
+CACHE: Misaligned operation at range [8ffb79a0, 8ffb7a20]
+kernel   @ 14008000 (9802376)
+ramdisk  @ 15000000 (1628386)
+fdt      @ 14f00000 (53973)
+## Booting Android Image at 0x12000000 ...
+Kernel load addr 0x14008000 size 9573 KiB
+Kernel command line: console=ttymxc0,115200 init=/init video=mxcfb0:dev=ldb,fbpix=RGB32,bpp=32 video=mxcfb1:dev=hdmi,640x480M@60,if=RGB24,bpp=16 video=mxcfb2:off video=mxcfb3:off vmalloc=256M androidboot.console=ttymxc0 consoleblank=0 androidboot.hardware=freescale cma=448M androidboot.selinux=permissive androidboot.dm_verity=disabled buildvariant=user androidboot.serialno=1b2429d4ea997115 androidboot.storage_type=emmc
+## Flattened Device Tree blob at 14f00000
+   Booting using the fdt blob at 0x14f00000
+   Loading Kernel Image ... OK
+   Using Device Tree in place at 14f00000, end 14f102d4
+
+Starting kernel ...
+
+Booting Linux on physical CPU 0x0
+Linux version 4.9.67-07229-gdc6c16ec0433-dirty (embadmin@ubuntu) (gcc version 4.9 20150123 (prerelease) (GCC) ) #17 SMP PREEMPT Thu Jan 4 11:40:16 IST 2018
+CPU: ARMv7 Processor [412fc09a] revision 10 (ARMv7), cr=10c53c7d
+CPU: PIPT / VIPT nonaliasing data cache, VIPT aliasing instruction cache
+OF: fdt:Machine model: Aravinth :UJET-04-Jan Toradex Apalis iMX6Q/D Module on Ixora V1.1 Carrier Board
+cma: Reserved 448 MiB at 0x22000000
+Memory policy: Data cache writealloc
+percpu: Embedded 15 pages/cpu @ee6b3000 s31040 r8192 d22208 u61440
+Built 1 zonelists in Zone order, mobility grouping on.  Total pages: 522768
+Kernel command line: console=ttymxc0,115200 init=/init video=mxcfb0:dev=ldb,fbpix=RGB32,bpp=32 video=mxcfb1:dev=hdmi,640x480M@60,if=RGB24,bpp=16 video=mxcfb2:off video=mxcfb3:off vmalloc=256M androidboot.console=ttymxc0 consoleblank=0 androidboot.hardware=freescale cma=448M androidboot.selinux=permissive androidboot.dm_verity=disabled buildvariant=user androidboot.serialno=1b2429d4ea997115 androidboot.storage_type=emmc
+PID hash table entries: 4096 (order: 2, 16384 bytes)
+Dentry cache hash table entries: 131072 (order: 7, 524288 bytes)
+Inode-cache hash table entries: 65536 (order: 6, 262144 bytes)
+Memory: 1597048K/2097152K available (13312K kernel code, 1128K rwdata, 4016K rodata, 1024K init, 606K bss, 41352K reserved, 458752K cma-reserved, 1318912K highmem)
+Virtual kernel memory layout:
+    vector  : 0xffff0000 - 0xffff1000   (   4 kB)
+    fixmap  : 0xffc00000 - 0xfff00000   (3072 kB)
+    vmalloc : 0xf0000000 - 0xff800000   ( 248 MB)
+    lowmem  : 0xc0000000 - 0xef800000   ( 760 MB)
+    pkmap   : 0xbfe00000 - 0xc0000000   (   2 MB)
+    modules : 0xbf000000 - 0xbfe00000   (  14 MB)
+      .text : 0xc0008000 - 0xc0e00000   (14304 kB)
+      .init : 0xc1300000 - 0xc1400000   (1024 kB)
+      .data : 0xc1400000 - 0xc151a218   (1129 kB)
+       .bss : 0xc151a218 - 0xc15b1be0   ( 607 kB)
+SLUB: HWalign=64, Order=0-3, MinObjects=0, CPUs=4, Nodes=1
+Preemptible hierarchical RCU implementation.
+	Build-time adjustment of leaf fanout to 32.
+NR_IRQS:16 nr_irqs:16 16
+L2C-310 errata 752271 769419 enabled
+L2C-310 enabling early BRESP for Cortex-A9
+L2C-310 full line of zeros enabled for Cortex-A9
+L2C-310 ID prefetch enabled, offset 16 lines
+L2C-310 dynamic clock gating enabled, standby mode enabled
+L2C-310 cache controller enabled, 16 ways, 1024 kB
+L2C-310: CACHE_ID 0x410000c7, AUX_CTRL 0x76470001
+Switching to timer-based delay loop, resolution 333ns
+sched_clock: 32 bits at 3000kHz, resolution 333ns, wraps every 715827882841ns
+clocksource: mxc_timer1: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 637086815595 ns
+Console: colour dummy device 80x30
+Calibrating delay loop (skipped), value calculated using timer frequency.. 6.00 BogoMIPS (lpj=30000)
+pid_max: default: 32768 minimum: 301
+Security Framework initialized
+SELinux:  Initializing.
+Mount-cache hash table entries: 2048 (order: 1, 8192 bytes)
+Mountpoint-cache hash table entries: 2048 (order: 1, 8192 bytes)
+CPU: Testing write buffer coherency: ok
+CPU0: update cpu_capacity 1024
+CPU0: thread -1, cpu 0, socket 0, mpidr 80000000
+Setting up static identity map for 0x10100000 - 0x10100058
+CPU1: update cpu_capacity 1024
+CPU1: thread -1, cpu 1, socket 0, mpidr 80000001
+CPU2: update cpu_capacity 1024
+CPU2: thread -1, cpu 2, socket 0, mpidr 80000002
+CPU3: update cpu_capacity 1024
+CPU3: thread -1, cpu 3, socket 0, mpidr 80000003
+Brought up 4 CPUs
+SMP: Total of 4 processors activated (24.00 BogoMIPS).
+CPU: All CPU(s) started in SVC mode.
+CPU3: update max cpu_capacity 1024
+devtmpfs: initialized
+CPU2: update max cpu_capacity 1024
+VFP support v0.3: implementor 41 architecture 3 part 30 variant 9 rev 4
+clocksource: jiffies: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 19112604462750000 ns
+futex hash table entries: 1024 (order: 4, 65536 bytes)
+pinctrl core: initialized pinctrl subsystem
+NET: Registered protocol family 16
+DMA: preallocated 256 KiB pool for atomic coherent allocations
+cpuidle: using governor menu
+CPU identified as i.MX6Q, silicon rev 1.5
+hw-breakpoint: found 5 (+1 reserved) breakpoint and 1 watchpoint registers.
+hw-breakpoint: maximum watchpoint size is 4 bytes.
+imx6q-pinctrl 20e0000.iomuxc: initialized IMX pinctrl driver
+imx-gpc 20dc000.gpc: no fsl,ldo-bypass found!
+imx-gpc 20dc000.gpc: Registered imx-gpc
+mxs-dma 110000.dma-apbh: initialized
+usb_host_vbus: supplied by usb_host_vbus_hub
+SCSI subsystem initialized
+usbcore: registered new interface driver usbfs
+usbcore: registered new interface driver hub
+usbcore: registered new device driver usb
+2000000.aips-bus:usbphy_nop1 supply vcc not found, using dummy regulator
+2000000.aips-bus:usbphy_nop2 supply vcc not found, using dummy regulator
+i2c i2c-1: IMX I2C adapter registered
+i2c i2c-1: can't use DMA, using PIO instead.
+stmpe-i2c 2-0041: stmpe811 detected, chip id: 0x811
+i2c i2c-2: IMX I2C adapter registered
+i2c i2c-2: can't use DMA, using PIO instead.
+i2c i2c-3: IMX I2C adapter registered
+i2c i2c-3: can't use DMA, using PIO instead.
+Linux video capture interface: v2.00
+pps_core: LinuxPPS API ver. 1 registered
+pps_core: Software ver. 5.3.6 - Copyright 2005-2007 Rodolfo Giometti <giometti@linux.it>
+PTP clock support registered
+imx-ipuv3 2400000.ipu: IPU DMFC NORMAL mode: 1(0~1), 5B(4,5), 5F(6,7)
+imx-ipuv3 2800000.ipu: IPU DMFC NORMAL mode: 1(0~1), 5B(4,5), 5F(6,7)
+mxc_mipi_csi2 21dc000.mipi_csi: i.MX MIPI CSI2 driver probed ipu0 csi1
+mxc_mipi_csi2 21dc000.mipi_csi: i.MX MIPI CSI2 dphy version is 0x3130302a
+MIPI CSI2 driver module loaded
+imx rpmsg driver is registered.
+Advanced Linux Sound Architecture Driver Initialized.
+Bluetooth: Core ver 2.22
+NET: Registered protocol family 31
+Bluetooth: HCI device and connection manager initialized
+Bluetooth: HCI socket layer initialized
+Bluetooth: L2CAP socket layer initialized
+Bluetooth: SCO socket layer initialized
+clocksource: Switched to clocksource mxc_timer1
+VFS: Disk quotas dquot_6.6.0
+VFS: Dquot-cache hash table entries: 1024 (order 0, 4096 bytes)
+NET: Registered protocol family 2
+TCP established hash table entries: 8192 (order: 3, 32768 bytes)
+TCP bind hash table entries: 8192 (order: 4, 65536 bytes)
+TCP: Hash tables configured (established 8192 bind 8192)
+UDP hash table entries: 512 (order: 2, 16384 bytes)
+UDP-Lite hash table entries: 512 (order: 2, 16384 bytes)
+NET: Registered protocol family 1
+RPC: Registered named UNIX socket transport module.
+RPC: Registered udp transport module.
+RPC: Registered tcp transport module.
+RPC: Registered tcp NFSv4.1 backchannel transport module.
+Trying to unpack rootfs image as initramfs...
+Freeing initrd memory: 1592K
+hw perfevents: enabled with armv7_cortex_a9 PMU driver, 7 counters available
+Bus freq driver module loaded
+audit: initializing netlink subsys (disabled)
+audit: type=2000 audit(0.870:1): initialized
+workingset: timestamp_bits=30 max_order=19 bucket_order=0
+NFS: Registering the id_resolver key type
+Key type id_resolver registered
+Key type id_legacy registered
+ntfs: driver 2.1.32 [Flags: R/W DEBUG].
+jffs2: version 2.2. (NAND) © 2001-2006 Red Hat, Inc.
+fuse init (API version 7.26)
+bounce: pool size: 64 pages
+io scheduler noop registered
+io scheduler deadline registered
+io scheduler cfq registered (default)
+backlight supply power not found, using dummy regulator
+20e0000.hdmi_video supply HDMI not found, using dummy regulator
+mxc_sdc_fb fb@0: registered mxc display driver ldb
+imx-ipuv3 2800000.ipu: IPU DMFC DP HIGH RESOLUTION: 1(0,1), 5B(2~5), 5F(6,7)
+Console: switching to colour frame buffer device 128x48
+mxc_hdmi 20e0000.hdmi_video: Detected HDMI controller 0x13:0xa:0xa0:0xc1
+fbcvt: 640x480@60: CVT Name - .307M3
+mxc_sdc_fb fb@1: registered mxc display driver hdmi
+mxc_sdc_fb fb@2: Can't get fb option for mxcfb2!
+mxc_sdc_fb fb@3: Can't get fb option for mxcfb3!
+imx-sdma 20ec000.sdma: no iram assigned, using external mem
+imx-sdma 20ec000.sdma: loaded firmware 3.3
+pfuze100-regulator 2-0008: Full layer: 2, Metal layer: 1
+pfuze100-regulator 2-0008: FAB: 0, FIN: 0
+pfuze100-regulator 2-0008: pfuze100 found.
+mxc_hdmi 20e0000.hdmi_video: Read EDID again
+2020000.serial: ttymxc0 at MMIO 0x2020000 (irq = 29, base_baud = 5000000) is a IMX
+mxc_hdmi 20e0000.hdmi_video: create default modelist
+console [ttymxc0] enabled
+21e8000.serial: ttymxc1 at MMIO 0x21e8000 (irq = 78, base_baud = 5000000) is a IMX
+21f0000.serial: ttymxc3 at MMIO 0x21f0000 (irq = 79, base_baud = 5000000) is a IMX
+21f4000.serial: ttymxc4 at MMIO 0x21f4000 (irq = 80, base_baud = 5000000) is a IMX
+imx sema4 driver is registered.
+[drm] Initialized
+[drm] Initialized vivante 1.0.0 20120216 on minor 0
+brd: module loaded
+loop: module loaded
+zram: Added device: zram0
+ahci-imx 2200000.sata: fsl,transmit-level-mV not specified, using 00000024
+ahci-imx 2200000.sata: fsl,transmit-boost-mdB not specified, using 00000480
+ahci-imx 2200000.sata: fsl,transmit-atten-16ths not specified, using 00002000
+ahci-imx 2200000.sata: fsl,receive-eq-mdB not specified, using 05000000
+ahci-imx 2200000.sata: SSS flag set, parallel bus scan disabled
+ahci-imx 2200000.sata: AHCI 0001.0300 32 slots 1 ports 3 Gbps 0x1 impl platform mode
+ahci-imx 2200000.sata: flags: ncq sntf stag pm led clo only pmp pio slum part ccc apst 
+scsi host0: ahci-imx
+ata1: SATA max UDMA/133 mmio [mem 0x02200000-0x02203fff] port 0x100 irq 87
+spi_imx 2008000.ecspi: probed
+libphy: Fixed MDIO Bus: probed
+tun: Universal TUN/TAP device driver, 1.6
+tun: (C) 1999-2004 Max Krasnyansky <maxk@qualcomm.com>
+CAN device driver interface
+2090000.flexcan supply xceiver not found, using dummy regulator
+flexcan 2090000.flexcan: device registered (reg_base=f02f4000, irq=38)
+2094000.flexcan supply xceiver not found, using dummy regulator
+flexcan 2094000.flexcan: device registered (reg_base=f02fc000, irq=39)
+2188000.ethernet supply phy not found, using dummy regulator
+pps pps0: new PPS source ptp0
+libphy: fec_enet_mii_bus: probed
+fec 2188000.ethernet eth0: registered PHC device 0
+PPP generic driver version 2.4.2
+PPP BSD Compression module registered
+PPP Deflate Compression module registered
+PPP MPPE Compression module registered
+NET: Registered protocol family 24
+usbcore: registered new interface driver kaweth
+pegasus: v0.9.3 (2013/04/25), Pegasus/Pegasus II USB Ethernet driver
+usbcore: registered new interface driver pegasus
+usbcore: registered new interface driver rtl8150
+usbcore: registered new interface driver r8152
+usbcore: registered new interface driver asix
+usbcore: registered new interface driver ax88179_178a
+usbcore: registered new interface driver cdc_ether
+usbcore: registered new interface driver cdc_eem
+usbcore: registered new interface driver net1080
+usbcore: registered new interface driver cdc_subset
+usbcore: registered new interface driver zaurus
+usbcore: registered new interface driver cdc_ncm
+ehci_hcd: USB 2.0 'Enhanced' Host Controller (EHCI) Driver
+ehci-mxc: Freescale On-Chip EHCI Host driver
+usbcore: registered new interface driver cdc_acm
+cdc_acm: USB Abstract Control Model driver for USB modems and ISDN adapters
+usbcore: registered new interface driver usb-storage
+usbcore: registered new interface driver usbserial
+usbcore: registered new interface driver usbserial_generic
+usbserial: USB Serial support registered for generic
+usbcore: registered new interface driver ftdi_sio
+usbserial: USB Serial support registered for FTDI USB Serial Device
+usbcore: registered new interface driver option
+usbserial: USB Serial support registered for GSM modem (1-port)
+usbcore: registered new interface driver usbtest
+usbcore: registered new interface driver usb_ehset_test
+2184800.usbmisc supply vbus-wakeup not found, using dummy regulator
+ci_hdrc ci_hdrc.1: EHCI Host Controller
+ci_hdrc ci_hdrc.1: new USB bus registered, assigned bus number 1
+ci_hdrc ci_hdrc.1: USB 2.0 started, EHCI 1.00
+usb usb1: New USB device found, idVendor=1d6b, idProduct=0002
+usb usb1: New USB device strings: Mfr=3, Product=2, SerialNumber=1
+usb usb1: Product: EHCI Host Controller
+usb usb1: Manufacturer: Linux 4.9.67-07229-gdc6c16ec0433-dirty ehci_hcd
+usb usb1: SerialNumber: ci_hdrc.1
+hub 1-0:1.0: USB hub found
+hub 1-0:1.0: 1 port detected
+mousedev: PS/2 mouse device common for all mice
+usbcore: registered new interface driver xpad
+ata1: SATA link down (SStatus 0 SControl 300)
+ahci-imx 2200000.sata: no device found, disabling link.
+ahci-imx 2200000.sata: pass ahci_imx..hotplug=1 to enable hotplug
+usbcore: registered new interface driver usb_acecad
+usbcore: registered new interface driver aiptek
+usbcore: registered new interface driver gtco
+usbcore: registered new interface driver hanwang
+usbcore: registered new interface driver kbtab
+input: stmpe-ts as /devices/soc0/soc/2100000.aips-bus/21a4000.i2c/i2c-2/2-0041/stmpe-ts/input/input0
+snvs_rtc 20cc000.snvs:snvs-rtc-lp: rtc core: registered 20cc000.snvs:snvs-r as rtc0
+i2c /dev entries driver
+IR NEC protocol handler initialized
+IR RC5(x/sz) protocol handler initialized
+IR RC6 protocol handler initialized
+IR JVC protocol handler initialized
+IR Sony protocol handler initialized
+IR SANYO protocol handler initialized
+IR Sharp protocol handler initialized
+IR MCE Keyboard/mouse protocol handler initialized
+IR XMP protocol handler initialized
+mxc_v4l2_output v4l2_out: V4L2 device registered as video16
+mxc_v4l2_output v4l2_out: V4L2 device registered as video17
+mxc_v4l2_output v4l2_out: V4L2 device registered as video18
+mxc_v4l2_output v4l2_out: V4L2 device registered as video19
+ov564x_mipi 3-003c: found pwm2, period=0
+usb 1-1: new high-speed USB device number 2 using ci_hdrc
+ov5640_read_reg:write reg error:reg=300a
+camera ov5640_mipi is not found
+usbcore: registered new interface driver uvcvideo
+USB Video Class driver (1.1.1)
+imx2-wdt 20bc000.wdog: timeout 60 sec (nowayout=0)
+device-mapper: uevent: version 1.0.3
+device-mapper: ioctl: 4.35.0-ioctl (2016-06-23) initialised: dm-devel@redhat.com
+Bluetooth: HCI UART driver ver 2.3
+Bluetooth: HCI UART protocol H4 registered
+Bluetooth: HCI UART protocol BCSP registered
+Bluetooth: HCI UART protocol ATH3K registered
+usbcore: registered new interface driver btusb
+sdhci: Secure Digital Host Controller Interface driver
+sdhci: Copyright(c) Pierre Ossman
+sdhci-pltfm: SDHCI platform and OF driver helper
+sdhci-esdhc-imx 2190000.usdhc: could not get ultra high speed state, work on normal mode
+sdhci-esdhc-imx 2190000.usdhc: Got CD GPIO
+mmc1: SDHCI controller on 2190000.usdhc [2190000.usdhc] using ADMA
+sdhci-esdhc-imx 2198000.usdhc: could not get ultra high speed state, work on normal mode
+usb 1-1: New USB device found, idVendor=0424, idProduct=2514
+usb 1-1: New USB device strings: Mfr=0, Product=0, SerialNumber=0
+hub 1-1:1.0: USB hub found
+hub 1-1:1.0: 4 ports detected
+mmc1: host does not support reading read-only switch, assuming write-enable
+mmc1: new high speed SDHC card at address 59b4
+mmcblk1: mmc1:59b4 USD   7.48 GiB 
+mmc0: SDHCI controller on 2198000.usdhc [2198000.usdhc] using ADMA
+mxc_vpu 2040000.vpu_fsl: VPU initialized
+mxc_vdoa 21e4000.vdoa: i.MX Video Data Order Adapter(VDOA) driver probed
+mxc_hdmi_cec soc:hdmi_cec@00120000: HDMI CEC initialized
+ mmcblk1: p1
+Galcore version 6.2.2.96445
+random: fast init done
+mmc0: new DDR MMC card at address 0001
+mmcblk0: mmc0:0001 Q2J54A 3.59 GiB 
+mmcblk0boot0: mmc0:0001 Q2J54A partition 1 16.0 MiB
+mmcblk0boot1: mmc0:0001 Q2J54A partition 2 16.0 MiB
+Alternate GPT is invalid, using primary GPT.
+ mmcblk0: p1 p2 p3 p4 p5 p6 p7 p8 p9 p10 p11
+usb 1-1.3: new low-speed USB device number 3 using ci_hdrc
+usb 1-1.3: New USB device found, idVendor=413c, idProduct=301a
+usb 1-1.3: New USB device strings: Mfr=1, Product=2, SerialNumber=0
+usb 1-1.3: Product: Dell MS116 USB Optical Mouse
+usb 1-1.3: Manufacturer: PixArt
+caam 2100000.caam: ERA source: CAAMVID.
+caam 2100000.caam: AXI pipeline throttling enabled.
+caam 2100000.caam: Instantiated RNG4 SH1
+caam 2100000.caam: device ID = 0x0a16010000000000 (Era 4)
+caam 2100000.caam: job rings = 2, qi = 0
+caam algorithms registered in /proc/crypto
+caam_jr 2101000.jr0: registering rng-caam
+platform caam_sm: blkkey_ex: 4 keystore units available
+platform caam_sm: 64-bit clear key:
+platform caam_sm: [0000] 00 01 02 03 04 0f 06 07
+platform caam_sm: 64-bit black key:
+platform caam_sm: [0000] f9 57 cc d6 d6 ec 1e ca
+platform caam_sm: [0008] 6f 31 a0 9a b2 02 8c d4
+platform caam_sm: 128-bit clear key:
+platform caam_sm: [0000] 00 01 02 03 04 0f 06 07
+platform caam_sm: [0008] 08 09 0a 0b 0c 0d 0e 0f
+platform caam_sm: 128-bit black key:
+platform caam_sm: [0000] 95 1a 96 6b 5e d1 7e 86
+platform caam_sm: [0008] 4b 8b 28 11 3b e0 39 1b
+platform caam_sm: 192-bit clear key:
+platform caam_sm: [0000] 00 01 02 03 04 0f 06 07
+platform caam_sm: [0008] 08 09 0a 0b 0c 0d 0e 0f
+platform caam_sm: [0016] 10 11 12 13 14 15 16 17
+platform caam_sm: 192-bit black key:
+platform caam_sm: [0000] 42 d4 8d 47 97 51 6b 6f
+platform caam_sm: [0008] aa ea bb 49 78 d6 61 ed
+platform caam_sm: [0016] 85 73 3e 59 33 f2 dc 59
+platform caam_sm: [0024] bb 3a 0a 1b 86 f0 12 9e
+platform caam_sm: 256-bit clear key:
+platform caam_sm: [0000] 00 01 02 03 04 0f 06 07
+platform caam_sm: [0008] 08 09 0a 0b 0c 0d 0e 0f
+platform caam_sm: [0016] 10 11 12 13 14 15 16 17
+platform caam_sm: [0024] 18 19 1a 1b 1c 1d 1e 1f
+platform caam_sm: 256-bit black key:
+platform caam_sm: [0000] ab 59 9c f6 97 aa e5 8e
+platform caam_sm: [0008] 54 ea af ab 18 9f e7 a3
+platform caam_sm: [0016] b9 e0 9a 49 38 ef 58 4d
+platform caam_sm: [0024] 27 98 f2 a4 f9 23 24 3f
+platform caam_sm: 64-bit unwritten blob:
+platform caam_sm: [0000] 00 00 00 00 00 00 00 00
+platform caam_sm: [0008] 00 00 00 00 00 00 00 00
+platform caam_sm: [0016] 00 00 00 00 00 00 00 00
+platform caam_sm: [0024] 00 00 00 00 00 00 00 00
+platform caam_sm: [0032] 00 00 00 00 00 00 00 00
+platform caam_sm: [0040] 00 00 00 00 00 00 00 00
+platform caam_sm: [0048] 00 00 00 00 00 00 00 00
+platform caam_sm: [0056] 00 00 00 00 00 00 00 00
+platform caam_sm: [0064] 00 00 00 00 00 00 00 00
+platform caam_sm: [0072] 00 00 00 00 00 00 00 00
+platform caam_sm: [0080] 00 00 00 00 00 00 00 00
+platform caam_sm: [0088] 00 00 00 00 00 00 00 00
+platform caam_sm: 128-bit unwritten blob:
+platform caam_sm: [0000] 00 00 00 00 00 00 00 00
+platform caam_sm: [0008] 00 00 00 00 00 00 00 00
+platform caam_sm: [0016] 00 00 00 00 00 00 00 00
+platform caam_sm: [0024] 00 00 00 00 00 00 00 00
+platform caam_sm: [0032] 00 00 00 00 00 00 00 00
+platform caam_sm: [0040] 00 00 00 00 00 00 00 00
+platform caam_sm: [0048] 00 00 00 00 00 00 00 00
+platform caam_sm: [0056] 00 00 00 00 00 00 00 00
+platform caam_sm: [0064] 00 00 00 00 00 00 00 00
+platform caam_sm: [0072] 00 00 00 00 00 00 00 00
+platform caam_sm: [0080] 00 00 00 00 00 00 00 00
+platform caam_sm: [0088] 00 00 00 00 00 00 00 00
+platform caam_sm: 196-bit unwritten blob:
+platform caam_sm: [0000] 00 00 00 00 00 00 00 00
+platform caam_sm: [0008] 00 00 00 00 00 00 00 00
+platform caam_sm: [0016] 00 00 00 00 00 00 00 00
+platform caam_sm: [0024] 00 00 00 00 00 00 00 00
+platform caam_sm: [0032] 00 00 00 00 00 00 00 00
+platform caam_sm: [0040] 00 00 00 00 00 00 00 00
+platform caam_sm: [0048] 00 00 00 00 00 00 00 00
+platform caam_sm: [0056] 00 00 00 00 00 00 00 00
+platform caam_sm: [0064] 00 00 00 00 00 00 00 00
+platform caam_sm: [0072] 00 00 00 00 00 00 00 00
+platform caam_sm: [0080] 00 00 00 00 00 00 00 00
+platform caam_sm: [0088] 00 00 00 00 00 00 00 00
+platform caam_sm: 256-bit unwritten blob:
+platform caam_sm: [0000] 00 00 00 00 00 00 00 00
+platform caam_sm: [0008] 00 00 00 00 00 00 00 00
+platform caam_sm: [0016] 00 00 00 00 00 00 00 00
+platform caam_sm: [0024] 00 00 00 00 00 00 00 00
+platform caam_sm: [0032] 00 00 00 00 00 00 00 00
+platform caam_sm: [0040] 00 00 00 00 00 00 00 00
+platform caam_sm: [0048] 00 00 00 00 00 00 00 00
+platform caam_sm: [0056] 00 00 00 00 00 00 00 00
+platform caam_sm: [0064] 00 00 00 00 00 00 00 00
+platform caam_sm: [0072] 00 00 00 00 00 00 00 00
+platform caam_sm: [0080] 00 00 00 00 00 00 00 00
+platform caam_sm: [0088] 00 00 00 00 00 00 00 00
+platform caam_sm: 64-bit black key in blob:
+platform caam_sm: [0000] d4 53 6b 69 98 e5 ed 6b
+platform caam_sm: [0008] a8 f1 8c d8 d2 c6 36 82
+platform caam_sm: [0016] dc 7e 63 df e0 01 cf f0
+platform caam_sm: [0024] e2 8d f5 1f a9 11 56 29
+platform caam_sm: [0032] 91 d7 08 e4 4c 46 6b 72
+platform caam_sm: [0040] a9 ac 50 4d b1 3a 9d a2
+platform caam_sm: [0048] 53 e7 66 df 6f cc f4 e4
+platform caam_sm: [0056] 00 00 00 00 00 00 00 00
+platform caam_sm: [0064] 00 00 00 00 00 00 00 00
+platform caam_sm: [0072] 00 00 00 00 00 00 00 00
+platform caam_sm: [0080] 00 00 00 00 00 00 00 00
+platform caam_sm: [0088] 00 00 00 00 00 00 00 00
+platform caam_sm: 128-bit black key in blob:
+platform caam_sm: [0000] dd 0c 75 ae aa 94 11 85
+platform caam_sm: [0008] dd a9 4a e6 e4 61 0b 30
+platform caam_sm: [0016] d8 e9 66 3b 08 a5 09 5c
+platform caam_sm: [0024] 51 bc 8d 4e fc b3 c5 23
+platform caam_sm: [0032] 6b f1 fc fd 99 db 68 e9
+platform caam_sm: [0040] 06 d3 2d a1 6d 88 5c 76
+platform caam_sm: [0048] 72 2a 1e ce 6c 1f dd 34
+platform caam_sm: [0056] 60 bb ba 2f a1 f4 48 47
+platform caam_sm: [0064] 00 00 00 00 00 00 00 00
+platform caam_sm: [0072] 00 00 00 00 00 00 00 00
+platform caam_sm: [0080] 00 00 00 00 00 00 00 00
+platform caam_sm: [0088] 00 00 00 00 00 00 00 00
+platform caam_sm: 192-bit black key in blob:
+platform caam_sm: [0000] d1 d6 cb ae 47 af b8 b8
+platform caam_sm: [0008] db 9d 49 a6 ab ef 1d f5
+platform caam_sm: [0016] 25 2a 09 d5 b9 89 1b 63
+platform caam_sm: [0024] 6a 5e 4e 8c 5c 13 36 01
+platform caam_sm: [0032] b6 4a b0 81 08 9b 51 fe
+platform caam_sm: [0040] ea 4b c0 f8 5b 97 a5 0b
+platform caam_sm: [0048] 7b bd b1 00 fd 11 25 8a
+platform caam_sm: [0056] 04 39 72 51 74 6e 87 e6
+platform caam_sm: [0064] 48 01 c0 9a e3 83 22 cf
+platform caam_sm: [0072] 00 00 00 00 00 00 00 00
+platform caam_sm: [0080] 00 00 00 00 00 00 00 00
+platform caam_sm: [0088] 00 00 00 00 00 00 00 00
+platform caam_sm: 256-bit black key in blob:
+platform caam_sm: [0000] 53 25 97 99 96 ea 3b a6
+platform caam_sm: [0008] 1c 19 e5 87 3c c4 09 08
+platform caam_sm: [0016] d8 2e 5e 5d b3 57 22 f5
+platform caam_sm: [0024] 8c 75 3f ed 38 a8 a9 74
+platform caam_sm: [0032] b9 f6 78 85 64 d7 35 16
+platform caam_sm: [0040] 69 22 5f 05 01 16 a9 7f
+platform caam_sm: [0048] d5 4f 69 87 81 e3 b3 b1
+platform caam_sm: [0056] 55 f7 e9 57 8d a8 4e 3f
+platform caam_sm: [0064] 7a f0 c5 13 6d 88 f7 73
+platform caam_sm: [0072] a0 1d ea 54 dd ed 9d 1f
+platform caam_sm: [0080] 00 00 00 00 00 00 00 00
+platform caam_sm: [0088] 00 00 00 00 00 00 00 00
+platform caam_sm: restored 64-bit black key:
+platform caam_sm: [0000] 1b 70 c6 64 5b 3e 83 7c
+platform caam_sm: [0008] 04 14 16 b6 c7 d7 0d ae
+platform caam_sm: restored 128-bit black key:
+platform caam_sm: [0000] 95 1a 96 6b 5e d1 7e 86
+platform caam_sm: [0008] 4b 8b 28 11 3b e0 39 1b
+platform caam_sm: restored 192-bit black key:
+platform caam_sm: [0000] 42 d4 8d 47 97 51 6b 6f
+platform caam_sm: [0008] aa ea bb 49 78 d6 61 ed
+platform caam_sm: [0016] da 7f 4c 24 53 77 b8 87
+platform caam_sm: [0024] 7b 88 0a 59 89 93 d1 4b
+platform caam_sm: restored 256-bit black key:
+platform caam_sm: [0000] ab 59 9c f6 97 aa e5 8e
+platform caam_sm: [0008] 54 ea af ab 18 9f e7 a3
+platform caam_sm: [0016] b9 e0 9a 49 38 ef 58 4d
+platform caam_sm: [0024] 27 98 f2 a4 f9 23 24 3f
+snvs-secvio 20cc000.caam-snvs: can't get snvs clock
+snvs-secvio 20cc000.caam-snvs: violation handlers armed - non-secure state
+hidraw: raw HID events driver (C) Jiri Kosina
+input: PixArt Dell MS116 USB Optical Mouse as /devices/soc0/soc/2100000.aips-bus/2184200.usb/ci_hdrc.1/usb1/1-1/1-1.3/1-1.3:1.0/0003:413C:301A.0001/input/input1
+hid-generic 0003:413C:301A.0001: input,hidraw0: USB HID v1.11 Mouse [PixArt Dell MS116 USB Optical Mouse] on usb-ci_hdrc.1-1.3/input0
+usbcore: registered new interface driver usbhid
+usbhid: USB HID core driver
+ashmem: initialized
+usbcore: registered new interface driver snd-usb-audio
+sgtl5000 2-000a: sgtl5000 revision 0x11
+fsl-ssi-dai 2028000.ssi: No cache defaults, reading back from HW
+imx-sgtl5000 sound: sgtl5000 <-> 2028000.ssi mapping ok
+imx-spdif sound-spdif: snd-soc-dummy-dai <-> 2004000.spdif mapping ok
+imx-audio-hdmi sound-hdmi: hdmi-hifi.0 <-> soc:hdmi_audio@00120000 mapping ok
+NET: Registered protocol family 26
+u32 classifier
+    Actions configured
+Netfilter messages via NETLINK v0.30.
+nf_conntrack version 0.5.0 (16384 buckets, 65536 max)
+ctnetlink v0.93: registering with nfnetlink.
+xt_time: kernel timezone is -0000
+ip_tables: (C) 2000-2006 Netfilter Core Team
+arp_tables: arp_tables: (C) 2002 David S. Miller
+Initializing XFRM netlink socket
+NET: Registered protocol family 10
+mip6: Mobile IPv6
+ip6_tables: (C) 2000-2006 Netfilter Core Team
+sit: IPv6, IPv4 and MPLS over IPv4 tunneling driver
+NET: Registered protocol family 17
+NET: Registered protocol family 15
+can: controller area network core (rev 20120528 abi 9)
+NET: Registered protocol family 29
+can: raw protocol (rev 20120528)
+can: broadcast manager protocol (rev 20161123 t)
+can: netlink gateway (rev 20130117) max_hops=1
+Bluetooth: RFCOMM TTY layer initialized
+Bluetooth: RFCOMM socket layer initialized
+Bluetooth: RFCOMM ver 1.11
+Bluetooth: BNEP (Ethernet Emulation) ver 1.3
+Bluetooth: BNEP filters: protocol multicast
+Bluetooth: BNEP socket layer initialized
+Bluetooth: HIDP (Human Interface Emulation) ver 1.2
+Bluetooth: HIDP socket layer initialized
+8021q: 802.1Q VLAN Support v1.8
+Key type dns_resolver registered
+cpu cpu0: Registered imx6q-cpufreq
+registered taskstats version 1
+imx_thermal 2000000.aips-bus:tempmon: Industrial CPU temperature grade - max:105C critical:100C passive:95C
+dhd_module_init in
+input: gpio-keys as /devices/soc0/gpio-keys/input/input2
+snvs_rtc 20cc000.snvs:snvs-rtc-lp: setting system clock to 1970-01-01 00:02:09 UTC (129)
+usb_otg_vbus: disabling
+ALSA device list:
+  #0: imx6q-sgtl5000
+  #1: imx-spdif
+  #2: imx-hdmi-soc
+Freeing unused kernel memory: 1024K
+init: init first stage started!
+SELinux:  Permission validate_trans in class security not defined in policy.
+SELinux:  Class cap_userns not defined in policy.
+SELinux:  Class cap2_userns not defined in policy.
+SELinux: the above unknown classes and permissions will be denied
+audit: type=1403 audit(129.620:2): policy loaded auid=4294967295 ses=4294967295
+init: (Initializing SELinux non-enforcing took 0.11s.)
+init: init second stage started!
+init: Running restorecon...
+init: waitpid failed: No child processes
+init: (Loading properties from /default.prop took 0.00s.)
+init: (Parsing /init.environ.rc took 0.00s.)
+init: (Parsing /init.usb.rc took 0.00s.)
+init: (Parsing init.freescale.usb.rc took 0.00s.)
+init: (Parsing init.freescale.i.MX6Q.rc took 0.00s.)
+init: (Parsing init.freescale.emmc.rc took 0.00s.)
+init: (Parsing /init.freescale.rc took 0.02s.)
+ueventd: ueventd started!
+ueventd: Coldboot took 0.45s.
+Console: switching to colour dummy device 80x30
+watchdogd: started (interval 10, margin 20)!
+EXT4-fs (mmcblk0p3): mounted filesystem with ordered data mode. Opts: barrier=1
+EXT4-fs (mmcblk0p10): Ignoring removed nomblk_io_submit option
+EXT4-fs (mmcblk0p10): mounted filesystem with ordered data mode. Opts: nomblk_io_submit,noauto_da_alloc,errors=panic
+EXT4-fs (mmcblk0p4): Ignoring removed nomblk_io_submit option
+EXT4-fs (mmcblk0p4): mounted filesystem with ordered data mode. Opts: nomblk_io_submit
+EXT4-fs (mmcblk0p5): mounted filesystem with ordered data mode. Opts: (null)
+file system registered
+using random self ethernet address
+using random host ethernet address
+zram0: detected capacity change from 0 to 314572800
+logd.auditd: start
+logd.klogd: 7549973333
+Adding 307196k swap on /dev/block/zram0.  Priority:-1 extents:1 across:307196k SS
+binder: 260:260 transaction failed 29189, size 0-0
+logd.daemon: reinit
+toradex_apalis6q:/ # healthd: No battery devices found
+ERROR: v4l2 capture: slave not found! V4L2_CID_HUE
+ERROR: v4l2 capture: slave not found! V4L2_CID_HUE
+
+toradex_apalis6q:/ # 
+toradex_apalis6q:/ # 
+toradex_apalis6q:/ # 
+toradex_apalis6q:/ # capability: warning: `main' uses 32-bit capabilities (legacy support in use)
+init: write_file: Unable to open '/sys/devices/system/cpu/cpufreq/interactive/timer_rate': No such file or directory
+init: write_file: Unable to open '/sys/devices/system/cpu/cpufreq/interactive/min_sample_time': No such file or directory
+init: write_file: Unable to open '/sys/devices/system/cpu/cpufreq/interactive/go_hispeed_load': No such file or directory
+random: crng init done
+init: write_file: Unable to open '/proc/sys/vm/extra_free_kbytes': No such file or directory
+acc_open
+acc_release
+Micrel KSZ9031 Gigabit PHY 2188000.ethernet-1:07: attached PHY driver [Micrel KSZ9031 Gigabit PHY] (mii_bus:phy_addr=2188000.ethernet-1:07, irq=120)
+IPv6: ADDRCONF(NETDEV_UP): eth0: link is not ready
+FAT-fs (mmcblk1p1): Volume was not properly unmounted. Some data may be corrupt. Please run fsck.
+init: Service 'bootanim' (pid 328) exited with status 0
+init: Starting service 'exec 3 (/system/bin/bootstat)'...
+init: Service 'exec 3 (/system/bin/bootstat)' (pid 1024) exited with status 0
+init: Starting service 'exec 4 (/system/bin/bootstat)'...
+init: Service 'exec 4 (/system/bin/bootstat)' (pid 1035) exited with status 0
+init: Starting service 'exec 5 (/system/bin/bootstat)'...
+init: Service 'exec 5 (/system/bin/bootstat)' (pid 1036) exited with status 0
+init: Starting service 'exec 6 (/system/bin/bootstat)'...
+init: Service 'exec 6 (/system/bin/bootstat)' (pid 1037) exited with status 0
+
+toradex_apalis6q:/ # 
+toradex_apalis6q:/ # 
+toradex_apalis6q:/ # 
+toradex_apalis6q:/ # 
+toradex_apalis6q:/ # logcat -c
+toradex_apalis6q:/ # toradex_apalis6q:/ # logcat -c                                                   
+--------- beginning of system
+01-01 00:03:13.960   539   552 I ActivityManager: Waited long enough for: ServiceRecord{a3f29dd u0 com.android.calendar/.alerts.InitAlarmsService}
+--------- beginning of main
+01-01 00:03:17.999   539   596 W AudioTrack: AUDIO_OUTPUT_FLAG_FAST denied by client; transfer 4, track 48000 Hz, output 44100 Hz
+01-01 00:03:18.143   268   371 W audio_hw_primary: Aravinth: out_set_parameters >1
+01-01 00:03:18.143   268   371 W audio_hw_primary: Aravinth: select_output_device >0 out_device=400
+01-01 00:03:18.143   268   371 W audio_hw_primary: headphone 0 ,headset 1024 ,speaker 0, earpiece 0, bt_on 0
+01-01 00:03:18.150   268   371 W audio_hw_primary: out_set_parameters routing=1024, ret 0, out -1297270592
+01-01 00:03:18.155   268   371 I audio_hw_primary: start_output_stream_primary... -1297270592, device 1024
+01-01 00:03:18.155   268   371 W audio_hw_primary: Aravinth: start_output_stream_primary >1
+01-01 00:03:18.155   268   371 W audio_hw_primary: Aravinth: select_output_device >0 out_device=400
+01-01 00:03:18.155   268   371 W audio_hw_primary: headphone 0 ,headset 1024 ,speaker 0, earpiece 0, bt_on 0
+01-01 00:03:18.169   268   371 W audio_hw_primary: HDMI: card 0, port 0 device 0x400
+01-01 00:03:18.169   268   371 W audio_hw_primary: HDMI: rate 44100, channel 2 period_size 0xc0
+01-01 00:03:18.169   268   371 W audio_hw_primary: Aravinth: start_output_stream_primary >2
+01-01 00:03:18.601   268   371 W AudioFlinger: write blocked for 445 msecs, 1 delayed writes, thread 0xb2583480
+01-01 00:03:21.684   268   371 W audio_hw_primary: do_out_standby... -1297270592
+
+
+
+01-01 00:03:25.905   268   371 I audio_hw_primary: start_output_stream_primary... -1297270592, device 1024
+01-01 00:03:25.905   268   371 W audio_hw_primary: Aravinth: start_output_stream_primary >1
+01-01 00:03:25.905   268   371 W audio_hw_primary: Aravinth: select_output_device >0 out_device=400
+01-01 00:03:25.905   268   371 W audio_hw_primary: headphone 0 ,headset 1024 ,speaker 0, earpiece 0, bt_on 0
+01-01 00:03:25.916   268   371 W audio_hw_primary: HDMI: card 0, port 0 device 0x400
+01-01 00:03:25.916   268   371 W audio_hw_primary: HDMI: rate 44100, channel 2 period_size 0xc0
+01-01 00:03:25.916   268   371 W audio_hw_primary: Aravinth: start_output_stream_primary >2
+01-01 00:03:26.349   268   371 W AudioFlinger: write blocked for 443 msecs, 2 delayed writes, thread 0xb2583480
+01-01 00:03:28.984  1199  1327 D InitAlarmsService: Clearing and rescheduling alarms.
+
+
+
+
+
+
+01-01 00:03:31.465   268   371 W audio_hw_primary: do_out_standby... -1297270592
+01-01 00:03:41.750   539   779 I ActivityManager: START u0 {act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] flg=0x10200000 cmp=com.android.soundrecorder/.SoundRecorder (has extras)} from uid 10016 on display 0
+01-01 00:03:41.751   268   371 I audio_hw_primary: start_output_stream_primary... -1297270592, device 1024
+01-01 00:03:41.751   268   371 W audio_hw_primary: Aravinth: start_output_stream_primary >1
+01-01 00:03:41.751   268   371 W audio_hw_primary: Aravinth: select_output_device >0 out_device=400
+01-01 00:03:41.751   268   371 W audio_hw_primary: headphone 0 ,headset 1024 ,speaker 0, earpiece 0, bt_on 0
+01-01 00:03:41.764   268   371 W audio_hw_primary: HDMI: card 0, port 0 device 0x400
+01-01 00:03:41.764   268   371 W audio_hw_primary: HDMI: rate 44100, channel 2 period_size 0xc0
+01-01 00:03:41.764   268   371 W audio_hw_primary: Aravinth: start_output_stream_primary >2
+01-01 00:03:41.803   539   779 I ActivityManager: Start proc 1343:com.android.soundrecorder/u0a55 for activity com.android.soundrecorder/.SoundRecorder
+01-01 00:03:41.866  1343  1343 W System  : ClassLoader referenced unknown path: /system/app/SoundRecorder/lib/arm
+01-01 00:03:41.914   539   779 I ActivityManager: START u0 {act=android.content.pm.action.REQUEST_PERMISSIONS pkg=com.android.packageinstaller cmp=com.android.packageinstaller/.permission.ui.GrantPermissionsActivity (has extras)} from uid 10055 on display 0
+01-01 00:03:42.111  1343  1343 I display : GPUManager exists
+01-01 00:03:42.199   268   371 W AudioFlinger: write blocked for 447 msecs, 3 delayed writes, thread 0xb2583480
+01-01 00:03:42.352   539   549 I ActivityManager: Start proc 1358:com.android.packageinstaller/u0a20 for activity com.android.packageinstaller/.permission.ui.GrantPermissionsActivity
+01-01 00:03:42.407  1343  1357 I OpenGLRenderer: Initialized EGL, version 1.4
+01-01 00:03:42.407  1343  1357 D OpenGLRenderer: Swap behavior 2
+01-01 00:03:42.436  1358  1358 W System  : ClassLoader referenced unknown path: /system/priv-app/PackageInstaller/lib/arm
+01-01 00:03:42.723  1358  1358 I display : GPUManager exists
+01-01 00:03:43.014  1358  1372 I OpenGLRenderer: Initialized EGL, version 1.4
+01-01 00:03:43.015  1358  1372 D OpenGLRenderer: Swap behavior 2
+01-01 00:03:43.202   539   559 I ActivityManager: Displayed com.android.packageinstaller/.permission.ui.GrantPermissionsActivity: +869ms (total +1s422ms)
+01-01 00:03:43.844  1358  1358 D ViewRootImpl[GrantPermissionsActivity]: updatePointerIcon called with position out of bounds
+01-01 00:03:44.784   539   610 E TaskPersister: File error accessing recents directory (directory doesn't exist?).
+01-01 00:03:45.589  1343  1343 V SoundRecorder: Grant permission successfully
+01-01 00:03:45.750  1358  1372 D OpenGLRenderer: endAllActiveAnimators on 0xa633a500 (RippleDrawable) with handle 0x8d07f5d0
+01-01 00:03:45.750  1358  1372 D OpenGLRenderer: endAllActiveAnimators on 0xa6339a80 (RippleDrawable) with handle 0x8d07f780
+01-01 00:03:45.901   264   264 W SurfaceFlinger: couldn't log to binary event log: overflow.
+01-01 00:03:45.908   539   665 I ActivityManager: Killing 759:com.android.settings:CryptKeeper/1000 (adj 906): empty #17
+01-01 00:03:46.000   539   549 D ActivityManager: cleanUpApplicationRecord -- 759
+01-01 00:03:48.606   268   371 W audio_hw_primary: do_out_standby... -1297270592
+01-01 00:03:50.626   268   371 I audio_hw_primary: start_output_stream_primary... -1297270592, device 1024
+01-01 00:03:50.626   268   371 W audio_hw_primary: Aravinth: start_output_stream_primary >1
+01-01 00:03:50.626   268   371 W audio_hw_primary: Aravinth: select_output_device >0 out_device=400
+01-01 00:03:50.626   268   371 W audio_hw_primary: headphone 0 ,headset 1024 ,speaker 0, earpiece 0, bt_on 0
+01-01 00:03:50.631   539   633 I MediaFocusControl:  AudioFocus  requestAudioFocus() from uid/pid 10055/1343 clientId=android.media.AudioManager@5addd61 req=1 flags=0x0
+01-01 00:03:50.637   268   371 W audio_hw_primary: HDMI: card 0, port 0 device 0x400
+01-01 00:03:50.638   268   371 W audio_hw_primary: HDMI: rate 44100, channel 2 period_size 0xc0
+01-01 00:03:50.638   268   371 W audio_hw_primary: Aravinth: start_output_stream_primary >2
+01-01 00:03:51.069   268   371 W AudioFlinger: write blocked for 442 msecs, 4 delayed writes, thread 0xb2583480
+01-01 00:03:51.148  1343  1343 D ViewRootImpl[SoundRecorder]: updatePointerIcon called with position out of bounds
+01-01 00:03:51.167  1343  1343 D ViewRootImpl[SoundRecorder]: updatePointerIcon called with position out of bounds
+01-01 00:03:51.196  1343  1343 D ViewRootImpl[SoundRecorder]: updatePointerIcon called with position out of bounds
+01-01 00:03:51.225  1343  1343 D ViewRootImpl[SoundRecorder]: updatePointerIcon called with position out of bounds
+01-01 00:03:51.253  1343  1343 D ViewRootImpl[SoundRecorder]: updatePointerIcon called with position out of bounds
+01-01 00:03:51.282  1343  1343 D ViewRootImpl[SoundRecorder]: updatePointerIcon called with position out of bounds
+01-01 00:03:51.311  1343  1343 D ViewRootImpl[SoundRecorder]: updatePointerIcon called with position out of bounds
+01-01 00:03:51.340  1343  1343 D ViewRootImpl[SoundRecorder]: updatePointerIcon called with position out of bounds
+01-01 00:03:51.368  1343  1343 D ViewRootImpl[SoundRecorder]: updatePointerIcon called with position out of bounds
+01-01 00:03:51.397  1343  1343 D ViewRootImpl[SoundRecorder]: updatePointerIcon called with position out of bounds
+01-01 00:03:52.188   539   550 W InputMethodManagerService: Window already focused, ignoring focus gain of: com.android.internal.view.IInputMethodClient$Stub$Proxy@e11276a attribute=null, token = android.os.BinderProxy@ae8184f
+01-01 00:03:53.925  1343  1343 D ViewRootImpl[SoundRecorder]: updatePointerIcon called with position out of bounds
+01-01 00:03:53.953  1343  1343 D ViewRootImpl[SoundRecorder]: updatePointerIcon called with position out of bounds
+01-01 00:03:53.982  1343  1343 D ViewRootImpl[SoundRecorder]: updatePointerIcon called with position out of bounds
+01-01 00:03:54.011  1343  1343 D ViewRootImpl[SoundRecorder]: updatePointerIcon called with position out of bounds
+01-01 00:03:54.040  1343  1343 D ViewRootImpl[SoundRecorder]: updatePointerIcon called with position out of bounds
+01-01 00:03:54.068  1343  1343 D ViewRootImpl[SoundRecorder]: updatePointerIcon called with position out of bounds
+01-01 00:03:54.102  1343  1343 D ViewRootImpl[SoundRecorder]: updatePointerIcon called with position out of bounds
+01-01 00:03:54.102  1343  1343 D ViewRootImpl[SoundRecorder]: updatePointerIcon called with position out of bounds
+01-01 00:03:54.110   539   550 I ActivityManager: Killing 954:com.android.cellbroadcastreceiver/u0a6 (adj 906): empty #17
+01-01 00:03:54.112   539   550 I ActivityManager: Killing 1080:com.android.keychain/1000 (adj 906): empty #18
+01-01 00:03:54.291   539   548 I art     : Background partial concurrent mark sweep GC freed 32208(1682KB) AllocSpace objects, 14(280KB) LOS objects, 33% free, 5MB/7MB, paused 2.214ms total 106.208ms
+01-01 00:03:54.310   539   801 D ActivityManager: cleanUpApplicationRecord -- 1080
+01-01 00:03:54.310  1343  1343 D ViewRootImpl[SoundRecorder]: updatePointerIcon called with position out of bounds
+01-01 00:03:54.310  1343  1343 D ViewRootImpl[SoundRecorder]: updatePointerIcon called with position out of bounds
+01-01 00:03:54.313   539   549 D ActivityManager: cleanUpApplicationRecord -- 954
+01-01 00:03:55.245   268   371 W audio_hw_primary: do_out_standby... -1297270592
+01-01 00:03:55.487   539   779 I ActivityManager: START u0 {act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] flg=0x10200000 cmp=com.android.soundrecorder/.SoundRecorder (has extras)} from uid 10016 on display 0
+01-01 00:03:55.489   268   371 I audio_hw_primary: start_output_stream_primary... -1297270592, device 1024
+01-01 00:03:55.489   268   371 W audio_hw_primary: Aravinth: start_output_stream_primary >1
+01-01 00:03:55.489   268   371 W audio_hw_primary: Aravinth: select_output_device >0 out_device=400
+01-01 00:03:55.489   268   371 W audio_hw_primary: headphone 0 ,headset 1024 ,speaker 0, earpiece 0, bt_on 0
+01-01 00:03:55.501   268   371 W audio_hw_primary: HDMI: card 0, port 0 device 0x400
+01-01 00:03:55.501   268   371 W audio_hw_primary: HDMI: rate 44100, channel 2 period_size 0xc0
+01-01 00:03:55.501   268   371 W audio_hw_primary: Aravinth: start_output_stream_primary >2
+01-01 00:03:55.531   539   633 I ActivityManager: START u0 {act=android.content.pm.action.REQUEST_PERMISSIONS pkg=com.android.packageinstaller cmp=com.android.packageinstaller/.permission.ui.GrantPermissionsActivity (has extras)} from uid 10055 on display 0
+01-01 00:03:55.825   539   559 I ActivityManager: Displayed com.android.packageinstaller/.permission.ui.GrantPermissionsActivity: +252ms (total +310ms)
+01-01 00:03:56.365  1358  1358 D ViewRootImpl[GrantPermissionsActivity]: updatePointerIcon called with position out of bounds
+01-01 00:03:56.395  1358  1358 D ViewRootImpl[GrantPermissionsActivity]: updatePointerIcon called with position out of bounds
+01-01 00:03:56.423  1358  1358 D ViewRootImpl[GrantPermissionsActivity]: updatePointerIcon called with position out of bounds
+01-01 00:03:56.452  1358  1358 D ViewRootImpl[GrantPermissionsActivity]: updatePointerIcon called with position out of bounds
+01-01 00:03:56.481  1358  1358 D ViewRootImpl[GrantPermissionsActivity]: updatePointerIcon called with position out of bounds
+01-01 00:03:57.778   539   665 D VoldConnector: SND -> {33 volume remount_uid 10055 read}
+01-01 00:03:57.780   249   256 D vold    : Remounting 10055 as mode read
+01-01 00:03:57.791   249   256 D vold    : Found matching PID 1343
+01-01 00:03:57.982   539   576 D VoldConnector: RCV <- {200 33 Command succeeded}
+01-01 00:03:57.984   539   549 D VoldConnector: SND -> {34 volume remount_uid 10055 write}
+01-01 00:03:57.985   249   256 D vold    : Remounting 10055 as mode write
+01-01 00:03:57.992   249   256 D vold    : Found matching PID 1343
+01-01 00:03:58.181   539   576 D VoldConnector: RCV <- {200 34 Command succeeded}
+01-01 00:03:58.247  1343  1343 V SoundRecorder: Grant permission successfully
+01-01 00:03:58.362  1358  1372 D OpenGLRenderer: endAllActiveAnimators on 0xa6436180 (RippleDrawable) with handle 0x8d07f7a0
+01-01 00:03:58.499   264   264 W SurfaceFlinger: couldn't log to binary event log: overflow.
+01-01 00:04:00.267   539   549 I MediaFocusControl:  AudioFocus  requestAudioFocus() from uid/pid 10055/1343 clientId=android.media.AudioManager@bc4454b req=1 flags=0x0
+01-01 00:04:00.302   268   378 W audio_hw_primary: get_input_buffer_size size = 48, channel_count = 1
+01-01 00:04:00.304   268   378 W audio_hw_primary: In channels 1, rate 8000, devices 0x80000004
+01-01 00:04:00.304   268   378 W audio_hw_primary: get_input_buffer_size size = 48, channel_count = 1
+01-01 00:04:00.304   268   378 W audio_hw_primary: get_input_buffer_size size = 48, channel_count = 1
+01-01 00:04:00.305   268  1380 I AudioFlinger: AudioFlinger's thread 0xb21037c0 ready to run
+01-01 00:04:00.311   276   690 W AudioRecord: Server adjusted notificationFrames from 1024 to 160 for frameCount 2048
+01-01 00:04:00.313   276  1381 I MediaPlayerService: MediaPlayerService::getOMX
+01-01 00:04:00.313   276  1381 I OMXClient: MuxOMX ctor
+01-01 00:04:00.314   273   287 I OMXMaster: makeComponentInstance(OMX.google.amrnb.encoder) in mediacodec process
+01-01 00:04:00.318   276  1381 I MediaCodec: MediaCodec will operate in async mode
+01-01 00:04:00.321   273   705 E OMXNodeInstance: setConfig(1110038:google.amrnb.encoder, ConfigPriority(0x6f800002)) ERROR: Undefined(0x80001001)
+01-01 00:04:00.321   276  1381 I ACodec  : codec does not support config priority (err -2147483648)
+01-01 00:04:00.330   276   690 I MPEG4Writer: limits: 4294967295/0 bytes/us, bit rate: 12200 bps and the estimated moov size 3195 bytes
+01-01 00:04:00.331   276  1377 I MediaCodecSource: MediaCodecSource (audio) starting
+01-01 00:04:00.333   268  1380 W audio_hw_primary: in_set_parameters input_source=1;routing=-2147483644
+01-01 00:04:00.334   268  1379 W audio_hw_primary: start_input_stream....
+01-01 00:04:00.334   268  1379 W audio_hw_primary: Aravinth: select_input_device >0 
+01-01 00:04:00.335   276  1377 I MediaCodecSource: MediaCodecSource (audio) started
+01-01 00:04:00.337   268  1379 W audio_hw_primary: card 0, port 0 device 0x4
+01-01 00:04:00.337   268  1379 W audio_hw_primary: rate 44100, channel 2 format 0, period_size 0xc0
+01-01 00:04:00.356   268  1379 V audio_hw_primary: get_next_buffer(): read_buf 0xb2610c00 extended to 384 bytes
+01-01 00:04:00.356   268  1379 V audio_hw_primary: get_next_buffer(): read_tmp_buf 0xb2ac1b00 extended to 768 bytes
+01-01 00:04:00.817   276  1386 I MPEG4Writer: setStartTimestampUs: 207347
+01-01 00:04:00.817   276  1386 I MPEG4Writer: Earliest track starting time: 207347
+01-01 00:04:03.373   268   371 W audio_hw_primary: do_out_standby... -1297270592
+01-01 00:04:13.342   276   276 D MPEG4Writer: Audio track stopping
+01-01 00:04:13.342   276   276 D MPEG4Writer: Audio track source stopping
+01-01 00:04:13.343   276  1377 I MediaCodecSource: encoder (audio) stopping
+01-01 00:04:13.345   268   371 I audio_hw_primary: start_output_stream_primary... -1297270592, device 1024
+01-01 00:04:13.345   268   371 W audio_hw_primary: Aravinth: start_output_stream_primary >1
+01-01 00:04:13.345   268   371 W audio_hw_primary: Aravinth: select_output_device >0 out_device=400
+01-01 00:04:13.345   268   371 W audio_hw_primary: headphone 0 ,headset 1024 ,speaker 0, earpiece 0, bt_on 0
+01-01 00:04:13.354   276  1386 I MPEG4Writer: Received total/0-length (627/0) buffers and encoded 627 frames. - Audio
+01-01 00:04:13.354   276  1386 I MPEG4Writer: Audio track drift time: 0 us
+01-01 00:04:13.356   268   371 W audio_hw_primary: HDMI: card 0, port 0 device 0x400
+01-01 00:04:13.356   268   371 W audio_hw_primary: HDMI: rate 44100, channel 2 period_size 0xc0
+01-01 00:04:13.356   268   371 W audio_hw_primary: Aravinth: start_output_stream_primary >2
+01-01 00:04:13.362   276  1377 I MediaCodecSource: encoder (audio) stopped
+01-01 00:04:13.365   268  1380 W audio_hw_primary: do_in_standby..
+01-01 00:04:13.784   268  1380 W audio_hw_primary: Aravinth: select_input_device >0 
+01-01 00:04:13.787   268  1380 W audio_hw_primary: in_set_parameters routing=0
+01-01 00:04:13.788   276   276 D MPEG4Writer: Audio track source stopped
+01-01 00:04:13.788   276   276 D MPEG4Writer: Audio track stopped
+01-01 00:04:13.788   276   276 D MPEG4Writer: Stopping writer thread
+01-01 00:04:13.788   276  1384 D MPEG4Writer: 0 chunks are written in the last batch
+01-01 00:04:13.789   276   276 D MPEG4Writer: Writer thread stopped
+01-01 00:04:13.790   276   276 D MPEG4Writer: Audio track stopping
+01-01 00:04:13.798  1343  1343 W MediaRecorder: mediarecorder went away with unhandled events
+01-01 00:04:13.799   268   371 W AudioFlinger: write blocked for 454 msecs, 6 delayed writes, thread 0xb2583480
+01-01 00:04:15.895   275   960 I FslInspector: TryMp4Type SUCCESS
+01-01 00:04:15.896   275   960 D FslExtractor: FslExtractor::FslExtractor mime=video/mp4
+01-01 00:04:15.896   275   306 D FslExtractor: FslExtractor::Init BEGIN
+01-01 00:04:15.896   275   306 D FslExtractor: GetLibraryName lib_mp4_parser_arm11_elinux.3.0.so
+01-01 00:04:15.913   275   306 D FslExtractor: load parser name lib_mp4_parser_arm11_elinux.3.0.so
+01-01 00:04:15.913   275   306 D FslExtractor: FslExtractor::CreateParserInterface success
+01-01 00:04:15.913   275   306 I FslExtractor: Core parser MPEG4PARSER_06.12.07  build on May 16 2017 14:46:02 
+01-01 00:04:15.914   275   306 D FslExtractor: createParser2 flag=5c,err=0
+01-01 00:04:15.915   275   306 I FslExtractor: mReadMode=1,mNumTracks=1
+01-01 00:04:15.915   275   306 I FslExtractor: bSeekable 1
+01-01 00:04:15.916   275   306 I FslExtractor: FslParser kKeyDate=19700101T000413.000Z
+01-01 00:04:15.916   275   306 D FslExtractor: FslExtractor::ParseMediaFormat BEGIN
+01-01 00:04:15.916   275   306 D FslExtractor: ParseAudio index=0,type=10,subtype=1
+01-01 00:04:15.916   275   306 I FslExtractor: audio track 0, lanuage: und
+01-01 00:04:15.916   275   306 I FslExtractor: ParseAudio channel=1,sampleRate=8000,bitRate=0,bitPerSample=16,audioBlockAlign=0
+01-01 00:04:15.917   275   306 I FslExtractor: add audio track index=0,sourceIndex=0,mime=audio/3gpp
+01-01 00:04:15.917   275   306 D FslExtractor: FslExtractor::Init ret=0
+01-01 00:04:15.917   275   275 D FslExtractor: FslExtractor::getTrack index=0
+01-01 00:04:15.917   275   275 E FslExtractor: getTrack source string cnt=1
+01-01 00:04:15.919   275   649 D FslExtractor: start track 0
+01-01 00:04:15.919   275   649 D FslExtractor: source start track 0
+01-01 00:04:15.919   276  1387 D NuPlayerDriver: notifyListener_l(0xb152aba0), (1, 0, 0), loop setting(0, 0)
+01-01 00:04:15.920  1343  1343 D MediaPlayer: setSubtitleAnchor in MediaPlayer
+01-01 00:04:15.932   276   721 D NuPlayerDriver: start(0xb152aba0), state is 4, eos is 0
+01-01 00:04:15.933   276  1387 I GenericSource: start
+01-01 00:04:15.946   276  1392 I MediaPlayerService: MediaPlayerService::getOMX
+01-01 00:04:15.947   276  1392 I OMXClient: MuxOMX ctor
+01-01 00:04:15.948   273   273 I OMXMaster: makeComponentInstance(OMX.Freescale.std.audio_decoder.amr.sw-based) in mediacodec process
+01-01 00:04:15.955   273   273 I OMXPlayer: AudioFilter SetParameter OMX_IndexParamAudioOutputConvert
+01-01 00:04:15.956   273   705 I OMXPlayer: AudioFilter SetParameter OMX_IndexParamAudioSendFirstPortSettingChanged 0
+01-01 00:04:15.956   273   287 E OMXNodeInstance: setConfig(1110039:Freescale.std._decoder.amr.sw-based, ConfigPriority(0x6f800002)) ERROR: UnsupportedIndex(0x8000101a)
+01-01 00:04:15.957   276  1392 I ACodec  : codec does not support config priority (err -1010)
+01-01 00:04:15.958   276  1392 I MediaCodec: MediaCodec will operate in async mode
+01-01 00:04:16.028   268   378 W AudioFlinger: createTrack_l(): mismatch between requested flags (00000008) and output flags (00000006)
+01-01 00:04:16.029   276  1390 D AudioTrack: Client defaulted notificationFrames to 1343 for frameCount 4031
+01-01 00:04:16.031   276  1387 D NuPlayerDriver: notifyListener_l(0xb152aba0), (6, 0, 0), loop setting(0, 0)
+01-01 00:04:20.422   276   314 D NuPlayerDriver: stop(0xb152aba0)
+01-01 00:04:20.422   276   314 D NuPlayerDriver: notifyListener_l(0xb152aba0), (8, 0, 0), loop setting(0, 0)
+01-01 00:04:20.424   276   276 D NuPlayerDriver: reset(0xb152aba0) at state 8
+01-01 00:04:20.430   276  1387 W AMessage: failed to post message as target looper for handler 0 is gone.
+01-01 00:04:20.431   276  1387 D NuPlayerDriver: notifyResetComplete(0xb152aba0)
+01-01 00:04:20.432   275   960 D FslExtractor: FslMediaSource::~FslMediaSource
+01-01 00:04:20.432   275   960 D FslExtractor: FslExtractor::~FslExtractor
+01-01 00:04:20.436  1343  1343 W MediaPlayer: mediaplayer went away with unhandled events
+01-01 00:04:25.550   268   371 W audio_hw_primary: do_out_standby... -1297270592
+
+
+
+
+
+
+
+
+
+
+
+01-01 00:04:45.316   268   371 I audio_hw_primary: start_output_stream_primary... -1297270592, device 1024
+01-01 00:04:45.316   539   801 I ActivityManager: START u0 {act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] flg=0x10200000 cmp=com.freescale.cactusplayer/.VideoMenu (has extras)} from uid 10016 on display 0
+01-01 00:04:45.316   268   371 W audio_hw_primary: Aravinth: start_output_stream_primary >1
+01-01 00:04:45.316   268   371 W audio_hw_primary: Aravinth: select_output_device >0 out_device=400
+01-01 00:04:45.316   268   371 W audio_hw_primary: headphone 0 ,headset 1024 ,speaker 0, earpiece 0, bt_on 0
+01-01 00:04:45.328   268   371 W audio_hw_primary: HDMI: card 0, port 0 device 0x400
+01-01 00:04:45.328   268   371 W audio_hw_primary: HDMI: rate 44100, channel 2 period_size 0xc0
+01-01 00:04:45.328   268   371 W audio_hw_primary: Aravinth: start_output_stream_primary >2
+01-01 00:04:45.366   539   665 I ActivityManager: Start proc 1397:com.freescale.cactusplayer/u0a33 for activity com.freescale.cactusplayer/.VideoMenu
+01-01 00:04:45.444   539   573 I InputDispatcher: Dropping event because there is no touchable window at (461, 164).
+01-01 00:04:45.462  1397  1397 W System  : ClassLoader referenced unknown path: /system/app/CactusPlayer/lib/arm
+01-01 00:04:45.476   539   573 I InputDispatcher: Dropping event because there is no touchable window at (461, 163).
+01-01 00:04:45.517  1397  1397 V MediaRouter: Adding route: RouteInfo{ name=Tablet, description=null, status=null, category=RouteCategory{ name=null types=ROUTE_TYPE_LIVE_AUDIO ROUTE_TYPE_LIVE_VIDEO  groupable=false }, supportedTypes=ROUTE_TYPE_LIVE_AUDIO ROUTE_TYPE_LIVE_VIDEO , presentationDisplay=Display id 1: DisplayInfo{"HDMI Screen", uniqueId "local:1", app 640 x 480, real 640 x 480, largest app 640 x 480, smallest app 640 x 480, mode 2, defaultMode 2, modes [{id=2, width=640, height=480, fps=59.94}], colorMode 0, supportedColorModes [0], hdrCapabilities android.view.Display$HdrCapabilities@a69d6308, rotation 0, density 142 (142.0 x 142.0) dpi, layerStack 1, appVsyncOff 1000000, presDeadline 16683350, type HDMI, state ON, FLAG_SECURE, FLAG_SUPPORTS_PROTECTED_BUFFERS, FLAG_PRESENTATION}, DisplayMetrics{density=0.8875, width=640, height=480, scaledDensity=0.8875, xdpi=142.0, ydpi=142.0}, isValid=true }
+01-01 00:04:45.528  1397  1397 V MediaRouter: Updating audio routes: AudioRoutesInfo{ type=HDMI }
+01-01 00:04:45.530  1397  1397 V MediaRouter: Dispatching route change: RouteInfo{ name=HDMI, description=null, status=null, category=RouteCategory{ name=null types=ROUTE_TYPE_LIVE_AUDIO ROUTE_TYPE_LIVE_VIDEO  groupable=false }, supportedTypes=ROUTE_TYPE_LIVE_AUDIO ROUTE_TYPE_LIVE_VIDEO , presentationDisplay=Display id 1: DisplayInfo{"HDMI Screen", uniqueId "local:1", app 640 x 480, real 640 x 480, largest app 640 x 480, smallest app 640 x 480, mode 2, defaultMode 2, modes [{id=2, width=640, height=480, fps=59.94}], colorMode 0, supportedColorModes [0], hdrCapabilities android.view.Display$HdrCapabilities@a69d6308, rotation 0, density 142 (142.0 x 142.0) dpi, layerStack 1, appVsyncOff 1000000, presDeadline 16683350, type HDMI, state ON, FLAG_SECURE, FLAG_SUPPORTS_PROTECTED_BUFFERS, FLAG_PRESENTATION}, DisplayMetrics{density=0.8875, width=640, height=480, scaledDensity=0.8875, xdpi=142.0, ydpi=142.0}, isValid=true }
+01-01 00:04:45.535  1397  1397 V MediaRouter: Selecting route: RouteInfo{ name=HDMI, description=null, status=null, category=RouteCategory{ name=null types=ROUTE_TYPE_LIVE_AUDIO ROUTE_TYPE_LIVE_VIDEO  groupable=false }, supportedTypes=ROUTE_TYPE_LIVE_AUDIO ROUTE_TYPE_LIVE_VIDEO , presentationDisplay=Display id 1: DisplayInfo{"HDMI Screen", uniqueId "local:1", app 640 x 480, real 640 x 480, largest app 640 x 480, smallest app 640 x 480, mode 2, defaultMode 2, modes [{id=2, width=640, height=480, fps=59.94}], colorMode 0, supportedColorModes [0], hdrCapabilities android.view.Display$HdrCapabilities@a69d6308, rotation 0, density 142 (142.0 x 142.0) dpi, layerStack 1, appVsyncOff 1000000, presDeadline 16683350, type HDMI, state ON, FLAG_SECURE, FLAG_SUPPORTS_PROTECTED_BUFFERS, FLAG_PRESENTATION}, DisplayMetrics{density=0.8875, width=640, height=480, scaledDensity=0.8875, xdpi=142.0, ydpi=142.0}, isValid=true }
+01-01 00:04:45.539  1397  1397 W HdmiApplication: Showing presentation on display: Display id 1: DisplayInfo{"HDMI Screen", uniqueId "local:1", app 640 x 480, real 640 x 480, largest app 640 x 480, smallest app 640 x 480, mode 2, defaultMode 2, modes [{id=2, width=640, height=480, fps=59.94}], colorMode 0, supportedColorModes [0], hdrCapabilities android.view.Display$HdrCapabilities@a69d6308, rotation 0, density 142 (142.0 x 142.0) dpi, layerStack 1, appVsyncOff 1000000, presDeadline 16683350, type HDMI, state ON, FLAG_SECURE, FLAG_SUPPORTS_PROTECTED_BUFFERS, FLAG_PRESENTATION}, DisplayMetrics{density=0.8875, width=640, height=480, scaledDensity=0.8875, xdpi=142.0, ydpi=142.0}, isValid=true
+01-01 00:04:45.566  1397  1397 D CactusPlayer: VideoMenu: onCreate
+01-01 00:04:45.654   539   779 I ActivityManager: START u0 {act=android.content.pm.action.REQUEST_PERMISSIONS pkg=com.android.packageinstaller cmp=com.android.packageinstaller/.permission.ui.GrantPermissionsActivity (has extras)} from uid 10033 on display 0
+01-01 00:04:45.751  1397  1397 I display : GPUManager exists
+01-01 00:04:45.769   268   371 W AudioFlinger: write blocked for 453 msecs, 7 delayed writes, thread 0xb2583480
+01-01 00:04:46.115  1397  1411 I OpenGLRenderer: Initialized EGL, version 1.4
+01-01 00:04:46.115  1397  1411 D OpenGLRenderer: Swap behavior 2
+01-01 00:04:46.145  1397  1397 D CactusPlayer: onPrepareOptionsMenu 
+01-01 00:04:46.252   539   559 I ActivityManager: Displayed com.android.packageinstaller/.permission.ui.GrantPermissionsActivity: +202ms (total +906ms)
+01-01 00:04:48.399  1358  1372 D OpenGLRenderer: endAllActiveAnimators on 0xa633ee80 (RippleDrawable) with handle 0x8d07f680
+01-01 00:04:48.399  1358  1372 D OpenGLRenderer: endAllActiveAnimators on 0xa633eb00 (RippleDrawable) with handle 0x8d07f700
+01-01 00:04:48.785   264   264 W SurfaceFlinger: couldn't log to binary event log: overflow.
+01-01 00:04:50.021   539   573 I InputDispatcher: Dropping event because there is no touchable window at (414, 434).
+01-01 00:04:50.028   539   573 I InputDispatcher: Dropping event because there is no touchable window at (412, 436).
+01-01 00:04:50.036   539   573 I InputDispatcher: Dropping event because there is no touchable window at (411, 437).
+01-01 00:04:50.044   539   573 I InputDispatcher: Dropping event because there is no touchable window at (411, 440).
+01-01 00:04:50.052   539   573 I InputDispatcher: Dropping event because there is no touchable window at (410, 443).
+01-01 00:04:50.060   539   573 I InputDispatcher: Dropping event because there is no touchable window at (410, 445).
+01-01 00:04:50.068   539   573 I InputDispatcher: Dropping event because there is no touchable window at (409, 447).
+01-01 00:04:50.076   539   573 I InputDispatcher: Dropping event because there is no touchable window at (409, 450).
+01-01 00:04:50.084   539   573 I InputDispatcher: Dropping event because there is no touchable window at (409, 454).
+01-01 00:04:50.092   539   573 I InputDispatcher: Dropping event because there is no touchable window at (407, 456).
+01-01 00:04:50.100   539   573 I InputDispatcher: Dropping event because there is no touchable window at (407, 461).
+01-01 00:04:50.108   539   573 I InputDispatcher: Dropping event because there is no touchable window at (405, 466).
+01-01 00:04:50.116   539   573 I InputDispatcher: Dropping event because there is no touchable window at (404, 471).
+01-01 00:04:50.124   539   573 I InputDispatcher: Dropping event because there is no touchable window at (402, 477).
+01-01 00:04:50.132   539   573 I InputDispatcher: Dropping event because there is no touchable window at (400, 483).
+01-01 00:04:50.141   539   573 I InputDispatcher: Dropping event because there is no touchable window at (398, 492).
+01-01 00:04:50.148   539   573 I InputDispatcher: Dropping event because there is no touchable window at (395, 500).
+01-01 00:04:50.156   539   573 I InputDispatcher: Dropping event because there is no touchable window at (394, 508).
+01-01 00:04:50.164   539   573 I InputDispatcher: Dropping event because there is no touchable window at (391, 518).
+01-01 00:04:50.172   539   573 I InputDispatcher: Dropping event because there is no touchable window at (388, 527).
+01-01 00:04:50.180   539   573 I InputDispatcher: Dropping event because there is no touchable window at (386, 535).
+01-01 00:04:50.256   539   548 I art     : Background partial concurrent mark sweep GC freed 4842(312KB) AllocSpace objects, 5(100KB) LOS objects, 33% free, 5MB/8MB, paused 2.187ms total 130.793ms
+01-01 00:04:50.551   539   552 I ActivityManager: Killing 1179:android.process.acore/u0a3 (adj 906): empty #17
+01-01 00:04:50.620   539   779 D ActivityManager: cleanUpApplicationRecord -- 1179
+01-01 00:04:51.830  1108  1143 W OpenGLRenderer: Incorrectly called buildLayer on View: ShortcutAndWidgetContainer, destroying layer...
+01-01 00:04:51.843   539   549 I ActivityManager: START u0 {act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] flg=0x10200000 cmp=com.freescale.cactusplayer/.VideoMenu (has extras)} from uid 10016 on display 0
+01-01 00:04:51.886  1397  1397 D CactusPlayer: VideoMenu: onCreate
+01-01 00:04:51.907   539   665 I ActivityManager: START u0 {act=android.content.pm.action.REQUEST_PERMISSIONS pkg=com.android.packageinstaller cmp=com.android.packageinstaller/.permission.ui.GrantPermissionsActivity (has extras)} from uid 10033 on display 0
+01-01 00:04:51.932   539   573 I InputDispatcher: Dropping event because there is no touchable window at (434, 158).
+01-01 00:04:51.964   539   573 I InputDispatcher: Dropping event because there is no touchable window at (437, 158).
+01-01 00:04:51.972   539   573 I InputDispatcher: Dropping event because there is no touchable window at (439, 157).
+01-01 00:04:51.980   539   573 I InputDispatcher: Dropping event because there is no touchable window at (441, 157).
+01-01 00:04:51.988   539   573 I InputDispatcher: Dropping event because there is no touchable window at (444, 155).
+01-01 00:04:52.079  1397  1397 D CactusPlayer: onPrepareOptionsMenu 
+01-01 00:04:52.170   539   559 I ActivityManager: Displayed com.android.packageinstaller/.permission.ui.GrantPermissionsActivity: +222ms (total +303ms)
+01-01 00:04:52.376  1358  1358 D ViewRootImpl[GrantPermissionsActivity]: updatePointerIcon called with position out of bounds
+01-01 00:04:52.405  1358  1358 D ViewRootImpl[GrantPermissionsActivity]: updatePointerIcon called with position out of bounds
+01-01 00:04:52.433  1358  1358 D ViewRootImpl[GrantPermissionsActivity]: updatePointerIcon called with position out of bounds
+01-01 00:04:52.462  1358  1358 D ViewRootImpl[GrantPermissionsActivity]: updatePointerIcon called with position out of bounds
+01-01 00:04:52.605  1358  1358 D ViewRootImpl[GrantPermissionsActivity]: updatePointerIcon called with position out of bounds
+01-01 00:04:52.634  1358  1358 D ViewRootImpl[GrantPermissionsActivity]: updatePointerIcon called with position out of bounds
+01-01 00:04:52.663  1358  1358 D ViewRootImpl[GrantPermissionsActivity]: updatePointerIcon called with position out of bounds
+01-01 00:04:52.692  1358  1358 D ViewRootImpl[GrantPermissionsActivity]: updatePointerIcon called with position out of bounds
+01-01 00:04:52.720  1358  1358 D ViewRootImpl[GrantPermissionsActivity]: updatePointerIcon called with position out of bounds
+01-01 00:04:52.749  1358  1358 D ViewRootImpl[GrantPermissionsActivity]: updatePointerIcon called with position out of bounds
+01-01 00:04:52.778  1358  1358 D ViewRootImpl[GrantPermissionsActivity]: updatePointerIcon called with position out of bounds
+01-01 00:04:52.807  1358  1358 D ViewRootImpl[GrantPermissionsActivity]: updatePointerIcon called with position out of bounds
+01-01 00:04:52.835  1358  1358 D ViewRootImpl[GrantPermissionsActivity]: updatePointerIcon called with position out of bounds
+01-01 00:04:53.618   539   801 D VoldConnector: SND -> {35 volume remount_uid 10033 read}
+01-01 00:04:53.621   249   256 D vold    : Remounting 10033 as mode read
+01-01 00:04:53.629   249   256 D vold    : Found matching PID 1397
+01-01 00:04:53.831   539   576 D VoldConnector: RCV <- {200 35 Command succeeded}
+01-01 00:04:53.834   539   665 D VoldConnector: SND -> {36 volume remount_uid 10033 write}
+01-01 00:04:53.839   249   256 D vold    : Remounting 10033 as mode write
+01-01 00:04:53.851   249   256 D vold    : Found matching PID 1397
+01-01 00:04:54.031   539   576 D VoldConnector: RCV <- {200 36 Command succeeded}
+01-01 00:04:54.075  1397  1397 V CactusPlayer: Grant permission successfully
+01-01 00:04:54.173  1358  1372 D OpenGLRenderer: endAllActiveAnimators on 0x8c68bc00 (RippleDrawable) with handle 0x8d07f6e0
+01-01 00:04:54.197  1397  1415 D CactusPlayer: title is Engae Endru Povathu-5StarMusiQ.Com mime is audio/mpeg
+01-01 00:04:54.198  1397  1415 D CactusPlayer: title is Far Beyond Earth-5StarMusiQ.Com mime is audio/mpeg
+01-01 00:04:54.198  1397  1415 D CactusPlayer: title is Kurumba (Fathers Love)-5StarMusiQ.Com mime is audio/mpeg
+01-01 00:04:54.198  1397  1415 D CactusPlayer: title is Kurumba (Karaoke)-5StarMusiQ.Com mime is audio/mpeg
+01-01 00:04:54.198  1397  1415 D CactusPlayer: title is Kurumba Reprise (Mothers Love)-5StarMusiQ.Com mime is audio/mpeg
+01-01 00:04:54.198  1397  1415 D CactusPlayer: title is Maru Varthai Pesathey-5StarMusiQ.Com mime is audio/mpeg
+01-01 00:04:54.199  1397  1415 D CactusPlayer: title is Maruvaarthai (Restrung Version)-5StarMusiQ.Com mime is audio/mpeg
+01-01 00:04:54.199  1397  1415 D CactusPlayer: title is Naan Pizhaippeno-5StarMusiQ.Com mime is audio/mpeg
+01-01 00:04:54.199  1397  1415 D CactusPlayer: title is Naan Than Inge Visiri-5StarMusiQ.Com mime is audio/mpeg
+01-01 00:04:54.199  1397  1415 D CactusPlayer: title is Naana Thaana Veena Ponaa-5StarMusiQ.Com mime is audio/mpeg
+01-01 00:04:54.199  1397  1415 D CactusPlayer: title is Peela Peela Vudathe-5StarMusiQ.Com mime is audio/mpeg
+01-01 00:04:54.200  1397  1415 D CactusPlayer: title is Race Against Time-5StarMusiQ.Com mime is audio/mpeg
+01-01 00:04:54.200  1397  1415 D CactusPlayer: title is Sodakku Mela Sodakku-5StarMusiQ.Com mime is audio/mpeg
+01-01 00:04:54.200  1397  1415 D CactusPlayer: title is Thaanaa Serndha Koottam-5StarMusiQ.Com mime is audio/mpeg
+01-01 00:04:54.200  1397  1415 D CactusPlayer: title is Tik Tik Tik (Karaoke)-5StarMusiQ.Com mime is audio/mpeg
+01-01 00:04:54.200  1397  1415 D CactusPlayer: title is Tik Tik Tik (Title Track)-5StarMusiQ.Com mime is audio/mpeg
+01-01 00:04:54.200  1397  1415 D CactusPlayer: title is Vinveera Vinveera Idhu-5StarMusiQ.Com mime is audio/mpeg
+01-01 00:04:54.472   264   264 W SurfaceFlinger: couldn't log to binary event log: overflow.
+
+
+
+
+
+01-01 00:04:58.965   268   371 W audio_hw_primary: do_out_standby... -1297270592
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+01-01 00:05:01.127   268   371 I audio_hw_primary: start_output_stream_primary... -1297270592, device 1024
+01-01 00:05:01.128   268   371 W audio_hw_primary: Aravinth: start_output_stream_primary >1
+01-01 00:05:01.128   268   371 W audio_hw_primary: Aravinth: select_output_device >0 out_device=400
+01-01 00:05:01.128   268   371 W audio_hw_primary: headphone 0 ,headset 1024 ,speaker 0, earpiece 0, bt_on 0
+01-01 00:05:01.129   539   665 I ActivityManager: START u0 {dat=/storage/5E85-83CE/Music/Enai_Noki_Paayum_Thota_Single-4/Maruvaarthai_(Restrung_Version)-5StarMusiQ.Com.mp3 typ=audio/mpeg cmp=com.freescale.cactusplayer/.VideoPlayer} from uid 10033 on display 0
+01-01 00:05:01.141   268   371 W audio_hw_primary: HDMI: card 0, port 0 device 0x400
+01-01 00:05:01.141   268   371 W audio_hw_primary: HDMI: rate 44100, channel 2 period_size 0xc0
+01-01 00:05:01.141   268   371 W audio_hw_primary: Aravinth: start_output_stream_primary >2
+01-01 00:05:01.154  1397  1397 D Cactus  : VideoPlayer: onCreate
+01-01 00:05:01.157  1397  1397 D Cactus  : VideoPlayer: parseIntent
+01-01 00:05:01.204  1397  1397 D Cactus  : VideoPlayer: onStart
+01-01 00:05:01.210  1397  1397 D Cactus  : VideoPlayer: onResume mLastPlayState:-1
+01-01 00:05:01.218  1397  1397 D CactusPlayer: onMeasure mVideoW 0 mVideoH 0 widthMesaureSpec 1073742848 heightMeasureSpec 1073742440
+01-01 00:05:01.260  1397  1397 D CactusPlayer: onMeasure mVideoW 0 mVideoH 0 widthMesaureSpec 1073742848 heightMeasureSpec 1073742464
+01-01 00:05:01.275  1397  1397 D Cactus  : surfaceCreated
+01-01 00:05:01.285  1397  1397 W MediaPlayer: Couldn't open /storage/5E85-83CE/Music/Enai_Noki_Paayum_Thota_Single-4/Maruvaarthai_(Restrung_Version)-5StarMusiQ.Com.mp3: java.io.FileNotFoundException: No content provider: /storage/5E85-83CE/Music/Enai_Noki_Paayum_Thota_Single-4/Maruvaarthai_(Restrung_Version)-5StarMusiQ.Com.mp3
+01-01 00:05:01.292   276  1418 D NuPlayer: onSetVideoSurface(0xafd58800, no video decoder)
+01-01 00:05:01.293  1397  1397 W Cactus  : Url is /storage/5E85-83CE/Music/Enai_Noki_Paayum_Thota_Single-4/Maruvaarthai_(Restrung_Version)-5StarMusiQ.Com.mp3
+01-01 00:05:01.296  1397  1397 D Cactus  : surfaceChanged: parameter w/h 1024/640 mSurfaceW/H 0/0,mPlayState: 0 mTargetState: -1
+01-01 00:05:01.302  1397  1397 D Cactus  : ==========onCreateOptionsMenu 
+01-01 00:05:01.302  1397  1397 D Cactus  : ==========onPrepareOptionsMenu 
+01-01 00:05:01.331   275   649 D FslExtractor: FslExtractor::FslExtractor mime=audio/mpeg
+01-01 00:05:01.332   275   275 D FslExtractor: FslExtractor::Init BEGIN
+01-01 00:05:01.332   275   275 D FslExtractor: GetLibraryName lib_mp3_parser_arm11_elinux.3.0.so
+01-01 00:05:01.333   275   275 D FslExtractor: load parser name lib_mp3_parser_arm11_elinux.3.0.so
+01-01 00:05:01.333   275   275 D FslExtractor: FslExtractor::CreateParserInterface success
+01-01 00:05:01.333   275   275 I FslExtractor: Core parser MP3PARSER_03.01.17  build on Jun 22 2017 10:08:52 
+01-01 00:05:01.342   275   275 D FslExtractor: createParser2 flag=5c,err=0
+01-01 00:05:01.342   275   275 W FslExtractor: fail to set read mode to track mode
+01-01 00:05:01.343   275   275 I FslExtractor: mReadMode=0,mNumTracks=1
+01-01 00:05:01.343   275   275 I FslExtractor: bSeekable 1
+01-01 00:05:01.343   275   275 I FslExtractor: FslParser Key: 0	 format=0,size=46,Value: Maruvaarthai (Restrung Version)-5StarMusiQ.Com
+01-01 00:05:01.343   275   275 I FslExtractor: FslParser Key: 2	 format=0,size=22,Value: Tamil - 5StarMusiQ.Com
+01-01 00:05:01.343   275   275 I FslExtractor: FslParser Key: 3	 format=0,size=10,Value: Sid Sriram
+01-01 00:05:01.343   275   275 I FslExtractor: FslParser Key: 8	 format=0,size=24,Value: Enai Nokki Paayum Thotta
+01-01 00:05:01.343   275   275 I FslExtractor: FslParser Key: 12	 format=0,size=12,Value: Darbuka Siva
+01-01 00:05:01.343   275   275 I FslExtractor: FslParser Key: 23	 format=0,size=2,Value: 03
+01-01 00:05:01.343   275   275 I FslExtractor: FslParser Key: 33	 format=0,size=5,Value: 01/01
+01-01 00:05:01.343   275   275 I FslExtractor: FslParser Key: 6	 format=0,size=4,Value: 2018
+01-01 00:05:01.343   275   275 I FslExtractor: FslParser Key: 40	 format=0,size=12,Value: Darbuka Siva
+01-01 00:05:01.343   275   275 I FslExtractor: FslParser Key2: 31	 format=12,size=4,Value: 576
+01-01 00:05:01.343   275   275 I FslExtractor: FslParser Key2: 32	 format=12,size=4,Value: 1681
+01-01 00:05:01.344   275   275 D FslExtractor: FslExtractor::ParseMediaFormat BEGIN
+01-01 00:05:01.344   275   275 D FslExtractor: ParseAudio index=0,type=5,subtype=2912448837
+01-01 00:05:01.344   275   275 I FslExtractor: ParseAudio channel=2,sampleRate=44100,bitRate=264744,bitPerSample=0,audioBlockAlign=0
+01-01 00:05:01.344   275   275 I FslExtractor: add audio track index=0,sourceIndex=0,mime=audio/mpeg
+01-01 00:05:01.344   275   275 D FslExtractor: FslExtractor::Init ret=0
+01-01 00:05:01.348   275   306 D FslExtractor: FslExtractor::getTrack index=0
+01-01 00:05:01.348   275   306 E FslExtractor: getTrack source string cnt=1
+01-01 00:05:01.351   275   275 D FslExtractor: start track 0
+01-01 00:05:01.351   275   275 D FslExtractor: source start track 0
+01-01 00:05:01.351   276  1418 D NuPlayerDriver: notifyListener_l(0xb152aba0), (1, 0, 0), loop setting(0, 0)
+01-01 00:05:01.403  1397  1397 D MediaPlayer: setSubtitleAnchor in MediaPlayer
+01-01 00:05:01.411  1397  1397 D Cactus  : onPrepared: play state 0 video:0,0 mSurface:1024,640 mTargetState:-1
+01-01 00:05:01.412  1397  1397 D Cactus  : start(), last state -1
+01-01 00:05:01.413   276   690 D NuPlayerDriver: start(0xb152aba0), state is 4, eos is 0
+01-01 00:05:01.413   276  1418 I GenericSource: start
+01-01 00:05:01.413  1397  1397 D Cactus  : start(), change state to playing
+01-01 00:05:01.428   539   559 I ActivityManager: Displayed com.freescale.cactusplayer/.VideoPlayer: +287ms
+01-01 00:05:01.471   276  1424 I MediaPlayerService: MediaPlayerService::getOMX
+01-01 00:05:01.472   276  1424 I OMXClient: MuxOMX ctor
+01-01 00:05:01.473   273   705 I OMXMaster: makeComponentInstance(OMX.Freescale.std.audio_decoder.mp3.sw-based) in mediacodec process
+01-01 00:05:01.484   273   705 I OMXPlayer: AudioFilter SetParameter OMX_IndexParamAudioOutputConvert
+01-01 00:05:01.485   273   287 I OMXPlayer: AudioFilter SetParameter OMX_IndexParamAudioSendFirstPortSettingChanged 0
+01-01 00:05:01.487   273   869 E OMXNodeInstance: setConfig(111003a:Freescale.std._decoder.mp3.sw-based, ConfigPriority(0x6f800002)) ERROR: UnsupportedIndex(0x8000101a)
+01-01 00:05:01.487   276  1424 I ACodec  : codec does not support config priority (err -1010)
+01-01 00:05:01.490   276  1424 I MediaCodec: MediaCodec will operate in async mode
+01-01 00:05:01.496   273  1425 I OMXPlayer: SetupDecoder MP3 decoder Wrapper  build on Apr 10 2014 16:18:39 
+01-01 00:05:01.505   268   598 W AudioFlinger: createTrack_l(): mismatch between requested flags (00000008) and output flags (00000006)
+01-01 00:05:01.507   276  1422 D AudioTrack: Client defaulted notificationFrames to 11136 for frameCount 22272
+01-01 00:05:01.509   276  1418 D NuPlayerDriver: notifyListener_l(0xb152aba0), (6, 0, 0), loop setting(0, 0)
+01-01 00:05:01.579   268   371 W AudioFlinger: write blocked for 451 msecs, 8 delayed writes, thread 0xb2583480
+01-01 00:05:04.190  1397  1397 W ViewRootImpl[VideoMenu]: Cancelling event due to no window focus: MotionEvent { action=ACTION_CANCEL, actionButton=0, id[0]=0, x[0]=284.68173, y[0]=208.61783, toolType[0]=TOOL_TYPE_MOUSE, buttonState=0, metaState=0, flags=0x0, edgeFlags=0x0, pointerCount=1, historySize=0, eventTime=179598, downTime=176414, deviceId=2, source=0x2002 }
+01-01 00:05:04.190  1397  1397 W ViewRootImpl[VideoMenu]: Cancelling event due to no window focus: MotionEvent { action=ACTION_CANCEL, actionButton=0, id[0]=0, x[0]=284.68173, y[0]=208.61783, toolType[0]=TOOL_TYPE_MOUSE, buttonState=0, metaState=0, flags=0x0, edgeFlags=0x0, pointerCount=1, historySize=0, eventTime=179598, downTime=176414, deviceId=2, source=0x2002 }
+01-01 00:05:04.190  1397  1397 W ViewRootImpl[VideoMenu]: Cancelling event due to no window focus: MotionEvent { action=ACTION_CANCEL, actionButton=0, id[0]=0, x[0]=284.68173, y[0]=208.61783, toolType[0]=TOOL_TYPE_MOUSE, buttonState=0, metaState=0, flags=0x0, edgeFlags=0x0, pointerCount=1, historySize=0, eventTime=179598, downTime=176414, deviceId=2, source=0x2002 }
+01-01 00:05:04.191  1397  1397 W ViewRootImpl[VideoMenu]: Cancelling event due to no window focus: MotionEvent { action=ACTION_CANCEL, actionButton=0, id[0]=0, x[0]=284.68173, y[0]=208.61783, toolType[0]=TOOL_TYPE_MOUSE, buttonState=0, metaState=0, flags=0x0, edgeFlags=0x0, pointerCount=1, historySize=0, eventTime=179598, downTime=176414, deviceId=2, source=0x2002 }

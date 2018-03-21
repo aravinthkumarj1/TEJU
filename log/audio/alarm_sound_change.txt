@@ -1,0 +1,48 @@
+
+01-01 00:15:00.927   267   375 I audio_hw_primary: start_output_stream_primary... -1285211968, device 1024
+01-01 00:15:00.927   267   375 W audio_hw_primary: Aravinth: select_output_device >0
+01-01 00:15:00.927   267   375 W audio_hw_primary: headphone 0 ,headset 0 ,speaker 0, earpiece 0, 
+01-01 00:15:00.931   267   375 W audio_hw_primary: card 2, port 0 device 0x400
+01-01 00:15:00.931   267   375 W audio_hw_primary: rate 44100, channel 2 period_size 0x300
+01-01 00:15:01.009   275  1610 D NuPlayerDriver: notifyListener_l(0xb1aab140), (1, 0, 0), loop setting(0, 0)
+01-01 00:15:01.010  1127  1127 D MediaPlayer: setSubtitleAnchor in MediaPlayer
+01-01 00:15:01.014  1127  1127 D Ringtone: Successfully created local player
+01-01 00:15:01.015   275   687 D NuPlayerDriver: reset(0xb1aab140) at state 4
+01-01 00:15:01.015   275   687 D NuPlayerDriver: notifyListener_l(0xb1aab140), (8, 0, 0), loop setting(1, 0)
+01-01 00:15:01.016   275  1610 D NuPlayerDriver: notifyResetComplete(0xb1aab140)
+01-01 00:15:01.016   275   317 D NuPlayerDriver: reset(0xb1aab140) at state 0
+01-01 00:15:01.091   275  1613 D NuPlayerDriver: notifyListener_l(0xb1aaacc0), (1, 0, 0), loop setting(0, 0)
+01-01 00:15:01.092  1127  1127 D MediaPlayer: setSubtitleAnchor in MediaPlayer
+01-01 00:15:01.096  1127  1127 D Ringtone: Successfully created local player
+01-01 00:15:01.098   275   899 D NuPlayerDriver: start(0xb1aaacc0), state is 4, eos is 0
+01-01 00:15:01.098   275  1613 I GenericSource: start
+01-01 00:15:01.121   275  1618 I MediaPlayerService: MediaPlayerService::getOMX
+01-01 00:15:01.122   275  1618 I OMXClient: MuxOMX ctor
+01-01 00:15:01.123   272   859 I OMXMaster: makeComponentInstance(OMX.google.vorbis.decoder) in mediacodec process
+01-01 00:15:01.129   272   272 E OMXNodeInstance: setConfig(110003d:google.vorbis.decoder, ConfigPriority(0x6f800002)) ERROR: Undefined(0x80001001)
+01-01 00:15:01.129   275  1618 I ACodec  : codec does not support config priority (err -2147483648)
+01-01 00:15:01.131   275  1618 I MediaCodec: MediaCodec will operate in async mode
+01-01 00:15:01.169   267   381 W AudioFlinger: createTrack_l(): mismatch between requested flags (00000008) and output flags (00000006)
+01-01 00:15:01.172   275  1616 D AudioTrack: Client defaulted notificationFrames to 8071 for frameCount 24215
+01-01 00:15:01.313   267   375 I audio_hw_primary: out_set_parameters, old 0x400, new 0x2 do_output_standby
+01-01 00:15:01.313   267   375 W audio_hw_primary: do_out_standby... -1285211968
+01-01 00:15:01.313   267   375 W audio_hw_primary: Aravinth: select_output_device >0
+01-01 00:15:01.313   267   375 W audio_hw_primary: headphone 0 ,headset 0 ,speaker 2, earpiece 0, 
+01-01 00:15:01.319   267   375 W audio_hw_primary: out_set_parameters routing=2, ret 0, out -1285211968
+01-01 00:15:01.319   267   374 I audio_hw_primary: start_output_stream_primary... -1285211968, device 2
+01-01 00:15:01.320   267   374 W audio_hw_primary: Aravinth: select_output_device >0
+01-01 00:15:01.320   267   374 W audio_hw_primary: headphone 0 ,headset 0 ,speaker 2, earpiece 0, 
+01-01 00:15:01.323   275  1613 D NuPlayerDriver: notifyListener_l(0xb1aaacc0), (6, 0, 0), loop setting(1, 0)
+01-01 00:15:01.332   267   374 W audio_hw_primary: card 0, port 0 device 0x2
+01-01 00:15:01.332   267   374 W audio_hw_primary: rate 44100, channel 2 period_size 0xc0
+01-01 00:15:01.791   267   375 W AudioFlinger: write blocked for 363 msecs, 4 delayed writes, thread 0xb3103c80
+01-01 00:15:08.220   275  1617 I NuPlayerDecoder: [audio] saw output EOS
+01-01 00:15:08.843   275  1613 D NuPlayerDriver: notifyListener_l(0xb1aaacc0), (2, 0, 0), loop setting(1, 0)
+01-01 00:15:08.853   275  1617 I NuPlayerDecoder: [OMX.google.vorbis.decoder] resubmitting CSD
+01-01 00:15:08.853   275  1617 I NuPlayerDecoder: [OMX.google.vorbis.decoder] resubmitting CSD
+01-01 00:15:08.853   272  1619 W SoftVorbis: vorbis_dsp_synthesis returned -135
+01-01 00:15:08.853   272  1619 W SoftVorbis: vorbis_dsp_synthesis returned -135
+01-01 00:15:08.858   275  1613 D NuPlayerDriver: notifyListener_l(0xb1aaacc0), (6, 0, 0), loop setting(1, 0)
+
+CTRL-A Z for help | 115200 8N1 | NOR | Minicom 2.7 | VT102 | Offline | ttyUSB0                                                                                            
+

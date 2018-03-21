@@ -1,0 +1,1577 @@
+type=1400 audit(871.920:38): avc: denied { read } for pid=263 comm="obd" path="socket:[7267]" dev="sockfs" ino=7267 scontext=u:r:obd:s0 tcontext=u:r:obd:s0 tclass=socket permissive=1
+init: Service 'bootanim' (pid 345) exited with status 0
+type=1400 audit(872.010:39): avc: denied { write } for pid=263 comm="obd" path="socket:[7267]" dev="sockfs" ino=7267 scontext=u:r:obd:s0 tcontext=u:r:obd:s0 tclass=socket permissive=1
+init: Starting service 'exec 3 (/system/bin/bootstat)'...
+init: Service 'exec 3 (/system/bin/bootstat)' (pid 1021) exited with status 0
+init: Starting service 'exec 4 (/system/bin/bootstat)'...
+init: Service 'exec 4 (/system/bin/bootstat)' (pid 1031) exited with status 0
+init: Starting service 'exec 5 (/system/bin/bootstat)'...
+init: Service 'exec 5 (/system/bin/bootstat)' (pid 1033) exited with status 0
+init: Starting service 'exec 6 (/system/bin/bootstat)'...
+init: Service 'exec 6 (/system/bin/bootstat)' (pid 1034) exited with status 0
+
+toradex_apalis6q:/ # 
+toradex_apalis6q:/ # 
+toradex_apalis6q:/ # 
+toradex_apalis6q:/ # 
+toradex_apalis6q:/ # 
+toradex_apalis6q:/ # 
+toradex_apalis6q:/ # 
+toradex_apalis6q:/ # type=1400 audit(876.020:40): avc: denied { write } for pid=263 comm="obd" path="socket:[7267]" dev="sockfs" ino=7267 scontext=u:r:obd:s0 tcontext=u:r:obd:s0 tclass=socket permissive=1
+
+toradex_apalis6q:/ # type=1400 audit(876.120:41): avc: denied { read } for pid=263 comm="obd" path="socket:[7267]" dev="sockfs" ino=7267 scontext=u:r:obd:s0 tcontext=u:r:obd:s0 tclass=socket permissive=1
+
+toradex_apalis6q:/ # 
+toradex_apalis6q:/ # 
+toradex_apalis6q:/ # 
+toradex_apalis6q:/ # dmesgmtp_open
+type=1400 audit(883.480:42): avc: denied { write } for pid=1329 comm="Thread-2" name="vcan" dev="tmpfs" ino=7269 scontext=u:r:untrusted_app:s0:c512,c768 tcontext=u:object_r:socket_device:s0 tclass=sock_file permissive=1
+type=1400 audit(883.520:43): avc: denied { connectto } for pid=1329 comm="Thread-2" path="/dev/socket/vcan" scontext=u:r:untrusted_app:s0:c512,c768 tcontext=u:r:obd:s0 tclass=unix_stream_socket permissive=1
+
+Booting Linux on physical CPU 0x0
+Linux version 4.9.67-07229-gdc6c16ec0433 (embadmin@ubuntu) (gcc version 4.9 20150123 (prerelease) (GCC) ) #28 SMP PREEMPT Mon Jan 29 11:42:44 IST 2018
+CPU: ARMv7 Processor [412fc09a] revision 10 (ARMv7), cr=10c53c7d
+CPU: PIPT / VIPT nonaliasing data cache, VIPT aliasing instruction cache
+OF: fdt:Machine model: Aravinth : Toradex Apalis iMX6Q/D Module on Ixora V1.1 Carrier Board
+cma: Reserved 448 MiB at 0x22000000
+Memory policy: Data cache writealloc
+On node 0 totalpages: 524288
+free_area_init_node: node 0, pgdat c150f8c0, node_mem_map ee717000
+  Normal zone: 1520 pages used for memmap
+  Normal zone: 0 pages reserved
+  Normal zone: 194560 pages, LIFO batch:31
+  HighMem zone: 329728 pages, LIFO batch:31
+percpu: Embedded 15 pages/cpu @ee6b3000 s31040 r8192 d22208 u61440
+pcpu-alloc: s31040 r8192 d22208 u61440 alloc=15*4096
+pcpu-alloc: [0] 0 [0] 1 [0] 2 [0] 3 
+Built 1 zonelists in Zone order, mobility grouping on.  Total pages: 522768
+Kernel command line: console=ttymxc0,115200 init=/init video=mxcfb0:dev=lcd,FusionF07A,if=RGB24 video=mxcfb1:dev=hdmi,640x480M@60,if=RGB24,bpp=16 video=mxcfb2:off video=mxcfb3:off vmalloc=256M androidboot.console=ttymxc0 consoleblank=0 androidboot.hardware=freescale cma=448M androidboot.selinux=permissive androidboot.dm_verity=disabled androidboot.serialno=1b2429d4ea997115 androidboot.storage_type=emmc
+PID hash table entries: 4096 (order: 2, 16384 bytes)
+Dentry cache hash table entries: 131072 (order: 7, 524288 bytes)
+Inode-cache hash table entries: 65536 (order: 6, 262144 bytes)
+Memory: 1597048K/2097152K available (13312K kernel code, 1128K rwdata, 4016K rodata, 1024K init, 606K bss, 41352K reserved, 458752K cma-reserved, 1318912K highmem)
+Virtual kernel memory layout:
+    vector  : 0xffff0000 - 0xffff1000   (   4 kB)
+    fixmap  : 0xffc00000 - 0xfff00000   (3072 kB)
+    vmalloc : 0xf0000000 - 0xff800000   ( 248 MB)
+    lowmem  : 0xc0000000 - 0xef800000   ( 760 MB)
+    pkmap   : 0xbfe00000 - 0xc0000000   (   2 MB)
+    modules : 0xbf000000 - 0xbfe00000   (  14 MB)
+      .text : 0xc0008000 - 0xc0e00000   (14304 kB)
+      .init : 0xc1300000 - 0xc1400000   (1024 kB)
+      .data : 0xc1400000 - 0xc151a218   (1129 kB)
+       .bss : 0xc151a218 - 0xc15b1be0   ( 607 kB)
+SLUB: HWalign=64, Order=0-3, MinObjects=0, CPUs=4, Nodes=1
+Preemptible hierarchical RCU implementation.
+	Build-time adjustment of leaf fanout to 32.
+NR_IRQS:16 nr_irqs:16 16
+L2C-310 errata 752271 769419 enabled
+L2C-310 enabling early BRESP for Cortex-A9
+L2C-310 full line of zeros enabled for Cortex-A9
+L2C-310 ID prefetch enabled, offset 16 lines
+L2C-310 dynamic clock gating enabled, standby mode enabled
+L2C-310 cache controller enabled, 16 ways, 1024 kB
+L2C-310: CACHE_ID 0x410000c7, AUX_CTRL 0x76470001
+Switching to timer-based delay loop, resolution 333ns
+sched_clock: 32 bits at 3000kHz, resolution 333ns, wraps every 715827882841ns
+clocksource: mxc_timer1: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 637086815595 ns
+Console: colour dummy device 80x30
+Calibrating delay loop (skipped), value calculated using timer frequency.. 6.00 BogoMIPS (lpj=30000)
+pid_max: default: 32768 minimum: 301
+Security Framework initialized
+SELinux:  Initializing.
+SELinux:  Starting in permissive mode
+Mount-cache hash table entries: 2048 (order: 1, 8192 bytes)
+Mountpoint-cache hash table entries: 2048 (order: 1, 8192 bytes)
+CPU: Testing write buffer coherency: ok
+CPU0: update cpu_capacity 1024
+CPU0: thread -1, cpu 0, socket 0, mpidr 80000000
+Setting up static identity map for 0x10100000 - 0x10100058
+CPU1: update cpu_capacity 1024
+CPU1: thread -1, cpu 1, socket 0, mpidr 80000001
+CPU2: update cpu_capacity 1024
+CPU2: thread -1, cpu 2, socket 0, mpidr 80000002
+CPU3: update cpu_capacity 1024
+CPU3: thread -1, cpu 3, socket 0, mpidr 80000003
+Brought up 4 CPUs
+SMP: Total of 4 processors activated (24.00 BogoMIPS).
+CPU: All CPU(s) started in SVC mode.
+CPU3: update max cpu_capacity 1024
+devtmpfs: initialized
+CPU2: update max cpu_capacity 1024
+VFP support v0.3: implementor 41 architecture 3 part 30 variant 9 rev 4
+clocksource: jiffies: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 19112604462750000 ns
+futex hash table entries: 1024 (order: 4, 65536 bytes)
+pinctrl core: initialized pinctrl subsystem
+NET: Registered protocol family 16
+DMA: preallocated 256 KiB pool for atomic coherent allocations
+cpuidle: using governor menu
+CPU identified as i.MX6Q, silicon rev 1.5
+hw-breakpoint: found 5 (+1 reserved) breakpoint and 1 watchpoint registers.
+hw-breakpoint: maximum watchpoint size is 4 bytes.
+imx6q-pinctrl 20e0000.iomuxc: initialized IMX pinctrl driver
+imx-gpc 20dc000.gpc: no fsl,ldo-bypass found!
+imx-gpc 20dc000.gpc: Registered imx-gpc
+mxs-dma 110000.dma-apbh: initialized
+usb_host_vbus: supplied by usb_host_vbus_hub
+SCSI subsystem initialized
+libata version 3.00 loaded.
+usbcore: registered new interface driver usbfs
+usbcore: registered new interface driver hub
+usbcore: registered new device driver usb
+2000000.aips-bus:usbphy_nop1 supply vcc not found, using dummy regulator
+2000000.aips-bus:usbphy_nop2 supply vcc not found, using dummy regulator
+i2c i2c-1: IMX I2C adapter registered
+i2c i2c-1: can't use DMA, using PIO instead.
+stmpe-i2c 2-0041: stmpe811 detected, chip id: 0x811
+i2c i2c-2: IMX I2C adapter registered
+i2c i2c-2: can't use DMA, using PIO instead.
+i2c i2c-3: IMX I2C adapter registered
+i2c i2c-3: can't use DMA, using PIO instead.
+Linux video capture interface: v2.00
+pps_core: LinuxPPS API ver. 1 registered
+pps_core: Software ver. 5.3.6 - Copyright 2005-2007 Rodolfo Giometti <giometti@linux.it>
+PTP clock support registered
+imx-ipuv3 2400000.ipu: IPU DMFC NORMAL mode: 1(0~1), 5B(4,5), 5F(6,7)
+imx-ipuv3 2800000.ipu: IPU DMFC NORMAL mode: 1(0~1), 5B(4,5), 5F(6,7)
+mxc_mipi_csi2 21dc000.mipi_csi: i.MX MIPI CSI2 driver probed ipu0 csi1
+mxc_mipi_csi2 21dc000.mipi_csi: i.MX MIPI CSI2 dphy version is 0x3130302a
+MIPI CSI2 driver module loaded
+imx rpmsg driver is registered.
+Advanced Linux Sound Architecture Driver Initialized.
+Bluetooth: Core ver 2.22
+NET: Registered protocol family 31
+Bluetooth: HCI device and connection manager initialized
+Bluetooth: HCI socket layer initialized
+Bluetooth: L2CAP socket layer initialized
+Bluetooth: SCO socket layer initialized
+clocksource: Switched to clocksource mxc_timer1
+VFS: Disk quotas dquot_6.6.0
+VFS: Dquot-cache hash table entries: 1024 (order 0, 4096 bytes)
+NET: Registered protocol family 2
+TCP established hash table entries: 8192 (order: 3, 32768 bytes)
+TCP bind hash table entries: 8192 (order: 4, 65536 bytes)
+TCP: Hash tables configured (established 8192 bind 8192)
+UDP hash table entries: 512 (order: 2, 16384 bytes)
+UDP-Lite hash table entries: 512 (order: 2, 16384 bytes)
+NET: Registered protocol family 1
+RPC: Registered named UNIX socket transport module.
+RPC: Registered udp transport module.
+RPC: Registered tcp transport module.
+RPC: Registered tcp NFSv4.1 backchannel transport module.
+Trying to unpack rootfs image as initramfs...
+Freeing initrd memory: 1592K
+hw perfevents: enabled with armv7_cortex_a9 PMU driver, 7 counters available
+Bus freq driver module loaded
+audit: initializing netlink subsys (disabled)
+audit: type=2000 audit(0.890:1): initialized
+workingset: timestamp_bits=30 max_order=19 bucket_order=0
+NFS: Registering the id_resolver key type
+Key type id_resolver registered
+Key type id_legacy registered
+ntfs: driver 2.1.32 [Flags: R/W DEBUG].
+jffs2: version 2.2. (NAND) © 2001-2006 Red Hat, Inc.
+fuse init (API version 7.26)
+SELinux:  Registering netfilter hooks
+bounce: pool size: 64 pages
+io scheduler noop registered
+io scheduler deadline registered
+io scheduler cfq registered (default)
+backlight supply power not found, using dummy regulator
+20e0000.hdmi_video supply HDMI not found, using dummy regulator
+mxc_sdc_fb fb@0: registered mxc display driver lcd
+Console: switching to colour frame buffer device 100x30
+mxc_hdmi 20e0000.hdmi_video: Detected HDMI controller 0x13:0xa:0xa0:0xc1
+fbcvt: 640x480@60: CVT Name - .307M3
+mxc_sdc_fb fb@1: registered mxc display driver hdmi
+mxc_sdc_fb fb@2: Can't get fb option for mxcfb2!
+mxc_sdc_fb fb@3: Can't get fb option for mxcfb3!
+imx-sdma 20ec000.sdma: no iram assigned, using external mem
+imx-sdma 20ec000.sdma: loaded firmware 3.3
+pfuze100-regulator 2-0008: Full layer: 2, Metal layer: 1
+pfuze100-regulator 2-0008: FAB: 0, FIN: 0
+pfuze100-regulator 2-0008: pfuze100 found.
+mxc_hdmi 20e0000.hdmi_video: Read EDID again
+2020000.serial: ttymxc0 at MMIO 0x2020000 (irq = 29, base_baud = 5000000) is a IMX
+mxc_hdmi 20e0000.hdmi_video: create default modelist
+console [ttymxc0] enabled
+21e8000.serial: ttymxc1 at MMIO 0x21e8000 (irq = 78, base_baud = 5000000) is a IMX
+21f0000.serial: ttymxc3 at MMIO 0x21f0000 (irq = 79, base_baud = 5000000) is a IMX
+21f4000.serial: ttymxc4 at MMIO 0x21f4000 (irq = 80, base_baud = 5000000) is a IMX
+imx sema4 driver is registered.
+[drm] Initialized
+[drm] Initialized vivante 1.0.0 20120216 on minor 0
+brd: module loaded
+loop: module loaded
+zram: Added device: zram0
+ahci-imx 2200000.sata: fsl,transmit-level-mV not specified, using 00000024
+ahci-imx 2200000.sata: fsl,transmit-boost-mdB not specified, using 00000480
+ahci-imx 2200000.sata: fsl,transmit-atten-16ths not specified, using 00002000
+ahci-imx 2200000.sata: fsl,receive-eq-mdB not specified, using 05000000
+ahci-imx 2200000.sata: SSS flag set, parallel bus scan disabled
+ahci-imx 2200000.sata: AHCI 0001.0300 32 slots 1 ports 3 Gbps 0x1 impl platform mode
+ahci-imx 2200000.sata: flags: ncq sntf stag pm led clo only pmp pio slum part ccc apst 
+scsi host0: ahci-imx
+ata1: SATA max UDMA/133 mmio [mem 0x02200000-0x02203fff] port 0x100 irq 87
+spi_imx 2008000.ecspi: probed
+libphy: Fixed MDIO Bus: probed
+tun: Universal TUN/TAP device driver, 1.6
+tun: (C) 1999-2004 Max Krasnyansky <maxk@qualcomm.com>
+CAN device driver interface
+2090000.flexcan supply xceiver not found, using dummy regulator
+flexcan 2090000.flexcan: device registered (reg_base=f02f4000, irq=38)
+2094000.flexcan supply xceiver not found, using dummy regulator
+flexcan 2094000.flexcan: device registered (reg_base=f02fc000, irq=39)
+2188000.ethernet supply phy not found, using dummy regulator
+pps pps0: new PPS source ptp0
+libphy: fec_enet_mii_bus: probed
+fec 2188000.ethernet eth0: registered PHC device 0
+PPP generic driver version 2.4.2
+PPP BSD Compression module registered
+PPP Deflate Compression module registered
+PPP MPPE Compression module registered
+NET: Registered protocol family 24
+usbcore: registered new interface driver kaweth
+pegasus: v0.9.3 (2013/04/25), Pegasus/Pegasus II USB Ethernet driver
+usbcore: registered new interface driver pegasus
+usbcore: registered new interface driver rtl8150
+usbcore: registered new interface driver r8152
+usbcore: registered new interface driver asix
+usbcore: registered new interface driver ax88179_178a
+usbcore: registered new interface driver cdc_ether
+usbcore: registered new interface driver cdc_eem
+usbcore: registered new interface driver net1080
+usbcore: registered new interface driver cdc_subset
+usbcore: registered new interface driver zaurus
+usbcore: registered new interface driver cdc_ncm
+ehci_hcd: USB 2.0 'Enhanced' Host Controller (EHCI) Driver
+ehci-mxc: Freescale On-Chip EHCI Host driver
+usbcore: registered new interface driver cdc_acm
+cdc_acm: USB Abstract Control Model driver for USB modems and ISDN adapters
+usbcore: registered new interface driver usb-storage
+usbcore: registered new interface driver usbserial
+usbcore: registered new interface driver usbserial_generic
+usbserial: USB Serial support registered for generic
+usbcore: registered new interface driver ftdi_sio
+usbserial: USB Serial support registered for FTDI USB Serial Device
+usbcore: registered new interface driver option
+usbserial: USB Serial support registered for GSM modem (1-port)
+usbcore: registered new interface driver usbtest
+usbcore: registered new interface driver usb_ehset_test
+2184800.usbmisc supply vbus-wakeup not found, using dummy regulator
+ci_hdrc ci_hdrc.1: EHCI Host Controller
+ci_hdrc ci_hdrc.1: new USB bus registered, assigned bus number 1
+ci_hdrc ci_hdrc.1: USB 2.0 started, EHCI 1.00
+usb usb1: New USB device found, idVendor=1d6b, idProduct=0002
+usb usb1: New USB device strings: Mfr=3, Product=2, SerialNumber=1
+usb usb1: Product: EHCI Host Controller
+usb usb1: Manufacturer: Linux 4.9.67-07229-gdc6c16ec0433 ehci_hcd
+usb usb1: SerialNumber: ci_hdrc.1
+hub 1-0:1.0: USB hub found
+hub 1-0:1.0: 1 port detected
+ata1: SATA link down (SStatus 0 SControl 300)
+ahci-imx 2200000.sata: no device found, disabling link.
+ahci-imx 2200000.sata: pass ahci_imx..hotplug=1 to enable hotplug
+mousedev: PS/2 mouse device common for all mice
+usbcore: registered new interface driver xpad
+usbcore: registered new interface driver usb_acecad
+usbcore: registered new interface driver aiptek
+usbcore: registered new interface driver gtco
+usbcore: registered new interface driver hanwang
+usbcore: registered new interface driver kbtab
+input: stmpe-ts as /devices/soc0/soc/2100000.aips-bus/21a4000.i2c/i2c-2/2-0041/stmpe-ts/input/input0
+snvs_rtc 20cc000.snvs:snvs-rtc-lp: rtc core: registered 20cc000.snvs:snvs-r as rtc0
+i2c /dev entries driver
+IR NEC protocol handler initialized
+IR RC5(x/sz) protocol handler initialized
+IR RC6 protocol handler initialized
+IR JVC protocol handler initialized
+IR Sony protocol handler initialized
+IR SANYO protocol handler initialized
+IR Sharp protocol handler initialized
+IR MCE Keyboard/mouse protocol handler initialized
+IR XMP protocol handler initialized
+mxc_v4l2_output v4l2_out: V4L2 device registered as video16
+mxc_v4l2_output v4l2_out: V4L2 device registered as video17
+mxc_v4l2_output v4l2_out: V4L2 device registered as video18
+ov564x_mipi 3-003c: found pwm2, period=0
+usb 1-1: new high-speed USB device number 2 using ci_hdrc
+ov5640_read_reg:write reg error:reg=300a
+camera ov5640_mipi is not found
+usbcore: registered new interface driver uvcvideo
+USB Video Class driver (1.1.1)
+imx2-wdt 20bc000.wdog: timeout 60 sec (nowayout=0)
+device-mapper: uevent: version 1.0.3
+device-mapper: ioctl: 4.35.0-ioctl (2016-06-23) initialised: dm-devel@redhat.com
+Bluetooth: HCI UART driver ver 2.3
+Bluetooth: HCI UART protocol H4 registered
+Bluetooth: HCI UART protocol BCSP registered
+Bluetooth: HCI UART protocol ATH3K registered
+usbcore: registered new interface driver btusb
+sdhci: Secure Digital Host Controller Interface driver
+sdhci: Copyright(c) Pierre Ossman
+sdhci-pltfm: SDHCI platform and OF driver helper
+sdhci-esdhc-imx 2190000.usdhc: could not get ultra high speed state, work on normal mode
+sdhci-esdhc-imx 2190000.usdhc: Got CD GPIO
+mmc1: SDHCI controller on 2190000.usdhc [2190000.usdhc] using ADMA
+sdhci-esdhc-imx 2198000.usdhc: could not get ultra high speed state, work on normal mode
+usb 1-1: New USB device found, idVendor=0424, idProduct=2514
+usb 1-1: New USB device strings: Mfr=0, Product=0, SerialNumber=0
+hub 1-1:1.0: USB hub found
+hub 1-1:1.0: 4 ports detected
+mmc0: SDHCI controller on 2198000.usdhc [2198000.usdhc] using ADMA
+mxc_vpu 2040000.vpu_fsl: VPU initialized
+mxc_vdoa 21e4000.vdoa: i.MX Video Data Order Adapter(VDOA) driver probed
+mxc_hdmi_cec soc:hdmi_cec@00120000: HDMI CEC initialized
+Galcore version 6.2.2.96445
+mmc0: new DDR MMC card at address 0001
+mmcblk0: mmc0:0001 Q2J54A 3.59 GiB 
+mmcblk0boot0: mmc0:0001 Q2J54A partition 1 16.0 MiB
+mmcblk0boot1: mmc0:0001 Q2J54A partition 2 16.0 MiB
+random: fast init done
+Alternate GPT is invalid, using primary GPT.
+ mmcblk0: p1 p2 p3 p4 p5 p6 p7 p8 p9 p10 p11
+usb 1-1.2: new low-speed USB device number 3 using ci_hdrc
+usb 1-1.2: New USB device found, idVendor=413c, idProduct=301a
+usb 1-1.2: New USB device strings: Mfr=1, Product=2, SerialNumber=0
+usb 1-1.2: Product: Dell MS116 USB Optical Mouse
+usb 1-1.2: Manufacturer: PixArt
+caam 2100000.caam: ERA source: CAAMVID.
+caam 2100000.caam: AXI pipeline throttling enabled.
+caam 2100000.caam: Instantiated RNG4 SH1
+caam 2100000.caam: device ID = 0x0a16010000000000 (Era 4)
+caam 2100000.caam: job rings = 2, qi = 0
+caam algorithms registered in /proc/crypto
+caam_jr 2101000.jr0: registering rng-caam
+platform caam_sm: blkkey_ex: 4 keystore units available
+platform caam_sm: 64-bit clear key:
+platform caam_sm: [0000] 00 01 02 03 04 0f 06 07
+platform caam_sm: 64-bit black key:
+platform caam_sm: [0000] 21 99 d1 a9 df 2c 7c 1e
+platform caam_sm: [0008] a4 8e 9a 78 07 33 99 c5
+platform caam_sm: 128-bit clear key:
+platform caam_sm: [0000] 00 01 02 03 04 0f 06 07
+platform caam_sm: [0008] 08 09 0a 0b 0c 0d 0e 0f
+platform caam_sm: 128-bit black key:
+platform caam_sm: [0000] b6 64 c3 c3 65 e5 f8 59
+platform caam_sm: [0008] c6 23 2e 13 77 46 4f f4
+platform caam_sm: 192-bit clear key:
+platform caam_sm: [0000] 00 01 02 03 04 0f 06 07
+platform caam_sm: [0008] 08 09 0a 0b 0c 0d 0e 0f
+platform caam_sm: [0016] 10 11 12 13 14 15 16 17
+platform caam_sm: 192-bit black key:
+platform caam_sm: [0000] b7 96 1f cd 42 68 86 ed
+platform caam_sm: [0008] 23 2c 7e 33 ca 16 9d 20
+platform caam_sm: [0016] 1a d6 32 de cb be 19 a1
+platform caam_sm: [0024] e4 a5 b8 16 b4 b3 3f 4b
+platform caam_sm: 256-bit clear key:
+platform caam_sm: [0000] 00 01 02 03 04 0f 06 07
+platform caam_sm: [0008] 08 09 0a 0b 0c 0d 0e 0f
+platform caam_sm: [0016] 10 11 12 13 14 15 16 17
+platform caam_sm: [0024] 18 19 1a 1b 1c 1d 1e 1f
+platform caam_sm: 256-bit black key:
+platform caam_sm: [0000] 5e 77 1a 05 64 4f 3c 60
+platform caam_sm: [0008] a8 94 0c 56 7a 7d 53 05
+platform caam_sm: [0016] 31 49 25 97 ea 3f 77 07
+platform caam_sm: [0024] 07 37 6d 6b e1 82 d9 d1
+platform caam_sm: 64-bit unwritten blob:
+platform caam_sm: [0000] 00 00 00 00 00 00 00 00
+platform caam_sm: [0008] 00 00 00 00 00 00 00 00
+platform caam_sm: [0016] 00 00 00 00 00 00 00 00
+platform caam_sm: [0024] 00 00 00 00 00 00 00 00
+platform caam_sm: [0032] 00 00 00 00 00 00 00 00
+platform caam_sm: [0040] 00 00 00 00 00 00 00 00
+platform caam_sm: [0048] 00 00 00 00 00 00 00 00
+platform caam_sm: [0056] 00 00 00 00 00 00 00 00
+platform caam_sm: [0064] 00 00 00 00 00 00 00 00
+platform caam_sm: [0072] 00 00 00 00 00 00 00 00
+platform caam_sm: [0080] 00 00 00 00 00 00 00 00
+platform caam_sm: [0088] 00 00 00 00 00 00 00 00
+platform caam_sm: 128-bit unwritten blob:
+platform caam_sm: [0000] 00 00 00 00 00 00 00 00
+platform caam_sm: [0008] 00 00 00 00 00 00 00 00
+platform caam_sm: [0016] 00 00 00 00 00 00 00 00
+platform caam_sm: [0024] 00 00 00 00 00 00 00 00
+platform caam_sm: [0032] 00 00 00 00 00 00 00 00
+platform caam_sm: [0040] 00 00 00 00 00 00 00 00
+platform caam_sm: [0048] 00 00 00 00 00 00 00 00
+platform caam_sm: [0056] 00 00 00 00 00 00 00 00
+platform caam_sm: [0064] 00 00 00 00 00 00 00 00
+platform caam_sm: [0072] 00 00 00 00 00 00 00 00
+platform caam_sm: [0080] 00 00 00 00 00 00 00 00
+platform caam_sm: [0088] 00 00 00 00 00 00 00 00
+platform caam_sm: 196-bit unwritten blob:
+platform caam_sm: [0000] 00 00 00 00 00 00 00 00
+platform caam_sm: [0008] 00 00 00 00 00 00 00 00
+platform caam_sm: [0016] 00 00 00 00 00 00 00 00
+platform caam_sm: [0024] 00 00 00 00 00 00 00 00
+platform caam_sm: [0032] 00 00 00 00 00 00 00 00
+platform caam_sm: [0040] 00 00 00 00 00 00 00 00
+platform caam_sm: [0048] 00 00 00 00 00 00 00 00
+platform caam_sm: [0056] 00 00 00 00 00 00 00 00
+platform caam_sm: [0064] 00 00 00 00 00 00 00 00
+platform caam_sm: [0072] 00 00 00 00 00 00 00 00
+platform caam_sm: [0080] 00 00 00 00 00 00 00 00
+platform caam_sm: [0088] 00 00 00 00 00 00 00 00
+platform caam_sm: 256-bit unwritten blob:
+platform caam_sm: [0000] 00 00 00 00 00 00 00 00
+platform caam_sm: [0008] 00 00 00 00 00 00 00 00
+platform caam_sm: [0016] 00 00 00 00 00 00 00 00
+platform caam_sm: [0024] 00 00 00 00 00 00 00 00
+platform caam_sm: [0032] 00 00 00 00 00 00 00 00
+platform caam_sm: [0040] 00 00 00 00 00 00 00 00
+platform caam_sm: [0048] 00 00 00 00 00 00 00 00
+platform caam_sm: [0056] 00 00 00 00 00 00 00 00
+platform caam_sm: [0064] 00 00 00 00 00 00 00 00
+platform caam_sm: [0072] 00 00 00 00 00 00 00 00
+platform caam_sm: [0080] 00 00 00 00 00 00 00 00
+platform caam_sm: [0088] 00 00 00 00 00 00 00 00
+platform caam_sm: 64-bit black key in blob:
+platform caam_sm: [0000] 01 29 e3 12 de 43 42 b6
+platform caam_sm: [0008] 8b ba 08 b2 17 47 32 56
+platform caam_sm: [0016] e0 35 69 d5 17 c9 9b da
+platform caam_sm: [0024] 5c f2 35 b3 5e 48 f1 ea
+platform caam_sm: [0032] da 63 ef 3d e3 83 e9 a4
+platform caam_sm: [0040] 9d cf fc 79 03 57 0e dd
+platform caam_sm: [0048] f1 f5 53 ff 6f c3 92 f4
+platform caam_sm: [0056] 00 00 00 00 00 00 00 00
+platform caam_sm: [0064] 00 00 00 00 00 00 00 00
+platform caam_sm: [0072] 00 00 00 00 00 00 00 00
+platform caam_sm: [0080] 00 00 00 00 00 00 00 00
+platform caam_sm: [0088] 00 00 00 00 00 00 00 00
+platform caam_sm: 128-bit black key in blob:
+platform caam_sm: [0000] 9e e0 c8 4d a6 67 33 03
+platform caam_sm: [0008] 1d a8 41 7a f0 ec 5b b2
+platform caam_sm: [0016] d3 31 31 ec cb 91 68 44
+platform caam_sm: [0024] ec f3 75 90 1f f6 70 de
+platform caam_sm: [0032] 7e 19 79 c3 7d d7 40 dc
+platform caam_sm: [0040] a0 89 29 96 16 8f 98 33
+platform caam_sm: [0048] 69 22 10 99 bb 9b 59 02
+platform caam_sm: [0056] 4a d9 a5 5d 37 3e df 94
+platform caam_sm: [0064] 00 00 00 00 00 00 00 00
+platform caam_sm: [0072] 00 00 00 00 00 00 00 00
+platform caam_sm: [0080] 00 00 00 00 00 00 00 00
+platform caam_sm: [0088] 00 00 00 00 00 00 00 00
+platform caam_sm: 192-bit black key in blob:
+platform caam_sm: [0000] d3 96 41 f1 8c 32 81 79
+platform caam_sm: [0008] 79 5b e3 8d 25 dc 67 7c
+platform caam_sm: [0016] 4b d6 97 26 5b 4e 55 e4
+platform caam_sm: [0024] 0a c4 d6 2e 96 78 60 2c
+platform caam_sm: [0032] 0e b5 11 e4 e8 c7 dc 85
+platform caam_sm: [0040] d2 20 c8 f6 e1 51 02 7b
+platform caam_sm: [0048] 41 67 d1 5e 1a d3 da 31
+platform caam_sm: [0056] 6e c3 e0 ba 75 fe 0c 07
+platform caam_sm: [0064] e1 36 81 2f 97 9c 10 86
+platform caam_sm: [0072] 00 00 00 00 00 00 00 00
+platform caam_sm: [0080] 00 00 00 00 00 00 00 00
+platform caam_sm: [0088] 00 00 00 00 00 00 00 00
+platform caam_sm: 256-bit black key in blob:
+platform caam_sm: [0000] b0 e9 61 c4 13 d5 07 ab
+platform caam_sm: [0008] 8e 0b 5e 42 02 d6 1d de
+platform caam_sm: [0016] 48 08 2f fa f1 53 4f 2e
+platform caam_sm: [0024] 50 cb 7d 9b b7 00 de 23
+platform caam_sm: [0032] d8 42 a3 07 d3 ae 0f ce
+platform caam_sm: [0040] cd 8b 95 44 df cd a1 37
+platform caam_sm: [0048] 6f 59 c8 07 e6 62 4a ad
+platform caam_sm: [0056] f8 4a 84 07 82 07 83 fc
+platform caam_sm: [0064] 58 97 b8 1a 88 cf 30 2f
+platform caam_sm: [0072] 7c 18 d8 4d 0f 42 7a 79
+platform caam_sm: [0080] 00 00 00 00 00 00 00 00
+platform caam_sm: [0088] 00 00 00 00 00 00 00 00
+platform caam_sm: restored 64-bit black key:
+platform caam_sm: [0000] a1 7b 25 67 a9 73 a9 b6
+platform caam_sm: [0008] 6c 4b 5e 62 7d 9a 49 33
+platform caam_sm: restored 128-bit black key:
+platform caam_sm: [0000] b6 64 c3 c3 65 e5 f8 59
+platform caam_sm: [0008] c6 23 2e 13 77 46 4f f4
+platform caam_sm: restored 192-bit black key:
+platform caam_sm: [0000] b7 96 1f cd 42 68 86 ed
+platform caam_sm: [0008] 23 2c 7e 33 ca 16 9d 20
+platform caam_sm: [0016] 9b 2f 2d d2 b8 ee 27 37
+platform caam_sm: [0024] 61 24 b7 9c 54 40 d2 72
+platform caam_sm: restored 256-bit black key:
+platform caam_sm: [0000] 5e 77 1a 05 64 4f 3c 60
+platform caam_sm: [0008] a8 94 0c 56 7a 7d 53 05
+platform caam_sm: [0016] 31 49 25 97 ea 3f 77 07
+platform caam_sm: [0024] 07 37 6d 6b e1 82 d9 d1
+snvs-secvio 20cc000.caam-snvs: can't get snvs clock
+snvs-secvio 20cc000.caam-snvs: violation handlers armed - non-secure state
+hidraw: raw HID events driver (C) Jiri Kosina
+input: PixArt Dell MS116 USB Optical Mouse as /devices/soc0/soc/2100000.aips-bus/2184200.usb/ci_hdrc.1/usb1/1-1/1-1.2/1-1.2:1.0/0003:413C:301A.0001/input/input1
+hid-generic 0003:413C:301A.0001: input,hidraw0: USB HID v1.11 Mouse [PixArt Dell MS116 USB Optical Mouse] on usb-ci_hdrc.1-1.2/input0
+usbcore: registered new interface driver usbhid
+usbhid: USB HID core driver
+ashmem: initialized
+usbcore: registered new interface driver snd-usb-audio
+sgtl5000 2-000a: sgtl5000 revision 0x11
+fsl-ssi-dai 2028000.ssi: No cache defaults, reading back from HW
+imx-sgtl5000 sound: sgtl5000 <-> 2028000.ssi mapping ok
+imx-spdif sound-spdif: snd-soc-dummy-dai <-> 2004000.spdif mapping ok
+imx-audio-hdmi sound-hdmi: hdmi-hifi.0 <-> soc:hdmi_audio@00120000 mapping ok
+NET: Registered protocol family 26
+u32 classifier
+    Actions configured
+Netfilter messages via NETLINK v0.30.
+nf_conntrack version 0.5.0 (16384 buckets, 65536 max)
+ctnetlink v0.93: registering with nfnetlink.
+xt_time: kernel timezone is -0000
+ip_tables: (C) 2000-2006 Netfilter Core Team
+arp_tables: arp_tables: (C) 2002 David S. Miller
+Initializing XFRM netlink socket
+NET: Registered protocol family 10
+mip6: Mobile IPv6
+ip6_tables: (C) 2000-2006 Netfilter Core Team
+sit: IPv6, IPv4 and MPLS over IPv4 tunneling driver
+NET: Registered protocol family 17
+NET: Registered protocol family 15
+can: controller area network core (rev 20120528 abi 9)
+NET: Registered protocol family 29
+can: raw protocol (rev 20120528)
+can: broadcast manager protocol (rev 20161123 t)
+can: netlink gateway (rev 20130117) max_hops=1
+Bluetooth: RFCOMM TTY layer initialized
+Bluetooth: RFCOMM socket layer initialized
+Bluetooth: RFCOMM ver 1.11
+Bluetooth: BNEP (Ethernet Emulation) ver 1.3
+Bluetooth: BNEP filters: protocol multicast
+Bluetooth: BNEP socket layer initialized
+Bluetooth: HIDP (Human Interface Emulation) ver 1.2
+Bluetooth: HIDP socket layer initialized
+8021q: 802.1Q VLAN Support v1.8
+Key type dns_resolver registered
+cpu cpu0: Registered imx6q-cpufreq
+registered taskstats version 1
+imx_thermal 2000000.aips-bus:tempmon: Industrial CPU temperature grade - max:105C critical:100C passive:95C
+dhd_module_init in
+input: gpio-keys as /devices/soc0/gpio-keys/input/input2
+snvs_rtc 20cc000.snvs:snvs-rtc-lp: setting system clock to 1970-01-01 00:13:55 UTC (835)
+usb_otg_vbus: disabling
+ALSA device list:
+  #0: imx6q-apalis-sgtl5000
+  #1: imx-spdif
+  #2: imx-hdmi-soc
+Freeing unused kernel memory: 1024K
+init: init first stage started!
+SELinux: 2048 avtab hash slots, 6303 rules.
+SELinux: 2048 avtab hash slots, 6303 rules.
+SELinux:  1 users, 2 roles, 642 types, 0 bools, 1 sens, 1024 cats
+SELinux:  63 classes, 6303 rules
+SELinux:  Permission validate_trans in class security not defined in policy.
+SELinux:  Class cap_userns not defined in policy.
+SELinux:  Class cap2_userns not defined in policy.
+SELinux: the above unknown classes and permissions will be denied
+SELinux:  Completing initialization.
+SELinux:  Setting up existing superblocks.
+audit: type=1403 audit(835.620:2): policy loaded auid=4294967295 ses=4294967295
+init: (Initializing SELinux non-enforcing took 0.10s.)
+init: init second stage started!
+init: Running restorecon...
+init: waitpid failed: No child processes
+init: (Loading properties from /default.prop took 0.00s.)
+init: (Parsing /init.environ.rc took 0.00s.)
+init: (Parsing /init.usb.rc took 0.00s.)
+init: (Parsing init.freescale.usb.rc took 0.00s.)
+init: (Parsing init.freescale.i.MX6Q.rc took 0.00s.)
+init: (Parsing init.freescale.emmc.rc took 0.00s.)
+init: (Parsing /init.freescale.rc took 0.02s.)
+ueventd: ueventd started!
+ueventd: Coldboot took 0.44s.
+Console: switching to colour dummy device 80x30
+watchdogd: started (interval 10, margin 20)!
+EXT4-fs (mmcblk0p3): mounted filesystem with ordered data mode. Opts: barrier=1
+EXT4-fs (mmcblk0p10): Ignoring removed nomblk_io_submit option
+EXT4-fs (mmcblk0p10): mounted filesystem with ordered data mode. Opts: nomblk_io_submit,noauto_da_alloc,errors=panic
+EXT4-fs (mmcblk0p4): Ignoring removed nomblk_io_submit option
+EXT4-fs (mmcblk0p4): mounted filesystem with ordered data mode. Opts: nomblk_io_submit
+EXT4-fs (mmcblk0p5): mounted filesystem with ordered data mode. Opts: (null)
+file system registered
+using random self ethernet address
+using random host ethernet address
+zram0: detected capacity change from 0 to 314572800
+logd.auditd: start
+logd.klogd: 7227263333
+Adding 307196k swap on /dev/block/zram0.  Priority:-1 extents:1 across:307196k SS
+binder: 255:255 transaction failed 29189, size 0-0
+logd.daemon: reinit
+type=1400 audit(838.410:3): avc: denied { entrypoint } for pid=262 comm="init" path="/system/bin/can-config.sh" dev="mmcblk0p3" ino=256 scontext=u:r:obd:s0 tcontext=u:object_r:system_file:s0 tclass=file permissive=1
+type=1400 audit(838.430:4): avc: denied { read execute } for pid=262 comm="can-config.sh" path="/system/bin/sh" dev="mmcblk0p3" ino=460 scontext=u:r:obd:s0 tcontext=u:object_r:shell_exec:s0 tclass=file permissive=1
+type=1400 audit(838.440:5): avc: denied { getattr } for pid=263 comm="obd" path="/vendor" dev="rootfs" ino=6499 scontext=u:r:obd:s0 tcontext=u:object_r:rootfs:s0 tclass=lnk_file permissive=1
+type=1400 audit(838.450:6): avc: denied { getattr } for pid=262 comm="can-config.sh" path="/system/bin/sh" dev="mmcblk0p3" ino=460 scontext=u:r:obd:s0 tcontext=u:object_r:shell_exec:s0 tclass=file permissive=1
+type=1400 audit(838.490:7): avc: denied { create } for pid=263 comm="obd" scontext=u:r:obd:s0 tcontext=u:r:obd:s0 tclass=socket permissive=1
+android_work: sent uevent USB_STATE=CONNECTED
+type=1400 audit(838.490:8): avc: denied { ioctl } for pid=263 comm="obd" path="socket:[7267]" dev="sockfs" ino=7267 ioctlcmd=0x8933 scontext=u:r:obd:s0 tcontext=u:r:obd:s0 tclass=socket permissive=1
+type=1400 audit(838.490:9): avc: denied { bind } for pid=263 comm="obd" scontext=u:r:obd:s0 tcontext=u:r:obd:s0 tclass=socket permissive=1
+configfs-gadget gadget: high-speed config #1: b
+android_work: sent uevent USB_STATE=CONFIGURED
+IPv6: ADDRCONF(NETDEV_CHANGE): can0: link becomes ready
+healthd: No battery devices found
+ERROR: v4l2 capture: slave not found! V4L2_CID_HUE
+imx-hdmi-audio imx-hdmi-audio: HDMI Video is not ready!
+imx-hdmi-audio imx-hdmi-audio: ASoC: can't open platform imx-hdmi-audio: -22
+imx-hdmi-audio imx-hdmi-audio: HDMI Video is not ready!
+imx-hdmi-audio imx-hdmi-audio: ASoC: can't open platform imx-hdmi-audio: -22
+ERROR: v4l2 capture: slave not found! V4L2_CID_HUE
+init: Starting service 'bootanim'...
+random: crng init done
+capability: warning: `main' uses 32-bit capabilities (legacy support in use)
+type=1400 audit(849.030:34): avc: denied { write } for pid=263 comm="obd" path="socket:[7267]" dev="sockfs" ino=7267 scontext=u:r:obd:s0 tcontext=u:r:obd:s0 tclass=socket permissive=1
+type=1400 audit(849.110:35): avc: denied { read } for pid=263 comm="obd" path="socket:[7267]" dev="sockfs" ino=7267 scontext=u:r:obd:s0 tcontext=u:r:obd:s0 tclass=socket permissive=1
+init: write_file: Unable to open '/sys/devices/system/cpu/cpufreq/interactive/timer_rate': No such file or directory
+init: write_file: Unable to open '/sys/devices/system/cpu/cpufreq/interactive/min_sample_time': No such file or directory
+init: write_file: Unable to open '/sys/devices/system/cpu/cpufreq/interactive/go_hispeed_load': No such file or directory
+init: write_file: Unable to open '/proc/sys/vm/extra_free_kbytes': No such file or directory
+acc_open
+acc_release
+Micrel KSZ9031 Gigabit PHY 2188000.ethernet-1:07: attached PHY driver [Micrel KSZ9031 Gigabit PHY] (mii_bus:phy_addr=2188000.ethernet-1:07, irq=120)
+IPv6: ADDRCONF(NETDEV_UP): eth0: link is not ready
+type=1400 audit(864.870:36): avc: denied { write } for pid=263 comm="obd" path="socket:[7267]" dev="sockfs" ino=7267 scontext=u:r:obd:s0 tcontext=u:r:obd:s0 tclass=socket permissive=1
+type=1400 audit(864.910:37): avc: denied { read } for pid=263 comm="obd" path="socket:[7267]" dev="sockfs" ino=7267 scontext=u:r:obd:s0 tcontext=u:r:obd:s0 tclass=socket permissive=1
+type=1400 audit(871.920:38): avc: denied { read } for pid=263 comm="obd" path="socket:[7267]" dev="sockfs" ino=7267 scontext=u:r:obd:s0 tcontext=u:r:obd:s0 tclass=socket permissive=1
+init: Service 'bootanim' (pid 345) exited with status 0
+type=1400 audit(872.010:39): avc: denied { write } for pid=263 comm="obd" path="socket:[7267]" dev="sockfs" ino=7267 scontext=u:r:obd:s0 tcontext=u:r:obd:s0 tclass=socket permissive=1
+init: Starting service 'exec 3 (/system/bin/bootstat)'...
+init: Service 'exec 3 (/system/bin/bootstat)' (pid 1021) exited with status 0
+init: Starting service 'exec 4 (/system/bin/bootstat)'...
+init: Service 'exec 4 (/system/bin/bootstat)' (pid 1031) exited with status 0
+init: Starting service 'exec 5 (/system/bin/bootstat)'...
+init: Service 'exec 5 (/system/bin/bootstat)' (pid 1033) exited with status 0
+init: Starting service 'exec 6 (/system/bin/bootstat)'...
+init: Service 'exec 6 (/system/bin/bootstat)' (pid 1034) exited with status 0
+type=1400 audit(876.020:40): avc: denied { write } for pid=263 comm="obd" path="socket:[7267]" dev="sockfs" ino=7267 scontext=u:r:obd:s0 tcontext=u:r:obd:s0 tclass=socket permissive=1
+type=1400 audit(876.120:41): avc: denied { read } for pid=263 comm="obd" path="socket:[7267]" dev="sockfs" ino=7267 scontext=u:r:obd:s0 tcontext=u:r:obd:s0 tclass=socket permissive=1
+mtp_open
+type=1400 audit(883.480:42): avc: denied { write } for pid=1329 comm="Thread-2" name="vcan" dev="tmpfs" ino=7269 scontext=u:r:untrusted_app:s0:c512,c768 tcontext=u:object_r:socket_device:s0 tclass=sock_file permissive=1
+type=1400 audit(883.520:43): avc: denied { connectto } for pid=1329 comm="Thread-2" path="/dev/socket/vcan" scontext=u:r:untrusted_app:s0:c512,c768 tcontext=u:r:obd:s0 tclass=unix_stream_socket permissive=1
+toradex_apalis6q:/ # 
+toradex_apalis6q:/ # 
+toradex_apalis6q:/ # 
+toradex_apalis6q:/ # 
+toradex_apalis6q:/ # 
+toradex_apalis6q:/ # logcat -c
+toradex_apalis6q:/ # toradex_apalis6q:/ # logcat -c                                                    
+--------- beginning of main
+01-01 00:14:58.840  1329  1362 D com.embitel.core.obd.OBDDataHandler: parseOBDData :: 0x0D:32,0x2F:74,0xFF:128,0x0F:40,0x5E:12,0x62:55,0x61:28,0x5B:37,0x7A:1,0x7B:2,0x7C:128
+01-01 00:14:58.840  1329  1362 D com.embitel.core.obd.OBDDataHandler: processOBDData :: 0x0D,32
+01-01 00:14:58.840  1329  1362 D com.embitel.core.obd.OBDDataHandler: processOBDData :: 0x2F,74
+01-01 00:14:58.841  1329  1362 D com.embitel.core.obd.OBDDataHandler: processOBDData :: 0xFF,128
+01-01 00:14:58.841  1329  1362 D com.embitel.core.obd.OBDDataHandler: processOBDData :: 0x0F,40
+01-01 00:14:58.842  1329  1362 D com.embitel.core.obd.OBDDataHandler: processOBDData :: 0x5E,12
+01-01 00:14:58.842  1329  1362 D com.embitel.core.obd.OBDDataHandler: processOBDData :: 0x62,55
+01-01 00:14:58.842  1329  1362 D com.embitel.core.obd.OBDDataHandler: processOBDData :: 0x61,28
+01-01 00:14:58.843  1329  1362 D com.embitel.core.obd.OBDDataHandler: processOBDData :: 0x5B,37
+01-01 00:14:58.843  1329  1362 D com.embitel.core.obd.OBDDataHandler: processOBDData :: 0x7A,1
+01-01 00:14:58.843  1329  1362 D com.embitel.core.obd.OBDDataHandler: processOBDData :: 0x7B,2
+01-01 00:14:58.843  1329  1362 D com.embitel.core.obd.OBDDataHandler: processOBDData :: 0x7C,128
+01-01 00:14:58.861  1382  1382 D Updated BATTEMP UI: Updated BATTEMP UI
+01-01 00:14:59.140  1329  1362 D com.embitel.core.obd.OBDDataHandler: parseOBDData :: 0x0D:17,0x2F:74,0xFF:128,0x0F:40,0x5E:12,0x62:55,0x61:28,0x5B:37,0x7A:1,0x7B:2,0x7C:128
+01-01 00:14:59.140  1329  1362 D com.embitel.core.obd.OBDDataHandler: processOBDData :: 0x0D,17
+01-01 00:14:59.140  1329  1362 D com.embitel.core.obd.OBDDataHandler: processOBDData :: 0x2F,74
+01-01 00:14:59.141  1329  1362 D com.embitel.core.obd.OBDDataHandler: processOBDData :: 0xFF,128
+01-01 00:14:59.141  1329  1362 D com.embitel.core.obd.OBDDataHandler: processOBDData :: 0x0F,40
+01-01 00:14:59.142  1329  1362 D com.embitel.core.obd.OBDDataHandler: processOBDData :: 0x5E,12
+01-01 00:14:59.142  1329  1362 D com.embitel.core.obd.OBDDataHandler: processOBDData :: 0x62,55
+01-01 00:14:59.142  1329  1362 D com.embitel.core.obd.OBDDataHandler: processOBDData :: 0x61,28
+01-01 00:14:59.143  1329  1362 D com.embitel.core.obd.OBDDataHandler: processOBDData :: 0x5B,37
+01-01 00:14:59.143  1329  1362 D com.embitel.core.obd.OBDDataHandler: processOBDData :: 0x7A,1
+01-01 00:14:59.143  1329  1362 D com.embitel.core.obd.OBDDataHandler: processOBDData :: 0x7B,2
+01-01 00:14:59.143  1329  1362 D com.embitel.core.obd.OBDDataHandler: processOBDData :: 0x7C,128
+01-01 00:14:59.162  1382  1382 D Updated BATTEMP UI: Updated BATTEMP UI
+01-01 00:14:59.440  1329  1362 D com.embitel.core.obd.OBDDataHandler: parseOBDData :: 0x0D:17,0x2F:74,0xFF:80,0x0F:40,0x5E:12,0x62:55,0x61:28,0x5B:37,0x7A:1,0x7B:2,0x7C:128
+01-01 00:14:59.440  1329  1362 D com.embitel.core.obd.OBDDataHandler: processOBDData :: 0x0D,17
+01-01 00:14:59.441  1329  1362 D com.embitel.core.obd.OBDDataHandler: processOBDData :: 0x2F,74
+01-01 00:14:59.441  1329  1362 D com.embitel.core.obd.OBDDataHandler: processOBDData :: 0xFF,80
+01-01 00:14:59.442  1329  1362 D com.embitel.core.obd.OBDDataHandler: processOBDData :: 0x0F,40
+01-01 00:14:59.442  1329  1362 D com.embitel.core.obd.OBDDataHandler: processOBDData :: 0x5E,12
+01-01 00:14:59.442  1329  1362 D com.embitel.core.obd.OBDDataHandler: processOBDData :: 0x62,55
+01-01 00:14:59.443  1329  1362 D com.embitel.core.obd.OBDDataHandler: processOBDData :: 0x61,28
+01-01 00:14:59.443  1329  1362 D com.embitel.core.obd.OBDDataHandler: processOBDData :: 0x5B,37
+01-01 00:14:59.443  1329  1362 D com.embitel.core.obd.OBDDataHandler: processOBDData :: 0x7A,1
+01-01 00:14:59.443  1329  1362 D com.embitel.core.obd.OBDDataHandler: processOBDData :: 0x7B,2
+01-01 00:14:59.443  1329  1362 D com.embitel.core.obd.OBDDataHandler: processOBDData :: 0x7C,128
+01-01 00:14:59.462  1382  1382 D Updated BATTEMP UI: Updated BATTEMP UI
+01-01 00:14:59.740  1329  1362 D com.embitel.core.obd.OBDDataHandler: parseOBDData :: 0x0D:17,0x2F:60,0xFF:80,0x0F:40,0x5E:63,0x62:55,0x61:28,0x5B:37,0x7A:1,0x7B:2,0x7C:128
+01-01 00:14:59.740  1329  1362 D com.embitel.core.obd.OBDDataHandler: processOBDData :: 0x0D,17
+01-01 00:14:59.741  1329  1362 D com.embitel.core.obd.OBDDataHandler: processOBDData :: 0x2F,60
+01-01 00:14:59.741  1329  1362 D com.embitel.core.obd.OBDDataHandler: processOBDData :: 0xFF,80
+01-01 00:14:59.742  1329  1362 D com.embitel.core.obd.OBDDataHandler: processOBDData :: 0x0F,40
+01-01 00:14:59.742  1329  1362 D com.embitel.core.obd.OBDDataHandler: processOBDData :: 0x5E,63
+01-01 00:14:59.743  1329  1362 D com.embitel.core.obd.OBDDataHandler: processOBDData :: 0x62,55
+01-01 00:14:59.743  1329  1362 D com.embitel.core.obd.OBDDataHandler: processOBDData :: 0x61,28
+01-01 00:14:59.743  1329  1362 D com.embitel.core.obd.OBDDataHandler: processOBDData :: 0x5B,37
+01-01 00:14:59.743  1329  1362 D com.embitel.core.obd.OBDDataHandler: processOBDData :: 0x7A,1
+01-01 00:14:59.743  1329  1362 D com.embitel.core.obd.OBDDataHandler: processOBDData :: 0x7B,2
+01-01 00:14:59.743  1329  1362 D com.embitel.core.obd.OBDDataHandler: processOBDData :: 0x7C,128
+01-01 00:14:59.762  1382  1382 D Updated BATTEMP UI: Updated BATTEMP UI
+01-01 00:15:00.040  1329  1362 D com.embitel.core.obd.OBDDataHandler: parseOBDData :: 0x0D:17,0x2F:60,0xFF:80,0x0F:40,0x5E:63,0x62:12,0x61:28,0x5B:37,0x7A:1,0x7B:2,0x7C:128
+01-01 00:15:00.040  1329  1362 D com.embitel.core.obd.OBDDataHandler: processOBDData :: 0x0D,17
+01-01 00:15:00.041  1329  1362 D com.embitel.core.obd.OBDDataHandler: processOBDData :: 0x2F,60
+01-01 00:15:00.042  1329  1362 D com.embitel.core.obd.OBDDataHandler: processOBDData :: 0xFF,80
+01-01 00:15:00.042  1329  1362 D com.embitel.core.obd.OBDDataHandler: processOBDData :: 0x0F,40
+01-01 00:15:00.043  1329  1362 D com.embitel.core.obd.OBDDataHandler: processOBDData :: 0x5E,63
+01-01 00:15:00.043  1329  1362 D com.embitel.core.obd.OBDDataHandler: processOBDData :: 0x62,12
+01-01 00:15:00.044  1329  1362 D com.embitel.core.obd.OBDDataHandler: processOBDData :: 0x61,28
+01-01 00:15:00.044  1329  1362 D com.embitel.core.obd.OBDDataHandler: processOBDData :: 0x5B,37
+01-01 00:15:00.044  1329  1362 D com.embitel.core.obd.OBDDataHandler: processOBDData :: 0x7A,1
+01-01 00:15:00.045  1329  1362 D com.embitel.core.obd.OBDDataHandler: processOBDData :: 0x7B,2
+01-01 00:15:00.045  1329  1362 D com.embitel.core.obd.OBDDataHandler: processOBDData :: 0x7C,128
+01-01 00:15:00.062  1382  1382 D Updated BATTEMP UI: Updated BATTEMP UI
+01-01 00:15:00.340  1329  1362 D com.embitel.core.obd.OBDDataHandler: parseOBDData :: 0x0D:17,0x2F:60,0xFF:80,0x0F:113,0x5E:63,0x62:12,0x61:66,0x5B:37,0x7A:1,0x7B:2,0x7C:128
+01-01 00:15:00.341  1329  1362 D com.embitel.core.obd.OBDDataHandler: processOBDData :: 0x0D,17
+01-01 00:15:00.341  1329  1362 D com.embitel.core.obd.OBDDataHandler: processOBDData :: 0x2F,60
+01-01 00:15:00.342  1329  1362 D com.embitel.core.obd.OBDDataHandler: processOBDData :: 0xFF,80
+01-01 00:15:00.342  1329  1362 D com.embitel.core.obd.OBDDataHandler: processOBDData :: 0x0F,113
+01-01 00:15:00.343  1329  1362 D com.embitel.core.obd.OBDDataHandler: processOBDData :: 0x5E,63
+01-01 00:15:00.343  1329  1362 D com.embitel.core.obd.OBDDataHandler: processOBDData :: 0x62,12
+01-01 00:15:00.343  1329  1362 D com.embitel.core.obd.OBDDataHandler: processOBDData :: 0x61,66
+01-01 00:15:00.344  1329  1362 D com.embitel.core.obd.OBDDataHandler: processOBDData :: 0x5B,37
+01-01 00:15:00.344  1329  1362 D com.embitel.core.obd.OBDDataHandler: processOBDData :: 0x7A,1
+01-01 00:15:00.344  1329  1362 D com.embitel.core.obd.OBDDataHandler: processOBDData :: 0x7B,2
+01-01 00:15:00.344  1329  1362 D com.embitel.core.obd.OBDDataHandler: processOBDData :: 0x7C,128
+01-01 00:15:00.362  1382  1382 D Updated BATTEMP UI: Updated BATTEMP UI
+01-01 00:15:00.641  1329  1362 D com.embitel.core.obd.OBDDataHandler: parseOBDData :: 0x0D:32,0x2F:60,0xFF:80,0x0F:113,0x5E:63,0x62:12,0x61:66,0x5B:37,0x7A:1,0x7B:2,0x7C:128
+01-01 00:15:00.641  1329  1362 D com.embitel.core.obd.OBDDataHandler: processOBDData :: 0x0D,32
+01-01 00:15:00.641  1329  1362 D com.embitel.core.obd.OBDDataHandler: processOBDData :: 0x2F,60
+01-01 00:15:00.642  1329  1362 D com.embitel.core.obd.OBDDataHandler: processOBDData :: 0xFF,80
+01-01 00:15:00.642  1329  1362 D com.embitel.core.obd.OBDDataHandler: processOBDData :: 0x0F,113
+01-01 00:15:00.643  1329  1362 D com.embitel.core.obd.OBDDataHandler: processOBDData :: 0x5E,63
+01-01 00:15:00.643  1329  1362 D com.embitel.core.obd.OBDDataHandler: processOBDData :: 0x62,12
+01-01 00:15:00.644  1329  1362 D com.embitel.core.obd.OBDDataHandler: processOBDData :: 0x61,66
+01-01 00:15:00.644  1329  1362 D com.embitel.core.obd.OBDDataHandler: processOBDData :: 0x5B,37
+01-01 00:15:00.644  1329  1362 D com.embitel.core.obd.OBDDataHandler: processOBDData :: 0x7A,1
+01-01 00:15:00.644  1329  1362 D com.embitel.core.obd.OBDDataHandler: processOBDData :: 0x7B,2
+01-01 00:15:00.644  1329  1362 D com.embitel.core.obd.OBDDataHandler: processOBDData :: 0x7C,128
+01-01 00:15:00.662  1382  1382 D Updated BATTEMP UI: Updated BATTEMP UI
+01-01 00:15:00.941  1329  1362 D com.embitel.core.obd.OBDDataHandler: parseOBDData :: 0x0D:32,0x2F:74,0xFF:128,0x0F:113,0x5E:63,0x62:12,0x61:66,0x5B:37,0x7A:1,0x7B:2,0x7C:128
+01-01 00:15:00.941  1329  1362 D com.embitel.core.obd.OBDDataHandler: processOBDData :: 0x0D,32
+01-01 00:15:00.942  1329  1362 D com.embitel.core.obd.OBDDataHandler: processOBDData :: 0x2F,74
+01-01 00:15:00.942  1329  1362 D com.embitel.core.obd.OBDDataHandler: processOBDData :: 0xFF,128
+01-01 00:15:00.943  1329  1362 D com.embitel.core.obd.OBDDataHandler: processOBDData :: 0x0F,113
+01-01 00:15:00.943  1329  1362 D com.embitel.core.obd.OBDDataHandler: processOBDData :: 0x5E,63
+01-01 00:15:00.943  1329  1362 D com.embitel.core.obd.OBDDataHandler: processOBDData :: 0x62,12
+01-01 00:15:00.944  1329  1362 D com.embitel.core.obd.OBDDataHandler: processOBDData :: 0x61,66
+01-01 00:15:00.944  1329  1362 D com.embitel.core.obd.OBDDataHandler: processOBDData :: 0x5B,37
+01-01 00:15:00.944  1329  1362 D com.embitel.core.obd.OBDDataHandler: processOBDData :: 0x7A,1
+01-01 00:15:00.944  1329  1362 D com.embitel.core.obd.OBDDataHandler: processOBDData :: 0x7B,2
+01-01 00:15:00.944  1329  1362 D com.embitel.core.obd.OBDDataHandler: processOBDData :: 0x7C,128
+01-01 00:15:00.962  1382  1382 D Updated BATTEMP UI: Updated BATTEMP UI
+01-01 00:15:01.241  1329  1362 D com.embitel.core.obd.OBDDataHandler: parseOBDData :: 0x0D:32,0x2F:74,0xFF:128,0x0F:113,0x5E:12,0x62:12,0x61:66,0x5B:37,0x7A:1,0x7B:2,0x7C:128
+01-01 00:15:01.241  1329  1362 D com.embitel.core.obd.OBDDataHandler: processOBDData :: 0x0D,32
+01-01 00:15:01.242  1329  1362 D com.embitel.core.obd.OBDDataHandler: processOBDData :: 0x2F,74
+01-01 00:15:01.242  1329  1362 D com.embitel.core.obd.OBDDataHandler: processOBDData :: 0xFF,128
+01-01 00:15:01.243  1329  1362 D com.embitel.core.obd.OBDDataHandler: processOBDData :: 0x0F,113
+01-01 00:15:01.243  1329  1362 D com.embitel.core.obd.OBDDataHandler: processOBDData :: 0x5E,12
+01-01 00:15:01.243  1329  1362 D com.embitel.core.obd.OBDDataHandler: processOBDData :: 0x62,12
+01-01 00:15:01.244  1329  1362 D com.embitel.core.obd.OBDDataHandler: processOBDData :: 0x61,66
+01-01 00:15:01.244  1329  1362 D com.embitel.core.obd.OBDDataHandler: processOBDData :: 0x5B,37
+01-01 00:15:01.244  1329  1362 D com.embitel.core.obd.OBDDataHandler: processOBDData :: 0x7A,1
+01-01 00:15:01.244  1329  1362 D com.embitel.core.obd.OBDDataHandler: processOBDData :: 0x7B,2
+01-01 00:15:01.244  1329  1362 D com.embitel.core.obd.OBDDataHandler: processOBDData :: 0x7C,128
+01-01 00:15:01.262  1382  1382 D Updated BATTEMP UI: Updated BATTEMP UI
+--------- beginning of system
+01-01 00:15:01.351   540   553 I ActivityManager: Waited long enough for: ServiceRecord{76fc3b9 u0 com.android.calendar/.alerts.InitAlarmsService}
+01-01 00:15:01.541  1329  1362 D com.embitel.core.obd.OBDDataHandler: parseOBDData :: 0x0D:32,0x2F:74,0xFF:128,0x0F:40,0x5E:12,0x62:55,0x61:66,0x5B:37,0x7A:1,0x7B:2,0x7C:128
+01-01 00:15:01.541  1329  1362 D com.embitel.core.obd.OBDDataHandler: processOBDData :: 0x0D,32
+01-01 00:15:01.542  1329  1362 D com.embitel.core.obd.OBDDataHandler: processOBDData :: 0x2F,74
+01-01 00:15:01.542  1329  1362 D com.embitel.core.obd.OBDDataHandler: processOBDData :: 0xFF,128
+01-01 00:15:01.543  1329  1362 D com.embitel.core.obd.OBDDataHandler: processOBDData :: 0x0F,40
+01-01 00:15:01.543  1329  1362 D com.embitel.core.obd.OBDDataHandler: processOBDData :: 0x5E,12
+01-01 00:15:01.544  1329  1362 D com.embitel.core.obd.OBDDataHandler: processOBDData :: 0x62,55
+01-01 00:15:01.544  1329  1362 D com.embitel.core.obd.OBDDataHandler: processOBDData :: 0x61,66
+01-01 00:15:01.544  1329  1362 D com.embitel.core.obd.OBDDataHandler: processOBDData :: 0x5B,37
+01-01 00:15:01.545  1329  1362 D com.embitel.core.obd.OBDDataHandler: processOBDData :: 0x7A,1
+01-01 00:15:01.545  1329  1362 D com.embitel.core.obd.OBDDataHandler: processOBDData :: 0x7B,2
+01-01 00:15:01.545  1329  1362 D com.embitel.core.obd.OBDDataHandler: processOBDData :: 0x7C,128
+01-01 00:15:01.562  1382  1382 D Updated BATTEMP UI: Updated BATTEMP UI
+01-01 00:15:01.842  1329  1362 D com.embitel.core.obd.OBDDataHandler: parseOBDData :: 0x0D:32,0x2F:74,0xFF:128,0x0F:40,0x5E:12,0x62:55,0x61:28,0x5B:37,0x7A:1,0x7B:2,0x7C:128
+01-01 00:15:01.842  1329  1362 D com.embitel.core.obd.OBDDataHandler: processOBDData :: 0x0D,32
+01-01 00:15:01.842  1329  1362 D com.embitel.core.obd.OBDDataHandler: processOBDData :: 0x2F,74
+01-01 00:15:01.843  1329  1362 D com.embitel.core.obd.OBDDataHandler: processOBDData :: 0xFF,128
+01-01 00:15:01.843  1329  1362 D com.embitel.core.obd.OBDDataHandler: processOBDData :: 0x0F,40
+01-01 00:15:01.844  1329  1362 D com.embitel.core.obd.OBDDataHandler: processOBDData :: 0x5E,12
+01-01 00:15:01.844  1329  1362 D com.embitel.core.obd.OBDDataHandler: processOBDData :: 0x62,55
+01-01 00:15:01.845  1329  1362 D com.embitel.core.obd.OBDDataHandler: processOBDData :: 0x61,28
+01-01 00:15:01.845  1329  1362 D com.embitel.core.obd.OBDDataHandler: processOBDData :: 0x5B,37
+01-01 00:15:01.845  1329  1362 D com.embitel.core.obd.OBDDataHandler: processOBDData :: 0x7A,1
+01-01 00:15:01.845  1329  1362 D com.embitel.core.obd.OBDDataHandler: processOBDData :: 0x7B,2
+01-01 00:15:01.845  1329  1362 D com.embitel.core.obd.OBDDataHandler: processOBDData :: 0x7C,128
+01-01 00:15:01.863  1382  1382 D Updated BATTEMP UI: Updated BATTEMP UI
+01-01 00:15:02.142  1329  1362 D com.embitel.core.obd.OBDDataHandler: parseOBDData :: 0x0D:32,0x2F:74,0xFF:128,0x0F:40,0x5E:12,0x62:55,0x61:28,0x5B:37,0x7A:1,0x7B:2,0x7C:128
+01-01 00:15:02.142  1329  1362 D com.embitel.core.obd.OBDDataHandler: processOBDData :: 0x0D,32
+01-01 00:15:02.143  1329  1362 D com.embitel.core.obd.OBDDataHandler: processOBDData :: 0x2F,74
+01-01 00:15:02.143  1329  1362 D com.embitel.core.obd.OBDDataHandler: processOBDData :: 0xFF,128
+01-01 00:15:02.144  1329  1362 D com.embitel.core.obd.OBDDataHandler: processOBDData :: 0x0F,40
+01-01 00:15:02.144  1329  1362 D com.embitel.core.obd.OBDDataHandler: processOBDData :: 0x5E,12
+01-01 00:15:02.145  1329  1362 D com.embitel.core.obd.OBDDataHandler: processOBDData :: 0x62,55
+01-01 00:15:02.145  1329  1362 D com.embitel.core.obd.OBDDataHandler: processOBDData :: 0x61,28
+01-01 00:15:02.145  1329  1362 D com.embitel.core.obd.OBDDataHandler: processOBDData :: 0x5B,37
+01-01 00:15:02.146  1329  1362 D com.embitel.core.obd.OBDDataHandler: processOBDData :: 0x7A,1
+01-01 00:15:02.146  1329  1362 D com.embitel.core.obd.OBDDataHandler: processOBDData :: 0x7B,2
+01-01 00:15:02.146  1329  1362 D com.embitel.core.obd.OBDDataHandler: processOBDData :: 0x7C,128
+01-01 00:15:02.163  1382  1382 D Updated BATTEMP UI: Updated BATTEMP UI
+01-01 00:15:02.442  1329  1362 D com.embitel.core.obd.OBDDataHandler: parseOBDData :: 0x0D:32,0x2F:74,0xFF:128,0x0F:40,0x5E:12,0x62:55,0x61:28,0x5B:37,0x7A:1,0x7B:2,0x7C:128
+01-01 00:15:02.442  1329  1362 D com.embitel.core.obd.OBDDataHandler: processOBDData :: 0x0D,32
+01-01 00:15:02.443  1329  1362 D com.embitel.core.obd.OBDDataHandler: processOBDData :: 0x2F,74
+01-01 00:15:02.443  1329  1362 D com.embitel.core.obd.OBDDataHandler: processOBDData :: 0xFF,128
+01-01 00:15:02.444  1329  1362 D com.embitel.core.obd.OBDDataHandler: processOBDData :: 0x0F,40
+01-01 00:15:02.444  1329  1362 D com.embitel.core.obd.OBDDataHandler: processOBDData :: 0x5E,12
+01-01 00:15:02.444  1329  1362 D com.embitel.core.obd.OBDDataHandler: processOBDData :: 0x62,55
+01-01 00:15:02.445  1329  1362 D com.embitel.core.obd.OBDDataHandler: processOBDData :: 0x61,28
+01-01 00:15:02.445  1329  1362 D com.embitel.core.obd.OBDDataHandler: processOBDData :: 0x5B,37
+01-01 00:15:02.445  1329  1362 D com.embitel.core.obd.OBDDataHandler: processOBDData :: 0x7A,1
+01-01 00:15:02.445  1329  1362 D com.embitel.core.obd.OBDDataHandler: processOBDData :: 0x7B,2
+01-01 00:15:02.445  1329  1362 D com.embitel.core.obd.OBDDataHandler: processOBDData :: 0x7C,128
+01-01 00:15:02.462  1382  1382 D Updated BATTEMP UI: Updated BATTEMP UI
+01-01 00:15:02.742  1329  1362 D com.embitel.core.obd.OBDDataHandler: parseOBDData :: 0x0D:17,0x2F:74,0xFF:128,0x0F:40,0x5E:12,0x62:55,0x61:28,0x5B:37,0x7A:1,0x7B:2,0x7C:128
+01-01 00:15:02.742  1329  1362 D com.embitel.core.obd.OBDDataHandler: processOBDData :: 0x0D,17
+01-01 00:15:02.743  1329  1362 D com.embitel.core.obd.OBDDataHandler: processOBDData :: 0x2F,74
+01-01 00:15:02.743  1329  1362 D com.embitel.core.obd.OBDDataHandler: processOBDData :: 0xFF,128
+01-01 00:15:02.744  1329  1362 D com.embitel.core.obd.OBDDataHandler: processOBDData :: 0x0F,40
+01-01 00:15:02.744  1329  1362 D com.embitel.core.obd.OBDDataHandler: processOBDData :: 0x5E,12
+01-01 00:15:02.745  1329  1362 D com.embitel.core.obd.OBDDataHandler: processOBDData :: 0x62,55
+01-01 00:15:02.745  1329  1362 D com.embitel.core.obd.OBDDataHandler: processOBDData :: 0x61,28
+01-01 00:15:02.745  1329  1362 D com.embitel.core.obd.OBDDataHandler: processOBDData :: 0x5B,37
+01-01 00:15:02.745  1329  1362 D com.embitel.core.obd.OBDDataHandler: processOBDData :: 0x7A,1
+01-01 00:15:02.745  1329  1362 D com.embitel.core.obd.OBDDataHandler: processOBDData :: 0x7B,2
+01-01 00:15:02.746  1329  1362 D com.embitel.core.obd.OBDDataHandler: processOBDData :: 0x7C,128
+01-01 00:15:02.762  1382  1382 D Updated BATTEMP UI: Updated BATTEMP UI
+01-01 00:15:03.043  1329  1362 D com.embitel.core.obd.OBDDataHandler: parseOBDData :: 0x0D:17,0x2F:74,0xFF:80,0x0F:40,0x5E:12,0x62:55,0x61:28,0x5B:37,0x7A:1,0x7B:2,0x7C:128
+01-01 00:15:03.043  1329  1362 D com.embitel.core.obd.OBDDataHandler: processOBDData :: 0x0D,17
+01-01 00:15:03.044  1329  1362 D com.embitel.core.obd.OBDDataHandler: processOBDData :: 0x2F,74
+01-01 00:15:03.045  1329  1362 D com.embitel.core.obd.OBDDataHandler: processOBDData :: 0xFF,80
+01-01 00:15:03.045  1329  1362 D com.embitel.core.obd.OBDDataHandler: processOBDData :: 0x0F,40
+01-01 00:15:03.046  1329  1362 D com.embitel.core.obd.OBDDataHandler: processOBDData :: 0x5E,12
+01-01 00:15:03.047  1329  1362 D com.embitel.core.obd.OBDDataHandler: processOBDData :: 0x62,55
+01-01 00:15:03.048  1329  1362 D com.embitel.core.obd.OBDDataHandler: processOBDData :: 0x61,28
+01-01 00:15:03.048  1329  1362 D com.embitel.core.obd.OBDDataHandler: processOBDData :: 0x5B,37
+01-01 00:15:03.048  1329  1362 D com.embitel.core.obd.OBDDataHandler: processOBDData :: 0x7A,1
+01-01 00:15:03.048  1329  1362 D com.embitel.core.obd.OBDDataHandler: processOBDData :: 0x7B,2
+01-01 00:15:03.049  1329  1362 D com.embitel.core.obd.OBDDataHandler: processOBDData :: 0x7C,128
+01-01 00:15:03.062  1382  1382 D Updated BATTEMP UI: Updated BATTEMP UI
+01-01 00:15:03.343  1329  1362 D com.embitel.core.obd.OBDDataHandler: parseOBDData :: 0x0D:17,0x2F:60,0xFF:80,0x0F:40,0x5E:63,0x62:55,0x61:28,0x5B:37,0x7A:1,0x7B:2,0x7C:128
+01-01 00:15:03.343  1329  1362 D com.embitel.core.obd.OBDDataHandler: processOBDData :: 0x0D,17
+01-01 00:15:03.344  1329  1362 D com.embitel.core.obd.OBDDataHandler: processOBDData :: 0x2F,60
+01-01 00:15:03.345  1329  1362 D com.embitel.core.obd.OBDDataHandler: processOBDData :: 0xFF,80
+01-01 00:15:03.346  1329  1362 D com.embitel.core.obd.OBDDataHandler: processOBDData :: 0x0F,40
+01-01 00:15:03.346  1329  1362 D com.embitel.core.obd.OBDDataHandler: processOBDData :: 0x5E,63
+01-01 00:15:03.347  1329  1362 D com.embitel.core.obd.OBDDataHandler: processOBDData :: 0x62,55
+01-01 00:15:03.348  1329  1362 D com.embitel.core.obd.OBDDataHandler: processOBDData :: 0x61,28
+01-01 00:15:03.349  1329  1362 D com.embitel.core.obd.OBDDataHandler: processOBDData :: 0x5B,37
+01-01 00:15:03.349  1329  1362 D com.embitel.core.obd.OBDDataHandler: processOBDData :: 0x7A,1
+01-01 00:15:03.349  1329  1362 D com.embitel.core.obd.OBDDataHandler: processOBDData :: 0x7B,2
+01-01 00:15:03.349  1329  1362 D com.embitel.core.obd.OBDDataHandler: processOBDData :: 0x7C,128
+01-01 00:15:03.366  1382  1382 D Updated BATTEMP UI: Updated BATTEMP UI
+01-01 00:15:03.643  1329  1362 D com.embitel.core.obd.OBDDataHandler: parseOBDData :: 0x0D:17,0x2F:60,0xFF:80,0x0F:40,0x5E:63,0x62:12,0x61:28,0x5B:37,0x7A:1,0x7B:2,0x7C:128
+01-01 00:15:03.643  1329  1362 D com.embitel.core.obd.OBDDataHandler: processOBDData :: 0x0D,17
+01-01 00:15:03.644  1329  1362 D com.embitel.core.obd.OBDDataHandler: processOBDData :: 0x2F,60
+01-01 00:15:03.644  1329  1362 D com.embitel.core.obd.OBDDataHandler: processOBDData :: 0xFF,80
+01-01 00:15:03.644  1329  1362 D com.embitel.core.obd.OBDDataHandler: processOBDData :: 0x0F,40
+01-01 00:15:03.645  1329  1362 D com.embitel.core.obd.OBDDataHandler: processOBDData :: 0x5E,63
+01-01 00:15:03.645  1329  1362 D com.embitel.core.obd.OBDDataHandler: processOBDData :: 0x62,12
+01-01 00:15:03.646  1329  1362 D com.embitel.core.obd.OBDDataHandler: processOBDData :: 0x61,28
+01-01 00:15:03.646  1329  1362 D com.embitel.core.obd.OBDDataHandler: processOBDData :: 0x5B,37
+01-01 00:15:03.646  1329  1362 D com.embitel.core.obd.OBDDataHandler: processOBDData :: 0x7A,1
+01-01 00:15:03.646  1329  1362 D com.embitel.core.obd.OBDDataHandler: processOBDData :: 0x7B,2
+01-01 00:15:03.646  1329  1362 D com.embitel.core.obd.OBDDataHandler: processOBDData :: 0x7C,128
+01-01 00:15:03.662  1382  1382 D Updated BATTEMP UI: Updated BATTEMP UI
+01-01 00:15:03.943  1329  1362 D com.embitel.core.obd.OBDDataHandler: parseOBDData :: 0x0D:17,0x2F:60,0xFF:80,0x0F:113,0x5E:63,0x62:12,0x61:66,0x5B:37,0x7A:1,0x7B:2,0x7C:128
+01-01 00:15:03.943  1329  1362 D com.embitel.core.obd.OBDDataHandler: processOBDData :: 0x0D,17
+01-01 00:15:03.944  1329  1362 D com.embitel.core.obd.OBDDataHandler: processOBDData :: 0x2F,60
+01-01 00:15:03.945  1329  1362 D com.embitel.core.obd.OBDDataHandler: processOBDData :: 0xFF,80
+01-01 00:15:03.946  1329  1362 D com.embitel.core.obd.OBDDataHandler: processOBDData :: 0x0F,113
+01-01 00:15:03.947  1329  1362 D com.embitel.core.obd.OBDDataHandler: processOBDData :: 0x5E,63
+01-01 00:15:03.948  1329  1362 D com.embitel.core.obd.OBDDataHandler: processOBDData :: 0x62,12
+01-01 00:15:03.948  1329  1362 D com.embitel.core.obd.OBDDataHandler: processOBDData :: 0x61,66
+01-01 00:15:03.949  1329  1362 D com.embitel.core.obd.OBDDataHandler: processOBDData :: 0x5B,37
+01-01 00:15:03.949  1329  1362 D com.embitel.core.obd.OBDDataHandler: processOBDData :: 0x7A,1
+01-01 00:15:03.949  1329  1362 D com.embitel.core.obd.OBDDataHandler: processOBDData :: 0x7B,2
+01-01 00:15:03.949  1329  1362 D com.embitel.core.obd.OBDDataHandler: processOBDData :: 0x7C,128
+01-01 00:15:03.962  1382  1382 D Updated BATTEMP UI: Updated BATTEMP UI
+01-01 00:15:04.244  1329  1362 D com.embitel.core.obd.OBDDataHandler: parseOBDData :: 0x0D:32,0x2F:60,0xFF:80,0x0F:113,0x5E:63,0x62:12,0x61:66,0x5B:37,0x7A:1,0x7B:2,0x7C:128
+01-01 00:15:04.244  1329  1362 D com.embitel.core.obd.OBDDataHandler: processOBDData :: 0x0D,32
+01-01 00:15:04.244  1329  1362 D com.embitel.core.obd.OBDDataHandler: processOBDData :: 0x2F,60
+01-01 00:15:04.245  1329  1362 D com.embitel.core.obd.OBDDataHandler: processOBDData :: 0xFF,80
+01-01 00:15:04.245  1329  1362 D com.embitel.core.obd.OBDDataHandler: processOBDData :: 0x0F,113
+01-01 00:15:04.246  1329  1362 D com.embitel.core.obd.OBDDataHandler: processOBDData :: 0x5E,63
+01-01 00:15:04.246  1329  1362 D com.embitel.core.obd.OBDDataHandler: processOBDData :: 0x62,12
+01-01 00:15:04.246  1329  1362 D com.embitel.core.obd.OBDDataHandler: processOBDData :: 0x61,66
+01-01 00:15:04.247  1329  1362 D com.embitel.core.obd.OBDDataHandler: processOBDData :: 0x5B,37
+01-01 00:15:04.247  1329  1362 D com.embitel.core.obd.OBDDataHandler: processOBDData :: 0x7A,1
+01-01 00:15:04.247  1329  1362 D com.embitel.core.obd.OBDDataHandler: processOBDData :: 0x7B,2
+01-01 00:15:04.247  1329  1362 D com.embitel.core.obd.OBDDataHandler: processOBDData :: 0x7C,128
+01-01 00:15:04.262  1382  1382 D Updated BATTEMP UI: Updated BATTEMP UI
+01-01 00:15:04.544  1329  1362 D com.embitel.core.obd.OBDDataHandler: parseOBDData :: 0x0D:32,0x2F:74,0xFF:128,0x0F:113,0x5E:63,0x62:12,0x61:66,0x5B:37,0x7A:1,0x7B:2,0x7C:128
+01-01 00:15:04.544  1329  1362 D com.embitel.core.obd.OBDDataHandler: processOBDData :: 0x0D,32
+01-01 00:15:04.545  1329  1362 D com.embitel.core.obd.OBDDataHandler: processOBDData :: 0x2F,74
+01-01 00:15:04.546  1329  1362 D com.embitel.core.obd.OBDDataHandler: processOBDData :: 0xFF,128
+01-01 00:15:04.546  1329  1362 D com.embitel.core.obd.OBDDataHandler: processOBDData :: 0x0F,113
+01-01 00:15:04.547  1329  1362 D com.embitel.core.obd.OBDDataHandler: processOBDData :: 0x5E,63
+01-01 00:15:04.548  1329  1362 D com.embitel.core.obd.OBDDataHandler: processOBDData :: 0x62,12
+01-01 00:15:04.549  1329  1362 D com.embitel.core.obd.OBDDataHandler: processOBDData :: 0x61,66
+01-01 00:15:04.549  1329  1362 D com.embitel.core.obd.OBDDataHandler: processOBDData :: 0x5B,37
+01-01 00:15:04.549  1329  1362 D com.embitel.core.obd.OBDDataHandler: processOBDData :: 0x7A,1
+01-01 00:15:04.550  1329  1362 D com.embitel.core.obd.OBDDataHandler: processOBDData :: 0x7B,2
+01-01 00:15:04.550  1329  1362 D com.embitel.core.obd.OBDDataHandler: processOBDData :: 0x7C,128
+01-01 00:15:04.562  1382  1382 D Updated BATTEMP UI: Updated BATTEMP UI
+01-01 00:15:04.844  1329  1362 D com.embitel.core.obd.OBDDataHandler: parseOBDData :: 0x0D:32,0x2F:74,0xFF:128,0x0F:113,0x5E:12,0x62:12,0x61:66,0x5B:37,0x7A:1,0x7B:2,0x7C:128
+01-01 00:15:04.844  1329  1362 D com.embitel.core.obd.OBDDataHandler: processOBDData :: 0x0D,32
+01-01 00:15:04.844  1329  1362 D com.embitel.core.obd.OBDDataHandler: processOBDData :: 0x2F,74
+01-01 00:15:04.845  1329  1362 D com.embitel.core.obd.OBDDataHandler: processOBDData :: 0xFF,128
+01-01 00:15:04.845  1329  1362 D com.embitel.core.obd.OBDDataHandler: processOBDData :: 0x0F,113
+01-01 00:15:04.846  1329  1362 D com.embitel.core.obd.OBDDataHandler: processOBDData :: 0x5E,12
+01-01 00:15:04.846  1329  1362 D com.embitel.core.obd.OBDDataHandler: processOBDData :: 0x62,12
+01-01 00:15:04.847  1329  1362 D com.embitel.core.obd.OBDDataHandler: processOBDData :: 0x61,66
+01-01 00:15:04.847  1329  1362 D com.embitel.core.obd.OBDDataHandler: processOBDData :: 0x5B,37
+01-01 00:15:04.847  1329  1362 D com.embitel.core.obd.OBDDataHandler: processOBDData :: 0x7A,1
+01-01 00:15:04.847  1329  1362 D com.embitel.core.obd.OBDDataHandler: processOBDData :: 0x7B,2
+01-01 00:15:04.847  1329  1362 D com.embitel.core.obd.OBDDataHandler: processOBDData :: 0x7C,128
+01-01 00:15:04.862  1382  1382 D Updated BATTEMP UI: Updated BATTEMP UI
+01-01 00:15:05.144  1329  1362 D com.embitel.core.obd.OBDDataHandler: parseOBDData :: 0x0D:32,0x2F:74,0xFF:128,0x0F:40,0x5E:12,0x62:55,0x61:66,0x5B:37,0x7A:1,0x7B:2,0x7C:128
+01-01 00:15:05.144  1329  1362 D com.embitel.core.obd.OBDDataHandler: processOBDData :: 0x0D,32
+01-01 00:15:05.145  1329  1362 D com.embitel.core.obd.OBDDataHandler: processOBDData :: 0x2F,74
+01-01 00:15:05.145  1329  1362 D com.embitel.core.obd.OBDDataHandler: processOBDData :: 0xFF,128
+01-01 00:15:05.146  1329  1362 D com.embitel.core.obd.OBDDataHandler: processOBDData :: 0x0F,40
+01-01 00:15:05.146  1329  1362 D com.embitel.core.obd.OBDDataHandler: processOBDData :: 0x5E,12
+01-01 00:15:05.147  1329  1362 D com.embitel.core.obd.OBDDataHandler: processOBDData :: 0x62,55
+01-01 00:15:05.147  1329  1362 D com.embitel.core.obd.OBDDataHandler: processOBDData :: 0x61,66
+01-01 00:15:05.147  1329  1362 D com.embitel.core.obd.OBDDataHandler: processOBDData :: 0x5B,37
+01-01 00:15:05.147  1329  1362 D com.embitel.core.obd.OBDDataHandler: processOBDData :: 0x7A,1
+01-01 00:15:05.148  1329  1362 D com.embitel.core.obd.OBDDataHandler: processOBDData :: 0x7B,2
+01-01 00:15:05.148  1329  1362 D com.embitel.core.obd.OBDDataHandler: processOBDData :: 0x7C,128
+01-01 00:15:05.162  1382  1382 D Updated BATTEMP UI: Updated BATTEMP UI
+^C
+130|toradex_apalis6q:/ # 
+
+U-Boot 2017.03-00002-gebf9dc2527 (Jan 29 2018 - 17:39:17 +0530)
+
+CPU:   Freescale i.MX6Q rev1.5 at 792 MHz
+Reset cause: POR
+I2C:   ready
+DRAM:  2 GiB
+PMIC: device id: 0x10, revision id: 0x21
+PMIC: programmed
+MMC:   FSL_SDHC: 0, FSL_SDHC: 1, FSL_SDHC: 2
+Unable to allocate framebuffer memory
+In:    serial
+Out:   serial
+Err:   serial
+Model: Toradex Apalis iMX6 Quad 2GB IT V1.1C, Serial# 05146387
+flash target is MMC:0
+Net:   using PHY at 7
+FEC [PRIME]
+Fastboot: Normal
+Hit any key to stop autoboot:  1  0 
+boota mmc0 
+CACHE: Misaligned operation at range [8ffb79a0, 8ffb7a20]
+CACHE: Misaligned operation at range [8ffb79a0, 8ffb7a20]
+kernel   @ 14008000 (9802160)
+ramdisk  @ 15000000 (1628773)
+fdt      @ 14f00000 (53981)
+## Booting Android Image at 0x12000000 ...
+Kernel load addr 0x14008000 size 9573 KiB
+Kernel command line: console=ttymxc0,115200 init=/init video=mxcfb0:dev=lcd,FusionF07A,if=RGB24 video=mxcfb1:dev=hdmi,640x480M@60,if=RGB24,bpp=16 video=mxcfb2:off video=mxcfb3:off vmalloc=256M androidboot.console=ttymxc0 consoleblank=0 androidboot.hardware=freescale cma=448M androidboot.selinux=permissive androidboot.dm_verity=disabled androidboot.serialno=1b2429d4ea997115 androidboot.storage_type=emmc
+## Flattened Device Tree blob at 14f00000
+   Booting using the fdt blob at 0x14f00000
+   Loading Kernel Image ... OK
+   Using Device Tree in place at 14f00000, end 14f102dc
+
+Starting kernel ...
+
+Booting Linux on physical CPU 0x0
+Linux version 4.9.67-07229-gdc6c16ec0433 (embadmin@ubuntu) (gcc version 4.9 20150123 (prerelease) (GCC) ) #28 SMP PREEMPT Mon Jan 29 11:42:44 IST 2018
+CPU: ARMv7 Processor [412fc09a] revision 10 (ARMv7), cr=10c53c7d
+CPU: PIPT / VIPT nonaliasing data cache, VIPT aliasing instruction cache
+OF: fdt:Machine model: Aravinth : Toradex Apalis iMX6Q/D Module on Ixora V1.1 Carrier Board
+cma: Reserved 448 MiB at 0x22000000
+Memory policy: Data cache writealloc
+percpu: Embedded 15 pages/cpu @ee6b3000 s31040 r8192 d22208 u61440
+Built 1 zonelists in Zone order, mobility grouping on.  Total pages: 522768
+Kernel command line: console=ttymxc0,115200 init=/init video=mxcfb0:dev=lcd,FusionF07A,if=RGB24 video=mxcfb1:dev=hdmi,640x480M@60,if=RGB24,bpp=16 video=mxcfb2:off video=mxcfb3:off vmalloc=256M androidboot.console=ttymxc0 consoleblank=0 androidboot.hardware=freescale cma=448M androidboot.selinux=permissive androidboot.dm_verity=disabled androidboot.serialno=1b2429d4ea997115 androidboot.storage_type=emmc
+PID hash table entries: 4096 (order: 2, 16384 bytes)
+Dentry cache hash table entries: 131072 (order: 7, 524288 bytes)
+Inode-cache hash table entries: 65536 (order: 6, 262144 bytes)
+Memory: 1597048K/2097152K available (13312K kernel code, 1128K rwdata, 4016K rodata, 1024K init, 606K bss, 41352K reserved, 458752K cma-reserved, 1318912K highmem)
+Virtual kernel memory layout:
+    vector  : 0xffff0000 - 0xffff1000   (   4 kB)
+    fixmap  : 0xffc00000 - 0xfff00000   (3072 kB)
+    vmalloc : 0xf0000000 - 0xff800000   ( 248 MB)
+    lowmem  : 0xc0000000 - 0xef800000   ( 760 MB)
+    pkmap   : 0xbfe00000 - 0xc0000000   (   2 MB)
+    modules : 0xbf000000 - 0xbfe00000   (  14 MB)
+      .text : 0xc0008000 - 0xc0e00000   (14304 kB)
+      .init : 0xc1300000 - 0xc1400000   (1024 kB)
+      .data : 0xc1400000 - 0xc151a218   (1129 kB)
+       .bss : 0xc151a218 - 0xc15b1be0   ( 607 kB)
+SLUB: HWalign=64, Order=0-3, MinObjects=0, CPUs=4, Nodes=1
+Preemptible hierarchical RCU implementation.
+	Build-time adjustment of leaf fanout to 32.
+NR_IRQS:16 nr_irqs:16 16
+L2C-310 errata 752271 769419 enabled
+L2C-310 enabling early BRESP for Cortex-A9
+L2C-310 full line of zeros enabled for Cortex-A9
+L2C-310 ID prefetch enabled, offset 16 lines
+L2C-310 dynamic clock gating enabled, standby mode enabled
+L2C-310 cache controller enabled, 16 ways, 1024 kB
+L2C-310: CACHE_ID 0x410000c7, AUX_CTRL 0x76470001
+Switching to timer-based delay loop, resolution 333ns
+sched_clock: 32 bits at 3000kHz, resolution 333ns, wraps every 715827882841ns
+clocksource: mxc_timer1: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 637086815595 ns
+Console: colour dummy device 80x30
+Calibrating delay loop (skipped), value calculated using timer frequency.. 6.00 BogoMIPS (lpj=30000)
+pid_max: default: 32768 minimum: 301
+Security Framework initialized
+SELinux:  Initializing.
+Mount-cache hash table entries: 2048 (order: 1, 8192 bytes)
+Mountpoint-cache hash table entries: 2048 (order: 1, 8192 bytes)
+CPU: Testing write buffer coherency: ok
+CPU0: update cpu_capacity 1024
+CPU0: thread -1, cpu 0, socket 0, mpidr 80000000
+Setting up static identity map for 0x10100000 - 0x10100058
+CPU1: update cpu_capacity 1024
+CPU1: thread -1, cpu 1, socket 0, mpidr 80000001
+CPU2: update cpu_capacity 1024
+CPU2: thread -1, cpu 2, socket 0, mpidr 80000002
+CPU3: update cpu_capacity 1024
+CPU3: thread -1, cpu 3, socket 0, mpidr 80000003
+Brought up 4 CPUs
+SMP: Total of 4 processors activated (24.00 BogoMIPS).
+CPU: All CPU(s) started in SVC mode.
+CPU3: update max cpu_capacity 1024
+devtmpfs: initialized
+CPU3: update max cpu_capacity 1024
+VFP support v0.3: implementor 41 architecture 3 part 30 variant 9 rev 4
+clocksource: jiffies: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 19112604462750000 ns
+futex hash table entries: 1024 (order: 4, 65536 bytes)
+pinctrl core: initialized pinctrl subsystem
+NET: Registered protocol family 16
+DMA: preallocated 256 KiB pool for atomic coherent allocations
+cpuidle: using governor menu
+CPU identified as i.MX6Q, silicon rev 1.5
+hw-breakpoint: found 5 (+1 reserved) breakpoint and 1 watchpoint registers.
+hw-breakpoint: maximum watchpoint size is 4 bytes.
+imx6q-pinctrl 20e0000.iomuxc: initialized IMX pinctrl driver
+imx-gpc 20dc000.gpc: no fsl,ldo-bypass found!
+imx-gpc 20dc000.gpc: Registered imx-gpc
+mxs-dma 110000.dma-apbh: initialized
+usb_host_vbus: supplied by usb_host_vbus_hub
+SCSI subsystem initialized
+usbcore: registered new interface driver usbfs
+usbcore: registered new interface driver hub
+usbcore: registered new device driver usb
+2000000.aips-bus:usbphy_nop1 supply vcc not found, using dummy regulator
+2000000.aips-bus:usbphy_nop2 supply vcc not found, using dummy regulator
+i2c i2c-1: IMX I2C adapter registered
+i2c i2c-1: can't use DMA, using PIO instead.
+stmpe-i2c 2-0041: stmpe811 detected, chip id: 0x811
+i2c i2c-2: IMX I2C adapter registered
+i2c i2c-2: can't use DMA, using PIO instead.
+i2c i2c-3: IMX I2C adapter registered
+i2c i2c-3: can't use DMA, using PIO instead.
+Linux video capture interface: v2.00
+pps_core: LinuxPPS API ver. 1 registered
+pps_core: Software ver. 5.3.6 - Copyright 2005-2007 Rodolfo Giometti <giometti@linux.it>
+PTP clock support registered
+imx-ipuv3 2400000.ipu: IPU DMFC NORMAL mode: 1(0~1), 5B(4,5), 5F(6,7)
+imx-ipuv3 2800000.ipu: IPU DMFC NORMAL mode: 1(0~1), 5B(4,5), 5F(6,7)
+mxc_mipi_csi2 21dc000.mipi_csi: i.MX MIPI CSI2 driver probed ipu0 csi1
+mxc_mipi_csi2 21dc000.mipi_csi: i.MX MIPI CSI2 dphy version is 0x3130302a
+MIPI CSI2 driver module loaded
+imx rpmsg driver is registered.
+Advanced Linux Sound Architecture Driver Initialized.
+Bluetooth: Core ver 2.22
+NET: Registered protocol family 31
+Bluetooth: HCI device and connection manager initialized
+Bluetooth: HCI socket layer initialized
+Bluetooth: L2CAP socket layer initialized
+Bluetooth: SCO socket layer initialized
+clocksource: Switched to clocksource mxc_timer1
+VFS: Disk quotas dquot_6.6.0
+VFS: Dquot-cache hash table entries: 1024 (order 0, 4096 bytes)
+NET: Registered protocol family 2
+TCP established hash table entries: 8192 (order: 3, 32768 bytes)
+TCP bind hash table entries: 8192 (order: 4, 65536 bytes)
+TCP: Hash tables configured (established 8192 bind 8192)
+UDP hash table entries: 512 (order: 2, 16384 bytes)
+UDP-Lite hash table entries: 512 (order: 2, 16384 bytes)
+NET: Registered protocol family 1
+RPC: Registered named UNIX socket transport module.
+RPC: Registered udp transport module.
+RPC: Registered tcp transport module.
+RPC: Registered tcp NFSv4.1 backchannel transport module.
+Trying to unpack rootfs image as initramfs...
+Freeing initrd memory: 1592K
+hw perfevents: enabled with armv7_cortex_a9 PMU driver, 7 counters available
+Bus freq driver module loaded
+audit: initializing netlink subsys (disabled)
+audit: type=2000 audit(0.870:1): initialized
+workingset: timestamp_bits=30 max_order=19 bucket_order=0
+NFS: Registering the id_resolver key type
+Key type id_resolver registered
+Key type id_legacy registered
+ntfs: driver 2.1.32 [Flags: R/W DEBUG].
+jffs2: version 2.2. (NAND) © 2001-2006 Red Hat, Inc.
+fuse init (API version 7.26)
+bounce: pool size: 64 pages
+io scheduler noop registered
+io scheduler deadline registered
+io scheduler cfq registered (default)
+backlight supply power not found, using dummy regulator
+20e0000.hdmi_video supply HDMI not found, using dummy regulator
+mxc_sdc_fb fb@0: registered mxc display driver lcd
+Console: switching to colour frame buffer device 100x30
+mxc_hdmi 20e0000.hdmi_video: Detected HDMI controller 0x13:0xa:0xa0:0xc1
+fbcvt: 640x480@60: CVT Name - .307M3
+mxc_sdc_fb fb@1: registered mxc display driver hdmi
+mxc_sdc_fb fb@2: Can't get fb option for mxcfb2!
+mxc_sdc_fb fb@3: Can't get fb option for mxcfb3!
+imx-sdma 20ec000.sdma: no iram assigned, using external mem
+imx-sdma 20ec000.sdma: loaded firmware 3.3
+pfuze100-regulator 2-0008: Full layer: 2, Metal layer: 1
+pfuze100-regulator 2-0008: FAB: 0, FIN: 0
+pfuze100-regulator 2-0008: pfuze100 found.
+mxc_hdmi 20e0000.hdmi_video: Read EDID again
+2020000.serial: ttymxc0 at MMIO 0x2020000 (irq = 29, base_baud = 5000000) is a IMX
+mxc_hdmi 20e0000.hdmi_video: create default modelist
+console [ttymxc0] enabled
+21e8000.serial: ttymxc1 at MMIO 0x21e8000 (irq = 78, base_baud = 5000000) is a IMX
+21f0000.serial: ttymxc3 at MMIO 0x21f0000 (irq = 79, base_baud = 5000000) is a IMX
+21f4000.serial: ttymxc4 at MMIO 0x21f4000 (irq = 80, base_baud = 5000000) is a IMX
+imx sema4 driver is registered.
+[drm] Initialized
+[drm] Initialized vivante 1.0.0 20120216 on minor 0
+brd: module loaded
+loop: module loaded
+zram: Added device: zram0
+ahci-imx 2200000.sata: fsl,transmit-level-mV not specified, using 00000024
+ahci-imx 2200000.sata: fsl,transmit-boost-mdB not specified, using 00000480
+ahci-imx 2200000.sata: fsl,transmit-atten-16ths not specified, using 00002000
+ahci-imx 2200000.sata: fsl,receive-eq-mdB not specified, using 05000000
+ahci-imx 2200000.sata: SSS flag set, parallel bus scan disabled
+ahci-imx 2200000.sata: AHCI 0001.0300 32 slots 1 ports 3 Gbps 0x1 impl platform mode
+ahci-imx 2200000.sata: flags: ncq sntf stag pm led clo only pmp pio slum part ccc apst 
+scsi host0: ahci-imx
+ata1: SATA max UDMA/133 mmio [mem 0x02200000-0x02203fff] port 0x100 irq 87
+spi_imx 2008000.ecspi: probed
+libphy: Fixed MDIO Bus: probed
+tun: Universal TUN/TAP device driver, 1.6
+tun: (C) 1999-2004 Max Krasnyansky <maxk@qualcomm.com>
+CAN device driver interface
+2090000.flexcan supply xceiver not found, using dummy regulator
+flexcan 2090000.flexcan: device registered (reg_base=f02f4000, irq=38)
+2094000.flexcan supply xceiver not found, using dummy regulator
+flexcan 2094000.flexcan: device registered (reg_base=f02fc000, irq=39)
+2188000.ethernet supply phy not found, using dummy regulator
+pps pps0: new PPS source ptp0
+libphy: fec_enet_mii_bus: probed
+fec 2188000.ethernet eth0: registered PHC device 0
+PPP generic driver version 2.4.2
+PPP BSD Compression module registered
+PPP Deflate Compression module registered
+PPP MPPE Compression module registered
+NET: Registered protocol family 24
+usbcore: registered new interface driver kaweth
+pegasus: v0.9.3 (2013/04/25), Pegasus/Pegasus II USB Ethernet driver
+usbcore: registered new interface driver pegasus
+usbcore: registered new interface driver rtl8150
+usbcore: registered new interface driver r8152
+usbcore: registered new interface driver asix
+usbcore: registered new interface driver ax88179_178a
+usbcore: registered new interface driver cdc_ether
+usbcore: registered new interface driver cdc_eem
+usbcore: registered new interface driver net1080
+usbcore: registered new interface driver cdc_subset
+usbcore: registered new interface driver zaurus
+usbcore: registered new interface driver cdc_ncm
+ehci_hcd: USB 2.0 'Enhanced' Host Controller (EHCI) Driver
+ehci-mxc: Freescale On-Chip EHCI Host driver
+usbcore: registered new interface driver cdc_acm
+cdc_acm: USB Abstract Control Model driver for USB modems and ISDN adapters
+usbcore: registered new interface driver usb-storage
+usbcore: registered new interface driver usbserial
+usbcore: registered new interface driver usbserial_generic
+usbserial: USB Serial support registered for generic
+usbcore: registered new interface driver ftdi_sio
+usbserial: USB Serial support registered for FTDI USB Serial Device
+usbcore: registered new interface driver option
+usbserial: USB Serial support registered for GSM modem (1-port)
+usbcore: registered new interface driver usbtest
+usbcore: registered new interface driver usb_ehset_test
+2184800.usbmisc supply vbus-wakeup not found, using dummy regulator
+ci_hdrc ci_hdrc.1: EHCI Host Controller
+ci_hdrc ci_hdrc.1: new USB bus registered, assigned bus number 1
+ci_hdrc ci_hdrc.1: USB 2.0 started, EHCI 1.00
+usb usb1: New USB device found, idVendor=1d6b, idProduct=0002
+usb usb1: New USB device strings: Mfr=3, Product=2, SerialNumber=1
+usb usb1: Product: EHCI Host Controller
+usb usb1: Manufacturer: Linux 4.9.67-07229-gdc6c16ec0433 ehci_hcd
+usb usb1: SerialNumber: ci_hdrc.1
+hub 1-0:1.0: USB hub found
+hub 1-0:1.0: 1 port detected
+ata1: SATA link down (SStatus 0 SControl 300)
+ahci-imx 2200000.sata: no device found, disabling link.
+ahci-imx 2200000.sata: pass ahci_imx..hotplug=1 to enable hotplug
+mousedev: PS/2 mouse device common for all mice
+usbcore: registered new interface driver xpad
+usbcore: registered new interface driver usb_acecad
+usbcore: registered new interface driver aiptek
+usbcore: registered new interface driver gtco
+usbcore: registered new interface driver hanwang
+usbcore: registered new interface driver kbtab
+input: stmpe-ts as /devices/soc0/soc/2100000.aips-bus/21a4000.i2c/i2c-2/2-0041/stmpe-ts/input/input0
+snvs_rtc 20cc000.snvs:snvs-rtc-lp: rtc core: registered 20cc000.snvs:snvs-r as rtc0
+i2c /dev entries driver
+IR NEC protocol handler initialized
+IR RC5(x/sz) protocol handler initialized
+IR RC6 protocol handler initialized
+IR JVC protocol handler initialized
+IR Sony protocol handler initialized
+IR SANYO protocol handler initialized
+IR Sharp protocol handler initialized
+IR MCE Keyboard/mouse protocol handler initialized
+IR XMP protocol handler initialized
+mxc_v4l2_output v4l2_out: V4L2 device registered as video16
+mxc_v4l2_output v4l2_out: V4L2 device registered as video17
+mxc_v4l2_output v4l2_out: V4L2 device registered as video18
+ov564x_mipi 3-003c: found pwm2, period=0
+usb 1-1: new high-speed USB device number 2 using ci_hdrc
+ov5640_read_reg:write reg error:reg=300a
+camera ov5640_mipi is not found
+usbcore: registered new interface driver uvcvideo
+USB Video Class driver (1.1.1)
+imx2-wdt 20bc000.wdog: timeout 60 sec (nowayout=0)
+device-mapper: uevent: version 1.0.3
+device-mapper: ioctl: 4.35.0-ioctl (2016-06-23) initialised: dm-devel@redhat.com
+Bluetooth: HCI UART driver ver 2.3
+Bluetooth: HCI UART protocol H4 registered
+Bluetooth: HCI UART protocol BCSP registered
+Bluetooth: HCI UART protocol ATH3K registered
+usbcore: registered new interface driver btusb
+sdhci: Secure Digital Host Controller Interface driver
+sdhci: Copyright(c) Pierre Ossman
+sdhci-pltfm: SDHCI platform and OF driver helper
+sdhci-esdhc-imx 2190000.usdhc: could not get ultra high speed state, work on normal mode
+sdhci-esdhc-imx 2190000.usdhc: Got CD GPIO
+mmc1: SDHCI controller on 2190000.usdhc [2190000.usdhc] using ADMA
+sdhci-esdhc-imx 2198000.usdhc: could not get ultra high speed state, work on normal mode
+usb 1-1: New USB device found, idVendor=0424, idProduct=2514
+usb 1-1: New USB device strings: Mfr=0, Product=0, SerialNumber=0
+hub 1-1:1.0: USB hub found
+hub 1-1:1.0: 4 ports detected
+mmc0: SDHCI controller on 2198000.usdhc [2198000.usdhc] using ADMA
+mxc_vpu 2040000.vpu_fsl: VPU initialized
+mxc_vdoa 21e4000.vdoa: i.MX Video Data Order Adapter(VDOA) driver probed
+mxc_hdmi_cec soc:hdmi_cec@00120000: HDMI CEC initialized
+Galcore version 6.2.2.96445
+mmc0: new DDR MMC card at address 0001
+mmcblk0: mmc0:0001 Q2J54A 3.59 GiB 
+mmcblk0boot0: mmc0:0001 Q2J54A partition 1 16.0 MiB
+mmcblk0boot1: mmc0:0001 Q2J54A partition 2 16.0 MiB
+random: fast init done
+Alternate GPT is invalid, using primary GPT.
+ mmcblk0: p1 p2 p3 p4 p5 p6 p7 p8 p9 p10 p11
+usb 1-1.2: new low-speed USB device number 3 using ci_hdrc
+usb 1-1.2: New USB device found, idVendor=413c, idProduct=301a
+usb 1-1.2: New USB device strings: Mfr=1, Product=2, SerialNumber=0
+usb 1-1.2: Product: Dell MS116 USB Optical Mouse
+usb 1-1.2: Manufacturer: PixArt
+caam 2100000.caam: ERA source: CAAMVID.
+caam 2100000.caam: AXI pipeline throttling enabled.
+caam 2100000.caam: Instantiated RNG4 SH1
+caam 2100000.caam: device ID = 0x0a16010000000000 (Era 4)
+caam 2100000.caam: job rings = 2, qi = 0
+caam algorithms registered in /proc/crypto
+caam_jr 2101000.jr0: registering rng-caam
+platform caam_sm: blkkey_ex: 4 keystore units available
+platform caam_sm: 64-bit clear key:
+platform caam_sm: [0000] 00 01 02 03 04 0f 06 07
+platform caam_sm: 64-bit black key:
+platform caam_sm: [0000] bb a8 7d 63 0c 8b b5 c7
+platform caam_sm: [0008] d7 d7 9d 83 80 45 2c 81
+platform caam_sm: 128-bit clear key:
+platform caam_sm: [0000] 00 01 02 03 04 0f 06 07
+platform caam_sm: [0008] 08 09 0a 0b 0c 0d 0e 0f
+platform caam_sm: 128-bit black key:
+platform caam_sm: [0000] 03 a2 a2 fb 0a 64 82 4b
+platform caam_sm: [0008] 25 5e 33 28 8d b5 22 1c
+platform caam_sm: 192-bit clear key:
+platform caam_sm: [0000] 00 01 02 03 04 0f 06 07
+platform caam_sm: [0008] 08 09 0a 0b 0c 0d 0e 0f
+platform caam_sm: [0016] 10 11 12 13 14 15 16 17
+platform caam_sm: 192-bit black key:
+platform caam_sm: [0000] 23 0a 9a 5b a1 fc 20 ec
+platform caam_sm: [0008] e2 0d ec ac f8 4e 84 5e
+platform caam_sm: [0016] 6f f7 ad 2f 92 24 62 f3
+platform caam_sm: [0024] 45 6d d7 80 3b 76 fe ce
+platform caam_sm: 256-bit clear key:
+platform caam_sm: [0000] 00 01 02 03 04 0f 06 07
+platform caam_sm: [0008] 08 09 0a 0b 0c 0d 0e 0f
+platform caam_sm: [0016] 10 11 12 13 14 15 16 17
+platform caam_sm: [0024] 18 19 1a 1b 1c 1d 1e 1f
+platform caam_sm: 256-bit black key:
+platform caam_sm: [0000] 8f 6f 35 6c c9 19 3f 55
+platform caam_sm: [0008] b8 d4 f7 41 ab c8 c1 36
+platform caam_sm: [0016] b3 b2 f4 9e 91 ba 08 df
+platform caam_sm: [0024] 90 9c 3a bb 35 4b d7 8a
+platform caam_sm: 64-bit unwritten blob:
+platform caam_sm: [0000] 00 00 00 00 00 00 00 00
+platform caam_sm: [0008] 00 00 00 00 00 00 00 00
+platform caam_sm: [0016] 00 00 00 00 00 00 00 00
+platform caam_sm: [0024] 00 00 00 00 00 00 00 00
+platform caam_sm: [0032] 00 00 00 00 00 00 00 00
+platform caam_sm: [0040] 00 00 00 00 00 00 00 00
+platform caam_sm: [0048] 00 00 00 00 00 00 00 00
+platform caam_sm: [0056] 00 00 00 00 00 00 00 00
+platform caam_sm: [0064] 00 00 00 00 00 00 00 00
+platform caam_sm: [0072] 00 00 00 00 00 00 00 00
+platform caam_sm: [0080] 00 00 00 00 00 00 00 00
+platform caam_sm: [0088] 00 00 00 00 00 00 00 00
+platform caam_sm: 128-bit unwritten blob:
+platform caam_sm: [0000] 00 00 00 00 00 00 00 00
+platform caam_sm: [0008] 00 00 00 00 00 00 00 00
+platform caam_sm: [0016] 00 00 00 00 00 00 00 00
+platform caam_sm: [0024] 00 00 00 00 00 00 00 00
+platform caam_sm: [0032] 00 00 00 00 00 00 00 00
+platform caam_sm: [0040] 00 00 00 00 00 00 00 00
+platform caam_sm: [0048] 00 00 00 00 00 00 00 00
+platform caam_sm: [0056] 00 00 00 00 00 00 00 00
+platform caam_sm: [0064] 00 00 00 00 00 00 00 00
+platform caam_sm: [0072] 00 00 00 00 00 00 00 00
+platform caam_sm: [0080] 00 00 00 00 00 00 00 00
+platform caam_sm: [0088] 00 00 00 00 00 00 00 00
+platform caam_sm: 196-bit unwritten blob:
+platform caam_sm: [0000] 00 00 00 00 00 00 00 00
+platform caam_sm: [0008] 00 00 00 00 00 00 00 00
+platform caam_sm: [0016] 00 00 00 00 00 00 00 00
+platform caam_sm: [0024] 00 00 00 00 00 00 00 00
+platform caam_sm: [0032] 00 00 00 00 00 00 00 00
+platform caam_sm: [0040] 00 00 00 00 00 00 00 00
+platform caam_sm: [0048] 00 00 00 00 00 00 00 00
+platform caam_sm: [0056] 00 00 00 00 00 00 00 00
+platform caam_sm: [0064] 00 00 00 00 00 00 00 00
+platform caam_sm: [0072] 00 00 00 00 00 00 00 00
+platform caam_sm: [0080] 00 00 00 00 00 00 00 00
+platform caam_sm: [0088] 00 00 00 00 00 00 00 00
+platform caam_sm: 256-bit unwritten blob:
+platform caam_sm: [0000] 00 00 00 00 00 00 00 00
+platform caam_sm: [0008] 00 00 00 00 00 00 00 00
+platform caam_sm: [0016] 00 00 00 00 00 00 00 00
+platform caam_sm: [0024] 00 00 00 00 00 00 00 00
+platform caam_sm: [0032] 00 00 00 00 00 00 00 00
+platform caam_sm: [0040] 00 00 00 00 00 00 00 00
+platform caam_sm: [0048] 00 00 00 00 00 00 00 00
+platform caam_sm: [0056] 00 00 00 00 00 00 00 00
+platform caam_sm: [0064] 00 00 00 00 00 00 00 00
+platform caam_sm: [0072] 00 00 00 00 00 00 00 00
+platform caam_sm: [0080] 00 00 00 00 00 00 00 00
+platform caam_sm: [0088] 00 00 00 00 00 00 00 00
+platform caam_sm: 64-bit black key in blob:
+platform caam_sm: [0000] 97 7d 97 06 c2 38 ee 91
+platform caam_sm: [0008] 7a 29 3c 9d ca 37 ce 5f
+platform caam_sm: [0016] e2 0d 69 a0 66 94 2a fe
+platform caam_sm: [0024] 43 05 af 0c df bd f8 38
+platform caam_sm: [0032] 0f 27 e5 63 ff 18 77 88
+platform caam_sm: [0040] b7 ae a3 4f 01 ae 9e 5f
+platform caam_sm: [0048] 00 9f d2 c6 7b 77 ee 79
+platform caam_sm: [0056] 00 00 00 00 00 00 00 00
+platform caam_sm: [0064] 00 00 00 00 00 00 00 00
+platform caam_sm: [0072] 00 00 00 00 00 00 00 00
+platform caam_sm: [0080] 00 00 00 00 00 00 00 00
+platform caam_sm: [0088] 00 00 00 00 00 00 00 00
+platform caam_sm: 128-bit black key in blob:
+platform caam_sm: [0000] 82 5b 90 cc e9 89 21 d8
+platform caam_sm: [0008] a4 7f 46 cb ea ce c1 5d
+platform caam_sm: [0016] b3 cb 42 97 e2 77 db 42
+platform caam_sm: [0024] 70 42 bf 32 ab dd 8e c6
+platform caam_sm: [0032] df 14 27 1d 9b 3e 39 80
+platform caam_sm: [0040] 37 99 e6 98 ea f9 65 36
+platform caam_sm: [0048] 94 ee 34 ff 81 2a bf 7a
+platform caam_sm: [0056] 48 e3 f7 a0 5f 6a 5b cf
+platform caam_sm: [0064] 00 00 00 00 00 00 00 00
+platform caam_sm: [0072] 00 00 00 00 00 00 00 00
+platform caam_sm: [0080] 00 00 00 00 00 00 00 00
+platform caam_sm: [0088] 00 00 00 00 00 00 00 00
+platform caam_sm: 192-bit black key in blob:
+platform caam_sm: [0000] 6e 24 a3 68 b7 9b 94 06
+platform caam_sm: [0008] b4 37 0f e9 d7 56 a6 a0
+platform caam_sm: [0016] 83 2d b5 43 ec 21 dc 85
+platform caam_sm: [0024] cc 25 5c a3 7b b7 22 dd
+platform caam_sm: [0032] f3 32 b0 10 25 6a 5d 53
+platform caam_sm: [0040] c6 a3 0e 7f 86 06 ea 79
+platform caam_sm: [0048] c6 5c 5d 6f a0 fa 64 56
+platform caam_sm: [0056] a4 b7 c1 1e a9 13 3d fb
+platform caam_sm: [0064] 7c 33 8e 1d fd d4 40 2c
+platform caam_sm: [0072] 00 00 00 00 00 00 00 00
+platform caam_sm: [0080] 00 00 00 00 00 00 00 00
+platform caam_sm: [0088] 00 00 00 00 00 00 00 00
+platform caam_sm: 256-bit black key in blob:
+platform caam_sm: [0000] 5c 9c 7b 66 f0 10 2d 8b
+platform caam_sm: [0008] 95 be e3 e6 b6 21 e2 fb
+platform caam_sm: [0016] 5f 4e ed 79 70 74 3d 9f
+platform caam_sm: [0024] 48 9b 0c 76 bb 35 b6 ba
+platform caam_sm: [0032] 3c 2b 03 31 22 ee df 88
+platform caam_sm: [0040] fe 1f bf 52 0f 51 a0 ea
+platform caam_sm: [0048] cc 86 de a7 81 50 cb 0a
+platform caam_sm: [0056] 0f 7a 3c 5b 11 41 d0 21
+platform caam_sm: [0064] 9c d3 26 15 94 f1 1f e4
+platform caam_sm: [0072] 1a 60 c3 7e 84 31 65 f2
+platform caam_sm: [0080] 00 00 00 00 00 00 00 00
+platform caam_sm: [0088] 00 00 00 00 00 00 00 00
+platform caam_sm: restored 64-bit black key:
+platform caam_sm: [0000] 8e 0d 34 9c 5e 06 e4 0b
+platform caam_sm: [0008] 80 15 24 49 89 99 1b cf
+platform caam_sm: restored 128-bit black key:
+platform caam_sm: [0000] 03 a2 a2 fb 0a 64 82 4b
+platform caam_sm: [0008] 25 5e 33 28 8d b5 22 1c
+platform caam_sm: restored 192-bit black key:
+platform caam_sm: [0000] 23 0a 9a 5b a1 fc 20 ec
+platform caam_sm: [0008] e2 0d ec ac f8 4e 84 5e
+platform caam_sm: [0016] 59 19 7e 6e 7a 98 66 54
+platform caam_sm: [0024] be b7 f6 85 32 16 55 8f
+platform caam_sm: restored 256-bit black key:
+platform caam_sm: [0000] 8f 6f 35 6c c9 19 3f 55
+platform caam_sm: [0008] b8 d4 f7 41 ab c8 c1 36
+platform caam_sm: [0016] b3 b2 f4 9e 91 ba 08 df
+platform caam_sm: [0024] 90 9c 3a bb 35 4b d7 8a
+snvs-secvio 20cc000.caam-snvs: can't get snvs clock
+snvs-secvio 20cc000.caam-snvs: violation handlers armed - non-secure state
+hidraw: raw HID events driver (C) Jiri Kosina
+input: PixArt Dell MS116 USB Optical Mouse as /devices/soc0/soc/2100000.aips-bus/2184200.usb/ci_hdrc.1/usb1/1-1/1-1.2/1-1.2:1.0/0003:413C:301A.0001/input/input1
+hid-generic 0003:413C:301A.0001: input,hidraw0: USB HID v1.11 Mouse [PixArt Dell MS116 USB Optical Mouse] on usb-ci_hdrc.1-1.2/input0
+usbcore: registered new interface driver usbhid
+usbhid: USB HID core driver
+ashmem: initialized
+usbcore: registered new interface driver snd-usb-audio
+sgtl5000 2-000a: sgtl5000 revision 0x11
+fsl-ssi-dai 2028000.ssi: No cache defaults, reading back from HW
+imx-sgtl5000 sound: sgtl5000 <-> 2028000.ssi mapping ok
+imx-spdif sound-spdif: snd-soc-dummy-dai <-> 2004000.spdif mapping ok
+imx-audio-hdmi sound-hdmi: hdmi-hifi.0 <-> soc:hdmi_audio@00120000 mapping ok
+NET: Registered protocol family 26
+u32 classifier
+    Actions configured
+Netfilter messages via NETLINK v0.30.
+nf_conntrack version 0.5.0 (16384 buckets, 65536 max)
+ctnetlink v0.93: registering with nfnetlink.
+xt_time: kernel timezone is -0000
+ip_tables: (C) 2000-2006 Netfilter Core Team
+arp_tables: arp_tables: (C) 2002 David S. Miller
+Initializing XFRM netlink socket
+NET: Registered protocol family 10
+mip6: Mobile IPv6
+ip6_tables: (C) 2000-2006 Netfilter Core Team
+sit: IPv6, IPv4 and MPLS over IPv4 tunneling driver
+NET: Registered protocol family 17
+NET: Registered protocol family 15
+can: controller area network core (rev 20120528 abi 9)
+NET: Registered protocol family 29
+can: raw protocol (rev 20120528)
+can: broadcast manager protocol (rev 20161123 t)
+can: netlink gateway (rev 20130117) max_hops=1
+Bluetooth: RFCOMM TTY layer initialized
+Bluetooth: RFCOMM socket layer initialized
+Bluetooth: RFCOMM ver 1.11
+Bluetooth: BNEP (Ethernet Emulation) ver 1.3
+Bluetooth: BNEP filters: protocol multicast
+Bluetooth: BNEP socket layer initialized
+Bluetooth: HIDP (Human Interface Emulation) ver 1.2
+Bluetooth: HIDP socket layer initialized
+8021q: 802.1Q VLAN Support v1.8
+Key type dns_resolver registered
+cpu cpu0: Registered imx6q-cpufreq
+registered taskstats version 1
+imx_thermal 2000000.aips-bus:tempmon: Industrial CPU temperature grade - max:105C critical:100C passive:95C
+dhd_module_init in
+input: gpio-keys as /devices/soc0/gpio-keys/input/input2
+snvs_rtc 20cc000.snvs:snvs-rtc-lp: setting system clock to 1970-01-01 00:00:02 UTC (2)
+usb_otg_vbus: disabling
+ALSA device list:
+  #0: imx6q-apalis-sgtl5000
+  #1: imx-spdif
+  #2: imx-hdmi-soc
+Freeing unused kernel memory: 1024K
+init: init first stage started!
+SELinux:  Permission validate_trans in class security not defined in policy.
+SELinux:  Class cap_userns not defined in policy.
+SELinux:  Class cap2_userns not defined in policy.
+SELinux: the above unknown classes and permissions will be denied
+audit: type=1403 audit(4.946:2): policy loaded auid=4294967295 ses=4294967295
+init: (Initializing SELinux non-enforcing took 0.11s.)
+init: init second stage started!
+init: Running restorecon...
+init: waitpid failed: No child processes
+init: (Loading properties from /default.prop took 0.00s.)
+init: (Parsing /init.environ.rc took 0.00s.)
+init: (Parsing /init.usb.rc took 0.00s.)
+init: (Parsing init.freescale.usb.rc took 0.00s.)
+init: (Parsing init.freescale.i.MX6Q.rc took 0.00s.)
+init: (Parsing init.freescale.emmc.rc took 0.00s.)
+init: (Parsing /init.freescale.rc took 0.02s.)
+ueventd: ueventd started!
+ueventd: Coldboot took 0.44s.
+Console: switching to colour dummy device 80x30
+watchdogd: started (interval 10, margin 20)!
+EXT4-fs (mmcblk0p3): mounted filesystem with ordered data mode. Opts: barrier=1
+EXT4-fs (mmcblk0p10): Ignoring removed nomblk_io_submit option
+EXT4-fs (mmcblk0p10): recovery complete
+EXT4-fs (mmcblk0p10): mounted filesystem with ordered data mode. Opts: nomblk_io_submit,noauto_da_alloc,errors=panic
+EXT4-fs (mmcblk0p4): Ignoring removed nomblk_io_submit option
+EXT4-fs (mmcblk0p4): recovery complete
+EXT4-fs (mmcblk0p4): mounted filesystem with ordered data mode. Opts: nomblk_io_submit
+EXT4-fs (mmcblk0p5): mounted filesystem with ordered data mode. Opts: (null)
+file system registered
+using random self ethernet address
+using random host ethernet address
+zram0: detected capacity change from 0 to 314572800
+logd.auditd: start
+logd.klogd: 7603078000
+Adding 307196k swap on /dev/block/zram0.  Priority:-1 extents:1 across:307196k SS
+binder: 253:253 transaction failed 29189, size 0-0
+type=1400 audit(8.096:3): avc: denied { entrypoint } for pid=259 comm="init" path="/system/bin/can-config.sh" dev="mmcblk0p3" ino=256 scontext=u:r:obd:s0 tcontext=u:object_r:system_file:s0 tclass=file permissive=1
+type=1400 audit(8.126:4): avc: denied { read execute } for pid=259 comm="can-config.sh" path="/system/bin/sh" dev="mmcblk0p3" ino=460 scontext=u:r:obd:s0 tcontext=u:object_r:shell_exec:s0 tclass=file permissive=1
+logd.daemon: reinit
+type=1400 audit(8.136:5): avc: denied { getattr } for pid=259 comm="can-config.sh" path="/system/bin/sh" dev="mmcblk0p3" ino=460 scontext=u:r:obd:s0 tcontext=u:object_r:shell_exec:s0 tclass=file permissive=1
+type=1400 audit(8.136:6): avc: denied { getattr } for pid=259 comm="can-config.sh" path="/vendor" dev="rootfs" ino=6499 scontext=u:r:obd:s0 tcontext=u:object_r:rootfs:s0 tclass=lnk_file permissive=1
+type=1400 audit(8.186:7): avc: denied { execute_no_trans } for pid=274 comm="can-config.sh" path="/system/bin/ip" dev="mmcblk0p3" ino=343 scontext=u:r:obd:s0 tcontext=u:object_r:system_file:s0 tclass=file permissive=1
+type=1400 audit(8.216:8): avc: denied { create } for pid=260 comm="obd" scontext=u:r:obd:s0 tcontext=u:r:obd:s0 tclass=socket permissive=1
+type=1400 audit(8.216:9): avc: denied { ioctl } for pid=260 comm="obd" path="socket:[10828]" dev="sockfs" ino=10828 ioctlcmd=0x8933 scontext=u:r:obd:s0 tcontext=u:r:obd:s0 tclass=socket permissive=1
+toradex_apalis6q:/ # IPv6: ADDRCONF(NETDEV_CHANGE): can0: link becomes ready
+healthd: No battery devices found
+ERROR: v4l2 capture: slave not found! V4L2_CID_HUE
+ERROR: v4l2 capture: slave not found! V4L2_CID_HUE
+imx-hdmi-audio imx-hdmi-audio: HDMI Video is not ready!
+imx-hdmi-audio imx-hdmi-audio: ASoC: can't open platform imx-hdmi-audio: -22
+imx-hdmi-audio imx-hdmi-audio: HDMI Video is not ready!
+imx-hdmi-audio imx-hdmi-audio: ASoC: can't open platform imx-hdmi-audio: -22
+init: Starting service 'bootanim'...
+random: crng init done
+capability: warning: `main' uses 32-bit capabilities (legacy support in use)
+type=1400 audit(16.576:34): avc: denied { read } for pid=260 comm="obd" path="socket:[10828]" dev="sockfs" ino=10828 scontext=u:r:obd:s0 tcontext=u:r:obd:s0 tclass=socket permissive=1
+type=1400 audit(16.636:35): avc: denied { write } for pid=260 comm="obd" path="socket:[10828]" dev="sockfs" ino=10828 scontext=u:r:obd:s0 tcontext=u:r:obd:s0 tclass=socket permissive=1
+init: write_file: Unable to open '/sys/devices/system/cpu/cpufreq/interactive/timer_rate': No such file or directory
+init: write_file: Unable to open '/sys/devices/system/cpu/cpufreq/interactive/min_sample_time': No such file or directory
+init: write_file: Unable to open '/sys/devices/system/cpu/cpufreq/interactive/go_hispeed_load': No such file or directory
+init: write_file: Unable to open '/proc/sys/vm/extra_free_kbytes': No such file or directory
+init: write_file: Unable to write to '/config/usb_gadget/g1/UDC': No such device
+acc_open
+acc_release
+android_work: sent uevent USB_STATE=CONNECTED
+configfs-gadget gadget: high-speed config #1: b
+android_work: sent uevent USB_STATE=CONFIGURED
+Micrel KSZ9031 Gigabit PHY 2188000.ethernet-1:07: attached PHY driver [Micrel KSZ9031 Gigabit PHY] (mii_bus:phy_addr=2188000.ethernet-1:07, irq=120)
+IPv6: ADDRCONF(NETDEV_UP): eth0: link is not ready
+type=1400 audit(25.176:36): avc: denied { read } for pid=260 comm="obd" path="socket:[10828]" dev="sockfs" ino=10828 scontext=u:r:obd:s0 tcontext=u:r:obd:s0 tclass=socket permissive=1
+type=1400 audit(25.196:37): avc: denied { write } for pid=260 comm="obd" path="socket:[10828]" dev="sockfs" ino=10828 scontext=u:r:obd:s0 tcontext=u:r:obd:s0 tclass=socket permissive=1
+init: Service 'bootanim' (pid 344) exited with status 0
+init: Starting service 'exec 3 (/system/bin/bootstat)'...
+init: Service 'exec 3 (/system/bin/bootstat)' (pid 934) exited with status 0
+init: Starting service 'exec 4 (/system/bin/bootstat)'...
+type=1400 audit(29.236:38): avc: denied { write } for pid=260 comm="obd" path="socket:[10828]" dev="sockfs" ino=10828 scontext=u:r:obd:s0 tcontext=u:r:obd:s0 tclass=socket permissive=1
+init: Service 'exec 4 (/system/bin/bootstat)' (pid 946) exited with status 0
+init: Starting service 'exec 5 (/system/bin/bootstat)'...
+init: Service 'exec 5 (/system/bin/bootstat)' (pid 949) exited with status 0
+init: Starting service 'exec 6 (/system/bin/bootstat)'...
+type=1400 audit(29.376:39): avc: denied { read } for pid=260 comm="obd" path="socket:[10828]" dev="sockfs" ino=10828 scontext=u:r:obd:s0 tcontext=u:r:obd:s0 tclass=socket permissive=1
+init: Service 'exec 6 (/system/bin/bootstat)' (pid 954) exited with status 0
+type=1400 audit(36.766:40): avc: denied { write } for pid=1055 comm="Thread-2" name="vcan" dev="tmpfs" ino=10831 scontext=u:r:untrusted_app:s0:c512,c768 tcontext=u:object_r:socket_device:s0 tclass=sock_file permissive=1
+type=1400 audit(36.766:41): avc: denied { connectto } for pid=1055 comm="Thread-2" path="/dev/socket/vcan" scontext=u:r:untrusted_app:s0:c512,c768 tcontext=u:r:obd:s0 tclass=unix_stream_socket permissive=1
+mtp_open
+binder: 600:600 transaction failed 29189, size 88-0

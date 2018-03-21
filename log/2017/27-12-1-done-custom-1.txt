@@ -1,0 +1,2769 @@
+
+
+U-Boot 2017.03-dirty (Dec 26 2017 - 14:19:13 +0530)
+
+CPU:   Freescale i.MX6Q rev1.5 at 792 MHz
+Reset cause: POR
+I2C:   ready
+DRAM:  2 GiB
+PMIC: device id: 0x10, revision id: 0x21
+PMIC: programmed
+MMC:   FSL_SDHC: 0, FSL_SDHC: 1, FSL_SDHC: 2
+auto-detected panel HDMI
+Aravinth: Display: HDMI (1024x768)
+In:    serial
+Out:   serial
+Err:   serial
+Model: Toradex Apalis iMX6 Quad 2GB IT V1.1C, Serial# 05146387
+flash target is MMC:0
+Net:   using PHY at 7
+FEC [PRIME]
+Fastboot: Normal
+Hit any key to stop autoboot:  1  0 
+Apalis iMX6 # bmode usb
+resetting ...
+
+
+U-Boot 2017.03-dirty (Dec 14 2017 - 17:25:07 +0530)
+
+CPU:   Freescale i.MX6Q rev1.5 at 792 MHz
+Reset cause: WDOG
+I2C:   ready
+DRAM:  2 GiB
+PMIC: device id: 0x10, revision id: 0x21
+PMIC: programmed
+MMC:   FSL_SDHC: 0, FSL_SDHC: 1, FSL_SDHC: 2
+auto-detected panel HDMI
+Aravinth: Display: HDMI (1024x768)
+In:    serial
+Out:   serial
+Err:   serial
+Model: Toradex Apalis iMX6 Quad 2GB IT V1.1C, Serial# 05146387
+Net:   using PHY at 7
+FEC [PRIME]
+Boot from USB for mfgtools
+Use default environment for 				 mfgtools
+Run bootcmd_mfg: run mfgtool_args;bootz 0x12000000 0x12C00000 0x18000000;
+Hit any key to stop autoboot:  0 
+Kernel image @ 0x12000000 [ 0x000000 - 0x5f06e8 ]
+## Loading init Ramdisk from Legacy Image at 12c00000 ...
+   Image Name:   fsl-image-mfgtool-initramfs-imx6
+   Image Type:   ARM Linux RAMDisk Image (gzip compressed)
+   Data Size:    8597466 Bytes = 8.2 MiB
+   Load Address: 00000000
+   Entry Point:  00000000
+   Verifying Checksum ... OK
+## Flattened Device Tree blob at 18000000
+   Booting using the fdt blob at 0x18000000
+   Using Device Tree in place at 18000000, end 18010172
+
+Starting kernel ...
+
+Booting Linux on physical CPU 0x0
+Linux version 4.9.67+ (embadmin@ubuntu) (gcc version 4.9 20150123 (prerelease) (GCC) ) #9 SMP PREEMPT Fri Dec 22 16:56:14 IST 2017
+CPU: ARMv7 Processor [412fc09a] revision 10 (ARMv7), cr=10c5387d
+CPU: PIPT / VIPT nonaliasing data cache, VIPT aliasing instruction cache
+OF: fdt:Machine model: Aravinth Toradex Apalis iMX6Q/D Module on Ixora V1.1 Carrier Board
+cma: Reserved 320 MiB at 0x6c000000
+Memory policy: Data cache writealloc
+percpu: Embedded 14 pages/cpu @daef8000 s25728 r8192 d23424 u57344
+Built 1 zonelists in Zone order, mobility grouping on.  Total pages: 520704
+Kernel command line: console=ttymxc0,115200 rdinit=/linuxrc g_mass_storage.stall=0 g_mass_storage.removable=1 g_mass_storage.file=/fat g_mass_storage.ro=1 g_mass_storage.idVendor=0x066F g_mass_storage.idProduct=0x37FF g_mass_storage.iSerialNumber= enable_wait_mode=off
+PID hash table entries: 4096 (order: 2, 16384 bytes)
+Dentry cache hash table entries: 262144 (order: 8, 1048576 bytes)
+Inode-cache hash table entries: 131072 (order: 7, 524288 bytes)
+Memory: 1728940K/2097152K available (8192K kernel code, 334K rwdata, 2548K rodata, 1024K init, 448K bss, 40532K reserved, 327680K cma-reserved, 262144K highmem)
+Virtual kernel memory layout:
+    vector  : 0xffff0000 - 0xffff1000   (   4 kB)
+    fixmap  : 0xffc00000 - 0xfff00000   (3072 kB)
+    vmalloc : 0xf0800000 - 0xff800000   ( 240 MB)
+    lowmem  : 0x80000000 - 0xf0000000   (1792 MB)
+    pkmap   : 0x7fe00000 - 0x80000000   (   2 MB)
+    modules : 0x7f000000 - 0x7fe00000   (  14 MB)
+      .text : 0x80008000 - 0x80900000   (9184 kB)
+      .init : 0x80c00000 - 0x80d00000   (1024 kB)
+      .data : 0x80d00000 - 0x80d539c0   ( 335 kB)
+       .bss : 0x80d539c0 - 0x80dc3aac   ( 449 kB)
+SLUB: HWalign=64, Order=0-3, MinObjects=0, CPUs=4, Nodes=1
+Preemptible hierarchical RCU implementation.
+	Build-time adjustment of leaf fanout to 32.
+NR_IRQS:16 nr_irqs:16 16
+L2C-310 errata 752271 769419 enabled
+L2C-310 enabling early BRESP for Cortex-A9
+L2C-310 full line of zeros enabled for Cortex-A9
+L2C-310 ID prefetch enabled, offset 16 lines
+L2C-310 dynamic clock gating enabled, standby mode enabled
+L2C-310 cache controller enabled, 16 ways, 1024 kB
+L2C-310: CACHE_ID 0x410000c7, AUX_CTRL 0x76470001
+Switching to timer-based delay loop, resolution 333ns
+sched_clock: 32 bits at 3000kHz, resolution 333ns, wraps every 715827882841ns
+clocksource: mxc_timer1: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 637086815595 ns
+Console: colour dummy device 80x30
+Calibrating delay loop (skipped), value calculated using timer frequency.. 6.00 BogoMIPS (lpj=30000)
+pid_max: default: 32768 minimum: 301
+Mount-cache hash table entries: 4096 (order: 2, 16384 bytes)
+Mountpoint-cache hash table entries: 4096 (order: 2, 16384 bytes)
+CPU: Testing write buffer coherency: ok
+CPU0: update cpu_capacity 1024
+CPU0: thread -1, cpu 0, socket 0, mpidr 80000000
+Setting up static identity map for 0x10100000 - 0x10100070
+CPU1: update cpu_capacity 1024
+CPU1: thread -1, cpu 1, socket 0, mpidr 80000001
+CPU2: update cpu_capacity 1024
+CPU2: thread -1, cpu 2, socket 0, mpidr 80000002
+CPU3: update cpu_capacity 1024
+CPU3: thread -1, cpu 3, socket 0, mpidr 80000003
+Brought up 4 CPUs
+SMP: Total of 4 processors activated (24.00 BogoMIPS).
+CPU: All CPU(s) started in SVC mode.
+devtmpfs: initialized
+VFP support v0.3: implementor 41 architecture 3 part 30 variant 9 rev 4
+clocksource: jiffies: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 19112604462750000 ns
+futex hash table entries: 1024 (order: 4, 65536 bytes)
+pinctrl core: initialized pinctrl subsystem
+NET: Registered protocol family 16
+DMA: preallocated 256 KiB pool for atomic coherent allocations
+cpuidle: using governor menu
+CPU identified as i.MX6Q, silicon rev 1.5
+hw-breakpoint: found 5 (+1 reserved) breakpoint and 1 watchpoint registers.
+hw-breakpoint: maximum watchpoint size is 4 bytes.
+imx6q-pinctrl 20e0000.iomuxc: initialized IMX pinctrl driver
+imx-gpc 20dc000.gpc: no fsl,ldo-bypass found!
+imx-gpc 20dc000.gpc: Registered imx-gpc
+mxs-dma 110000.dma-apbh: initialized
+usb_host_vbus: supplied by usb_host_vbus_hub
+SCSI subsystem initialized
+usbcore: registered new interface driver usbfs
+usbcore: registered new interface driver hub
+usbcore: registered new device driver usb
+2000000.aips-bus:usbphy_nop1 supply vcc not found, using dummy regulator
+2000000.aips-bus:usbphy_nop2 supply vcc not found, using dummy regulator
+i2c i2c-1: IMX I2C adapter registered
+i2c i2c-1: can't use DMA, using PIO instead.
+stmpe-i2c 2-0041: stmpe811 detected, chip id: 0x811
+i2c i2c-2: IMX I2C adapter registered
+i2c i2c-2: can't use DMA, using PIO instead.
+i2c i2c-3: IMX I2C adapter registered
+i2c i2c-3: can't use DMA, using PIO instead.
+Linux video capture interface: v2.00
+pps_core: LinuxPPS API ver. 1 registered
+pps_core: Software ver. 5.3.6 - Copyright 2005-2007 Rodolfo Giometti <giometti@linux.it>
+PTP clock support registered
+imx-ipuv3 2400000.ipu: IPU DMFC NORMAL mode: 1(0~1), 5B(4,5), 5F(6,7)
+imx-ipuv3 2800000.ipu: IPU DMFC NORMAL mode: 1(0~1), 5B(4,5), 5F(6,7)
+imx rpmsg driver is registered.
+Advanced Linux Sound Architecture Driver Initialized.
+clocksource: Switched to clocksource mxc_timer1
+VFS: Disk quotas dquot_6.6.0
+VFS: Dquot-cache hash table entries: 1024 (order 0, 4096 bytes)
+NET: Registered protocol family 2
+TCP established hash table entries: 16384 (order: 4, 65536 bytes)
+TCP bind hash table entries: 16384 (order: 5, 131072 bytes)
+TCP: Hash tables configured (established 16384 bind 16384)
+UDP hash table entries: 1024 (order: 3, 32768 bytes)
+UDP-Lite hash table entries: 1024 (order: 3, 32768 bytes)
+NET: Registered protocol family 1
+RPC: Registered named UNIX socket transport module.
+RPC: Registered udp transport module.
+RPC: Registered tcp transport module.
+RPC: Registered tcp NFSv4.1 backchannel transport module.
+Trying to unpack rootfs image as initramfs...
+Freeing initrd memory: 8400K
+hw perfevents: enabled with armv7_cortex_a9 PMU driver, 7 counters available
+Bus freq driver module loaded
+workingset: timestamp_bits=30 max_order=19 bucket_order=0
+NFS: Registering the id_resolver key type
+Key type id_resolver registered
+Key type id_legacy registered
+jffs2: version 2.2. (NAND) © 2001-2006 Red Hat, Inc.
+fuse init (API version 7.26)
+bounce: pool size: 64 pages
+io scheduler noop registered
+io scheduler deadline registered
+io scheduler cfq registered (default)
+backlight supply power not found, using dummy regulator
+Aravinth: mxcfb_probe ---->
+mxc_sdc_fb fb@0: NO mxc display driver found!
+Aravinth: mxcfb_probe ---->
+mxc_sdc_fb fb@1: NO mxc display driver found!
+Aravinth: mxcfb_probe ---->
+mxc_sdc_fb fb@2: registered mxc display driver lcd
+Console: switching to colour frame buffer device 100x30
+Aravinth: mxcfb_probe Done ---->
+Aravinth: mxcfb_probe ---->
+mxc_sdc_fb fb@3: NO mxc display driver found!
+imx-sdma 20ec000.sdma: no iram assigned, using external mem
+imx-sdma 20ec000.sdma: loaded firmware 3.3
+pfuze100-regulator 2-0008: Full layer: 2, Metal layer: 1
+pfuze100-regulator 2-0008: FAB: 0, FIN: 0
+pfuze100-regulator 2-0008: pfuze100 found.
+2020000.serial: ttymxc0 at MMIO 0x2020000 (irq = 29, base_baud = 5000000) is a IMX
+console [ttymxc0] enabled
+21e8000.serial: ttymxc1 at MMIO 0x21e8000 (irq = 78, base_baud = 5000000) is a IMX
+21f0000.serial: ttymxc3 at MMIO 0x21f0000 (irq = 79, base_baud = 5000000) is a IMX
+21f4000.serial: ttymxc4 at MMIO 0x21f4000 (irq = 80, base_baud = 5000000) is a IMX
+imx sema4 driver is registered.
+[drm] Initialized
+[drm] Initialized vivante 1.0.0 20120216 on minor 0
+brd: module loaded
+loop: module loaded
+ahci-imx 2200000.sata: fsl,transmit-level-mV not specified, using 00000024
+ahci-imx 2200000.sata: fsl,transmit-boost-mdB not specified, using 00000480
+ahci-imx 2200000.sata: fsl,transmit-atten-16ths not specified, using 00002000
+ahci-imx 2200000.sata: fsl,receive-eq-mdB not specified, using 05000000
+ahci-imx 2200000.sata: SSS flag set, parallel bus scan disabled
+ahci-imx 2200000.sata: AHCI 0001.0300 32 slots 1 ports 3 Gbps 0x1 impl platform mode
+ahci-imx 2200000.sata: flags: ncq sntf stag pm led clo only pmp pio slum part ccc apst 
+scsi host0: ahci-imx
+ata1: SATA max UDMA/133 mmio [mem 0x02200000-0x02203fff] port 0x100 irq 87
+spi_imx 2008000.ecspi: probed
+libphy: Fixed MDIO Bus: probed
+2188000.ethernet supply phy not found, using dummy regulator
+pps pps0: new PPS source ptp0
+libphy: fec_enet_mii_bus: probed
+fec 2188000.ethernet eth0: registered PHC device 0
+ehci_hcd: USB 2.0 'Enhanced' Host Controller (EHCI) Driver
+ehci-mxc: Freescale On-Chip EHCI Host driver
+usbcore: registered new interface driver usb-storage
+2184800.usbmisc supply vbus-wakeup not found, using dummy regulator
+ci_hdrc ci_hdrc.1: EHCI Host Controller
+ci_hdrc ci_hdrc.1: new USB bus registered, assigned bus number 1
+ci_hdrc ci_hdrc.1: USB 2.0 started, EHCI 1.00
+hub 1-0:1.0: USB hub found
+hub 1-0:1.0: 1 port detected
+Mass Storage Function, version: 2009/09/11
+LUN: removable file: (no medium)
+LUN: removable read only file: /fat
+Number of LUNs=1
+g_mass_storage gadget: Mass Storage Gadget, version: 2009/09/11
+g_mass_storage gadget: g_mass_storage ready
+mousedev: PS/2 mouse device common for all mice
+input: stmpe-ts as /devices/soc0/soc/2100000.aips-bus/21a4000.i2c/i2c-2/2-0041/stmpe-ts/input/input0
+snvs_rtc 20cc000.snvs:snvs-rtc-lp: rtc core: registered 20cc000.snvs:snvs-r as rtc0
+i2c /dev entries driver
+IR NEC protocol handler initialized
+IR RC5(x/sz) protocol handler initialized
+IR RC6 protocol handler initialized
+IR JVC protocol handler initialized
+IR Sony protocol handler initialized
+IR SANYO protocol handler initialized
+IR Sharp protocol handler initialized
+IR MCE Keyboard/mouse protocol handler initialized
+IR XMP protocol handler initialized
+imx2-wdt 20bc000.wdog: timeout 60 sec (nowayout=0)
+sdhci: Secure Digital Host Controller Interface driver
+sdhci: Copyright(c) Pierre Ossman
+sdhci-pltfm: SDHCI platform and OF driver helper
+sdhci-esdhc-imx 2190000.usdhc: could not get ultra high speed state, work on normal mode
+sdhci-esdhc-imx 2190000.usdhc: Got CD GPIO
+ata1: SATA link down (SStatus 0 SControl 300)
+ahci-imx 2200000.sata: no device found, disabling link.
+ahci-imx 2200000.sata: pass ahci_imx..hotplug=1 to enable hotplug
+mmc1: SDHCI controller on 2190000.usdhc [2190000.usdhc] using ADMA
+sdhci-esdhc-imx 2198000.usdhc: could not get ultra high speed state, work on normal mode
+mmc0: SDHCI controller on 2198000.usdhc [2198000.usdhc] using ADMA
+mxc_vpu 2040000.vpu_fsl: VPU initialized
+mxc_vdoa 21e4000.vdoa: i.MX Video Data Order Adapter(VDOA) driver probed
+g_mass_storage gadget: high-speed config #1: Linux File-Backed Storage
+usbcore: registered new interface driver usbhid
+usbhid: USB HID core driver
+sgtl5000 2-000a: sgtl5000 revision 0x11
+random: fast init done
+usb 1-1: new high-speed USB device number 2 using ci_hdrc
+fsl-ssi-dai 2028000.ssi: No cache defaults, reading back from HW
+mmc0: new DDR MMC card at address 0001
+mmcblk0: mmc0:0001 Q2J54A 3.59 GiB 
+mmcblk0boot0: mmc0:0001 Q2J54A partition 1 16.0 MiB
+mmcblk0boot1: mmc0:0001 Q2J54A partition 2 16.0 MiB
+Alternate GPT is invalid, using primary GPT.
+ mmcblk0: p1 p2 p3 p4 p5 p6 p7 p8 p9 p10 p11
+imx-sgtl5000 sound: sgtl5000 <-> 2028000.ssi mapping ok
+imx-spdif sound-spdif: snd-soc-dummy-dai <-> 2004000.spdif mapping ok
+NET: Registered protocol family 10
+sit: IPv6, IPv4 and MPLS over IPv4 tunneling driver
+NET: Registered protocol family 17
+Key type dns_resolver registered
+cpu cpu0: Registered imx6q-cpufreq
+Registering SWP/SWPB emulation handler
+hub 1-1:1.0: USB hub found
+hub 1-1:1.0: 4 ports detected
+imx_thermal 2000000.aips-bus:tempmon: Industrial CPU temperature grade - max:105C critical:100C passive:95C
+input: gpio-keys as /devices/soc0/gpio-keys/input/input1
+snvs_rtc 20cc000.snvs:snvs-rtc-lp: setting system clock to 1970-01-01 00:00:00 UTC (0)
+usb_otg_vbus: disabling
+ALSA device list:
+  #0: imx6q-apalis-sgtl5000
+  #1: imx-spdif
+Freeing unused kernel memory: 1024K
+Starting UTP
+uuc 0.5 [built Apr 27 2017 13:40:16]
+UTP: Waiting for device to appear
+UTP: file/device node /dev/utp already exists
+cpu_id is 0
+UTP: received command '$ while [ ! -e /dev/mmcblk0 ]; do sleep 1; echo waiting...; done '
+UTP: executing "while [ ! -e /dev/mmcblk0 ]; do sleep 1; echo waiting...; done "
+UTP: sending Success to kernel for command $ while [ ! -e /dev/mmcblk0 ]; do sleep 1; echo waiting...; done .
+usb 1-1.2: new low-speed USB device number 3 using ci_hdrc
+utp_poll: pass returned.
+UTP: received command '$ ls -l /dev/mmc* '
+UTP: executing "ls -l /dev/mmc* "
+brw------- 1 root root 179,  0 Jan  1 00:00 /dev/mmcblk0
+brw------- 1 root root 179, 16 Jan  1 00:00 /dev/mmcblk0boot0
+brw------- 1 root root 179, 32 Jan  1 00:00 /dev/mmcblk0boot1
+brw------- 1 root root 179,  1 Jan  1 00:input: PixArt Dell MS116 USB Optical Mouse as /devices/soc0/soc/2100000.aips-bus/2184200.usb/ci_hdrc.1/usb1/1-1/1-1.2/1-1.2:1.0/0003:413C:301A.0001/input/input2
+00 /dev/mmcblk0p1
+brw------- 1 rhid-generic 0003:413C:301A.0001: input: USB HID v1.11 Mouse [PixArt Dell MS116 USB Optical Mouse] on usb-ci_hdrc.1-1.2/input0
+oot root 179, 10 Jan  1 00:00 /dev/mmcblk0p10
+brw------- 1 root root 179, 11 Jan  1 00:00 /dev/mmcblk0p11
+brw------- 1 root root 179,  2 Jan  1 00:00 /dev/mmcblk0p2
+brw------- 1 root root 179,  3 Jan  1 00:00 /dev/mmcblk0p3
+brw------- 1 root root 179,  4 Jan  1 00:00 /dev/mmcblk0p4
+brw------- 1 root root 179,  5 Jan  1 00:00 /dev/mmcblk0p5
+brw------- 1 root root 179,  6 Jan  1 00:00 /dev/mmcblk0p6
+brw------- 1 root root 179,  7 Jan  1 00:00 /dev/mmcblk0p7
+brw------- 1 root root 179,  8 Jan  1 00:00 /dev/mmcblk0p8
+brw------- 1 root root 179,  9 Jan  1 00:00 /dev/mmcblk0p9
+UTP: sending Success to kernel for command $ ls -l /dev/mmc* .
+utp_poll: pass returned.
+UTP: received command '$ dd if=/dev/zero of=/dev/mmcblk0 bs=1k seek=768 conv=fsync count=136'
+UTP: executing "dd if=/dev/zero of=/dev/mmcblk0 bs=1k seek=768 conv=fsync count=136"
+136+0 records in
+136+0 records out
+139264 bytes (139 kB, 136 KiB) copied, 0.157032 s, 887 kB/s
+UTP: sending Success to kernel for command $ dd if=/dev/zero of=/dev/mmcblk0 bs=1k seek=768 conv=fsync count=136.
+utp_poll: pass returned.
+UTP: received command '$ echo 0 > /sys/block/mmcblk0boot0/force_ro'
+UTP: executing "echo 0 > /sys/block/mmcblk0boot0/force_ro"
+UTP: sending Success to kernel for command $ echo 0 > /sys/block/mmcblk0boot0/force_ro.
+utp_poll: pass returned.
+UTP: received command 'send'
+UTP: sending Success to kernel for command send.
+UTP: received command '$ dd if=$FILE of=/dev/mmcblk0boot0 bs=512 seek=2'
+UTP: executing "dd if=$FILE of=/dev/mmcblk0boot0 bs=512 seek=2"
+734+0 records in
+734+0 records out
+375808 bytes (376 kB, 367 KiB) copied, 0.139997 s, 2.7 MB/s
+UTP: sending Success to kernel for command $ dd if=$FILE of=/dev/mmcblk0boot0 bs=512 seek=2.
+utp_poll: pass returned.
+UTP: received command '$ echo 1 > /sys/block/mmcblk0boot0/force_ro'
+UTP: executing "echo 1 > /sys/block/mmcblk0boot0/force_ro"
+UTP: sending Success to kernel for command $ echo 1 > /sys/block/mmcblk0boot0/force_ro.
+utp_poll: pass returned.
+UTP: received command '$ mmc bootpart enable 1 1 /dev/mmcblk0'
+UTP: executing "mmc bootpart enable 1 1 /dev/mmcblk0"
+UTP: sending Success to kernel for command $ mmc bootpart enable 1 1 /dev/mmcblk0.
+utp_poll: pass returned.
+UTP: received command '$ ls -l /dev/mmc* '
+UTP: executing "ls -l /dev/mmc* "
+brw------- 1 root root 179,  0 Jan  1 00:00 /dev/mmcblk0
+brw------- 1 root root 179, 16 Jan  1 00:00 /dev/mmcblk0boot0
+brw------- 1 root root 179, 32 Jan  1 00:00 /dev/mmcblk0boot1
+brw------- 1 root root 179,  1 Jan  1 00:00 /dev/mmcblk0p1
+brw------- 1 root root 179, 10 Jan  1 00:00 /dev/mmcblk0p10
+brw------- 1 root root 179, 11 Jan  1 00:00 /dev/mmcblk0p11
+brw------- 1 root root 179,  2 Jan  1 00:00 /dev/mmcblk0p2
+brw------- 1 root root 179,  3 Jan  1 00:00 /dev/mmcblk0p3
+brw------- 1 root root 179,  4 Jan  1 00:00 /dev/mmcblk0p4
+brw------- 1 root root 179,  5 Jan  1 00:00 /dev/mmcblk0p5
+brw------- 1 root root 179,  6 Jan  1 00:00 /dev/mmcblk0p6
+brw------- 1 root root 179,  7 Jan  1 00:00 /dev/mmcblk0p7
+brw------- 1 root root 179,  8 Jan  1 00:00 /dev/mmcblk0p8
+brw------- 1 root root 179,  9 Jan  1 00:00 /dev/mmcblk0p9
+UTP: sending Success to kernel for command $ ls -l /dev/mmc* .
+utp_poll: pass returned.
+UTP: received command 'send'
+UTP: sending Success to kernel for command send.
+UTP: received command '$ dd if=$FILE of=/dev/mmcblk0'
+UTP: executing "dd if=$FILE of=/dev/mmcblk0"
+67+0 records in
+67+0 records out
+34304 bytes (34 kB, 34 KiB) copied, 0.0161507 s, 2.1 MB/s
+UTP: sending Success to kernel for command $ dd if=$FILE of=/dev/mmcblk0.
+utp_poll: pass returned.
+UTP: received command '$ hdparm -z /dev/mmcblk0'
+UTP: executing "hdparm -z /dev/mmcblk0"
+
+/dev/mmcblk0:
+ re-reading partition table
+Alternate GPT is invalid, using primary GPT.
+ mmcblk0: p1 p2 p3 p4 p5 p6 p7 p8 p9 p10 p11
+UTP: sending Success to kernel for command $ hdparm -z /dev/mmcblk0.
+utp_poll: pass returned.
+UTP: received command '$ gdisk -l /dev/mmcblk0 '
+UTP: executing "gdisk -l /dev/mmcblk0 "
+GPT fdisk (gdisk) version 1.0.1
+
+Caution: invalid backup GPT header, but valid main header; regenerating
+backup header from main header.
+
+Warning! One or more CRCs don't match. You should repair the disk!
+
+Partition table scan:
+  MBR: protective
+  BSD: not present
+  APM: not present
+  GPT: damaged
+
+****************************************************************************
+Caution: Found protective or hybrid MBR and corrupt GPT. Using GPT, but disk
+verification and recovery are STRONGLY recommended.
+****************************************************************************
+Disk /dev/mmcblk0: 7520256 sectors, 3.6 GiB
+Logical sector size: 512 bytes
+Disk identifier (GUID): D169176B-D1D2-488D-9F09-203F5BDAC50E
+Partition table holds up to 128 entries
+First usable sector is 34, last usable sector is 7339998
+Partitions will be aligned on 2048-sector boundaries
+Total free space is 4029 sectors (2.0 MiB)
+
+Number  Start (sector)    End (sector)  Size       Code  Name
+   1            2048           67583   32.0 MiB    FFFF  boot
+   2           67584          133119   32.0 MiB    8300  recovery
+   3          133120         3278847   1.5 GiB     FFFF  system
+   4         3278848         4327423   512.0 MiB   FFFF  cache
+   5         4327424         4343807   8.0 MiB     FFFF  device
+   6         4343808         4351999   4.0 MiB     FFFF  misc
+   7         4352000         4356095   2.0 MiB     FFFF  datafooter
+   8         4356096         4360191   2.0 MiB     FFFF  metadata
+   9         4360192         4362239   1024.0 KiB  FFFF  presistdata
+  10         4362240         7335935   1.4 GiB     FFFF  userdata
+  11         7335936         7337983   1024.0 KiB  0700  fbmisc
+UTP: sending Success to kernel for command $ gdisk -l /dev/mmcblk0 .
+utp_poll: pass returned.
+UTP: received command 'send'
+UTP: sending Success to kernel for command send.
+UTP: received command '$ echo `gdisk -l /dev/mmcblk0 | grep -w boot | awk '{print $1}'` > /tmp/partIdx'
+UTP: executing "echo `gdisk -l /dev/mmcblk0 | grep -w boot | awk '{print $1}'` > /tmp/partIdx"
+Caution: invalid backup GPT header, but valid main header; regenerating
+backup header from main header.
+
+Warning! One or more CRCs don't match. You should repair the disk!
+
+UTP: sending Success to kernel for command $ echo `gdisk -l /dev/mmcblk0 | grep -w boot | awk '{print $1}'` > /tmp/partIdx.
+utp_poll: pass returned.
+UTP: received command '$ dd if=$FILE of=/dev/mmcblk0p`cat /tmp/partIdx`'
+UTP: executing "dd if=$FILE of=/dev/mmcblk0p`cat /tmp/partIdx`"
+22446+1 records in
+22446+1 records out
+11492648 bytes (11 MB, 11 MiB) copied, 1.81297 s, 6.3 MB/s
+UTP: sending Success to kernel for command $ dd if=$FILE of=/dev/mmcblk0p`cat /tmp/partIdx`.
+utp_poll: pass returned.
+UTP: received command '$ echo Update Complete!'
+UTP: executing "echo Update Complete!"
+Update Complete!
+UTP: sending Success to kernel for command $ echo Update Complete!.
+utp_poll: pass returned.
+
+random: crng init done
+
+
+U-Boot 2017.03-00001-g610928540e-dirty (Dec 27 2017 - 11:27:35 +0530)
+
+CPU:   Freescale i.MX6Q rev1.5 at 792 MHz
+Reset cause: POR
+I2C:   ready
+DRAM:  2 GiB
+PMIC: device id: 0x10, revision id: 0x21
+PMIC: programmed
+MMC:   FSL_SDHC: 0, FSL_SDHC: 1, FSL_SDHC: 2
+auto-detected panel HDMI
+Aravinth: Display: HDMI (1024x768)
+In:    serial
+Out:   serial
+Err:   serial
+Model: Toradex Apalis iMX6 Quad 2GB IT V1.1C, Serial# 05146387
+flash target is MMC:0
+Net:   using PHY at 7
+FEC [PRIME]
+Fastboot: Normal
+Hit any key to stop autoboot:  1  0 
+Apalis iMX6 # bmode usb
+resetting ...
+
+
+U-Boot 2017.03-dirty (Dec 14 2017 - 17:25:07 +0530)
+
+CPU:   Freescale i.MX6Q rev1.5 at 792 MHz
+Reset cause: WDOG
+I2C:   ready
+DRAM:  2 GiB
+PMIC: device id: 0x10, revision id: 0x21
+PMIC: programmed
+MMC:   FSL_SDHC: 0, FSL_SDHC: 1, FSL_SDHC: 2
+auto-detected panel HDMI
+Aravinth: Display: HDMI (1024x768)
+In:    serial
+Out:   serial
+Err:   serial
+Model: Toradex Apalis iMX6 Quad 2GB IT V1.1C, Serial# 05146387
+Net:   using PHY at 7
+FEC [PRIME]
+Boot from USB for mfgtools
+Use default environment for 				 mfgtools
+Run bootcmd_mfg: run mfgtool_args;bootz 0x12000000 0x12C00000 0x18000000;
+Hit any key to stop autoboot:  0 
+Kernel image @ 0x12000000 [ 0x000000 - 0x5f06e8 ]
+## Loading init Ramdisk from Legacy Image at 12c00000 ...
+   Image Name:   fsl-image-mfgtool-initramfs-imx6
+   Image Type:   ARM Linux RAMDisk Image (gzip compressed)
+   Data Size:    8597466 Bytes = 8.2 MiB
+   Load Address: 00000000
+   Entry Point:  00000000
+   Verifying Checksum ... OK
+## Flattened Device Tree blob at 18000000
+   Booting using the fdt blob at 0x18000000
+   Using Device Tree in place at 18000000, end 180102d8
+
+Starting kernel ...
+
+Booting Linux on physical CPU 0x0
+Linux version 4.9.67+ (embadmin@ubuntu) (gcc version 4.9 20150123 (prerelease) (GCC) ) #9 SMP PREEMPT Fri Dec 22 16:56:14 IST 2017
+CPU: ARMv7 Processor [412fc09a] revision 10 (ARMv7), cr=10c5387d
+CPU: PIPT / VIPT nonaliasing data cache, VIPT aliasing instruction cache
+OF: fdt:Machine model: Aravinth Toradex Apalis iMX6Q/D Module on Ixora V1.1 Carrier Board
+cma: Reserved 320 MiB at 0x6c000000
+Memory policy: Data cache writealloc
+percpu: Embedded 14 pages/cpu @daef7000 s25728 r8192 d23424 u57344
+Built 1 zonelists in Zone order, mobility grouping on.  Total pages: 520704
+Kernel command line: console=ttymxc0,115200 rdinit=/linuxrc g_mass_storage.stall=0 g_mass_storage.removable=1 g_mass_storage.file=/fat g_mass_storage.ro=1 g_mass_storage.idVendor=0x066F g_mass_storage.idProduct=0x37FF g_mass_storage.iSerialNumber= enable_wait_mode=off
+PID hash table entries: 4096 (order: 2, 16384 bytes)
+Dentry cache hash table entries: 262144 (order: 8, 1048576 bytes)
+Inode-cache hash table entries: 131072 (order: 7, 524288 bytes)
+Memory: 1728936K/2097152K available (8192K kernel code, 334K rwdata, 2548K rodata, 1024K init, 448K bss, 40536K reserved, 327680K cma-reserved, 262144K highmem)
+Virtual kernel memory layout:
+    vector  : 0xffff0000 - 0xffff1000   (   4 kB)
+    fixmap  : 0xffc00000 - 0xfff00000   (3072 kB)
+    vmalloc : 0xf0800000 - 0xff800000   ( 240 MB)
+    lowmem  : 0x80000000 - 0xf0000000   (1792 MB)
+    pkmap   : 0x7fe00000 - 0x80000000   (   2 MB)
+    modules : 0x7f000000 - 0x7fe00000   (  14 MB)
+      .text : 0x80008000 - 0x80900000   (9184 kB)
+      .init : 0x80c00000 - 0x80d00000   (1024 kB)
+      .data : 0x80d00000 - 0x80d539c0   ( 335 kB)
+       .bss : 0x80d539c0 - 0x80dc3aac   ( 449 kB)
+SLUB: HWalign=64, Order=0-3, MinObjects=0, CPUs=4, Nodes=1
+Preemptible hierarchical RCU implementation.
+	Build-time adjustment of leaf fanout to 32.
+NR_IRQS:16 nr_irqs:16 16
+L2C-310 errata 752271 769419 enabled
+L2C-310 enabling early BRESP for Cortex-A9
+L2C-310 full line of zeros enabled for Cortex-A9
+L2C-310 ID prefetch enabled, offset 16 lines
+L2C-310 dynamic clock gating enabled, standby mode enabled
+L2C-310 cache controller enabled, 16 ways, 1024 kB
+L2C-310: CACHE_ID 0x410000c7, AUX_CTRL 0x76470001
+Switching to timer-based delay loop, resolution 333ns
+sched_clock: 32 bits at 3000kHz, resolution 333ns, wraps every 715827882841ns
+clocksource: mxc_timer1: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 637086815595 ns
+Console: colour dummy device 80x30
+Calibrating delay loop (skipped), value calculated using timer frequency.. 6.00 BogoMIPS (lpj=30000)
+pid_max: default: 32768 minimum: 301
+Mount-cache hash table entries: 4096 (order: 2, 16384 bytes)
+Mountpoint-cache hash table entries: 4096 (order: 2, 16384 bytes)
+CPU: Testing write buffer coherency: ok
+CPU0: update cpu_capacity 1024
+CPU0: thread -1, cpu 0, socket 0, mpidr 80000000
+Setting up static identity map for 0x10100000 - 0x10100070
+CPU1: update cpu_capacity 1024
+CPU1: thread -1, cpu 1, socket 0, mpidr 80000001
+CPU2: update cpu_capacity 1024
+CPU2: thread -1, cpu 2, socket 0, mpidr 80000002
+CPU3: update cpu_capacity 1024
+CPU3: thread -1, cpu 3, socket 0, mpidr 80000003
+Brought up 4 CPUs
+SMP: Total of 4 processors activated (24.00 BogoMIPS).
+CPU: All CPU(s) started in SVC mode.
+devtmpfs: initialized
+VFP support v0.3: implementor 41 architecture 3 part 30 variant 9 rev 4
+clocksource: jiffies: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 19112604462750000 ns
+futex hash table entries: 1024 (order: 4, 65536 bytes)
+pinctrl core: initialized pinctrl subsystem
+NET: Registered protocol family 16
+DMA: preallocated 256 KiB pool for atomic coherent allocations
+cpuidle: using governor menu
+CPU identified as i.MX6Q, silicon rev 1.5
+hw-breakpoint: found 5 (+1 reserved) breakpoint and 1 watchpoint registers.
+hw-breakpoint: maximum watchpoint size is 4 bytes.
+imx6q-pinctrl 20e0000.iomuxc: initialized IMX pinctrl driver
+imx-gpc 20dc000.gpc: no fsl,ldo-bypass found!
+imx-gpc 20dc000.gpc: Registered imx-gpc
+mxs-dma 110000.dma-apbh: initialized
+usb_host_vbus: supplied by usb_host_vbus_hub
+SCSI subsystem initialized
+usbcore: registered new interface driver usbfs
+usbcore: registered new interface driver hub
+usbcore: registered new device driver usb
+2000000.aips-bus:usbphy_nop1 supply vcc not found, using dummy regulator
+2000000.aips-bus:usbphy_nop2 supply vcc not found, using dummy regulator
+i2c i2c-1: IMX I2C adapter registered
+i2c i2c-1: can't use DMA, using PIO instead.
+stmpe-i2c 2-0041: stmpe811 detected, chip id: 0x811
+i2c i2c-2: IMX I2C adapter registered
+i2c i2c-2: can't use DMA, using PIO instead.
+i2c i2c-3: IMX I2C adapter registered
+i2c i2c-3: can't use DMA, using PIO instead.
+Linux video capture interface: v2.00
+pps_core: LinuxPPS API ver. 1 registered
+pps_core: Software ver. 5.3.6 - Copyright 2005-2007 Rodolfo Giometti <giometti@linux.it>
+PTP clock support registered
+imx-ipuv3 2400000.ipu: IPU DMFC NORMAL mode: 1(0~1), 5B(4,5), 5F(6,7)
+imx-ipuv3 2800000.ipu: IPU DMFC NORMAL mode: 1(0~1), 5B(4,5), 5F(6,7)
+imx rpmsg driver is registered.
+Advanced Linux Sound Architecture Driver Initialized.
+clocksource: Switched to clocksource mxc_timer1
+VFS: Disk quotas dquot_6.6.0
+VFS: Dquot-cache hash table entries: 1024 (order 0, 4096 bytes)
+NET: Registered protocol family 2
+TCP established hash table entries: 16384 (order: 4, 65536 bytes)
+TCP bind hash table entries: 16384 (order: 5, 131072 bytes)
+TCP: Hash tables configured (established 16384 bind 16384)
+UDP hash table entries: 1024 (order: 3, 32768 bytes)
+UDP-Lite hash table entries: 1024 (order: 3, 32768 bytes)
+NET: Registered protocol family 1
+RPC: Registered named UNIX socket transport module.
+RPC: Registered udp transport module.
+RPC: Registered tcp transport module.
+RPC: Registered tcp NFSv4.1 backchannel transport module.
+Trying to unpack rootfs image as initramfs...
+Freeing initrd memory: 8400K
+hw perfevents: enabled with armv7_cortex_a9 PMU driver, 7 counters available
+Bus freq driver module loaded
+workingset: timestamp_bits=30 max_order=19 bucket_order=0
+NFS: Registering the id_resolver key type
+Key type id_resolver registered
+Key type id_legacy registered
+jffs2: version 2.2. (NAND) © 2001-2006 Red Hat, Inc.
+fuse init (API version 7.26)
+bounce: pool size: 64 pages
+io scheduler noop registered
+io scheduler deadline registered
+io scheduler cfq registered (default)
+backlight supply power not found, using dummy regulator
+Aravinth: mxcfb_probe ---->
+mxc_sdc_fb fb@0: NO mxc display driver found!
+Aravinth: mxcfb_probe ---->
+mxc_sdc_fb fb@1: NO mxc display driver found!
+Aravinth: mxcfb_probe ---->
+mxc_sdc_fb fb@2: registered mxc display driver lcd
+Console: switching to colour frame buffer device 100x30
+Aravinth: mxcfb_probe Done ---->
+Aravinth: mxcfb_probe ---->
+mxc_sdc_fb fb@3: NO mxc display driver found!
+imx-sdma 20ec000.sdma: no iram assigned, using external mem
+imx-sdma 20ec000.sdma: loaded firmware 3.3
+pfuze100-regulator 2-0008: Full layer: 2, Metal layer: 1
+pfuze100-regulator 2-0008: FAB: 0, FIN: 0
+pfuze100-regulator 2-0008: pfuze100 found.
+2020000.serial: ttymxc0 at MMIO 0x2020000 (irq = 29, base_baud = 5000000) is a IMX
+console [ttymxc0] enabled
+21e8000.serial: ttymxc1 at MMIO 0x21e8000 (irq = 78, base_baud = 5000000) is a IMX
+21f0000.serial: ttymxc3 at MMIO 0x21f0000 (irq = 79, base_baud = 5000000) is a IMX
+21f4000.serial: ttymxc4 at MMIO 0x21f4000 (irq = 80, base_baud = 5000000) is a IMX
+imx sema4 driver is registered.
+[drm] Initialized
+[drm] Initialized vivante 1.0.0 20120216 on minor 0
+brd: module loaded
+loop: module loaded
+ahci-imx 2200000.sata: fsl,transmit-level-mV not specified, using 00000024
+ahci-imx 2200000.sata: fsl,transmit-boost-mdB not specified, using 00000480
+ahci-imx 2200000.sata: fsl,transmit-atten-16ths not specified, using 00002000
+ahci-imx 2200000.sata: fsl,receive-eq-mdB not specified, using 05000000
+ahci-imx 2200000.sata: SSS flag set, parallel bus scan disabled
+ahci-imx 2200000.sata: AHCI 0001.0300 32 slots 1 ports 3 Gbps 0x1 impl platform mode
+ahci-imx 2200000.sata: flags: ncq sntf stag pm led clo only pmp pio slum part ccc apst 
+scsi host0: ahci-imx
+ata1: SATA max UDMA/133 mmio [mem 0x02200000-0x02203fff] port 0x100 irq 87
+spi_imx 2008000.ecspi: probed
+libphy: Fixed MDIO Bus: probed
+2188000.ethernet supply phy not found, using dummy regulator
+pps pps0: new PPS source ptp0
+libphy: fec_enet_mii_bus: probed
+fec 2188000.ethernet eth0: registered PHC device 0
+ehci_hcd: USB 2.0 'Enhanced' Host Controller (EHCI) Driver
+ehci-mxc: Freescale On-Chip EHCI Host driver
+usbcore: registered new interface driver usb-storage
+2184800.usbmisc supply vbus-wakeup not found, using dummy regulator
+ci_hdrc ci_hdrc.1: EHCI Host Controller
+ci_hdrc ci_hdrc.1: new USB bus registered, assigned bus number 1
+ci_hdrc ci_hdrc.1: USB 2.0 started, EHCI 1.00
+hub 1-0:1.0: USB hub found
+hub 1-0:1.0: 1 port detected
+Mass Storage Function, version: 2009/09/11
+LUN: removable file: (no medium)
+LUN: removable read only file: /fat
+Number of LUNs=1
+g_mass_storage gadget: Mass Storage Gadget, version: 2009/09/11
+g_mass_storage gadget: g_mass_storage ready
+mousedev: PS/2 mouse device common for all mice
+input: stmpe-ts as /devices/soc0/soc/2100000.aips-bus/21a4000.i2c/i2c-2/2-0041/stmpe-ts/input/input0
+snvs_rtc 20cc000.snvs:snvs-rtc-lp: rtc core: registered 20cc000.snvs:snvs-r as rtc0
+i2c /dev entries driver
+IR NEC protocol handler initialized
+IR RC5(x/sz) protocol handler initialized
+IR RC6 protocol handler initialized
+IR JVC protocol handler initialized
+IR Sony protocol handler initialized
+IR SANYO protocol handler initialized
+IR Sharp protocol handler initialized
+IR MCE Keyboard/mouse protocol handler initialized
+IR XMP protocol handler initialized
+imx2-wdt 20bc000.wdog: timeout 60 sec (nowayout=0)
+sdhci: Secure Digital Host Controller Interface driver
+sdhci: Copyright(c) Pierre Ossman
+sdhci-pltfm: SDHCI platform and OF driver helper
+sdhci-esdhc-imx 2190000.usdhc: could not get ultra high speed state, work on normal mode
+sdhci-esdhc-imx 2190000.usdhc: Got CD GPIO
+mmc1: SDHCI controller on 2190000.usdhc [2190000.usdhc] using ADMA
+sdhci-esdhc-imx 2198000.usdhc: could not get ultra high speed state, work on normal mode
+ata1: SATA link down (SStatus 0 SControl 300)
+ahci-imx 2200000.sata: no device found, disabling link.
+ahci-imx 2200000.sata: pass ahci_imx..hotplug=1 to enable hotplug
+g_mass_storage gadget: high-speed config #1: Linux File-Backed Storage
+random: fast init done
+mmc0: SDHCI controller on 2198000.usdhc [2198000.usdhc] using ADMA
+mxc_vpu 2040000.vpu_fsl: VPU initialized
+mxc_vdoa 21e4000.vdoa: i.MX Video Data Order Adapter(VDOA) driver probed
+usbcore: registered new interface driver usbhid
+usbhid: USB HID core driver
+sgtl5000 2-000a: sgtl5000 revision 0x11
+fsl-ssi-dai 2028000.ssi: No cache defaults, reading back from HW
+usb 1-1: new high-speed USB device number 2 using ci_hdrc
+mmc0: new DDR MMC card at address 0001
+mmcblk0: mmc0:0001 Q2J54A 3.59 GiB 
+mmcblk0boot0: mmc0:0001 Q2J54A partition 1 16.0 MiB
+mmcblk0boot1: mmc0:0001 Q2J54A partition 2 16.0 MiB
+Alternate GPT is invalid, using primary GPT.
+ mmcblk0: p1 p2 p3 p4 p5 p6 p7 p8 p9 p10 p11
+imx-sgtl5000 sound: sgtl5000 <-> 2028000.ssi mapping ok
+imx-spdif sound-spdif: snd-soc-dummy-dai <-> 2004000.spdif mapping ok
+NET: Registered protocol family 10
+sit: IPv6, IPv4 and MPLS over IPv4 tunneling driver
+NET: Registered protocol family 17
+Key type dns_resolver registered
+cpu cpu0: Registered imx6q-cpufreq
+Registering SWP/SWPB emulation handler
+hub 1-1:1.0: USB hub found
+hub 1-1:1.0: 4 ports detected
+imx_thermal 2000000.aips-bus:tempmon: Industrial CPU temperature grade - max:105C critical:100C passive:95C
+input: gpio-keys as /devices/soc0/gpio-keys/input/input1
+snvs_rtc 20cc000.snvs:snvs-rtc-lp: setting system clock to 1970-01-01 00:03:28 UTC (208)
+usb_otg_vbus: disabling
+ALSA device list:
+  #0: imx6q-apalis-sgtl5000
+  #1: imx-spdif
+Freeing unused kernel memory: 1024K
+Starting UTP
+uuc 0.5 [built Apr 27 2017 13:40:16]
+UTP: Waiting for device to appear
+UTP: file/device node /dev/utp already exists
+cpu_id is 0
+UTP: received command '$ while [ ! -e /dev/mmcblk0 ]; do sleep 1; echo waiting...; done '
+UTP: executing "while [ ! -e /dev/mmcblk0 ]; do sleep 1; echo waiting...; done "
+UTP: sending Success to kernel for command $ while [ ! -e /dev/mmcblk0 ]; do sleep 1; echo waiting...; done .
+usb 1-1.2: new low-speed USB device number 3 using ci_hdrc
+utp_poll: pass returned.
+UTP: received command '$ ls -l /dev/mmc* '
+UTP: executing "ls -l /dev/mmc* "
+brw------- 1 root root 179,  0 Jan  1 00:00 /dev/mmcblk0
+brw------- 1 root root 179, 16 Jan  1 00:00 /dev/mmcblk0boot0
+brw------- 1 root root 179, 32 Jan  1 00:00 /dev/mmcblk0boot1
+brw------- 1 root root 179,  1 Jan  1 00:00 /dev/mmcblk0p1
+brw------- 1 root root 179, 10 Jan  1 00:00 /dev/mmcblk0p10
+brw------- 1 root root 179, 11 Jan  1 00:00 /dev/mmcblk0p11
+brw------- 1 root root 179,  2 Jan  1 00:00 /dev/mmcblk0p2
+brw------- 1 root root 179,  3 Jan  1 00:00 /dev/mmcblk0p3
+brw------- 1 root root 179,  4 Jan  1 00:00 /dev/mmcblk0p4
+brw------- 1 root root 179,  5 Jan  1 00:00 /dev/mmcblk0p5
+brw------- 1 root root 179,  6 Jan  1 00:00 /dev/mmcblk0p6
+brw------- 1 root root 179,  7 Jan  1 00:00 /dev/mmcblk0p7
+brw------- 1 root root 179,  8 Jan  1 00:00 /dev/mmcblk0p8
+brw------- 1 root root 179,  9 Jan  1 00:00 /dev/mmcblk0p9
+UTP: sending Success to kernel for command $ ls -l /dev/mmc* .
+input: PixArt Dell MS116 USB Optical Mouse as /devices/soc0/soc/2100000.aips-bus/2184200.usb/ci_hdrc.1/usb1/1-1/1-1.2/1-1.2:1.0/0003:413C:301A.0001/input/input2
+hid-generic 0003:413C:301A.0001: input: USB HID v1.11 Mouse [PixArt Dell MS116 USB Optical Mouse] on usb-ci_hdrc.1-1.2/input0
+utp_poll: pass returned.
+UTP: received command '$ dd if=/dev/zero of=/dev/mmcblk0 bs=1k seek=768 conv=fsync count=136'
+UTP: executing "dd if=/dev/zero of=/dev/mmcblk0 bs=1k seek=768 conv=fsync count=136"
+136+0 records in
+136+0 records out
+139264 bytes (139 kB, 136 KiB) copied, 0.0924903 s, 1.5 MB/s
+UTP: sending Success to kernel for command $ dd if=/dev/zero of=/dev/mmcblk0 bs=1k seek=768 conv=fsync count=136.
+utp_poll: pass returned.
+UTP: received command '$ echo 0 > /sys/block/mmcblk0boot0/force_ro'
+UTP: executing "echo 0 > /sys/block/mmcblk0boot0/force_ro"
+UTP: sending Success to kernel for command $ echo 0 > /sys/block/mmcblk0boot0/force_ro.
+utp_poll: pass returned.
+UTP: received command 'send'
+UTP: sending Success to kernel for command send.
+UTP: received command '$ dd if=$FILE of=/dev/mmcblk0boot0 bs=512 seek=2'
+UTP: executing "dd if=$FILE of=/dev/mmcblk0boot0 bs=512 seek=2"
+734+0 records in
+734+0 records out
+375808 bytes (376 kB, 367 KiB) copied, 0.140123 s, 2.7 MB/s
+UTP: sending Success to kernel for command $ dd if=$FILE of=/dev/mmcblk0boot0 bs=512 seek=2.
+utp_poll: pass returned.
+UTP: received command '$ echo 1 > /sys/block/mmcblk0boot0/force_ro'
+UTP: executing "echo 1 > /sys/block/mmcblk0boot0/force_ro"
+UTP: sending Success to kernel for command $ echo 1 > /sys/block/mmcblk0boot0/force_ro.
+utp_poll: pass returned.
+UTP: received command '$ mmc bootpart enable 1 1 /dev/mmcblk0'
+UTP: executing "mmc bootpart enable 1 1 /dev/mmcblk0"
+UTP: sending Success to kernel for command $ mmc bootpart enable 1 1 /dev/mmcblk0.
+utp_poll: pass returned.
+UTP: received command '$ ls -l /dev/mmc* '
+UTP: executing "ls -l /dev/mmc* "
+brw------- 1 root root 179,  0 Jan  1 00:03 /dev/mmcblk0
+brw------- 1 root root 179, 16 Jan  1 00:03 /dev/mmcblk0boot0
+brw------- 1 root root 179, 32 Jan  1 00:00 /dev/mmcblk0boot1
+brw------- 1 root root 179,  1 Jan  1 00:00 /dev/mmcblk0p1
+brw------- 1 root root 179, 10 Jan  1 00:00 /dev/mmcblk0p10
+brw------- 1 root root 179, 11 Jan  1 00:00 /dev/mmcblk0p11
+brw------- 1 root root 179,  2 Jan  1 00:00 /dev/mmcblk0p2
+brw------- 1 root root 179,  3 Jan  1 00:00 /dev/mmcblk0p3
+brw------- 1 root root 179,  4 Jan  1 00:00 /dev/mmcblk0p4
+brw------- 1 root root 179,  5 Jan  1 00:00 /dev/mmcblk0p5
+brw------- 1 root root 179,  6 Jan  1 00:00 /dev/mmcblk0p6
+brw------- 1 root root 179,  7 Jan  1 00:00 /dev/mmcblk0p7
+brw------- 1 root root 179,  8 Jan  1 00:00 /dev/mmcblk0p8
+brw------- 1 root root 179,  9 Jan  1 00:00 /dev/mmcblk0p9
+UTP: sending Success to kernel for command $ ls -l /dev/mmc* .
+utp_poll: pass returned.
+UTP: received command 'send'
+UTP: sending Success to kernel for command send.
+UTP: received command '$ dd if=$FILE of=/dev/mmcblk0'
+UTP: executing "dd if=$FILE of=/dev/mmcblk0"
+67+0 records in
+67+0 records out
+34304 bytes (34 kB, 34 KiB) copied, 0.0160597 s, 2.1 MB/s
+UTP: sending Success to kernel for command $ dd if=$FILE of=/dev/mmcblk0.
+utp_poll: pass returned.
+UTP: received command '$ hdparm -z /dev/mmcblk0'
+UTP: executing "hdparm -z /dev/mmcblk0"
+
+/dev/mmcblk0:
+ re-reading partition table
+Alternate GPT is invalid, using primary GPT.
+ mmcblk0: p1 p2 p3 p4 p5 p6 p7 p8 p9 p10 p11
+UTP: sending Success to kernel for command $ hdparm -z /dev/mmcblk0.
+utp_poll: pass returned.
+UTP: received command '$ gdisk -l /dev/mmcblk0 '
+UTP: executing "gdisk -l /dev/mmcblk0 "
+GPT fdisk (gdisk) version 1.0.1
+
+Caution: invalid backup GPT header, but valid main header; regenerating
+backup header from main header.
+
+Warning! One or more CRCs don't match. You should repair the disk!
+
+Partition table scan:
+  MBR: protective
+  BSD: not present
+  APM: not present
+  GPT: damaged
+
+****************************************************************************
+Caution: Found protective or hybrid MBR and corrupt GPT. Using GPT, but disk
+verification and recovery are STRONGLY recommended.
+****************************************************************************
+Disk /dev/mmcblk0: 7520256 sectors, 3.6 GiB
+Logical sector size: 512 bytes
+Disk identifier (GUID): D169176B-D1D2-488D-9F09-203F5BDAC50E
+Partition table holds up to 128 entries
+First usable sector is 34, last usable sector is 7339998
+Partitions will be aligned on 2048-sector boundaries
+Total free space is 4029 sectors (2.0 MiB)
+
+Number  Start (sector)    End (sector)  Size       Code  Name
+   1            2048           67583   32.0 MiB    FFFF  boot
+   2           67584          133119   32.0 MiB    8300  recovery
+   3          133120         3278847   1.5 GiB     FFFF  system
+   4         3278848         4327423   512.0 MiB   FFFF  cache
+   5         4327424         4343807   8.0 MiB     FFFF  device
+   6         4343808         4351999   4.0 MiB     FFFF  misc
+   7         4352000         4356095   2.0 MiB     FFFF  datafooter
+   8         4356096         4360191   2.0 MiB     FFFF  metadata
+   9         4360192         4362239   1024.0 KiB  FFFF  presistdata
+  10         4362240         7335935   1.4 GiB     FFFF  userdata
+  11         7335936         7337983   1024.0 KiB  0700  fbmisc
+UTP: sending Success to kernel for command $ gdisk -l /dev/mmcblk0 .
+utp_poll: pass returned.
+UTP: received command 'send'
+UTP: sending Success to kernel for command send.
+UTP: received command '$ echo `gdisk -l /dev/mmcblk0 | grep -w boot | awk '{print $1}'` > /tmp/partIdx'
+UTP: executing "echo `gdisk -l /dev/mmcblk0 | grep -w boot | awk '{print $1}'` > /tmp/partIdx"
+Caution: invalid backup GPT header, but valid main header; regenerating
+backup header from main header.
+
+Warning! One or more CRCs don't match. You should repair the disk!
+
+UTP: sending Success to kernel for command $ echo `gdisk -l /dev/mmcblk0 | grep -w boot | awk '{print $1}'` > /tmp/partIdx.
+utp_poll: pass returned.
+UTP: received command '$ dd if=$FILE of=/dev/mmcblk0p`cat /tmp/partIdx`'
+UTP: executing "dd if=$FILE of=/dev/mmcblk0p`cat /tmp/partIdx`"
+22446+1 records in
+22446+1 records out
+11492648 bytes (11 MB, 11 MiB) copied, 1.87215 s, 6.1 MB/s
+UTP: sending Success to kernel for command $ dd if=$FILE of=/dev/mmcblk0p`cat /tmp/partIdx`.
+utp_poll: pass returned.
+UTP: received command '$ ls -l /dev/mmc* '
+UTP: executing "ls -l /dev/mmc* "
+brw------- 1 root root 179,  0 Jan  1 00:03 /dev/mmcblk0
+brw------- 1 root root 179, 16 Jan  1 00:03 /dev/mmcblk0boot0
+brw------- 1 root root 179, 32 Jan  1 00:00 /dev/mmcblk0boot1
+brw------- 1 root root 179,  1 Jan  1 00:03 /dev/mmcblk0p1
+brw------- 1 root root 179, 10 Jan  1 00:03 /dev/mmcblk0p10
+brw------- 1 root root 179, 11 Jan  1 00:03 /dev/mmcblk0p11
+brw------- 1 root root 179,  2 Jan  1 00:03 /dev/mmcblk0p2
+brw------- 1 root root 179,  3 Jan  1 00:03 /dev/mmcblk0p3
+brw------- 1 root root 179,  4 Jan  1 00:03 /dev/mmcblk0p4
+brw------- 1 root root 179,  5 Jan  1 00:03 /dev/mmcblk0p5
+brw------- 1 root root 179,  6 Jan  1 00:03 /dev/mmcblk0p6
+brw------- 1 root root 179,  7 Jan  1 00:03 /dev/mmcblk0p7
+brw------- 1 root root 179,  8 Jan  1 00:03 /dev/mmcblk0p8
+brw------- 1 root root 179,  9 Jan  1 00:03 /dev/mmcblk0p9
+UTP: sending Success to kernel for command $ ls -l /dev/mmc* .
+utp_poll: pass returned.
+UTP: received command '$ echo `gdisk -l /dev/mmcblk0 | grep -w cache | awk '{print $1}'` > /tmp/partIdx'
+UTP: executing "echo `gdisk -l /dev/mmcblk0 | grep -w cache | awk '{print $1}'` > /tmp/partIdx"
+Caution: invalid backup GPT header, but valid main header; regenerating
+backup header from main header.
+
+Warning! One or more CRCs don't match. You should repair the disk!
+
+UTP: sending Success to kernel for command $ echo `gdisk -l /dev/mmcblk0 | grep -w cache | awk '{print $1}'` > /tmp/partIdx.
+utp_poll: pass returned.
+UTP: received command '$ mkfs.ext4 -F -E nodiscard /dev/mmcblk0p`cat /tmp/partIdx`'
+UTP: executing "mkfs.ext4 -F -E nodiscard /dev/mmcblk0p`cat /tmp/partIdx`"
+mke2fs 1.43 (17-May-2016)
+/dev/mmcblk0p4 contains a ext4 file system
+	last mounted on Thu Jan  1 00:00:06 1970
+Creating filesystem with 131072 4k blocks and 32768 inodes
+Filesystem UUID: eb6942d9-f67e-4789-90d8-ab63558bd419
+Superblock backups stored on blocks: 
+	32768, 98304
+
+Allocating group tables: 0/4   done                            
+Writing inode tables: 0/4   done                            
+Creating journal (4096 blocks): done
+Writing superblocks and filesystem accounting information: 0/42/4   done
+
+UTP: sending Success to kernel for command $ mkfs.ext4 -F -E nodiscard /dev/mmcblk0p`cat /tmp/partIdx`.
+utp_poll: pass returned.
+UTP: received command '$ echo `gdisk -l /dev/mmcblk0 | grep -w device | awk '{print $1}'` > /tmp/partIdx'
+UTP: executing "echo `gdisk -l /dev/mmcblk0 | grep -w device | awk '{print $1}'` > /tmp/partIdx"
+Caution: invalid backup GPT header, but valid main header; regenerating
+backup header from main header.
+
+Warning! One or more CRCs don't match. You should repair the disk!
+
+UTP: sending Success to kernel for command $ echo `gdisk -l /dev/mmcblk0 | grep -w device | awk '{print $1}'` > /tmp/partIdx.
+utp_poll: pass returned.
+UTP: received command '$ mkfs.ext4 -F -E nodiscard /dev/mmcblk0p`cat /tmp/partIdx`'
+UTP: executing "mkfs.ext4 -F -E nodiscard /dev/mmcblk0p`cat /tmp/partIdx`"
+mke2fs 1.43 (17-May-2016)
+/dev/mmcblk0p5 contains a ext4 file system
+	created on Thu Jan  1 00:00:11 1970
+Creating filesystem with 8192 1k blocks and 2048 inodes
+
+Allocating group tables: 0/1   done                            
+Writing inode tables: 0/1   done                            
+Creating journal (1024 blocks): done
+Writing superblocks and filesystem accounting information: 0/1   done
+
+UTP: sending Success to kernel for command $ mkfs.ext4 -F -E nodiscard /dev/mmcblk0p`cat /tmp/partIdx`.
+utp_poll: pass returned.
+UTP: received command '$ echo `gdisk -l /dev/mmcblk0 | grep -w userdata | awk '{print $1}'` > /tmp/partIdx'
+UTP: executing "echo `gdisk -l /dev/mmcblk0 | grep -w userdata | awk '{print $1}'` > /tmp/partIdx"
+Caution: invalid backup GPT header, but valid main header; regenerating
+backup header from main header.
+
+Warning! One or more CRCs don't match. You should repair the disk!
+
+UTP: sending Success to kernel for command $ echo `gdisk -l /dev/mmcblk0 | grep -w userdata | awk '{print $1}'` > /tmp/partIdx.
+utp_poll: pass returned.
+UTP: received command '$ mkfs.ext4 -F -E nodiscard -b 4096 -m 0 -O ^flex_bg,^uninit_bg /dev/mmcblk0p`cat /tmp/partIdx`'
+UTP: executing "mkfs.ext4 -F -E nodiscard -b 4096 -m 0 -O ^flex_bg,^uninit_bg /dev/mmcblk0p`cat /tmp/partIdx`"
+mke2fs 1.43 (17-May-2016)
+/dev/mmcblk0p10 contains a ext4 file system
+	last mounted on /data on Thu Jan  1 00:00:06 1970
+Creating filesystem with 371712 4k blocks and 92928 inodes
+Filesystem UUID: fe197707-9276-47ba-b249-9657cb6f2d23
+Superblock backups stored on blocks: 
+	32768, 98304, 163840, 229376, 294912
+
+Allocating group tables:  0/12     done                            
+Writing inode tables:  0/12     done                            
+Creating journal (8192 blocks): done
+Writing superblocks and filesystem accounting information:  0/12     done
+
+UTP: sending Success to kernel for command $ mkfs.ext4 -F -E nodiscard -b 4096 -m 0 -O ^flex_bg,^uninit_bg /dev/mmcblk0p`cat /tmp/partIdx`.
+utp_poll: pass returned.
+UTP: received command '$ mount -o remount,size=1024M rootfs /'
+UTP: executing "mount -o remount,size=1024M rootfs /"
+UTP: sending Success to kernel for command $ mount -o remount,size=1024M rootfs /.
+utp_poll: pass returned.
+UTP: received command 'send'
+UTP: sending Success to kernel for command send.
+random: crng init done
+UTP: received command '$ echo `gdisk -l /dev/mmcblk0 | grep -w system | awk '{print $1}'` > /tmp/partIdx'
+UTP: executing "echo `gdisk -l /dev/mmcblk0 | grep -w system | awk '{print $1}'` > /tmp/partIdx"
+Caution: invalid backup GPT header, but valid main header; regenerating
+backup header from main header.
+
+Warning! One or more CRCs don't match. You should repair the disk!
+
+UTP: sending Success to kernel for command $ echo `gdisk -l /dev/mmcblk0 | grep -w system | awk '{print $1}'` > /tmp/partIdx.
+utp_poll: pass returned.
+UTP: received command '$ simg2img $FILE /dev/mmcblk0p`cat /tmp/partIdx`'
+UTP: executing "simg2img $FILE /dev/mmcblk0p`cat /tmp/partIdx`"
+UTP: sending Success to kernel for command $ simg2img $FILE /dev/mmcblk0p`cat /tmp/partIdx`.
+utp_poll: pass returned.
+UTP: received command 'send'
+UTP: sending Success to kernel for command send.
+UTP: received command '$ echo `gdisk -l /dev/mmcblk0 | grep -w 'recovery$' | awk '{print $1}'` > /tmp/partIdx'
+UTP: executing "echo `gdisk -l /dev/mmcblk0 | grep -w 'recovery$' | awk '{print $1}'` > /tmp/partIdx"
+Caution: invalid backup GPT header, but valid main header; regenerating
+backup header from main header.
+
+Warning! One or more CRCs don't match. You should repair the disk!
+
+UTP: sending Success to kernel for command $ echo `gdisk -l /dev/mmcblk0 | grep -w 'recovery$' | awk '{print $1}'` > /tmp/partIdx.
+utp_poll: pass returned.
+UTP: received command '$ dd if=$FILE of=/dev/mmcblk0p`cat /tmp/partIdx`'
+UTP: executing "dd if=$FILE of=/dev/mmcblk0p`cat /tmp/partIdx`"
+27218+1 records in
+27218+1 records out
+13935916 bytes (14 MB, 13 MiB) copied, 2.18041 s, 6.4 MB/s
+UTP: sending Success to kernel for command $ dd if=$FILE of=/dev/mmcblk0p`cat /tmp/partIdx`.
+utp_poll: pass returned.
+UTP: received command '$ sync'
+UTP: executing "sync"
+UTP: sending Success to kernel for command $ sync.
+utp_poll: pass returned.
+UTP: received command 'frf'
+UTP: closing the file
+UTP: sending Success to kernel for command frf.
+utp_poll: pass returned.
+UTP: received command '$ echo Update Complete!'
+UTP: executing "echo Update Complete!"
+Update Complete!
+UTP: sending Success to kernel for command $ echo Update Complete!.
+utp_poll: pass returned.
+EXT4-fs (mmcblk0p3): mounted filesystem with ordered data mode. Opts: barrier=1
+EXT4-fs (mmcblk0p10): Ignoring removed nomblk_io_submit option
+EXT4-fs (mmcblk0p10): mounted filesystem with ordered data mode. Opts: nomblk_io_submit,noauto_da_alloc,errors=panic
+EXT4-fs (mmcblk0p4): Ignoring removed nomblk_io_submit option
+EXT4-fs (mmcblk0p4): mounted filesystem with ordered data mode. Opts: nomblk_io_submit
+EXT4-fs (mmcblk0p5): mounted filesystem with ordered data mode. Opts: (null)
+file system registered
+using random self ethernet address
+using random host ethernet address
+zram0: detected capacity change from 0 to 314572800
+logd.auditd: start
+logd.klogd: 7562719333
+Adding 307196k swap on /dev/block/zram0.  Priority:-1 extents:1 across:307196k SS
+binder: 257:257 transaction failed 29189, size 0-0
+logd.daemon: reinit
+sabresd_6dq:/ # android_work: sent uevent USB_STATE=CONNECTED
+android_work: sent uevent USB_STATE=DISCONNECTED
+android_work: sent uevent USB_STATE=CONNECTED
+android_work: sent uevent USB_STATE=DISCONNECTED
+android_work: sent uevent USB_STATE=CONNECTED
+android_work: sent uevent USB_STATE=DISCONNECTED
+android_work: sent uevent USB_STATE=CONNECTED
+android_work: sent uevent USB_STATE=DISCONNECTED
+android_work: sent uevent USB_STATE=CONNECTED
+healthd: No battery devices found
+configfs-gadget gadget: high-speed config #1: b
+android_work: sent uevent USB_STATE=CONFIGURED
+ERROR: v4l2 capture: slave not found! V4L2_CID_HUE
+ERROR: v4l2 capture: slave not found! V4L2_CID_HUE
+imx-hdmi-audio imx-hdmi-audio: HDMI Video is not ready!
+imx-hdmi-audio imx-hdmi-audio: ASoC: can't open platform imx-hdmi-audio: -22
+imx-hdmi-audio imx-hdmi-audio: HDMI Video is not ready!
+imx-hdmi-audio imx-hdmi-audio: ASoC: can't open platform imx-hdmi-audio: -22
+init: Starting service 'bootanim'...
+capability: warning: `main' uses 32-bit capabilities (legacy support in use)
+
+
+U-Boot 2017.03-00001-g610928540e-dirty (Dec 27 2017 - 11:27:35 +0530)
+
+CPU:   Freescale i.MX6Q rev1.5 at 792 MHz
+Reset cause: POR
+I2C:   ready
+DRAM:  2 GiB
+PMIC: device id: 0x10, revision id: 0x21
+PMIC: programmed
+MMC:   FSL_SDHC: 0, FSL_SDHC: 1, FSL_SDHC: 2
+auto-detected panel HDMI
+Aravinth: Display: HDMI (1024x768)
+In:    serial
+Out:   serial
+Err:   serial
+Model: Toradex Apalis iMX6 Quad 2GB IT V1.1C, Serial# 05146387
+flash target is MMC:0
+Net:   using PHY at 7
+FEC [PRIME]
+Fastboot: Normal
+Hit any key to stop autoboot:  1  0 
+Apalis iMX6 # pri
+arch=arm
+baudrate=115200
+board=apalis_imx6
+board_name=apalis_imx6
+board_rev=011c
+bootargs=console=ttymxc0,115200 init=/init video=mxcfb0:dev=ldb,fbpix=RGB32,bpp=32 video=mxcfb1:dev=hdmi,640x480M@60,if=RGB24,bpp=16 video=mxcfb2:off video=mxcfb3:off vmalloc=256M androidboot.console=ttymxc0 consoleblank=0 androidboot.hardware=freescale cma=448M androidboot.selinux=permissive androidboot.dm_verity=disabled
+bootcmd=boota mmc0
+bootdelay=1
+cpu=armv7
+ethact=FEC
+ethaddr=00:14:2d:4e:87:13
+ethprime=FEC
+fastboot_dev=mmc0
+fdt_high=0xffffffff
+initrd_high=0xffffffff
+ipaddr=192.168.10.2
+loadaddr=0x12000000
+netmask=255.255.255.0
+serial#=05146387
+serverip=192.168.10.1
+soc=mx6
+splashpos=m,m
+vendor=toradex
+ver=U-Boot 2017.03-00001-g610928540e-dirty (Dec 27 2017 - 11:27:35 +0530)
+
+Environment size: 819/8188 bytes
+Apalis iMX6 # env default -f -a
+## Resetting to default environment
+Apalis iMX6 # env save
+Saving Environment to MMC...
+Writing to MMC(0)... done
+Apalis iMX6 # saveenv
+Saving Environment to MMC...
+Writing to MMC(0)... done
+Apalis iMX6 # res
+resetting ...
+
+
+U-Boot 2017.03-00001-g610928540e-dirty (Dec 27 2017 - 11:27:35 +0530)
+
+CPU:   Freescale i.MX6Q rev1.5 at 792 MHz
+Reset cause: WDOG
+I2C:   ready
+DRAM:  2 GiB
+PMIC: device id: 0x10, revision id: 0x21
+PMIC: programmed
+MMC:   FSL_SDHC: 0, FSL_SDHC: 1, FSL_SDHC: 2
+auto-detected panel HDMI
+Aravinth: Display: HDMI (1024x768)
+In:    serial
+Out:   serial
+Err:   serial
+Model: Toradex Apalis iMX6 Quad 2GB IT V1.1C, Serial# 05146387
+flash target is MMC:0
+Net:   using PHY at 7
+FEC [PRIME]
+Fastboot: Normal
+Hit any key to stop autoboot:  1  0 
+boota mmc0 
+CACHE: Misaligned operation at range [8ffb70a0, 8ffb7120]
+CACHE: Misaligned operation at range [8ffb70a0, 8ffb7120]
+kernel   @ 14008000 (9802376)
+ramdisk  @ 15000000 (1628353)
+fdt      @ 14f00000 (53977)
+## Booting Android Image at 0x12000000 ...
+Kernel load addr 0x14008000 size 9573 KiB
+Kernel command line: console=ttymxc0,115200 init=/init video=mxcfb0:dev=ldb,fbpix=RGB32,bpp=32 video=mxcfb1:dev=hdmi,640x480M@60,if=RGB24,bpp=16 video=mxcfb2:off video=mxcfb3:off vmalloc=256M androidboot.console=ttymxc0 consoleblank=0 androidboot.hardware=freescale cma=448M androidboot.selinux=permissive androidboot.dm_verity=disabled buildvariant=user androidboot.serialno=1b2429d4ea997115 androidboot.storage_type=emmc
+## Flattened Device Tree blob at 14f00000
+   Booting using the fdt blob at 0x14f00000
+   Loading Kernel Image ... OK
+   Using Device Tree in place at 14f00000, end 14f102d8
+
+Starting kernel ...
+
+Booting Linux on physical CPU 0x0
+Linux version 4.9.67-07229-gdc6c16ec0433-dirty (embadmin@ubuntu) (gcc version 4.9 20150123 (prerelease) (GCC) ) #14 SMP PREEMPT Wed Dec 27 11:20:46 IST 2017
+CPU: ARMv7 Processor [412fc09a] revision 10 (ARMv7), cr=10c53c7d
+CPU: PIPT / VIPT nonaliasing data cache, VIPT aliasing instruction cache
+OF: fdt:Machine model: Aravinth :27 Toradex Apalis iMX6Q/D Module on Ixora V1.1 Carrier Board
+cma: Reserved 448 MiB at 0x22000000
+Memory policy: Data cache writealloc
+percpu: Embedded 15 pages/cpu @ee6b3000 s31040 r8192 d22208 u61440
+Built 1 zonelists in Zone order, mobility grouping on.  Total pages: 522768
+Kernel command line: console=ttymxc0,115200 init=/init video=mxcfb0:dev=ldb,fbpix=RGB32,bpp=32 video=mxcfb1:dev=hdmi,640x480M@60,if=RGB24,bpp=16 video=mxcfb2:off video=mxcfb3:off vmalloc=256M androidboot.console=ttymxc0 consoleblank=0 androidboot.hardware=freescale cma=448M androidboot.selinux=permissive androidboot.dm_verity=disabled buildvariant=user androidboot.serialno=1b2429d4ea997115 androidboot.storage_type=emmc
+PID hash table entries: 4096 (order: 2, 16384 bytes)
+Dentry cache hash table entries: 131072 (order: 7, 524288 bytes)
+Inode-cache hash table entries: 65536 (order: 6, 262144 bytes)
+Memory: 1597048K/2097152K available (13312K kernel code, 1128K rwdata, 4016K rodata, 1024K init, 606K bss, 41352K reserved, 458752K cma-reserved, 1318912K highmem)
+Virtual kernel memory layout:
+    vector  : 0xffff0000 - 0xffff1000   (   4 kB)
+    fixmap  : 0xffc00000 - 0xfff00000   (3072 kB)
+    vmalloc : 0xf0000000 - 0xff800000   ( 248 MB)
+    lowmem  : 0xc0000000 - 0xef800000   ( 760 MB)
+    pkmap   : 0xbfe00000 - 0xc0000000   (   2 MB)
+    modules : 0xbf000000 - 0xbfe00000   (  14 MB)
+      .text : 0xc0008000 - 0xc0e00000   (14304 kB)
+      .init : 0xc1300000 - 0xc1400000   (1024 kB)
+      .data : 0xc1400000 - 0xc151a218   (1129 kB)
+       .bss : 0xc151a218 - 0xc15b1be0   ( 607 kB)
+SLUB: HWalign=64, Order=0-3, MinObjects=0, CPUs=4, Nodes=1
+Preemptible hierarchical RCU implementation.
+	Build-time adjustment of leaf fanout to 32.
+NR_IRQS:16 nr_irqs:16 16
+L2C-310 errata 752271 769419 enabled
+L2C-310 enabling early BRESP for Cortex-A9
+L2C-310 full line of zeros enabled for Cortex-A9
+L2C-310 ID prefetch enabled, offset 16 lines
+L2C-310 dynamic clock gating enabled, standby mode enabled
+L2C-310 cache controller enabled, 16 ways, 1024 kB
+L2C-310: CACHE_ID 0x410000c7, AUX_CTRL 0x76470001
+Switching to timer-based delay loop, resolution 333ns
+sched_clock: 32 bits at 3000kHz, resolution 333ns, wraps every 715827882841ns
+clocksource: mxc_timer1: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 637086815595 ns
+Console: colour dummy device 80x30
+Calibrating delay loop (skipped), value calculated using timer frequency.. 6.00 BogoMIPS (lpj=30000)
+pid_max: default: 32768 minimum: 301
+Security Framework initialized
+SELinux:  Initializing.
+Mount-cache hash table entries: 2048 (order: 1, 8192 bytes)
+Mountpoint-cache hash table entries: 2048 (order: 1, 8192 bytes)
+CPU: Testing write buffer coherency: ok
+CPU0: update cpu_capacity 1024
+CPU0: thread -1, cpu 0, socket 0, mpidr 80000000
+Setting up static identity map for 0x10100000 - 0x10100058
+CPU1: update cpu_capacity 1024
+CPU1: thread -1, cpu 1, socket 0, mpidr 80000001
+CPU2: update cpu_capacity 1024
+CPU2: thread -1, cpu 2, socket 0, mpidr 80000002
+CPU3: update cpu_capacity 1024
+CPU3: thread -1, cpu 3, socket 0, mpidr 80000003
+Brought up 4 CPUs
+SMP: Total of 4 processors activated (24.00 BogoMIPS).
+CPU: All CPU(s) started in SVC mode.
+CPU3: update max cpu_capacity 1024
+devtmpfs: initialized
+CPU2: update max cpu_capacity 1024
+VFP support v0.3: implementor 41 architecture 3 part 30 variant 9 rev 4
+clocksource: jiffies: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 19112604462750000 ns
+futex hash table entries: 1024 (order: 4, 65536 bytes)
+pinctrl core: initialized pinctrl subsystem
+NET: Registered protocol family 16
+DMA: preallocated 256 KiB pool for atomic coherent allocations
+cpuidle: using governor menu
+CPU identified as i.MX6Q, silicon rev 1.5
+hw-breakpoint: found 5 (+1 reserved) breakpoint and 1 watchpoint registers.
+hw-breakpoint: maximum watchpoint size is 4 bytes.
+imx6q-pinctrl 20e0000.iomuxc: initialized IMX pinctrl driver
+imx-gpc 20dc000.gpc: no fsl,ldo-bypass found!
+imx-gpc 20dc000.gpc: Registered imx-gpc
+mxs-dma 110000.dma-apbh: initialized
+usb_host_vbus: supplied by usb_host_vbus_hub
+SCSI subsystem initialized
+usbcore: registered new interface driver usbfs
+usbcore: registered new interface driver hub
+usbcore: registered new device driver usb
+2000000.aips-bus:usbphy_nop1 supply vcc not found, using dummy regulator
+2000000.aips-bus:usbphy_nop2 supply vcc not found, using dummy regulator
+i2c i2c-1: IMX I2C adapter registered
+i2c i2c-1: can't use DMA, using PIO instead.
+stmpe-i2c 2-0041: stmpe811 detected, chip id: 0x811
+i2c i2c-2: IMX I2C adapter registered
+i2c i2c-2: can't use DMA, using PIO instead.
+i2c i2c-3: IMX I2C adapter registered
+i2c i2c-3: can't use DMA, using PIO instead.
+Linux video capture interface: v2.00
+pps_core: LinuxPPS API ver. 1 registered
+pps_core: Software ver. 5.3.6 - Copyright 2005-2007 Rodolfo Giometti <giometti@linux.it>
+PTP clock support registered
+imx-ipuv3 2400000.ipu: IPU DMFC NORMAL mode: 1(0~1), 5B(4,5), 5F(6,7)
+imx-ipuv3 2800000.ipu: IPU DMFC NORMAL mode: 1(0~1), 5B(4,5), 5F(6,7)
+mxc_mipi_csi2 21dc000.mipi_csi: i.MX MIPI CSI2 driver probed ipu0 csi1
+mxc_mipi_csi2 21dc000.mipi_csi: i.MX MIPI CSI2 dphy version is 0x3130302a
+MIPI CSI2 driver module loaded
+imx rpmsg driver is registered.
+Advanced Linux Sound Architecture Driver Initialized.
+Bluetooth: Core ver 2.22
+NET: Registered protocol family 31
+Bluetooth: HCI device and connection manager initialized
+Bluetooth: HCI socket layer initialized
+Bluetooth: L2CAP socket layer initialized
+Bluetooth: SCO socket layer initialized
+clocksource: Switched to clocksource mxc_timer1
+VFS: Disk quotas dquot_6.6.0
+VFS: Dquot-cache hash table entries: 1024 (order 0, 4096 bytes)
+NET: Registered protocol family 2
+TCP established hash table entries: 8192 (order: 3, 32768 bytes)
+TCP bind hash table entries: 8192 (order: 4, 65536 bytes)
+TCP: Hash tables configured (established 8192 bind 8192)
+UDP hash table entries: 512 (order: 2, 16384 bytes)
+UDP-Lite hash table entries: 512 (order: 2, 16384 bytes)
+NET: Registered protocol family 1
+RPC: Registered named UNIX socket transport module.
+RPC: Registered udp transport module.
+RPC: Registered tcp transport module.
+RPC: Registered tcp NFSv4.1 backchannel transport module.
+Trying to unpack rootfs image as initramfs...
+Freeing initrd memory: 1592K
+hw perfevents: enabled with armv7_cortex_a9 PMU driver, 7 counters available
+Bus freq driver module loaded
+audit: initializing netlink subsys (disabled)
+audit: type=2000 audit(0.870:1): initialized
+workingset: timestamp_bits=30 max_order=19 bucket_order=0
+NFS: Registering the id_resolver key type
+Key type id_resolver registered
+Key type id_legacy registered
+ntfs: driver 2.1.32 [Flags: R/W DEBUG].
+jffs2: version 2.2. (NAND) © 2001-2006 Red Hat, Inc.
+fuse init (API version 7.26)
+bounce: pool size: 64 pages
+io scheduler noop registered
+io scheduler deadline registered
+io scheduler cfq registered (default)
+backlight supply power not found, using dummy regulator
+20e0000.hdmi_video supply HDMI not found, using dummy regulator
+mxc_sdc_fb fb@0: registered mxc display driver ldb
+imx-ipuv3 2800000.ipu: IPU DMFC DP HIGH RESOLUTION: 1(0,1), 5B(2~5), 5F(6,7)
+Console: switching to colour frame buffer device 128x48
+mxc_hdmi 20e0000.hdmi_video: Detected HDMI controller 0x13:0xa:0xa0:0xc1
+fbcvt: 640x480@60: CVT Name - .307M3
+mxc_sdc_fb fb@1: registered mxc display driver hdmi
+mxc_sdc_fb fb@2: Can't get fb option for mxcfb2!
+mxc_sdc_fb fb@3: Can't get fb option for mxcfb3!
+imx-sdma 20ec000.sdma: no iram assigned, using external mem
+imx-sdma 20ec000.sdma: loaded firmware 3.3
+pfuze100-regulator 2-0008: Full layer: 2, Metal layer: 1
+pfuze100-regulator 2-0008: FAB: 0, FIN: 0
+pfuze100-regulator 2-0008: pfuze100 found.
+mxc_hdmi 20e0000.hdmi_video: Read EDID again
+2020000.serial: ttymxc0 at MMIO 0x2020000 (irq = 29, base_baud = 5000000) is a IMX
+mxc_hdmi 20e0000.hdmi_video: create default modelist
+console [ttymxc0] enabled
+21e8000.serial: ttymxc1 at MMIO 0x21e8000 (irq = 78, base_baud = 5000000) is a IMX
+21f0000.serial: ttymxc3 at MMIO 0x21f0000 (irq = 79, base_baud = 5000000) is a IMX
+21f4000.serial: ttymxc4 at MMIO 0x21f4000 (irq = 80, base_baud = 5000000) is a IMX
+imx sema4 driver is registered.
+[drm] Initialized
+[drm] Initialized vivante 1.0.0 20120216 on minor 0
+brd: module loaded
+loop: module loaded
+zram: Added device: zram0
+ahci-imx 2200000.sata: fsl,transmit-level-mV not specified, using 00000024
+ahci-imx 2200000.sata: fsl,transmit-boost-mdB not specified, using 00000480
+ahci-imx 2200000.sata: fsl,transmit-atten-16ths not specified, using 00002000
+ahci-imx 2200000.sata: fsl,receive-eq-mdB not specified, using 05000000
+ahci-imx 2200000.sata: SSS flag set, parallel bus scan disabled
+ahci-imx 2200000.sata: AHCI 0001.0300 32 slots 1 ports 3 Gbps 0x1 impl platform mode
+ahci-imx 2200000.sata: flags: ncq sntf stag pm led clo only pmp pio slum part ccc apst 
+scsi host0: ahci-imx
+ata1: SATA max UDMA/133 mmio [mem 0x02200000-0x02203fff] port 0x100 irq 87
+spi_imx 2008000.ecspi: probed
+libphy: Fixed MDIO Bus: probed
+tun: Universal TUN/TAP device driver, 1.6
+tun: (C) 1999-2004 Max Krasnyansky <maxk@qualcomm.com>
+CAN device driver interface
+2090000.flexcan supply xceiver not found, using dummy regulator
+flexcan 2090000.flexcan: device registered (reg_base=f02f4000, irq=38)
+2094000.flexcan supply xceiver not found, using dummy regulator
+flexcan 2094000.flexcan: device registered (reg_base=f02fc000, irq=39)
+2188000.ethernet supply phy not found, using dummy regulator
+pps pps0: new PPS source ptp0
+libphy: fec_enet_mii_bus: probed
+fec 2188000.ethernet eth0: registered PHC device 0
+PPP generic driver version 2.4.2
+PPP BSD Compression module registered
+PPP Deflate Compression module registered
+PPP MPPE Compression module registered
+NET: Registered protocol family 24
+usbcore: registered new interface driver kaweth
+pegasus: v0.9.3 (2013/04/25), Pegasus/Pegasus II USB Ethernet driver
+usbcore: registered new interface driver pegasus
+usbcore: registered new interface driver rtl8150
+usbcore: registered new interface driver r8152
+usbcore: registered new interface driver asix
+usbcore: registered new interface driver ax88179_178a
+usbcore: registered new interface driver cdc_ether
+usbcore: registered new interface driver cdc_eem
+usbcore: registered new interface driver net1080
+usbcore: registered new interface driver cdc_subset
+usbcore: registered new interface driver zaurus
+usbcore: registered new interface driver cdc_ncm
+ehci_hcd: USB 2.0 'Enhanced' Host Controller (EHCI) Driver
+ehci-mxc: Freescale On-Chip EHCI Host driver
+usbcore: registered new interface driver cdc_acm
+cdc_acm: USB Abstract Control Model driver for USB modems and ISDN adapters
+usbcore: registered new interface driver usb-storage
+usbcore: registered new interface driver usbserial
+usbcore: registered new interface driver usbserial_generic
+usbserial: USB Serial support registered for generic
+usbcore: registered new interface driver ftdi_sio
+usbserial: USB Serial support registered for FTDI USB Serial Device
+usbcore: registered new interface driver option
+usbserial: USB Serial support registered for GSM modem (1-port)
+usbcore: registered new interface driver usbtest
+usbcore: registered new interface driver usb_ehset_test
+2184800.usbmisc supply vbus-wakeup not found, using dummy regulator
+ci_hdrc ci_hdrc.1: EHCI Host Controller
+ci_hdrc ci_hdrc.1: new USB bus registered, assigned bus number 1
+ci_hdrc ci_hdrc.1: USB 2.0 started, EHCI 1.00
+usb usb1: New USB device found, idVendor=1d6b, idProduct=0002
+usb usb1: New USB device strings: Mfr=3, Product=2, SerialNumber=1
+usb usb1: Product: EHCI Host Controller
+usb usb1: Manufacturer: Linux 4.9.67-07229-gdc6c16ec0433-dirty ehci_hcd
+usb usb1: SerialNumber: ci_hdrc.1
+hub 1-0:1.0: USB hub found
+hub 1-0:1.0: 1 port detected
+mousedev: PS/2 mouse device common for all mice
+usbcore: registered new interface driver xpad
+ata1: SATA link down (SStatus 0 SControl 300)
+ahci-imx 2200000.sata: no device found, disabling link.
+ahci-imx 2200000.sata: pass ahci_imx..hotplug=1 to enable hotplug
+usbcore: registered new interface driver usb_acecad
+usbcore: registered new interface driver aiptek
+usbcore: registered new interface driver gtco
+usbcore: registered new interface driver hanwang
+usbcore: registered new interface driver kbtab
+input: stmpe-ts as /devices/soc0/soc/2100000.aips-bus/21a4000.i2c/i2c-2/2-0041/stmpe-ts/input/input0
+snvs_rtc 20cc000.snvs:snvs-rtc-lp: rtc core: registered 20cc000.snvs:snvs-r as rtc0
+i2c /dev entries driver
+IR NEC protocol handler initialized
+IR RC5(x/sz) protocol handler initialized
+IR RC6 protocol handler initialized
+IR JVC protocol handler initialized
+IR Sony protocol handler initialized
+IR SANYO protocol handler initialized
+IR Sharp protocol handler initialized
+IR MCE Keyboard/mouse protocol handler initialized
+IR XMP protocol handler initialized
+mxc_v4l2_output v4l2_out: V4L2 device registered as video16
+mxc_v4l2_output v4l2_out: V4L2 device registered as video17
+mxc_v4l2_output v4l2_out: V4L2 device registered as video18
+mxc_v4l2_output v4l2_out: V4L2 device registered as video19
+ov564x_mipi 3-003c: found pwm2, period=0
+usb 1-1: new high-speed USB device number 2 using ci_hdrc
+ov5640_read_reg:write reg error:reg=300a
+camera ov5640_mipi is not found
+usbcore: registered new interface driver uvcvideo
+USB Video Class driver (1.1.1)
+imx2-wdt 20bc000.wdog: timeout 60 sec (nowayout=0)
+device-mapper: uevent: version 1.0.3
+device-mapper: ioctl: 4.35.0-ioctl (2016-06-23) initialised: dm-devel@redhat.com
+Bluetooth: HCI UART driver ver 2.3
+Bluetooth: HCI UART protocol H4 registered
+Bluetooth: HCI UART protocol BCSP registered
+Bluetooth: HCI UART protocol ATH3K registered
+usbcore: registered new interface driver btusb
+sdhci: Secure Digital Host Controller Interface driver
+sdhci: Copyright(c) Pierre Ossman
+sdhci-pltfm: SDHCI platform and OF driver helper
+sdhci-esdhc-imx 2190000.usdhc: could not get ultra high speed state, work on normal mode
+sdhci-esdhc-imx 2190000.usdhc: Got CD GPIO
+mmc1: SDHCI controller on 2190000.usdhc [2190000.usdhc] using ADMA
+sdhci-esdhc-imx 2198000.usdhc: could not get ultra high speed state, work on normal mode
+usb 1-1: New USB device found, idVendor=0424, idProduct=2514
+usb 1-1: New USB device strings: Mfr=0, Product=0, SerialNumber=0
+hub 1-1:1.0: USB hub found
+hub 1-1:1.0: 4 ports detected
+mmc0: SDHCI controller on 2198000.usdhc [2198000.usdhc] using ADMA
+mxc_vpu 2040000.vpu_fsl: VPU initialized
+mxc_vdoa 21e4000.vdoa: i.MX Video Data Order Adapter(VDOA) driver probed
+mxc_hdmi_cec soc:hdmi_cec@00120000: HDMI CEC initialized
+Galcore version 6.2.2.96445
+mmc0: new DDR MMC card at address 0001
+mmcblk0: mmc0:0001 Q2J54A 3.59 GiB 
+mmcblk0boot0: mmc0:0001 Q2J54A partition 1 16.0 MiB
+mmcblk0boot1: mmc0:0001 Q2J54A partition 2 16.0 MiB
+random: fast init done
+Alternate GPT is invalid, using primary GPT.
+ mmcblk0: p1 p2 p3 p4 p5 p6 p7 p8 p9 p10 p11
+usb 1-1.2: new low-speed USB device number 3 using ci_hdrc
+usb 1-1.2: New USB device found, idVendor=413c, idProduct=301a
+usb 1-1.2: New USB device strings: Mfr=1, Product=2, SerialNumber=0
+usb 1-1.2: Product: Dell MS116 USB Optical Mouse
+usb 1-1.2: Manufacturer: PixArt
+caam 2100000.caam: ERA source: CAAMVID.
+caam 2100000.caam: AXI pipeline throttling enabled.
+caam 2100000.caam: Instantiated RNG4 SH1
+caam 2100000.caam: device ID = 0x0a16010000000000 (Era 4)
+caam 2100000.caam: job rings = 2, qi = 0
+caam algorithms registered in /proc/crypto
+caam_jr 2101000.jr0: registering rng-caam
+platform caam_sm: blkkey_ex: 4 keystore units available
+platform caam_sm: 64-bit clear key:
+platform caam_sm: [0000] 00 01 02 03 04 0f 06 07
+platform caam_sm: 64-bit black key:
+platform caam_sm: [0000] b8 59 41 5a c8 6e d5 c1
+platform caam_sm: [0008] 48 e8 76 b8 09 9b 05 f4
+platform caam_sm: 128-bit clear key:
+platform caam_sm: [0000] 00 01 02 03 04 0f 06 07
+platform caam_sm: [0008] 08 09 0a 0b 0c 0d 0e 0f
+platform caam_sm: 128-bit black key:
+platform caam_sm: [0000] 7e 25 ab 79 eb 10 83 2d
+platform caam_sm: [0008] 01 fa dc e8 7d af b7 f8
+platform caam_sm: 192-bit clear key:
+platform caam_sm: [0000] 00 01 02 03 04 0f 06 07
+platform caam_sm: [0008] 08 09 0a 0b 0c 0d 0e 0f
+platform caam_sm: [0016] 10 11 12 13 14 15 16 17
+platform caam_sm: 192-bit black key:
+platform caam_sm: [0000] a7 0a 6c 77 1f 57 60 c8
+platform caam_sm: [0008] 71 53 64 f9 f1 8d 7e b2
+platform caam_sm: [0016] 92 39 cf 81 86 af 8a 57
+platform caam_sm: [0024] 74 78 a5 d1 54 8f 0b 6c
+platform caam_sm: 256-bit clear key:
+platform caam_sm: [0000] 00 01 02 03 04 0f 06 07
+platform caam_sm: [0008] 08 09 0a 0b 0c 0d 0e 0f
+platform caam_sm: [0016] 10 11 12 13 14 15 16 17
+platform caam_sm: [0024] 18 19 1a 1b 1c 1d 1e 1f
+platform caam_sm: 256-bit black key:
+platform caam_sm: [0000] 11 14 30 b4 ac ab dc 2c
+platform caam_sm: [0008] 0c 61 58 31 0d ad 67 da
+platform caam_sm: [0016] 7a c2 3a af e4 11 7b 05
+platform caam_sm: [0024] 9a a5 7b 90 7e 9a fd 5f
+platform caam_sm: 64-bit unwritten blob:
+platform caam_sm: [0000] 00 00 00 00 00 00 00 00
+platform caam_sm: [0008] 00 00 00 00 00 00 00 00
+platform caam_sm: [0016] 00 00 00 00 00 00 00 00
+platform caam_sm: [0024] 00 00 00 00 00 00 00 00
+platform caam_sm: [0032] 00 00 00 00 00 00 00 00
+platform caam_sm: [0040] 00 00 00 00 00 00 00 00
+platform caam_sm: [0048] 00 00 00 00 00 00 00 00
+platform caam_sm: [0056] 00 00 00 00 00 00 00 00
+platform caam_sm: [0064] 00 00 00 00 00 00 00 00
+platform caam_sm: [0072] 00 00 00 00 00 00 00 00
+platform caam_sm: [0080] 00 00 00 00 00 00 00 00
+platform caam_sm: [0088] 00 00 00 00 00 00 00 00
+platform caam_sm: 128-bit unwritten blob:
+platform caam_sm: [0000] 00 00 00 00 00 00 00 00
+platform caam_sm: [0008] 00 00 00 00 00 00 00 00
+platform caam_sm: [0016] 00 00 00 00 00 00 00 00
+platform caam_sm: [0024] 00 00 00 00 00 00 00 00
+platform caam_sm: [0032] 00 00 00 00 00 00 00 00
+platform caam_sm: [0040] 00 00 00 00 00 00 00 00
+platform caam_sm: [0048] 00 00 00 00 00 00 00 00
+platform caam_sm: [0056] 00 00 00 00 00 00 00 00
+platform caam_sm: [0064] 00 00 00 00 00 00 00 00
+platform caam_sm: [0072] 00 00 00 00 00 00 00 00
+platform caam_sm: [0080] 00 00 00 00 00 00 00 00
+platform caam_sm: [0088] 00 00 00 00 00 00 00 00
+platform caam_sm: 196-bit unwritten blob:
+platform caam_sm: [0000] 00 00 00 00 00 00 00 00
+platform caam_sm: [0008] 00 00 00 00 00 00 00 00
+platform caam_sm: [0016] 00 00 00 00 00 00 00 00
+platform caam_sm: [0024] 00 00 00 00 00 00 00 00
+platform caam_sm: [0032] 00 00 00 00 00 00 00 00
+platform caam_sm: [0040] 00 00 00 00 00 00 00 00
+platform caam_sm: [0048] 00 00 00 00 00 00 00 00
+platform caam_sm: [0056] 00 00 00 00 00 00 00 00
+platform caam_sm: [0064] 00 00 00 00 00 00 00 00
+platform caam_sm: [0072] 00 00 00 00 00 00 00 00
+platform caam_sm: [0080] 00 00 00 00 00 00 00 00
+platform caam_sm: [0088] 00 00 00 00 00 00 00 00
+platform caam_sm: 256-bit unwritten blob:
+platform caam_sm: [0000] 00 00 00 00 00 00 00 00
+platform caam_sm: [0008] 00 00 00 00 00 00 00 00
+platform caam_sm: [0016] 00 00 00 00 00 00 00 00
+platform caam_sm: [0024] 00 00 00 00 00 00 00 00
+platform caam_sm: [0032] 00 00 00 00 00 00 00 00
+platform caam_sm: [0040] 00 00 00 00 00 00 00 00
+platform caam_sm: [0048] 00 00 00 00 00 00 00 00
+platform caam_sm: [0056] 00 00 00 00 00 00 00 00
+platform caam_sm: [0064] 00 00 00 00 00 00 00 00
+platform caam_sm: [0072] 00 00 00 00 00 00 00 00
+platform caam_sm: [0080] 00 00 00 00 00 00 00 00
+platform caam_sm: [0088] 00 00 00 00 00 00 00 00
+platform caam_sm: 64-bit black key in blob:
+platform caam_sm: [0000] 55 5b c7 d9 fa 1f 83 6d
+platform caam_sm: [0008] 27 44 ef b4 3c b4 ee db
+platform caam_sm: [0016] f8 57 9f 49 84 92 4e 27
+platform caam_sm: [0024] 31 4d 80 5f 74 4e 3e 95
+platform caam_sm: [0032] 0d 98 2c e8 25 4c e5 4a
+platform caam_sm: [0040] d9 98 a7 76 4a ce 0a a4
+platform caam_sm: [0048] fb 31 b5 33 a5 f9 9d 5a
+platform caam_sm: [0056] 00 00 00 00 00 00 00 00
+platform caam_sm: [0064] 00 00 00 00 00 00 00 00
+platform caam_sm: [0072] 00 00 00 00 00 00 00 00
+platform caam_sm: [0080] 00 00 00 00 00 00 00 00
+platform caam_sm: [0088] 00 00 00 00 00 00 00 00
+platform caam_sm: 128-bit black key in blob:
+platform caam_sm: [0000] 03 84 cc b3 6c 1a 90 a6
+platform caam_sm: [0008] 15 db f7 88 2f 6b fd 08
+platform caam_sm: [0016] f2 d6 d1 2f b9 03 8c 81
+platform caam_sm: [0024] 13 c9 ec 50 b6 10 8b fd
+platform caam_sm: [0032] 03 58 50 4c f2 4c 5a ed
+platform caam_sm: [0040] c6 3d 80 23 64 31 81 e8
+platform caam_sm: [0048] 53 5b 75 3d 5e a3 57 b3
+platform caam_sm: [0056] a9 73 8d de 26 59 9f ee
+platform caam_sm: [0064] 00 00 00 00 00 00 00 00
+platform caam_sm: [0072] 00 00 00 00 00 00 00 00
+platform caam_sm: [0080] 00 00 00 00 00 00 00 00
+platform caam_sm: [0088] 00 00 00 00 00 00 00 00
+platform caam_sm: 192-bit black key in blob:
+platform caam_sm: [0000] 18 66 54 70 74 37 a7 20
+platform caam_sm: [0008] a7 56 9e b0 02 ea cf d6
+platform caam_sm: [0016] de 16 f9 52 b1 4a c9 f5
+platform caam_sm: [0024] ce 7c d1 46 45 42 a8 7a
+platform caam_sm: [0032] aa 67 6d 6f c3 e3 b6 f3
+platform caam_sm: [0040] 44 a7 6c f0 20 e0 04 df
+platform caam_sm: [0048] bd 52 19 07 e1 31 5f 85
+platform caam_sm: [0056] b7 c2 d6 eb 22 ec 30 c5
+platform caam_sm: [0064] dc bf c8 8c 19 a7 43 c8
+platform caam_sm: [0072] 00 00 00 00 00 00 00 00
+platform caam_sm: [0080] 00 00 00 00 00 00 00 00
+platform caam_sm: [0088] 00 00 00 00 00 00 00 00
+platform caam_sm: 256-bit black key in blob:
+platform caam_sm: [0000] 84 d3 38 37 95 8d e2 83
+platform caam_sm: [0008] 2f ff 40 28 08 5a f1 03
+platform caam_sm: [0016] a9 df 33 cd 43 72 3a 77
+platform caam_sm: [0024] 33 c1 48 b1 af 6d bd 5c
+platform caam_sm: [0032] 7c a4 60 7f c3 04 85 35
+platform caam_sm: [0040] 8f 1e 87 24 6c 06 e5 76
+platform caam_sm: [0048] 3b 1e e9 bc a7 9b 7c a7
+platform caam_sm: [0056] 0c 0a 22 a6 44 c6 5c 75
+platform caam_sm: [0064] 99 aa 3f bc d4 bd 94 d7
+platform caam_sm: [0072] c8 06 58 3b ca d6 25 3a
+platform caam_sm: [0080] 00 00 00 00 00 00 00 00
+platform caam_sm: [0088] 00 00 00 00 00 00 00 00
+platform caam_sm: restored 64-bit black key:
+platform caam_sm: [0000] bc d6 0c 8b f3 9f 0d 14
+platform caam_sm: [0008] 6b 12 ae cc b3 17 c2 ec
+platform caam_sm: restored 128-bit black key:
+platform caam_sm: [0000] 7e 25 ab 79 eb 10 83 2d
+platform caam_sm: [0008] 01 fa dc e8 7d af b7 f8
+platform caam_sm: restored 192-bit black key:
+platform caam_sm: [0000] a7 0a 6c 77 1f 57 60 c8
+platform caam_sm: [0008] 71 53 64 f9 f1 8d 7e b2
+platform caam_sm: [0016] 8a 53 e9 47 bf ed cf 63
+platform caam_sm: [0024] d2 c4 2d 35 2b 0c 8a bc
+platform caam_sm: restored 256-bit black key:
+platform caam_sm: [0000] 11 14 30 b4 ac ab dc 2c
+platform caam_sm: [0008] 0c 61 58 31 0d ad 67 da
+platform caam_sm: [0016] 7a c2 3a af e4 11 7b 05
+platform caam_sm: [0024] 9a a5 7b 90 7e 9a fd 5f
+snvs-secvio 20cc000.caam-snvs: can't get snvs clock
+snvs-secvio 20cc000.caam-snvs: violation handlers armed - non-secure state
+hidraw: raw HID events driver (C) Jiri Kosina
+input: PixArt Dell MS116 USB Optical Mouse as /devices/soc0/soc/2100000.aips-bus/2184200.usb/ci_hdrc.1/usb1/1-1/1-1.2/1-1.2:1.0/0003:413C:301A.0001/input/input1
+hid-generic 0003:413C:301A.0001: input,hidraw0: USB HID v1.11 Mouse [PixArt Dell MS116 USB Optical Mouse] on usb-ci_hdrc.1-1.2/input0
+usbcore: registered new interface driver usbhid
+usbhid: USB HID core driver
+ashmem: initialized
+usbcore: registered new interface driver snd-usb-audio
+sgtl5000 2-000a: sgtl5000 revision 0x11
+fsl-ssi-dai 2028000.ssi: No cache defaults, reading back from HW
+imx-sgtl5000 sound: sgtl5000 <-> 2028000.ssi mapping ok
+imx-spdif sound-spdif: snd-soc-dummy-dai <-> 2004000.spdif mapping ok
+imx-audio-hdmi sound-hdmi: hdmi-hifi.0 <-> soc:hdmi_audio@00120000 mapping ok
+NET: Registered protocol family 26
+u32 classifier
+    Actions configured
+Netfilter messages via NETLINK v0.30.
+nf_conntrack version 0.5.0 (16384 buckets, 65536 max)
+ctnetlink v0.93: registering with nfnetlink.
+xt_time: kernel timezone is -0000
+ip_tables: (C) 2000-2006 Netfilter Core Team
+arp_tables: arp_tables: (C) 2002 David S. Miller
+Initializing XFRM netlink socket
+NET: Registered protocol family 10
+mip6: Mobile IPv6
+ip6_tables: (C) 2000-2006 Netfilter Core Team
+sit: IPv6, IPv4 and MPLS over IPv4 tunneling driver
+NET: Registered protocol family 17
+NET: Registered protocol family 15
+can: controller area network core (rev 20120528 abi 9)
+NET: Registered protocol family 29
+can: raw protocol (rev 20120528)
+can: broadcast manager protocol (rev 20161123 t)
+can: netlink gateway (rev 20130117) max_hops=1
+Bluetooth: RFCOMM TTY layer initialized
+Bluetooth: RFCOMM socket layer initialized
+Bluetooth: RFCOMM ver 1.11
+Bluetooth: BNEP (Ethernet Emulation) ver 1.3
+Bluetooth: BNEP filters: protocol multicast
+Bluetooth: BNEP socket layer initialized
+Bluetooth: HIDP (Human Interface Emulation) ver 1.2
+Bluetooth: HIDP socket layer initialized
+8021q: 802.1Q VLAN Support v1.8
+Key type dns_resolver registered
+cpu cpu0: Registered imx6q-cpufreq
+registered taskstats version 1
+imx_thermal 2000000.aips-bus:tempmon: Industrial CPU temperature grade - max:105C critical:100C passive:95C
+dhd_module_init in
+input: gpio-keys as /devices/soc0/gpio-keys/input/input2
+snvs_rtc 20cc000.snvs:snvs-rtc-lp: setting system clock to 1970-01-01 00:07:46 UTC (466)
+usb_otg_vbus: disabling
+ALSA device list:
+  #0: imx6q-apalis-sgtl5000
+  #1: imx-spdif
+  #2: imx-hdmi-soc
+Freeing unused kernel memory: 1024K
+init: init first stage started!
+SELinux:  Permission validate_trans in class security not defined in policy.
+SELinux:  Class cap_userns not defined in policy.
+SELinux:  Class cap2_userns not defined in policy.
+SELinux: the above unknown classes and permissions will be denied
+audit: type=1403 audit(466.620:2): policy loaded auid=4294967295 ses=4294967295
+init: (Initializing SELinux non-enforcing took 0.11s.)
+init: init second stage started!
+init: Running restorecon...
+init: waitpid failed: No child processes
+init: (Loading properties from /default.prop took 0.00s.)
+init: (Parsing /init.environ.rc took 0.00s.)
+init: (Parsing /init.usb.rc took 0.00s.)
+init: (Parsing init.freescale.usb.rc took 0.00s.)
+init: (Parsing init.freescale.i.MX6Q.rc took 0.00s.)
+init: (Parsing init.freescale.emmc.rc took 0.00s.)
+init: (Parsing /init.freescale.rc took 0.02s.)
+ueventd: ueventd started!
+ueventd: Coldboot took 0.44s.
+Console: switching to colour dummy device 80x30
+watchdogd: started (interval 10, margin 20)!
+EXT4-fs (mmcblk0p3): mounted filesystem with ordered data mode. Opts: barrier=1
+EXT4-fs (mmcblk0p10): Ignoring removed nomblk_io_submit option
+EXT4-fs (mmcblk0p10): recovery complete
+EXT4-fs (mmcblk0p10): mounted filesystem with ordered data mode. Opts: nomblk_io_submit,noauto_da_alloc,errors=panic
+EXT4-fs (mmcblk0p4): Ignoring removed nomblk_io_submit option
+EXT4-fs (mmcblk0p4): recovery complete
+EXT4-fs (mmcblk0p4): mounted filesystem with ordered data mode. Opts: nomblk_io_submit
+EXT4-fs (mmcblk0p5): mounted filesystem with ordered data mode. Opts: (null)
+file system registered
+using random self ethernet address
+using random host ethernet address
+zram0: detected capacity change from 0 to 314572800
+logd.auditd: start
+logd.klogd: 7677977000
+Adding 307196k swap on /dev/block/zram0.  Priority:-1 extents:1 across:307196k SS
+binder: 256:256 transaction failed 29189, size 0-0
+logd.daemon: reinit
+sabresd_6dq:/ # android_work: sent uevent USB_STATE=CONNECTED
+android_work: sent uevent USB_STATE=DISCONNECTED
+android_work: sent uevent USB_STATE=CONNECTED
+ci_hdrc ci_hdrc.0: freeing queued request
+android_work: sent uevent USB_STATE=DISCONNECTED
+android_work: sent uevent USB_STATE=CONNECTED
+android_work: sent uevent USB_STATE=DISCONNECTED
+android_work: sent uevent USB_STATE=CONNECTED
+android_work: sent uevent USB_STATE=DISCONNECTED
+android_work: sent uevent USB_STATE=CONNECTED
+configfs-gadget gadget: high-speed config #1: b
+android_work: sent uevent USB_STATE=CONFIGURED
+healthd: No battery devices found
+ERROR: v4l2 capture: slave not found! V4L2_CID_HUE
+ERROR: v4l2 capture: slave not found! V4L2_CID_HUE
+imx-hdmi-audio imx-hdmi-audio: HDMI Video is not ready!
+imx-hdmi-audio imx-hdmi-audio: ASoC: can't open platform imx-hdmi-audio: -22
+imx-hdmi-audio imx-hdmi-audio: HDMI Video is not ready!
+imx-hdmi-audio imx-hdmi-audio: ASoC: can't open platform imx-hdmi-audio: -22
+init: Starting service 'bootanim'...
+capability: warning: `main' uses 32-bit capabilities (legacy support in use)
+init: write_file: Unable to open '/sys/devices/system/cpu/cpufreq/interactive/timer_rate': No such file or directory
+init: write_file: Unable to open '/sys/devices/system/cpu/cpufreq/interactive/min_sample_time': No such file or directory
+init: write_file: Unable to open '/sys/devices/system/cpu/cpufreq/interactive/go_hispeed_load': No such file or directory
+random: crng init done
+
+sabresd_6dq:/ # 
+sabresd_6dq:/ # 
+sabresd_6dq:/ # 
+sabresd_6dq:/ # init: write_file: Unable to open '/proc/sys/vm/extra_free_kbytes': No such file or directory
+acc_open
+acc_release
+Micrel KSZ9031 Gigabit PHY 2188000.ethernet-1:07: attached PHY driver [Micrel KSZ9031 Gigabit PHY] (mii_bus:phy_addr=2188000.ethernet-1:07, irq=120)
+IPv6: ADDRCONF(NETDEV_UP): eth0: link is not ready
+init: Service 'bootanim' (pid 347) exited with status 0
+init: Starting service 'exec 3 (/system/bin/bootstat)'...
+init: Service 'exec 3 (/system/bin/bootstat)' (pid 1013) exited with status 0
+init: Starting service 'exec 4 (/system/bin/bootstat)'...
+init: Service 'exec 4 (/system/bin/bootstat)' (pid 1023) exited with status 0
+init: Starting service 'exec 5 (/system/bin/bootstat)'...
+init: Service 'exec 5 (/system/bin/bootstat)' (pid 1025) exited with status 0
+init: Starting service 'exec 6 (/system/bin/bootstat)'...
+init: Service 'exec 6 (/system/bin/bootstat)' (pid 1026) exited with status 0
+
+sabresd_6dq:/ # 
+sabresd_6dq:/ # 
+sabresd_6dq:/ # 
+sabresd_6dq:/ # 
+sabresd_6dq:/ # 
+sabresd_6dq:/ # 
+sabresd_6dq:/ # 
+sabresd_6dq:/ # mtp_open
+
+sabresd_6dq:/ # 
+sabresd_6dq:/ # 
+sabresd_6dq:/ # df
+type=1400 audit(528.500:3): avc: denied { getattr } for pid=1331 comm="df" path="/dev/block" dev="tmpfs" ino=8306 scontext=u:r:shell:s0 tcontext=u:object_r:block_device:s0 tclass=dir permissive=1
+Filesystem            1K-blocks  type=1400 audit(528.500:4): avc: denied { getattr } for pid=1331 comm="df" path="/dev/block/mmcblk0p3" dev="tmpfs" ino=8423 scontext=u:r:shell:s0 tcontext=u:object_r:system_block_device:s0 tclass=blk_file permissive=1
+ Used Available Use% Mounted on
+type=1400 audit(528.500:5): avc: denied { getattr } for pid=1331 comm="df" path="/dev/block/mmcblk0p10" dev="tmpfs" ino=8405 scontext=u:r:shell:s0 tcontext=u:object_r:userdata_block_device:s0 tclass=blk_file permissive=1
+rootfs                   798524  type=1400 audit(528.500:6): avc: denied { getattr } for pid=1331 comm="df" path="/dev/block/mmcblk0p4" dev="tmpfs" ino=8395 scontext=u:r:shell:s0 tcontext=u:object_r:cache_block_device:s0 tclass=blk_file permissive=1
+ 3000    795524   1% /
+tmpfs    type=1400 audit(528.500:7): avc: denied { getattr } for pid=1331 comm="df" path="/dev/block/mmcblk0p5" dev="tmpfs" ino=8419 scontext=u:r:shell:s0 tcontext=u:object_r:block_device:s0 tclass=blk_file permissive=1
+               1029208    456   1type=1400 audit(528.500:8): avc: denied { getattr } for pid=1331 comm="df" path="/dev/fuse" dev="tmpfs" ino=8225 scontext=u:r:shell:s0 tcontext=u:object_r:fuse_device:s0 tclass=chr_file permissive=1
+028752   1% /dev
+tmpfs                   1029208      4   1029204   1% /mnt
+/dev/block/mmcblk0p3    1499760 621008    878752  42% /system
+/dev/block/mmcblk0p10   1430704  21600   1409104   2% /data
+/dev/block/mmcblk0p4     499656    412    499244   1% /cache
+/dev/block/mmcblk0p5       6907     45      6862   1% /device
+/dev/fuse               1430704  21600   1409104   2% /mnt/runtime/default/emulated
+/dev/fuse               1430704  21600   1409104   2% /mnt/runtime/read/emulated
+/dev/fuse               1430704  21600   1409104   2% /mnt/runtime/write/emulated
+sabresd_6dq:/ # 
+sabresd_6dq:/ # 
+sabresd_6dq:/ # 
+sabresd_6dq:/ # df
+Filesystem            1K-blocks   Used Available Use% Mounted on
+rootfs                   798524   3000    795524   1% /
+tmpfs                   1029208    456   1028752   1% /dev
+tmpfs                   1029208      4   1029204   1% /mnt
+/dev/block/mmcblk0p3    1499760 621008    878752  42% /system
+/dev/block/mmcblk0p10   1430704  21600   1409104   2% /data
+/dev/block/mmcblk0p4     499656    412    499244   1% /cache
+/dev/block/mmcblk0p5       6907     45      6862   1% /device
+/dev/fuse               1430704  21600   1409104   2% /mnt/runtime/default/emulated
+/dev/fuse               1430704  21600   1409104   2% /mnt/runtime/read/emulated
+/dev/fuse               1430704  21600   1409104   2% /mnt/runtime/write/emulated
+sabresd_6dq:/ # 
+sabresd_6dq:/ # 
+sabresd_6dq:/ # 
+sabresd_6dq:/ # 
+sabresd_6dq:/ # df
+Filesystem            1K-blocks   Used Available Use% Mounted on
+rootfs                   798524   3000    795524   1% /
+tmpfs                   1029208    456   1028752   1% /dev
+tmpfs                   1029208      4   1029204   1% /mnt
+/dev/block/mmcblk0p3    1499760 621008    878752  42% /system
+/dev/block/mmcblk0p10   1430704  21600   1409104   2% /data
+/dev/block/mmcblk0p4     499656    412    499244   1% /cache
+/dev/block/mmcblk0p5       6907     45      6862   1% /device
+/dev/fuse               1430704  21600   1409104   2% /mnt/runtime/default/emulated
+/dev/fuse               1430704  21600   1409104   2% /mnt/runtime/read/emulated
+/dev/fuse               1430704  21600   1409104   2% /mnt/runtime/write/emulated
+sabresd_6dq:/ # 
+sabresd_6dq:/ # 
+sabresd_6dq:/ # 
+sabresd_6dq:/ # 
+sabresd_6dq:/ # 
+sabresd_6dq:/ # cd /dev/blotype=1400 audit(536.310:9): avc: denied { read } for pid=257 comm="sh" name="/" dev="tmpfs" ino=11265 scontext=u:r:shell:s0 tcontext=u:object_r:device:s0 tclass=dir permissive=1
+sabresd_6dq:/ # cd /dev/block/   type=1400 audit(536.310:10): avc: denied { open } for pid=257 comm="sh" path="/dev" dev="tmpfs" ino=11265 scontext=u:r:shell:s0 tcontext=u:object_r:device:s0 tclass=dir permissive=1
+                                              type=1400 audit(537.050:11): avc: denied { read } for pid=257 comm="sh" name="block" dev="tmpfs" ino=8306 scontext=u:r:shell:s0 tcontext=u:object_r:block_device:s0 tclass=dir permissive=1
+
+by-name/        mmcblk0        type=1400 audit(537.050:12): avc: denied { open } for pid=257 comm="sh" path="/dev/block" dev="tmpfs" ino=8306 scontext=u:r:shell:s0 tcontext=u:object_r:block_device:s0 tclass=dir permissive=1
+ mmcblk0p5       ram11           type=1400 audit(537.050:13): avc: denied { getattr } for pid=257 comm="sh" path="/dev/block/mmcblk0p1" dev="tmpfs" ino=8431 scontext=u:r:shell:s0 tcontext=u:object_r:boot_block_device:s0 tclass=blk_file permissive=1
+ram6
+loop0           mmcblk0boottype=1400 audit(537.050:14): avc: denied { getattr } for pid=257 comm="sh" path="/dev/block/mmcblk0p7" dev="tmpfs" ino=8413 scontext=u:r:shell:s0 tcontext=u:object_r:metadata_block_device:s0 tclass=blk_file permissive=1
+0    mmcblk0p6       ram12       type=1400 audit(537.050:15): avc: denied { getattr } for pid=257 comm="sh" path="/dev/block/mmcblk0p9" dev="tmpfs" ino=8409 scontext=u:r:shell:s0 tcontext=u:object_r:frp_block_device:s0 tclass=blk_file permissive=1
+    ram7
+loop1           mmcblk0type=1400 audit(537.050:16): avc: denied { getattr } for pid=257 comm="sh" path="/dev/block/mmcblk0p2" dev="tmpfs" ino=8401 scontext=u:r:shell:s0 tcontext=u:object_r:recovery_block_device:s0 tclass=blk_file permissive=1
+boot1    mmcblk0p7       ram13   type=1400 audit(537.050:17): avc: denied { getattr } for pid=257 comm="sh" path="/dev/block/loop3" dev="tmpfs" ino=8331 scontext=u:r:shell:s0 tcontext=u:object_r:loop_device:s0 tclass=blk_file permissive=1
+        ram8
+loop2           mmctype=1400 audit(537.050:18): avc: denied { getattr } for pid=257 comm="sh" path="/dev/block/ram4" dev="tmpfs" ino=8330 scontext=u:r:shell:s0 tcontext=u:object_r:ram_device:s0 tclass=blk_file permissive=1
+blk0p1       mmcblk0p8       ram14           ram9
+loop3           mmcblk0p10      mmcblk0p9       ram15           vold/
+loop4           mmcblk0p11      platform/       ram2            zram0
+loop5           mmcblk0p2       ram0            ram3
+loop6           mmcblk0p3       ram1            ram4
+loop7           mmcblk0p4       ram10           ram5
+sabresd_6dq:/ # cd /dev/block/                                                 
+sabresd_6dq:/dev/block # ls
+by-name loop4   mmcblk0boot0 mmcblk0p2 mmcblk0p7 ram1  ram14 ram5 vold  
+loop0   loop5   mmcblk0boot1 mmcblk0p3 mmcblk0p8 ram10 ram15 ram6 zram0 
+loop1   loop6   mmcblk0p1    mmcblk0p4 mmcblk0p9 ram11 ram2  ram7 
+loop2   loop7   mmcblk0p10   mmcblk0p5 platform  ram12 ram3  ram8 
+loop3   mmcblk0 mmcblk0p11   mmcblk0p6 ram0      ram13 ram4  ram9 
+sabresd_6dq:/dev/block # 
+sabresd_6dq:/dev/block # 
+sabresd_6dq:/dev/block # 
+sabresd_6dq:/dev/block # 
+sabresd_6dq:/dev/block # 
+sabresd_6dq:/dev/block # 
+sabresd_6dq:/dev/block # 
+sabresd_6dq:/dev/block # cd /sys
+sys/     system/
+sabresd_6dq:/dev/block # cd /sys                                               
+sabresd_6dq:/sys # ls
+block bus class dev devices firmware fs fsl_otp kernel module power 
+sabresd_6dq:/sys # 
+sabresd_6dq:/sys # 
+sabresd_6dq:/sys # cd /dev
+dev/     device/
+sabresd_6dq:/sys # cd /dev                                                     /type=1400 audit(559.410:19): avc: denied { getattr } for pid=257 comm="sh" path="/dev/mtp_usb" dev="tmpfs" ino=8452 scontext=u:r:shell:s0 tcontext=u:object_r:mtp_device:s0 tclass=chr_file permissive=1
+
+__properties__/     mtp_usb     type=1400 audit(559.430:20): avc: denied { getattr } for pid=257 comm="sh" path="/dev/fscklogs" dev="tmpfs" ino=11250 scontext=u:r:shell:s0 tcontext=u:object_r:fscklogs:s0 tclass=dir permissive=1
+        tty22               tty57type=1400 audit(559.430:21): avc: denied { getattr } for pid=257 comm="sh" path="/dev/i2c-2" dev="tmpfs" ino=8387 scontext=u:r:shell:s0 tcontext=u:object_r:i2c_device:s0 tclass=chr_file permissive=1
+
+ashmem              mxc_asrc   type=1400 audit(559.430:22): avc: denied { getattr } for pid=257 comm="sh" path="/dev/hidraw0" dev="tmpfs" ino=8380 scontext=u:r:shell:s0 tcontext=u:object_r:device:s0 tclass=chr_file permissive=1
+         tty23               tty5type=1400 audit(559.430:23): avc: denied { getattr } for pid=257 comm="sh" path="/dev/watchdog" dev="tmpfs" ino=8364 scontext=u:r:shell:s0 tcontext=u:object_r:watchdog_device:s0 tclass=chr_file permissive=1
+8
+autofs              mxc_hdmi  type=1400 audit(559.430:24): avc: denied { getattr } for pid=257 comm="sh" path="/dev/rtc0" dev="tmpfs" ino=8361 scontext=u:r:shell:s0 tcontext=u:object_r:rtc_device:s0 tclass=chr_file permissive=1
+          tty24               ttytype=1400 audit(559.430:25): avc: denied { getattr } for pid=257 comm="sh" path="/dev/video0" dev="tmpfs" ino=8350 scontext=u:r:shell:s0 tcontext=u:object_r:video_device:s0 tclass=chr_file permissive=1
+59
+binder              mxc_hdmi_type=1400 audit(559.430:26): avc: denied { getattr } for pid=257 comm="sh" path="/dev/graphics" dev="tmpfs" ino=8340 scontext=u:r:shell:s0 tcontext=u:object_r:graphics_device:s0 tclass=dir permissive=1
+cec        tty25               tttype=1400 audit(559.430:27): avc: denied { getattr } for pid=257 comm="sh" path="/dev/vcs1" dev="tmpfs" ino=8339 scontext=u:r:shell:s0 tcontext=u:object_r:vcs_device:s0 tclass=chr_file permissive=1
+y6
+block/              mxc_ipu  type=1400 audit(559.430:28): avc: denied { getattr } for pid=257 comm="sh" path="/dev/ppp" dev="tmpfs" ino=8335 scontext=u:r:shell:s0 tcontext=u:object_r:ppp_device:s0 tclass=chr_file permissive=1
+           tty26               tty60
+bus/                mxc_mem             tty27               tty61
+console             mxc_vpu             tty28               tty62
+cpu_dma_latency     network_latency     tty29               tty63
+cpuctl/             network_throughput  tty3                tty7
+cpuset/             null                tty30               tty8
+device-mapper       ppp                 tty31               tty9
+dri/                pps0                tty32               ttymxc0
+fd/                 ptmx                tty33               ttymxc1
+fscklogs/           ptp0                tty34               ttymxc3
+full                pts/                tty35               ttymxc4
+fuse                random              tty36               tun
+galcore             rfkill              tty37               ubi_ctrl
+gpiochip0           rtc0                tty38               uhid
+gpiochip1           snd/                tty39               uinput
+gpiochip2           socket/             tty4                urandom
+gpiochip3           spidev0.0           tty40               usb-ffs/
+gpiochip4           stune/              tty41               usb/
+gpiochip5           tty                 tty42               usb_accessory
+gpiochip6           tty0                tty43               vcs
+graphics/           tty1                tty44               vcs1
+hidraw0             tty10               tty45               vcsa
+hw_random           tty11               tty46               vcsa1
+hwbinder            tty12               tty47               video0
+i2c-1               tty13               tty48               video1
+i2c-2               tty14               tty49               video16
+i2c-3               tty15               tty5                video17
+input/              tty16               tty50               video18
+ion                 tty17               tty51               video19
+keychord            tty18               tty52               vndbinder
+kmsg                tty19               tty53               watchdog
+loop-control        tty2                tty54               watchdog0
+memcg/              tty20               tty55               xt_qtaguid
+memory_bandwidth    tty21               tty56               zero
+sabresd_6dq:/sys # cd /dev/                                                    
+__properties__/     mtp_usb             tty22               tty57
+ashmem              mxc_asrc            tty23               tty58
+autofs              mxc_hdmi            tty24               tty59
+binder              mxc_hdmi_cec        tty25               tty6
+block/              mxc_ipu             tty26               tty60
+bus/                mxc_mem             tty27               tty61
+console             mxc_vpu             tty28               tty62
+cpu_dma_latency     network_latency     tty29               tty63
+cpuctl/             network_throughput  tty3                tty7
+cpuset/             null                tty30               tty8
+device-mapper       ppp                 tty31               tty9
+dri/                pps0                tty32               ttymxc0
+fd/                 ptmx                tty33               ttymxc1
+fscklogs/           ptp0                tty34               ttymxc3
+full                pts/                tty35               ttymxc4
+fuse                random              tty36               tun
+galcore             rfkill              tty37               ubi_ctrl
+gpiochip0           rtc0                tty38               uhid
+gpiochip1           snd/                tty39               uinput
+gpiochip2           socket/             tty4                urandom
+gpiochip3           spidev0.0           tty40               usb-ffs/
+gpiochip4           stune/              tty41               usb/
+gpiochip5           tty                 tty42               usb_accessory
+gpiochip6           tty0                tty43               vcs
+graphics/           tty1                tty44               vcs1
+hidraw0             tty10               tty45               vcsa
+hw_random           tty11               tty46               vcsa1
+hwbinder            tty12               tty47               video0
+i2c-1               tty13               tty48               video1
+i2c-2               tty14               tty49               video16
+i2c-3               tty15               tty5                video17
+input/              tty16               tty50               video18
+ion                 tty17               tty51               video19
+keychord            tty18               tty52               vndbinder
+kmsg                tty19               tty53               watchdog
+loop-control        tty2                tty54               watchdog0
+memcg/              tty20               tty55               xt_qtaguid
+memory_bandwidth    tty21               tty56               zero
+sabresd_6dq:/sys # cd /dev/                                                    pr  blsabresd_6dq:/sys # cd /dev/block/                                              
+by-name/        mmcblk0         mmcblk0p5       ram11           ram6
+loop0           mmcblk0boot0    mmcblk0p6       ram12           ram7
+loop1           mmcblk0boot1    mmcblk0p7       ram13           ram8
+loop2           mmcblk0p1       mmcblk0p8       ram14           ram9
+loop3           mmcblk0p10      mmcblk0p9       ram15           vold/
+loop4           mmcblk0p11      platform/       ram2            zram0
+loop5           mmcblk0p2       ram0            ram3
+loop6           mmcblk0p3       ram1            ram4
+loop7           mmcblk0p4       ram10           ram5
+sabresd_6dq:/sys # cd /dev/block/                                              
+by-name/        mmcblk0         mmcblk0p5       ram11           ram6
+loop0           mmcblk0boot0    mmcblk0p6       ram12           ram7
+loop1           mmcblk0boot1    mmcblk0p7       ram13           ram8
+loop2           mmcblk0p1       mmcblk0p8       ram14           ram9
+loop3           mmcblk0p10      mmcblk0p9       ram15           vold/
+loop4           mmcblk0p11      platform/       ram2            zram0
+loop5           mmcblk0p2       ram0            ram3
+loop6           mmcblk0p3       ram1            ram4
+loop7           mmcblk0p4       ram10           ram5
+sabresd_6dq:/sys # cd /dev/block/                                                    
+__properties__/     mtp_usb             tty22               tty57
+ashmem              mxc_asrc            tty23               tty58
+autofs              mxc_hdmi            tty24               tty59
+binder              mxc_hdmi_cec        tty25               tty6
+block/              mxc_ipu             tty26               tty60
+bus/                mxc_mem             tty27               tty61
+console             mxc_vpu             tty28               tty62
+cpu_dma_latency     network_latency     tty29               tty63
+cpuctl/             network_throughput  tty3                tty7
+cpuset/             null                tty30               tty8
+device-mapper       ppp                 tty31               tty9
+dri/                pps0                tty32               ttymxc0
+fd/                 ptmx                tty33               ttymxc1
+fscklogs/           ptp0                tty34               ttymxc3
+full                pts/                tty35               ttymxc4
+fuse                random              tty36               tun
+galcore             rfkill              tty37               ubi_ctrl
+gpiochip0           rtc0                tty38               uhid
+gpiochip1           snd/                tty39               uinput
+gpiochip2           socket/             tty4                urandom
+gpiochip3           spidev0.0           tty40               usb-ffs/
+gpiochip4           stune/              tty41               usb/
+gpiochip5           tty                 tty42               usb_accessory
+gpiochip6           tty0                tty43               vcs
+graphics/           tty1                tty44               vcs1
+hidraw0             tty10               tty45               vcsa
+hw_random           tty11               tty46               vcsa1
+hwbinder            tty12               tty47               video0
+i2c-1               tty13               tty48               video1
+i2c-2               tty14               tty49               video16
+i2c-3               tty15               tty5                video17
+input/              tty16               tty50               video18
+ion                 tty17               tty51               video19
+keychord            tty18               tty52               vndbinder
+kmsg                tty19               tty53               watchdog
+loop-control        tty2                tty54               watchdog0
+memcg/              tty20               tty55               xt_qtaguid
+memory_bandwidth    tty21               tty56               zero
+sabresd_6dq:/sys # cd /dev/                                                    utype=1400 audit(585.810:36): avc: denied { read } for pid=257 comm="sh" name="/" dev="tmpfs" ino=11265 scontext=u:r:shell:s0 tcontext=u:object_r:device:s0 tclass=dir permissive=1
+type=1400 audit(585.810:37): avc: denied { open } for pid=257 comm="sh" path="/dev" dev="tmpfs" ino=11265 scontext=u:r:shell:s0 tcontext=u:object_r:device:s0 tclass=dir permissive=1
+
+ubi_ctrl        uinput          usb-ffs/        usb_accessory
+uhid            urandom         usb/
+sabresd_6dq:/sys # cd /dev/u                                                   
+ubi_ctrl        uinput          usb-ffs/        usb_accessory
+uhid            urandom         usb/
+sabresd_6dq:/sys # cd /dev/u                                                   s
+usb-ffs/        usb/            usb_accessory
+sabresd_6dq:/sys # cd /dev/usb                                                 
+usb-ffs/        usb/            usb_accessory
+sabresd_6dq:/sys # cd /dev/usb                                                 /
+sabresd_6dq:/dev/usb # ls
+hidraw1-1.2 input1-1.2 
+sabresd_6dq:/dev/usb # 
+sabresd_6dq:/dev/usb # 
+sabresd_6dq:/dev/usb # 
+sabresd_6dq:/dev/usb # cd /
+sabresd_6dq:/ # 
+sabresd_6dq:/ # 
+sabresd_6dq:/ # 
+sabresd_6dq:/ # 
+sabresd_6dq:/ # 
+sabresd_6dq:/ # cd /
+sabresd_6dq:/ # 
+sabresd_6dq:/ # 
+sabresd_6dq:/ # ls
+type=1400 audit(594.360:38): avc: denied { getattr } for pid=1340 comm="ls" path="/init" dev="rootfs" ino=6456 scontext=u:r:shell:s0 tcontext=u:object_r:init_exec:s0 tclass=file permissive=1
+acct                   init.freescale.i.MX6DL.rc  root                 
+bugreports             init.freescale.i.MX6Q.rc   sbin                 
+cache                  init.freescale.i.MX6QP.rc  sdcard               
+charger                init.freescale.rc          seapp_contexts       
+config                 init.freescale.sd.rc       selinux_version      
+d                      init.freescale.usb.rc      sepolicy             
+data                   init.rc                    service_contexts     
+default.prop           init.recovery.freescale.rc storage              
+dev                    init.usb.configfs.rc       sys                  
+device                 init.usb.rc                system               
+etc                    init.zygote32.rc           ueventd.freescale.rc 
+file_contexts.bin      mnt                        ueventd.rc           
+fstab.freescale        oem                        vendor               
+init                   proc                       verity_key           
+init.environ.rc        property_contexts          
+init.freescale.emmc.rc res                        
+sabresd_6dq:/ # 
+sabresd_6dq:/ # 
+sabresd_6dq:/ # 
+sabresd_6dq:/ # 
+sabresd_6dq:/ # 
+sabresd_6dq:/ # 
+sabresd_6dq:/ # alloc_contig_range: [2ad00, 2b660) PFNs busy
+alloc_contig_range: [2ad00, 2b660) PFNs busy
+alloc_contig_range: [2ae00, 2b760) PFNs busy
+alloc_contig_range: [2ae00, 2b860) PFNs busy
+alloc_contig_range: [2b000, 2b960) PFNs busy
+alloc_contig_range: [2b000, 2ba60) PFNs busy
+alloc_contig_range: [2b000, 2bb60) PFNs busy
+alloc_contig_range: [2b000, 2bc60) PFNs busy
+alloc_contig_range: [2b400, 2bd60) PFNs busy
+alloc_contig_range: [2b400, 2be60) PFNs busy
+alloc_contig_range: [2b600, 2bf60) PFNs busy
+alloc_contig_range: 5 callbacks suppressed
+alloc_contig_range: [2b000, 2bb60) PFNs busy
+alloc_contig_range: [2b000, 2bc60) PFNs busy
+alloc_contig_range: [2b400, 2bd60) PFNs busy
+alloc_contig_range: [2b400, 2be60) PFNs busy
+alloc_contig_range: [2b600, 2bf60) PFNs busy
+alloc_contig_range: [2ad00, 2b660) PFNs busy
+alloc_contig_range: [2ad00, 2b660) PFNs busy
+alloc_contig_range: [2ae00, 2b760) PFNs busy
+alloc_contig_range: [2ae00, 2b860) PFNs busy
+alloc_contig_range: [2b000, 2b960) PFNs busy
+alloc_contig_range: 6 callbacks suppressed
+alloc_contig_range: [2c700, 2cd04) PFNs busy
+alloc_contig_range: [2c800, 2ce04) PFNs busy
+alloc_contig_range: [2c800, 2cf04) PFNs busy
+alloc_contig_range: [2ca00, 2d004) PFNs busy
+
+sabresd_6dq:/ # 
+sabresd_6dq:/ # 
+sabresd_6dq:/ # 
+sabresd_6dq:/ # 
+sabresd_6dq:/ # 
+sabresd_6dq:/ # 
+sabresd_6dq:/ # 
+sabresd_6dq:/ # alloc_contig_range: [2c500, 2c804) PFNs busy
+alloc_contig_range: [2c600, 2c904) PFNs busy
+
+sabresd_6dq:/ # 
+sabresd_6dq:/ # 
+sabresd_6dq:/ # 
+sabresd_6dq:/ # 
+sabresd_6dq:/ # alloc_contig_range: [2be00, 2c100) PFNs busy
+alloc_contig_range: [2be00, 2c200) PFNs busy
+alloc_contig_range: [2c000, 2c300) PFNs busy
+alloc_contig_range: [2c400, 2c704) PFNs busy
+alloc_contig_range: [2c400, 2c804) PFNs busy
+alloc_contig_range: [2c600, 2c904) PFNs busy
+
+sabresd_6dq:/ # 
+sabresd_6dq:/ # 
+sabresd_6dq:/ # 
+sabresd_6dq:/ # ls
+type=1400 audit(2117.400:39): avc: denied { getattr } for pid=1440 comm="ls" path="/init" dev="rootfs" ino=6456 scontext=u:r:shell:s0 tcontext=u:object_r:init_exec:s0 tclass=file permissive=1
+acct                   init.freescale.i.MX6DL.rc  root                 
+bugreports             init.freescale.i.MX6Q.rc   sbin                 
+cache                  init.freescale.i.MX6QP.rc  sdcard               
+charger                init.freescale.rc          seapp_contexts       
+config                 init.freescale.sd.rc       selinux_version      
+d                      init.freescale.usb.rc      sepolicy             
+data                   init.rc                    service_contexts     
+default.prop           init.recovery.freescale.rc storage              
+dev                    init.usb.configfs.rc       sys                  
+device                 init.usb.rc                system               
+etc                    init.zygote32.rc           ueventd.freescale.rc 
+file_contexts.bin      mnt                        ueventd.rc           
+fstab.freescale        oem                        vendor               
+init                   proc                       verity_key           
+init.environ.rc        property_contexts          
+init.freescale.emmc.rc res                        
+sabresd_6dq:/ # cat /pr
+proc/               property_contexts
+sabresd_6dq:/ # cat /pro                                                       csabresd_6dq:/ # cat /proc/                                                     type=1400 audit(2123.280:40): avc: denied { getattr } for pid=257 comm="sh" path="/proc/iomem" dev="proc" ino=4026532028 scontext=u:r:shell:s0 tcontext=u:object_r:proc_iomem:s0 tclass=file permissive=1
+
+1/              1302/          type=1400 audit(2123.280:41): avc: denied { getattr } for pid=257 comm="sh" path="/proc/sysrq-trigger" dev="proc" ino=4026532072 scontext=u:r:shell:s0 tcontext=u:object_r:proc_sysrq:s0 tclass=file permissive=1
+ 222/            32/             diskstats
+10/             131/            226/            33/             driver/
+1008/           132/            227/            34/             execdomains
+1028/           133/            228/            35/             fb
+104/            134/            229/            36/             filesystems
+105/            135/            23/             37/             fs/
+106/            138/            230/            38/             interrupts
+1061/           1385/           231/            39/             iomem
+1067/           139/            233/            40/             ioports
+107/            14/             234/            41/             irq/
+108/            140/            237/            42/             kallsyms
+109/            1402/           238/            43/             key-users
+1095/           141/            24/             44/             keys
+11/             142/            244/            45/             kmsg
+110/            143/            245/            46/             kpagecount
+111/            1434/           248/            47/             kpageflags
+1111/           1439/           25/             5/              loadavg
+112/            144/            250/            533/            locks
+113/            145/            256/            55/             meminfo
+1131/           146/            257/            56/             misc
+1146/           147/            258/            560/            modules
+115/            148/            259/            57/             mounts
+116/            149/            26/             6/              mtd
+1166/           15/             260/            620/            net/
+117/            150/            261/            633/            pagetypeinfo
+118/            151/            264/            655/            partitions
+119/            152/            265/            7/              sched_debug
+1199/           153/            266/            730/            schedstat
+12/             155/            267/            797/            self/
+120/            156/            268/            8/              softirqs
+121/            157/            269/            9/              stat
+122/            158/            27/             951/            swaps
+1225/           159/            270/            968/            sys/
+123/            160/            271/            983/            sysrq-trigger
+124/            17/             272/            asound/         thread-self/
+1247/           18/             273/            buddyinfo       timer_list
+125/            19/             274/            bus/            timer_stats
+126/            2/              276/            cgroups         tty/
+1262/           20/             277/            cmdline         uptime
+127/            215/            278/            consoles        version
+128/            216/            28/             cpu/            vmallocinfo
+1288/           217/            29/             cpuinfo         vmstat
+129/            219/            3/              crypto          zoneinfo
+13/             22/             30/             device-tree/
+130/            221/            31/             devices
+sabresd_6dq:/ # cat /proc/                                                     
+1/              1302/           222/            32/             diskstats
+10/             131/            226/            33/             driver/
+1008/           132/            227/            34/             execdomains
+1028/           133/            228/            35/             fb
+104/            134/            229/            36/             filesystems
+105/            135/            23/             37/             fs/
+106/            138/            230/            38/             interrupts
+1061/           1385/           231/            39/             iomem
+1067/           139/            233/            40/             ioports
+107/            14/             234/            41/             irq/
+108/            140/            237/            42/             kallsyms
+109/            1402/           238/            43/             key-users
+1095/           141/            24/             44/             keys
+11/             142/            244/            45/             kmsg
+110/            143/            245/            46/             kpagecount
+111/            1434/           248/            47/             kpageflags
+1111/           1439/           25/             5/              loadavg
+112/            144/            250/            533/            locks
+113/            145/            256/            55/             meminfo
+1131/           146/            257/            56/             misc
+1146/           147/            258/            560/            modules
+115/            148/            259/            57/             mounts
+116/            149/            26/             6/              mtd
+1166/           15/             260/            620/            net/
+117/            150/            261/            633/            pagetypeinfo
+118/            151/            264/            655/            partitions
+119/            152/            265/            7/              sched_debug
+1199/           153/            266/            730/            schedstat
+12/             155/            267/            797/            self/
+120/            156/            268/            8/              softirqs
+121/            157/            269/            9/              stat
+122/            158/            27/             951/            swaps
+1225/           159/            270/            968/            sys/
+123/            160/            271/            983/            sysrq-trigger
+124/            17/             272/            asound/         thread-self/
+1247/           18/             273/            buddyinfo       timer_list
+125/            19/             274/            bus/            timer_stats
+126/            2/              276/            cgroups         tty/
+1262/           20/             277/            cmdline         uptime
+127/            215/            278/            consoles        version
+128/            216/            28/             cpu/            vmallocinfo
+1288/           217/            29/             cpuinfo         vmstat
+129/            219/            3/              crypto          zoneinfo
+13/             22/             30/             device-tree/
+130/            221/            31/             devices
+sabresd_6dq:/ # cat /proc/                                                     cp
+cpu/     cpuinfo
+sabresd_6dq:/ # cat /proc/cpu                                                  isabresd_6dq:/ # cat /proc/cpuinfo                                               
+processor	: 0
+model name	: ARMv7 Processor rev 10 (v7l)
+BogoMIPS	: 3.00
+Features	: half thumb fastmult vfp edsp neon vfpv3 tls vfpd32 
+CPU implementer	: 0x41
+CPU architecture: 7
+CPU variant	: 0x2
+CPU part	: 0xc09
+CPU revision	: 10
+
+processor	: 1
+model name	: ARMv7 Processor rev 10 (v7l)
+BogoMIPS	: 3.00
+Features	: half thumb fastmult vfp edsp neon vfpv3 tls vfpd32 
+CPU implementer	: 0x41
+CPU architecture: 7
+CPU variant	: 0x2
+CPU part	: 0xc09
+CPU revision	: 10
+
+processor	: 2
+model name	: ARMv7 Processor rev 10 (v7l)
+BogoMIPS	: 3.00
+Features	: half thumb fastmult vfp edsp neon vfpv3 tls vfpd32 
+CPU implementer	: 0x41
+CPU architecture: 7
+CPU variant	: 0x2
+CPU part	: 0xc09
+CPU revision	: 10
+
+processor	: 3
+model name	: ARMv7 Processor rev 10 (v7l)
+BogoMIPS	: 3.00
+Features	: half thumb fastmult vfp edsp neon vfpv3 tls vfpd32 
+CPU implementer	: 0x41
+CPU architecture: 7
+CPU variant	: 0x2
+CPU part	: 0xc09
+CPU revision	: 10
+
+Hardware	: Freescale i.MX6 Quad/DualLite (Device Tree)
+Revision	: 0000
+Serial		: 05146387
+sabresd_6dq:/ # sabresd_6dq:/ # cat /proc/cpuinfo                                               sabresd_6dq:/ # cat /proc/cpuinfo                                                       asabresd_6dq:/ # cat /proc/asound/                                              
+card0/              cards               imx6qapalissgtl/    pcm
+card1/              devices             imxhdmisoc/         timers
+card2/              hwdep               imxspdif/           version
+sabresd_6dq:/ # cat /proc/asound/                                              c
+card0/  card1/  card2/  cards
+sabresd_6dq:/ # cat /proc/asound/card                                          0sabresd_6dq:/ # cat /proc/asound/card0/                                        
+id      pcm0c/  pcm0p/
+sabresd_6dq:/ # cat /proc/asound/card0/                                        
+id      pcm0c/  pcm0p/
+sabresd_6dq:/ # cat /proc/asound/card0/                                        isabresd_6dq:/ # cat /proc/asound/card0/id                                       
+imx6qapalissgtl
+sabresd_6dq:/ # sabresd_6dq:/ # cat /proc/asound/card0/id                                                      
+1/              1302/           222/            32/             diskstats
+10/             131/            226/            33/             driver/
+1008/           132/            227/            34/             execdomains
+1028/           133/            228/            35/             fb
+104/            134/            229/            36/             filesystems
+105/            135/            23/             37/             fs/
+106/            138/            230/            38/             interrupts
+1061/           1385/           231/            39/             iomem
+1067/           139/            233/            40/             ioports
+107/            14/             234/            41/             irq/
+108/            140/            237/            42/             kallsyms
+109/            1402/           238/            43/             key-users
+1095/           141/            24/             44/             keys
+11/             142/            244/            45/             kmsg
+110/            143/            245/            46/             kpagecount
+111/            1434/           248/            47/             kpageflags
+1111/           1439/           25/             5/              loadavg
+112/            144/            250/            533/            locks
+113/            145/            256/            55/             meminfo
+1131/           146/            257/            56/             misc
+1146/           147/            258/            560/            modules
+115/            148/            259/            57/             mounts
+116/            149/            26/             6/              mtd
+1166/           15/             260/            620/            net/
+117/            150/            261/            633/            pagetypeinfo
+118/            151/            264/            655/            partitions
+119/            152/            265/            7/              sched_debug
+1199/           153/            266/            730/            schedstat
+12/             155/            267/            797/            self/
+120/            156/            268/            8/              softirqs
+121/            157/            269/            9/              stat
+122/            158/            27/             951/            swaps
+1225/           159/            270/            968/            sys/
+123/            160/            271/            983/            sysrq-trigger
+124/            17/             272/            asound/         thread-self/
+1247/           18/             273/            buddyinfo       timer_list
+125/            19/             274/            bus/            timer_stats
+126/            2/              276/            cgroups         tty/
+1262/           20/             277/            cmdline         uptime
+127/            215/            278/            consoles        version
+128/            216/            28/             cpu/            vmallocinfo
+1288/           217/            29/             cpuinfo         vmstat
+129/            219/            3/              crypto          zoneinfo
+13/             22/             30/             device-tree/
+130/            221/            31/             devices
+sabresd_6dq:/ # cat /proc/                                                     
+1/              1302/           222/            32/             diskstats
+10/             131/            226/            33/             driver/
+1008/           132/            227/            34/             execdomains
+1028/           133/            228/            35/             fb
+104/            134/            229/            36/             filesystems
+105/            135/            23/             37/             fs/
+106/            138/            230/            38/             interrupts
+1061/           1385/           231/            39/             iomem
+1067/           139/            233/            40/             ioports
+107/            14/             234/            41/             irq/
+108/            140/            237/            42/             kallsyms
+109/            1402/           238/            43/             key-users
+1095/           141/            24/             44/             keys
+11/             142/            244/            45/             kmsg
+110/            143/            245/            46/             kpagecount
+111/            1434/           248/            47/             kpageflags
+1111/           1439/           25/             5/              loadavg
+112/            144/            250/            533/            locks
+113/            145/            256/            55/             meminfo
+1131/           146/            257/            56/             misc
+1146/           147/            258/            560/            modules
+115/            148/            259/            57/             mounts
+116/            149/            26/             6/              mtd
+1166/           15/             260/            620/            net/
+117/            150/            261/            633/            pagetypeinfo
+118/            151/            264/            655/            partitions
+119/            152/            265/            7/              sched_debug
+1199/           153/            266/            730/            schedstat
+12/             155/            267/            797/            self/
+120/            156/            268/            8/              softirqs
+121/            157/            269/            9/              stat
+122/            158/            27/             951/            swaps
+1225/           159/            270/            968/            sys/
+123/            160/            271/            983/            sysrq-trigger
+124/            17/             272/            asound/         thread-self/
+1247/           18/             273/            buddyinfo       timer_list
+125/            19/             274/            bus/            timer_stats
+126/            2/              276/            cgroups         tty/
+1262/           20/             277/            cmdline         uptime
+127/            215/            278/            consoles        version
+128/            216/            28/             cpu/            vmallocinfo
+1288/           217/            29/             cpuinfo         vmstat
+129/            219/            3/              crypto          zoneinfo
+13/             22/             30/             device-tree/
+130/            221/            31/             devices
+sabresd_6dq:/ # cat /proc/                                                     upsabresd_6dq:/ # cat /proc/uptime                                                
+1711.51 6573.23
+sabresd_6dq:/ # sabresd_6dq:/ # cat /proc/uptime                                                      cmsabresd_6dq:/ # cat /proc/cmdline                                               
+console=ttymxc0,115200 init=/init video=mxcfb0:dev=ldb,fbpix=RGB32,bpp=32 video=mxcfb1:dev=hdmi,640x480M@60,if=RGB24,bpp=16 video=mxcfb2:off video=mxcfb3:off vmalloc=256M androidboot.console=ttymxc0 consoleblank=0 androidboot.hardware=freescale cma=448M androidboot.selinux=permissive androidboot.dm_verity=disabled buildvariant=user androidboot.serialno=1b2429d4ea997115 androidboot.storage_type=emmc
+sabresd_6dq:/ # sabresd_6dq:/ # cat /proc/cmdline                                                      devi
+device-tree/    devices
+sabresd_6dq:/ # cat /proc/device                                               -sabresd_6dq:/ # cat /proc/device-tree/                                         type=1400 audit(2192.830:42): avc: denied { getattr } for pid=257 comm="sh" path="/sys/firmware/devicetree/base/compatible" dev="sysfs" ino=68 scontext=u:r:shell:s0 tcontext=u:object_r:sysfs:s0 tclass=file permissive=1
+
+#address-cells                          model
+#size-cells                             name
+aliases/                                regulator-1p8v/
+backlight/                              regulator-2p5v/
+chosen/                                 regulator-3p3v/
+clocks/                                 regulator-usb-host-vbus-hub/
+compatible                              regulator-usb-host-vbus/
+cpus/                                   regulator-usb-otg-vbus/
+display-subsystem/                      serial-number
+fb@0/                                   soc/
+fb@1/                                   sound-hdmi/
+fb@2/                                   sound-spdif/
+fb@3/                                   sound/
+gpio-keys/                              toradex,board-rev
+gpu-subsystem/                          toradex,product-id
+i2c@0/                                  v4l2_cap_0/
+lcd@0/                                  v4l2_cap_2/
+leds/                                   v4l2_out/
+memory/                                 vdac@0/
+sabresd_6dq:/ # cat /proc/device-tree/                                         fb
+fb@0/  fb@1/  fb@2/  fb@3/
+sabresd_6dq:/ # cat /proc/device-tree/fb@                                      1sabresd_6dq:/ # cat /proc/device-tree/fb@1/                                    
+compatible          int_clk             mode_str
+default_bpp         interface_pix_fmt   name
+disp_dev            late_init           status
+sabresd_6dq:/ # cat /proc/device-tree/fb@1/                                    cosabresd_6dq:/ # cat /proc/device-tree/fb@1/compatible                           
+type=1400 audit(2207.890:43): avc: denied { read } for pid=257 comm="sh" name="compatible" dev="sysfs" ino=2279 scontext=u:r:shell:s0 tcontext=u:object_r:sysfs:s0 tclass=file permissive=1
+fsl,mxc_sdc_fbtype=1400 audit(2207.910:44): avc: denied { open } for pid=257 comm="sh" path="/sys/firmware/devicetree/base/fb@1/compatible" dev="sysfs" ino=2279 scontext=u:r:shell:s0 tcontext=u:object_r:sysfs:s0 tclass=file permissive=1
+sabresd_6dq:/ # 
+sabresd_6dq:/ # 
+sabresd_6dq:/ # sabresd_6dq:/ # cat /proc/device-tree/fb@1/compatible                          
+fsl,mxc_sdc_fbsabresd_6dq:/ # 
+sabresd_6dq:/ # 
+sabresd_6dq:/ # 
+sabresd_6dq:/ # sabresd_6dq:/ # cat /proc/device-tree/fb@1/compatible                          
+fsl,mxc_sdc_fbsabresd_6dq:/ # sabresd_6dq:/ # cat /proc/device-tree/fb@1/compatible                                     defat /proc/device-tree/fb@1/default_bpp                                         < 
+sabresd_6dq:/ # 
+sabresd_6dq:/ # 
+sabresd_6dq:/ # 
+sabresd_6dq:/ # sabresd_6dq:/ # cat /proc/device-tree/fb@1/default_bpp                         
+sabresd_6dq:/ # sabresd_6dq:/ # cat /proc/device-tree/fb@1/default_bpp                                           sabresd_6dq:/ # cat /proc/device-tree/                                         
+#address-cells                          model
+#size-cells                             name
+aliases/                                regulator-1p8v/
+backlight/                              regulator-2p5v/
+chosen/                                 regulator-3p3v/
+clocks/                                 regulator-usb-host-vbus-hub/
+compatible                              regulator-usb-host-vbus/
+cpus/                                   regulator-usb-otg-vbus/
+display-subsystem/                      serial-number
+fb@0/                                   soc/
+fb@1/                                   sound-hdmi/
+fb@2/                                   sound-spdif/
+fb@3/                                   sound/
+gpio-keys/                              toradex,board-rev
+gpu-subsystem/                          toradex,product-id
+i2c@0/                                  v4l2_cap_0/
+lcd@0/                                  v4l2_cap_2/
+leds/                                   v4l2_out/
+memory/                                 vdac@0/
+sabresd_6dq:/ # cat /proc/device-tree/                                                     
+1/              1302/           222/            32/             diskstats
+10/             131/            226/            33/             driver/
+1008/           132/            227/            34/             execdomains
+1028/           133/            228/            35/             fb
+104/            134/            229/            36/             filesystems
+105/            135/            23/             37/             fs/
+106/            138/            230/            38/             interrupts
+1061/           1385/           231/            39/             iomem
+1067/           139/            233/            40/             ioports
+107/            14/             234/            41/             irq/
+108/            140/            237/            42/             kallsyms
+109/            1402/           238/            43/             key-users
+1095/           141/            24/             44/             keys
+11/             142/            244/            45/             kmsg
+110/            143/            245/            46/             kpagecount
+111/            1434/           248/            47/             kpageflags
+1111/           1439/           25/             5/              loadavg
+112/            144/            250/            533/            locks
+113/            145/            256/            55/             meminfo
+1131/           146/            257/            56/             misc
+1146/           147/            258/            560/            modules
+115/            148/            259/            57/             mounts
+116/            149/            26/             6/              mtd
+1166/           15/             260/            620/            net/
+117/            150/            261/            633/            pagetypeinfo
+118/            151/            264/            655/            partitions
+119/            152/            265/            7/              sched_debug
+1199/           153/            266/            730/            schedstat
+12/             155/            267/            797/            self/
+120/            156/            268/            8/              softirqs
+121/            157/            269/            9/              stat
+122/            158/            27/             951/            swaps
+1225/           159/            270/            968/            sys/
+123/            160/            271/            983/            sysrq-trigger
+124/            17/             272/            asound/         thread-self/
+1247/           18/             273/            buddyinfo       timer_list
+125/            19/             274/            bus/            timer_stats
+126/            2/              276/            cgroups         tty/
+1262/           20/             277/            cmdline         uptime
+127/            215/            278/            consoles        version
+128/            216/            28/             cpu/            vmallocinfo
+1288/           217/            29/             cpuinfo         vmstat
+129/            219/            3/              crypto          zoneinfo
+13/             22/             30/             device-tree/
+130/            221/            31/             devices
+sabresd_6dq:/ # cat /proc/                                                     insabresd_6dq:/ # cat /proc/interrupts                                            
+           CPU0       CPU1       CPU2       CPU3       
+ 16:      50232      25920      20475      36589     GIC-0  29 Edge      twd
+ 17:       1011        555        290        731       GPC  55 Level     i.MX Timer Tick
+ 19:          0          0          0          0       GPC  20 Level     snvs-secvio
+ 20:      13585          0          0          0       GPC   9 Level   
+ 21:      11628          0          0          0       GPC  10 Level   
+ 22:         11          0          0          0       GPC  11 Level     galcore interrupt service for 2D
+ 26:       1512          0          0          0       GPC 115 Level     20e0000.hdmi_video, soc:hdmi_cec@00120000
+ 27:          0          0          0          0       GPC  52 Level     2004000.spdif
+ 28:          0          0          0          0       GPC  31 Level     2008000.ecspi
+ 29:       2695          0          0          0       GPC  26 Level     2020000.serial
+ 30:          0          0          0          0       GPC  46 Level     2028000.ssi
+ 31:          0          0          0          0       GPC  50 Level     2034000.asrc
+ 32:          0          0          0          0       GPC   3 Edge      VPU_JPG_IRQ
+ 33:          0          0          0          0       GPC  12 Level     VPU_CODEC_IRQ
+ 54:          0          0          0          0       GPC  80 Level     20bc000.wdog
+ 55:          0          0          0          0       GPC  49 Level     imx_thermal
+ 60:          0          0          0          0       GPC  19 Level     rtc alarm
+ 65:       7180          0          0          0       GPC   2 Level     sdma
+ 66:       1550          0          0          0       GPC  43 Level     2184000.usb
+ 67:      11370          0          0          0       GPC  40 Level     2184200.usb
+ 68:         63          0          0          0       GPC 118 Level     2188000.ethernet
+ 69:          0          0          0          0       GPC 119 Level     2188000.ethernet
+ 70:          0          0          0          0       GPC  22 Level     mmc1
+ 71:      71757          0          0          0       GPC  24 Level     mmc0
+ 72:          0          0          0          0       GPC  36 Level     21a0000.i2c
+ 73:        543          0          0          0       GPC  37 Level     21a4000.i2c
+ 74:          1          0          0          0       GPC  38 Level     21a8000.i2c
+ 77:          0          0          0          0       GPC  18 Level     vdoa
+ 78:          0          0          0          0       GPC  27 Level     21e8000.serial
+ 79:          0          0          0          0       GPC  29 Level     21f0000.serial
+ 80:          0          0          0          0       GPC  30 Level     21f4000.serial
+ 81:       5663          0          0          0       GPC   6 Level     2400000.ipu
+ 82:          0          0          0          0       GPC   5 Level     2400000.ipu
+ 83:          0          0          0          0       GPC 107 Level     mmdc_1
+ 84:          0          0          0          0       GPC 112 Level     mmdc_1
+ 85:          0          0          0          0       GPC 113 Level     mmdc_1
+ 86:          0          0          0          0       GPC 114 Level     mmdc_1
+ 87:          0          0          0          0       GPC  39 Level     ahci-imx[2200000.sata]
+ 88:       6033          0          0          0       GPC   8 Level     2800000.ipu
+ 89:          0          0          0          0       GPC   7 Level     2800000.ipu
+ 94:          0          0          0          0  gpio-mxc   4 Edge      Wake-Up
+120:          0          0          0          0  gpio-mxc  30 Level     phy_interrupt
+196:          0          0          0          0  gpio-mxc  10 Level     stmpe
+206:          0          0          0          0  gpio-mxc  20 Edge      2190000.usdhc cd
+315:          0          0          0          0     stmpe   1 Edge      stmpe-ts
+318:         14          0          0          0     GIC-0 137 Level     2101000.jr0
+319:          0          0          0          0     GIC-0 138 Level     2102000.jr1
+IPI0:          0          0          0          0  CPU wakeup interrupts
+IPI1:        176         76         45        208  Timer broadcast interrupts
+IPI2:      54308      79095      95124      67437  Rescheduling interrupts
+IPI3:        342        352         49        334  Function call interrupts
+IPI4:          0          0          0          0  CPU stop interrupts
+IPI5:      12369       5728       5960       5792  IRQ work interrupts
+IPI6:          0          0          0          0  completion interrupts
+Err:          0
+sabresd_6dq:/ # 
+sabresd_6dq:/ # sabresd_6dq:/ # cat /proc/interrupts                                           sabresd_6dq:/ # cat /proc/device-tree/fb@1/default_bpp                         sabresd_6dq:/ # cat /proc/interrupts                                                      
+1/              1302/           222/            32/             diskstats
+10/             131/            226/            33/             driver/
+1008/           132/            227/            34/             execdomains
+1028/           133/            228/            35/             fb
+104/            134/            229/            36/             filesystems
+105/            135/            23/             37/             fs/
+106/            138/            230/            38/             interrupts
+1061/           1385/           231/            39/             iomem
+1067/           139/            233/            40/             ioports
+107/            14/             234/            41/             irq/
+108/            140/            237/            42/             kallsyms
+109/            1402/           238/            43/             key-users
+1095/           141/            24/             44/             keys
+11/             142/            244/            45/             kmsg
+110/            143/            245/            46/             kpagecount
+111/            1434/           248/            47/             kpageflags
+1111/           1439/           25/             5/              loadavg
+112/            144/            250/            533/            locks
+113/            145/            256/            55/             meminfo
+1131/           146/            257/            56/             misc
+1146/           147/            258/            560/            modules
+115/            148/            259/            57/             mounts
+116/            149/            26/             6/              mtd
+1166/           15/             260/            620/            net/
+117/            150/            261/            633/            pagetypeinfo
+118/            151/            264/            655/            partitions
+119/            152/            265/            7/              sched_debug
+1199/           153/            266/            730/            schedstat
+12/             155/            267/            797/            self/
+120/            156/            268/            8/              softirqs
+121/            157/            269/            9/              stat
+122/            158/            27/             951/            swaps
+1225/           159/            270/            968/            sys/
+123/            160/            271/            983/            sysrq-trigger
+124/            17/             272/            asound/         thread-self/
+1247/           18/             273/            buddyinfo       timer_list
+125/            19/             274/            bus/            timer_stats
+126/            2/              276/            cgroups         tty/
+1262/           20/             277/            cmdline         uptime
+127/            215/            278/            consoles        version
+128/            216/            28/             cpu/            vmallocinfo
+1288/           217/            29/             cpuinfo         vmstat
+129/            219/            3/              crypto          zoneinfo
+13/             22/             30/             device-tree/
+130/            221/            31/             devices
+sabresd_6dq:/ # cat /proc/                                                     
+1/              1302/           222/            32/             diskstats
+10/             131/            226/            33/             driver/
+1008/           132/            227/            34/             execdomains
+1028/           133/            228/            35/             fb
+104/            134/            229/            36/             filesystems
+105/            135/            23/             37/             fs/
+106/            138/            230/            38/             interrupts
+1061/           1385/           231/            39/             iomem
+1067/           139/            233/            40/             ioports
+107/            14/             234/            41/             irq/
+108/            140/            237/            42/             kallsyms
+109/            1402/           238/            43/             key-users
+1095/           141/            24/             44/             keys
+11/             142/            244/            45/             kmsg
+110/            143/            245/            46/             kpagecount
+111/            1434/           248/            47/             kpageflags
+1111/           1439/           25/             5/              loadavg
+112/            144/            250/            533/            locks
+113/            145/            256/            55/             meminfo
+1131/           146/            257/            56/             misc
+1146/           147/            258/            560/            modules
+115/            148/            259/            57/             mounts
+116/            149/            26/             6/              mtd
+1166/           15/             260/            620/            net/
+117/            150/            261/            633/            pagetypeinfo
+118/            151/            264/            655/            partitions
+119/            152/            265/            7/              sched_debug
+1199/           153/            266/            730/            schedstat
+12/             155/            267/            797/            self/
+120/            156/            268/            8/              softirqs
+121/            157/            269/            9/              stat
+122/            158/            27/             951/            swaps
+1225/           159/            270/            968/            sys/
+123/            160/            271/            983/            sysrq-trigger
+124/            17/             272/            asound/         thread-self/
+1247/           18/             273/            buddyinfo       timer_list
+125/            19/             274/            bus/            timer_stats
+126/            2/              276/            cgroups         tty/
+1262/           20/             277/            cmdline         uptime
+127/            215/            278/            consoles        version
+128/            216/            28/             cpu/            vmallocinfo
+1288/           217/            29/             cpuinfo         vmstat
+129/            219/            3/              crypto          zoneinfo
+13/             22/             30/             device-tree/
+130/            221/            31/             devices
+sabresd_6dq:/ # cat /proc/                                                     memsabresd_6dq:/ # cat /proc/meminfo                                               
+MemTotal:        2058416 kB
+MemFree:          993880 kB
+MemAvailable:    1540908 kB
+Buffers:           23816 kB
+Cached:           576984 kB
+SwapCached:            0 kB
+Active:           536304 kB
+Inactive:         305148 kB
+Active(anon):     242276 kB
+Inactive(anon):     2616 kB
+Active(file):     294028 kB
+Inactive(file):   302532 kB
+Unevictable:         256 kB
+Mlocked:             256 kB
+HighTotal:       1318912 kB
+HighFree:         470132 kB
+LowTotal:         739504 kB
+LowFree:          523748 kB
+SwapTotal:        307196 kB
+SwapFree:         307196 kB
+Dirty:                 0 kB
+Writeback:             0 kB
+AnonPages:        240904 kB
+Mapped:           256116 kB
+Shmem:              4252 kB
+Slab:              30296 kB
+SReclaimable:      11880 kB
+SUnreclaim:        18416 kB
+KernelStack:        4432 kB
+PageTables:        18672 kB
+NFS_Unstable:          0 kB
+Bounce:                0 kB
+WritebackTmp:          0 kB
+CommitLimit:     1336404 kB
+Committed_AS:   18073244 kB
+VmallocTotal:     253952 kB
+VmallocUsed:           0 kB
+VmallocChunk:          0 kB
+CmaTotal:         458752 kB
+CmaFree:          306360 kB
+sabresd_6dq:/ # 
+sabresd_6dq:/ # cd /de  sys
+sys/     system/
+sabresd_6dq:/ # cd /sys                                                        /o posabresd_6dq:/ # cd /sys/power/                                                 type=1400 audit(2284.760:45): avc: denied { getattr } for pid=257 comm="sh" path="/sys/power/wake_unlock" dev="sysfs" ino=2489 scontext=u:r:shell:s0 tcontext=u:object_r:sysfs_wake_lock:s0 tclass=file permissive=1
+
+autosleep           pm_print_times      state               wakeup_count
+pm_async            pm_test             wake_lock
+pm_freeze_timeout   pm_wakeup_irq       wake_unlock
+sabresd_6dq:/ # cd /sys/power/                                                 
+sabresd_6dq:/sys/power # ls
+autosleep pm_freeze_timeout pm_test       state     wake_unlock  
+pm_async  pm_print_times    pm_wakeup_irq wake_lock wakeup_count 
+sabresd_6dq:/sys/power # 
+sabresd_6dq:/sys/power # 
+sabresd_6dq:/sys/power # echo "foo" > wa
+wake_lock       wake_unlock     wakeup_count
+sabresd_6dq:/sys/power # echo "foo" > wake                                     _lsabresd_6dq:/sys/power # echo "foo" > wake_lock                                 
+sabresd_6dq:/sys/power # type=1400 audit(2299.190:46): avc: denied { write } for pid=257 comm="sh" name="wake_lock" dev="sysfs" ino=2488 scontext=u:r:shell:s0 tcontext=u:object_r:sysfs_wake_lock:s0 tclass=file permissive=1
+type=1400 audit(2299.190:47): avc: denied { open } for pid=257 comm="sh" path="/sys/power/wake_lock" dev="sysfs" ino=2488 scontext=u:r:shell:s0 tcontext=u:object_r:sysfs_wake_lock:s0 tclass=file permissive=1
+type=1400 audit(2299.190:48): avc: denied { block_suspend } for pid=257 comm="sh" capability=36 scontext=u:r:shell:s0 tcontext=u:r:shell:s0 tclass=capability2 permissive=1
+
+sabresd_6dq:/sys/power # 
+sabresd_6dq:/sys/power # 
+sabresd_6dq:/sys/power # 
+sabresd_6dq:/sys/power # sabresd_6dq:/sys/power # echo "foo" > wake_lock                                
+sabresd_6dq:/sys/power # 
+sabresd_6dq:/sys/power # 
+sabresd_6dq:/sys/power # 
+sabresd_6dq:/sys/power # ls
+autosleep pm_freeze_timeout pm_test       state     wake_unlock  
+pm_async  pm_print_times    pm_wakeup_irq wake_lock wakeup_count 
+sabresd_6dq:/sys/power # cd ../
+block/     class/     devices/   fs/        kernel/    power/
+bus/       dev/       firmware/  fsl_otp/   module/
+sabresd_6dq:/sys/power # cd ../                                                clsabresd_6dq:/sys/power # cd ../class/                                          
+android_usb/    gpu_class/      mem/            pyra/           thermal/
+arvo/           graphics/       misc/           rc/             tty/
+ata_device/     hidraw/         mmc_host/       regulator/      ubi/
+ata_link/       hwmon/          mtd/            rfkill/         udc/
+ata_port/       i2c-dev/        mxc_hdmi/       rtc/            vc/
+backlight/      ieee80211/      mxc_hdmi_cec/   ryos/           video4linux/
+bdi/            input/          mxc_ipu/        savu/           vtconsole/
+block/          isku/           mxc_vpu/        scsi_device/    watchdog/
+bluetooth/      kone/           net/            scsi_disk/      xt_idletimer/
+dma/            koneplus/       power_supply/   scsi_host/      zram-control/
+drm/            konepure/       ppp/            sound/
+extcon/         kovaplus/       pps/            spi_master/
+firmware/       leds/           ptp/            spidev/
+gpio/           mdio_bus/       pwm/            switch/
+sabresd_6dq:/sys/power # cd ../class/                                          
+sabresd_6dq:/sys/class # ls
+android_usb drm       input    mmc_host     ptp         scsi_disk  vc           
+arvo        extcon    isku     mtd          pwm         scsi_host  video4linux  
+ata_device  firmware  kone     mxc_hdmi     pyra        sound      vtconsole    
+ata_link    gpio      koneplus mxc_hdmi_cec rc          spi_master watchdog     
+ata_port    gpu_class konepure mxc_ipu      regulator   spidev     xt_idletimer 
+backlight   graphics  kovaplus mxc_vpu      rfkill      switch     zram-control 
+bdi         hidraw    leds     net          rtc         thermal    
+block       hwmon     mdio_bus power_supply ryos        tty        
+bluetooth   i2c-dev   mem      ppp          savu        ubi        
+dma         ieee80211 misc     pps          scsi_device udc        
+sabresd_6dq:/sys/class # cd /
+sabresd_6dq:/ # 

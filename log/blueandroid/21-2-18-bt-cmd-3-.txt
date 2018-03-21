@@ -1,0 +1,315 @@
+NO CARRIER 0 ERROR 0 
+
+CALL 44:04:44:ee:03:df 111F HFPÿþtoradex_apalis6q:/ # 
+toradex_apalis6q:/ # 
+toradex_apalis6q:/ # 
+toradex_apalis6q:/ # 
+toradex_apalis6q:/ # cd /
+toradex_apalis6q:/ # toradex_apalis6q:/ # cd /                                                      toradex_apalis6q:/ # busybox microcom -s 115200 /dev/ttymxc4                   
+
+SYNTAX ERROR
+¢¢Ò‚¢Ò¢¢Ò*•é03:df 111F HFP
+SYNTAX ERROR
+CALL 44:04:44:ee:03:df 111F HFP
+CALL 0
+CONNECT 0 HFP 2
+NO CARRIER 0 ERROR 0 
+CALL 44:04:44:ee:03:df 111F HFP
+CALL 0
+CONNECT 0 HFP 2
+NO CARRIER 0 ERROR 0 
+CALL 44:04:44:ee:03:df 111F HFP
+CALL 0
+CONNECT 0 HFP 2
+NO CARRIER 0 ERROR 0 
+toradex_apalis6q:/ # 
+130|toradex_apalis6q:/ # 
+130|toradex_apalis6q:/ # 
+130|toradex_apalis6q:/ # 
+130|toradex_apalis6q:/ # 
+130|toradex_apalis6q:/ # 
+130|toradex_apalis6q:/ # 
+130|toradex_apalis6q:/ # cd /
+toradex_apalis6q:/ # 
+toradex_apalis6q:/ # kk  toradex_apalis6q:/ # cd /                                                      toradex_apalis6q:/ # busybox microcom -s 115200 /dev/ttymxc4                   toradex_apalis6q:/ # cd /                                                      toradex_apalis6q:/ # busybox microcom -s 115200 /dev/ttymxc4                    3
+SET
+SYNTAX ERROR
+set
+SET BT BDADDR 88:6b:0f:62:71:88
+SET BT NAME WT32i-AJ
+SET BT CLASS 001f00
+SET BT IDENT BT:47 f000 6.0.0 Bluegiga iWRAP
+SET BT LAP 9e8b33
+SET BT PAGEMODE 4 2000 1
+SET BT PAIR 01:01:01:01:05:76 24cbbd6fc7b23f10a26adb5ea75e7f7e
+SET BT POWER 6 6 6
+SET BT ROLE 0 f 2580
+SET BT SNIFF 0 20 1 8
+SET BT SSP 3 0
+SET BT MTU 667
+SET CONTROL AUDIO INTERNAL INTERNAL
+SET CONTROL BAUD 115200,8n1
+SET CONTROL CD 00 0
+SET CONTROL CODEC SBC JOINT_STEREO 44100 0
+SET CONTROL CONFIG 0000 0000 0000 1100
+SET CONTROL ECHO 7
+SET CONTROL ESCAPE 43 00 1
+SET CONTROL GAIN 8 8
+SET CONTROL MICBIAS b 0
+SET CONTROL MSC DTE 00 00 00 00 00 00
+SET CONTROL PIO 00 00 00
+SET CONTROL PREAMP 1 1
+SET CONTROL READY 00
+SET CONTROL VREGEN 0 00
+SET PROFILE SPP Bluetooth Serial Port
+SET
+INQUIRY 7 NAME
+INQUIRY_PARTIAL 01:01:01:01:05:76 240418
+INQUIRY_PARTIAL 88:6b:0f:62:71:86 001f00
+INQUIRY_PARTIAL 4c:49:e3:6e:06:92 5a020c
+INQUIRY_PARTIAL e4:46:da:28:66:02 5a020c
+INQUIRY_PARTIAL 00:1b:10:00:2a:ec 6e0100
+INQUIRY 5
+INQUIRY 01:01:01:01:05:76 240418
+INQUIRY 88:6b:0f:62:71:86 001f00
+INQUIRY 4c:49:e3:6e:06:92 5a020c
+INQUIRY e4:46:da:28:66:02 5a020c
+INQUIRY 00:1b:10:00:2a:ec 6e0100
+NAME 01:01:01:01:05:76 "Bluetooth music"
+NAME 88:6b:0f:62:71:86 "WT32i-A"
+NAME 4c:49:e3:6e:06:92 "Garg's Android"
+NAME e4:46:da:28:66:02 "SageRedmi"
+NAME 00:1b:10:00:2a:ec "emb-ban-227-0"
+pair 01:01:01:01:05:76
+PAIR 01:01:01:01:05:76 OK
+CALL 01:01:01:01:05:76  111F HFP
+CALL 0
+NO CARRIER 0 ERROR 1b04 SDC_NO_RESPONSE_DATA
+CALL 01:01:01:01:05:76  111F HFP
+CALL 0
+NO CARRIER 0 ERROR 1b04 SDC_NO_RESPONSE_DATA
+CALL 01:01:01:01:05:76  111E HFP-AG
+CALL 0
+CONNECT 0 HFP-AG 4
+AT+BRSF=023toradex_apalis6q:/ # 
+toradex_apalis6q:/ # 
+toradex_apalis6q:/ # 
+toradex_apalis6q:/ # toradex_apalis6q:/ # busybox microcom -s 115200 /dev/ttymxc3                   
+toradex_apalis6q:/ # 
+toradex_apalis6q:/ # 
+toradex_apalis6q:/ # 
+toradex_apalis6q:/ # capability: warning: `main' uses 32-bit capabilities (legacy support in use)
+init: write_file: Unable to open '/sys/devices/system/cpu/cpufreq/interactive/timer_rate': No such file or directory
+init: write_file: Unable to open '/sys/devices/system/cpu/cpufreq/interactive/min_sample_time': No such file or directory
+init: write_file: Unable to open '/sys/devices/system/cpu/cpufreq/interactive/go_hispeed_load': No such file or directory
+init: write_file: Unable to open '/proc/sys/vm/extra_free_kbytes': No such file or directory
+random: crng init done
+init: write_file: Unable to write to '/config/usb_gadget/g1/UDC': No such device
+acc_open
+acc_release
+Micrel KSZ9031 Gigabit PHY 2188000.ethernet-1:07: attached PHY driver [Micrel KSZ9031 Gigabit PHY] (mii_bus:phy_addr=2188000.ethernet-1:07, irq=120)
+IPv6: ADDRCONF(NETDEV_UP): eth0: link is not ready
+type=1400 audit(24.314:35): avc: denied { write } for pid=262 comm="obd" path="socket:[6995]" dev="sockfs" ino=6995 scontext=u:r:obd:s0 tcontext=u:r:obd:s0 tclass=socket permissive=1
+
+toradex_apalis6q:/ # 
+toradex_apalis6q:/ # 
+toradex_apalis6q:/ # init: Service 'bootanim' (pid 358) exited with status 0
+init: Starting service 'exec 3 (/system/bin/bootstat)'...
+type=1400 audit(30.234:36): avc: denied { write } for pid=262 comm="obd" path="socket:[6995]" dev="sockfs" ino=6995 scontext=u:r:obd:s0 tcontext=u:r:obd:s0 tclass=socket permissive=1
+init: Service 'exec 3 (/system/bin/bootstat)' (pid 955) exited with status 0
+init: Starting service 'exec 4 (/system/bin/bootstat)'...
+init: Service 'exec 4 (/system/bin/bootstat)' (pid 966) exited with status 0
+init: Starting service 'exec 5 (/system/bin/bootstat)'...
+init: Service 'exec 5 (/system/bin/bootstat)' (pid 968) exited with status 0
+init: Starting service 'exec 6 (/system/bin/bootstat)'...
+init: Service 'exec 6 (/system/bin/bootstat)' (pid 969) exited with status 0
+type=1400 audit(34.074:37): avc: denied { write } for pid=262 comm="obd" path="socket:[6995]" dev="sockfs" ino=6995 scontext=u:r:obd:s0 tcontext=u:r:obd:s0 tclass=socket permissive=1
+
+toradex_apalis6q:/ # 
+toradex_apalis6q:/ # 
+toradex_apalis6q:/ # type=1400 audit(35.884:38): avc: denied { write } for pid=1215 comm="Thread-2" name="vcan" dev="tmpfs" ino=11361 scontext=u:r:untrusted_app:s0:c512,c768 tcontext=u:object_r:socket_device:s0 tclass=sock_file permissive=1
+type=1400 audit(35.884:39): avc: denied { connectto } for pid=1215 comm="Thread-2" path="/dev/socket/vcan" scontext=u:r:untrusted_app:s0:c512,c768 tcontext=u:r:obd:s0 tclass=unix_stream_socket permissive=1
+
+toradex_apalis6q:/ # 
+toradex_apalis6q:/ # 
+toradex_apalis6q:/ # 
+toradex_apalis6q:/ # 
+toradex_apalis6q:/ # 
+toradex_apalis6q:/ # 
+toradex_apalis6q:/ # cd /
+toradex_apalis6q:/ # 
+toradex_apalis6q:/ # 
+toradex_apalis6q:/ # 
+toradex_apalis6q:/ # 
+toradex_apalis6q:/ # 
+toradex_apalis6q:/ # bustoradex_apalis6q:/ # busybox                                                    microcom -s 115200 /dev/ttymxc3
+SET
+SET BT BDADDR 88:6b:0f:62:71:88
+SET BT NAME WT32i-AJ
+SET BT CLASS 001f00
+SET BT IDENT BT:47 f000 6.0.0 Bluegiga iWRAP
+SET BT LAP 9e8b33
+SET BT PAGEMODE 4 2000 1
+SET BT PAIR 01:01:01:01:05:76 92618c171d196cbf67e487252aabc70a
+SET BT POWER 6 6 6
+SET BT ROLE 0 f 2580
+SET BT SNIFF 0 20 1 8
+SET BT SSP 3 0
+SET BT MTU 667
+SET CONTROL AUDIO INTERNAL INTERNAL
+SET CONTROL BAUD 115200,8n1
+SET CONTROL CD 00 0
+SET CONTROL CODEC SBC JOINT_STEREO 44100 0
+SET CONTROL CONFIG 0000 0000 0000 1100
+SET CONTROL ECHO 7
+SET CONTROL ESCAPE 43 00 1
+SET CONTROL GAIN 8 8
+SET CONTROL MICBIAS b 0
+SET CONTROL MSC DTE 00 00 00 00 00 00
+SET CONTROL PIO 00 00 00
+SET CONTROL PREAMP 1 1
+SET CONTROL READY 00
+SET CONTROL VREGEN 0 00
+SET PROFILE SPP Bluetooth Serial Port
+SET
+CALL 01:01:01:01:05:76  111E HFP-AG
+CALL 0
+NO CARRIER 0 ERROR b01 SDC_CONNECTION_FAILED
+CALL 01:01:01:01:05:76  111F HFP
+CALL 0
+NO CARRIER 0 ERROR 1b04 SDC_NO_RESPONSE_DATA
+CALL 01:01:01:01:05:76  111E HFP-AG
+CALL 0
+CONNECT 0 HFP-AG 4
+AT+BRSF=023toradex_apalis6q:/ # toradex_apalis6q:/ # busybox microcom -s 115200 /dev/ttymxc3                   
+toradex_apalis6q:/ # toradex_apalis6q:/ # busybox microcom -s 115200 /dev/ttymxc3                   
+toradex_apalis6q:/ # toradex_apalis6q:/ # busybox microcom -s 115200 /dev/ttymxc3                   
+toradex_apalis6q:/ # bustoradex_apalis6q:/ # busybox                                                    
+BusyBox v1.22.1 (2014-02-14 10:20:10 CST) multi-call binary.
+BusyBox is copyrighted by many authors between 1998-2012.
+Licensed under GPLv2. See source distribution for detailed
+copyright notices.
+
+Usage: busybox [function [arguments]...]
+   or: busybox --list[-full]
+   or: busybox --install [-s] [DIR]
+   or: function [arguments]...
+
+	BusyBox is a multi-call binary that combines many common Unix
+	utilities into a single executable.  Most people will create a
+	link to busybox for each function they wish to use and BusyBox
+	will act like whatever it was invoked as.
+
+Currently defined functions:
+	[, [[, acpid, add-shell, addgroup, adduser, adjtimex, arp, arping, ash,
+	awk, base64, basename, beep, blkid, blockdev, bootchartd, brctl,
+	bunzip2, bzcat, bzip2, cal, cat, catv, chat, chattr, chgrp, chmod,
+	chown, chpasswd, chpst, chroot, chrt, chvt, cksum, clear, cmp, comm,
+	conspy, cp, cpio, crond, crontab, cryptpw, cttyhack, cut, date, dc, dd,
+	deallocvt, delgroup, deluser, depmod, devmem, df, dhcprelay, diff,
+	dirname, dmesg, dnsd, dnsdomainname, dos2unix, du, dumpkmap,
+	dumpleases, echo, ed, egrep, eject, env, envdir, envuidgid, ether-wake,
+	expand, expr, fakeidentd, false, fbset, fbsplash, fdflush, fdformat,
+	fdisk, fgconsole, fgrep, find, findfs, flock, fold, free, freeramdisk,
+	fsck, fsck.minix, fstrim, fsync, ftpd, ftpget, ftpput, fuser, getopt,
+	getty, grep, groups, gunzip, gzip, halt, hd, hdparm, head, hexdump,
+	hostid, hostname, httpd, hush, hwclock, id, ifconfig, ifdown,
+	ifenslave, ifplugd, ifup, inetd, init, insmod, install, ionice, iostat,
+	ip, ipaddr, ipcalc, ipcrm, ipcs, iplink, iproute, iprule, iptunnel,
+	kbd_mode, kill, killall, killall5, klogd, last, less, linux32, linux64,
+	linuxrc, ln, loadfont, loadkmap, logger, login, logname, logread,
+	losetup, lpd, lpq, lpr, ls, lsattr, lsmod, lsof, lspci, lsusb, lzcat,
+	lzma, lzop, lzopcat, makedevs, makemime, man, md5sum, mdev, mesg,
+	microcom, mkdir, mkdosfs, mke2fs, mkfifo, mkfs.ext2, mkfs.minix,
+	mkfs.vfat, mknod, mkpasswd, mkswap, mktemp, modinfo, modprobe, more,
+	mount, mountpoint, mpstat, mt, mv, nameif, nanddump, nandwrite,
+	nbd-client, nc, netstat, nice, nmeter, nohup, nslookup, ntpd, od,
+	openvt, passwd, patch, pgrep, pidof, ping, ping6, pipe_progress,
+	pivot_root, pkill, pmap, popmaildir, poweroff, powertop, printenv,
+	printf, ps, pscan, pstree, pwd, pwdx, raidautorun, rdate, rdev,
+	readahead, readlink, readprofile, realpath, reboot, reformime,
+	remove-shell, renice, reset, resize, rev, rm, rmdir, rmmod, route, rpm,
+	rpm2cpio, rtcwake, run-parts, runlevel, runsv, runsvdir, rx, script,
+	scriptreplay, sed, sendmail, seq, setarch, setconsole, setfont,
+	setkeycodes, setlogcons, setserial, setsid, setuidgid, sh, sha1sum,
+	sha256sum, sha3sum, sha512sum, showkey, slattach, sleep, smemcap,
+	softlimit, sort, split, start-stop-daemon, stat, strings, stty, su,
+	sulogin, sum, sv, svlogd, swapoff, swapon, switch_root, sync, sysctl,
+	syslogd, tac, tail, tar, taskset, tcpsvd, tee, telnet, telnetd, test,
+	tftp, tftpd, time, timeout, top, touch, tr, traceroute, traceroute6,
+	true, tty, ttysize, tunctl, ubiattach, ubidetach, ubimkvol, ubirmvol,
+	ubirsvol, ubiupdatevol, udhcpc, udhcpd, udpsvd, umount, uname,
+	unexpand, uniq, unix2dos, unlzma, unlzop, unxz, unzip, uptime, users,
+	usleep, uudecode, uuencode, vconfig, vi, vlock, volname, wall, watch,
+	watchdog, wc, wget, which, who, whoami, whois, xargs, xz, xzcat, yes,
+	zcat, zcip
+
+toradex_apalis6q:/ # echo "CALL 01:01:01:01:05:76 19 A2DP" > /dev/ttymxc3
+toradex_apalis6q:/ # echo "CALL 01:01:01:01:05:76  17 AVRCP" > /dev/ttymxc3
+toradex_apalis6q:/ # toradex_apalis6q:/ # echo "CALL 01:01:01:01:05:76  17 AVRCP" > /dev/ttymxc3    toradex_apalis6q:/ # echo "CALL 01:01:01:01:05:76 19 A2DP" > /dev/ttymxc3      toradex_apalis6q:/ # busybox                                                   toradex_apalis6q:/ # busybox microcom -s 115200 /dev/ttymxc3                   
+toradex_apalis6q:/ # 
+toradex_apalis6q:/ # 
+toradex_apalis6q:/ # 
+toradex_apalis6q:/ # 
+toradex_apalis6q:/ # 
+toradex_apalis6q:/ # toradex_apalis6q:/ # busybox microcom -s 115200 /dev/ttymxc3                   
+toradex_apalis6q:/ # 
+toradex_apalis6q:/ # 
+toradex_apalis6q:/ # 
+toradex_apalis6q:/ # toradex_apalis6q:/ # busybox microcom -s 115200 /dev/ttymxc3                   toradex_apalis6q:/ # echo "CALL 01:01:01:01:05:76  17 AVRCP" > /dev/ttymxc3    toradex_apalis6q:/ # echo "CALL 01:01:01:01:05:76 19 A2DP" > /dev/ttymxc3      
+toradex_apalis6q:/ # toradex_apalis6q:/ # echo "CALL 01:01:01:01:05:76 19 A2DP" > /dev/ttymxc3      cecho "CALL 01:01:01:01:05:76 19 A2DP" > /dev/ttymxc3aecho "CALL 01:01:01:01:05:76 19 A2DP" > /dev/ttymxc3techo "CALL 01:01:01:01:05:76 19 A2DP" > /dev/ttymxc3 echo "CALL 01:01:01:01:05:76 19 A2DP" > /dev/ttymxc3/echo "CALL 01:01:01:01:05:76 19 A2DP" > /dev/ttymxc3decho "CALL 01:01:01:01:05:76 19 A2DP" > /dev/ttymxctoradex_apalis6q:/ # cat /decho "CALL 01:01:01:01:05:76 19 A2DP" > /dev/ttymxc>eecho "CALL 01:01:01:01:05:76 19 A2DP" > /dev/ttymxvecho "CALL 01:01:01:01:05:76 19 A2DP" > /dev/ttym/echo "CALL 01:01:01:01:05:76 19 A2DP" > /dev/ttytecho "CALL 01:01:01:01:05:76 19 A2DP" > /dev/tttecho "CALL 01:01:01:01:05:76 19 A2DP" > /dev/tyecho "CALL 01:01:01:01:05:76 19 A2DP" > /dev/echo "CALL 01:01:01:01:05:76 19 A2DP" > /dev/techo "CALL 01:01:01:01:05:76 19 A2DP" > /dev/ttecho "CALL 01:01:01:01:05:76 19 A2DP" > /dev/ttyecho "CALL 01:01:01:01:05:76 19 A2DP" > /dev/ttymecho "CALL 01:01:01:01:05:76 19 A2DP" > /dev/ttymxecho "CALL 01:01:01:01:05:76 19 A2DP" > /dev/ttymxcecho "CALL 01:01:01:01:05:76 19 A2DP" > /dev/ttymxc3 echo "CALL 01:01:01:01:05:76 19 A2DP" > /dev/ttymxc3  echo "CALL 01:01:01:01:05:76 19 A2DP" > /dev/ttymxc3 echo "CALL 01:01:01:01:05:76 19 A2DP" > /dev/ttymxc3 echo "CALL 01:01:01:01:05:76 19 A2DP" > /dev/ttymxc3 echo "CALL 01:01:01:01:05:76 19 A2DP" > /dev/ttymxc3 echo "CALL 01:01:01:01:05:76 19 A2DP" > /dev/ttymxc3 &   & ca "CALL 01:01:01:01:05:76 19 A2DP" > /dev/ttymxc3 & ca                         <t /dev/ttymxc3& cat /dev/ttymxc3
+
+
+^C
+130|toradex_apalis6q:/ # :01:05:76 19 A2DP" > /dev/ttymxc3 && cat /dev/ttymxc3                         <" > /dev/ttymxc3 && cat /dev/ttymxc3 " > /dev/ttymxc3 && cat /dev/ttymxc3 " > /dev/ttymxc3 && cat /dev/ttymxc3 " > /dev/ttymxc3 && cat /dev/ttymxc3 " > /dev/ttymxc3 && cat /dev/ttymxc3 " > /dev/ttymxc3 && cat /dev/ttymxc3 " > /dev/ttymxc3 && cat /dev/ttymxc3 " > /dev/ttymxc3 && cat /dev/ttymxc3 " > /dev/ttymxc3 && cat /dev/ttymxc3 " > /dev/ttymxc3 && cat /dev/ttymxc3 " > /dev/ttymxc3 && cat /dev/ttymxc3 " > /dev/ttymxc3 && cat /dev/ttymxc3 " > /dev/ttymxc3 && cat /dev/ttymxc3 " > /dev/ttymxc3 && cat /dev/ttymxc3 " > /dev/ttymxc3 && cat /dev/ttymxc3 " > /dev/ttymxc3 && cat /dev/ttymxc3 " > /dev/ttymxc3 && cat /dev/ttymxc3 130|toradex_apalis6q:/ # echo "CALL 01:01:01" > /dev/ttymxc3 && cat /dev/ttymx>" > /dev/ttymxc3 && cat /dev/ttymxc" > /dev/ttymxc3 && cat /dev/ttymxc3 " > /dev/ttymxc3 && cat /dev/ttymxc3  " > /dev/ttymxc3 && cat /dev/ttymxc3 " > /dev/ttymxc3 && cat /dev/ttymxc3 " > /dev/ttymxc3 && cat /dev/ttymxc3 " > /dev/ttymxc3 && cat /dev/ttymxc3 " > /dev/ttymxc3 && cat /dev/ttymxc3 " > /dev/ttymxc3 && cat /dev/ttymxc3 " > /dev/ttymxc3 && cat /dev/ttymxc3 " > /dev/ttymxc3 && cat /dev/ttymxc3 " > /dev/ttymxc3 && cat /dev/ttymxc3 " > /dev/ttymxc3 && cat /dev/ttymxc3 S" > /dev/ttymxc3 && cat /dev/ttymxc3E" > /dev/ttymxc3 && cat /dev/ttymxc3T" > /dev/ttymxc3 && cat /dev/ttymxc3
+^C
+130|toradex_apalis6q:/ # 130|toradex_apalis6q:/ # echo "SET" > /dev/ttymxc3 && cat /dev/ttymxc3         130|toradex_apalis6q:/ #                                                       130|toradex_apalis6q:/ # echo "SET" > /dev/ttymxc3 && cat /dev/ttymxc3          cat /dev/ttymxc3 
+[1] 1347
+
+
+
+
+^C
+[1] + Done                 echo "SET" >/dev/ttymxc3 
+130|toradex_apalis6q:/ # 
+130|toradex_apalis6q:/ # 
+130|toradex_apalis6q:/ # cd /
+toradex_apalis6q:/ # 
+toradex_apalis6q:/ # 
+toradex_apalis6q:/ # 
+toradex_apalis6q:/ # 
+toradex_apalis6q:/ # 
+toradex_apalis6q:/ # reboot
+sysrq: SysRq : Emergency Remount R/O
+EXT4-fs (mmcblk0p4): re-mounted. Opts: (null)
+EXT4-fs (mmcblk0p10): re-mounted. Opts: (null)
+Emergency Remount complete
+imx2-wdt 20bc000.wdog: Device shutdown: Expect reboot!
+ci_hdrc ci_hdrc.1: remove, state 1
+usb usb1: USB disconnect, device number 1
+usb 1-1: USB disconnect, device number 2
+usb 1-1.2: USB disconnect, device number 3
+ci_hdrc ci_hdrc.1: USB bus 1 deregistered
+android_work: did not send uevent (0 0   (null))
+reboot: Restarting system with command ''
+
+
+U-Boot 2017.03-00002-gebf9dc2527 (Jan 29 2018 - 17:39:17 +0530)
+
+CPU:   Freescale i.MX6Q rev1.5 at 792 MHz
+Reset cause: WDOG
+I2C:   ready
+DRAM:  2 GiB
+PMIC: device id: 0x10, revision id: 0x21
+PMIC: programmed
+MMC:   FSL_SDHC: 0, FSL_SDHC: 1, FSL_SDHC: 2
+Unable to allocate framebuffer memory
+In:    serial
+Out:   serial
+Err:   serial
+Model: Toradex Apalis iMX6 Quad 2GB IT V1.1C, Serial# 05146387
+flash target is MMC:0
+Net:   using PHY at 7
+FEC [PRIME]
+Fastboot: Normal
+Hit any key to stop autoboot:  1 

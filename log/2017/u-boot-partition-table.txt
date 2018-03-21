@@ -1,0 +1,57 @@
+-Boot 2017.03-dirty (Dec 15 2017 - 14:13:51 +0530)
+
+CPU:   Freescale i.MX6Q rev1.5 at 792 MHz
+Reset cause: POR
+I2C:   ready
+DRAM:  2 GiB
+PMIC: device id: 0x10, revision id: 0x21
+PMIC: programmed
+MMC:   FSL_SDHC: 0, FSL_SDHC: 1, FSL_SDHC: 2
+auto-detected panel vga-rgb
+Aravinth: Display: vga-rgb (640x480)
+In:    serial
+Out:   serial
+Err:   serial
+Model: Toradex Apalis iMX6 Quad 2GB IT V1.1C, Serial# 05146387
+flash target is MMC:0
+GPT: last_usable_lba incorrect: DFFFDE > 72c000
+GUID Partition Table Header signature is wrong: 0x0 != 0x5452415020494645
+part_get_info_efi: *** ERROR: Invalid Backup GPT ***
+Net:   using PHY at 7
+FEC [PRIME]
+can't find partition: misc, dump the partition table
+idx 0, ptn 0 name='gpt' start=0 len=2048
+idx 1, ptn 0 name='bootloader' start=2 len=2046
+idx 2, ptn 0 name='' start=0 len=0
+cannot get the partion info for misc
+GPT: last_usable_lba incorrect: DFFFDE > 72c000
+GUID Partition Table Header signature is wrong: 0x0 != 0x5452415020494645
+part_get_info_efi: *** ERROR: Invalid Backup GPT ***
+Cannot find partition 4080
+do_raw_read failed, ret 1
+read_bootctl, bcb_rw_block read failed
+read command failed
+Fastboot: Normal
+Hit any key to stop autoboot:  0
+Apalis iMX6 #
+Apalis iMX6 #
+Apalis iMX6 # setenv bootargs 'console=ttymxc0,115200 init=/init video=mxcfb0:dev=ldb,bpp=32 video=mxcfb1:off video=mxcfb2:off video=mxcfb3:off vmalloc=128M androidboot.console=ttymxc0 consoleblank=0 androidboot.hardware=freescale cma=448M'
+Unknown command 'setenv' - try 'help'
+Apalis iMX6 # sete
+  setenv setexpr
+Apalis iMX6 # setenv bootargs 'console=ttymxc0,115200 init=/init video=mxcfb0:dev=ldb,bpp=32 video=mxcfb1:off video=mxcfb2:off video=mxcfb3:off vmalloc=128M androidboot.console=ttymxc0 consoleblank=0 androidboot.hardware=freescale cma=448M'
+Apalis iMX6 # setenv bootcmd boota mmc0
+Apalis iMX6 #
+Unknown command '' - try 'help'
+Apalis iMX6 # setenv fastboot_dev mmc0
+Apalis iMX6 # saveenv
+Saving Environment to MMC...
+Writing to MMC(0)... done
+Apalis iMX6 # boot
+boota mmc0
+can't find partition: boot, dump the partition table
+idx 0, ptn 0 name='gpt' start=0 len=2048
+idx 1, ptn 0 name='bootloader' start=2 len=2046
+idx 2, ptn 0 name='' start=0 len=0
+boota: cannot find 'boot' partition
+

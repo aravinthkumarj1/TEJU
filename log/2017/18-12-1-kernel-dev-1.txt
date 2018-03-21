@@ -1,0 +1,40 @@
+
+
+U-Boot 2017.03-dirty (Dec 15 2017 - 14:13:51 +0530)
+
+CPU:   Freescale i.MX6Q rev1.5 at 792 MHz
+Reset cause: POR
+I2C:   ready
+DRAM:  2 GiB
+PMIC: device id: 0x10, revision id: 0x21
+PMIC: programmed
+MMC:   FSL_SDHC: 0, FSL_SDHC: 1, FSL_SDHC: 2
+auto-detected panel vga-rgb
+Aravinth: Display: vga-rgb (640x480)
+In:    serial
+Out:   serial
+Err:   serial
+Model: Toradex Apalis iMX6 Quad 2GB IT V1.1C, Serial# 05146387
+flash target is MMC:0
+Net:   using PHY at 7
+FEC [PRIME]
+Fastboot: Normal
+Hit any key to stop autoboot:  2  1  0 
+boota mmc0 
+CACHE: Misaligned operation at range [8ffb7060, 8ffb70e0]
+CACHE: Misaligned operation at range [8ffb7060, 8ffb70e0]
+kernel   @ 14008000 (5667920)
+ramdisk  @ 15000000 (1628348)
+fdt      @ 14f00000 (53917)
+## Booting Android Image at 0x12000000 ...
+Kernel load addr 0x14008000 size 5536 KiB
+Kernel command line: console=ttymxc0,115200 vmalloc=400M init=/init video=mxcfb0:dev=lcd,CLAA-WVGA,if=RGB666 video=mxcfb1:dev=hdmi,1920x1080M@60,if=RGB24 video=mxcfb2:off video=mxcfb3:off fbmem=10M,28M androidboot.console=ttymxc0 consoleblank=0 androidboot.hardware=freescale cma=384M no_console_suspend=1 calibration androidboot.serialno=1b2429d4ea997115 androidboot.storage_type=emmc
+## Flattened Device Tree blob at 14f00000
+   Booting using the fdt blob at 0x14f00000
+   Loading Kernel Image ... OK
+   Loading Ramdisk to 8ddbb000, end 8df488bc ... CACHE: Misaligned operation at range [8ddbb000, 8df488bc]
+OK
+   Loading Device Tree to 8ddaa000, end 8ddba29c ... OK
+
+Starting kernel ...
+

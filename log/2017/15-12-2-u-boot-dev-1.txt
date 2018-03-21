@@ -1,0 +1,1016 @@
+
+
+U-Boot 2017.03-dirty (Dec 15 2017 - 10:56:49 +0530)
+
+CPU:   Freescale i.MX6Q rev1.5 at 792 MHz
+Reset cause: POR
+I2C:   ready
+DRAM:  2 GiB
+PMIC: device id: 0x10, revision id: 0x21
+PMIC: programmed
+MMC:   FSL_SDHC: 0, FSL_SDHC: 1, FSL_SDHC: 2
+auto-detected panel vga-rgb
+Aravinth: Display: vga-rgb (640x480)
+In:    serial
+Out:   serial
+Err:   serial
+Model: Toradex Apalis iMX6 Quad 2GB IT V1.1C, Serial# 05146387
+unsupported boot devices
+Net:   using PHY at 7
+FEC [PRIME]
+can't find partition: misc, dump the partition table
+cannot get the partion info for misc
+Cannot find partition 4080
+do_raw_read failed, ret 1
+read_bootctl, bcb_rw_block read failed
+read command failed
+Fastboot: Normal
+Hit any key to stop autoboot:  1  0 
+Apalis iMX6 # run setupdate
+reading flash_blk.img
+710 bytes read in 13 ms (52.7 KiB/s)
+## Executing script at 12000000
+reading apalis_imx6/flash_blk.img
+3818 bytes read in 18 ms (207 KiB/s)
+## Executing script at 12000000
+enter "run update" or "run update_it" to update the uboot
+Apalis iMX6 # run update_uboot
+reading apalis_imx6/u-boot.imx
+375808 bytes read in 40 ms (9 MiB/s)
+switch to partitions #1, OK
+mmc0(part 1) is current device
+
+MMC write: dev # 0, block # 2, count 734 ... 734 blocks written: OK
+Fuse 0, 5:     5072
+Fast boot mode already fused, no need to fuse
+Apalis iMX6 # reboot
+Unknown command 'reboot' - try 'help'
+Apalis iMX6 # re
+Unknown command 're' - try 'help'
+Apalis iMX6 # re
+Unknown command 're' - try 'help'
+Apalis iMX6 # cd /
+Unknown command 'cd' - try 'help'
+Apalis iMX6 # re
+Unknown command 're' - try 'help'
+Apalis iMX6 # rese
+resetting ...
+
+
+U-Boot 2017.03-dirty (Dec 15 2017 - 14:13:51 +0530)
+
+CPU:   Freescale i.MX6Q rev1.5 at 792 MHz
+Reset cause: WDOG
+I2C:   ready
+DRAM:  2 GiB
+PMIC: device id: 0x10, revision id: 0x21
+PMIC: programmed
+MMC:   FSL_SDHC: 0, FSL_SDHC: 1, FSL_SDHC: 2
+auto-detected panel vga-rgb
+Aravinth: Display: vga-rgb (640x480)
+In:    serial
+Out:   serial
+Err:   serial
+Model: Toradex Apalis iMX6 Quad 2GB IT V1.1C, Serial# 05146387
+flash target is MMC:0
+Net:   using PHY at 7
+FEC [PRIME]
+can't find partition: misc, dump the partition table
+idx 0, ptn 0 name='gpt' start=0 len=2048
+idx 1, ptn 0 name='bootloader' start=2 len=2046
+idx 2, ptn 1 name='mmcsda1' start=16384 len=32768
+idx 3, ptn 2 name='mmcsda2' start=51200 len=32768
+idx 4, ptn 0 name='' start=0 len=0
+cannot get the partion info for misc
+Cannot find partition 4080
+do_raw_read failed, ret 1
+read_bootctl, bcb_rw_block read failed
+read command failed
+Fastboot: Normal
+Hit any key to stop autoboot:  1  0 
+Apalis iMX6 # date
+Unknown command 'date' - try 'help'
+Apalis iMX6 # ?
+?       - alias for 'help'
+askenv  - get environment variables from stdin
+base    - print or set address offset
+bdinfo  - print Board Info structure
+bmode   - mmc|sd|normal|usb|sata|ecspi1:0|ecspi1:1|ecspi1:2|ecspi1:3|esdhc1|esdhc2|esdhc3|esdhc4 [noreset]
+bmp     - manipulate BMP image data
+boot    - boot default, i.e., run 'bootcmd'
+boota   - boota   - boot android bootimg from memory
+
+bootd   - boot default, i.e., run 'bootcmd'
+bootm   - boot application image from memory
+bootp   - boot image via network using BOOTP/TFTP protocol
+bootz   - boot Linux zImage image from memory
+caam    - Freescale i.MX CAAM command
+cfgblock- Toradex config block handling commands
+clocks  - display clocks
+clrlogo - fill the boot logo area with black
+cmp     - memory compare
+coninfo - print console devices and information
+cp      - memory copy
+cpu     - Multiprocessor CPU boot manipulation and release
+crc32   - checksum calculation
+dcache  - enable or disable data cache
+dfu     - Device Firmware Upgrade
+dhcp    - boot image via network using DHCP/TFTP protocol
+dm      - Driver model low level access
+echo    - echo args to console
+editenv - edit environment variable
+env     - environment handling commands
+erase   - erase FLASH memory
+exit    - exit script
+ext4load- load binary file from a Ext4 filesystem
+ext4ls  - list files in a directory (default /)
+ext4size- determine a file's size
+false   - do nothing, unsuccessfully
+fastboot- use USB Fastboot protocol
+fatinfo - print information about filesystem
+fatload - load binary file from a dos filesystem
+fatls   - list files in a directory (default /)
+fatsize - determine a file's size
+fatwrite- write file into a dos filesystem
+fdt     - flattened device tree utility commands
+flinfo  - print FLASH memory information
+fstype  - Look up a filesystem type
+fuse    - Fuse sub-system
+go      - start application at address 'addr'
+gpio    - query and control gpio pins
+hdmidet - detect HDMI monitor
+help    - print command description/usage
+i2c     - I2C sub-system
+icache  - enable or disable instruction cache
+itest   - return true/false on integer compare
+load    - load binary file from a filesystem
+lock_status- lock_status
+loop    - infinite loop on address range
+ls      - list files in a directory (default /)
+md      - memory display
+mdio    - MDIO utility commands
+mfgr_fuse- OTP fusing during module production
+mii     - MII utility commands
+mm      - memory modify (auto-incrementing address)
+mmc     - MMC sub system
+mmcinfo - display MMC info
+mtest   - simple RAM read/write test
+mw      - memory write (fill)
+nm      - memory modify (constant address)
+pf0100_otp_prog- Program the OTP fuses on the PMIC PF0100
+ping    - send ICMP ECHO_REQUEST to network host
+printenv- print environment variables
+protect - enable or disable FLASH write protection
+read    - Load binary data from a partition
+reset   - Perform RESET of the CPU
+run     - run commands in an environment variable
+sata    - SATA sub system
+save    - save file to a filesystem
+saveenv - save environment variables to persistent storage
+setenv  - set environment variables
+setexpr - set environment variable as the result of eval expression
+showvar - print local hushshell variables
+size    - determine a file's size
+sleep   - delay execution for some time
+source  - run script from memory
+test    - minimal test like /bin/sh
+tftpboot- boot image via network using TFTP protocol
+time    - run commands and summarize execution time
+true    - do nothing, successfully
+ums     - Use the UMS [USB Mass Storage]
+updt_fuse- OTP fusing during module update
+usb     - USB sub-system
+usbboot - boot from USB device
+version - print monitor, compiler and linker version
+write   - write binary data to a partition
+Apalis iMX6 # boota mmc0
+boota mmc0 
+can't find partition: boot, dump the partition table
+idx 0, ptn 0 name='gpt' start=0 len=2048
+idx 1, ptn 0 name='bootloader' start=2 len=2046
+idx 2, ptn 1 name='mmcsda1' start=16384 len=32768
+idx 3, ptn 2 name='mmcsda2' start=51200 len=32768
+idx 4, ptn 0 name='' start=0 len=0
+boota: cannot find 'boot' partition
+
+
+U-Boot 2017.03-dirty (Dec 15 2017 - 14:13:51 +0530)
+
+CPU:   Freescale i.MX6Q rev1.5 at 792 MHz
+Reset cause: POR
+I2C:   ready
+DRAM:  2 GiB
+PMIC: device id: 0x10, revision id: 0x21
+PMIC: programmed
+MMC:   FSL_SDHC: 0, FSL_SDHC: 1, FSL_SDHC: 2
+auto-detected panel vga-rgb
+Aravinth: Display: vga-rgb (640x480)
+In:    serial
+Out:   serial
+Err:   serial
+Model: Toradex Apalis iMX6 Quad 2GB IT V1.1C, Serial# 05146387
+flash target is MMC:0
+Net:   using PHY at 7
+FEC [PRIME]
+can't find partition: misc, dump the partition table
+idx 0, ptn 0 name='gpt' start=0 len=2048
+idx 1, ptn 0 name='bootloader' start=2 len=2046
+idx 2, ptn 1 name='mmcsda1' start=16384 len=32768
+idx 3, ptn 2 name='mmcsda2' start=51200 len=32768
+idx 4, ptn 0 name='' start=0 len=0
+cannot get the partion info for misc
+Cannot find partition 4080
+do_raw_read failed, ret 1
+read_bootctl, bcb_rw_block read failed
+read command failed
+Fastboot: Normal
+Hit any key to stop autoboot:  1  0 
+Apalis iMX6 # boota mmc1
+boota mmc1 
+can't find partition: boot, dump the partition table
+idx 0, ptn 0 name='gpt' start=0 len=2048
+idx 1, ptn 0 name='bootloader' start=2 len=2046
+idx 2, ptn 1 name='mmcsda1' start=16384 len=32768
+idx 3, ptn 2 name='mmcsda2' start=51200 len=32768
+idx 4, ptn 0 name='' start=0 len=0
+boota: cannot find 'boot' partition
+
+
+U-Boot 2017.03-dirty (Dec 15 2017 - 14:13:51 +0530)
+
+CPU:   Freescale i.MX6Q rev1.5 at 792 MHz
+Reset cause: POR
+I2C:   ready
+DRAM:  2 GiB
+PMIC: device id: 0x10, revision id: 0x21
+PMIC: programmed
+MMC:   FSL_SDHC: 0, FSL_SDHC: 1, FSL_SDHC: 2
+auto-detected panel vga-rgb
+Aravinth: Display: vga-rgb (640x480)
+In:    serial
+Out:   serial
+Err:   serial
+Model: Toradex Apalis iMX6 Quad 2GB IT V1.1C, Serial# 05146387
+flash target is MMC:0
+Net:   using PHY at 7
+FEC [PRIME]
+can't find partition: misc, dump the partition table
+idx 0, ptn 0 name='gpt' start=0 len=2048
+idx 1, ptn 0 name='bootloader' start=2 len=2046
+idx 2, ptn 1 name='mmcsda1' start=16384 len=32768
+idx 3, ptn 2 name='mmcsda2' start=51200 len=32768
+idx 4, ptn 0 name='' start=0 len=0
+cannot get the partion info for misc
+Cannot find partition 4080
+do_raw_read failed, ret 1
+read_bootctl, bcb_rw_block read failed
+read command failed
+Fastboot: Normal
+Hit any key to stop autoboot:  1  0 
+Apalis iMX6 # boota mmc2
+boota mmc2 
+MMC: no card present
+mmc_init: -123, time 2
+** Block device MMC 2 not supported
+
+
+U-Boot 2017.03-dirty (Dec 15 2017 - 14:13:51 +0530)
+
+CPU:   Freescale i.MX6Q rev1.5 at 792 MHz
+Reset cause: POR
+I2C:   ready
+DRAM:  2 GiB
+PMIC: device id: 0x10, revision id: 0x21
+PMIC: programmed
+MMC:   FSL_SDHC: 0, FSL_SDHC: 1, FSL_SDHC: 2
+
+
+U-Boot 2017.03-dirty (Dec 15 2017 - 14:13:51 +0530)
+
+CPU:   Freescale i.MX6Q rev1.5 at 792 MHz
+Reset cause: POR
+I2C:   ready
+DRAM:  2 GiB
+PMIC: device id: 0x10, revision id: 0x21
+PMIC: programmed
+MMC:   FSL_SDHC: 0, FSL_SDHC: 1, FSL_SDHC: 2
+auto-detected panel vga-rgb
+Aravinth: Display: vga-rgb (640x480)
+In:    serial
+Out:   serial
+Err:   serial
+Model: Toradex Apalis iMX6 Quad 2GB IT V1.1C, Serial# 05146387
+flash target is MMC:0
+Net:   using PHY at 7
+FEC [PRIME]
+can't find partition: misc, dump the partition table
+idx 0, ptn 0 name='gpt' start=0 len=2048
+idx 1, ptn 0 name='bootloader' start=2 len=2046
+idx 2, ptn 1 name='mmcsda1' start=16384 len=32768
+idx 3, ptn 2 name='mmcsda2' start=51200 len=32768
+idx 4, ptn 0 name='' start=0 len=0
+cannot get the partion info for misc
+Cannot find partition 4080
+do_raw_read failed, ret 1
+read_bootctl, bcb_rw_block read failed
+read command failed
+Fastboot: Normal
+Hit any key to stop autoboot:  1  0 
+Apalis iMX6 # boota mmc3
+boota mmc3 
+MMC Device 3 not found
+boota: cannot find '3' mmc device
+
+
+U-Boot 2017.03-dirty (Dec 15 2017 - 14:13:51 +0530)
+
+CPU:   Freescale i.MX6Q rev1.5 at 792 MHz
+Reset cause: POR
+I2C:   ready
+DRAM:  2 GiB
+PMIC: device id: 0x10, revision id: 0x21
+PMIC: programmed
+MMC:   FSL_SDHC: 0, FSL_SDHC: 1, FSL_SDHC: 2
+
+
+U-Boot 2017.03-dirty (Dec 15 2017 - 14:13:51 +0530)
+
+CPU:   Freescale i.MX6Q rev1.5 at 792 MHz
+Reset cause: POR
+I2C:   ready
+DRAM:  2 GiB
+PMIC: device id: 0x10, revision id: 0x21
+PMIC: programmed
+MMC:   FSL_SDHC: 0, FSL_SDHC: 1, FSL_SDHC: 2
+auto-detected panel vga-rgb
+Aravinth: Display: vga-rgb (640x480)
+In:    serial
+Out:   serial
+Err:   serial
+Model: Toradex Apalis iMX6 Quad 2GB IT V1.1C, Serial# 05146387
+flash target is MMC:0
+Net:   using PHY at 7
+FEC [PRIME]
+can't find partition: misc, dump the partition table
+idx 0, ptn 0 name='gpt' start=0 len=2048
+idx 1, ptn 0 name='bootloader' start=2 len=2046
+idx 2, ptn 1 name='mmcsda1' start=16384 len=32768
+idx 3, ptn 2 name='mmcsda2' start=51200 len=32768
+idx 4, ptn 0 name='' start=0 len=0
+cannot get the partion info for misc
+Cannot find partition 4080
+do_raw_read failed, ret 1
+read_bootctl, bcb_rw_block read failed
+read command failed
+Fastboot: Normal
+Hit any key to stop autoboot:  1  0 
+Apalis iMX6 # boota mmc1
+boota mmc1 
+can't find partition: boot, dump the partition table
+idx 0, ptn 0 name='gpt' start=0 len=2048
+idx 1, ptn 0 name='bootloader' start=2 len=2046
+idx 2, ptn 1 name='mmcsda1' start=16384 len=32768
+idx 3, ptn 2 name='mmcsda2' start=51200 len=32768
+idx 4, ptn 0 name='' start=0 len=0
+boota: cannot find 'boot' partition
+
+
+U-Boot 2017.03-dirty (Dec 15 2017 - 14:13:51 +0530)
+
+CPU:   Freescale i.MX6Q rev1.5 at 792 MHz
+Reset cause: POR
+I2C:   ready
+DRAM:  2 GiB
+PMIC: device id: 0x10, revision id: 0x21
+PMIC: programmed
+MMC:   FSL_SDHC: 0, FSL_SDHC: 1, FSL_SDHC: 2
+
+
+U-Boot 2017.03-dirty (Dec 15 2017 - 14:13:51 +0530)
+
+CPU:   Freescale i.MX6Q rev1.5 at 792 MHz
+Reset cause: POR
+I2C:   ready
+DRAM:  2 GiB
+PMIC: device id: 0x10, revision id: 0x21
+PMIC: programmed
+MMC:   FSL_SDHC: 0, FSL_SDHC: 1, FSL_SDHC: 2
+auto-detected panel vga-rgb
+Aravinth: Display: vga-rgb (640x480)
+In:    serial
+Out:   serial
+Err:   serial
+Model: Toradex Apalis iMX6 Quad 2GB IT V1.1C, Serial# 05146387
+flash target is MMC:0
+Net:   using PHY at 7
+FEC [PRIME]
+can't find partition: misc, dump the partition table
+idx 0, ptn 0 name='gpt' start=0 len=2048
+idx 1, ptn 0 name='bootloader' start=2 len=2046
+idx 2, ptn 1 name='mmcsda1' start=16384 len=32768
+idx 3, ptn 2 name='mmcsda2' start=51200 len=32768
+idx 4, ptn 0 name='' start=0 len=0
+cannot get the partion info for misc
+Cannot find partition 4080
+do_raw_read failed, ret 1
+read_bootctl, bcb_rw_block read failed
+read command failed
+Fastboot: Normal
+Hit any key to stop autoboot:  1  0 
+Apalis iMX6 # boota mmc0          mmc dev 0
+switch to partitions #0, OK
+mmc0(part 0) is current device
+Apalis iMX6 # mmc info
+Device: FSL_SDHC
+Manufacturer ID: 13
+OEM: 14e
+Name: Q2J54 
+Tran Speed: 52000000
+Rd Block Len: 512
+MMC version 5.0
+High Capacity: Yes
+Capacity: 3.6 GiB
+Bus Width: 8-bit
+Erase Group Size: 512 KiB
+HC WP Group Size: 8 MiB
+User Capacity: 3.6 GiB WRREL
+Boot Capacity: 16 MiB ENH
+RPMB Capacity: 512 KiB ENH
+Apalis iMX6 # mmc dev 1
+switch to partitions #0, OK
+mmc1 is current device
+Apalis iMX6 # mmc info
+Device: FSL_SDHC
+Manufacturer ID: 74
+OEM: 4a60
+Name: USD   
+Tran Speed: 50000000
+Rd Block Len: 512
+SD version 3.0
+High Capacity: Yes
+Capacity: 7.5 GiB
+Bus Width: 4-bit
+Erase Group Size: 512 Bytes
+Apalis iMX6 # 
+Apalis iMX6 # 
+Apalis iMX6 # 
+Apalis iMX6 # 
+Apalis iMX6 # mmc dev 0
+switch to partitions #0, OK
+mmc0(part 0) is current device
+Apalis iMX6 # mmc info
+Device: FSL_SDHC
+Manufacturer ID: 13
+OEM: 14e
+Name: Q2J54 
+Tran Speed: 52000000
+Rd Block Len: 512
+MMC version 5.0
+High Capacity: Yes
+Capacity: 3.6 GiB
+Bus Width: 8-bit
+Erase Group Size: 512 KiB
+HC WP Group Size: 8 MiB
+User Capacity: 3.6 GiB WRREL
+Boot Capacity: 16 MiB ENH
+RPMB Capacity: 512 KiB ENH
+Apalis iMX6 # boot mmc    a mmc0
+boota mmc0 
+can't find partition: boot, dump the partition table
+idx 0, ptn 0 name='gpt' start=0 len=2048
+idx 1, ptn 0 name='bootloader' start=2 len=2046
+idx 2, ptn 1 name='mmcsda1' start=16384 len=32768
+idx 3, ptn 2 name='mmcsda2' start=51200 len=32768
+idx 4, ptn 0 name='' start=0 len=0
+boota: cannot find 'boot' partition
+
+
+U-Boot 2017.03-dirty (Dec 15 2017 - 14:13:51 +0530)
+
+CPU:   Freescale i.MX6Q rev1.5 at 792 MHz
+Reset cause: POR
+I2C:   ready
+DRAM:  2 GiB
+PMIC: device id: 0x10, revision id: 0x21
+PMIC: programmed
+MMC:   FSL_SDHC: 0, FSL_SDHC: 1, FSL_SDHC: 2
+auto-detected panel vga-rgb
+Aravinth: Display: vga-rgb (640x480)
+In:    serial
+Out:   serial
+Err:   serial
+Model: Toradex Apalis iMX6 Quad 2GB IT V1.1C, Serial# 05146387
+flash target is MMC:0
+Net:   using PHY at 7
+FEC [PRIME]
+can't find partition: misc, dump the partition table
+idx 0, ptn 0 name='gpt' start=0 len=2048
+idx 1, ptn 0 name='bootloader' start=2 len=2046
+idx 2, ptn 1 name='mmcsda1' start=16384 len=32768
+idx 3, ptn 2 name='mmcsda2' start=51200 len=32768
+idx 4, ptn 0 name='' start=0 len=0
+cannot get the partion info for misc
+Cannot find partition 4080
+do_raw_read failed, ret 1
+read_bootctl, bcb_rw_block read failed
+read command failed
+Fastboot: Normal
+Hit any key to stop autoboot:  1  0 
+Booting from internal eMMC chip...
+Failed to mount ext2 filesystem...
+** Unrecognized filesystem type **
+Failed to mount ext2 filesystem...
+** Unrecognized filesystem type **
+
+emmcboot failed
+Booting via DHCP/TFTP/NFS...
+FEC Waiting for PHY auto negotiation to complete......... TIMEOUT !
+Could not initialize PHY FEC
+Using FEC device
+TFTP from server 192.168.10.1; our IP address is 192.168.10.2
+Filename 'imx6q-apalis-eval.dtb'.
+Load address: 0x12000000
+Loading: *
+
+U-Boot 2017.03-dirty (Dec 15 2017 - 14:13:51 +0530)
+
+CPU:   Freescale i.MX6Q rev1.5 at 792 MHz
+Reset cause: POR
+I2C:   ready
+DRAM:  2 GiB
+PMIC: device id: 0x10, revision id: 0x21
+PMIC: programmed
+MMC:   FSL_SDHC: 0, FSL_SDHC: 1, FSL_SDHC: 2
+auto-detected panel vga-rgb
+Aravinth: Display: vga-rgb (640x480)
+In:    serial
+Out:   serial
+Err:   serial
+Model: Toradex Apalis iMX6 Quad 2GB IT V1.1C, Serial# 05146387
+flash target is MMC:0
+Net:   using PHY at 7
+FEC [PRIME]
+can't find partition: misc, dump the partition table
+idx 0, ptn 0 name='gpt' start=0 len=2048
+idx 1, ptn 0 name='bootloader' start=2 len=2046
+idx 2, ptn 1 name='mmcsda1' start=16384 len=32768
+idx 3, ptn 2 name='mmcsda2' start=51200 len=32768
+idx 4, ptn 0 name='' start=0 len=0
+cannot get the partion info for misc
+Cannot find partition 4080
+do_raw_read failed, ret 1
+read_bootctl, bcb_rw_block read failed
+read command failed
+Fastboot: Normal
+Hit any key to stop autoboot:  1  0
+Apalis iMX6 # 
+Apalis iMX6 # 
+Apalis iMX6 # 
+Apalis iMX6 # bmode usb
+resetting ...
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+U-Boot 2017.03-dirty (Dec 15 2017 - 14:13:51 +0530)
+
+CPU:   Freescale i.MX6Q rev1.5 at 792 MHz
+Reset cause: POR
+I2C:   ready
+DRAM:  2 GiB
+PMIC: device id: 0x10, revision id: 0x21
+PMIC: programmed
+MMC:   FSL_SDHC: 0, FSL_SDHC: 1, FSL_SDHC: 2
+auto-detected panel vga-rgb
+Aravinth: Display: vga-rgb (640x480)
+In:    serial
+Out:   serial
+Err:   serial
+Model: Toradex Apalis iMX6 Quad 2GB IT V1.1C, Serial# 05146387
+flash target is MMC:0
+Net:   using PHY at 7
+FEC [PRIME]
+can't find partition: misc, dump the partition table
+idx 0, ptn 0 name='gpt' start=0 len=2048
+idx 1, ptn 0 name='bootloader' start=2 len=2046
+idx 2, ptn 1 name='mmcsda1' start=16384 len=32768
+idx 3, ptn 2 name='mmcsda2' start=51200 len=32768
+idx 4, ptn 0 name='' start=0 len=0
+cannot get the partion info for misc
+Cannot find partition 4080
+do_raw_read failed, ret 1
+read_bootctl, bcb_rw_block read failed
+read command failed
+Fastboot: Normal
+Hit any key to stop autoboot:  1  0 
+Apalis iMX6 # ?
+?       - alias for 'help'
+askenv  - get environment variables from stdin
+base    - print or set address offset
+bdinfo  - print Board Info structure
+bmode   - mmc|sd|normal|usb|sata|ecspi1:0|ecspi1:1|ecspi1:2|ecspi1:3|esdhc1|esdhc2|esdhc3|esdhc4 [noreset]
+bmp     - manipulate BMP image data
+boot    - boot default, i.e., run 'bootcmd'
+boota   - boota   - boot android bootimg from memory
+
+bootd   - boot default, i.e., run 'bootcmd'
+bootm   - boot application image from memory
+bootp   - boot image via network using BOOTP/TFTP protocol
+bootz   - boot Linux zImage image from memory
+caam    - Freescale i.MX CAAM command
+cfgblock- Toradex config block handling commands
+clocks  - display clocks
+clrlogo - fill the boot logo area with black
+cmp     - memory compare
+coninfo - print console devices and information
+cp      - memory copy
+cpu     - Multiprocessor CPU boot manipulation and release
+crc32   - checksum calculation
+dcache  - enable or disable data cache
+dfu     - Device Firmware Upgrade
+dhcp    - boot image via network using DHCP/TFTP protocol
+dm      - Driver model low level access
+echo    - echo args to console
+editenv - edit environment variable
+env     - environment handling commands
+erase   - erase FLASH memory
+exit    - exit script
+ext4load- load binary file from a Ext4 filesystem
+ext4ls  - list files in a directory (default /)
+ext4size- determine a file's size
+false   - do nothing, unsuccessfully
+fastboot- use USB Fastboot protocol
+fatinfo - print information about filesystem
+fatload - load binary file from a dos filesystem
+fatls   - list files in a directory (default /)
+fatsize - determine a file's size
+fatwrite- write file into a dos filesystem
+fdt     - flattened device tree utility commands
+flinfo  - print FLASH memory information
+fstype  - Look up a filesystem type
+fuse    - Fuse sub-system
+go      - start application at address 'addr'
+gpio    - query and control gpio pins
+hdmidet - detect HDMI monitor
+help    - print command description/usage
+i2c     - I2C sub-system
+icache  - enable or disable instruction cache
+itest   - return true/false on integer compare
+load    - load binary file from a filesystem
+lock_status- lock_status
+loop    - infinite loop on address range
+ls      - list files in a directory (default /)
+md      - memory display
+mdio    - MDIO utility commands
+mfgr_fuse- OTP fusing during module production
+mii     - MII utility commands
+mm      - memory modify (auto-incrementing address)
+mmc     - MMC sub system
+mmcinfo - display MMC info
+mtest   - simple RAM read/write test
+mw      - memory write (fill)
+nm      - memory modify (constant address)
+pf0100_otp_prog- Program the OTP fuses on the PMIC PF0100
+ping    - send ICMP ECHO_REQUEST to network host
+printenv- print environment variables
+protect - enable or disable FLASH write protection
+read    - Load binary data from a partition
+reset   - Perform RESET of the CPU
+run     - run commands in an environment variable
+sata    - SATA sub system
+save    - save file to a filesystem
+saveenv - save environment variables to persistent storage
+setenv  - set environment variables
+setexpr - set environment variable as the result of eval expression
+showvar - print local hushshell variables
+size    - determine a file's size
+sleep   - delay execution for some time
+source  - run script from memory
+test    - minimal test like /bin/sh
+tftpboot- boot image via network using TFTP protocol
+time    - run commands and summarize execution time
+true    - do nothing, successfully
+ums     - Use the UMS [USB Mass Storage]
+updt_fuse- OTP fusing during module update
+usb     - USB sub-system
+usbboot - boot from USB device
+version - print monitor, compiler and linker version
+write   - write binary data to a partition
+Apalis iMX6 # pri
+arch=arm
+baudrate=115200
+board=apalis_imx6
+board_name=apalis_imx6
+board_rev=011c
+boot_file=uImage
+bootcmd=run emmcboot ; echo ; echo emmcboot failed ; run nfsboot ; echo ; echo nfsboot failed ; usb start ;setenv stdout serial,vga ; setenv stdin serial,usbkbd
+bootdelay=1
+console=ttymxc0
+cpu=armv7
+defargs=enable_wait_mode=off vmalloc=400M
+dfu_alt_info=u-boot.imx raw 0x2 0x3ff mmcpart 0;boot part 0 1;rootfs part 0 2;uImage fat 0 1;imx6q-colibri-eval-v3.dtb fat 0 1;imx6q-colibri-cam-eval-v3.dtb fat 0 1
+emmcargs=ip=off root=/dev/mmcblk0p2 rw,noatime rootfstype=ext3 rootwait
+emmcboot=run setup; setenv bootargs ${defargs} ${emmcargs} ${setupargs} ${vidargs}; echo Booting from internal eMMC chip...; run emmcdtbload; load mmc 0:1 ${kernel_addr_r} ${boot_file} && run fdt_fixup && bootm ${kernel_addr_r} ${dtbparam}
+emmcdtbload=setenv dtbparam; load mmc 0:1 ${fdt_addr_r} ${fdt_file} && setenv dtbparam " - ${fdt_addr_r}" && true
+ethact=FEC
+ethaddr=00:14:2d:4e:87:13
+ethprime=FEC
+fastboot_dev=mmc0
+fdt_addr_r=0x12000000
+fdt_file=imx6q-apalis-eval.dtb
+fdt_fixup=;
+fdt_high=0xffffffff
+initrd_high=0xffffffff
+ipaddr=192.168.10.2
+kernel_addr_r=0x11000000
+loadaddr=0x12000000
+netmask=255.255.255.0
+nfsargs=ip=:::::eth0:on root=/dev/nfs rw
+nfsboot=run setup; setenv bootargs ${defargs} ${nfsargs} ${setupargs} ${vidargs}; echo Booting via DHCP/TFTP/NFS...; run nfsdtbload; dhcp ${kernel_addr_r} && run fdt_fixup && bootm ${kernel_addr_r} ${dtbparam}
+nfsdtbload=setenv dtbparam; tftp ${fdt_addr_r} ${fdt_file} && setenv dtbparam " - ${fdt_addr_r}" && true
+ramdisk_addr_r=0x12100000
+sdargs=ip=off root=/dev/mmcblk1p2 rw,noatime rootfstype=ext3 rootwait
+sdboot=run setup; setenv bootargs ${defargs} ${sdargs} ${setupargs} ${vidargs}; echo Booting from SD card; run sddtbload; load mmc 1:1 ${kernel_addr_r} ${boot_file} && run fdt_fixup && bootm ${kernel_addr_r} ${dtbparam}
+sddtbload=setenv dtbparam; load mmc 1:1 ${fdt_addr_r} ${fdt_file} && setenv dtbparam " - ${fdt_addr_r}" && true
+serial#=05146387
+serverip=192.168.10.1
+setethupdate=if env exists ethaddr; then; else setenv ethaddr 00:14:2d:00:00:00; fi; tftpboot ${loadaddr} flash_eth.img && source ${loadaddr}
+setsdupdate=setenv interface mmc; setenv drive 1; mmc rescan; load ${interface} ${drive}:1 ${loadaddr} flash_blk.img && source ${loadaddr}
+setup=setenv setupargs fec_mac=${ethaddr} consoleblank=0 no_console_suspend=1 console=tty1 console=${console},${baudrate}n8
+setupdate=run setsdupdate || run setusbupdate || run setethupdate
+setusbupdate=usb start && setenv interface usb; setenv drive 0; load ${interface} ${drive}:1 ${loadaddr} flash_blk.img && source ${loadaddr}
+soc=mx6
+splashpos=m,m
+vendor=toradex
+ver=U-Boot 2017.03-dirty (Dec 15 2017 - 14:13:51 +0530)
+vidargs=mxc_hdmi.only_cea=1 video=mxcfb0:dev=hdmi,1920x1080M@60,if=RGB24 video=mxcfb1:off video=mxcfb2:off video=mxcfb3:off fbmem=32M
+
+Environment size: 2950/8188 bytes
+Apalis iMX6 # env default -f -a
+## Resetting to default environment
+Apalis iMX6 # env save
+Saving Environment to MMC...
+Writing to MMC(0)... done
+Apalis iMX6 # saveenv
+Saving Environment to MMC...
+Writing to MMC(0)... done
+Apalis iMX6 # setenv bootargs 'console=ttymxc0,115200 init=/init video=mxcfb0:dev=ldb,bpp=32 video=mxcfb1:off video=mxcfb2:off video=mxcfb3:off vmalloc=128M androidboot.console=ttymxc0 consoleblank=0 androidboot.hardware=freescale cma=448M'
+Apalis iMX6 # 
+Apalis iMX6 # setenv fastboot_dev mmc0
+Apalis iMX6 # setenv bootcmd boota mmc0
+Apalis iMX6 # saveenv
+Saving Environment to MMC...
+Writing to MMC(0)... done
+Apalis iMX6 # boot
+boota mmc0 
+can't find partition: boot, dump the partition table
+idx 0, ptn 0 name='gpt' start=0 len=2048
+idx 1, ptn 0 name='bootloader' start=2 len=2046
+idx 2, ptn 1 name='mmcsda1' start=16384 len=32768
+idx 3, ptn 2 name='mmcsda2' start=51200 len=32768
+idx 4, ptn 0 name='' start=0 len=0
+boota: cannot find 'boot' partition
+
+
+U-Boot 2017.03-dirty (Dec 15 2017 - 14:13:51 +0530)
+
+CPU:   Freescale i.MX6Q rev1.5 at 792 MHz
+Reset cause: POR
+I2C:   ready
+DRAM:  2 GiB
+PMIC: device id: 0x10, revision id: 0x21
+PMIC: programmed
+MMC:   FSL_SDHC: 0, FSL_SDHC: 1, FSL_SDHC: 2
+auto-detected panel vga-rgb
+Aravinth: Display: vga-rgb (640x480)
+In:    serial
+Out:   serial
+Err:   serial
+Model: Toradex Apalis iMX6 Quad 2GB IT V1.1C, Serial# 05146387
+flash target is MMC:0
+GPT: last_usable_lba incorrect: DFFFDE > 72c000
+GUID Partition Table Header signature is wrong: 0x0 != 0x5452415020494645
+part_get_info_efi: *** ERROR: Invalid Backup GPT ***
+Net:   using PHY at 7
+FEC [PRIME]
+can't find partition: misc, dump the partition table
+idx 0, ptn 0 name='gpt' start=0 len=2048
+idx 1, ptn 0 name='bootloader' start=2 len=2046
+idx 2, ptn 0 name='' start=0 len=0
+cannot get the partion info for misc
+GPT: last_usable_lba incorrect: DFFFDE > 72c000
+GUID Partition Table Header signature is wrong: 0x0 != 0x5452415020494645
+part_get_info_efi: *** ERROR: Invalid Backup GPT ***
+Cannot find partition 4080
+do_raw_read failed, ret 1
+read_bootctl, bcb_rw_block read failed
+read command failed
+Fastboot: Normal
+Hit any key to stop autoboot:  1  0 
+Apalis iMX6 # boota mmc1
+boota mmc1 
+MMC: no card present
+mmc_init: -123, time 2
+** Block device MMC 1 not supported
+
+
+U-Boot 2017.03-dirty (Dec 15 2017 - 14:13:51 +0530)
+
+CPU:   Freescale i.MX6Q rev1.5 at 792 MHz
+Reset cause: POR
+I2C:   ready
+DRAM:  2 GiB
+PMIC: device id: 0x10, revision id: 0x21
+PMIC: programmed
+MMC:   FSL_SDHC: 0, FSL_SDHC: 1, FSL_SDHC: 2
+auto-detected panel vga-rgb
+Aravinth: Display: vga-rgb (640x480)
+In:    serial
+Out:   serial
+Err:   serial
+Model: Toradex Apalis iMX6 Quad 2GB IT V1.1C, Serial# 05146387
+flash target is MMC:0
+GPT: last_usable_lba incorrect: DFFFDE > 72c000
+GUID Partition Table Header signature is wrong: 0x0 != 0x5452415020494645
+part_get_info_efi: *** ERROR: Invalid Backup GPT ***
+Net:   using PHY at 7
+FEC [PRIME]
+can't find partition: misc, dump the partition table
+idx 0, ptn 0 name='gpt' start=0 len=2048
+idx 1, ptn 0 name='bootloader' start=2 len=2046
+idx 2, ptn 0 name='' start=0 len=0
+cannot get the partion info for misc
+GPT: last_usable_lba incorrect: DFFFDE > 72c000
+GUID Partition Table Header signature is wrong: 0x0 != 0x5452415020494645
+part_get_info_efi: *** ERROR: Invalid Backup GPT ***
+Cannot find partition 4080
+do_raw_read failed, ret 1
+read_bootctl, bcb_rw_block read failed
+read command failed
+Fastboot: Normal
+Hit any key to stop autoboot:  1  0 
+Apalis iMX6 # boota     ?
+?       - alias for 'help'
+askenv  - get environment variables from stdin
+base    - print or set address offset
+bdinfo  - print Board Info structure
+bmode   - mmc|sd|normal|usb|sata|ecspi1:0|ecspi1:1|ecspi1:2|ecspi1:3|esdhc1|esdhc2|esdhc3|esdhc4 [noreset]
+bmp     - manipulate BMP image data
+boot    - boot default, i.e., run 'bootcmd'
+boota   - boota   - boot android bootimg from memory
+
+bootd   - boot default, i.e., run 'bootcmd'
+bootm   - boot application image from memory
+bootp   - boot image via network using BOOTP/TFTP protocol
+bootz   - boot Linux zImage image from memory
+caam    - Freescale i.MX CAAM command
+cfgblock- Toradex config block handling commands
+clocks  - display clocks
+clrlogo - fill the boot logo area with black
+cmp     - memory compare
+coninfo - print console devices and information
+cp      - memory copy
+cpu     - Multiprocessor CPU boot manipulation and release
+crc32   - checksum calculation
+dcache  - enable or disable data cache
+dfu     - Device Firmware Upgrade
+dhcp    - boot image via network using DHCP/TFTP protocol
+dm      - Driver model low level access
+echo    - echo args to console
+editenv - edit environment variable
+env     - environment handling commands
+erase   - erase FLASH memory
+exit    - exit script
+ext4load- load binary file from a Ext4 filesystem
+ext4ls  - list files in a directory (default /)
+ext4size- determine a file's size
+false   - do nothing, unsuccessfully
+fastboot- use USB Fastboot protocol
+fatinfo - print information about filesystem
+fatload - load binary file from a dos filesystem
+fatls   - list files in a directory (default /)
+fatsize - determine a file's size
+fatwrite- write file into a dos filesystem
+fdt     - flattened device tree utility commands
+flinfo  - print FLASH memory information
+fstype  - Look up a filesystem type
+fuse    - Fuse sub-system
+go      - start application at address 'addr'
+gpio    - query and control gpio pins
+hdmidet - detect HDMI monitor
+help    - print command description/usage
+i2c     - I2C sub-system
+icache  - enable or disable instruction cache
+itest   - return true/false on integer compare
+load    - load binary file from a filesystem
+lock_status- lock_status
+loop    - infinite loop on address range
+ls      - list files in a directory (default /)
+md      - memory display
+mdio    - MDIO utility commands
+mfgr_fuse- OTP fusing during module production
+mii     - MII utility commands
+mm      - memory modify (auto-incrementing address)
+mmc     - MMC sub system
+mmcinfo - display MMC info
+mtest   - simple RAM read/write test
+mw      - memory write (fill)
+nm      - memory modify (constant address)
+pf0100_otp_prog- Program the OTP fuses on the PMIC PF0100
+ping    - send ICMP ECHO_REQUEST to network host
+printenv- print environment variables
+protect - enable or disable FLASH write protection
+read    - Load binary data from a partition
+reset   - Perform RESET of the CPU
+run     - run commands in an environment variable
+sata    - SATA sub system
+save    - save file to a filesystem
+saveenv - save environment variables to persistent storage
+setenv  - set environment variables
+setexpr - set environment variable as the result of eval expression
+showvar - print local hushshell variables
+size    - determine a file's size
+sleep   - delay execution for some time
+source  - run script from memory
+test    - minimal test like /bin/sh
+tftpboot- boot image via network using TFTP protocol
+time    - run commands and summarize execution time
+true    - do nothing, successfully
+ums     - Use the UMS [USB Mass Storage]
+updt_fuse- OTP fusing during module update
+usb     - USB sub-system
+usbboot - boot from USB device
+version - print monitor, compiler and linker version
+write   - write binary data to a partition
+Apalis iMX6 # boota -help
+boota -help 
+boota: bad boot image magic
+Apalis iMX6 # boota -help   
+boota -h 
+boota: bad boot image magic
+Apalis iMX6 # boota -h  mmc0
+boota mmc0 
+can't find partition: boot, dump the partition table
+idx 0, ptn 0 name='gpt' start=0 len=2048
+idx 1, ptn 0 name='bootloader' start=2 len=2046
+idx 2, ptn 0 name='' start=0 len=0
+boota: cannot find 'boot' partition
+
+
+U-Boot 2017.03-dirty (Dec 15 2017 - 14:13:51 +0530)
+
+CPU:   Freescale i.MX6Q rev1.5 at 792 MHz
+Reset cause: POR
+I2C:   ready
+DRAM:  2 GiB
+PMIC: device id: 0x10, revision id: 0x21
+PMIC: programmed
+MMC:   FSL_SDHC: 0, FSL_SDHC: 1, FSL_SDHC: 2
+auto-detected panel vga-rgb
+Aravinth: Display: vga-rgb (640x480)
+In:    serial
+Out:   serial
+Err:   serial
+Model: Toradex Apalis iMX6 Quad 2GB IT V1.1C, Serial# 05146387
+flash target is MMC:0
+GPT: last_usable_lba incorrect: DFFFDE > 72c000
+GUID Partition Table Header signature is wrong: 0x0 != 0x5452415020494645
+part_get_info_efi: *** ERROR: Invalid Backup GPT ***
+Net:   using PHY at 7
+FEC [PRIME]
+can't find partition: misc, dump the partition table
+idx 0, ptn 0 name='gpt' start=0 len=2048
+idx 1, ptn 0 name='bootloader' start=2 len=2046
+idx 2, ptn 0 name='' start=0 len=0
+cannot get the partion info for misc
+GPT: last_usable_lba incorrect: DFFFDE > 72c000
+GUID Partition Table Header signature is wrong: 0x0 != 0x5452415020494645
+part_get_info_efi: *** ERROR: Invalid Backup GPT ***
+Cannot find partition 4080
+do_raw_read failed, ret 1
+read_bootctl, bcb_rw_block read failed
+read command failed
+Fastboot: Normal
+Hit any key to stop autoboot:  1  0
+Apalis iMX6 # 
+Apalis iMX6 # 
+Apalis iMX6 # 
+Apalis iMX6 # 
+Apalis iMX6 # 
+Apalis iMX6 # fastboot flash gpt partition-table.img
+fastboot - use USB Fastboot protocol
+
+Usage:
+fastboot <USB_controller>
+    - run as a fastboot usb device
+Apalis iMX6 # 

@@ -1,0 +1,1654 @@
+
+
+U-Boot 2017.03-dirty (Dec 26 2017 - 14:19:13 +0530)
+
+CPU:   Freescale i.MX6Q rev1.5 at 792 MHz
+Reset cause: POR
+I2C:   ready
+DRAM:  2 GiB
+PMIC: device id: 0x10, revision id: 0x21
+PMIC: programmed
+MMC:   FSL_SDHC: 0, FSL_SDHC: 1, FSL_SDHC: 2
+auto-detected panel HDMI
+Aravinth: Display: HDMI (1024x768)
+In:    serial
+Out:   serial
+Err:   serial
+Model: Toradex Apalis iMX6 Quad 2GB IT V1.1C, Serial# 05146387
+flash target is MMC:0
+Net:   using PHY at 7
+FEC [PRIME]
+Fastboot: Normal
+Hit any key to stop autoboot:  1  0 
+boota mmc0 
+CACHE: Misaligned operation at range [8ffb70a0, 8ffb7120]
+CACHE: Misaligned operation at range [8ffb70a0, 8ffb7120]
+kernel   @ 14008000 (9803560)
+ramdisk  @ 15000000 (1628353)
+fdt      @ 14f00000 (53981)
+## Booting Android Image at 0x12000000 ...
+Kernel load addr 0x14008000 size 9574 KiB
+Kernel command line: console=ttymxc0,115200 init=/init video=mxcfb0:dev=ldb,fbpix=RGB32,bpp=32 video=mxcfb1:dev=hdmi,640x480M@60,if=RGB24,bpp=16 video=mxcfb2:off video=mxcfb3:off vmalloc=256M androidboot.console=ttymxc0 consoleblank=0 androidboot.hardware=freescale cma=448M androidboot.selinux=disabled androidboot.dm_verity=disabled buildvariant=user androidboot.serialno=1b2429d4ea997115 androidboot.storage_type=emmc
+## Flattened Device Tree blob at 14f00000
+   Booting using the fdt blob at 0x14f00000
+   Loading Kernel Image ... OK
+   Using Device Tree in place at 14f00000, end 14f102dc
+
+Starting kernel ...
+
+Uncompressing Linux... done, booting the kernel.
+[    0.000000] Booting Linux on physical CPU 0x0
+[    0.000000] Linux version 4.9.67-07228-gdc437277d928-dirty (embadmin@ubuntu) (gcc version 4.9 20150123 (prerelease) (GCC) ) #9 SMP PREEMPT Tue Dec 26 14:19:46 IST 2017
+[    0.000000] CPU: ARMv7 Processor [412fc09a] revision 10 (ARMv7), cr=10c53c7d
+[    0.000000] CPU: PIPT / VIPT nonaliasing data cache, VIPT aliasing instruction cache
+[    0.000000] OF: fdt:Machine model: Aravinth : Toradex Apalis iMX6Q/D Module on Ixora V1.1 Carrier Board
+[    0.000000] cma: Reserved 448 MiB at 0x22000000
+[    0.000000] Memory policy: Data cache writealloc
+[    0.000000] percpu: Embedded 15 pages/cpu @ee6b2000 s31040 r8192 d22208 u61440
+[    0.000000] Built 1 zonelists in Zone order, mobility grouping on.  Total pages: 522768
+[    0.000000] Kernel command line: console=ttymxc0,115200 init=/init video=mxcfb0:dev=ldb,fbpix=RGB32,bpp=32 video=mxcfb1:dev=hdmi,640x480M@60,if=RGB24,bpp=16 video=mxcfb2:off video=mxcfb3:off vmalloc=256M androidboot.console=ttymxc0 consoleblank=0 androidboot.hardware=freescale cma=448M androidboot.selinux=disabled androidboot.dm_verity=disabled buildvariant=user androidboot.serialno=1b2429d4ea997115 androidboot.storage_type=emmc
+[    0.000000] PID hash table entries: 4096 (order: 2, 16384 bytes)
+[    0.000000] Dentry cache hash table entries: 131072 (order: 7, 524288 bytes)
+[    0.000000] Inode-cache hash table entries: 65536 (order: 6, 262144 bytes)
+[    0.000000] Memory: 1597044K/2097152K available (13312K kernel code, 1128K rwdata, 4016K rodata, 1024K init, 606K bss, 41356K reserved, 458752K cma-reserved, 1318912K highmem)
+[    0.000000] Virtual kernel memory layout:
+[    0.000000]     vector  : 0xffff0000 - 0xffff1000   (   4 kB)
+[    0.000000]     fixmap  : 0xffc00000 - 0xfff00000   (3072 kB)
+[    0.000000]     vmalloc : 0xf0000000 - 0xff800000   ( 248 MB)
+[    0.000000]     lowmem  : 0xc0000000 - 0xef800000   ( 760 MB)
+[    0.000000]     pkmap   : 0xbfe00000 - 0xc0000000   (   2 MB)
+[    0.000000]     modules : 0xbf000000 - 0xbfe00000   (  14 MB)
+[    0.000000]       .text : 0xc0008000 - 0xc0e00000   (14304 kB)
+[    0.000000]       .init : 0xc1300000 - 0xc1400000   (1024 kB)
+[    0.000000]       .data : 0xc1400000 - 0xc151a218   (1129 kB)
+[    0.000000]        .bss : 0xc151a218 - 0xc15b1be0   ( 607 kB)
+[    0.000000] SLUB: HWalign=64, Order=0-3, MinObjects=0, CPUs=4, Nodes=1
+[    0.000000] Preemptible hierarchical RCU implementation.
+[    0.000000] 	Build-time adjustment of leaf fanout to 32.
+[    0.000000] NR_IRQS:16 nr_irqs:16 16
+[    0.000000] L2C-310 errata 752271 769419 enabled
+[    0.000000] L2C-310 enabling early BRESP for Cortex-A9
+[    0.000000] L2C-310 full line of zeros enabled for Cortex-A9
+[    0.000000] L2C-310 ID prefetch enabled, offset 16 lines
+[    0.000000] L2C-310 dynamic clock gating enabled, standby mode enabled
+[    0.000000] L2C-310 cache controller enabled, 16 ways, 1024 kB
+[    0.000000] L2C-310: CACHE_ID 0x410000c7, AUX_CTRL 0x76470001
+[    0.000000] Switching to timer-based delay loop, resolution 333ns
+[    0.000006] sched_clock: 32 bits at 3000kHz, resolution 333ns, wraps every 715827882841ns
+[    0.000024] clocksource: mxc_timer1: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 637086815595 ns
+[    0.001605] Console: colour dummy device 80x30
+[    0.001626] Calibrating delay loop (skipped), value calculated using timer frequency.. 6.00 BogoMIPS (lpj=30000)
+[    0.001641] pid_max: default: 32768 minimum: 301
+[    0.001717] Security Framework initialized
+[    0.001729] SELinux:  Initializing.
+[    0.001823] Mount-cache hash table entries: 2048 (order: 1, 8192 bytes)
+[    0.001835] Mountpoint-cache hash table entries: 2048 (order: 1, 8192 bytes)
+[    0.002643] CPU: Testing write buffer coherency: ok
+[    0.003044] CPU0: update cpu_capacity 1024
+[    0.003060] CPU0: thread -1, cpu 0, socket 0, mpidr 80000000
+[    0.003128] Setting up static identity map for 0x10100000 - 0x10100058
+[    0.169929] CPU1: update cpu_capacity 1024
+[    0.169935] CPU1: thread -1, cpu 1, socket 0, mpidr 80000001
+[    0.239918] CPU2: update cpu_capacity 1024
+[    0.239926] CPU2: thread -1, cpu 2, socket 0, mpidr 80000002
+[    0.309910] CPU3: update cpu_capacity 1024
+[    0.309917] CPU3: thread -1, cpu 3, socket 0, mpidr 80000003
+[    0.310023] Brought up 4 CPUs
+[    0.310054] SMP: Total of 4 processors activated (24.00 BogoMIPS).
+[    0.310063] CPU: All CPU(s) started in SVC mode.
+[    0.310110] CPU3: update max cpu_capacity 1024
+[    0.311192] devtmpfs: initialized
+[    0.319935] CPU2: update max cpu_capacity 1024
+[    0.326059] VFP support v0.3: implementor 41 architecture 3 part 30 variant 9 rev 4
+[    0.326481] clocksource: jiffies: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 19112604462750000 ns
+[    0.326505] futex hash table entries: 1024 (order: 4, 65536 bytes)
+[    0.349729] pinctrl core: initialized pinctrl subsystem
+[    0.351043] NET: Registered protocol family 16
+[    0.360318] DMA: preallocated 256 KiB pool for atomic coherent allocations
+[    0.389585] cpuidle: using governor menu
+[    0.390407] CPU identified as i.MX6Q, silicon rev 1.5
+[    0.417798] hw-breakpoint: found 5 (+1 reserved) breakpoint and 1 watchpoint registers.
+[    0.417813] hw-breakpoint: maximum watchpoint size is 4 bytes.
+[    0.419478] imx6q-pinctrl 20e0000.iomuxc: initialized IMX pinctrl driver
+[    0.423306] imx-gpc 20dc000.gpc: no fsl,ldo-bypass found!
+[    0.423422] imx-gpc 20dc000.gpc: Registered imx-gpc
+[    0.485664] mxs-dma 110000.dma-apbh: initialized
+[    0.488278] usb_host_vbus: supplied by usb_host_vbus_hub
+[    0.490094] SCSI subsystem initialized
+[    0.490608] usbcore: registered new interface driver usbfs
+[    0.490683] usbcore: registered new interface driver hub
+[    0.490790] usbcore: registered new device driver usb
+[    0.490990] 2000000.aips-bus:usbphy_nop1 supply vcc not found, using dummy regulator
+[    0.491143] 2000000.aips-bus:usbphy_nop2 supply vcc not found, using dummy regulator
+[    0.492367] i2c i2c-1: IMX I2C adapter registered
+[    0.492389] i2c i2c-1: can't use DMA, using PIO instead.
+[    0.500262] stmpe-i2c 2-0041: stmpe811 detected, chip id: 0x811
+[    0.590740] i2c i2c-2: IMX I2C adapter registered
+[    0.590761] i2c i2c-2: can't use DMA, using PIO instead.
+[    0.591594] i2c i2c-3: IMX I2C adapter registered
+[    0.591613] i2c i2c-3: can't use DMA, using PIO instead.
+[    0.591768] Linux video capture interface: v2.00
+[    0.591840] pps_core: LinuxPPS API ver. 1 registered
+[    0.591850] pps_core: Software ver. 5.3.6 - Copyright 2005-2007 Rodolfo Giometti <giometti@linux.it>
+[    0.591876] PTP clock support registered
+[    0.619642] imx-ipuv3 2400000.ipu: IPU DMFC NORMAL mode: 1(0~1), 5B(4,5), 5F(6,7)
+[    0.649632] imx-ipuv3 2800000.ipu: IPU DMFC NORMAL mode: 1(0~1), 5B(4,5), 5F(6,7)
+[    0.651021] mxc_mipi_csi2 21dc000.mipi_csi: i.MX MIPI CSI2 driver probed ipu0 csi1
+[    0.651038] mxc_mipi_csi2 21dc000.mipi_csi: i.MX MIPI CSI2 dphy version is 0x3130302a
+[    0.651132] MIPI CSI2 driver module loaded
+[    0.651516] imx rpmsg driver is registered.
+[    0.651716] Advanced Linux Sound Architecture Driver Initialized.
+[    0.652974] Bluetooth: Core ver 2.22
+[    0.653027] NET: Registered protocol family 31
+[    0.653037] Bluetooth: HCI device and connection manager initialized
+[    0.653054] Bluetooth: HCI socket layer initialized
+[    0.653069] Bluetooth: L2CAP socket layer initialized
+[    0.653112] Bluetooth: SCO socket layer initialized
+[    0.670433] clocksource: Switched to clocksource mxc_timer1
+[    0.743356] VFS: Disk quotas dquot_6.6.0
+[    0.743450] VFS: Dquot-cache hash table entries: 1024 (order 0, 4096 bytes)
+[    0.754711] NET: Registered protocol family 2
+[    0.755498] TCP established hash table entries: 8192 (order: 3, 32768 bytes)
+[    0.755605] TCP bind hash table entries: 8192 (order: 4, 65536 bytes)
+[    0.755778] TCP: Hash tables configured (established 8192 bind 8192)
+[    0.755982] UDP hash table entries: 512 (order: 2, 16384 bytes)
+[    0.756031] UDP-Lite hash table entries: 512 (order: 2, 16384 bytes)
+[    0.756263] NET: Registered protocol family 1
+[    0.756891] RPC: Registered named UNIX socket transport module.
+[    0.756906] RPC: Registered udp transport module.
+[    0.756915] RPC: Registered tcp transport module.
+[    0.756923] RPC: Registered tcp NFSv4.1 backchannel transport module.
+[    0.757247] Trying to unpack rootfs image as initramfs...
+[    0.866820] Freeing initrd memory: 1592K
+[    0.868008] hw perfevents: enabled with armv7_cortex_a9 PMU driver, 7 counters available
+[    0.871286] Bus freq driver module loaded
+[    0.872848] audit: initializing netlink subsys (disabled)
+[    0.872918] audit: type=2000 audit(0.870:1): initialized
+[    0.873962] workingset: timestamp_bits=30 max_order=19 bucket_order=0
+[    0.881591] NFS: Registering the id_resolver key type
+[    0.881633] Key type id_resolver registered
+[    0.881644] Key type id_legacy registered
+[    0.881698] ntfs: driver 2.1.32 [Flags: R/W DEBUG].
+[    0.881964] jffs2: version 2.2. (NAND) © 2001-2006 Red Hat, Inc.
+[    0.882511] fuse init (API version 7.26)
+[    0.890803] bounce: pool size: 64 pages
+[    0.890819] io scheduler noop registered
+[    0.890830] io scheduler deadline registered
+[    0.890878] io scheduler cfq registered (default)
+[    0.893967] backlight supply power not found, using dummy regulator
+[    0.897600] 20e0000.hdmi_video supply HDMI not found, using dummy regulator
+[    0.899145] Aravinth: mxcfb_probe ---->
+[    0.899212] mxc_sdc_fb fb@0: registered mxc display driver ldb
+[    0.940505] imx-ipuv3 2800000.ipu: IPU DMFC DP HIGH RESOLUTION: 1(0,1), 5B(2~5), 5F(6,7)
+[    1.036663] Console: switching to colour frame buffer device 128x48
+[    1.099557] Aravinth: mxcfb_probe Done ---->
+[    1.099625] Aravinth: mxcfb_probe ---->
+[    1.099768] mxc_hdmi 20e0000.hdmi_video: Detected HDMI controller 0x13:0xa:0xa0:0xc1
+[    1.099793] fbcvt: 640x480@60: CVT Name - .307M3
+[    1.099922] mxc_sdc_fb fb@1: registered mxc display driver hdmi
+[    1.107748] Aravinth: mxcfb_probe Done ---->
+[    1.107805] Aravinth: mxcfb_probe ---->
+[    1.107840] mxc_sdc_fb fb@2: Can't get fb option for mxcfb2!
+[    1.107894] Aravinth: mxcfb_probe ---->
+[    1.107923] mxc_sdc_fb fb@3: Can't get fb option for mxcfb3!
+[    1.110190] imx-sdma 20ec000.sdma: no iram assigned, using external mem
+[    1.110873] imx-sdma 20ec000.sdma: loaded firmware 3.3
+[    1.116039] pfuze100-regulator 2-0008: Full layer: 2, Metal layer: 1
+[    1.116782] pfuze100-regulator 2-0008: FAB: 0, FIN: 0
+[    1.116797] pfuze100-regulator 2-0008: pfuze100 found.
+[    1.131122] mxc_hdmi 20e0000.hdmi_video: Read EDID again
+[    1.135312] 2020000.serial: ttymxc0 at MMIO 0x2020000 (irq = 29, base_baud = 5000000) is a IMX
+[    1.363966] mxc_hdmi 20e0000.hdmi_video: create default modelist
+[    2.096192] console [ttymxc0] enabled
+[    2.100871] 21e8000.serial: ttymxc1 at MMIO 0x21e8000 (irq = 78, base_baud = 5000000) is a IMX
+[    2.110096] 21f0000.serial: ttymxc3 at MMIO 0x21f0000 (irq = 79, base_baud = 5000000) is a IMX
+[    2.119350] 21f4000.serial: ttymxc4 at MMIO 0x21f4000 (irq = 80, base_baud = 5000000) is a IMX
+[    2.130750] imx sema4 driver is registered.
+[    2.134990] [drm] Initialized
+[    2.138499] [drm] Initialized vivante 1.0.0 20120216 on minor 0
+[    2.157069] brd: module loaded
+[    2.168376] loop: module loaded
+[    2.172406] zram: Added device: zram0
+[    2.177797] ahci-imx 2200000.sata: fsl,transmit-level-mV not specified, using 00000024
+[    2.185810] ahci-imx 2200000.sata: fsl,transmit-boost-mdB not specified, using 00000480
+[    2.193879] ahci-imx 2200000.sata: fsl,transmit-atten-16ths not specified, using 00002000
+[    2.202141] ahci-imx 2200000.sata: fsl,receive-eq-mdB not specified, using 05000000
+[    2.213419] ahci-imx 2200000.sata: SSS flag set, parallel bus scan disabled
+[    2.220416] ahci-imx 2200000.sata: AHCI 0001.0300 32 slots 1 ports 3 Gbps 0x1 impl platform mode
+[    2.229255] ahci-imx 2200000.sata: flags: ncq sntf stag pm led clo only pmp pio slum part ccc apst 
+[    2.239944] scsi host0: ahci-imx
+[    2.243528] ata1: SATA max UDMA/133 mmio [mem 0x02200000-0x02203fff] port 0x100 irq 87
+[    2.255974] spi_imx 2008000.ecspi: probed
+[    2.260824] libphy: Fixed MDIO Bus: probed
+[    2.265326] tun: Universal TUN/TAP device driver, 1.6
+[    2.270384] tun: (C) 1999-2004 Max Krasnyansky <maxk@qualcomm.com>
+[    2.276800] CAN device driver interface
+[    2.281013] 2090000.flexcan supply xceiver not found, using dummy regulator
+[    2.288850] flexcan 2090000.flexcan: device registered (reg_base=f02f4000, irq=38)
+[    2.296642] 2094000.flexcan supply xceiver not found, using dummy regulator
+[    2.304484] flexcan 2094000.flexcan: device registered (reg_base=f02fc000, irq=39)
+[    2.313671] 2188000.ethernet supply phy not found, using dummy regulator
+[    2.332093] pps pps0: new PPS source ptp0
+[    2.337469] libphy: fec_enet_mii_bus: probed
+[    2.353743] fec 2188000.ethernet eth0: registered PHC device 0
+[    2.360558] PPP generic driver version 2.4.2
+[    2.365036] PPP BSD Compression module registered
+[    2.369748] PPP Deflate Compression module registered
+[    2.374855] PPP MPPE Compression module registered
+[    2.379659] NET: Registered protocol family 24
+[    2.384260] usbcore: registered new interface driver kaweth
+[    2.389842] pegasus: v0.9.3 (2013/04/25), Pegasus/Pegasus II USB Ethernet driver
+[    2.397324] usbcore: registered new interface driver pegasus
+[    2.403099] usbcore: registered new interface driver rtl8150
+[    2.408833] usbcore: registered new interface driver r8152
+[    2.414445] usbcore: registered new interface driver asix
+[    2.419902] usbcore: registered new interface driver ax88179_178a
+[    2.426114] usbcore: registered new interface driver cdc_ether
+[    2.432052] usbcore: registered new interface driver cdc_eem
+[    2.437770] usbcore: registered new interface driver net1080
+[    2.443540] usbcore: registered new interface driver cdc_subset
+[    2.449519] usbcore: registered new interface driver zaurus
+[    2.455198] usbcore: registered new interface driver cdc_ncm
+[    2.460925] ehci_hcd: USB 2.0 'Enhanced' Host Controller (EHCI) Driver
+[    2.467460] ehci-mxc: Freescale On-Chip EHCI Host driver
+[    2.473005] usbcore: registered new interface driver cdc_acm
+[    2.478671] cdc_acm: USB Abstract Control Model driver for USB modems and ISDN adapters
+[    2.486773] usbcore: registered new interface driver usb-storage
+[    2.492925] usbcore: registered new interface driver usbserial
+[    2.498808] usbcore: registered new interface driver usbserial_generic
+[    2.505405] usbserial: USB Serial support registered for generic
+[    2.511479] usbcore: registered new interface driver ftdi_sio
+[    2.517263] usbserial: USB Serial support registered for FTDI USB Serial Device
+[    2.524640] usbcore: registered new interface driver option
+[    2.530250] usbserial: USB Serial support registered for GSM modem (1-port)
+[    2.537301] usbcore: registered new interface driver usbtest
+[    2.543037] usbcore: registered new interface driver usb_ehset_test
+[    2.550617] 2184800.usbmisc supply vbus-wakeup not found, using dummy regulator
+[    2.568888] ci_hdrc ci_hdrc.1: EHCI Host Controller
+[    2.573840] ci_hdrc ci_hdrc.1: new USB bus registered, assigned bus number 1
+[    2.582094] ata1: SATA link down (SStatus 0 SControl 300)
+[    2.587540] ahci-imx 2200000.sata: no device found, disabling link.
+[    2.593852] ahci-imx 2200000.sata: pass ahci_imx..hotplug=1 to enable hotplug
+[    2.610469] ci_hdrc ci_hdrc.1: USB 2.0 started, EHCI 1.00
+[    2.616098] usb usb1: New USB device found, idVendor=1d6b, idProduct=0002
+[    2.622957] usb usb1: New USB device strings: Mfr=3, Product=2, SerialNumber=1
+[    2.630190] usb usb1: Product: EHCI Host Controller
+[    2.635102] usb usb1: Manufacturer: Linux 4.9.67-07228-gdc437277d928-dirty ehci_hcd
+[    2.642787] usb usb1: SerialNumber: ci_hdrc.1
+[    2.647867] hub 1-0:1.0: USB hub found
+[    2.651730] hub 1-0:1.0: 1 port detected
+[    2.656899] mousedev: PS/2 mouse device common for all mice
+[    2.663491] usbcore: registered new interface driver xpad
+[    2.668957] usbcore: registered new interface driver usb_acecad
+[    2.675013] usbcore: registered new interface driver aiptek
+[    2.680681] usbcore: registered new interface driver gtco
+[    2.686145] usbcore: registered new interface driver hanwang
+[    2.691926] usbcore: registered new interface driver kbtab
+[    2.708367] input: stmpe-ts as /devices/soc0/soc/2100000.aips-bus/21a4000.i2c/i2c-2/2-0041/stmpe-ts/input/input0
+[    2.721050] snvs_rtc 20cc000.snvs:snvs-rtc-lp: rtc core: registered 20cc000.snvs:snvs-r as rtc0
+[    2.729890] i2c /dev entries driver
+[    2.734341] IR NEC protocol handler initialized
+[    2.738881] IR RC5(x/sz) protocol handler initialized
+[    2.743969] IR RC6 protocol handler initialized
+[    2.748507] IR JVC protocol handler initialized
+[    2.753062] IR Sony protocol handler initialized
+[    2.757687] IR SANYO protocol handler initialized
+[    2.762527] IR Sharp protocol handler initialized
+[    2.767240] IR MCE Keyboard/mouse protocol handler initialized
+[    2.773100] IR XMP protocol handler initialized
+[    2.778766] mxc_v4l2_output v4l2_out: V4L2 device registered as video16
+[    2.785585] mxc_v4l2_output v4l2_out: V4L2 device registered as video17
+[    2.792411] mxc_v4l2_output v4l2_out: V4L2 device registered as video18
+[    2.799231] mxc_v4l2_output v4l2_out: V4L2 device registered as video19
+[    2.807156] ov564x_mipi 3-003c: found pwm2, period=0
+[    3.010471] usb 1-1: new high-speed USB device number 2 using ci_hdrc
+[    3.060798] ov5640_read_reg:write reg error:reg=300a
+[    3.065770] camera ov5640_mipi is not found
+[    3.071390] usbcore: registered new interface driver uvcvideo
+[    3.077166] USB Video Class driver (1.1.1)
+[    3.083474] imx2-wdt 20bc000.wdog: timeout 60 sec (nowayout=0)
+[    3.090007] device-mapper: uevent: version 1.0.3
+[    3.095076] device-mapper: ioctl: 4.35.0-ioctl (2016-06-23) initialised: dm-devel@redhat.com
+[    3.103765] Bluetooth: HCI UART driver ver 2.3
+[    3.108221] Bluetooth: HCI UART protocol H4 registered
+[    3.113423] Bluetooth: HCI UART protocol BCSP registered
+[    3.118745] Bluetooth: HCI UART protocol ATH3K registered
+[    3.124302] usbcore: registered new interface driver btusb
+[    3.130843] sdhci: Secure Digital Host Controller Interface driver
+[    3.137031] sdhci: Copyright(c) Pierre Ossman
+[    3.141422] sdhci-pltfm: SDHCI platform and OF driver helper
+[    3.148072] sdhci-esdhc-imx 2190000.usdhc: could not get ultra high speed state, work on normal mode
+[    3.157363] sdhci-esdhc-imx 2190000.usdhc: Got CD GPIO
+[    3.210935] usb 1-1: New USB device found, idVendor=0424, idProduct=2514
+[    3.217652] usb 1-1: New USB device strings: Mfr=0, Product=0, SerialNumber=0
+[    3.225622] hub 1-1:1.0: USB hub found
+[    3.229550] hub 1-1:1.0: 4 ports detected
+[    3.233831] mmc1: SDHCI controller on 2190000.usdhc [2190000.usdhc] using ADMA
+[    3.241704] sdhci-esdhc-imx 2198000.usdhc: could not get ultra high speed state, work on normal mode
+[    3.310533] mmc0: SDHCI controller on 2198000.usdhc [2198000.usdhc] using ADMA
+[    3.336979] mxc_vpu 2040000.vpu_fsl: VPU initialized
+[    3.346687] mxc_vdoa 21e4000.vdoa: i.MX Video Data Order Adapter(VDOA) driver probed
+[    3.359106] mxc_hdmi_cec soc:hdmi_cec@00120000: HDMI CEC initialized
+[    3.376262] Galcore version 6.2.2.96445
+[    3.449475] mmc0: new DDR MMC card at address 0001
+[    3.455616] mmcblk0: mmc0:0001 Q2J54A 3.59 GiB 
+[    3.461131] mmcblk0boot0: mmc0:0001 Q2J54A partition 1 16.0 MiB
+[    3.468003] mmcblk0boot1: mmc0:0001 Q2J54A partition 2 16.0 MiB
+[    3.475468] random: fast init done
+[    3.482547] Alternate GPT is invalid, using primary GPT.
+[    3.488069]  mmcblk0: p1 p2 p3 p4 p5 p6 p7 p8 p9 p10 p11
+[    3.580664] usb 1-1.3: new low-speed USB device number 3 using ci_hdrc
+[    3.735367] usb 1-1.3: New USB device found, idVendor=413c, idProduct=301a
+[    3.742426] usb 1-1.3: New USB device strings: Mfr=1, Product=2, SerialNumber=0
+[    3.749874] usb 1-1.3: Product: Dell MS116 USB Optical Mouse
+[    3.755663] usb 1-1.3: Manufacturer: PixArt
+[    4.189315] caam 2100000.caam: ERA source: CAAMVID.
+[    4.194285] caam 2100000.caam: AXI pipeline throttling enabled.
+[    4.201524] caam 2100000.caam: Instantiated RNG4 SH1
+[    4.206506] caam 2100000.caam: device ID = 0x0a16010000000000 (Era 4)
+[    4.212989] caam 2100000.caam: job rings = 2, qi = 0
+[    4.228180] caam algorithms registered in /proc/crypto
+[    4.237401] caam_jr 2101000.jr0: registering rng-caam
+[    4.243495] platform caam_sm: blkkey_ex: 4 keystore units available
+[    4.249973] platform caam_sm: 64-bit clear key:
+[    4.254551] platform caam_sm: [0000] 00 01 02 03 04 0f 06 07
+[    4.260220] platform caam_sm: 64-bit black key:
+[    4.264790] platform caam_sm: [0000] 8d 41 c8 32 3a 27 34 2a
+[    4.270481] platform caam_sm: [0008] df bc 06 32 f8 14 fa 99
+[    4.276148] platform caam_sm: 128-bit clear key:
+[    4.280798] platform caam_sm: [0000] 00 01 02 03 04 0f 06 07
+[    4.286468] platform caam_sm: [0008] 08 09 0a 0b 0c 0d 0e 0f
+[    4.292155] platform caam_sm: 128-bit black key:
+[    4.296785] platform caam_sm: [0000] 7b dc 3e b0 c8 ca a0 12
+[    4.302471] platform caam_sm: [0008] 76 26 66 55 d1 cc df 71
+[    4.308137] platform caam_sm: 192-bit clear key:
+[    4.312784] platform caam_sm: [0000] 00 01 02 03 04 0f 06 07
+[    4.318455] platform caam_sm: [0008] 08 09 0a 0b 0c 0d 0e 0f
+[    4.324147] platform caam_sm: [0016] 10 11 12 13 14 15 16 17
+[    4.329813] platform caam_sm: 192-bit black key:
+[    4.334461] platform caam_sm: [0000] f0 02 04 d3 0c 48 66 73
+[    4.340130] platform caam_sm: [0008] 3b f8 25 5a cd 82 c9 25
+[    4.345817] platform caam_sm: [0016] 56 d9 d4 b6 c2 33 60 c8
+[    4.351508] platform caam_sm: [0024] 99 c3 c0 2c 9e 9a bc d7
+[    4.357175] platform caam_sm: 256-bit clear key:
+[    4.361828] platform caam_sm: [0000] 00 01 02 03 04 0f 06 07
+[    4.367498] platform caam_sm: [0008] 08 09 0a 0b 0c 0d 0e 0f
+[    4.373186] platform caam_sm: [0016] 10 11 12 13 14 15 16 17
+[    4.378856] platform caam_sm: [0024] 18 19 1a 1b 1c 1d 1e 1f
+[    4.384539] platform caam_sm: 256-bit black key:
+[    4.389167] platform caam_sm: [0000] 9d 68 ae 9c e2 24 d0 d5
+[    4.394853] platform caam_sm: [0008] 37 dc eb 2b 73 3c 69 fd
+[    4.400537] platform caam_sm: [0016] 54 11 6e f7 99 5b 38 e2
+[    4.406206] platform caam_sm: [0024] 53 fc 9c 1a 75 df 02 52
+[    4.411889] platform caam_sm: 64-bit unwritten blob:
+[    4.416864] platform caam_sm: [0000] 00 00 00 00 00 00 00 00
+[    4.422550] platform caam_sm: [0008] 00 00 00 00 00 00 00 00
+[    4.428218] platform caam_sm: [0016] 00 00 00 00 00 00 00 00
+[    4.433904] platform caam_sm: [0024] 00 00 00 00 00 00 00 00
+[    4.439574] platform caam_sm: [0032] 00 00 00 00 00 00 00 00
+[    4.445260] platform caam_sm: [0040] 00 00 00 00 00 00 00 00
+[    4.450946] platform caam_sm: [0048] 00 00 00 00 00 00 00 00
+[    4.456615] platform caam_sm: [0056] 00 00 00 00 00 00 00 00
+[    4.462300] platform caam_sm: [0064] 00 00 00 00 00 00 00 00
+[    4.467968] platform caam_sm: [0072] 00 00 00 00 00 00 00 00
+[    4.473654] platform caam_sm: [0080] 00 00 00 00 00 00 00 00
+[    4.479323] platform caam_sm: [0088] 00 00 00 00 00 00 00 00
+[    4.485007] platform caam_sm: 128-bit unwritten blob:
+[    4.490069] platform caam_sm: [0000] 00 00 00 00 00 00 00 00
+[    4.495756] platform caam_sm: [0008] 00 00 00 00 00 00 00 00
+[    4.501444] platform caam_sm: [0016] 00 00 00 00 00 00 00 00
+[    4.507113] platform caam_sm: [0024] 00 00 00 00 00 00 00 00
+[    4.512795] platform caam_sm: [0032] 00 00 00 00 00 00 00 00
+[    4.518463] platform caam_sm: [0040] 00 00 00 00 00 00 00 00
+[    4.524151] platform caam_sm: [0048] 00 00 00 00 00 00 00 00
+[    4.529819] platform caam_sm: [0056] 00 00 00 00 00 00 00 00
+[    4.535505] platform caam_sm: [0064] 00 00 00 00 00 00 00 00
+[    4.541192] platform caam_sm: [0072] 00 00 00 00 00 00 00 00
+[    4.546861] platform caam_sm: [0080] 00 00 00 00 00 00 00 00
+[    4.552547] platform caam_sm: [0088] 00 00 00 00 00 00 00 00
+[    4.558213] platform caam_sm: 196-bit unwritten blob:
+[    4.563291] platform caam_sm: [0000] 00 00 00 00 00 00 00 00
+[    4.568961] platform caam_sm: [0008] 00 00 00 00 00 00 00 00
+[    4.574646] platform caam_sm: [0016] 00 00 00 00 00 00 00 00
+[    4.580314] platform caam_sm: [0024] 00 00 00 00 00 00 00 00
+[    4.586002] platform caam_sm: [0032] 00 00 00 00 00 00 00 00
+[    4.591689] platform caam_sm: [0040] 00 00 00 00 00 00 00 00
+[    4.597358] platform caam_sm: [0048] 00 00 00 00 00 00 00 00
+[    4.603044] platform caam_sm: [0056] 00 00 00 00 00 00 00 00
+[    4.608713] platform caam_sm: [0064] 00 00 00 00 00 00 00 00
+[    4.614398] platform caam_sm: [0072] 00 00 00 00 00 00 00 00
+[    4.620066] platform caam_sm: [0080] 00 00 00 00 00 00 00 00
+[    4.625760] platform caam_sm: [0088] 00 00 00 00 00 00 00 00
+[    4.631446] platform caam_sm: 256-bit unwritten blob:
+[    4.636508] platform caam_sm: [0000] 00 00 00 00 00 00 00 00
+[    4.642195] platform caam_sm: [0008] 00 00 00 00 00 00 00 00
+[    4.647863] platform caam_sm: [0016] 00 00 00 00 00 00 00 00
+[    4.653549] platform caam_sm: [0024] 00 00 00 00 00 00 00 00
+[    4.659218] platform caam_sm: [0032] 00 00 00 00 00 00 00 00
+[    4.664906] platform caam_sm: [0040] 00 00 00 00 00 00 00 00
+[    4.670593] platform caam_sm: [0048] 00 00 00 00 00 00 00 00
+[    4.676261] platform caam_sm: [0056] 00 00 00 00 00 00 00 00
+[    4.681947] platform caam_sm: [0064] 00 00 00 00 00 00 00 00
+[    4.687615] platform caam_sm: [0072] 00 00 00 00 00 00 00 00
+[    4.693300] platform caam_sm: [0080] 00 00 00 00 00 00 00 00
+[    4.698968] platform caam_sm: [0088] 00 00 00 00 00 00 00 00
+[    4.704880] platform caam_sm: 64-bit black key in blob:
+[    4.710118] platform caam_sm: [0000] cb 12 e5 16 f9 5b 6e 53
+[    4.715812] platform caam_sm: [0008] 92 66 af 13 4a 0e 8b 7d
+[    4.721499] platform caam_sm: [0016] 68 80 71 c7 06 7d bf 8a
+[    4.727168] platform caam_sm: [0024] 67 13 5d 8f 8e ac 46 23
+[    4.732856] platform caam_sm: [0032] 31 0e 08 a6 4a aa 92 93
+[    4.738525] platform caam_sm: [0040] 1e 07 27 30 ae f3 94 0c
+[    4.744212] platform caam_sm: [0048] ee 13 38 9c 93 c9 fb 7f
+[    4.749881] platform caam_sm: [0056] 00 00 00 00 00 00 00 00
+[    4.755567] platform caam_sm: [0064] 00 00 00 00 00 00 00 00
+[    4.761253] platform caam_sm: [0072] 00 00 00 00 00 00 00 00
+[    4.766921] platform caam_sm: [0080] 00 00 00 00 00 00 00 00
+[    4.772607] platform caam_sm: [0088] 00 00 00 00 00 00 00 00
+[    4.778272] platform caam_sm: 128-bit black key in blob:
+[    4.783613] platform caam_sm: [0000] 44 ff ad 7e 08 0b d9 16
+[    4.789281] platform caam_sm: [0008] 93 b8 52 51 3b 6c bb e3
+[    4.794968] platform caam_sm: [0016] 09 dc 54 a6 15 5f 9b 0f
+[    4.800655] platform caam_sm: [0024] 98 00 40 83 71 85 8b 04
+[    4.806324] platform caam_sm: [0032] e3 e2 f1 0f eb 2b 7e 3d
+[    4.812011] platform caam_sm: [0040] cb ba 14 ff 7e 98 16 e8
+[    4.817680] platform caam_sm: [0048] 4e 6f 5a 74 58 7b a4 77
+[    4.823365] platform caam_sm: [0056] 01 e3 b4 dc 79 3a bb 0c
+[    4.829035] platform caam_sm: [0064] 00 00 00 00 00 00 00 00
+[    4.834719] platform caam_sm: [0072] 00 00 00 00 00 00 00 00
+[    4.840387] platform caam_sm: [0080] 00 00 00 00 00 00 00 00
+[    4.846074] platform caam_sm: [0088] 00 00 00 00 00 00 00 00
+[    4.851758] platform caam_sm: 192-bit black key in blob:
+[    4.857081] platform caam_sm: [0000] e4 3b 5e ed f7 c8 da 56
+[    4.862767] platform caam_sm: [0008] 00 11 db 08 5e 2b da 3d
+[    4.868437] platform caam_sm: [0016] 39 4b 59 08 97 2c 7d 84
+[    4.874123] platform caam_sm: [0024] de 6c fc 7e e3 b9 e2 c5
+[    4.879792] platform caam_sm: [0032] 04 22 66 a3 9f 25 01 8e
+[    4.885487] platform caam_sm: [0040] 43 41 17 7f ff 02 60 4a
+[    4.891176] platform caam_sm: [0048] 1d 6b a9 94 89 eb 1c c4
+[    4.896844] platform caam_sm: [0056] 89 bf 4b 6c 1a 4e 7d 12
+[    4.902531] platform caam_sm: [0064] 80 66 e8 c1 5d 4c 2a 13
+[    4.908201] platform caam_sm: [0072] 00 00 00 00 00 00 00 00
+[    4.913887] platform caam_sm: [0080] 00 00 00 00 00 00 00 00
+[    4.919555] platform caam_sm: [0088] 00 00 00 00 00 00 00 00
+[    4.925240] platform caam_sm: 256-bit black key in blob:
+[    4.930578] platform caam_sm: [0000] 45 d8 3d 9f 4a d7 5f 09
+[    4.936246] platform caam_sm: [0008] 59 84 2e 54 66 b0 93 f9
+[    4.941933] platform caam_sm: [0016] d5 f8 13 08 fd fa 15 0e
+[    4.947602] platform caam_sm: [0024] ba 84 46 76 ad b2 12 f2
+[    4.953289] platform caam_sm: [0032] bd 9e 1c 3c 63 01 77 a4
+[    4.958958] platform caam_sm: [0040] a9 6f 48 48 15 c2 b7 85
+[    4.964643] platform caam_sm: [0048] 58 19 d2 21 f1 fa 4b 27
+[    4.970311] platform caam_sm: [0056] 6e e6 da 72 be 13 0b b9
+[    4.975998] platform caam_sm: [0064] a4 05 54 9e 07 c3 28 ca
+[    4.981685] platform caam_sm: [0072] 11 dc ea f5 0a 7f fb e6
+[    4.987353] platform caam_sm: [0080] 00 00 00 00 00 00 00 00
+[    4.993039] platform caam_sm: [0088] 00 00 00 00 00 00 00 00
+[    4.998916] platform caam_sm: restored 64-bit black key:
+[    5.004268] platform caam_sm: [0000] ad 08 6d d4 de f9 87 65
+[    5.009938] platform caam_sm: [0008] 1c ca b6 42 90 f8 98 66
+[    5.015622] platform caam_sm: restored 128-bit black key:
+[    5.021052] platform caam_sm: [0000] 7b dc 3e b0 c8 ca a0 12
+[    5.026721] platform caam_sm: [0008] 76 26 66 55 d1 cc df 71
+[    5.032405] platform caam_sm: restored 192-bit black key:
+[    5.037814] platform caam_sm: [0000] f0 02 04 d3 0c 48 66 73
+[    5.043501] platform caam_sm: [0008] 3b f8 25 5a cd 82 c9 25
+[    5.049171] platform caam_sm: [0016] 60 40 92 e6 58 1a d9 35
+[    5.054857] platform caam_sm: [0024] 58 93 a0 1d 00 6a 34 91
+[    5.060540] platform caam_sm: restored 256-bit black key:
+[    5.065948] platform caam_sm: [0000] 9d 68 ae 9c e2 24 d0 d5
+[    5.071635] platform caam_sm: [0008] 37 dc eb 2b 73 3c 69 fd
+[    5.077303] platform caam_sm: [0016] 54 11 6e f7 99 5b 38 e2
+[    5.082990] platform caam_sm: [0024] 53 fc 9c 1a 75 df 02 52
+[    5.088941] snvs-secvio 20cc000.caam-snvs: can't get snvs clock
+[    5.094953] snvs-secvio 20cc000.caam-snvs: violation handlers armed - non-secure state
+[    5.103746] hidraw: raw HID events driver (C) Jiri Kosina
+[    5.116536] input: PixArt Dell MS116 USB Optical Mouse as /devices/soc0/soc/2100000.aips-bus/2184200.usb/ci_hdrc.1/usb1/1-1/1-1.3/1-1.3:1.0/0003:413C:301A.0001/input/input1
+[    5.132592] hid-generic 0003:413C:301A.0001: input,hidraw0: USB HID v1.11 Mouse [PixArt Dell MS116 USB Optical Mouse] on usb-ci_hdrc.1-1.3/input0
+[    5.145819] usbcore: registered new interface driver usbhid
+[    5.151420] usbhid: USB HID core driver
+[    5.156192] ashmem: initialized
+[    5.160982] usbcore: registered new interface driver snd-usb-audio
+[    5.170063] sgtl5000 2-000a: sgtl5000 revision 0x11
+[    5.206954] fsl-ssi-dai 2028000.ssi: No cache defaults, reading back from HW
+[    5.344199] imx-sgtl5000 sound: sgtl5000 <-> 2028000.ssi mapping ok
+[    5.356021] imx-spdif sound-spdif: snd-soc-dummy-dai <-> 2004000.spdif mapping ok
+[    5.368775] imx-audio-hdmi sound-hdmi: hdmi-hifi.0 <-> soc:hdmi_audio@00120000 mapping ok
+[    5.377951] NET: Registered protocol family 26
+[    5.382442] u32 classifier
+[    5.385155]     Actions configured
+[    5.388565] Netfilter messages via NETLINK v0.30.
+[    5.393638] nf_conntrack version 0.5.0 (16384 buckets, 65536 max)
+[    5.400051] ctnetlink v0.93: registering with nfnetlink.
+[    5.406110] xt_time: kernel timezone is -0000
+[    5.410813] ip_tables: (C) 2000-2006 Netfilter Core Team
+[    5.416312] arp_tables: arp_tables: (C) 2002 David S. Miller
+[    5.422054] Initializing XFRM netlink socket
+[    5.426820] NET: Registered protocol family 10
+[    5.432558] mip6: Mobile IPv6
+[    5.435561] ip6_tables: (C) 2000-2006 Netfilter Core Team
+[    5.441186] sit: IPv6, IPv4 and MPLS over IPv4 tunneling driver
+[    5.447835] NET: Registered protocol family 17
+[    5.452345] NET: Registered protocol family 15
+[    5.456798] can: controller area network core (rev 20120528 abi 9)
+[    5.463096] NET: Registered protocol family 29
+[    5.467616] can: raw protocol (rev 20120528)
+[    5.471925] can: broadcast manager protocol (rev 20161123 t)
+[    5.477600] can: netlink gateway (rev 20130117) max_hops=1
+[    5.483410] Bluetooth: RFCOMM TTY layer initialized
+[    5.488306] Bluetooth: RFCOMM socket layer initialized
+[    5.493516] Bluetooth: RFCOMM ver 1.11
+[    5.497283] Bluetooth: BNEP (Ethernet Emulation) ver 1.3
+[    5.502629] Bluetooth: BNEP filters: protocol multicast
+[    5.507868] Bluetooth: BNEP socket layer initialized
+[    5.512863] Bluetooth: HIDP (Human Interface Emulation) ver 1.2
+[    5.518796] Bluetooth: HIDP socket layer initialized
+[    5.523850] 8021q: 802.1Q VLAN Support v1.8
+[    5.528273] Key type dns_resolver registered
+[    5.535632] cpu cpu0: Registered imx6q-cpufreq
+[    5.541015] registered taskstats version 1
+[    5.564048] imx_thermal 2000000.aips-bus:tempmon: Industrial CPU temperature grade - max:105C critical:100C passive:95C
+[    5.575491] dhd_module_init in
+[    5.579699] input: gpio-keys as /devices/soc0/gpio-keys/input/input2
+[    5.586544] snvs_rtc 20cc000.snvs:snvs-rtc-lp: setting system clock to 1970-01-01 00:00:02 UTC (2)
+[    5.596347] usb_otg_vbus: disabling
+[    5.599864] ALSA device list:
+[    5.602885]   #0: imx6q-apalis-sgtl5000
+[    5.606734]   #1: imx-spdif
+[    5.609537]   #2: imx-hdmi-soc
+[    5.615579] Freeing unused kernel memory: 1024K
+[    5.625803] init: init first stage started!
+[    5.641754] SELinux:  Permission validate_trans in class security not defined in policy.
+[    5.650317] SELinux:  Class cap_userns not defined in policy.
+[    5.656103] SELinux:  Class cap2_userns not defined in policy.
+[    5.661969] SELinux: the above unknown classes and permissions will be denied
+[    5.737351] audit: type=1403 audit(5.726:2): policy loaded auid=4294967295 ses=4294967295
+[    5.746554] audit: type=1404 audit(5.736:3): enforcing=1 old_enforcing=0 auid=4294967295 ses=4294967295
+[    5.801288] init: (Initializing SELinux enforcing took 0.17s.)
+[    5.818798] init: init second stage started!
+[    5.845108] init: Running restorecon...
+[    5.951784] init: waitpid failed: No child processes
+[    5.957733] init: (Loading properties from /default.prop took 0.00s.)
+[    5.968913] init: (Parsing /init.environ.rc took 0.00s.)
+[    5.975744] init: (Parsing /init.usb.rc took 0.00s.)
+[    5.984175] init: (Parsing init.freescale.usb.rc took 0.00s.)
+[    5.990163] init: (Parsing init.freescale.i.MX6Q.rc took 0.00s.)
+[    5.996361] init: (Parsing init.freescale.emmc.rc took 0.00s.)
+[    6.002262] init: (Parsing /init.freescale.rc took 0.02s.)
+[    6.015858] ueventd: ueventd started!
+[    6.462308] ueventd: Coldboot took 0.44s.
+[    6.490927] Console: switching to colour dummy device 80x30
+[    6.495074] watchdogd: started (interval 10, margin 20)!
+[    7.154983] EXT4-fs (mmcblk0p3): mounted filesystem with ordered data mode. Opts: barrier=1
+[    7.164756] EXT4-fs (mmcblk0p10): Ignoring removed nomblk_io_submit option
+[    7.401350] EXT4-fs (mmcblk0p10): recovery complete
+[    7.406679] EXT4-fs (mmcblk0p10): mounted filesystem with ordered data mode. Opts: nomblk_io_submit,noauto_da_alloc,errors=panic
+[    7.423695] EXT4-fs (mmcblk0p4): Ignoring removed nomblk_io_submit option
+[    7.453867] EXT4-fs (mmcblk0p4): recovery complete
+[    7.459081] EXT4-fs (mmcblk0p4): mounted filesystem with ordered data mode. Opts: nomblk_io_submit
+[    7.472262] EXT4-fs (mmcblk0p5): mounted filesystem with ordered data mode. Opts: (null)
+[    8.114221] file system registered
+[    8.119599] using random self ethernet address
+[    8.124098] using random host ethernet address
+[    8.149830] zram0: detected capacity change from 0 to 314572800
+[    8.243381] logd.auditd: start
+[    8.246511] logd.klogd: 8246062667
+[    8.247422] Adding 307196k swap on /dev/block/zram0.  Priority:-1 extents:1 across:307196k SS
+[    8.754027] binder: 252:252 transaction failed 29189, size 0-0
+[    8.777110] logd.daemon: reinit
+sabresd_6dq:/ # [    9.818376] healthd: No battery devices found
+[    9.913915] ERROR: v4l2 capture: slave not found! V4L2_CID_HUE
+[    9.943100] ERROR: v4l2 capture: slave not found! V4L2_CID_HUE
+[   10.042458] imx-hdmi-audio imx-hdmi-audio: HDMI Video is not ready!
+[   10.048790] imx-hdmi-audio imx-hdmi-audio: ASoC: can't open platform imx-hdmi-audio: -22
+[   10.071080] imx-hdmi-audio imx-hdmi-audio: HDMI Video is not ready!
+[   10.077417] imx-hdmi-audio imx-hdmi-audio: ASoC: can't open platform imx-hdmi-audio: -22
+[   10.966633] init: Starting service 'bootanim'...
+
+sabresd_6dq:/ # [   15.023930] capability: warning: `main' uses 32-bit capabilities (legacy support in use)
+[   18.005785] init: write_file: Unable to open '/sys/devices/system/cpu/cpufreq/interactive/timer_rate': No such file or directory
+[   18.017780] init: write_file: Unable to open '/sys/devices/system/cpu/cpufreq/interactive/min_sample_time': No such file or directory
+[   18.031052] init: write_file: Unable to open '/sys/devices/system/cpu/cpufreq/interactive/go_hispeed_load': No such file or directory
+[   21.372377] random: crng init done
+[   22.293172] init: write_file: Unable to open '/proc/sys/vm/extra_free_kbytes': No such file or directory
+[   23.116313] init: write_file: Unable to write to '/config/usb_gadget/g1/UDC': No such device
+[   23.177118] acc_open
+[   23.179340] acc_release
+[   23.315568] android_work: sent uevent USB_STATE=CONNECTED
+[   23.473205] android_work: sent uevent USB_STATE=DISCONNECTED
+7: attached PHY driver [Micrel KSZ9031 Gigabit PHY] (mii_bus:phy_addr=2188000.ethernet-1:07, irq=120)
+[   23.619146] IPv6: ADDRCONF(NETDEV_UP): eth0: link is not ready
+[   23.655888] android_work: sent uevent USB_STATE=CONNECTED
+[   23.774142] android_work: sent uevent USB_STATE=DISCONNECTED
+[   23.858573] android_work: sent uevent USB_STATE=CONNECTED
+[   23.880301] android_work: sent uevent USB_STATE=DISCONNECTED
+[   23.956813] android_work: sent uevent USB_STATE=CONNECTED
+[   24.103611] configfs-gadget gadget: high-speed config #1: b
+[   24.109502] android_work: sent uevent USB_STATE=CONFIGURED
+[   29.375152] init: Service 'bootanim' (pid 344) exited with status 0
+[   29.629956] init: Starting service 'exec 3 (/system/bin/bootstat)'...
+[   29.794050] init: Service 'exec 3 (/system/bin/bootstat)' (pid 918) exited with status 0
+[   29.804180] init: Starting service 'exec 4 (/system/bin/bootstat)'...
+[   29.887956] init: Service 'exec 4 (/system/bin/bootstat)' (pid 930) exited with status 0
+[   29.901547] init: Starting service 'exec 5 (/system/bin/bootstat)'...
+[   30.015227] init: Service 'exec 5 (/system/bin/bootstat)' (pid 932) exited with status 0
+[   30.027423] init: Starting service 'exec 6 (/system/bin/bootstat)'...
+[   30.150973] init: Service 'exec 6 (/system/bin/bootstat)' (pid 938) exited with status 0
+[   36.696483] mtp_open
+
+sabresd_6dq:/ # 
+sabresd_6dq:/ # 
+sabresd_6dq:/ # 
+sabresd_6dq:/ # 
+sabresd_6dq:/ # 
+sabresd_6dq:/ # \\  c ls /de e
+default.prop    dev/            device/
+sabresd_6dq:/ # ls /de                                                         v/bl[   85.416944] type=1400 audit(85.406:4): avc: denied { read } for pid=253 comm="sh" name="/" dev="tmpfs" ino=11265 scontext=u:r:shell:s0 tcontext=u:object_r:device:s0 tclass=dir permissive=0
+[   86.919696] type=1400 audit(86.916:5): avc: denied { read } for pid=253 comm="sh" name="/" dev="tmpfs" ino=11265 scontext=u:r:shell:s0 tcontext=u:object_r:device:s0 tclass=dir permissive=0
+  [   87.992697] type=1400 audit(87.986:6): avc: denied { read } for pid=253 comm="sh" name="/" dev="tmpfs" ino=11265 scontext=u:r:shell:s0 tcontext=u:object_r:device:s0 tclass=dir permissive=0
+
+ls: [   91.034298] type=1400 audit(91.026:7): avc: denied { read } for pid=1220 comm="ls" name="/" dev="tmpfs" ino=11265 scontext=u:r:shell:s0 tcontext=u:object_r:device:s0 tclass=dir permissive=0
+/dev/: Permission denied
+1|sabresd_6dq:/ # 
+1|sabresd_6dq:/ # 
+1|sabresd_6dq:/ # 
+1|sabresd_6dq:/ # cd /
+sabresd_6dq:/ # 
+sabresd_6dq:/ # 
+sabresd_6dq:/ # 
+sabresd_6dq:/ # 
+sabresd_6dq:/ # 
+sabresd_6dq:/ # cd /dev/
+sabresd_6dq:/dev # ls
+[   96.747964] type=1400 audit(96.736:8): avc: denied { read } for pid=1221 comm="ls" name="/" dev="tmpfs" ino=11265 scontext=u:r:shell:s0 tcontext=u:object_r:device:s0 tclass=dir permissive=0
+ls: .: Permission denied
+1|sabresd_6dq:/dev # 
+1|sabresd_6dq:/dev # cd /
+sabresd_6dq:/ # [  139.070545] usb 1-1.2: new high-speed USB device number 4 using ci_hdrc
+[  139.222062] usb 1-1.2: New USB device found, idVendor=14cd, idProduct=125d
+[  139.228961] usb 1-1.2: New USB device strings: Mfr=1, Product=3, SerialNumber=2
+[  139.236337] usb 1-1.2: Product: Mass Storage Device
+[  139.241253] usb 1-1.2: Manufacturer: Generic
+[  139.245533] usb 1-1.2: SerialNumber: 125D20140310
+[  139.251896] usb-storage 1-1.2:1.0: USB Mass Storage device detected
+[  139.268922] scsi host1: usb-storage 1-1.2:1.0
+[  140.322247] scsi 1:0:0:0: Direct-Access     Mass     Storage Device        PQ: 0 ANSI: 0 CCS
+[  140.335565] sd 1:0:0:0: [sda] 31116288 512-byte logical blocks: (15.9 GB/14.8 GiB)
+[  140.343931] sd 1:0:0:0: [sda] Write Protect is off
+[  140.349539] sd 1:0:0:0: [sda] No Caching mode page found
+[  140.354954] sd 1:0:0:0: [sda] Assuming drive cache: write through
+[  140.369874]  sda: sda1
+[  140.375979] sd 1:0:0:0: [sda] Attached SCSI removable disk
+
+sabresd_6dq:/ # 
+sabresd_6dq:/ # df
+[  145.465249] type=1400 audit(145.456:9): avc: denied { dac_read_search } for pid=1244 comm="df" capability=2 scontext=u:r:shell:s0 tcontext=u:r:shell:s0 tclass=capability permissive=0
+[  145.482798] type=1400 audit(145.456:10): avc: denied { dac_read_search } for pid=1244 comm="df" capability=2 scontext=u:r:shell:s0 tcontext=u:r:shell:s0 tclass=capability permissive=0
+Filesystem                  1K-bl[  145.499704] type=1400 audit(145.476:11): avc: denied { getattr } for pid=1244 comm="df" path="/dev/block" dev="tmpfs" ino=10673 scontext=u:r:shell:s0 tcontext=u:object_r:block_device:s0 tclass=dir permissive=0
+ocks   Used Available Use% Mounte[  145.521120] type=1400 audit(145.476:12): avc: denied { getattr } for pid=1244 comm="df" path="/dev/block" dev="tmpfs" ino=10673 scontext=u:r:shell:s0 tcontext=u:object_r:block_device:s0 tclass=dir permissive=0
+d on
+rootfs                     [  145.543305] type=1400 audit(145.476:13): avc: denied { getattr } for pid=1244 comm="df" path="/dev/block" dev="tmpfs" ino=10673 scontext=u:r:shell:s0 tcontext=u:object_r:block_device:s0 tclass=dir permissive=0
+    798520   3000    795520   1% [  145.563894] type=1400 audit(145.476:14): avc: denied { getattr } for pid=1244 comm="df" path="/dev/block" dev="tmpfs" ino=10673 scontext=u:r:shell:s0 tcontext=u:object_r:block_device:s0 tclass=dir permissive=0
+/
+tmpfs                         [  145.585366] type=1400 audit(145.476:15): avc: denied { getattr } for pid=1244 comm="df" path="/dev/fuse" dev="tmpfs" ino=10592 scontext=u:r:shell:s0 tcontext=u:object_r:fuse_device:s0 tclass=chr_file permissive=0
+1029204    460   1028744   1% /de[  145.607090] type=1400 audit(145.476:16): avc: denied { getattr } for pid=1244 comm="df" path="/dev/fuse" dev="tmpfs" ino=10592 scontext=u:r:shell:s0 tcontext=u:object_r:fuse_device:s0 tclass=chr_file permissive=0
+v
+tmpfs                         [  145.628819] type=1400 audit(145.476:17): avc: denied { getattr } for pid=1244 comm="df" path="/dev/fuse" dev="tmpfs" ino=10592 scontext=u:r:shell:s0 tcontext=u:object_r:fuse_device:s0 tclass=chr_file permissive=0
+1029204      4   1029200   1% /mn[  145.650508] type=1400 audit(145.496:18): avc: denied { getattr } for pid=1244 comm="df" path="/dev/block" dev="tmpfs" ino=10673 scontext=u:r:shell:s0 tcontext=u:object_r:block_device:s0 tclass=dir permissive=0
+t
+/dev/block/by-name/system     1499760 621048    878712  42% /system
+/dev/block/by-name/userdata   1430704  22016   1408688   2% /data
+/dev/block/by-name/cache       499656    412    499244   1% /cache
+/dev/block/by-name/device        6907     45      6862   1% /device
+/dev/fuse                     1430704  22016   1408688   2% /mnt/runtime/default/emulated
+/dev/fuse                     1430704  22016   1408688   2% /mnt/runtime/read/emulated
+/dev/fuse                     1430704  22016   1408688   2% /mnt/runtime/write/emulated
+sabresd_6dq:/ # 
+sabresd_6dq:/ # 
+sabresd_6dq:/ # 
+sabresd_6dq:/ # 
+sabresd_6dq:/ # df
+[  151.259641] type=1400 audit(151.246:25): avc: denied { dac_read_search } for pid=1245 comm="df" capability=2 scontext=u:r:shell:s0 tcontext=u:r:shell:s0 tclass=capability permissive=0
+Filesystem                  1K-bl[  151.276846] type=1400 audit(151.246:26): avc: denied { dac_read_search } for pid=1245 comm="df" capability=2 scontext=u:r:shell:s0 tcontext=u:r:shell:s0 tclass=capability permissive=0
+ocks   Used Available Use% Mounte[  151.295524] type=1400 audit(151.256:27): avc: denied { getattr } for pid=1245 comm="df" path="/dev/block" dev="tmpfs" ino=10673 scontext=u:r:shell:s0 tcontext=u:object_r:block_device:s0 tclass=dir permissive=0
+d on
+rootfs                     [  151.316979] type=1400 audit(151.256:28): avc: denied { getattr } for pid=1245 comm="df" path="/dev/block" dev="tmpfs" ino=10673 scontext=u:r:shell:s0 tcontext=u:object_r:block_device:s0 tclass=dir permissive=0
+    798520   3000    795520   1% [  151.338443] type=1400 audit(151.256:29): avc: denied { getattr } for pid=1245 comm="df" path="/dev/block" dev="tmpfs" ino=10673 scontext=u:r:shell:s0 tcontext=u:object_r:block_device:s0 tclass=dir permissive=0
+/
+tmpfs                         [  151.359873] type=1400 audit(151.256:30): avc: denied { getattr } for pid=1245 comm="df" path="/dev/block" dev="tmpfs" ino=10673 scontext=u:r:shell:s0 tcontext=u:object_r:block_device:s0 tclass=dir permissive=0
+1029204    460   1028744   1% /de[  151.381311] type=1400 audit(151.256:31): avc: denied { getattr } for pid=1245 comm="df" path="/dev/fuse" dev="tmpfs" ino=10592 scontext=u:r:shell:s0 tcontext=u:object_r:fuse_device:s0 tclass=chr_file permissive=0
+v
+tmpfs                         [  151.403047] type=1400 audit(151.256:32): avc: denied { getattr } for pid=1245 comm="df" path="/dev/fuse" dev="tmpfs" ino=10592 scontext=u:r:shell:s0 tcontext=u:object_r:fuse_device:s0 tclass=chr_file permissive=0
+1029204      4   1029200   1% /mn[  151.424736] type=1400 audit(151.256:33): avc: denied { getattr } for pid=1245 comm="df" path="/dev/fuse" dev="tmpfs" ino=10592 scontext=u:r:shell:s0 tcontext=u:object_r:fuse_device:s0 tclass=chr_file permissive=0
+t
+/dev/block/by-name/system     [  151.446462] type=1400 audit(151.266:34): avc: denied { getattr } for pid=1245 comm="df" path="/dev/block" dev="tmpfs" ino=10673 scontext=u:r:shell:s0 tcontext=u:object_r:block_device:s0 tclass=dir permissive=0
+1499760 621048    878712  42% /system
+/dev/block/by-name/userdata   1430704  22016   1408688   2% /data
+/dev/block/by-name/cache       499656    412    499244   1% /cache
+/dev/block/by-name/device        6907     45      6862   1% /device
+/dev/fuse                     1430704  22016   1408688   2% /mnt/runtime/default/emulated
+/dev/fuse                     1430704  22016   1408688   2% /mnt/runtime/read/emulated
+/dev/fuse                     1430704  22016   1408688   2% /mnt/runtime/write/emulated
+sabresd_6dq:/ # 
+sabresd_6dq:/ # 
+sabresd_6dq:/ # 
+sabresd_6dq:/ # 
+
+U-Boot 2017.03-dirty (Dec 26 2017 - 14:19:13 +0530)
+
+CPU:   Freescale i.MX6Q rev1.5 at 792 MHz
+Reset cause: POR
+I2C:   ready
+DRAM:  2 GiB
+PMIC: device id: 0x10, revision id: 0x21
+PMIC: programmed
+MMC:   FSL_SDHC: 0, FSL_SDHC: 1, FSL_SDHC: 2
+auto-detected panel HDMI
+Aravinth: Display: HDMI (1024x768)
+In:    serial
+Out:   serial
+Err:   serial
+Model: Toradex Apalis iMX6 Quad 2GB IT V1.1C, Serial# 05146387
+flash target is MMC:0
+Net:   using PHY at 7
+FEC [PRIME]
+Fastboot: Normal
+Hit any key to stop autoboot:  1  0 
+Apalis iMX6 # 
+Apalis iMX6 # setenv bootargs 'console=ttymxc0,115200 init=/init video=mxcfb0:dev=ldb,fbpix=RGB32,bpp=32 video=mxcfb1:dev=hdmi,640x480M@60,if=RGB24,bpp=16 video=mxcfb2:off video=mxcfb3:off vmalloc=256M androidboot.console=ttymxc0 consoleblank=0 androidboot.hardware=freescale cma=448M androidboot.selinux=permissive androidboot.dm_verity=disabled'
+Apalis iMX6 # boot
+boota mmc0 
+CACHE: Misaligned operation at range [8ffb70a0, 8ffb7120]
+CACHE: Misaligned operation at range [8ffb70a0, 8ffb7120]
+kernel   @ 14008000 (9803560)
+ramdisk  @ 15000000 (1628353)
+fdt      @ 14f00000 (53981)
+## Booting Android Image at 0x12000000 ...
+Kernel load addr 0x14008000 size 9574 KiB
+Kernel command line: console=ttymxc0,115200 init=/init video=mxcfb0:dev=ldb,fbpix=RGB32,bpp=32 video=mxcfb1:dev=hdmi,640x480M@60,if=RGB24,bpp=16 video=mxcfb2:off video=mxcfb3:off vmalloc=256M androidboot.console=ttymxc0 consoleblank=0 androidboot.hardware=freescale cma=448M androidboot.selinux=permissive androidboot.dm_verity=disabled androidboot.serialno=1b2429d4ea997115 androidboot.storage_type=emmc
+## Flattened Device Tree blob at 14f00000
+   Booting using the fdt blob at 0x14f00000
+   Loading Kernel Image ... OK
+   Using Device Tree in place at 14f00000, end 14f102dc
+
+Starting kernel ...
+
+Uncompressing Linux... done, booting the kernel.
+[    0.000000] Booting Linux on physical CPU 0x0
+[    0.000000] Linux version 4.9.67-07228-gdc437277d928-dirty (embadmin@ubuntu) (gcc version 4.9 20150123 (prerelease) (GCC) ) #9 SMP PREEMPT Tue Dec 26 14:19:46 IST 2017
+[    0.000000] CPU: ARMv7 Processor [412fc09a] revision 10 (ARMv7), cr=10c53c7d
+[    0.000000] CPU: PIPT / VIPT nonaliasing data cache, VIPT aliasing instruction cache
+[    0.000000] OF: fdt:Machine model: Aravinth : Toradex Apalis iMX6Q/D Module on Ixora V1.1 Carrier Board
+[    0.000000] cma: Reserved 448 MiB at 0x22000000
+[    0.000000] Memory policy: Data cache writealloc
+[    0.000000] percpu: Embedded 15 pages/cpu @ee6b2000 s31040 r8192 d22208 u61440
+[    0.000000] Built 1 zonelists in Zone order, mobility grouping on.  Total pages: 522768
+[    0.000000] Kernel command line: console=ttymxc0,115200 init=/init video=mxcfb0:dev=ldb,fbpix=RGB32,bpp=32 video=mxcfb1:dev=hdmi,640x480M@60,if=RGB24,bpp=16 video=mxcfb2:off video=mxcfb3:off vmalloc=256M androidboot.console=ttymxc0 consoleblank=0 androidboot.hardware=freescale cma=448M androidboot.selinux=permissive androidboot.dm_verity=disabled androidboot.serialno=1b2429d4ea997115 androidboot.storage_type=emmc
+[    0.000000] PID hash table entries: 4096 (order: 2, 16384 bytes)
+[    0.000000] Dentry cache hash table entries: 131072 (order: 7, 524288 bytes)
+[    0.000000] Inode-cache hash table entries: 65536 (order: 6, 262144 bytes)
+[    0.000000] Memory: 1597044K/2097152K available (13312K kernel code, 1128K rwdata, 4016K rodata, 1024K init, 606K bss, 41356K reserved, 458752K cma-reserved, 1318912K highmem)
+[    0.000000] Virtual kernel memory layout:
+[    0.000000]     vector  : 0xffff0000 - 0xffff1000   (   4 kB)
+[    0.000000]     fixmap  : 0xffc00000 - 0xfff00000   (3072 kB)
+[    0.000000]     vmalloc : 0xf0000000 - 0xff800000   ( 248 MB)
+[    0.000000]     lowmem  : 0xc0000000 - 0xef800000   ( 760 MB)
+[    0.000000]     pkmap   : 0xbfe00000 - 0xc0000000   (   2 MB)
+[    0.000000]     modules : 0xbf000000 - 0xbfe00000   (  14 MB)
+[    0.000000]       .text : 0xc0008000 - 0xc0e00000   (14304 kB)
+[    0.000000]       .init : 0xc1300000 - 0xc1400000   (1024 kB)
+[    0.000000]       .data : 0xc1400000 - 0xc151a218   (1129 kB)
+[    0.000000]        .bss : 0xc151a218 - 0xc15b1be0   ( 607 kB)
+[    0.000000] SLUB: HWalign=64, Order=0-3, MinObjects=0, CPUs=4, Nodes=1
+[    0.000000] Preemptible hierarchical RCU implementation.
+[    0.000000] 	Build-time adjustment of leaf fanout to 32.
+[    0.000000] NR_IRQS:16 nr_irqs:16 16
+[    0.000000] L2C-310 errata 752271 769419 enabled
+[    0.000000] L2C-310 enabling early BRESP for Cortex-A9
+[    0.000000] L2C-310 full line of zeros enabled for Cortex-A9
+[    0.000000] L2C-310 ID prefetch enabled, offset 16 lines
+[    0.000000] L2C-310 dynamic clock gating enabled, standby mode enabled
+[    0.000000] L2C-310 cache controller enabled, 16 ways, 1024 kB
+[    0.000000] L2C-310: CACHE_ID 0x410000c7, AUX_CTRL 0x76470001
+[    0.000000] Switching to timer-based delay loop, resolution 333ns
+[    0.000006] sched_clock: 32 bits at 3000kHz, resolution 333ns, wraps every 715827882841ns
+[    0.000024] clocksource: mxc_timer1: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 637086815595 ns
+[    0.001622] Console: colour dummy device 80x30
+[    0.001643] Calibrating delay loop (skipped), value calculated using timer frequency.. 6.00 BogoMIPS (lpj=30000)
+[    0.001660] pid_max: default: 32768 minimum: 301
+[    0.001732] Security Framework initialized
+[    0.001745] SELinux:  Initializing.
+[    0.001841] Mount-cache hash table entries: 2048 (order: 1, 8192 bytes)
+[    0.001854] Mountpoint-cache hash table entries: 2048 (order: 1, 8192 bytes)
+[    0.002669] CPU: Testing write buffer coherency: ok
+[    0.003075] CPU0: update cpu_capacity 1024
+[    0.003090] CPU0: thread -1, cpu 0, socket 0, mpidr 80000000
+[    0.003160] Setting up static identity map for 0x10100000 - 0x10100058
+[    0.169930] CPU1: update cpu_capacity 1024
+[    0.169938] CPU1: thread -1, cpu 1, socket 0, mpidr 80000001
+[    0.239918] CPU2: update cpu_capacity 1024
+[    0.239924] CPU2: thread -1, cpu 2, socket 0, mpidr 80000002
+[    0.309914] CPU3: update cpu_capacity 1024
+[    0.309922] CPU3: thread -1, cpu 3, socket 0, mpidr 80000003
+[    0.310030] Brought up 4 CPUs
+[    0.310061] SMP: Total of 4 processors activated (24.00 BogoMIPS).
+[    0.310070] CPU: All CPU(s) started in SVC mode.
+[    0.310118] CPU3: update max cpu_capacity 1024
+[    0.311203] devtmpfs: initialized
+[    0.319929] CPU2: update max cpu_capacity 1024
+[    0.325979] VFP support v0.3: implementor 41 architecture 3 part 30 variant 9 rev 4
+[    0.326395] clocksource: jiffies: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 19112604462750000 ns
+[    0.326421] futex hash table entries: 1024 (order: 4, 65536 bytes)
+[    0.349416] pinctrl core: initialized pinctrl subsystem
+[    0.350801] NET: Registered protocol family 16
+[    0.359970] DMA: preallocated 256 KiB pool for atomic coherent allocations
+[    0.389584] cpuidle: using governor menu
+[    0.390365] CPU identified as i.MX6Q, silicon rev 1.5
+[    0.417732] hw-breakpoint: found 5 (+1 reserved) breakpoint and 1 watchpoint registers.
+[    0.417747] hw-breakpoint: maximum watchpoint size is 4 bytes.
+[    0.419428] imx6q-pinctrl 20e0000.iomuxc: initialized IMX pinctrl driver
+[    0.423195] imx-gpc 20dc000.gpc: no fsl,ldo-bypass found!
+[    0.423311] imx-gpc 20dc000.gpc: Registered imx-gpc
+[    0.485702] mxs-dma 110000.dma-apbh: initialized
+[    0.488312] usb_host_vbus: supplied by usb_host_vbus_hub
+[    0.490107] SCSI subsystem initialized
+[    0.490617] usbcore: registered new interface driver usbfs
+[    0.490695] usbcore: registered new interface driver hub
+[    0.490804] usbcore: registered new device driver usb
+[    0.491001] 2000000.aips-bus:usbphy_nop1 supply vcc not found, using dummy regulator
+[    0.491148] 2000000.aips-bus:usbphy_nop2 supply vcc not found, using dummy regulator
+[    0.492380] i2c i2c-1: IMX I2C adapter registered
+[    0.492401] i2c i2c-1: can't use DMA, using PIO instead.
+[    0.500269] stmpe-i2c 2-0041: stmpe811 detected, chip id: 0x811
+[    0.590732] i2c i2c-2: IMX I2C adapter registered
+[    0.590751] i2c i2c-2: can't use DMA, using PIO instead.
+[    0.591577] i2c i2c-3: IMX I2C adapter registered
+[    0.591594] i2c i2c-3: can't use DMA, using PIO instead.
+[    0.591748] Linux video capture interface: v2.00
+[    0.591817] pps_core: LinuxPPS API ver. 1 registered
+[    0.591827] pps_core: Software ver. 5.3.6 - Copyright 2005-2007 Rodolfo Giometti <giometti@linux.it>
+[    0.591853] PTP clock support registered
+[    0.619641] imx-ipuv3 2400000.ipu: IPU DMFC NORMAL mode: 1(0~1), 5B(4,5), 5F(6,7)
+[    0.649635] imx-ipuv3 2800000.ipu: IPU DMFC NORMAL mode: 1(0~1), 5B(4,5), 5F(6,7)
+[    0.651038] mxc_mipi_csi2 21dc000.mipi_csi: i.MX MIPI CSI2 driver probed ipu0 csi1
+[    0.651054] mxc_mipi_csi2 21dc000.mipi_csi: i.MX MIPI CSI2 dphy version is 0x3130302a
+[    0.651151] MIPI CSI2 driver module loaded
+[    0.651524] imx rpmsg driver is registered.
+[    0.651722] Advanced Linux Sound Architecture Driver Initialized.
+[    0.652975] Bluetooth: Core ver 2.22
+[    0.653027] NET: Registered protocol family 31
+[    0.653038] Bluetooth: HCI device and connection manager initialized
+[    0.653057] Bluetooth: HCI socket layer initialized
+[    0.653072] Bluetooth: L2CAP socket layer initialized
+[    0.653116] Bluetooth: SCO socket layer initialized
+[    0.670405] clocksource: Switched to clocksource mxc_timer1
+[    0.743248] VFS: Disk quotas dquot_6.6.0
+[    0.743341] VFS: Dquot-cache hash table entries: 1024 (order 0, 4096 bytes)
+[    0.754631] NET: Registered protocol family 2
+[    0.755404] TCP established hash table entries: 8192 (order: 3, 32768 bytes)
+[    0.755508] TCP bind hash table entries: 8192 (order: 4, 65536 bytes)
+[    0.755677] TCP: Hash tables configured (established 8192 bind 8192)
+[    0.755879] UDP hash table entries: 512 (order: 2, 16384 bytes)
+[    0.755928] UDP-Lite hash table entries: 512 (order: 2, 16384 bytes)
+[    0.756159] NET: Registered protocol family 1
+[    0.756784] RPC: Registered named UNIX socket transport module.
+[    0.756798] RPC: Registered udp transport module.
+[    0.756807] RPC: Registered tcp transport module.
+[    0.756816] RPC: Registered tcp NFSv4.1 backchannel transport module.
+[    0.757136] Trying to unpack rootfs image as initramfs...
+[    0.866811] Freeing initrd memory: 1592K
+[    0.867958] hw perfevents: enabled with armv7_cortex_a9 PMU driver, 7 counters available
+[    0.871239] Bus freq driver module loaded
+[    0.872802] audit: initializing netlink subsys (disabled)
+[    0.872870] audit: type=2000 audit(0.870:1): initialized
+[    0.873918] workingset: timestamp_bits=30 max_order=19 bucket_order=0
+[    0.881550] NFS: Registering the id_resolver key type
+[    0.881583] Key type id_resolver registered
+[    0.881593] Key type id_legacy registered
+[    0.881646] ntfs: driver 2.1.32 [Flags: R/W DEBUG].
+[    0.881910] jffs2: version 2.2. (NAND) © 2001-2006 Red Hat, Inc.
+[    0.882469] fuse init (API version 7.26)
+[    0.890788] bounce: pool size: 64 pages
+[    0.890806] io scheduler noop registered
+[    0.890816] io scheduler deadline registered
+[    0.890868] io scheduler cfq registered (default)
+[    0.893953] backlight supply power not found, using dummy regulator
+[    0.897596] 20e0000.hdmi_video supply HDMI not found, using dummy regulator
+[    0.899139] Aravinth: mxcfb_probe ---->
+[    0.899210] mxc_sdc_fb fb@0: registered mxc display driver ldb
+[    0.940478] imx-ipuv3 2800000.ipu: IPU DMFC DP HIGH RESOLUTION: 1(0,1), 5B(2~5), 5F(6,7)
+[    1.036633] Console: switching to colour frame buffer device 128x48
+[    1.099574] Aravinth: mxcfb_probe Done ---->
+[    1.099641] Aravinth: mxcfb_probe ---->
+[    1.099788] mxc_hdmi 20e0000.hdmi_video: Detected HDMI controller 0x13:0xa:0xa0:0xc1
+[    1.099814] fbcvt: 640x480@60: CVT Name - .307M3
+[    1.099945] mxc_sdc_fb fb@1: registered mxc display driver hdmi
+[    1.107830] Aravinth: mxcfb_probe Done ---->
+[    1.107886] Aravinth: mxcfb_probe ---->
+[    1.107918] mxc_sdc_fb fb@2: Can't get fb option for mxcfb2!
+[    1.107971] Aravinth: mxcfb_probe ---->
+[    1.108000] mxc_sdc_fb fb@3: Can't get fb option for mxcfb3!
+[    1.110260] imx-sdma 20ec000.sdma: no iram assigned, using external mem
+[    1.110948] imx-sdma 20ec000.sdma: loaded firmware 3.3
+[    1.116111] pfuze100-regulator 2-0008: Full layer: 2, Metal layer: 1
+[    1.116856] pfuze100-regulator 2-0008: FAB: 0, FIN: 0
+[    1.116870] pfuze100-regulator 2-0008: pfuze100 found.
+[    1.131212] mxc_hdmi 20e0000.hdmi_video: Read EDID again
+[    1.135404] 2020000.serial: ttymxc0 at MMIO 0x2020000 (irq = 29, base_baud = 5000000) is a IMX
+[    1.362718] mxc_hdmi 20e0000.hdmi_video: create default modelist
+[    2.094924] console [ttymxc0] enabled
+[    2.099570] 21e8000.serial: ttymxc1 at MMIO 0x21e8000 (irq = 78, base_baud = 5000000) is a IMX
+[    2.108818] 21f0000.serial: ttymxc3 at MMIO 0x21f0000 (irq = 79, base_baud = 5000000) is a IMX
+[    2.118070] 21f4000.serial: ttymxc4 at MMIO 0x21f4000 (irq = 80, base_baud = 5000000) is a IMX
+[    2.129415] imx sema4 driver is registered.
+[    2.133691] [drm] Initialized
+[    2.137198] [drm] Initialized vivante 1.0.0 20120216 on minor 0
+[    2.155759] brd: module loaded
+[    2.167053] loop: module loaded
+[    2.181108] zram: Added device: zram0
+[    2.186507] ahci-imx 2200000.sata: fsl,transmit-level-mV not specified, using 00000024
+[    2.194501] ahci-imx 2200000.sata: fsl,transmit-boost-mdB not specified, using 00000480
+[    2.202599] ahci-imx 2200000.sata: fsl,transmit-atten-16ths not specified, using 00002000
+[    2.210813] ahci-imx 2200000.sata: fsl,receive-eq-mdB not specified, using 05000000
+[    2.222072] ahci-imx 2200000.sata: SSS flag set, parallel bus scan disabled
+[    2.229068] ahci-imx 2200000.sata: AHCI 0001.0300 32 slots 1 ports 3 Gbps 0x1 impl platform mode
+[    2.237905] ahci-imx 2200000.sata: flags: ncq sntf stag pm led clo only pmp pio slum part ccc apst 
+[    2.248592] scsi host0: ahci-imx
+[    2.252176] ata1: SATA max UDMA/133 mmio [mem 0x02200000-0x02203fff] port 0x100 irq 87
+[    2.264605] spi_imx 2008000.ecspi: probed
+[    2.269415] libphy: Fixed MDIO Bus: probed
+[    2.273953] tun: Universal TUN/TAP device driver, 1.6
+[    2.279013] tun: (C) 1999-2004 Max Krasnyansky <maxk@qualcomm.com>
+[    2.285425] CAN device driver interface
+[    2.289579] 2090000.flexcan supply xceiver not found, using dummy regulator
+[    2.297481] flexcan 2090000.flexcan: device registered (reg_base=f02f4000, irq=38)
+[    2.305273] 2094000.flexcan supply xceiver not found, using dummy regulator
+[    2.313138] flexcan 2094000.flexcan: device registered (reg_base=f02fc000, irq=39)
+[    2.322307] 2188000.ethernet supply phy not found, using dummy regulator
+[    2.340690] pps pps0: new PPS source ptp0
+[    2.346055] libphy: fec_enet_mii_bus: probed
+[    2.362308] fec 2188000.ethernet eth0: registered PHC device 0
+[    2.369048] PPP generic driver version 2.4.2
+[    2.373589] PPP BSD Compression module registered
+[    2.378302] PPP Deflate Compression module registered
+[    2.383403] PPP MPPE Compression module registered
+[    2.388205] NET: Registered protocol family 24
+[    2.392798] usbcore: registered new interface driver kaweth
+[    2.398382] pegasus: v0.9.3 (2013/04/25), Pegasus/Pegasus II USB Ethernet driver
+[    2.405865] usbcore: registered new interface driver pegasus
+[    2.411658] usbcore: registered new interface driver rtl8150
+[    2.417389] usbcore: registered new interface driver r8152
+[    2.422967] usbcore: registered new interface driver asix
+[    2.428421] usbcore: registered new interface driver ax88179_178a
+[    2.434624] usbcore: registered new interface driver cdc_ether
+[    2.440546] usbcore: registered new interface driver cdc_eem
+[    2.446262] usbcore: registered new interface driver net1080
+[    2.452034] usbcore: registered new interface driver cdc_subset
+[    2.458014] usbcore: registered new interface driver zaurus
+[    2.463698] usbcore: registered new interface driver cdc_ncm
+[    2.469364] ehci_hcd: USB 2.0 'Enhanced' Host Controller (EHCI) Driver
+[    2.475958] ehci-mxc: Freescale On-Chip EHCI Host driver
+[    2.481504] usbcore: registered new interface driver cdc_acm
+[    2.487170] cdc_acm: USB Abstract Control Model driver for USB modems and ISDN adapters
+[    2.495274] usbcore: registered new interface driver usb-storage
+[    2.501431] usbcore: registered new interface driver usbserial
+[    2.507314] usbcore: registered new interface driver usbserial_generic
+[    2.513913] usbserial: USB Serial support registered for generic
+[    2.519969] usbcore: registered new interface driver ftdi_sio
+[    2.525774] usbserial: USB Serial support registered for FTDI USB Serial Device
+[    2.533150] usbcore: registered new interface driver option
+[    2.538762] usbserial: USB Serial support registered for GSM modem (1-port)
+[    2.545810] usbcore: registered new interface driver usbtest
+[    2.551546] usbcore: registered new interface driver usb_ehset_test
+[    2.559103] 2184800.usbmisc supply vbus-wakeup not found, using dummy regulator
+[    2.577420] ci_hdrc ci_hdrc.1: EHCI Host Controller
+[    2.582372] ci_hdrc ci_hdrc.1: new USB bus registered, assigned bus number 1
+[    2.592073] ata1: SATA link down (SStatus 0 SControl 300)
+[    2.597517] ahci-imx 2200000.sata: no device found, disabling link.
+[    2.603829] ahci-imx 2200000.sata: pass ahci_imx..hotplug=1 to enable hotplug
+[    2.610447] ci_hdrc ci_hdrc.1: USB 2.0 started, EHCI 1.00
+[    2.610671] usb usb1: New USB device found, idVendor=1d6b, idProduct=0002
+[    2.610680] usb usb1: New USB device strings: Mfr=3, Product=2, SerialNumber=1
+[    2.610686] usb usb1: Product: EHCI Host Controller
+[    2.610693] usb usb1: Manufacturer: Linux 4.9.67-07228-gdc437277d928-dirty ehci_hcd
+[    2.610698] usb usb1: SerialNumber: ci_hdrc.1
+[    2.611423] hub 1-0:1.0: USB hub found
+[    2.611470] hub 1-0:1.0: 1 port detected
+[    2.612715] mousedev: PS/2 mouse device common for all mice
+[    2.613685] usbcore: registered new interface driver xpad
+[    2.613746] usbcore: registered new interface driver usb_acecad
+[    2.613800] usbcore: registered new interface driver aiptek
+[    2.613851] usbcore: registered new interface driver gtco
+[    2.613907] usbcore: registered new interface driver hanwang
+[    2.613961] usbcore: registered new interface driver kbtab
+[    2.624927] input: stmpe-ts as /devices/soc0/soc/2100000.aips-bus/21a4000.i2c/i2c-2/2-0041/stmpe-ts/input/input0
+[    2.627321] snvs_rtc 20cc000.snvs:snvs-rtc-lp: rtc core: registered 20cc000.snvs:snvs-r as rtc0
+[    2.627461] i2c /dev entries driver
+[    2.628381] IR NEC protocol handler initialized
+[    2.628385] IR RC5(x/sz) protocol handler initialized
+[    2.628388] IR RC6 protocol handler initialized
+[    2.628390] IR JVC protocol handler initialized
+[    2.628393] IR Sony protocol handler initialized
+[    2.628395] IR SANYO protocol handler initialized
+[    2.628398] IR Sharp protocol handler initialized
+[    2.628403] IR MCE Keyboard/mouse protocol handler initialized
+[    2.628406] IR XMP protocol handler initialized
+[    2.629521] mxc_v4l2_output v4l2_out: V4L2 device registered as video16
+[    2.629694] mxc_v4l2_output v4l2_out: V4L2 device registered as video17
+[    2.629869] mxc_v4l2_output v4l2_out: V4L2 device registered as video18
+[    2.630075] mxc_v4l2_output v4l2_out: V4L2 device registered as video19
+[    2.631457] ov564x_mipi 3-003c: found pwm2, period=0
+[    2.880766] ov5640_read_reg:write reg error:reg=300a
+[    2.885784] camera ov5640_mipi is not found
+[    2.891379] usbcore: registered new interface driver uvcvideo
+[    2.897134] USB Video Class driver (1.1.1)
+[    2.903446] imx2-wdt 20bc000.wdog: timeout 60 sec (nowayout=0)
+[    2.909965] device-mapper: uevent: version 1.0.3
+[    2.915035] device-mapper: ioctl: 4.35.0-ioctl (2016-06-23) initialised: dm-devel@redhat.com
+[    2.923721] Bluetooth: HCI UART driver ver 2.3
+[    2.928178] Bluetooth: HCI UART protocol H4 registered
+[    2.933380] Bluetooth: HCI UART protocol BCSP registered
+[    2.938701] Bluetooth: HCI UART protocol ATH3K registered
+[    2.944219] usbcore: registered new interface driver btusb
+[    2.950733] sdhci: Secure Digital Host Controller Interface driver
+[    2.956922] sdhci: Copyright(c) Pierre Ossman
+[    2.961315] sdhci-pltfm: SDHCI platform and OF driver helper
+[    2.967952] sdhci-esdhc-imx 2190000.usdhc: could not get ultra high speed state, work on normal mode
+[    2.977173] usb 1-1: new high-speed USB device number 2 using ci_hdrc
+[    2.983818] sdhci-esdhc-imx 2190000.usdhc: Got CD GPIO
+[    3.052738] mmc1: SDHCI controller on 2190000.usdhc [2190000.usdhc] using ADMA
+[    3.060661] sdhci-esdhc-imx 2198000.usdhc: could not get ultra high speed state, work on normal mode
+[    3.130471] mmc0: SDHCI controller on 2198000.usdhc [2198000.usdhc] using ADMA
+[    3.157197] mxc_vpu 2040000.vpu_fsl: VPU initialized
+[    3.169032] mxc_vdoa 21e4000.vdoa: i.MX Video Data Order Adapter(VDOA) driver probed
+[    3.179194] usb 1-1: New USB device found, idVendor=0424, idProduct=2514
+[    3.188065] mxc_hdmi_cec soc:hdmi_cec@00120000: HDMI CEC initialized
+[    3.189280] Galcore version 6.2.2.96445
+[    3.205693] usb 1-1: New USB device strings: Mfr=0, Product=0, SerialNumber=0
+[    3.214501] hub 1-1:1.0: USB hub found
+[    3.218669] hub 1-1:1.0: 4 ports detected
+[    3.276644] mmc0: new DDR MMC card at address 0001
+[    3.282918] mmcblk0: mmc0:0001 Q2J54A 3.59 GiB 
+[    3.288313] mmcblk0boot0: mmc0:0001 Q2J54A partition 1 16.0 MiB
+[    3.295283] mmcblk0boot1: mmc0:0001 Q2J54A partition 2 16.0 MiB
+[    3.305473] random: fast init done
+[    3.310048] Alternate GPT is invalid, using primary GPT.
+[    3.315636]  mmcblk0: p1 p2 p3 p4 p5 p6 p7 p8 p9 p10 p11
+[    3.540644] usb 1-1.3: new low-speed USB device number 3 using ci_hdrc
+[    3.694955] usb 1-1.3: New USB device found, idVendor=413c, idProduct=301a
+[    3.701909] usb 1-1.3: New USB device strings: Mfr=1, Product=2, SerialNumber=0
+[    3.709261] usb 1-1.3: Product: Dell MS116 USB Optical Mouse
+[    3.714966] usb 1-1.3: Manufacturer: PixArt
+[    4.004252] caam 2100000.caam: ERA source: CAAMVID.
+[    4.009182] caam 2100000.caam: AXI pipeline throttling enabled.
+[    4.016444] caam 2100000.caam: Instantiated RNG4 SH1
+[    4.021460] caam 2100000.caam: device ID = 0x0a16010000000000 (Era 4)
+[    4.027909] caam 2100000.caam: job rings = 2, qi = 0
+[    4.043212] caam algorithms registered in /proc/crypto
+[    4.052373] caam_jr 2101000.jr0: registering rng-caam
+[    4.058432] platform caam_sm: blkkey_ex: 4 keystore units available
+[    4.064935] platform caam_sm: 64-bit clear key:
+[    4.069480] platform caam_sm: [0000] 00 01 02 03 04 0f 06 07
+[    4.075175] platform caam_sm: 64-bit black key:
+[    4.079720] platform caam_sm: [0000] 08 86 1a 2d 7d f9 32 91
+[    4.085419] platform caam_sm: [0008] 7e 52 4e 95 52 e2 c9 a9
+[    4.091110] platform caam_sm: 128-bit clear key:
+[    4.095740] platform caam_sm: [0000] 00 01 02 03 04 0f 06 07
+[    4.101433] platform caam_sm: [0008] 08 09 0a 0b 0c 0d 0e 0f
+[    4.107100] platform caam_sm: 128-bit black key:
+[    4.111746] platform caam_sm: [0000] 63 c9 52 b1 97 9a 01 c3
+[    4.117416] platform caam_sm: [0008] de 0a d4 5b bd c4 fb 4f
+[    4.123099] platform caam_sm: 192-bit clear key:
+[    4.127727] platform caam_sm: [0000] 00 01 02 03 04 0f 06 07
+[    4.133413] platform caam_sm: [0008] 08 09 0a 0b 0c 0d 0e 0f
+[    4.139083] platform caam_sm: [0016] 10 11 12 13 14 15 16 17
+[    4.144766] platform caam_sm: 192-bit black key:
+[    4.149393] platform caam_sm: [0000] bf 69 c5 2e a6 eb b3 ae
+[    4.155084] platform caam_sm: [0008] f4 5c e7 0a 7d 75 6d 23
+[    4.160770] platform caam_sm: [0016] e6 f6 42 37 c3 82 da 3b
+[    4.166440] platform caam_sm: [0024] 52 d0 f1 62 c8 c1 26 31
+[    4.172126] platform caam_sm: 256-bit clear key:
+[    4.176753] platform caam_sm: [0000] 00 01 02 03 04 0f 06 07
+[    4.182440] platform caam_sm: [0008] 08 09 0a 0b 0c 0d 0e 0f
+[    4.188109] platform caam_sm: [0016] 10 11 12 13 14 15 16 17
+[    4.193796] platform caam_sm: [0024] 18 19 1a 1b 1c 1d 1e 1f
+[    4.199461] platform caam_sm: 256-bit black key:
+[    4.204106] platform caam_sm: [0000] d8 86 d8 17 2f 86 a5 f8
+[    4.209775] platform caam_sm: [0008] 84 ca 83 23 dd 1e 48 49
+[    4.215461] platform caam_sm: [0016] 88 bf 57 bd 29 af 00 ac
+[    4.221158] platform caam_sm: [0024] 59 e6 4e e0 f6 e5 2c 35
+[    4.226824] platform caam_sm: 64-bit unwritten blob:
+[    4.231818] platform caam_sm: [0000] 00 00 00 00 00 00 00 00
+[    4.237488] platform caam_sm: [0008] 00 00 00 00 00 00 00 00
+[    4.243175] platform caam_sm: [0016] 00 00 00 00 00 00 00 00
+[    4.248843] platform caam_sm: [0024] 00 00 00 00 00 00 00 00
+[    4.254529] platform caam_sm: [0032] 00 00 00 00 00 00 00 00
+[    4.260198] platform caam_sm: [0040] 00 00 00 00 00 00 00 00
+[    4.265885] platform caam_sm: [0048] 00 00 00 00 00 00 00 00
+[    4.271571] platform caam_sm: [0056] 00 00 00 00 00 00 00 00
+[    4.277240] platform caam_sm: [0064] 00 00 00 00 00 00 00 00
+[    4.282925] platform caam_sm: [0072] 00 00 00 00 00 00 00 00
+[    4.288594] platform caam_sm: [0080] 00 00 00 00 00 00 00 00
+[    4.294280] platform caam_sm: [0088] 00 00 00 00 00 00 00 00
+[    4.299946] platform caam_sm: 128-bit unwritten blob:
+[    4.305022] platform caam_sm: [0000] 00 00 00 00 00 00 00 00
+[    4.310709] platform caam_sm: [0008] 00 00 00 00 00 00 00 00
+[    4.316377] platform caam_sm: [0016] 00 00 00 00 00 00 00 00
+[    4.322064] platform caam_sm: [0024] 00 00 00 00 00 00 00 00
+[    4.327732] platform caam_sm: [0032] 00 00 00 00 00 00 00 00
+[    4.333418] platform caam_sm: [0040] 00 00 00 00 00 00 00 00
+[    4.339087] platform caam_sm: [0048] 00 00 00 00 00 00 00 00
+[    4.344774] platform caam_sm: [0056] 00 00 00 00 00 00 00 00
+[    4.350460] platform caam_sm: [0064] 00 00 00 00 00 00 00 00
+[    4.356128] platform caam_sm: [0072] 00 00 00 00 00 00 00 00
+[    4.361813] platform caam_sm: [0080] 00 00 00 00 00 00 00 00
+[    4.367482] platform caam_sm: [0088] 00 00 00 00 00 00 00 00
+[    4.373164] platform caam_sm: 196-bit unwritten blob:
+[    4.378225] platform caam_sm: [0000] 00 00 00 00 00 00 00 00
+[    4.383911] platform caam_sm: [0008] 00 00 00 00 00 00 00 00
+[    4.389579] platform caam_sm: [0016] 00 00 00 00 00 00 00 00
+[    4.395265] platform caam_sm: [0024] 00 00 00 00 00 00 00 00
+[    4.400950] platform caam_sm: [0032] 00 00 00 00 00 00 00 00
+[    4.406617] platform caam_sm: [0040] 00 00 00 00 00 00 00 00
+[    4.412304] platform caam_sm: [0048] 00 00 00 00 00 00 00 00
+[    4.417972] platform caam_sm: [0056] 00 00 00 00 00 00 00 00
+[    4.423660] platform caam_sm: [0064] 00 00 00 00 00 00 00 00
+[    4.429328] platform caam_sm: [0072] 00 00 00 00 00 00 00 00
+[    4.435013] platform caam_sm: [0080] 00 00 00 00 00 00 00 00
+[    4.440699] platform caam_sm: [0088] 00 00 00 00 00 00 00 00
+[    4.446365] platform caam_sm: 256-bit unwritten blob:
+[    4.451442] platform caam_sm: [0000] 00 00 00 00 00 00 00 00
+[    4.457110] platform caam_sm: [0008] 00 00 00 00 00 00 00 00
+[    4.462795] platform caam_sm: [0016] 00 00 00 00 00 00 00 00
+[    4.468463] platform caam_sm: [0024] 00 00 00 00 00 00 00 00
+[    4.474149] platform caam_sm: [0032] 00 00 00 00 00 00 00 00
+[    4.479817] platform caam_sm: [0040] 00 00 00 00 00 00 00 00
+[    4.485514] platform caam_sm: [0048] 00 00 00 00 00 00 00 00
+[    4.491202] platform caam_sm: [0056] 00 00 00 00 00 00 00 00
+[    4.496870] platform caam_sm: [0064] 00 00 00 00 00 00 00 00
+[    4.502556] platform caam_sm: [0072] 00 00 00 00 00 00 00 00
+[    4.508224] platform caam_sm: [0080] 00 00 00 00 00 00 00 00
+[    4.513907] platform caam_sm: [0088] 00 00 00 00 00 00 00 00
+[    4.519807] platform caam_sm: 64-bit black key in blob:
+[    4.525076] platform caam_sm: [0000] 24 08 27 99 5b a0 e2 23
+[    4.530766] platform caam_sm: [0008] 28 a5 02 8d ef e5 dd 95
+[    4.536436] platform caam_sm: [0016] 20 d4 24 66 f9 fd 4b 31
+[    4.542123] platform caam_sm: [0024] 7b 5b 61 20 d5 f4 a8 58
+[    4.547792] platform caam_sm: [0032] ed ee 0c a9 99 9c b1 91
+[    4.553478] platform caam_sm: [0040] fb 9f a2 c0 d9 e9 3f e9
+[    4.559147] platform caam_sm: [0048] da 8e 06 5f d8 44 bf 68
+[    4.564834] platform caam_sm: [0056] 00 00 00 00 00 00 00 00
+[    4.570520] platform caam_sm: [0064] 00 00 00 00 00 00 00 00
+[    4.576189] platform caam_sm: [0072] 00 00 00 00 00 00 00 00
+[    4.581875] platform caam_sm: [0080] 00 00 00 00 00 00 00 00
+[    4.587544] platform caam_sm: [0088] 00 00 00 00 00 00 00 00
+[    4.593226] platform caam_sm: 128-bit black key in blob:
+[    4.598550] platform caam_sm: [0000] 8f e3 e8 0e c6 16 fd fe
+[    4.604236] platform caam_sm: [0008] 88 87 f3 d6 7e 64 05 11
+[    4.609905] platform caam_sm: [0016] bd c6 4d a6 18 0d 14 1e
+[    4.615591] platform caam_sm: [0024] 78 b3 fc 3f e3 d0 19 b5
+[    4.621279] platform caam_sm: [0032] a9 c8 d4 a7 b1 4e 9b f8
+[    4.626948] platform caam_sm: [0040] 36 4b 7d 51 36 c3 f5 c5
+[    4.632634] platform caam_sm: [0048] f0 ad a5 c2 b2 70 1d e7
+[    4.638302] platform caam_sm: [0056] 27 74 1e ce 6e 2b 76 16
+[    4.643987] platform caam_sm: [0064] 00 00 00 00 00 00 00 00
+[    4.649655] platform caam_sm: [0072] 00 00 00 00 00 00 00 00
+[    4.655341] platform caam_sm: [0080] 00 00 00 00 00 00 00 00
+[    4.661027] platform caam_sm: [0088] 00 00 00 00 00 00 00 00
+[    4.666695] platform caam_sm: 192-bit black key in blob:
+[    4.672035] platform caam_sm: [0000] 46 e0 00 4a ce 26 e2 7b
+[    4.677704] platform caam_sm: [0008] 2a 05 5f bd 5a d9 e0 3e
+[    4.683390] platform caam_sm: [0016] 58 d5 c2 38 d7 f1 7b 58
+[    4.689058] platform caam_sm: [0024] c0 71 0a 8b ee 55 6c c1
+[    4.694745] platform caam_sm: [0032] 5b 42 83 bc ca 0d 47 58
+[    4.700431] platform caam_sm: [0040] 2b 97 41 58 c1 cf 11 e9
+[    4.706099] platform caam_sm: [0048] 02 3f 4c 07 91 d2 da ee
+[    4.711784] platform caam_sm: [0056] a3 10 d0 d6 93 69 2b ae
+[    4.717454] platform caam_sm: [0064] da e1 93 a5 17 03 23 99
+[    4.723137] platform caam_sm: [0072] 00 00 00 00 00 00 00 00
+[    4.728805] platform caam_sm: [0080] 00 00 00 00 00 00 00 00
+[    4.734491] platform caam_sm: [0088] 00 00 00 00 00 00 00 00
+[    4.740158] platform caam_sm: 256-bit black key in blob:
+[    4.745506] platform caam_sm: [0000] eb f7 ab fc 79 66 ce 5e
+[    4.751195] platform caam_sm: [0008] ae 28 c4 93 80 77 2f 9d
+[    4.756866] platform caam_sm: [0016] 03 06 0b 94 61 6c 2d f3
+[    4.762552] platform caam_sm: [0024] 1c eb 3d 0c ff 99 e0 e5
+[    4.768221] platform caam_sm: [0032] db 3f 63 33 d8 20 9c 2b
+[    4.773907] platform caam_sm: [0040] b9 4f 79 bc de 1f 19 dd
+[    4.779576] platform caam_sm: [0048] ee 98 90 d8 bb 9b be 51
+[    4.785262] platform caam_sm: [0056] 4b ea 0d 18 29 eb 2a 36
+[    4.790949] platform caam_sm: [0064] 55 58 eb 35 a0 96 dd 0e
+[    4.796621] platform caam_sm: [0072] 53 46 1d f0 d0 2c 77 07
+[    4.802308] platform caam_sm: [0080] 00 00 00 00 00 00 00 00
+[    4.807976] platform caam_sm: [0088] 00 00 00 00 00 00 00 00
+[    4.813869] platform caam_sm: restored 64-bit black key:
+[    4.819195] platform caam_sm: [0000] 98 11 24 61 e5 1a 70 94
+[    4.824890] platform caam_sm: [0008] 61 bf d6 ae 77 ce ec a9
+[    4.830575] platform caam_sm: restored 128-bit black key:
+[    4.835983] platform caam_sm: [0000] 63 c9 52 b1 97 9a 01 c3
+[    4.841672] platform caam_sm: [0008] de 0a d4 5b bd c4 fb 4f
+[    4.847338] platform caam_sm: restored 192-bit black key:
+[    4.852765] platform caam_sm: [0000] bf 69 c5 2e a6 eb b3 ae
+[    4.858434] platform caam_sm: [0008] f4 5c e7 0a 7d 75 6d 23
+[    4.864121] platform caam_sm: [0016] fa a0 4c 97 b0 66 77 34
+[    4.869789] platform caam_sm: [0024] 5f a1 63 5c ae 8c 4f 42
+[    4.875472] platform caam_sm: restored 256-bit black key:
+[    4.880899] platform caam_sm: [0000] d8 86 d8 17 2f 86 a5 f8
+[    4.886568] platform caam_sm: [0008] 84 ca 83 23 dd 1e 48 49
+[    4.892254] platform caam_sm: [0016] 88 bf 57 bd 29 af 00 ac
+[    4.897923] platform caam_sm: [0024] 59 e6 4e e0 f6 e5 2c 35
+[    4.903896] snvs-secvio 20cc000.caam-snvs: can't get snvs clock
+[    4.909879] snvs-secvio 20cc000.caam-snvs: violation handlers armed - non-secure state
+[    4.918698] hidraw: raw HID events driver (C) Jiri Kosina
+[    4.931591] input: PixArt Dell MS116 USB Optical Mouse as /devices/soc0/soc/2100000.aips-bus/2184200.usb/ci_hdrc.1/usb1/1-1/1-1.3/1-1.3:1.0/0003:413C:301A.0001/input/input1
+[    4.947640] hid-generic 0003:413C:301A.0001: input,hidraw0: USB HID v1.11 Mouse [PixArt Dell MS116 USB Optical Mouse] on usb-ci_hdrc.1-1.3/input0
+[    4.960828] usbcore: registered new interface driver usbhid
+[    4.966407] usbhid: USB HID core driver
+[    4.971198] ashmem: initialized
+[    4.975937] usbcore: registered new interface driver snd-usb-audio
+[    4.985066] sgtl5000 2-000a: sgtl5000 revision 0x11
+[    5.021821] fsl-ssi-dai 2028000.ssi: No cache defaults, reading back from HW
+[    5.149182] imx-sgtl5000 sound: sgtl5000 <-> 2028000.ssi mapping ok
+[    5.161199] imx-spdif sound-spdif: snd-soc-dummy-dai <-> 2004000.spdif mapping ok
+[    5.173881] imx-audio-hdmi sound-hdmi: hdmi-hifi.0 <-> soc:hdmi_audio@00120000 mapping ok
+[    5.183045] NET: Registered protocol family 26
+[    5.187508] u32 classifier
+[    5.190222]     Actions configured
+[    5.193658] Netfilter messages via NETLINK v0.30.
+[    5.198724] nf_conntrack version 0.5.0 (16384 buckets, 65536 max)
+[    5.205169] ctnetlink v0.93: registering with nfnetlink.
+[    5.211240] xt_time: kernel timezone is -0000
+[    5.215875] ip_tables: (C) 2000-2006 Netfilter Core Team
+[    5.221429] arp_tables: arp_tables: (C) 2002 David S. Miller
+[    5.227136] Initializing XFRM netlink socket
+[    5.231944] NET: Registered protocol family 10
+[    5.237637] mip6: Mobile IPv6
+[    5.240676] ip6_tables: (C) 2000-2006 Netfilter Core Team
+[    5.246271] sit: IPv6, IPv4 and MPLS over IPv4 tunneling driver
+[    5.252954] NET: Registered protocol family 17
+[    5.257432] NET: Registered protocol family 15
+[    5.261916] can: controller area network core (rev 20120528 abi 9)
+[    5.268191] NET: Registered protocol family 29
+[    5.272747] can: raw protocol (rev 20120528)
+[    5.277030] can: broadcast manager protocol (rev 20161123 t)
+[    5.282733] can: netlink gateway (rev 20130117) max_hops=1
+[    5.288504] Bluetooth: RFCOMM TTY layer initialized
+[    5.293433] Bluetooth: RFCOMM socket layer initialized
+[    5.298607] Bluetooth: RFCOMM ver 1.11
+[    5.302401] Bluetooth: BNEP (Ethernet Emulation) ver 1.3
+[    5.307721] Bluetooth: BNEP filters: protocol multicast
+[    5.312984] Bluetooth: BNEP socket layer initialized
+[    5.317955] Bluetooth: HIDP (Human Interface Emulation) ver 1.2
+[    5.323908] Bluetooth: HIDP socket layer initialized
+[    5.328944] 8021q: 802.1Q VLAN Support v1.8
+[    5.333390] Key type dns_resolver registered
+[    5.340748] cpu cpu0: Registered imx6q-cpufreq
+[    5.346057] registered taskstats version 1
+[    5.369107] imx_thermal 2000000.aips-bus:tempmon: Industrial CPU temperature grade - max:105C critical:100C passive:95C
+[    5.380636] dhd_module_init in
+[    5.384855] input: gpio-keys as /devices/soc0/gpio-keys/input/input2
+[    5.391694] snvs_rtc 20cc000.snvs:snvs-rtc-lp: setting system clock to 1970-01-01 00:00:02 UTC (2)
+[    5.401494] usb_otg_vbus: disabling
+[    5.405009] ALSA device list:
+[    5.407986]   #0: imx6q-apalis-sgtl5000
+[    5.411866]   #1: imx-spdif
+[    5.414670]   #2: imx-hdmi-soc
+[    5.420781] Freeing unused kernel memory: 1024K
+[    5.430953] init: init first stage started!
+[    5.446869] SELinux:  Permission validate_trans in class security not defined in policy.
+[    5.455465] SELinux:  Class cap_userns not defined in policy.
+[    5.461250] SELinux:  Class cap2_userns not defined in policy.
+[    5.467091] SELinux: the above unknown classes and permissions will be denied
+[    5.537299] audit: type=1403 audit(5.521:2): policy loaded auid=4294967295 ses=4294967295
+[    5.546576] init: (Initializing SELinux non-enforcing took 0.11s.)
+[    5.559394] init: init second stage started!
+[    5.575147] init: Running restorecon...
+[    5.660845] init: waitpid failed: No child processes
+[    5.666817] init: (Loading properties from /default.prop took 0.00s.)
+[    5.677996] init: (Parsing /init.environ.rc took 0.00s.)
+[    5.684777] init: (Parsing /init.usb.rc took 0.00s.)
+[    5.693215] init: (Parsing init.freescale.usb.rc took 0.00s.)
+[    5.699158] init: (Parsing init.freescale.i.MX6Q.rc took 0.00s.)
+[    5.705420] init: (Parsing init.freescale.emmc.rc took 0.00s.)
+[    5.711329] init: (Parsing /init.freescale.rc took 0.02s.)
+[    5.725018] ueventd: ueventd started!
+[    6.169542] ueventd: Coldboot took 0.44s.
+[    6.200256] Console: switching to colour dummy device 80x30
+[    6.210685] watchdogd: started (interval 10, margin 20)!
+[    6.919253] EXT4-fs (mmcblk0p3): mounted filesystem with ordered data mode. Opts: barrier=1
+[    6.928987] EXT4-fs (mmcblk0p10): Ignoring removed nomblk_io_submit option
+[    7.384461] EXT4-fs (mmcblk0p10): recovery complete
+[    7.389802] EXT4-fs (mmcblk0p10): mounted filesystem with ordered data mode. Opts: nomblk_io_submit,noauto_da_alloc,errors=panic
+[    7.406674] EXT4-fs (mmcblk0p4): Ignoring removed nomblk_io_submit option
+[    7.436349] EXT4-fs (mmcblk0p4): recovery complete
+[    7.441665] EXT4-fs (mmcblk0p4): mounted filesystem with ordered data mode. Opts: nomblk_io_submit
+[    7.453513] EXT4-fs (mmcblk0p5): mounted filesystem with ordered data mode. Opts: (null)
+[    8.086975] file system registered
+[    8.092478] using random self ethernet address
+[    8.096937] using random host ethernet address
+[    8.122917] zram0: detected capacity change from 0 to 314572800
+[    8.213264] logd.auditd: start
+[    8.216391] logd.klogd: 8215965667
+[    8.224880] Adding 307196k swap on /dev/block/zram0.  Priority:-1 extents:1 across:307196k SS
+[    8.714908] binder: 254:254 transaction failed 29189, size 0-0
+[    8.745598] logd.daemon: reinit
+sabresd_6dq:/ # [    9.676081] ERROR: v4l2 capture: slave not found! V4L2_CID_HUE
+[    9.710854] ERROR: v4l2 capture: slave not found! V4L2_CID_HUE
+[    9.722585] healthd: No battery devices found
+[    9.827435] imx-hdmi-audio imx-hdmi-audio: HDMI Video is not ready!
+[    9.840525] imx-hdmi-audio imx-hdmi-audio: ASoC: can't open platform imx-hdmi-audio: -22
+[    9.848901] imx-hdmi-audio imx-hdmi-audio: HDMI Video is not ready!
+[    9.880509] imx-hdmi-audio imx-hdmi-audio: ASoC: can't open platform imx-hdmi-audio: -22
+
+sabresd_6dq:/ # [   11.175458] init: Starting service 'bootanim'...
+
+sabresd_6dq:/ # 
+sabresd_6dq:/ # 
+sabresd_6dq:/ # 
+sabresd_6dq:/ # ls
+acct                   init.freescal[   13.360853] type=1400 audit(13.341:3): avc: denied { getattr } for pid=429 comm="ls" path="/init" dev="rootfs" ino=6456 scontext=u:r:shell:s0 tcontext=u:object_r:init_exec:s0 tclass=file permissive=1
+e.i.MX6DL.rc  root                 
+bugreports             init.freescale.i.MX6Q.rc   sbin                 
+cache                  init.freescale.i.MX6QP.rc  sdcard               
+charger                init.freescale.rc          seapp_contexts       
+config                 init.freescale.sd.rc       selinux_version      
+d                      init.freescale.usb.rc      sepolicy             
+data                   init.rc                    service_contexts     
+default.prop           init.recovery.freescale.rc storage              
+dev                    init.usb.configfs.rc       sys                  
+device                 init.usb.rc                system               
+etc                    init.zygote32.rc           ueventd.freescale.rc 
+file_contexts.bin      mnt                        ueventd.rc           
+fstab.freescale        oem                        vendor               
+init                   proc                       verity_key           
+init.environ.rc        property_contexts          
+init.freescale.emmc.rc res                        
+sabresd_6dq:/ # [   14.981148] capability: warning: `main' uses 32-bit capabilities (legacy support in use)
+
+sabresd_6dq:/ # 
+sabresd_6dq:/ # 
+[   18.028733] init: write_file: Unable to open '/sys/devices/system/cpu/cpufreq/interactive/timer_rate': No such file or directory
+[   18.040693] init: write_file: Unable to open '/sys/devices/system/cpu/cpufreq/interactive/min_sample_time': No such file or directory
+[   18.053625] init: write_file: Unable to open '/sys/devices/system/cpu/cpufreq/interactive/go_hispeed_load': No such file or directory
+sabresd_6dq:/ # 
+sabresd_6dq:/ # 
+sabresd_6dq:/ # [   21.580322] random: crng init done
+[   22.254396] init: write_file: Unable to open '/proc/sys/vm/extra_free_kbytes': No such file or directory
+
+sabresd_6dq:/ # [   23.055874] init: write_file: Unable to write to '/config/usb_gadget/g1/UDC': No such device
+[   23.117367] acc_open
+[   23.119597] acc_release
+[   23.255176] android_work: sent uevent USB_STATE=CONNECTED
+[   23.404150] android_work: sent uevent USB_STATE=DISCONNECTED
+7: attached PHY driver [Micrel KSZ9031 Gigabit PHY] (mii_bus:phy_addr=2188000.ethernet-1:07, irq=120)
+[   23.578307] IPv6: ADDRCONF(NETDEV_UP): eth0: link is not ready
+[   23.588058] android_work: sent uevent USB_STATE=CONNECTED
+[   23.704994] android_work: sent uevent USB_STATE=DISCONNECTED
+[   23.789226] android_work: sent uevent USB_STATE=CONNECTED
+[   23.795953] android_work: sent uevent USB_STATE=DISCONNECTED
+[   23.887504] android_work: sent uevent USB_STATE=CONNECTED
+[   24.029556] configfs-gadget gadget: high-speed config #1: b
+[   24.035565] android_work: sent uevent USB_STATE=CONFIGURED
+
+sabresd_6dq:/ # 
+sabresd_6dq:/ # 
+sabresd_6dq:/ # 
+sabresd_6dq:/ # 
+sabresd_6dq:/ # 
+sabresd_6dq:/ # 
+sabresd_6dq:/ # [   30.738108] init: Service 'bootanim' (pid 353) exited with status 0
+[   30.843316] init: Starting service 'exec 3 (/system/bin/bootstat)'...
+[   30.912839] init: Service 'exec 3 (/system/bin/bootstat)' (pid 953) exited with status 0
+[   30.921580] init: Starting service 'exec 4 (/system/bin/bootstat)'...
+[   30.967201] init: Service 'exec 4 (/system/bin/bootstat)' (pid 964) exited with status 0
+[   30.975995] init: Starting service 'exec 5 (/system/bin/bootstat)'...
+[   31.039138] init: Service 'exec 5 (/system/bin/bootstat)' (pid 965) exited with status 0
+[   31.047894] init: Starting service 'exec 6 (/system/bin/bootstat)'...
+[   31.088573] init: Service 'exec 6 (/system/bin/bootstat)' (pid 966) exited with status 0
+
+sabresd_6dq:/ # 
+sabresd_6dq:/ # df
+Filesystem            1K-blocks  [   33.738869] type=1400 audit(33.721:4): avc: denied { getattr } for pid=1113 comm="df" path="/dev/block" dev="tmpfs" ino=8306 scontext=u:r:shell:s0 tcontext=u:object_r:block_device:s0 tclass=dir permissive=1
+ Used Available Use% Mounted on
+rootfs                   798520   3000    795520   1% /
+tmpfs                   1029204    460   1028744   1% /dev
+tmpfs                   1029204      4   1029200   1% /mnt
+/dev/block/mmcblk0p3    1499760 621048    878712  42% /system
+/dev/block/mmcblk0p10   1430704  22020   1408684[   33.785855] type=1400 audit(33.721:5): avc: denied { getattr } for pid=1113 comm="df" path="/dev/block/mmcblk0p3" dev="tmpfs" ino=8423 scontext=u:r:shell:s0 tcontext=u:object_r:system_block_device:s0 tclass=blk_file permissive=1
+   2% /data
+/dev/block/mmcblk0p4     499656    412    499244   1% /cache
+/dev/block/mmcblk0p5       6907     45      6862   1% /device
+/dev/fuse              [   33.820499] type=1400 audit(33.721:6): avc: denied { getattr } for pid=1113 comm="df" path="/dev/block/mmcblk0p10" dev="tmpfs" ino=8405 scontext=u:r:shell:s0 tcontext=u:object_r:userdata_block_device:s0 tclass=blk_file permissive=1
+ 1430704  22020   1408684   2% /mnt/runtime/default/emulated
+/dev/fuse               1430704  22020   1408684   2% /mnt/runtime/read/emulated
+/dev/fuse        [   33.854837] type=1400 audit(33.721:7): avc: denied { getattr } for pid=1113 comm="df" path="/dev/block/mmcblk0p4" dev="tmpfs" ino=8395 scontext=u:r:shell:s0 tcontext=u:object_r:cache_block_device:s0 tclass=blk_file permissive=1
+       1430704  22020   1408684  [   33.877598] type=1400 audit(33.721:8): avc: denied { getattr } for pid=1113 comm="df" path="/dev/block/mmcblk0p5" dev="tmpfs" ino=8419 scontext=u:r:shell:s0 tcontext=u:object_r:block_device:s0 tclass=blk_file permissive=1
+ 2% /mnt/runtime/write/emulated
+[   33.901333] type=1400 audit(33.721:9): avc: denied { getattr } for pid=1113 comm="df" path="/dev/fuse" dev="tmpfs" ino=8225 scontext=u:r:shell:s0 tcontext=u:object_r:fuse_device:s0 tclass=chr_file permissive=1
+sabresd_6dq:/ # 
+sabresd_6dq:/ # 
+sabresd_6dq:/ # 
+sabresd_6dq:/ # 
+sabresd_6dq:/ # df
+[   37.695961] type=1400 audit(37.681:10): avc: denied { getattr } for pid=1219 comm="df" path="/dev/block/mmcblk0p3" dev="tmpfs" ino=8423 scontext=u:r:shell:s0 tcontext=u:object_r:system_block_device:s0 tclass=blk_file permissive=1
+Filesystem            1K-blocks  [   37.717346] type=1400 audit(37.681:11): avc: denied { getattr } for pid=1219 comm="df" path="/dev/block/mmcblk0p10" dev="tmpfs" ino=8405 scontext=u:r:shell:s0 tcontext=u:object_r:userdata_block_device:s0 tclass=blk_file permissive=1
+ Used Available Use% Mounted on
+[   37.740231] type=1400 audit(37.681:12): avc: denied { getattr } for pid=1219 comm="df" path="/dev/block/mmcblk0p4" dev="tmpfs" ino=8395 scontext=u:r:shell:s0 tcontext=u:object_r:cache_block_device:s0 tclass=blk_file permissive=1
+rootfs                   798520   3000    795520   1% /
+tmpfs                   1029204    460   1028744   1% /dev
+tmpfs                   1029204      4   1029200   1% /mnt
+/dev/block/mmcblk0p3    1499760 621048    878712  42% /system
+/dev/block/mmcblk0p10   1430704  22020   1408684   2% /data
+/dev/block/mmcblk0p4     499656    412    499244   1% /cache
+/dev/block/mmcblk0p5       6907     45      6862   1% /device
+/dev/fuse               1430704  22020   1408684   2% /mnt/runtime/default/emulated
+/dev/fuse               1430704  22020   1408684   2% /mnt/runtime/read/emulated
+/dev/fuse               1430704  22020   1408684   2% /mnt/runtime/write/emulated
+sabresd_6dq:/ # 
+sabresd_6dq:/ # 
+sabresd_6dq:/ # 
+sabresd_6dq:/ # 
+sabresd_6dq:/ # 
+sabresd_6dq:/ # 
+sabresd_6dq:/ # 
+sabresd_6dq:/ # 
+sabresd_6dq:/ # 
+sabresd_6dq:/ # 
+sabresd_6dq:/ # df
+Filesystem            1K-blocks   Used Available Use% Mounted on
+rootfs                   798520   3000    795520   1% /
+tmpfs                   1029204    460   1028744   1% /dev
+tmpfs                   1029204      4   1029200   1% /mnt
+/dev/block/mmcblk0p3    1499760 621048    878712  42% /system
+/dev/block/mmcblk0p10   1430704  22020   1408684   2% /data
+/dev/block/mmcblk0p4     499656    412    499244   1% /cache
+/dev/block/mmcblk0p5       6907     45      6862   1% /device
+/dev/fuse               1430704  22020   1408684   2% /mnt/runtime/default/emulated
+/dev/fuse               1430704  22020   1408684   2% /mnt/runtime/read/emulated
+/dev/fuse               1430704  22020   1408684   2% /mnt/runtime/write/emulated
+sabresd_6dq:/ # 
+sabresd_6dq:/ # 
+sabresd_6dq:/ # df
+Filesystem            1K-blocks   Used Available Use% Mounted on
+rootfs                   798520   3000    795520   1% /
+tmpfs                   1029204    460   1028744   1% /dev
+tmpfs                   1029204      4   1029200   1% /mnt
+/dev/block/mmcblk0p3    1499760 621048    878712  42% /system
+/dev/block/mmcblk0p10   1430704  22020   1408684   2% /data
+/dev/block/mmcblk0p4     499656    412    499244   1% /cache
+/dev/block/mmcblk0p5       6907     45      6862   1% /device
+/dev/fuse               1430704  22020   1408684   2% /mnt/runtime/default/emulated
+/dev/fuse               1430704  22020   1408684   2% /mnt/runtime/read/emulated
+/dev/fuse               1430704  22020   1408684   2% /mnt/runtime/write/emulated
+sabresd_6dq:/ # 
+sabresd_6dq:/ # 
+sabresd_6dq:/ # 
+sabresd_6dq:/ # 
+sabresd_6dq:/ # df
+Filesystem            1K-blocks   Used Available Use% Mounted on
+rootfs                   798520   3000    795520   1% /
+tmpfs                   1029204    460   1028744   1% /dev
+tmpfs                   1029204      4   1029200   1% /mnt
+/dev/block/mmcblk0p3    1499760 621048    878712  42% /system
+/dev/block/mmcblk0p10   1430704  22020   1408684   2% /data
+/dev/block/mmcblk0p4     499656    412    499244   1% /cache
+/dev/block/mmcblk0p5       6907     45      6862   1% /device
+/dev/fuse               1430704  22020   1408684   2% /mnt/runtime/default/emulated
+/dev/fuse               1430704  22020   1408684   2% /mnt/runtime/read/emulated
+/dev/fuse               1430704  22020   1408684   2% /mnt/runtime/write/emulated
+sabresd_6dq:/ # 
+sabresd_6dq:/ # 
+sabresd_6dq:/ # 
+sabresd_6dq:/ # 
+sabresd_6dq:/ # cd /dev/bl[   47.467177] type=1400 audit(47.461:13): avc: denied { read } for pid=255 comm="sh" name="/" dev="tmpfs" ino=11265 scontext=u:r:shell:s0 tcontext=u:object_r:device:s0 tclass=dir permissive=1
+sabresd_6dq:/ # cd /dev/block/   [   47.485412] type=1400 audit(47.461:14): avc: denied { open } for pid=255 comm="sh" path="/dev" dev="tmpfs" ino=11265 scontext=u:r:shell:s0 tcontext=u:object_r:device:s0 tclass=dir permissive=1
+                                              o[   48.112114] type=1400 audit(48.101:15): avc: denied { read } for pid=255 comm="sh" name="block" dev="tmpfs" ino=8306 scontext=u:r:shell:s0 tcontext=u:object_r:block_device:s0 tclass=dir permissive=1
+[   48.130200] type=1400 audit(48.101:16): avc: denied { open } for pid=255 comm="sh" path="/dev/block" dev="tmpfs" ino=8306 scontext=u:r:shell:s0 tcontext=u:object_r:block_device:s0 tclass=dir permissive=1
+  sabresd_6dq:/ # cd /dev/block/                                                 
+sabresd_6dq:/dev/block # 
+sabresd_6dq:/dev/block # 
+sabresd_6dq:/dev/block # ls
+[   51.334970] type=1400 audit(51.321:17): avc: denied { getattr } for pid=1225 comm="ls" path="/dev/block/mmcblk0p1" dev="tmpfs" ino=8431 scontext=u:r:shell:s0 tcontext=u:object_r:boot_block_device:s0 tclass=blk_file permissive=1
+by-name loop4   mmcblk0boot0 mmcblk0p2 [   51.356547] type=1400 audit(51.321:18): avc: denied { getattr } for pid=1225 comm="ls" path="/dev/block/mmcblk0p7" dev="tmpfs" ino=8413 scontext=u:r:shell:s0 tcontext=u:object_r:metadata_block_device:s0 tclass=blk_file permissive=1
+mmcblk0p7 ram1  ram14 ram5 vold  [   51.379888] type=1400 audit(51.321:19): avc: denied { getattr } for pid=1225 comm="ls" path="/dev/block/mmcblk0p9" dev="tmpfs" ino=8409 scontext=u:r:shell:s0 tcontext=u:object_r:frp_block_device:s0 tclass=blk_file permissive=1
+
+loop0   loop5   mmcblk0boot1 mm[   51.402716] type=1400 audit(51.321:20): avc: denied { getattr } for pid=1225 comm="ls" path="/dev/block/mmcblk0p2" dev="tmpfs" ino=8401 scontext=u:r:shell:s0 tcontext=u:object_r:recovery_block_device:s0 tclass=blk_file permissive=1
+cblk0p3 mmcblk0p8 ram10 ram15 ram[   51.426069] type=1400 audit(51.321:21): avc: denied { getattr } for pid=1225 comm="ls" path="/dev/block/mmcblk0" dev="tmpfs" ino=8388 scontext=u:r:shell:s0 tcontext=u:object_r:block_device:s0 tclass=blk_file permissive=1
+6 zram0 
+loop1   loop6   mmcblk0[   51.448536] type=1400 audit(51.321:22): avc: denied { getattr } for pid=1225 comm="ls" path="/dev/block/loop3" dev="tmpfs" ino=8331 scontext=u:r:shell:s0 tcontext=u:object_r:loop_device:s0 tclass=blk_file permissive=1
+p1    mmcblk0p4 mmcblk0p9 ram11 ram2  ram7 
+loop2   loop7   mmcblk0p10   mmcblk0p5 platform  ram12 ram3  ram8 
+loop3   mmcblk0 mmcblk0p11   mmcblk0p6 ram0      ram13 ram4  ram9 
+sabresd_6dq:/dev/block # 
+sabresd_6dq:/dev/block # 
+sabresd_6dq:/dev/block # 
+sabresd_6dq:/dev/block # ls
+by-name loop4   mmcblk0boot0 mmcblk0p2 mmcblk0p7 ram1  ram14 ram5 vold  
+loop0   loop5   mmcblk0boot1 mmcblk0p3 mmcblk0p8 ram10 ram15 ram6 zram0 
+loop1   loop6   mmcblk0p1    mmcblk0p4 mmcblk0p9 ram11 ram2  ram7 
+loop2   loop7   mmcblk0p10   mmcblk0p5 platform  ram12 ram3  ram8 
+loop3   mmcblk0 mmcblk0p11   mmcblk0p6 ram0      ram13 ram4  ram9 
+sabresd_6dq:/dev/block # ls
+by-name loop4   mmcblk0boot0 mmcblk0p2 mmcblk0p7 ram1  ram14 ram5 vold  
+loop0   loop5   mmcblk0boot1 mmcblk0p3 mmcblk0p8 ram10 ram15 ram6 zram0 
+loop1   loop6   mmcblk0p1    mmcblk0p4 mmcblk0p9 ram11 ram2  ram7 
+loop2   loop7   mmcblk0p10   mmcblk0p5 platform  ram12 ram3  ram8 
+loop3   mmcblk0 mmcblk0p11   mmcblk0p6 ram0      ram13 ram4  ram9 
+sabresd_6dq:/dev/block # 
+sabresd_6dq:/dev/block # 
+sabresd_6dq:/dev/block # ls
+by-name loop4   mmcblk0boot0 mmcblk0p2 mmcblk0p7 ram1  ram14 ram5 vold  
+loop0   loop5   mmcblk0boot1 mmcblk0p3 mmcblk0p8 ram10 ram15 ram6 zram0 
+loop1   loop6   mmcblk0p1    mmcblk0p4 mmcblk0p9 ram11 ram2  ram7 
+loop2   loop7   mmcblk0p10   mmcblk0p5 platform  ram12 ram3  ram8 
+loop3   mmcblk0 mmcblk0p11   mmcblk0p6 ram0      ram13 ram4  ram9 
+sabresd_6dq:/dev/block # 
+sabresd_6dq:/dev/block # 
+sabresd_6dq:/dev/block # 
+sabresd_6dq:/dev/block # 
+sabresd_6dq:/dev/block # cd ..
+sabresd_6dq:/dev # 
+sabresd_6dq:/dev # 
+sabresd_6dq:/dev # 
+sabresd_6dq:/dev # ; ls
+[   74.105425] type=1400 audit(74.091:24): avc: denied { getattr } for pid=1230 comm="ls" path="/dev/mtp_usb" dev="tmpfs" ino=8451 scontext=u:r:shell:s0 tcontext=u:object_r:mtp_device:s0 tclass=chr_file permissive=1
+__properties__  hw_random          pts       t[   74.125708] type=1400 audit(74.091:25): avc: denied { getattr } for pid=1230 comm="ls" path="/dev/fscklogs" dev="tmpfs" ino=10698 scontext=u:r:shell:s0 tcontext=u:object_r:fscklogs:s0 tclass=dir permissive=1
+ty24 tty48   ubi_ctrl      
+ashm[   74.147488] type=1400 audit(74.091:26): avc: denied { getattr } for pid=1230 comm="ls" path="/dev/.coldboot_done" dev="tmpfs" ino=8450 scontext=u:r:shell:s0 tcontext=u:object_r:device:s0 tclass=file permissive=1
+em          hwbinder           ra[   74.169027] type=1400 audit(74.091:27): avc: denied { getattr } for pid=1230 comm="ls" path="/dev/i2c-2" dev="tmpfs" ino=8387 scontext=u:r:shell:s0 tcontext=u:object_r:i2c_device:s0 tclass=chr_file permissive=1
+ndom    tty25 tty49   uhid       [   74.190716] type=1400 audit(74.091:28): avc: denied { getattr } for pid=1230 comm="ls" path="/dev/hidraw0" dev="tmpfs" ino=8380 scontext=u:r:shell:s0 tcontext=u:object_r:device:s0 tclass=chr_file permissive=1
+   
+autofs          i2c-1       [   74.211942] type=1400 audit(74.091:29): avc: denied { getattr } for pid=1230 comm="ls" path="/dev/watchdog" dev="tmpfs" ino=8364 scontext=u:r:shell:s0 tcontext=u:object_r:watchdog_device:s0 tclass=chr_file permissive=1
+       rfkill    tty26 tty5    ui[   74.234170] type=1400 audit(74.091:30): avc: denied { getattr } for pid=1230 comm="ls" path="/dev/rtc0" dev="tmpfs" ino=8361 scontext=u:r:shell:s0 tcontext=u:object_r:rtc_device:s0 tclass=chr_file permissive=1
+nput        
+binder          i2c[   74.255617] type=1400 audit(74.091:31): avc: denied { getattr } for pid=1230 comm="ls" path="/dev/video0" dev="tmpfs" ino=8350 scontext=u:r:shell:s0 tcontext=u:object_r:video_device:s0 tclass=chr_file permissive=1
+-2              rtc0      tty27 t[   74.277424] type=1400 audit(74.091:32): avc: denied { getattr } for pid=1230 comm="ls" path="/dev/graphics" dev="tmpfs" ino=8340 scontext=u:r:shell:s0 tcontext=u:object_r:graphics_device:s0 tclass=dir permissive=1
+ty50   urandom       
+block     [   74.299225] type=1400 audit(74.091:33): avc: denied { getattr } for pid=1230 comm="ls" path="/dev/vcs1" dev="tmpfs" ino=8339 scontext=u:r:shell:s0 tcontext=u:object_r:vcs_device:s0 tclass=chr_file permissive=1
+      i2c-3              snd       tty28 tty51   usb           
+bus             input              socket    tty29 tty52   usb-ffs       
+console         ion                spidev0.0 tty3  tty53   usb_accessory 
+cpu_dma_latency keychord           stune     tty30 tty54   vcs           
+cpuctl          kmsg               tty       tty31 tty55   vcs1          
+cpuset          loop-control       tty0      tty32 tty56   vcsa          
+device-mapper   memcg              tty1      tty33 tty57   vcsa1         
+dri             memory_bandwidth   tty10     tty34 tty58   video0        
+fd              mtp_usb            tty11     tty35 tty59   video1        
+fscklogs        mxc_asrc           tty12     tty36 tty6    video16       
+full            mxc_hdmi           tty13     tty37 tty60   video17       
+fuse            mxc_hdmi_cec       tty14     tty38 tty61   video18       
+galcore         mxc_ipu            tty15     tty39 tty62   video19       
+gpiochip0       mxc_mem            tty16     tty4  tty63   vndbinder     
+gpiochip1       mxc_vpu            tty17     tty40 tty7    watchdog      
+gpiochip2       network_latency    tty18     tty41 tty8    watchdog0     
+gpiochip3       network_throughput tty19     tty42 tty9    xt_qtaguid    
+gpiochip4       null               tty2      tty43 ttymxc0 zero          
+gpiochip5       ppp                tty20     tty44 ttymxc1 
+gpiochip6       pps0               tty21     tty45 ttymxc3 
+graphics        ptmx               tty22     tty46 ttymxc4 
+hidraw0         ptp0               tty23     tty47 tun     
+sabresd_6dq:/dev # cd /
+sabresd_6dq:/ # ls
+[   80.835282] type=1400 audit(80.821:43): avc: denied { getattr } for pid=1231 comm="ls" path="/init" dev="rootfs" ino=6456 scontext=u:r:shell:s0 tcontext=u:object_r:init_exec:s0 tclass=file permissive=1
+acct                   init.freescale.i.MX6DL.rc  root                 
+bugreports             init.freescale.i.MX6Q.rc   sbin                 
+cache                  init.freescale.i.MX6QP.rc  sdcard               
+charger                init.freescale.rc          seapp_contexts       
+config                 init.freescale.sd.rc       selinux_version      
+d                      init.freescale.usb.rc      sepolicy             
+data                   init.rc                    service_contexts     
+default.prop           init.recovery.freescale.rc storage              
+dev                    init.usb.configfs.rc       sys                  
+device                 init.usb.rc                system               
+etc                    init.zygote32.rc           ueventd.freescale.rc 
+file_contexts.bin      mnt                        ueventd.rc           
+fstab.freescale        oem                        vendor               
+init                   proc                       verity_key           
+init.environ.rc        property_contexts          
+init.freescale.emmc.rc res                        
+sabresd_6dq:/ # 
+sabresd_6dq:/ # 
+sabresd_6dq:/ # [   84.079894] android_work: sent uevent USB_STATE=DISCONNECTED
+#[   84.169822] android_work: sent uevent USB_STATE=DISCONNECTED
+[   84.262428] android_work: sent uevent USB_STATE=CONNECTED
+[   84.267886] configfs-gadget gadget: high-speed config #1: b
+[   84.273727] android_work: sent uevent USB_STATE=CONFIGURED
+[   84.312358] mtp_open
+[   84.386839] mtp_release
+[   84.387006] android_work: sent uevent USB_STATE=DISCONNECTED
+[   84.478718] android_work: sent uevent USB_STATE=DISCONNECTED
+[   84.569384] configfs-gadget gadget: high-speed config #1: b
+[   84.575265] android_work: sent uevent USB_STATE=CONNECTED
+[   84.581441] android_work: sent uevent USB_STATE=CONFIGURED
+[   84.616172] mtp_open
+[   84.714029] configfs-gadget gadget: high-speed config #1: b
+[   84.714078] mtp_release
+[   84.722409] android_work: sent uevent USB_STATE=CONFIGURED
+
+sabresd_6dq:/ # 
+sabresd_6dq:/ # 
+sabresd_6dq:/ # 
+sabresd_6dq:/ # 
+sabresd_6dq:/ # 
+
+U-Boot 2017.03-dirty (Dec 26 2017 - 14:19:13 +0530)
+
+CPU:   Freescale i.MX6Q rev1.5 at 792 MHz
+Reset cause: POR
+I2C:   ready
+DRAM:  2 GiB
+PMIC: device id: 0x10, revision id: 0x21
+PMIC: programmed
+MMC:   FSL_SDHC: 0, FSL_SDHC: 1, FSL_SDHC: 2
+auto-detected panel HDMI
+Aravinth: Display: HDMI (1024x768)
+In:    serial
+Out:   serial
+Err:   serial
+Model: Toradex Apalis iMX6 Quad 2GB IT V1.1C, Serial# 05146387
+flash target is MMC:0
+Net:   using PHY at 7
+FEC [PRIME]
+Fastboot: Normal
+Hit any key to stop autoboot:  1  0 
+Apalis iMX6 # 

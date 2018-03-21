@@ -1,0 +1,421 @@
+
+
+U-Boot 2017.03-dirty (Dec 14 2017 - 17:49:07 +0530)
+
+CPU:   Freescale i.MX6Q rev1.5 at 792 MHz
+Reset cause: POR
+I2C:   ready
+DRAM:  2 GiB
+PMIC: device id: 0x10, revision id: 0x21
+PMIC: programmed
+MMC:   FSL_SDHC: 0, FSL_SDHC: 1, FSL_SDHC: 2
+auto-detected panel HDMI
+Aravinth: Display: HDMI (1024x768)
+In:    serial
+Out:   serial
+Err:   serial
+Model: Toradex Apalis iMX6 Quad 2GB IT V1.1C, Serial# 05146387
+Net:   using PHY at 7
+FEC [PRIME]
+Normal Boot
+Hit any key to stop autoboot:  1  0 
+Apalis iMX6 # pri
+arch=arm
+baudrate=115200
+board=apalis_imx6
+board_name=apalis_imx6
+board_rev=011c
+boot_file=uImage
+bootcmd=run emmcboot ; echo ; echo emmcboot failed ; run nfsboot ; echo ; echo nfsboot failed ; usb start ;setenv stdout serial,vga ; setenv stdin serial,usbkbd
+bootdelay=1
+console=ttymxc0
+cpu=armv7
+defargs=enable_wait_mode=off vmalloc=400M
+dfu_alt_info=u-boot.imx raw 0x2 0x3ff mmcpart 0;boot part 0 1;rootfs part 0 2;uImage fat 0 1;imx6q-colibri-eval-v3.dtb fat 0 1;imx6q-colibri-cam-eval-v3.dtb fat 0 1
+emmcargs=ip=off root=/dev/mmcblk0p2 rw,noatime rootfstype=ext3 rootwait
+emmcboot=run setup; setenv bootargs ${defargs} ${emmcargs} ${setupargs} ${vidargs}; echo Booting from internal eMMC chip...; run emmcdtbload; load mmc 0:1 ${kernel_addr_r} ${boot_file} && run fdt_fixup && bootm ${kernel_addr_r} ${dtbparam}
+emmcdtbload=setenv dtbparam; load mmc 0:1 ${fdt_addr_r} ${fdt_file} && setenv dtbparam " - ${fdt_addr_r}" && true
+ethact=FEC
+ethaddr=00:14:2d:4e:87:13
+ethprime=FEC
+fdt_addr_r=0x12000000
+fdt_file=imx6q-apalis-eval.dtb
+fdt_fixup=;
+fdt_high=0xffffffff
+initrd_high=0xffffffff
+ipaddr=192.168.10.2
+kernel_addr_r=0x11000000
+loadaddr=0x12000000
+netmask=255.255.255.0
+nfsargs=ip=:::::eth0:on root=/dev/nfs rw
+nfsboot=run setup; setenv bootargs ${defargs} ${nfsargs} ${setupargs} ${vidargs}; echo Booting via DHCP/TFTP/NFS...; run nfsdtbload; dhcp ${kernel_addr_r} && run fdt_fixup && bootm ${kernel_addr_r} ${dtbparam}
+nfsdtbload=setenv dtbparam; tftp ${fdt_addr_r} ${fdt_file} && setenv dtbparam " - ${fdt_addr_r}" && true
+ramdisk_addr_r=0x12100000
+sdargs=ip=off root=/dev/mmcblk1p2 rw,noatime rootfstype=ext3 rootwait
+sdboot=run setup; setenv bootargs ${defargs} ${sdargs} ${setupargs} ${vidargs}; echo Booting from SD card; run sddtbload; load mmc 1:1 ${kernel_addr_r} ${boot_file} && run fdt_fixup && bootm ${kernel_addr_r} ${dtbparam}
+sddtbload=setenv dtbparam; load mmc 1:1 ${fdt_addr_r} ${fdt_file} && setenv dtbparam " - ${fdt_addr_r}" && true
+serial#=05146387
+serverip=192.168.10.1
+setethupdate=if env exists ethaddr; then; else setenv ethaddr 00:14:2d:00:00:00; fi; tftpboot ${loadaddr} flash_eth.img && source ${loadaddr}
+setsdupdate=setenv interface mmc; setenv drive 1; mmc rescan; load ${interface} ${drive}:1 ${loadaddr} flash_blk.img && source ${loadaddr}
+setup=setenv setupargs fec_mac=${ethaddr} consoleblank=0 no_console_suspend=1 console=tty1 console=${console},${baudrate}n8
+setupdate=run setsdupdate || run setusbupdate || run setethupdate
+setusbupdate=usb start && setenv interface usb; setenv drive 0; load ${interface} ${drive}:1 ${loadaddr} flash_blk.img && source ${loadaddr}
+soc=mx6
+splashpos=m,m
+vendor=toradex
+ver=U-Boot 2017.03-dirty (Dec 14 2017 - 17:49:07 +0530)
+vidargs=mxc_hdmi.only_cea=1 video=mxcfb0:dev=hdmi,1920x1080M@60,if=RGB24 video=mxcfb1:off video=mxcfb2:off video=mxcfb3:off fbmem=32M
+
+Environment size: 2930/8188 bytes
+Apalis iMX6 # ?
+?       - alias for 'help'
+askenv  - get environment variables from stdin
+base    - print or set address offset
+bdinfo  - print Board Info structure
+bmode   - mmc|sd|normal|usb|sata|ecspi1:0|ecspi1:1|ecspi1:2|ecspi1:3|esdhc1|esdhc2|esdhc3|esdhc4 [noreset]
+bmp     - manipulate BMP image data
+boot    - boot default, i.e., run 'bootcmd'
+bootd   - boot default, i.e., run 'bootcmd'
+bootm   - boot application image from memory
+bootp   - boot image via network using BOOTP/TFTP protocol
+bootz   - boot Linux zImage image from memory
+cfgblock- Toradex config block handling commands
+clocks  - display clocks
+clrlogo - fill the boot logo area with black
+cmp     - memory compare
+coninfo - print console devices and information
+cp      - memory copy
+cpu     - Multiprocessor CPU boot manipulation and release
+crc32   - checksum calculation
+dcache  - enable or disable data cache
+dfu     - Device Firmware Upgrade
+dhcp    - boot image via network using DHCP/TFTP protocol
+dm      - Driver model low level access
+echo    - echo args to console
+editenv - edit environment variable
+env     - environment handling commands
+erase   - erase FLASH memory
+exit    - exit script
+ext4load- load binary file from a Ext4 filesystem
+ext4ls  - list files in a directory (default /)
+ext4size- determine a file's size
+false   - do nothing, unsuccessfully
+fatinfo - print information about filesystem
+fatload - load binary file from a dos filesystem
+fatls   - list files in a directory (default /)
+fatsize - determine a file's size
+fatwrite- write file into a dos filesystem
+fdt     - flattened device tree utility commands
+flinfo  - print FLASH memory information
+fstype  - Look up a filesystem type
+fuse    - Fuse sub-system
+go      - start application at address 'addr'
+gpio    - query and control gpio pins
+hdmidet - detect HDMI monitor
+help    - print command description/usage
+i2c     - I2C sub-system
+icache  - enable or disable instruction cache
+itest   - return true/false on integer compare
+load    - load binary file from a filesystem
+loop    - infinite loop on address range
+ls      - list files in a directory (default /)
+md      - memory display
+mdio    - MDIO utility commands
+mfgr_fuse- OTP fusing during module production
+mii     - MII utility commands
+mm      - memory modify (auto-incrementing address)
+mmc     - MMC sub system
+mmcinfo - display MMC info
+mtest   - simple RAM read/write test
+mw      - memory write (fill)
+nm      - memory modify (constant address)
+pf0100_otp_prog- Program the OTP fuses on the PMIC PF0100
+ping    - send ICMP ECHO_REQUEST to network host
+printenv- print environment variables
+protect - enable or disable FLASH write protection
+reset   - Perform RESET of the CPU
+run     - run commands in an environment variable
+sata    - SATA sub system
+save    - save file to a filesystem
+saveenv - save environment variables to persistent storage
+setenv  - set environment variables
+setexpr - set environment variable as the result of eval expression
+showvar - print local hushshell variables
+size    - determine a file's size
+sleep   - delay execution for some time
+source  - run script from memory
+test    - minimal test like /bin/sh
+tftpboot- boot image via network using TFTP protocol
+time    - run commands and summarize execution time
+true    - do nothing, successfully
+ums     - Use the UMS [USB Mass Storage]
+updt_fuse- OTP fusing during module update
+usb     - USB sub-system
+usbboot - boot from USB device
+version - print monitor, compiler and linker version
+Apalis iMX6 # booti mmc1
+Unknown command 'booti' - try 'help'
+Apalis iMX6 # ## Warning: gatewayip needed but not set
+## Warning: gatewayip needed but not set
+## Warning: gatewayip needed but not set
+
+ARP Retry count exceeded; starting again
+
+nfsboot failed
+starting USB...
+USB0:   Port not available.
+USB1:   USB EHCI 1.00
+scanning bus 1 for devices... 
+
+U-Boot 2017.03-dirty (Dec 14 2017 - 17:49:07 +0530)
+
+CPU:   Freescale i.MX6Q rev1.5 at 792 MHz
+Reset cause: POR
+I2C:   ready
+DRAM:  2 GiB
+PMIC: device id: 0x10, revision id: 0x21
+PMIC: programmed
+MMC:   FSL_SDHC: 0, FSL_SDHC: 1, FSL_SDHC: 2
+auto-detected panel HDMI
+Aravinth: Display: HDMI (1024x768)
+In:    serial
+Out:   serial
+Err:   serial
+Model: Toradex Apalis iMX6 Quad 2GB IT V1.1C, Serial# 05146387
+Net:   using PHY at 7
+FEC [PRIME]
+Normal Boot
+Hit any key to stop autoboot:  1  0 
+Apalis iMX6 # pri
+arch=arm
+baudrate=115200
+board=apalis_imx6
+board_name=apalis_imx6
+board_rev=011c
+boot_file=uImage
+bootcmd=run emmcboot ; echo ; echo emmcboot failed ; run nfsboot ; echo ; echo nfsboot failed ; usb start ;setenv stdout serial,vga ; setenv stdin serial,usbkbd
+bootdelay=1
+console=ttymxc0
+cpu=armv7
+defargs=enable_wait_mode=off vmalloc=400M
+dfu_alt_info=u-boot.imx raw 0x2 0x3ff mmcpart 0;boot part 0 1;rootfs part 0 2;uImage fat 0 1;imx6q-colibri-eval-v3.dtb fat 0 1;imx6q-colibri-cam-eval-v3.dtb fat 0 1
+emmcargs=ip=off root=/dev/mmcblk0p2 rw,noatime rootfstype=ext3 rootwait
+emmcboot=run setup; setenv bootargs ${defargs} ${emmcargs} ${setupargs} ${vidargs}; echo Booting from internal eMMC chip...; run emmcdtbload; load mmc 0:1 ${kernel_addr_r} ${boot_file} && run fdt_fixup && bootm ${kernel_addr_r} ${dtbparam}
+emmcdtbload=setenv dtbparam; load mmc 0:1 ${fdt_addr_r} ${fdt_file} && setenv dtbparam " - ${fdt_addr_r}" && true
+ethact=FEC
+ethaddr=00:14:2d:4e:87:13
+ethprime=FEC
+fdt_addr_r=0x12000000
+fdt_file=imx6q-apalis-eval.dtb
+fdt_fixup=;
+fdt_high=0xffffffff
+initrd_high=0xffffffff
+ipaddr=192.168.10.2
+kernel_addr_r=0x11000000
+loadaddr=0x12000000
+netmask=255.255.255.0
+nfsargs=ip=:::::eth0:on root=/dev/nfs rw
+nfsboot=run setup; setenv bootargs ${defargs} ${nfsargs} ${setupargs} ${vidargs}; echo Booting via DHCP/TFTP/NFS...; run nfsdtbload; dhcp ${kernel_addr_r} && run fdt_fixup && bootm ${kernel_addr_r} ${dtbparam}
+nfsdtbload=setenv dtbparam; tftp ${fdt_addr_r} ${fdt_file} && setenv dtbparam " - ${fdt_addr_r}" && true
+ramdisk_addr_r=0x12100000
+sdargs=ip=off root=/dev/mmcblk1p2 rw,noatime rootfstype=ext3 rootwait
+sdboot=run setup; setenv bootargs ${defargs} ${sdargs} ${setupargs} ${vidargs}; echo Booting from SD card; run sddtbload; load mmc 1:1 ${kernel_addr_r} ${boot_file} && run fdt_fixup && bootm ${kernel_addr_r} ${dtbparam}
+sddtbload=setenv dtbparam; load mmc 1:1 ${fdt_addr_r} ${fdt_file} && setenv dtbparam " - ${fdt_addr_r}" && true
+serial#=05146387
+serverip=192.168.10.1
+setethupdate=if env exists ethaddr; then; else setenv ethaddr 00:14:2d:00:00:00; fi; tftpboot ${loadaddr} flash_eth.img && source ${loadaddr}
+setsdupdate=setenv interface mmc; setenv drive 1; mmc rescan; load ${interface} ${drive}:1 ${loadaddr} flash_blk.img && source ${loadaddr}
+setup=setenv setupargs fec_mac=${ethaddr} consoleblank=0 no_console_suspend=1 console=tty1 console=${console},${baudrate}n8
+setupdate=run setsdupdate || run setusbupdate || run setethupdate
+setusbupdate=usb start && setenv interface usb; setenv drive 0; load ${interface} ${drive}:1 ${loadaddr} flash_blk.img && source ${loadaddr}
+soc=mx6
+splashpos=m,m
+vendor=toradex
+ver=U-Boot 2017.03-dirty (Dec 14 2017 - 17:49:07 +0530)
+vidargs=mxc_hdmi.only_cea=1 video=mxcfb0:dev=hdmi,1920x1080M@60,if=RGB24 video=mxcfb1:off video=mxcfb2:off video=mxcfb3:off fbmem=32M
+
+Environment size: 2930/8188 bytes
+Apalis iMX6 # mmc info
+Device: FSL_SDHC
+Manufacturer ID: 13
+OEM: 14e
+Name: Q2J54 
+Tran Speed: 52000000
+Rd Block Len: 512
+MMC version 5.0
+High Capacity: Yes
+Capacity: 3.6 GiB
+Bus Width: 8-bit
+Erase Group Size: 512 KiB
+HC WP Group Size: 8 MiB
+User Capacity: 3.6 GiB WRREL
+Boot Capacity: 16 MiB ENH
+RPMB Capacity: 512 KiB ENH
+Apalis iMX6 # setenv fastboot_dev mmc2 0
+Apalis iMX6 # setenv bootcmd boota mmc0
+Apalis iMX6 # setenv bootargs 'console=ttymxc0,115200 init=/init video=mxcfb0:dev=ldb,bpp=32 video=mxcfb1:off video=mxcfb2:off video=mxcfb3:off vmalloc=128M androidboot.console=ttymxc0 consoleblank=0 androidboot.hardware=freescale cma=448M'
+Apalis iMX6 # boot
+Unknown command 'boota' - try 'help'
+Apalis iMX6 # ?
+?       - alias for 'help'
+askenv  - get environment variables from stdin
+base    - print or set address offset
+bdinfo  - print Board Info structure
+bmode   - mmc|sd|normal|usb|sata|ecspi1:0|ecspi1:1|ecspi1:2|ecspi1:3|esdhc1|esdhc2|esdhc3|esdhc4 [noreset]
+bmp     - manipulate BMP image data
+boot    - boot default, i.e., run 'bootcmd'
+bootd   - boot default, i.e., run 'bootcmd'
+bootm   - boot application image from memory
+bootp   - boot image via network using BOOTP/TFTP protocol
+bootz   - boot Linux zImage image from memory
+cfgblock- Toradex config block handling commands
+clocks  - display clocks
+clrlogo - fill the boot logo area with black
+cmp     - memory compare
+coninfo - print console devices and information
+cp      - memory copy
+cpu     - Multiprocessor CPU boot manipulation and release
+crc32   - checksum calculation
+dcache  - enable or disable data cache
+dfu     - Device Firmware Upgrade
+dhcp    - boot image via network using DHCP/TFTP protocol
+dm      - Driver model low level access
+echo    - echo args to console
+editenv - edit environment variable
+env     - environment handling commands
+erase   - erase FLASH memory
+exit    - exit script
+ext4load- load binary file from a Ext4 filesystem
+ext4ls  - list files in a directory (default /)
+ext4size- determine a file's size
+false   - do nothing, unsuccessfully
+fatinfo - print information about filesystem
+fatload - load binary file from a dos filesystem
+fatls   - list files in a directory (default /)
+fatsize - determine a file's size
+fatwrite- write file into a dos filesystem
+fdt     - flattened device tree utility commands
+flinfo  - print FLASH memory information
+fstype  - Look up a filesystem type
+fuse    - Fuse sub-system
+go      - start application at address 'addr'
+gpio    - query and control gpio pins
+hdmidet - detect HDMI monitor
+help    - print command description/usage
+i2c     - I2C sub-system
+icache  - enable or disable instruction cache
+itest   - return true/false on integer compare
+load    - load binary file from a filesystem
+loop    - infinite loop on address range
+ls      - list files in a directory (default /)
+md      - memory display
+mdio    - MDIO utility commands
+mfgr_fuse- OTP fusing during module production
+mii     - MII utility commands
+mm      - memory modify (auto-incrementing address)
+mmc     - MMC sub system
+mmcinfo - display MMC info
+mtest   - simple RAM read/write test
+mw      - memory write (fill)
+nm      - memory modify (constant address)
+pf0100_otp_prog- Program the OTP fuses on the PMIC PF0100
+ping    - send ICMP ECHO_REQUEST to network host
+printenv- print environment variables
+protect - enable or disable FLASH write protection
+reset   - Perform RESET of the CPU
+run     - run commands in an environment variable
+sata    - SATA sub system
+save    - save file to a filesystem
+saveenv - save environment variables to persistent storage
+setenv  - set environment variables
+setexpr - set environment variable as the result of eval expression
+showvar - print local hushshell variables
+size    - determine a file's size
+sleep   - delay execution for some time
+source  - run script from memory
+test    - minimal test like /bin/sh
+tftpboot- boot image via network using TFTP protocol
+time    - run commands and summarize execution time
+true    - do nothing, successfully
+ums     - Use the UMS [USB Mass Storage]
+updt_fuse- OTP fusing during module update
+usb     - USB sub-system
+usbboot - boot from USB device
+version - print monitor, compiler and linker version
+Apalis iMX6 # ? pri
+arch=arm
+baudrate=115200
+board=apalis_imx6
+board_name=apalis_imx6
+board_rev=011c
+boot_file=uImage
+bootargs=console=ttymxc0,115200 init=/init video=mxcfb0:dev=ldb,bpp=32 video=mxcfb1:off video=mxcfb2:off video=mxcfb3:off vmalloc=128M androidboot.console=ttymxc0 consoleblank=0 androidboot.hardware=freescale cma=448M
+bootcmd=boota mmc0
+bootdelay=1
+console=ttymxc0
+cpu=armv7
+defargs=enable_wait_mode=off vmalloc=400M
+dfu_alt_info=u-boot.imx raw 0x2 0x3ff mmcpart 0;boot part 0 1;rootfs part 0 2;uImage fat 0 1;imx6q-colibri-eval-v3.dtb fat 0 1;imx6q-colibri-cam-eval-v3.dtb fat 0 1
+emmcargs=ip=off root=/dev/mmcblk0p2 rw,noatime rootfstype=ext3 rootwait
+emmcboot=run setup; setenv bootargs ${defargs} ${emmcargs} ${setupargs} ${vidargs}; echo Booting from internal eMMC chip...; run emmcdtbload; load mmc 0:1 ${kernel_addr_r} ${boot_file} && run fdt_fixup && bootm ${kernel_addr_r} ${dtbparam}
+emmcdtbload=setenv dtbparam; load mmc 0:1 ${fdt_addr_r} ${fdt_file} && setenv dtbparam " - ${fdt_addr_r}" && true
+ethact=FEC
+ethaddr=00:14:2d:4e:87:13
+ethprime=FEC
+fastboot_dev=mmc0
+fdt_addr_r=0x12000000
+fdt_file=imx6q-apalis-eval.dtb
+fdt_fixup=;
+fdt_high=0xffffffff
+initrd_high=0xffffffff
+ipaddr=192.168.10.2
+kernel_addr_r=0x11000000
+loadaddr=0x12000000
+netmask=255.255.255.0
+nfsargs=ip=:::::eth0:on root=/dev/nfs rw
+nfsboot=run setup; setenv bootargs ${defargs} ${nfsargs} ${setupargs} ${vidargs}; echo Booting via DHCP/TFTP/NFS...; run nfsdtbload; dhcp ${kernel_addr_r} && run fdt_fixup && bootm ${kernel_addr_r} ${dtbparam}
+nfsdtbload=setenv dtbparam; tftp ${fdt_addr_r} ${fdt_file} && setenv dtbparam " - ${fdt_addr_r}" && true
+ramdisk_addr_r=0x12100000
+sdargs=ip=off root=/dev/mmcblk1p2 rw,noatime rootfstype=ext3 rootwait
+sdboot=run setup; setenv bootargs ${defargs} ${sdargs} ${setupargs} ${vidargs}; echo Booting from SD card; run sddtbload; load mmc 1:1 ${kernel_addr_r} ${boot_file} && run fdt_fixup && bootm ${kernel_addr_r} ${dtbparam}
+sddtbload=setenv dtbparam; load mmc 1:1 ${fdt_addr_r} ${fdt_file} && setenv dtbparam " - ${fdt_addr_r}" && true
+serial#=05146387
+serverip=192.168.10.1
+setethupdate=if env exists ethaddr; then; else setenv ethaddr 00:14:2d:00:00:00; fi; tftpboot ${loadaddr} flash_eth.img && source ${loadaddr}
+setsdupdate=setenv interface mmc; setenv drive 1; mmc rescan; load ${interface} ${drive}:1 ${loadaddr} flash_blk.img && source ${loadaddr}
+setup=setenv setupargs fec_mac=${ethaddr} consoleblank=0 no_console_suspend=1 console=tty1 console=${console},${baudrate}n8
+setupdate=run setsdupdate || run setusbupdate || run setethupdate
+setusbupdate=usb start && setenv interface usb; setenv drive 0; load ${interface} ${drive}:1 ${loadaddr} flash_blk.img && source ${loadaddr}
+soc=mx6
+splashpos=m,m
+vendor=toradex
+ver=U-Boot 2017.03-dirty (Dec 14 2017 - 17:49:07 +0530)
+vidargs=mxc_hdmi.only_cea=1 video=mxcfb0:dev=hdmi,1920x1080M@60,if=RGB24 video=mxcfb1:off video=mxcfb2:off video=mxcfb3:off fbmem=32M
+
+Environment size: 3028/8188 bytes
+Apalis iMX6 # bootm mmc0
+bootm - boot application image from memory
+
+Usage:
+bootm [addr [arg ...]]
+    - boot application image stored in memory
+	passing arguments 'arg ...'; when booting a Linux kernel,
+	'arg' can be the address of an initrd image
+	When booting a Linux kernel which requires a flat device-tree
+	a third argument is required which is the address of the
+	device-tree blob. To boot that kernel without an initrd image,
+	use a '-' for the second argument. If you do not pass a third
+	a bd_info struct will be passed instead
+
+Sub-commands to do part of the bootm sequence.  The sub-commands must be
+issued in the order below (it's ok to not issue all sub-commands):
+	start [addr [arg ...]]
+	loados  - load OS image
+	ramdisk - relocate initrd, set env initrd_start/initrd_end
+	fdt     - relocate flat device tree
+	cmdline - OS specific command line processing/setup
+	bdt     - OS specific bd_t processing
+	prep    - OS specific prep before relocation or go
+	go      - start OS
+Apalis iMX6 # 

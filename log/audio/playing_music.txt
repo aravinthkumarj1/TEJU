@@ -1,0 +1,81 @@
+
+01-01 00:15:45.061   267   375 I audio_hw_primary: start_output_stream_primary... -1285211968, device 1024
+01-01 00:15:45.061   267   375 W audio_hw_primary: Aravinth: select_output_device >0
+01-01 00:15:45.061   267   375 W audio_hw_primary: headphone 0 ,headset 0 ,speaker 0, earpiece 0, 
+01-01 00:15:45.065   267   375 W audio_hw_primary: card 2, port 0 device 0x400
+01-01 00:15:45.065   267   375 W audio_hw_primary: rate 44100, channel 2 period_size 0x300
+01-01 00:15:45.096  1534  1534 D Cactus  : VideoPlayer: onCreate
+01-01 00:15:45.097  1534  1534 D Cactus  : VideoPlayer: parseIntent
+01-01 00:15:45.103   537   570 I InputDispatcher: Dropping event because there is no touchable window at (241, 201).
+01-01 00:15:45.112   537   570 I InputDispatcher: Dropping event because there is no touchable window at (242, 201).
+01-01 00:15:45.138  1534  1534 D Cactus  : VideoPlayer: onStart
+01-01 00:15:45.145  1534  1534 D Cactus  : VideoPlayer: onResume mLastPlayState:-1
+01-01 00:15:45.169  1534  1534 D CactusPlayer: onMeasure mVideoW 0 mVideoH 0 widthMesaureSpec 1073742848 heightMeasureSpec 1073742440
+01-01 00:15:45.202  1534  1534 D CactusPlayer: onMeasure mVideoW 0 mVideoH 0 widthMesaureSpec 1073742848 heightMeasureSpec 1073742464
+01-01 00:15:45.216  1534  1534 D Cactus  : surfaceCreated
+01-01 00:15:45.220  1534  1534 W MediaPlayer: Couldn't open /storage/5E85-83CE/Music/Enai_Noki_Paayum_Thota_Single-4/Maruvaarthai_(Restrung_Version)-5StarMusiQ.Com.mp3: ja
+va.io.FileNotFoundException: No content provider: /storage/5E85-83CE/Music/Enai_Noki_Paayum_Thota_Single-4/Maruvaarthai_(Restrung_Version)-5StarMusiQ.Com.mp3
+01-01 00:15:45.227   275  1653 D NuPlayer: onSetVideoSurface(0xafd4e800, no video decoder)
+01-01 00:15:45.229  1534  1534 W Cactus  : Url is /storage/5E85-83CE/Music/Enai_Noki_Paayum_Thota_Single-4/Maruvaarthai_(Restrung_Version)-5StarMusiQ.Com.mp3
+01-01 00:15:45.231  1534  1534 D Cactus  : surfaceChanged: parameter w/h 1024/640 mSurfaceW/H 0/0,mPlayState: 0 mTargetState: -1
+01-01 00:15:45.238  1534  1534 D Cactus  : ==========onCreateOptionsMenu 
+01-01 00:15:45.238  1534  1534 D Cactus  : ==========onPrepareOptionsMenu 
+01-01 00:15:45.256   274   315 D FslExtractor: FslExtractor::FslExtractor mime=audio/mpeg
+01-01 00:15:45.256   274   984 D FslExtractor: FslExtractor::Init BEGIN
+01-01 00:15:45.256   274   984 D FslExtractor: GetLibraryName lib_mp3_parser_arm11_elinux.3.0.so
+01-01 00:15:45.258   274   984 D FslExtractor: load parser name lib_mp3_parser_arm11_elinux.3.0.so
+01-01 00:15:45.258   274   984 D FslExtractor: FslExtractor::CreateParserInterface success
+01-01 00:15:45.258   274   984 I FslExtractor: Core parser MP3PARSER_03.01.17  build on Jun 22 2017 10:08:52 
+01-01 00:15:45.267   274   984 D FslExtractor: createParser2 flag=5c,err=0
+01-01 00:15:45.267   274   984 W FslExtractor: fail to set read mode to track mode
+01-01 00:15:45.267   274   984 I FslExtractor: mReadMode=0,mNumTracks=1
+01-01 00:15:45.267   274   984 I FslExtractor: bSeekable 1
+01-01 00:15:45.267   274   984 I FslExtractor: FslParser Key: 0  format=0,size=46,Value: Maruvaarthai (Restrung Version)-5StarMusiQ.Com
+01-01 00:15:45.267   274   984 I FslExtractor: FslParser Key: 2  format=0,size=22,Value: Tamil - 5StarMusiQ.Com
+01-01 00:15:45.267   274   984 I FslExtractor: FslParser Key: 3  format=0,size=10,Value: Sid Sriram
+01-01 00:15:45.267   274   984 I FslExtractor: FslParser Key: 8  format=0,size=24,Value: Enai Nokki Paayum Thotta
+01-01 00:15:45.267   274   984 I FslExtractor: FslParser Key: 12         format=0,size=12,Value: Darbuka Siva
+01-01 00:15:45.267   274   984 I FslExtractor: FslParser Key: 23         format=0,size=2,Value: 03
+01-01 00:15:45.267   274   984 I FslExtractor: FslParser Key: 33         format=0,size=5,Value: 01/01
+01-01 00:15:45.267   274   984 I FslExtractor: FslParser Key: 6  format=0,size=4,Value: 2018
+01-01 00:15:45.267   274   984 I FslExtractor: FslParser Key: 40         format=0,size=12,Value: Darbuka Siva
+01-01 00:15:45.267   274   984 I FslExtractor: FslParser Key2: 31        format=12,size=4,Value: 576
+01-01 00:15:45.267   274   984 I FslExtractor: FslParser Key2: 32        format=12,size=4,Value: 1681
+01-01 00:15:45.268   274   984 D FslExtractor: FslExtractor::ParseMediaFormat BEGIN
+01-01 00:15:45.268   274   984 D FslExtractor: ParseAudio index=0,type=5,subtype=2851135813
+01-01 00:15:45.268   274   984 I FslExtractor: ParseAudio channel=2,sampleRate=44100,bitRate=264744,bitPerSample=0,audioBlockAlign=0
+01-01 00:15:45.268   274   984 I FslExtractor: add audio track index=0,sourceIndex=0,mime=audio/mpeg
+01-01 00:15:45.268   274   984 D FslExtractor: FslExtractor::Init ret=0
+01-01 00:15:45.273   274   274 D FslExtractor: FslExtractor::getTrack index=0
+01-01 00:15:45.274   274   274 E FslExtractor: getTrack source string cnt=1
+01-01 00:15:45.277   274   709 D FslExtractor: start track 0
+01-01 00:15:45.277   274   709 D FslExtractor: source start track 0
+01-01 00:15:45.277   275  1653 D NuPlayerDriver: notifyListener_l(0xb1aaae40), (1, 0, 0), loop setting(0, 0)
+01-01 00:15:45.311  1534  1534 D MediaPlayer: setSubtitleAnchor in MediaPlayer
+01-01 00:15:45.311   537   557 I ActivityManager: Displayed com.freescale.cactusplayer/.VideoPlayer: +225ms
+01-01 00:15:45.316  1534  1534 D Cactus  : onPrepared: play state 0 video:0,0 mSurface:1024,640 mTargetState:-1
+01-01 00:15:45.317  1534  1534 D Cactus  : start(), last state -1
+01-01 00:15:45.318   275   899 D NuPlayerDriver: start(0xb1aaae40), state is 4, eos is 0
+01-01 00:15:45.319   275  1653 I GenericSource: start
+01-01 00:15:45.319  1534  1534 D Cactus  : start(), change state to playing
+01-01 00:15:45.385   275  1658 I MediaPlayerService: MediaPlayerService::getOMX
+01-01 00:15:45.387   275  1658 I OMXClient: MuxOMX ctor
+01-01 00:15:45.388   272   294 I OMXMaster: makeComponentInstance(OMX.Freescale.std.audio_decoder.mp3.sw-based) in mediacodec process
+01-01 00:15:45.400   272   859 I OMXPlayer: AudioFilter SetParameter OMX_IndexParamAudioOutputConvert
+01-01 00:15:45.400   272   859 I OMXPlayer: AudioFilter SetParameter OMX_IndexParamAudioSendFirstPortSettingChanged 0
+01-01 00:15:45.401   272   272 E OMXNodeInstance: setConfig(110003e:Freescale.std._decoder.mp3.sw-based, ConfigPriority(0x6f800002)) ERROR: UnsupportedIndex(0x8000101a)
+01-01 00:15:45.401   275  1658 I ACodec  : codec does not support config priority (err -1010)
+01-01 00:15:45.404   275  1658 I MediaCodec: MediaCodec will operate in async mode
+01-01 00:15:45.410   272  1659 I OMXPlayer: SetupDecoder MP3 decoder Wrapper  build on Apr 10 2014 16:18:39 
+01-01 00:15:45.423   267   267 W AudioFlinger: createTrack_l(): mismatch between requested flags (00000008) and output flags (00000006)
+01-01 00:15:45.426   275  1656 D AudioTrack: Client defaulted notificationFrames to 11136 for frameCount 22272
+01-01 00:15:45.429   275  1653 D NuPlayerDriver: notifyListener_l(0xb1aaae40), (6, 0, 0), loop setting(0, 0)
+
+
+
+
+
+
+
+
+

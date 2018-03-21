@@ -1,0 +1,2493 @@
+
+
+U-Boot 2017.03-00002-gebf9dc2527 (Jan 29 2018 - 17:39:17 +0530)
+
+CPU:   Freescale i.MX6Q rev1.5 at 792 MHz
+Reset cause: POR
+I2C:   ready
+DRAM:  2 GiB
+PMIC: device id: 0x10, revision id: 0x21
+PMIC: programmed
+MMC:   FSL_SDHC: 0, FSL_SDHC: 1, FSL_SDHC: 2
+Unable to allocate framebuffer memory
+In:    serial
+Out:   serial
+Err:   serial
+Model: Toradex Apalis iMX6 Quad 2GB IT V1.1C, Serial# 05146387
+flash target is MMC:0
+Net:   using PHY at 7
+FEC [PRIME]
+Fastboot: Normal
+Hit any key to stop autoboot:  1  0 
+Apalis iMX6 # bmode usb
+resetting ...
+
+
+U-Boot 2017.03-dirty (Dec 14 2017 - 17:25:07 +0530)
+
+CPU:   Freescale i.MX6Q rev1.5 at 792 MHz
+Reset cause: WDOG
+I2C:   ready
+DRAM:  2 GiB
+PMIC: device id: 0x10, revision id: 0x21
+PMIC: programmed
+MMC:   FSL_SDHC: 0, FSL_SDHC: 1, FSL_SDHC: 2
+auto-detected panel vga-rgb
+Aravinth: Display: vga-rgb (640x480)
+In:    serial
+Out:   serial
+Err:   serial
+Model: Toradex Apalis iMX6 Quad 2GB IT V1.1C, Serial# 05146387
+Net:   using PHY at 7
+FEC [PRIME]
+Boot from USB for mfgtools
+Use default environment for 				 mfgtools
+Run bootcmd_mfg: run mfgtool_args;bootz 0x12000000 0x12C00000 0x18000000;
+Hit any key to stop autoboot:  0 
+Kernel image @ 0x12000000 [ 0x000000 - 0x5f06e8 ]
+## Loading init Ramdisk from Legacy Image at 12c00000 ...
+   Image Name:   fsl-image-mfgtool-initramfs-imx6
+   Image Type:   ARM Linux RAMDisk Image (gzip compressed)
+   Data Size:    8597466 Bytes = 8.2 MiB
+   Load Address: 00000000
+   Entry Point:  00000000
+   Verifying Checksum ... OK
+## Flattened Device Tree blob at 18000000
+   Booting using the fdt blob at 0x18000000
+   Using Device Tree in place at 18000000, end 180102d8
+
+Starting kernel ...
+
+Booting Linux on physical CPU 0x0
+Linux version 4.9.67+ (embadmin@ubuntu) (gcc version 4.9 20150123 (prerelease) (GCC) ) #9 SMP PREEMPT Fri Dec 22 16:56:14 IST 2017
+CPU: ARMv7 Processor [412fc09a] revision 10 (ARMv7), cr=10c5387d
+CPU: PIPT / VIPT nonaliasing data cache, VIPT aliasing instruction cache
+OF: fdt:Machine model: Aravinth Toradex Apalis iMX6Q/D Module on Ixora V1.1 Carrier Board
+cma: Reserved 320 MiB at 0x6c000000
+Memory policy: Data cache writealloc
+percpu: Embedded 14 pages/cpu @daef7000 s25728 r8192 d23424 u57344
+Built 1 zonelists in Zone order, mobility grouping on.  Total pages: 520704
+Kernel command line: console=ttymxc0,115200 rdinit=/linuxrc g_mass_storage.stall=0 g_mass_storage.removable=1 g_mass_storage.file=/fat g_mass_storage.ro=1 g_mass_storage.idVendor=0x066F g_mass_storage.idProduct=0x37FF g_mass_storage.iSerialNumber= enable_wait_mode=off
+PID hash table entries: 4096 (order: 2, 16384 bytes)
+Dentry cache hash table entries: 262144 (order: 8, 1048576 bytes)
+Inode-cache hash table entries: 131072 (order: 7, 524288 bytes)
+Memory: 1728936K/2097152K available (8192K kernel code, 334K rwdata, 2548K rodata, 1024K init, 448K bss, 40536K reserved, 327680K cma-reserved, 262144K highmem)
+Virtual kernel memory layout:
+    vector  : 0xffff0000 - 0xffff1000   (   4 kB)
+    fixmap  : 0xffc00000 - 0xfff00000   (3072 kB)
+    vmalloc : 0xf0800000 - 0xff800000   ( 240 MB)
+    lowmem  : 0x80000000 - 0xf0000000   (1792 MB)
+    pkmap   : 0x7fe00000 - 0x80000000   (   2 MB)
+    modules : 0x7f000000 - 0x7fe00000   (  14 MB)
+      .text : 0x80008000 - 0x80900000   (9184 kB)
+      .init : 0x80c00000 - 0x80d00000   (1024 kB)
+      .data : 0x80d00000 - 0x80d539c0   ( 335 kB)
+       .bss : 0x80d539c0 - 0x80dc3aac   ( 449 kB)
+SLUB: HWalign=64, Order=0-3, MinObjects=0, CPUs=4, Nodes=1
+Preemptible hierarchical RCU implementation.
+	Build-time adjustment of leaf fanout to 32.
+NR_IRQS:16 nr_irqs:16 16
+L2C-310 errata 752271 769419 enabled
+L2C-310 enabling early BRESP for Cortex-A9
+L2C-310 full line of zeros enabled for Cortex-A9
+L2C-310 ID prefetch enabled, offset 16 lines
+L2C-310 dynamic clock gating enabled, standby mode enabled
+L2C-310 cache controller enabled, 16 ways, 1024 kB
+L2C-310: CACHE_ID 0x410000c7, AUX_CTRL 0x76470001
+Switching to timer-based delay loop, resolution 333ns
+sched_clock: 32 bits at 3000kHz, resolution 333ns, wraps every 715827882841ns
+clocksource: mxc_timer1: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 637086815595 ns
+Console: colour dummy device 80x30
+Calibrating delay loop (skipped), value calculated using timer frequency.. 6.00 BogoMIPS (lpj=30000)
+pid_max: default: 32768 minimum: 301
+Mount-cache hash table entries: 4096 (order: 2, 16384 bytes)
+Mountpoint-cache hash table entries: 4096 (order: 2, 16384 bytes)
+CPU: Testing write buffer coherency: ok
+CPU0: update cpu_capacity 1024
+CPU0: thread -1, cpu 0, socket 0, mpidr 80000000
+Setting up static identity map for 0x10100000 - 0x10100070
+CPU1: update cpu_capacity 1024
+CPU1: thread -1, cpu 1, socket 0, mpidr 80000001
+CPU2: update cpu_capacity 1024
+CPU2: thread -1, cpu 2, socket 0, mpidr 80000002
+CPU3: update cpu_capacity 1024
+CPU3: thread -1, cpu 3, socket 0, mpidr 80000003
+Brought up 4 CPUs
+SMP: Total of 4 processors activated (24.00 BogoMIPS).
+CPU: All CPU(s) started in SVC mode.
+devtmpfs: initialized
+VFP support v0.3: implementor 41 architecture 3 part 30 variant 9 rev 4
+clocksource: jiffies: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 19112604462750000 ns
+futex hash table entries: 1024 (order: 4, 65536 bytes)
+pinctrl core: initialized pinctrl subsystem
+NET: Registered protocol family 16
+DMA: preallocated 256 KiB pool for atomic coherent allocations
+cpuidle: using governor menu
+CPU identified as i.MX6Q, silicon rev 1.5
+hw-breakpoint: found 5 (+1 reserved) breakpoint and 1 watchpoint registers.
+hw-breakpoint: maximum watchpoint size is 4 bytes.
+imx6q-pinctrl 20e0000.iomuxc: initialized IMX pinctrl driver
+imx-gpc 20dc000.gpc: no fsl,ldo-bypass found!
+imx-gpc 20dc000.gpc: Registered imx-gpc
+mxs-dma 110000.dma-apbh: initialized
+usb_host_vbus: supplied by usb_host_vbus_hub
+SCSI subsystem initialized
+usbcore: registered new interface driver usbfs
+usbcore: registered new interface driver hub
+usbcore: registered new device driver usb
+2000000.aips-bus:usbphy_nop1 supply vcc not found, using dummy regulator
+2000000.aips-bus:usbphy_nop2 supply vcc not found, using dummy regulator
+i2c i2c-1: IMX I2C adapter registered
+i2c i2c-1: can't use DMA, using PIO instead.
+stmpe-i2c 2-0041: stmpe811 detected, chip id: 0x811
+i2c i2c-2: IMX I2C adapter registered
+i2c i2c-2: can't use DMA, using PIO instead.
+i2c i2c-3: IMX I2C adapter registered
+i2c i2c-3: can't use DMA, using PIO instead.
+Linux video capture interface: v2.00
+pps_core: LinuxPPS API ver. 1 registered
+pps_core: Software ver. 5.3.6 - Copyright 2005-2007 Rodolfo Giometti <giometti@linux.it>
+PTP clock support registered
+imx-ipuv3 2400000.ipu: IPU DMFC NORMAL mode: 1(0~1), 5B(4,5), 5F(6,7)
+imx-ipuv3 2800000.ipu: IPU DMFC NORMAL mode: 1(0~1), 5B(4,5), 5F(6,7)
+imx rpmsg driver is registered.
+Advanced Linux Sound Architecture Driver Initialized.
+clocksource: Switched to clocksource mxc_timer1
+VFS: Disk quotas dquot_6.6.0
+VFS: Dquot-cache hash table entries: 1024 (order 0, 4096 bytes)
+NET: Registered protocol family 2
+TCP established hash table entries: 16384 (order: 4, 65536 bytes)
+TCP bind hash table entries: 16384 (order: 5, 131072 bytes)
+TCP: Hash tables configured (established 16384 bind 16384)
+UDP hash table entries: 1024 (order: 3, 32768 bytes)
+UDP-Lite hash table entries: 1024 (order: 3, 32768 bytes)
+NET: Registered protocol family 1
+RPC: Registered named UNIX socket transport module.
+RPC: Registered udp transport module.
+RPC: Registered tcp transport module.
+RPC: Registered tcp NFSv4.1 backchannel transport module.
+Trying to unpack rootfs image as initramfs...
+Freeing initrd memory: 8400K
+hw perfevents: enabled with armv7_cortex_a9 PMU driver, 7 counters available
+Bus freq driver module loaded
+workingset: timestamp_bits=30 max_order=19 bucket_order=0
+NFS: Registering the id_resolver key type
+Key type id_resolver registered
+Key type id_legacy registered
+jffs2: version 2.2. (NAND) Â© 2001-2006 Red Hat, Inc.
+fuse init (API version 7.26)
+bounce: pool size: 64 pages
+io scheduler noop registered
+io scheduler deadline registered
+io scheduler cfq registered (default)
+backlight supply power not found, using dummy regulator
+Aravinth: mxcfb_probe ---->
+mxc_sdc_fb fb@0: NO mxc display driver found!
+Aravinth: mxcfb_probe ---->
+mxc_sdc_fb fb@1: NO mxc display driver found!
+Aravinth: mxcfb_probe ---->
+mxc_sdc_fb fb@2: registered mxc display driver lcd
+Console: switching to colour frame buffer device 100x30
+Aravinth: mxcfb_probe Done ---->
+Aravinth: mxcfb_probe ---->
+mxc_sdc_fb fb@3: NO mxc display driver found!
+imx-sdma 20ec000.sdma: no iram assigned, using external mem
+imx-sdma 20ec000.sdma: loaded firmware 3.3
+pfuze100-regulator 2-0008: Full layer: 2, Metal layer: 1
+pfuze100-regulator 2-0008: FAB: 0, FIN: 0
+pfuze100-regulator 2-0008: pfuze100 found.
+2020000.serial: ttymxc0 at MMIO 0x2020000 (irq = 29, base_baud = 5000000) is a IMX
+console [ttymxc0] enabled
+21e8000.serial: ttymxc1 at MMIO 0x21e8000 (irq = 78, base_baud = 5000000) is a IMX
+21f0000.serial: ttymxc3 at MMIO 0x21f0000 (irq = 79, base_baud = 5000000) is a IMX
+21f4000.serial: ttymxc4 at MMIO 0x21f4000 (irq = 80, base_baud = 5000000) is a IMX
+imx sema4 driver is registered.
+[drm] Initialized
+[drm] Initialized vivante 1.0.0 20120216 on minor 0
+brd: module loaded
+loop: module loaded
+ahci-imx 2200000.sata: fsl,transmit-level-mV not specified, using 00000024
+ahci-imx 2200000.sata: fsl,transmit-boost-mdB not specified, using 00000480
+ahci-imx 2200000.sata: fsl,transmit-atten-16ths not specified, using 00002000
+ahci-imx 2200000.sata: fsl,receive-eq-mdB not specified, using 05000000
+ahci-imx 2200000.sata: SSS flag set, parallel bus scan disabled
+ahci-imx 2200000.sata: AHCI 0001.0300 32 slots 1 ports 3 Gbps 0x1 impl platform mode
+ahci-imx 2200000.sata: flags: ncq sntf stag pm led clo only pmp pio slum part ccc apst 
+scsi host0: ahci-imx
+ata1: SATA max UDMA/133 mmio [mem 0x02200000-0x02203fff] port 0x100 irq 87
+spi_imx 2008000.ecspi: probed
+libphy: Fixed MDIO Bus: probed
+2188000.ethernet supply phy not found, using dummy regulator
+pps pps0: new PPS source ptp0
+libphy: fec_enet_mii_bus: probed
+fec 2188000.ethernet eth0: registered PHC device 0
+ehci_hcd: USB 2.0 'Enhanced' Host Controller (EHCI) Driver
+ehci-mxc: Freescale On-Chip EHCI Host driver
+usbcore: registered new interface driver usb-storage
+2184800.usbmisc supply vbus-wakeup not found, using dummy regulator
+ci_hdrc ci_hdrc.1: EHCI Host Controller
+ci_hdrc ci_hdrc.1: new USB bus registered, assigned bus number 1
+ci_hdrc ci_hdrc.1: USB 2.0 started, EHCI 1.00
+hub 1-0:1.0: USB hub found
+hub 1-0:1.0: 1 port detected
+Mass Storage Function, version: 2009/09/11
+LUN: removable file: (no medium)
+LUN: removable read only file: /fat
+Number of LUNs=1
+g_mass_storage gadget: Mass Storage Gadget, version: 2009/09/11
+g_mass_storage gadget: g_mass_storage ready
+mousedev: PS/2 mouse device common for all mice
+input: stmpe-ts as /devices/soc0/soc/2100000.aips-bus/21a4000.i2c/i2c-2/2-0041/stmpe-ts/input/input0
+snvs_rtc 20cc000.snvs:snvs-rtc-lp: rtc core: registered 20cc000.snvs:snvs-r as rtc0
+i2c /dev entries driver
+IR NEC protocol handler initialized
+IR RC5(x/sz) protocol handler initialized
+IR RC6 protocol handler initialized
+IR JVC protocol handler initialized
+IR Sony protocol handler initialized
+IR SANYO protocol handler initialized
+IR Sharp protocol handler initialized
+IR MCE Keyboard/mouse protocol handler initialized
+IR XMP protocol handler initialized
+imx2-wdt 20bc000.wdog: timeout 60 sec (nowayout=0)
+sdhci: Secure Digital Host Controller Interface driver
+sdhci: Copyright(c) Pierre Ossman
+sdhci-pltfm: SDHCI platform and OF driver helper
+sdhci-esdhc-imx 2190000.usdhc: could not get ultra high speed state, work on normal mode
+sdhci-esdhc-imx 2190000.usdhc: Got CD GPIO
+ata1: SATA link down (SStatus 0 SControl 300)
+ahci-imx 2200000.sata: no device found, disabling link.
+ahci-imx 2200000.sata: pass ahci_imx..hotplug=1 to enable hotplug
+mmc1: SDHCI controller on 2190000.usdhc [2190000.usdhc] using ADMA
+sdhci-esdhc-imx 2198000.usdhc: could not get ultra high speed state, work on normal mode
+mmc0: SDHCI controller on 2198000.usdhc [2198000.usdhc] using ADMA
+mxc_vpu 2040000.vpu_fsl: VPU initialized
+mxc_vdoa 21e4000.vdoa: i.MX Video Data Order Adapter(VDOA) driver probed
+usbcore: registered new interface driver usbhid
+usbhid: USB HID core driver
+g_mass_storage gadget: high-speed config #1: Linux File-Backed Storage
+sgtl5000 2-000a: sgtl5000 revision 0x11
+random: fast init done
+usb 1-1: new high-speed USB device number 2 using ci_hdrc
+fsl-ssi-dai 2028000.ssi: No cache defaults, reading back from HW
+mmc0: new DDR MMC card at address 0001
+mmcblk0: mmc0:0001 Q2J54A 3.59 GiB 
+mmcblk0boot0: mmc0:0001 Q2J54A partition 1 16.0 MiB
+mmcblk0boot1: mmc0:0001 Q2J54A partition 2 16.0 MiB
+Alternate GPT is invalid, using primary GPT.
+ mmcblk0: p1 p2 p3 p4 p5 p6 p7 p8 p9 p10 p11
+imx-sgtl5000 sound: sgtl5000 <-> 2028000.ssi mapping ok
+imx-spdif sound-spdif: snd-soc-dummy-dai <-> 2004000.spdif mapping ok
+NET: Registered protocol family 10
+sit: IPv6, IPv4 and MPLS over IPv4 tunneling driver
+NET: Registered protocol family 17
+Key type dns_resolver registered
+cpu cpu0: Registered imx6q-cpufreq
+Registering SWP/SWPB emulation handler
+hub 1-1:1.0: USB hub found
+hub 1-1:1.0: 4 ports detected
+imx_thermal 2000000.aips-bus:tempmon: Industrial CPU temperature grade - max:105C critical:100C passive:95C
+input: gpio-keys as /devices/soc0/gpio-keys/input/input1
+snvs_rtc 20cc000.snvs:snvs-rtc-lp: setting system clock to 1970-01-01 00:00:00 UTC (0)
+usb_otg_vbus: disabling
+ALSA device list:
+  #0: imx6q-apalis-sgtl5000
+  #1: imx-spdif
+Freeing unused kernel memory: 1024K
+Starting UTP
+uuc 0.5 [built Apr 27 2017 13:40:16]
+UTP: Waiting for device to appear
+UTP: file/device node /dev/utp already exists
+cpu_id is 0
+UTP: received command '$ while [ ! -e /dev/mmcblk0 ]; do sleep 1; echo waiting...; done '
+UTP: executing "while [ ! -e /dev/mmcblk0 ]; do sleep 1; echo waiting...; done "
+UTP: sending Success to kernel for command $ while [ ! -e /dev/mmcblk0 ]; do sleep 1; echo waiting...; done .
+utp_poll: pass returned.
+UTP: received command '$ ls -l /dev/mmc* '
+UTP: executing "ls -l /dev/mmc* "
+brw------- 1 root root 179,  0 Jan  1 00:00 /dev/mmcblk0
+brw------- 1 root root 179, 16 Jan  1 00:00 /dev/mmcblk0boot0
+brw------- 1 root root 179, 32 Jan  1 00:00 /dev/mmcblk0boot1
+brw------- 1 root root 179,  1 Jan  1 00:00 /dev/mmcblk0p1
+brw------- 1 root root 179, 10 Jan  1 00:00 /dev/mmcblk0p10
+brw------- 1 root root 179, 11 Jan  1 00:00 /dev/mmcblk0p11
+brw------- 1 root root 179,  2 Jan  1 00:00 /dev/mmcblk0p2
+brw------- 1 root root 179,  3 Jan  1 00:00 /dev/mmcblk0p3
+brw------- 1 root root 179,  4 Jan  1 00:00 /dev/mmcblk0p4
+brw------- 1 root root 179,  5 Jan  1 00:00 /dev/mmcblk0p5
+brw------- 1 root root 179,  6 Jan  1 00:00 /dev/mmcblk0p6
+brw------- 1 root root 179,  7 Jan  1 00:00 /dev/mmcblk0p7
+brw------- 1 root root 179,  8 Jan  1 00:00 /dev/mmcblk0p8
+brw------- 1 root root 179,  9 Jan  1 00:00 /dev/mmcblk0p9
+UTP: sending Success to kernel for command $ ls -l /dev/mmc* .
+utp_poll: pass returned.
+UTP: received command '$ dd if=/dev/zero of=/dev/mmcblk0 bs=1k seek=768 conv=fsync count=136'
+UTP: executing "dd if=/dev/zero of=/dev/mmcblk0 bs=1k seek=768 conv=fsync count=136"
+136+0 records in
+136+0 records out
+139264 bytes (139 kB, 136 KiB) copied, 0.0770623 s, 1.8 MB/s
+UTP: sending Success to kernel for command $ dd if=/dev/zero of=/dev/mmcblk0 bs=1k seek=768 conv=fsync count=136.
+utp_poll: pass returned.
+UTP: received command '$ echo 0 > /sys/block/mmcblk0boot0/force_ro'
+UTP: executing "echo 0 > /sys/block/mmcblk0boot0/force_ro"
+UTP: sending Success to kernel for command $ echo 0 > /sys/block/mmcblk0boot0/force_ro.
+utp_poll: pass returned.
+UTP: received command 'send'
+UTP: sending Success to kernel for command send.
+UTP: received command '$ dd if=$FILE of=/dev/mmcblk0boot0 bs=512 seek=2'
+UTP: executing "dd if=$FILE of=/dev/mmcblk0boot0 bs=512 seek=2"
+686+0 records in
+686+0 records out
+351232 bytes (351 kB, 343 KiB) copied, 0.136175 s, 2.6 MB/s
+UTP: sending Success to kernel for command $ dd if=$FILE of=/dev/mmcblk0boot0 bs=512 seek=2.
+utp_poll: pass returned.
+UTP: received command '$ echo 1 > /sys/block/mmcblk0boot0/force_ro'
+UTP: executing "echo 1 > /sys/block/mmcblk0boot0/force_ro"
+UTP: sending Success to kernel for command $ echo 1 > /sys/block/mmcblk0boot0/force_ro.
+utp_poll: pass returned.
+UTP: received command '$ mmc bootpart enable 1 1 /dev/mmcblk0'
+UTP: executing "mmc bootpart enable 1 1 /dev/mmcblk0"
+UTP: sending Success to kernel for command $ mmc bootpart enable 1 1 /dev/mmcblk0.
+utp_poll: pass returned.
+UTP: received command '$ ls -l /dev/mmc* '
+UTP: executing "ls -l /dev/mmc* "
+brw------- 1 root root 179,  0 Jan  1 00:00 /dev/mmcblk0
+brw------- 1 root root 179, 16 Jan  1 00:00 /dev/mmcblk0boot0
+brw------- 1 root root 179, 32 Jan  1 00:00 /dev/mmcblk0boot1
+brw------- 1 root root 179,  1 Jan  1 00:00 /dev/mmcblk0p1
+brw------- 1 root root 179, 10 Jan  1 00:00 /dev/mmcblk0p10
+brw------- 1 root root 179, 11 Jan  1 00:00 /dev/mmcblk0p11
+brw------- 1 root root 179,  2 Jan  1 00:00 /dev/mmcblk0p2
+brw------- 1 root root 179,  3 Jan  1 00:00 /dev/mmcblk0p3
+brw------- 1 root root 179,  4 Jan  1 00:00 /dev/mmcblk0p4
+brw------- 1 root root 179,  5 Jan  1 00:00 /dev/mmcblk0p5
+brw------- 1 root root 179,  6 Jan  1 00:00 /dev/mmcblk0p6
+brw------- 1 root root 179,  7 Jan  1 00:00 /dev/mmcblk0p7
+brw------- 1 root root 179,  8 Jan  1 00:00 /dev/mmcblk0p8
+brw------- 1 root root 179,  9 Jan  1 00:00 /dev/mmcblk0p9
+UTP: sending Success to kernel for command $ ls -l /dev/mmc* .
+utp_poll: pass returned.
+UTP: received command 'send'
+UTP: sending Success to kernel for command send.
+UTP: received command '$ dd if=$FILE of=/dev/mmcblk0'
+UTP: executing "dd if=$FILE of=/dev/mmcblk0"
+67+0 records in
+67+0 records out
+34304 bytes (34 kB, 34 KiB) copied, 0.0162083 s, 2.1 MB/s
+UTP: sending Success to kernel for command $ dd if=$FILE of=/dev/mmcblk0.
+utp_poll: pass returned.
+UTP: received command '$ hdparm -z /dev/mmcblk0'
+UTP: executing "hdparm -z /dev/mmcblk0"
+
+/dev/mmcblk0:
+ re-reading partition table
+Alternate GPT is invalid, using primary GPT.
+ mmcblk0: p1 p2 p3 p4 p5 p6 p7 p8 p9 p10 p11
+UTP: sending Success to kernel for command $ hdparm -z /dev/mmcblk0.
+utp_poll: pass returned.
+UTP: received command '$ gdisk -l /dev/mmcblk0 '
+UTP: executing "gdisk -l /dev/mmcblk0 "
+GPT fdisk (gdisk) version 1.0.1
+
+Caution: invalid backup GPT header, but valid main header; regenerating
+backup header from main header.
+
+Warning! One or more CRCs don't match. You should repair the disk!
+
+Partition table scan:
+  MBR: protective
+  BSD: not present
+  APM: not present
+  GPT: damaged
+
+****************************************************************************
+Caution: Found protective or hybrid MBR and corrupt GPT. Using GPT, but disk
+verification and recovery are STRONGLY recommended.
+****************************************************************************
+Disk /dev/mmcblk0: 7520256 sectors, 3.6 GiB
+Logical sector size: 512 bytes
+Disk identifier (GUID): 19AB8570-19A3-4674-855A-1E10511C9045
+Partition table holds up to 128 entries
+First usable sector is 34, last usable sector is 7339998
+Partitions will be aligned on 2048-sector boundaries
+Total free space is 4029 sectors (2.0 MiB)
+
+Number  Start (sector)    End (sector)  Size       Code  Name
+   1            2048           67583   32.0 MiB    FFFF  boot
+   2           67584          133119   32.0 MiB    8300  recovery
+   3          133120         3278847   1.5 GiB     FFFF  system
+   4         3278848         4327423   512.0 MiB   FFFF  cache
+   5         4327424         4343807   8.0 MiB     FFFF  device
+   6         4343808         4351999   4.0 MiB     FFFF  misc
+   7         4352000         4356095   2.0 MiB     FFFF  datafooter
+   8         4356096         4360191   2.0 MiB     FFFF  metadata
+   9         4360192         4362239   1024.0 KiB  FFFF  presistdata
+  10         4362240         7335935   1.4 GiB     FFFF  userdata
+  11         7335936         7337983   1024.0 KiB  0700  fbmisc
+UTP: sending Success to kernel for command $ gdisk -l /dev/mmcblk0 .
+utp_poll: pass returned.
+UTP: received command 'send'
+UTP: sending Success to kernel for command send.
+UTP: received command '$ echo `gdisk -l /dev/mmcblk0 | grep -w boot | awk '{print $1}'` > /tmp/partIdx'
+UTP: executing "echo `gdisk -l /dev/mmcblk0 | grep -w boot | awk '{print $1}'` > /tmp/partIdx"
+Caution: invalid backup GPT header, but valid main header; regenerating
+backup header from main header.
+
+Warning! One or more CRCs don't match. You should repair the disk!
+
+UTP: sending Success to kernel for command $ echo `gdisk -l /dev/mmcblk0 | grep -w boot | awk '{print $1}'` > /tmp/partIdx.
+utp_poll: pass returned.
+UTP: received command '$ dd if=$FILE of=/dev/mmcblk0p`cat /tmp/partIdx`'
+UTP: executing "dd if=$FILE of=/dev/mmcblk0p`cat /tmp/partIdx`"
+22678+1 records in
+22678+1 records out
+11611432 bytes (12 MB, 11 MiB) copied, 1.89204 s, 6.1 MB/s
+UTP: sending Success to kernel for command $ dd if=$FILE of=/dev/mmcblk0p`cat /tmp/partIdx`.
+utp_poll: pass returned.
+UTP: received command '$ ls -l /dev/mmc* '
+UTP: executing "ls -l /dev/mmc* "
+brw------- 1 root root 179,  0 Jan  1 00:00 /dev/mmcblk0
+brw------- 1 root root 179, 16 Jan  1 00:00 /dev/mmcblk0boot0
+brw------- 1 root root 179, 32 Jan  1 00:00 /dev/mmcblk0boot1
+brw------- 1 root root 179,  1 Jan  1 00:00 /dev/mmcblk0p1
+brw------- 1 root root 179, 10 Jan  1 00:00 /dev/mmcblk0p10
+brw------- 1 root root 179, 11 Jan  1 00:00 /dev/mmcblk0p11
+brw------- 1 root root 179,  2 Jan  1 00:00 /dev/mmcblk0p2
+brw------- 1 root root 179,  3 Jan  1 00:00 /dev/mmcblk0p3
+brw------- 1 root root 179,  4 Jan  1 00:00 /dev/mmcblk0p4
+brw------- 1 root root 179,  5 Jan  1 00:00 /dev/mmcblk0p5
+brw------- 1 root root 179,  6 Jan  1 00:00 /dev/mmcblk0p6
+brw------- 1 root root 179,  7 Jan  1 00:00 /dev/mmcblk0p7
+brw------- 1 root root 179,  8 Jan  1 00:00 /dev/mmcblk0p8
+brw------- 1 root root 179,  9 Jan  1 00:00 /dev/mmcblk0p9
+UTP: sending Success to kernel for command $ ls -l /dev/mmc* .
+utp_poll: pass returned.
+UTP: received command '$ echo `gdisk -l /dev/mmcblk0 | grep -w cache | awk '{print $1}'` > /tmp/partIdx'
+UTP: executing "echo `gdisk -l /dev/mmcblk0 | grep -w cache | awk '{print $1}'` > /tmp/partIdx"
+Caution: invalid backup GPT header, but valid main header; regenerating
+backup header from main header.
+
+Warning! One or more CRCs don't match. You should repair the disk!
+
+UTP: sending Success to kernel for command $ echo `gdisk -l /dev/mmcblk0 | grep -w cache | awk '{print $1}'` > /tmp/partIdx.
+utp_poll: pass returned.
+UTP: received command '$ mkfs.ext4 -F -E nodiscard /dev/mmcblk0p`cat /tmp/partIdx`'
+UTP: executing "mkfs.ext4 -F -E nodiscard /dev/mmcblk0p`cat /tmp/partIdx`"
+mke2fs 1.43 (17-May-2016)
+/dev/mmcblk0p4 contains a ext4 file system
+	last mounted on Thu Jan  1 00:03:30 1970
+Creating filesystem with 131072 4k blocks and 32768 inodes
+Filesystem UUID: 03f3e75b-1ddd-4d64-bec2-0f9581a4e00f
+Superblock backups stored on blocks: 
+	32768, 98304
+
+Allocating group tables: 0/4   done                            
+Writing inode tables: 0/4   done                            
+Creating journal (4096 blocks): done
+Writing superblocks and filesystem accounting information: 0/4   done
+
+UTP: sending Success to kernel for command $ mkfs.ext4 -F -E nodiscard /dev/mmcblk0p`cat /tmp/partIdx`.
+utp_poll: pass returned.
+UTP: received command '$ echo `gdisk -l /dev/mmcblk0 | grep -w device | awk '{print $1}'` > /tmp/partIdx'
+UTP: executing "echo `gdisk -l /dev/mmcblk0 | grep -w device | awk '{print $1}'` > /tmp/partIdx"
+Caution: invalid backup GPT header, but valid main header; regenerating
+backup header from main header.
+
+Warning! One or more CRCs don't match. You should repair the disk!
+
+UTP: sending Success to kernel for command $ echo `gdisk -l /dev/mmcblk0 | grep -w device | awk '{print $1}'` > /tmp/partIdx.
+utp_poll: pass returned.
+UTP: received command '$ mkfs.ext4 -F -E nodiscard /dev/mmcblk0p`cat /tmp/partIdx`'
+UTP: executing "mkfs.ext4 -F -E nodiscard /dev/mmcblk0p`cat /tmp/partIdx`"
+mke2fs 1.43 (17-May-2016)
+/dev/mmcblk0p5 contains a ext4 file system
+	created on Thu Jan  1 00:00:11 1970
+Creating filesystem with 8192 1k blocks and 2048 inodes
+
+Allocating group tables: 0/1   done                            
+Writing inode tables: 0/1   done                            
+Creating journal (1024 blocks): done
+Writing superblocks and filesystem accounting information: 0/1   done
+
+UTP: sending Success to kernel for command $ mkfs.ext4 -F -E nodiscard /dev/mmcblk0p`cat /tmp/partIdx`.
+utp_poll: pass returned.
+UTP: received command '$ echo `gdisk -l /dev/mmcblk0 | grep -w userdata | awk '{print $1}'` > /tmp/partIdx'
+UTP: executing "echo `gdisk -l /dev/mmcblk0 | grep -w userdata | awk '{print $1}'` > /tmp/partIdx"
+Caution: invalid backup GPT header, but valid main header; regenerating
+backup header from main header.
+
+Warning! One or more CRCs don't match. You should repair the disk!
+
+UTP: sending Success to kernel for command $ echo `gdisk -l /dev/mmcblk0 | grep -w userdata | awk '{print $1}'` > /tmp/partIdx.
+utp_poll: pass returned.
+UTP: received command '$ mkfs.ext4 -F -E nodiscard -b 4096 -m 0 -O ^flex_bg,^uninit_bg /dev/mmcblk0p`cat /tmp/partIdx`'
+UTP: executing "mkfs.ext4 -F -E nodiscard -b 4096 -m 0 -O ^flex_bg,^uninit_bg /dev/mmcblk0p`cat /tmp/partIdx`"
+mke2fs 1.43 (17-May-2016)
+/dev/mmcblk0p10 contains a ext4 file system
+	last mounted on /data on Thu Jan  1 00:03:30 1970
+Creating filesystem with 371712 4k blocks and 92928 inodes
+Filesystem UUID: d95558db-dcaf-4477-802e-83c85093e182
+Superblock backups stored on blocks: 
+	32768, 98304, 163840, 229376, 294912
+
+Allocating group tables:  0/12     done                            
+Writing inode tables:  0/12 2/12     done                            
+Creating journal (8192 blocks): done
+Writing superblocks and filesystem accounting information:  0/12     done
+
+UTP: sending Success to kernel for command $ mkfs.ext4 -F -E nodiscard -b 4096 -m 0 -O ^flex_bg,^uninit_bg /dev/mmcblk0p`cat /tmp/partIdx`.
+utp_poll: pass returned.
+UTP: received command '$ mount -o remount,size=1024M rootfs /'
+UTP: executing "mount -o remount,size=1024M rootfs /"
+UTP: sending Success to kernel for command $ mount -o remount,size=1024M rootfs /.
+utp_poll: pass returned.
+UTP: received command 'send'
+UTP: sending Success to kernel for command send.
+random: crng init done
+UTP: received command '$ echo `gdisk -l /dev/mmcblk0 | grep -w system | awk '{print $1}'` > /tmp/partIdx'
+UTP: executing "echo `gdisk -l /dev/mmcblk0 | grep -w system | awk '{print $1}'` > /tmp/partIdx"
+Caution: invalid backup GPT header, but valid main header; regenerating
+backup header from main header.
+
+Warning! One or more CRCs don't match. You should repair the disk!
+
+UTP: sending Success to kernel for command $ echo `gdisk -l /dev/mmcblk0 | grep -w system | awk '{print $1}'` > /tmp/partIdx.
+utp_poll: pass returned.
+UTP: received command '$ simg2img $FILE /dev/mmcblk0p`cat /tmp/partIdx`'
+UTP: executing "simg2img $FILE /dev/mmcblk0p`cat /tmp/partIdx`"
+UTP: sending Success to kernel for command $ simg2img $FILE /dev/mmcblk0p`cat /tmp/partIdx`.
+utp_poll: pass returned.
+UTP: received command 'send'
+UTP: sending Success to kernel for command send.
+UTP: received command '$ echo `gdisk -l /dev/mmcblk0 | grep -w 'recovery$' | awk '{print $1}'` > /tmp/partIdx'
+UTP: executing "echo `gdisk -l /dev/mmcblk0 | grep -w 'recovery$' | awk '{print $1}'` > /tmp/partIdx"
+Caution: invalid backup GPT header, but valid main header; regenerating
+backup header from main header.
+
+Warning! One or more CRCs don't match. You should repair the disk!
+
+UTP: sending Success to kernel for command $ echo `gdisk -l /dev/mmcblk0 | grep -w 'recovery$' | awk '{print $1}'` > /tmp/partIdx.
+utp_poll: pass returned.
+UTP: received command '$ dd if=$FILE of=/dev/mmcblk0p`cat /tmp/partIdx`'
+UTP: executing "dd if=$FILE of=/dev/mmcblk0p`cat /tmp/partIdx`"
+27218+1 records in
+27218+1 records out
+13935916 bytes (14 MB, 13 MiB) copied, 2.29255 s, 6.1 MB/s
+UTP: sending Success to kernel for command $ dd if=$FILE of=/dev/mmcblk0p`cat /tmp/partIdx`.
+utp_poll: pass returned.
+UTP: received command '$ sync'
+UTP: executing "sync"
+UTP: sending Success to kernel for command $ sync.
+utp_poll: pass returned.
+UTP: received command 'frf'
+UTP: closing the file
+UTP: sending Success to kernel for command frf.
+utp_poll: pass returned.
+UTP: received command '$ echo Update Complete!'
+UTP: executing "echo Update Complete!"
+Update Complete!
+UTP: sending Success to kernel for command $ echo Update Complete!.
+utp_poll: pass returned.
+>üœÿÿ
+
+U-Boot 2017.03-00002-gebf9dc2527 (Jan 29 2018 - 17:39:17 +0530)
+
+CPU:   Freescale i.MX6Q rev1.5 at 792 MHz
+Reset cause: POR
+I2C:   ready
+DRAM:  2 GiB
+PMIC: device id: 0x10, revision id: 0x21
+PMIC: programmed
+MMC:   FSL_SDHC: 0, FSL_SDHC: 1, FSL_SDHC: 2
+Unable to allocate framebuffer memory
+In:    serial
+Out:   serial
+Err:   serial
+Model: Toradex Apalis iMX6 Quad 2GB IT V1.1C, Serial# 05146387
+flash target is MMC:0
+Net:   using PHY at 7
+FEC [PRIME]
+Fastboot: Normal
+Hit any key to stop autoboot:  1  0 
+boota mmc0 
+CACHE: Misaligned operation at range [8ffb79a0, 8ffb7a20]
+CACHE: Misaligned operation at range [8ffb79a0, 8ffb7a20]
+kernel   @ 14008000 (9921576)
+ramdisk  @ 15000000 (1629864)
+fdt      @ 14f00000 (53981)
+## Booting Android Image at 0x12000000 ...
+Kernel load addr 0x14008000 size 9690 KiB
+Kernel command line: console=ttymxc0,115200 init=/init video=mxcfb0:dev=ldb,fbpix=RGB32,bpp=32 video=mxcfb1:dev=hdmi,640x480M@60,if=RGB24,bpp=16 video=mxcfb2:off video=mxcfb3:off vmalloc=256M androidboot.console=ttymxc0 consoleblank=0 androidboot.hardware=freescale cma=448M androidboot.selinux=permissive androidboot.dm_verity=disabled buildvariant=user androidboot.serialno=1b2429d4ea997115 androidboot.storage_type=emmc
+## Flattened Device Tree blob at 14f00000
+   Booting using the fdt blob at 0x14f00000
+   Loading Kernel Image ... OK
+   Using Device Tree in place at 14f00000, end 14f102dc
+
+Starting kernel ...
+
+Booting Linux on physical CPU 0x0
+Linux version 4.9.67-07229-gdc6c16ec0433-dirty (embadmin@ubuntu) (gcc version 4.9 20150123 (prerelease) (GCC) ) #59 SMP PREEMPT Wed Feb 7 18:06:19 IST 2018
+CPU: ARMv7 Processor [412fc09a] revision 10 (ARMv7), cr=10c53c7d
+CPU: PIPT / VIPT nonaliasing data cache, VIPT aliasing instruction cache
+OF: fdt:Machine model: Aravinth : Toradex Apalis iMX6Q/D Module on Ixora V1.1 Carrier Board
+cma: Reserved 448 MiB at 0x22000000
+Memory policy: Data cache writealloc
+percpu: Embedded 15 pages/cpu @ee6b3000 s31040 r8192 d22208 u61440
+Built 1 zonelists in Zone order, mobility grouping on.  Total pages: 522768
+Kernel command line: console=ttymxc0,115200 init=/init video=mxcfb0:dev=ldb,fbpix=RGB32,bpp=32 video=mxcfb1:dev=hdmi,640x480M@60,if=RGB24,bpp=16 video=mxcfb2:off video=mxcfb3:off vmalloc=256M androidboot.console=ttymxc0 consoleblank=0 androidboot.hardware=freescale cma=448M androidboot.selinux=permissive androidboot.dm_verity=disabled buildvariant=user androidboot.serialno=1b2429d4ea997115 androidboot.storage_type=emmc
+PID hash table entries: 4096 (order: 2, 16384 bytes)
+Dentry cache hash table entries: 131072 (order: 7, 524288 bytes)
+Inode-cache hash table entries: 65536 (order: 6, 262144 bytes)
+Memory: 1597024K/2097152K available (13312K kernel code, 1154K rwdata, 4044K rodata, 1024K init, 604K bss, 41376K reserved, 458752K cma-reserved, 1318912K highmem)
+Virtual kernel memory layout:
+    vector  : 0xffff0000 - 0xffff1000   (   4 kB)
+    fixmap  : 0xffc00000 - 0xfff00000   (3072 kB)
+    vmalloc : 0xf0000000 - 0xff800000   ( 248 MB)
+    lowmem  : 0xc0000000 - 0xef800000   ( 760 MB)
+    pkmap   : 0xbfe00000 - 0xc0000000   (   2 MB)
+    modules : 0xbf000000 - 0xbfe00000   (  14 MB)
+      .text : 0xc0008000 - 0xc0e00000   (14304 kB)
+      .init : 0xc1300000 - 0xc1400000   (1024 kB)
+      .data : 0xc1400000 - 0xc1520b58   (1155 kB)
+       .bss : 0xc1520b58 - 0xc15b7c28   ( 605 kB)
+SLUB: HWalign=64, Order=0-3, MinObjects=0, CPUs=4, Nodes=1
+Preemptible hierarchical RCU implementation.
+	Build-time adjustment of leaf fanout to 32.
+NR_IRQS:16 nr_irqs:16 16
+L2C-310 errata 752271 769419 enabled
+L2C-310 enabling early BRESP for Cortex-A9
+L2C-310 full line of zeros enabled for Cortex-A9
+L2C-310 ID prefetch enabled, offset 16 lines
+L2C-310 dynamic clock gating enabled, standby mode enabled
+L2C-310 cache controller enabled, 16 ways, 1024 kB
+L2C-310: CACHE_ID 0x410000c7, AUX_CTRL 0x76470001
+Switching to timer-based delay loop, resolution 333ns
+sched_clock: 32 bits at 3000kHz, resolution 333ns, wraps every 715827882841ns
+clocksource: mxc_timer1: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 637086815595 ns
+Console: colour dummy device 80x30
+Calibrating delay loop (skipped), value calculated using timer frequency.. 6.00 BogoMIPS (lpj=30000)
+pid_max: default: 32768 minimum: 301
+Security Framework initialized
+SELinux:  Initializing.
+Mount-cache hash table entries: 2048 (order: 1, 8192 bytes)
+Mountpoint-cache hash table entries: 2048 (order: 1, 8192 bytes)
+CPU: Testing write buffer coherency: ok
+CPU0: update cpu_capacity 1024
+CPU0: thread -1, cpu 0, socket 0, mpidr 80000000
+Setting up static identity map for 0x10100000 - 0x10100058
+CPU1: update cpu_capacity 1024
+CPU1: thread -1, cpu 1, socket 0, mpidr 80000001
+CPU2: update cpu_capacity 1024
+CPU2: thread -1, cpu 2, socket 0, mpidr 80000002
+CPU3: update cpu_capacity 1024
+CPU3: thread -1, cpu 3, socket 0, mpidr 80000003
+Brought up 4 CPUs
+SMP: Total of 4 processors activated (24.00 BogoMIPS).
+CPU: All CPU(s) started in SVC mode.
+CPU3: update max cpu_capacity 1024
+devtmpfs: initialized
+CPU2: update max cpu_capacity 1024
+VFP support v0.3: implementor 41 architecture 3 part 30 variant 9 rev 4
+clocksource: jiffies: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 19112604462750000 ns
+futex hash table entries: 1024 (order: 4, 65536 bytes)
+pinctrl core: initialized pinctrl subsystem
+NET: Registered protocol family 16
+DMA: preallocated 256 KiB pool for atomic coherent allocations
+cpuidle: using governor menu
+CPU identified as i.MX6Q, silicon rev 1.5
+hw-breakpoint: found 5 (+1 reserved) breakpoint and 1 watchpoint registers.
+hw-breakpoint: maximum watchpoint size is 4 bytes.
+imx6q-pinctrl 20e0000.iomuxc: initialized IMX pinctrl driver
+imx-gpc 20dc000.gpc: no fsl,ldo-bypass found!
+imx-gpc 20dc000.gpc: Registered imx-gpc
+mxs-dma 110000.dma-apbh: initialized
+usb_host_vbus: supplied by usb_host_vbus_hub
+SCSI subsystem initialized
+usbcore: registered new interface driver usbfs
+usbcore: registered new interface driver hub
+usbcore: registered new device driver usb
+2000000.aips-bus:usbphy_nop1 supply vcc not found, using dummy regulator
+2000000.aips-bus:usbphy_nop2 supply vcc not found, using dummy regulator
+i2c i2c-1: IMX I2C adapter registered
+i2c i2c-1: can't use DMA, using PIO instead.
+stmpe-i2c 2-0041: stmpe811 detected, chip id: 0x811
+i2c i2c-2: IMX I2C adapter registered
+i2c i2c-2: can't use DMA, using PIO instead.
+i2c i2c-3: IMX I2C adapter registered
+i2c i2c-3: can't use DMA, using PIO instead.
+Linux video capture interface: v2.00
+pps_core: LinuxPPS API ver. 1 registered
+pps_core: Software ver. 5.3.6 - Copyright 2005-2007 Rodolfo Giometti <giometti@linux.it>
+PTP clock support registered
+imx-ipuv3 2400000.ipu: IPU DMFC NORMAL mode: 1(0~1), 5B(4,5), 5F(6,7)
+imx-ipuv3 2800000.ipu: IPU DMFC NORMAL mode: 1(0~1), 5B(4,5), 5F(6,7)
+mxc_mipi_csi2 21dc000.mipi_csi: i.MX MIPI CSI2 driver probed ipu0 csi1
+mxc_mipi_csi2 21dc000.mipi_csi: i.MX MIPI CSI2 dphy version is 0x3130302a
+MIPI CSI2 driver module loaded
+imx rpmsg driver is registered.
+Advanced Linux Sound Architecture Driver Initialized.
+Bluetooth: Core ver 2.22
+NET: Registered protocol family 31
+Bluetooth: HCI device and connection manager initialized
+Bluetooth: HCI socket layer initialized
+Bluetooth: L2CAP socket layer initialized
+Bluetooth: SCO socket layer initialized
+clocksource: Switched to clocksource mxc_timer1
+VFS: Disk quotas dquot_6.6.0
+VFS: Dquot-cache hash table entries: 1024 (order 0, 4096 bytes)
+NET: Registered protocol family 2
+TCP established hash table entries: 8192 (order: 3, 32768 bytes)
+TCP bind hash table entries: 8192 (order: 4, 65536 bytes)
+TCP: Hash tables configured (established 8192 bind 8192)
+UDP hash table entries: 512 (order: 2, 16384 bytes)
+UDP-Lite hash table entries: 512 (order: 2, 16384 bytes)
+NET: Registered protocol family 1
+RPC: Registered named UNIX socket transport module.
+RPC: Registered udp transport module.
+RPC: Registered tcp transport module.
+RPC: Registered tcp NFSv4.1 backchannel transport module.
+Trying to unpack rootfs image as initramfs...
+Freeing initrd memory: 1592K
+hw perfevents: enabled with armv7_cortex_a9 PMU driver, 7 counters available
+Bus freq driver module loaded
+audit: initializing netlink subsys (disabled)
+audit: type=2000 audit(0.880:1): initialized
+workingset: timestamp_bits=30 max_order=19 bucket_order=0
+NFS: Registering the id_resolver key type
+Key type id_resolver registered
+Key type id_legacy registered
+ntfs: driver 2.1.32 [Flags: R/W DEBUG].
+jffs2: version 2.2. (NAND) Â© 2001-2006 Red Hat, Inc.
+fuse init (API version 7.26)
+NET: Registered protocol family 38
+bounce: pool size: 64 pages
+io scheduler noop registered
+io scheduler deadline registered
+io scheduler cfq registered (default)
+backlight supply power not found, using dummy regulator
+20e0000.hdmi_video supply HDMI not found, using dummy regulator
+mxc_sdc_fb fb@0: registered mxc display driver ldb
+imx-ipuv3 2800000.ipu: IPU DMFC DP HIGH RESOLUTION: 1(0,1), 5B(2~5), 5F(6,7)
+Console: switching to colour frame buffer device 128x48
+mxc_hdmi 20e0000.hdmi_video: Detected HDMI controller 0x13:0xa:0xa0:0xc1
+fbcvt: 640x480@60: CVT Name - .307M3
+mxc_sdc_fb fb@1: registered mxc display driver hdmi
+mxc_sdc_fb fb@2: Can't get fb option for mxcfb2!
+mxc_sdc_fb fb@3: Can't get fb option for mxcfb3!
+imx-sdma 20ec000.sdma: no iram assigned, using external mem
+imx-sdma 20ec000.sdma: loaded firmware 3.3
+pfuze100-regulator 2-0008: Full layer: 2, Metal layer: 1
+pfuze100-regulator 2-0008: FAB: 0, FIN: 0
+pfuze100-regulator 2-0008: pfuze100 found.
+2020000.serial: ttymxc0 at MMIO 0x2020000 (irq = 29, base_baud = 5000000) is a IMX
+console [ttymxc0] enabled
+21e8000.serial: ttymxc1 at MMIO 0x21e8000 (irq = 78, base_baud = 5000000) is a IMX
+21f0000.serial: ttymxc3 at MMIO 0x21f0000 (irq = 79, base_baud = 5000000) is a IMX
+21f4000.serial: ttymxc4 at MMIO 0x21f4000 (irq = 80, base_baud = 5000000) is a IMX
+imx sema4 driver is registered.
+[drm] Initialized
+[drm] Initialized vivante 1.0.0 20120216 on minor 0
+brd: module loaded
+loop: module loaded
+zram: Added device: zram0
+ahci-imx 2200000.sata: fsl,transmit-level-mV not specified, using 00000024
+ahci-imx 2200000.sata: fsl,transmit-boost-mdB not specified, using 00000480
+ahci-imx 2200000.sata: fsl,transmit-atten-16ths not specified, using 00002000
+ahci-imx 2200000.sata: fsl,receive-eq-mdB not specified, using 05000000
+ahci-imx 2200000.sata: SSS flag set, parallel bus scan disabled
+ahci-imx 2200000.sata: AHCI 0001.0300 32 slots 1 ports 3 Gbps 0x1 impl platform mode
+ahci-imx 2200000.sata: flags: ncq sntf stag pm led clo only pmp pio slum part ccc apst 
+scsi host0: ahci-imx
+ata1: SATA max UDMA/133 mmio [mem 0x02200000-0x02203fff] port 0x100 irq 87
+spi_imx 2008000.ecspi: probed
+libphy: Fixed MDIO Bus: probed
+tun: Universal TUN/TAP device driver, 1.6
+tun: (C) 1999-2004 Max Krasnyansky <maxk@qualcomm.com>
+CAN device driver interface
+2090000.flexcan supply xceiver not found, using dummy regulator
+flexcan 2090000.flexcan: device registered (reg_base=f02f4000, irq=38)
+2094000.flexcan supply xceiver not found, using dummy regulator
+flexcan 2094000.flexcan: device registered (reg_base=f02fc000, irq=39)
+2188000.ethernet supply phy not found, using dummy regulator
+pps pps0: new PPS source ptp0
+libphy: fec_enet_mii_bus: probed
+fec 2188000.ethernet eth0: registered PHC device 0
+PPP generic driver version 2.4.2
+PPP BSD Compression module registered
+PPP Deflate Compression module registered
+PPP MPPE Compression module registered
+NET: Registered protocol family 24
+Aravinth: rtl8xxxu_module_init -->
+usbcore: registered new interface driver rtk_btusb
+Aravinth: rtl8xxxu_module_init <--
+usbcore: registered new interface driver kaweth
+pegasus: v0.9.3 (2013/04/25), Pegasus/Pegasus II USB Ethernet driver
+usbcore: registered new interface driver pegasus
+usbcore: registered new interface driver rtl8150
+usbcore: registered new interface driver r8152
+usbcore: registered new interface driver asix
+usbcore: registered new interface driver ax88179_178a
+usbcore: registered new interface driver cdc_ether
+usbcore: registered new interface driver cdc_eem
+usbcore: registered new interface driver net1080
+usbcore: registered new interface driver cdc_subset
+usbcore: registered new interface driver zaurus
+usbcore: registered new interface driver cdc_ncm
+ehci_hcd: USB 2.0 'Enhanced' Host Controller (EHCI) Driver
+ehci-mxc: Freescale On-Chip EHCI Host driver
+ohci_hcd: USB 1.1 'Open' Host Controller (OHCI) Driver
+usbcore: registered new interface driver cdc_acm
+cdc_acm: USB Abstract Control Model driver for USB modems and ISDN adapters
+usbcore: registered new interface driver cdc_wdm
+usbcore: registered new interface driver usb-storage
+usbcore: registered new interface driver usbserial
+usbcore: registered new interface driver usbserial_generic
+usbserial: USB Serial support registered for generic
+usbcore: registered new interface driver ftdi_sio
+usbserial: USB Serial support registered for FTDI USB Serial Device
+usbcore: registered new interface driver option
+usbserial: USB Serial support registered for GSM modem (1-port)
+usbcore: registered new interface driver usbtest
+usbcore: registered new interface driver usb_ehset_test
+2184800.usbmisc supply vbus-wakeup not found, using dummy regulator
+ci_hdrc ci_hdrc.1: EHCI Host Controller
+ci_hdrc ci_hdrc.1: new USB bus registered, assigned bus number 1
+ci_hdrc ci_hdrc.1: USB 2.0 started, EHCI 1.00
+usb usb1: New USB device found, idVendor=1d6b, idProduct=0002
+usb usb1: New USB device strings: Mfr=3, Product=2, SerialNumber=1
+ata1: SATA link down (SStatus 0 SControl 300)
+ahci-imx 2200000.sata: no device found, disabling link.
+ahci-imx 2200000.sata: pass ahci_imx..hotplug=1 to enable hotplug
+usb usb1: Product: EHCI Host Controller
+usb usb1: Manufacturer: Linux 4.9.67-07229-gdc6c16ec0433-dirty ehci_hcd
+usb usb1: SerialNumber: ci_hdrc.1
+hub 1-0:1.0: USB hub found
+hub 1-0:1.0: 1 port detected
+mousedev: PS/2 mouse device common for all mice
+usbcore: registered new interface driver xpad
+usbcore: registered new interface driver usb_acecad
+usbcore: registered new interface driver aiptek
+usbcore: registered new interface driver gtco
+usbcore: registered new interface driver hanwang
+usbcore: registered new interface driver kbtab
+input: stmpe-ts as /devices/soc0/soc/2100000.aips-bus/21a4000.i2c/i2c-2/2-0041/stmpe-ts/input/input0
+snvs_rtc 20cc000.snvs:snvs-rtc-lp: rtc core: registered 20cc000.snvs:snvs-r as rtc0
+i2c /dev entries driver
+IR NEC protocol handler initialized
+IR RC5(x/sz) protocol handler initialized
+IR RC6 protocol handler initialized
+IR JVC protocol handler initialized
+IR Sony protocol handler initialized
+IR SANYO protocol handler initialized
+IR Sharp protocol handler initialized
+IR MCE Keyboard/mouse protocol handler initialized
+IR XMP protocol handler initialized
+mxc_v4l2_output v4l2_out: V4L2 device registered as video16
+mxc_v4l2_output v4l2_out: V4L2 device registered as video17
+mxc_v4l2_output v4l2_out: V4L2 device registered as video18
+mxc_v4l2_output v4l2_out: V4L2 device registered as video19
+ov564x_mipi 3-003c: found pwm2, period=0
+usb 1-1: new high-speed USB device number 2 using ci_hdrc
+ov5640_read_reg:write reg error:reg=300a
+camera ov5640_mipi is not found
+usbcore: registered new interface driver uvcvideo
+USB Video Class driver (1.1.1)
+imx2-wdt 20bc000.wdog: timeout 60 sec (nowayout=0)
+device-mapper: uevent: version 1.0.3
+device-mapper: ioctl: 4.35.0-ioctl (2016-06-23) initialised: dm-devel@redhat.com
+Bluetooth: HCI UART driver ver 2.3
+Bluetooth: HCI UART protocol H4 registered
+Bluetooth: HCI UART protocol BCSP registered
+Bluetooth: HCI UART protocol ATH3K registered
+usbcore: registered new interface driver btusb
+sdhci: Secure Digital Host Controller Interface driver
+sdhci: Copyright(c) Pierre Ossman
+sdhci-pltfm: SDHCI platform and OF driver helper
+sdhci-esdhc-imx 2190000.usdhc: could not get ultra high speed state, work on normal mode
+sdhci-esdhc-imx 2190000.usdhc: Got CD GPIO
+mmc1: SDHCI controller on 2190000.usdhc [2190000.usdhc] using ADMA
+sdhci-esdhc-imx 2198000.usdhc: could not get ultra high speed state, work on normal mode
+usb 1-1: New USB device found, idVendor=0424, idProduct=2514
+usb 1-1: New USB device strings: Mfr=0, Product=0, SerialNumber=0
+hub 1-1:1.0: USB hub found
+hub 1-1:1.0: 4 ports detected
+Aravinth: usb_ifnum_to_if config->desc.bNumInterface=1 ifnum=0
+Aravinth: usb_ifnum_to_if Num=0 
+mmc0: SDHCI controller on 2198000.usdhc [2198000.usdhc] using ADMA
+mxc_vpu 2040000.vpu_fsl: VPU initialized
+mxc_vdoa 21e4000.vdoa: i.MX Video Data Order Adapter(VDOA) driver probed
+mxc_hdmi_cec soc:hdmi_cec@00120000: HDMI CEC initialized
+Galcore version 6.2.2.96445
+mmc0: new DDR MMC card at address 0001
+mmcblk0: mmc0:0001 Q2J54A 3.59 GiB 
+mmcblk0boot0: mmc0:0001 Q2J54A partition 1 16.0 MiB
+mmcblk0boot1: mmc0:0001 Q2J54A partition 2 16.0 MiB
+random: fast init done
+Alternate GPT is invalid, using primary GPT.
+ mmcblk0: p1 p2 p3 p4 p5 p6 p7 p8 p9 p10 p11
+caam 2100000.caam: ERA source: CAAMVID.
+caam 2100000.caam: AXI pipeline throttling enabled.
+caam 2100000.caam: Instantiated RNG4 SH1
+caam 2100000.caam: device ID = 0x0a16010000000000 (Era 4)
+caam 2100000.caam: job rings = 2, qi = 0
+caam algorithms registered in /proc/crypto
+caam_jr 2101000.jr0: registering rng-caam
+platform caam_sm: blkkey_ex: 4 keystore units available
+platform caam_sm: 64-bit clear key:
+platform caam_sm: [0000] 00 01 02 03 04 0f 06 07
+platform caam_sm: 64-bit black key:
+platform caam_sm: [0000] 1b c5 4d ff 79 e6 97 7e
+platform caam_sm: [0008] d2 34 d9 c4 2a aa f4 2c
+platform caam_sm: 128-bit clear key:
+platform caam_sm: [0000] 00 01 02 03 04 0f 06 07
+platform caam_sm: [0008] 08 09 0a 0b 0c 0d 0e 0f
+platform caam_sm: 128-bit black key:
+platform caam_sm: [0000] 83 5d a0 4d 75 c5 79 b5
+platform caam_sm: [0008] 14 1a 30 d0 90 45 bc 24
+platform caam_sm: 192-bit clear key:
+platform caam_sm: [0000] 00 01 02 03 04 0f 06 07
+platform caam_sm: [0008] 08 09 0a 0b 0c 0d 0e 0f
+platform caam_sm: [0016] 10 11 12 13 14 15 16 17
+platform caam_sm: 192-bit black key:
+platform caam_sm: [0000] e2 82 a3 2c 17 0f d5 f2
+platform caam_sm: [0008] 97 ff aa 30 29 4f 4a b6
+platform caam_sm: [0016] 5b e0 9e db 00 40 c8 66
+platform caam_sm: [0024] ff 42 e9 5f 09 fd 37 c6
+platform caam_sm: 256-bit clear key:
+platform caam_sm: [0000] 00 01 02 03 04 0f 06 07
+platform caam_sm: [0008] 08 09 0a 0b 0c 0d 0e 0f
+platform caam_sm: [0016] 10 11 12 13 14 15 16 17
+platform caam_sm: [0024] 18 19 1a 1b 1c 1d 1e 1f
+platform caam_sm: 256-bit black key:
+platform caam_sm: [0000] 25 8f c0 ae 25 f6 5d c5
+platform caam_sm: [0008] cb 1b 4c 0f 1e b7 83 60
+platform caam_sm: [0016] 77 6b 01 44 cf 37 4f 11
+platform caam_sm: [0024] 20 ba 84 99 3b 5f 9c 5f
+platform caam_sm: 64-bit unwritten blob:
+platform caam_sm: [0000] 00 00 00 00 00 00 00 00
+platform caam_sm: [0008] 00 00 00 00 00 00 00 00
+platform caam_sm: [0016] 00 00 00 00 00 00 00 00
+platform caam_sm: [0024] 00 00 00 00 00 00 00 00
+platform caam_sm: [0032] 00 00 00 00 00 00 00 00
+platform caam_sm: [0040] 00 00 00 00 00 00 00 00
+platform caam_sm: [0048] 00 00 00 00 00 00 00 00
+platform caam_sm: [0056] 00 00 00 00 00 00 00 00
+platform caam_sm: [0064] 00 00 00 00 00 00 00 00
+platform caam_sm: [0072] 00 00 00 00 00 00 00 00
+platform caam_sm: [0080] 00 00 00 00 00 00 00 00
+platform caam_sm: [0088] 00 00 00 00 00 00 00 00
+platform caam_sm: 128-bit unwritten blob:
+platform caam_sm: [0000] 00 00 00 00 00 00 00 00
+platform caam_sm: [0008] 00 00 00 00 00 00 00 00
+platform caam_sm: [0016] 00 00 00 00 00 00 00 00
+platform caam_sm: [0024] 00 00 00 00 00 00 00 00
+platform caam_sm: [0032] 00 00 00 00 00 00 00 00
+platform caam_sm: [0040] 00 00 00 00 00 00 00 00
+platform caam_sm: [0048] 00 00 00 00 00 00 00 00
+platform caam_sm: [0056] 00 00 00 00 00 00 00 00
+platform caam_sm: [0064] 00 00 00 00 00 00 00 00
+platform caam_sm: [0072] 00 00 00 00 00 00 00 00
+platform caam_sm: [0080] 00 00 00 00 00 00 00 00
+platform caam_sm: [0088] 00 00 00 00 00 00 00 00
+platform caam_sm: 196-bit unwritten blob:
+platform caam_sm: [0000] 00 00 00 00 00 00 00 00
+platform caam_sm: [0008] 00 00 00 00 00 00 00 00
+platform caam_sm: [0016] 00 00 00 00 00 00 00 00
+platform caam_sm: [0024] 00 00 00 00 00 00 00 00
+platform caam_sm: [0032] 00 00 00 00 00 00 00 00
+platform caam_sm: [0040] 00 00 00 00 00 00 00 00
+platform caam_sm: [0048] 00 00 00 00 00 00 00 00
+platform caam_sm: [0056] 00 00 00 00 00 00 00 00
+platform caam_sm: [0064] 00 00 00 00 00 00 00 00
+platform caam_sm: [0072] 00 00 00 00 00 00 00 00
+platform caam_sm: [0080] 00 00 00 00 00 00 00 00
+platform caam_sm: [0088] 00 00 00 00 00 00 00 00
+platform caam_sm: 256-bit unwritten blob:
+platform caam_sm: [0000] 00 00 00 00 00 00 00 00
+platform caam_sm: [0008] 00 00 00 00 00 00 00 00
+platform caam_sm: [0016] 00 00 00 00 00 00 00 00
+platform caam_sm: [0024] 00 00 00 00 00 00 00 00
+platform caam_sm: [0032] 00 00 00 00 00 00 00 00
+platform caam_sm: [0040] 00 00 00 00 00 00 00 00
+platform caam_sm: [0048] 00 00 00 00 00 00 00 00
+platform caam_sm: [0056] 00 00 00 00 00 00 00 00
+platform caam_sm: [0064] 00 00 00 00 00 00 00 00
+platform caam_sm: [0072] 00 00 00 00 00 00 00 00
+platform caam_sm: [0080] 00 00 00 00 00 00 00 00
+platform caam_sm: [0088] 00 00 00 00 00 00 00 00
+platform caam_sm: 64-bit black key in blob:
+platform caam_sm: [0000] b4 ec 4f 43 cb b3 05 bb
+platform caam_sm: [0008] 63 9c 64 88 4d 1b 21 d7
+platform caam_sm: [0016] a1 18 e3 92 78 27 cc 12
+platform caam_sm: [0024] cf 79 4b ca ee 62 c9 49
+platform caam_sm: [0032] 97 d7 23 8c ef e0 39 85
+platform caam_sm: [0040] 5f db cc 74 55 fb 3d 1e
+platform caam_sm: [0048] 58 bd 74 44 95 c5 e6 79
+platform caam_sm: [0056] 00 00 00 00 00 00 00 00
+platform caam_sm: [0064] 00 00 00 00 00 00 00 00
+platform caam_sm: [0072] 00 00 00 00 00 00 00 00
+platform caam_sm: [0080] 00 00 00 00 00 00 00 00
+platform caam_sm: [0088] 00 00 00 00 00 00 00 00
+platform caam_sm: 128-bit black key in blob:
+platform caam_sm: [0000] 4f de 5c 8f d4 96 6c 91
+platform caam_sm: [0008] cf 7e 6d 70 b7 b4 0e f1
+platform caam_sm: [0016] 70 5f 14 21 a4 71 9a 15
+platform caam_sm: [0024] 30 e9 29 ec 80 6b ca d3
+platform caam_sm: [0032] ed 98 7d 77 71 05 f3 70
+platform caam_sm: [0040] 97 c8 bf ba de d0 75 3a
+platform caam_sm: [0048] 4f 86 af c6 0c 34 17 63
+platform caam_sm: [0056] d3 77 e4 bd b4 27 81 59
+platform caam_sm: [0064] 00 00 00 00 00 00 00 00
+platform caam_sm: [0072] 00 00 00 00 00 00 00 00
+platform caam_sm: [0080] 00 00 00 00 00 00 00 00
+platform caam_sm: [0088] 00 00 00 00 00 00 00 00
+platform caam_sm: 192-bit black key in blob:
+platform caam_sm: [0000] e8 c6 f6 65 75 0b ed 4b
+platform caam_sm: [0008] 5d d5 9b 0a 55 69 64 19
+platform caam_sm: [0016] c2 47 24 77 b7 85 67 2b
+platform caam_sm: [0024] 37 f0 09 f9 96 82 db 96
+platform caam_sm: [0032] d0 27 e7 0b 2a 76 2d bb
+platform caam_sm: [0040] 63 20 ec 0f 51 45 ac 04
+platform caam_sm: [0048] 03 65 a6 52 36 96 79 84
+platform caam_sm: [0056] f0 32 0b f2 14 05 7f a3
+platform caam_sm: [0064] ad 3e a5 12 c9 40 af c5
+platform caam_sm: [0072] 00 00 00 00 00 00 00 00
+platform caam_sm: [0080] 00 00 00 00 00 00 00 00
+platform caam_sm: [0088] 00 00 00 00 00 00 00 00
+platform caam_sm: 256-bit black key in blob:
+platform caam_sm: [0000] 03 84 28 2e 7f 9d 36 bd
+platform caam_sm: [0008] 46 2d 2b 70 56 f0 e0 f7
+platform caam_sm: [0016] 58 1b 7a dd 19 6b 78 55
+platform caam_sm: [0024] 46 19 c0 44 73 1b 56 ec
+platform caam_sm: [0032] 9b 37 92 62 36 ee 7f 6d
+platform caam_sm: [0040] 73 a9 7c 6b 62 86 f1 20
+platform caam_sm: [0048] 03 a2 4d fd f6 3e 3c 49
+platform caam_sm: [0056] a2 7b 44 f6 a7 d1 67 d8
+platform caam_sm: [0064] 3a ca a2 6e ef 2d c0 7e
+platform caam_sm: [0072] df 1c 2c 72 83 6e 16 88
+platform caam_sm: [0080] 00 00 00 00 00 00 00 00
+platform caam_sm: [0088] 00 00 00 00 00 00 00 00
+platform caam_sm: restored 64-bit black key:
+platform caam_sm: [0000] 4f 54 3c 11 e7 3e f3 43
+platform caam_sm: [0008] 5b cb e0 68 ec 20 e2 8f
+platform caam_sm: restored 128-bit black key:
+platform caam_sm: [0000] 83 5d a0 4d 75 c5 79 b5
+platform caam_sm: [0008] 14 1a 30 d0 90 45 bc 24
+platform caam_sm: restored 192-bit black key:
+platform caam_sm: [0000] e2 82 a3 2c 17 0f d5 f2
+platform caam_sm: [0008] 97 ff aa 30 29 4f 4a b6
+platform caam_sm: [0016] e4 fe a5 a4 da e2 08 6a
+platform caam_sm: [0024] 41 c2 65 d2 f5 62 f9 f5
+platform caam_sm: restored 256-bit black key:
+platform caam_sm: [0000] 25 8f c0 ae 25 f6 5d c5
+platform caam_sm: [0008] cb 1b 4c 0f 1e b7 83 60
+platform caam_sm: [0016] 77 6b 01 44 cf 37 4f 11
+platform caam_sm: [0024] 20 ba 84 99 3b 5f 9c 5f
+snvs-secvio 20cc000.caam-snvs: can't get snvs clock
+snvs-secvio 20cc000.caam-snvs: violation handlers armed - non-secure state
+hidraw: raw HID events driver (C) Jiri Kosina
+usbcore: registered new interface driver usbhid
+usbhid: USB HID core driver
+ashmem: initialized
+usbcore: registered new interface driver snd-usb-audio
+sgtl5000 2-000a: sgtl5000 revision 0x11
+fsl-ssi-dai 2028000.ssi: No cache defaults, reading back from HW
+imx-sgtl5000 sound: sgtl5000 <-> 2028000.ssi mapping ok
+imx-spdif sound-spdif: snd-soc-dummy-dai <-> 2004000.spdif mapping ok
+imx-audio-hdmi sound-hdmi: hdmi-hifi.0 <-> soc:hdmi_audio@00120000 mapping ok
+NET: Registered protocol family 26
+u32 classifier
+    Actions configured
+Netfilter messages via NETLINK v0.30.
+nf_conntrack version 0.5.0 (16384 buckets, 65536 max)
+ctnetlink v0.93: registering with nfnetlink.
+xt_time: kernel timezone is -0000
+ip_tables: (C) 2000-2006 Netfilter Core Team
+arp_tables: arp_tables: (C) 2002 David S. Miller
+Initializing XFRM netlink socket
+NET: Registered protocol family 10
+mip6: Mobile IPv6
+ip6_tables: (C) 2000-2006 Netfilter Core Team
+sit: IPv6, IPv4 and MPLS over IPv4 tunneling driver
+NET: Registered protocol family 17
+NET: Registered protocol family 15
+bridge: filtering via arp/ip/ip6tables is no longer available by default. Update your scripts to load br_netfilter if you need this.
+can: controller area network core (rev 20120528 abi 9)
+NET: Registered protocol family 29
+can: raw protocol (rev 20120528)
+can: broadcast manager protocol (rev 20161123 t)
+can: netlink gateway (rev 20130117) max_hops=1
+Bluetooth: RFCOMM TTY layer initialized
+Bluetooth: RFCOMM socket layer initialized
+Bluetooth: RFCOMM ver 1.11
+Bluetooth: BNEP (Ethernet Emulation) ver 1.3
+Bluetooth: BNEP filters: protocol multicast
+Bluetooth: BNEP socket layer initialized
+Bluetooth: HIDP (Human Interface Emulation) ver 1.2
+Bluetooth: HIDP socket layer initialized
+8021q: 802.1Q VLAN Support v1.8
+Key type dns_resolver registered
+cpu cpu0: Registered imx6q-cpufreq
+registered taskstats version 1
+imx_thermal 2000000.aips-bus:tempmon: Industrial CPU temperature grade - max:105C critical:100C passive:95C
+dhd_module_init in
+input: gpio-keys as /devices/soc0/gpio-keys/input/input1
+snvs_rtc 20cc000.snvs:snvs-rtc-lp: setting system clock to 1970-01-01 00:00:02 UTC (2)
+usb_otg_vbus: disabling
+ALSA device list:
+  #0: imx6q-apalis-sgtl5000
+  #1: imx-spdif
+  #2: imx-hdmi-soc
+Freeing unused kernel memory: 1024K
+init: init first stage started!
+SELinux:  Permission validate_trans in class security not defined in policy.
+SELinux:  Class cap_userns not defined in policy.
+SELinux:  Class cap2_userns not defined in policy.
+SELinux: the above unknown classes and permissions will be denied
+audit: type=1403 audit(5.065:2): policy loaded auid=4294967295 ses=4294967295
+init: (Initializing SELinux non-enforcing took 0.11s.)
+init: init second stage started!
+init: Running restorecon...
+init: waitpid failed: No child processes
+init: (Loading properties from /default.prop took 0.00s.)
+init: (Parsing /init.environ.rc took 0.00s.)
+init: (Parsing /init.usb.rc took 0.00s.)
+init: /init.freescale.rc: 154: invalid keyword 'setprop'
+init: /init.freescale.rc: 155: invalid keyword 'setprop'
+init: /init.freescale.rc: 159: invalid keyword 'chown'
+init: /init.freescale.rc: 160: invalid keyword 'mkdir'
+ueventd: ueventd started!
+ueventd: Coldboot took 0.43s.
+Console: switching to colour dummy device 80x30
+watchdogd: started (interval 10, margin 20)!
+EXT4-fs (mmcblk0p3): mounted filesystem with ordered data mode. Opts: barrier=1
+EXT4-fs (mmcblk0p10): Ignoring removed nomblk_io_submit option
+EXT4-fs (mmcblk0p10): mounted filesystem with ordered data mode. Opts: nomblk_io_submit,noauto_da_alloc,errors=panic
+EXT4-fs (mmcblk0p4): Ignoring removed nomblk_io_submit option
+EXT4-fs (mmcblk0p4): mounted filesystem with ordered data mode. Opts: nomblk_io_submit
+EXT4-fs (mmcblk0p5): mounted filesystem with ordered data mode. Opts: (null)
+file system registered
+using random self ethernet address
+using random host ethernet address
+zram0: detected capacity change from 0 to 314572800
+logd.auditd: start
+logd.klogd: 7370362667
+Adding 307196k swap on /dev/block/zram0.  Priority:-1 extents:1 across:307196k SS
+binder: 256:256 transaction failed 29189, size 0-0
+logd.daemon: reinit
+type=1400 audit(7.845:3): avc: denied { entrypoint } for pid=262 comm="init" path="/system/bin/can-config.sh" dev="mmcblk0p3" ino=256 scontext=u:r:obd:s0 tcontext=u:object_r:system_file:s0 tclass=file permissive=1
+type=1400 audit(7.875:4): avc: denied { read execute } for pid=262 comm="can-config.sh" path="/system/bin/sh" dev="mmcblk0p3" ino=439 scontext=u:r:obd:s0 tcontext=u:object_r:shell_exec:s0 tclass=file permissive=1
+type=1400 audit(7.895:5): avc: denied { getattr } for pid=262 comm="can-config.sh" path="/system/bin/sh" dev="mmcblk0p3" ino=439 scontext=u:r:obd:s0 tcontext=u:object_r:shell_exec:s0 tclass=file permissive=1
+toradex_apalis6q:/ # type=1400 audit(7.895:6): avc: denied { getattr } for pid=262 comm="can-config.sh" path="/vendor" dev="rootfs" ino=6500 scontext=u:r:obd:s0 tcontext=u:object_r:rootfs:s0 tclass=lnk_file permissive=1
+type=1400 audit(7.945:7): avc: denied { execute_no_trans } for pid=278 comm="can-config.sh" path="/system/bin/ip" dev="mmcblk0p3" ino=331 scontext=u:r:obd:s0 tcontext=u:object_r:system_file:s0 tclass=file permissive=1
+type=1400 audit(7.945:8): avc: denied { create } for pid=263 comm="obd" scontext=u:r:obd:s0 tcontext=u:r:obd:s0 tclass=socket permissive=1
+type=1400 audit(7.945:9): avc: denied { ioctl } for pid=263 comm="obd" path="socket:[10646]" dev="sockfs" ino=10646 ioctlcmd=0x8933 scontext=u:r:obd:s0 tcontext=u:r:obd:s0 tclass=socket permissive=1
+IPv6: ADDRCONF(NETDEV_CHANGE): can0: link becomes ready
+healthd: No battery devices found
+ERROR: v4l2 capture: slave not found! V4L2_CID_HUE
+ERROR: v4l2 capture: slave not found! V4L2_CID_HUE
+imx-hdmi-audio imx-hdmi-audio: HDMI Video is not ready!
+imx-hdmi-audio imx-hdmi-audio: ASoC: can't open platform imx-hdmi-audio: -22
+imx-hdmi-audio imx-hdmi-audio: HDMI Video is not ready!
+imx-hdmi-audio imx-hdmi-audio: ASoC: can't open platform imx-hdmi-audio: -22
+init: Starting service 'bootanim'...
+capability: warning: `main' uses 32-bit capabilities (legacy support in use)
+type=1400 audit(18.985:34): avc: denied { write } for pid=263 comm="obd" path="socket:[10646]" dev="sockfs" ino=10646 scontext=u:r:obd:s0 tcontext=u:r:obd:s0 tclass=socket permissive=1
+init: write_file: Unable to open '/sys/devices/system/cpu/cpufreq/interactive/timer_rate': No such file or directory
+init: write_file: Unable to open '/sys/devices/system/cpu/cpufreq/interactive/min_sample_time': No such file or directory
+init: write_file: Unable to open '/sys/devices/system/cpu/cpufreq/interactive/go_hispeed_load': No such file or directory
+random: crng init done
+
+toradex_apalis6q:/ # 
+toradex_apalis6q:/ # 
+init: write_file: Unable to open '/proc/sys/vm/extra_free_kbytes': No such file or directory
+toradex_apalis6q:/ # 
+toradex_apalis6q:/ # 
+toradex_apalis6q:/ # logacc_open
+acc_release
+cat Micrel KSZ9031 Gigabit PHY 2188000.ethernet-1:07: attached PHY driver [Micrel KSZ9031 Gigabit PHY] (mii_bus:phy_addr=2188000.ethernet-1:07, irq=120)
+IPv6: ADDRCONF(NETDEV_UP): eth0: link is not ready
+type=1400 audit(34.015:35): avc: denied { write } for pid=263 comm="obd" path="socket:[10646]" dev="sockfs" ino=10646 scontext=u:r:obd:s0 tcontext=u:r:obd:s0 tclass=socket permissive=1
+       init: Service 'bootanim' (pid 349) exited with status 0
+init: Starting service 'exec 3 (/system/bin/bootstat)'...
+init: Service 'exec 3 (/system/bin/bootstat)' (pid 1017) exited with status 0
+init: Starting service 'exec 4 (/system/bin/bootstat)'...
+type=1400 audit(40.755:36): avc: denied { write } for pid=263 comm="obd" path="socket:[10646]" dev="sockfs" ino=10646 scontext=u:r:obd:s0 tcontext=u:r:obd:s0 tclass=socket permissive=1
+init: Service 'exec 4 (/system/bin/bootstat)' (pid 1028) exited with status 0
+init: Starting service 'exec 5 (/system/bin/bootstat)'...
+init: Service 'exec 5 (/system/bin/bootstat)' (pid 1029) exited with status 0
+init: Starting service 'exec 6 (/system/bin/bootstat)'...
+init: Service 'exec 6 (/system/bin/bootstat)' (pid 1030) exited with status 0
+type=1400 audit(48.875:37): avc: denied { write } for pid=263 comm="obd" path="socket:[10646]" dev="sockfs" ino=10646 scontext=u:r:obd:s0 tcontext=u:r:obd:s0 tclass=socket permissive=1
+type=1400 audit(51.305:38): avc: denied { write } for pid=1318 comm="Thread-2" name="vcan" dev="tmpfs" ino=6980 scontext=u:r:untrusted_app:s0:c512,c768 tcontext=u:object_r:socket_device:s0 tclass=sock_file permissive=1
+type=1400 audit(51.305:39): avc: denied { connectto } for pid=1318 comm="Thread-2" path="/dev/socket/vcan" scontext=u:r:untrusted_app:s0:c512,c768 tcontext=u:r:obd:s0 tclass=unix_stream_socket permissive=1
+
+toradex_apalis6q:/ # 
+toradex_apalis6q:/ # 
+toradex_apalis6q:/ # 
+toradex_apalis6q:/ # 
+toradex_apalis6q:/ # 
+toradex_apalis6q:/ # logcat | grep bt
+01-01 00:00:09.421   265   265 W audio_hw_primary: headphone 0 ,headset 2 ,speaker 2, earpiece 0, bt_on 0
+01-01 00:00:09.562   265   265 I bt_a2dp_hw: adev_open:  adev_open in A2dp_hw module
+01-01 00:00:17.428   264   264 W Resources: Preloaded color resource #0x1060119 (android:color/btn_default_material_dark) that varies with configuration!!
+01-01 00:00:33.364   538   557 I ActivityManager: Start proc 609:com.android.bluetooth/1002 for service com.android.bluetooth/.btservice.AdapterService
+01-01 00:00:33.587   538   538 W InputMethodManagerService: Illegal subtype state: old subtype = null, new subtype = android.view.inputmethod.InputMethodSubtype@c9194f98
+01-01 00:00:33.972   609   609 I bt_btif : init
+01-01 00:00:33.973   609   682 W bt_osi_thread: run_thread: thread id 682, thread name stack_manager started
+01-01 00:00:33.973   609   682 I bt_stack_manager: event_init_stack is initializing the stack
+01-01 00:00:33.973   609   682 I bt_core_module: module_init Initializing module "osi_module"
+01-01 00:00:33.973   609   682 I bt_core_module: module_init Initialized module "osi_module"
+01-01 00:00:33.974   609   682 I bt_core_module: module_init Initializing module "bt_utils_module"
+01-01 00:00:33.974   609   682 I bt_core_module: module_init Initialized module "bt_utils_module"
+01-01 00:00:33.974   609   682 I bt_core_module: module_init Initializing module "btif_config_module"
+01-01 00:00:33.974   609   682 E bt_osi_config: config_new unable to open file '/data/misc/bluedroid/bt_config.conf': No such file or directory
+01-01 00:00:33.974   609   682 E bt_osi_config: config_new unable to open file '/data/misc/bluedroid/bt_config.bak': No such file or directory
+01-01 00:00:33.974   609   682 E %s unable to load XML file '%s': %d: config_t *btif_config_transcode(const char *)
+01-01 00:00:33.976   609   685 W bt_osi_thread: run_thread: thread id 685, thread name alarm_default_ca started
+01-01 00:00:33.976   609   686 W bt_osi_thread: run_thread: thread id 686, thread name alarm_dispatcher started
+01-01 00:00:33.976   609   682 I bt_core_module: module_init Initialized module "btif_config_module"
+01-01 00:00:33.977   609   682 I bt_core_module: module_init Initializing module "interop_module"
+01-01 00:00:33.977   609   682 I bt_core_module: module_init Initialized module "interop_module"
+01-01 00:00:33.977   609   682 I bt_core_module: module_init Initializing module "stack_config_module"
+01-01 00:00:33.977   609   682 I bt_stack_config: init attempt to load stack conf from /etc/bluetooth/bt_stack.conf
+01-01 00:00:33.988   609   682 I bt_core_module: module_init Initialized module "stack_config_module"
+01-01 00:00:34.030   609   689 W bt_osi_thread: run_thread: thread id 689, thread name bt_jni_workqueue started
+01-01 00:00:34.040   609   682 I bt_stack_manager: event_init_stack finished
+01-01 00:00:34.042   609   609 I bt_osi_wakelock: wakelock_set_os_callouts set to non-native
+01-01 00:00:34.042   609   609 I bt_btif : get_profile_interface socket
+01-01 00:00:34.088   609   609 I bt_btif : get_profile_interface sdp
+01-01 00:00:35.230   538   538 D SensorNotificationService: Cannot obtain dynamic meta sensor, not supported.
+01-01 00:00:35.963   538   538 D BluetoothManagerService: BluetoothServiceConnection: com.android.bluetooth.btservice.AdapterService
+01-01 00:00:35.981   609   682 I bt_stack_manager: event_clean_up_stack is cleaning up the stack
+01-01 00:00:35.982   609   689 W bt_osi_thread: run_thread: thread id 689, thread name bt_jni_workqueue exited
+01-01 00:00:35.983   609   682 I bt_core_module: module_clean_up Cleaning up module "stack_config_module"
+01-01 00:00:35.983   609   682 I bt_core_module: module_clean_up Cleanup of module "stack_config_module" completed
+01-01 00:00:35.983   609   682 I bt_core_module: module_clean_up Cleaning up module "interop_module"
+01-01 00:00:35.983   609   682 I bt_core_module: module_clean_up Cleanup of module "interop_module" completed
+01-01 00:00:35.983   609   682 I bt_core_module: module_clean_up Cleaning up module "btif_config_module"
+01-01 00:00:36.028   609   682 I bt_core_module: module_clean_up Cleanup of module "btif_config_module" completed
+01-01 00:00:36.029   609   682 I bt_core_module: module_clean_up Cleaning up module "bt_utils_module"
+01-01 00:00:36.029   609   682 I bt_core_module: module_clean_up Cleanup of module "bt_utils_module" completed
+01-01 00:00:36.029   609   682 I bt_core_module: module_clean_up Cleaning up module "osi_module"
+01-01 00:00:36.029   609   686 D bt_osi_alarm: callback_dispatch Callback thread exited
+01-01 00:00:36.030   609   686 W bt_osi_thread: run_thread: thread id 686, thread name alarm_dispatcher exited
+01-01 00:00:36.031   609   685 W bt_osi_thread: run_thread: thread id 685, thread name alarm_default_ca exited
+01-01 00:00:36.031   609   682 I bt_core_module: module_clean_up Cleanup of module "osi_module" completed
+01-01 00:00:36.031   609   682 I bt_stack_manager: event_clean_up_stack finished
+^C
+130|toradex_apalis6q:/ # logcat
+--------- beginning of main
+01-01 00:00:00.880   238   238 W auditd  : type=2000 audit(0.0:1): initialized
+01-01 00:00:05.065   238   238 I auditd  : type=1403 audit(0.0:2): policy loaded auid=4294967295 ses=4294967295
+01-01 00:00:07.471   245   245 I         : debuggerd: starting
+--------- beginning of system
+01-01 00:00:07.586   246   246 I vold    : Vold 3.0 (the awakening) firing up
+01-01 00:00:07.587   246   246 V vold    : Detected support for: ext4 f2fs vfat
+01-01 00:00:07.601   246   246 W Vold    : Tearing down stale mount /mnt/shm
+01-01 00:00:07.686   246   253 D vold    : e4crypt_init_user0
+01-01 00:00:07.686   246   253 D vold    : e4crypt_prepare_user_storage for volume null, user 0, serial 0, flags 1
+01-01 00:00:07.686   246   253 D vold    : Preparing: /data/system/users/0
+01-01 00:00:07.686   246   253 D vold    : Preparing: /data/misc/profiles/cur/0
+01-01 00:00:07.687   246   253 D vold    : Preparing: /data/misc/profiles/cur/0/foreign-dex
+01-01 00:00:07.687   246   253 D vold    : Preparing: /data/system_de/0
+01-01 00:00:07.687   246   253 D vold    : Preparing: /data/misc_de/0
+01-01 00:00:07.688   246   253 D vold    : Preparing: /data/user_de/0
+01-01 00:00:07.688   246   253 D vold    : e4crypt_unlock_user_key 0 serial=0 token_present=0
+01-01 00:00:07.688   246   253 E vold    : Failed to chmod /data/system_ce/0: No such file or directory
+01-01 00:00:07.689   246   253 E vold    : Failed to chmod /data/misc_ce/0: No such file or directory
+01-01 00:00:07.689   246   253 E vold    : Failed to chmod /data/media/0: No such file or directory
+01-01 00:00:07.691     1     1 I vdc     : 200 249 Command succeeded
+01-01 00:00:07.740   254   254 I /system/bin/tzdatacheck: tzdata file /data/misc/zoneinfo/current/tzdata does not exist. No action required.
+01-01 00:00:07.845   262   262 I init    : type=1400 audit(0.0:3): avc: denied { entrypoint } for path="/system/bin/can-config.sh" dev="mmcblk0p3" ino=256 scontext=u:r:obd:s0 tcontext=u:object_r:system_file:s0 tclass=file permissive=1
+01-01 00:00:07.853   258   258 I lowmemorykiller: Using in-kernel low memory killer interface
+01-01 00:00:07.875   262   262 I can-config.sh: type=1400 audit(0.0:4): avc: denied { read execute } for path="/system/bin/sh" dev="mmcblk0p3" ino=439 scontext=u:r:obd:s0 tcontext=u:object_r:shell_exec:s0 tclass=file permissive=1
+01-01 00:00:07.895   262   262 I can-config.sh: type=1400 audit(0.0:5): avc: denied { getattr } for path="/system/bin/sh" dev="mmcblk0p3" ino=439 scontext=u:r:obd:s0 tcontext=u:object_r:shell_exec:s0 tclass=file permissive=1
+01-01 00:00:07.895   262   262 I can-config.sh: type=1400 audit(0.0:6): avc: denied { getattr } for path="/vendor" dev="rootfs" ino=6500 scontext=u:r:obd:s0 tcontext=u:object_r:rootfs:s0 tclass=lnk_file permissive=1
+01-01 00:00:07.945   278   278 I can-config.sh: type=1400 audit(0.0:7): avc: denied { execute_no_trans } for path="/system/bin/ip" dev="mmcblk0p3" ino=331 scontext=u:r:obd:s0 tcontext=u:object_r:system_file:s0 tclass=file permissive=1
+01-01 00:00:07.945   263   263 I obd     : type=1400 audit(0.0:8): avc: denied { create } for scontext=u:r:obd:s0 tcontext=u:r:obd:s0 tclass=socket permissive=1
+01-01 00:00:07.945   263   263 I obd     : type=1400 audit(0.0:9): avc: denied { ioctl } for path="socket:[10646]" dev="sockfs" ino=10646 ioctlcmd=0x8933 scontext=u:r:obd:s0 tcontext=u:r:obd:s0 tclass=socket permissive=1
+01-01 00:00:07.945   263   263 I obd     : type=1400 audit(0.0:10): avc: denied { bind } for scontext=u:r:obd:s0 tcontext=u:r:obd:s0 tclass=socket permissive=1
+01-01 00:00:07.945   263   263 I obd     : type=1400 audit(0.0:11): avc: denied { write } for name="socket" dev="tmpfs" ino=11267 scontext=u:r:obd:s0 tcontext=u:object_r:socket_device:s0 tclass=dir permissive=1
+01-01 00:00:07.945   263   263 I obd     : type=1400 audit(0.0:12): avc: denied { add_name } for name="vcan" scontext=u:r:obd:s0 tcontext=u:object_r:socket_device:s0 tclass=dir permissive=1
+01-01 00:00:07.945   263   263 I obd     : type=1400 audit(0.0:13): avc: denied { create } for name="vcan" scontext=u:r:obd:s0 tcontext=u:object_r:socket_device:s0 tclass=sock_file permissive=1
+01-01 00:00:07.945   263   263 I obd     : type=1400 audit(0.0:14): avc: denied { setattr } for name="vcan" dev="tmpfs" ino=6980 scontext=u:r:obd:s0 tcontext=u:object_r:socket_device:s0 tclass=sock_file permissive=1
+01-01 00:00:07.945   263   263 I obd     : type=1400 audit(0.0:15): avc: denied { read } for path="socket:[10646]" dev="sockfs" ino=10646 scontext=u:r:obd:s0 tcontext=u:r:obd:s0 tclass=socket permissive=1
+01-01 00:00:07.964   263   280 I /system/bin/obd: OBD:Read from CAN Bus failed
+01-01 00:00:07.965   263   263 I obd     : type=1400 audit(0.0:16): avc: denied { write } for path="socket:[10646]" dev="sockfs" ino=10646 scontext=u:r:obd:s0 tcontext=u:r:obd:s0 tclass=socket permissive=1
+01-01 00:00:08.233   268   268 I         : installd firing up
+01-01 00:00:08.234   268   268 E cutils  : Failed to read /data/.layout_version: No such file or directory
+01-01 00:00:08.234   268   268 D         : Assuming that device has multi-user storage layout; upgrade no longer supported
+01-01 00:00:08.234   268   268 D         : Upgrading to /data/misc/user directories
+01-01 00:00:08.255   263   263 I obd     : type=1400 audit(0.0:17): avc: denied { write } for path="socket:[10646]" dev="sockfs" ino=10646 scontext=u:r:obd:s0 tcontext=u:r:obd:s0 tclass=socket permissive=1
+01-01 00:00:08.315   278   278 I ip      : type=1400 audit(0.0:18): avc: denied { create } for scontext=u:r:obd:s0 tcontext=u:r:obd:s0 tclass=netlink_route_socket permissive=1
+01-01 00:00:08.325   278   278 I ip      : type=1400 audit(0.0:19): avc: denied { setopt } for scontext=u:r:obd:s0 tcontext=u:r:obd:s0 tclass=netlink_route_socket permissive=1
+01-01 00:00:08.325   278   278 I ip      : type=1400 audit(0.0:20): avc: denied { bind } for scontext=u:r:obd:s0 tcontext=u:r:obd:s0 tclass=netlink_route_socket permissive=1
+01-01 00:00:08.325   278   278 I ip      : type=1400 audit(0.0:21): avc: denied { getattr } for scontext=u:r:obd:s0 tcontext=u:r:obd:s0 tclass=netlink_route_socket permissive=1
+01-01 00:00:08.325   278   278 I ip      : type=1400 audit(0.0:22): avc: denied { write } for scontext=u:r:obd:s0 tcontext=u:r:obd:s0 tclass=netlink_route_socket permissive=1
+01-01 00:00:08.325   278   278 I ip      : type=1400 audit(0.0:23): avc: denied { nlmsg_write } for scontext=u:r:obd:s0 tcontext=u:r:obd:s0 tclass=netlink_route_socket permissive=1
+01-01 00:00:08.325   278   278 I ip      : type=1400 audit(0.0:24): avc: denied { net_admin } for capability=12 scontext=u:r:obd:s0 tcontext=u:r:obd:s0 tclass=capability permissive=1
+01-01 00:00:08.325   278   278 I ip      : type=1400 audit(0.0:25): avc: denied { read } for scontext=u:r:obd:s0 tcontext=u:r:obd:s0 tclass=netlink_route_socket permissive=1
+01-01 00:00:08.325   278   278 I ip      : type=1400 audit(0.0:26): avc: denied { create } for scontext=u:r:obd:s0 tcontext=u:r:obd:s0 tclass=udp_socket permissive=1
+01-01 00:00:08.325   278   278 I ip      : type=1400 audit(0.0:27): avc: denied { net_raw } for capability=13 scontext=u:r:obd:s0 tcontext=u:r:obd:s0 tclass=capability permissive=1
+01-01 00:00:08.325   278   278 I ip      : type=1400 audit(0.0:28): avc: denied { ioctl } for path="socket:[7064]" dev="sockfs" ino=7064 ioctlcmd=0x8933 scontext=u:r:obd:s0 tcontext=u:r:obd:s0 tclass=udp_socket permissive=1
+01-01 00:00:08.345   262   262 I can-config.sh: type=1400 audit(0.0:29): avc: denied { getattr } for path="/system/bin/toybox" dev="mmcblk0p3" ino=470 scontext=u:r:obd:s0 tcontext=u:object_r:toolbox_exec:s0 tclass=file permissive=1
+01-01 00:00:08.345   262   262 I can-config.sh: type=1400 audit(0.0:30): avc: denied { execute } for name="toybox" dev="mmcblk0p3" ino=470 scontext=u:r:obd:s0 tcontext=u:object_r:toolbox_exec:s0 tclass=file permissive=1
+01-01 00:00:08.355   282   282 I can-config.sh: type=1400 audit(0.0:31): avc: denied { read open } for path="/system/bin/toybox" dev="mmcblk0p3" ino=470 scontext=u:r:obd:s0 tcontext=u:object_r:toolbox_exec:s0 tclass=file permissive=1
+01-01 00:00:08.385   282   282 I can-config.sh: type=1400 audit(0.0:32): avc: denied { execute_no_trans } for path="/system/bin/toybox" dev="mmcblk0p3" ino=470 scontext=u:r:obd:s0 tcontext=u:object_r:toolbox_exec:s0 tclass=file permissive=1
+01-01 00:00:08.393   277   277 I gatekeeperd: Starting gatekeeperd...
+01-01 00:00:08.406   277   277 W gatekeeperd: falling back to software GateKeeper
+01-01 00:00:08.407   277   277 I gatekeeperd: cold boot: clearing state
+01-01 00:00:08.411   270   270 I keystore: Found keymaster0 module Keymaster OpenSSL HAL, version 2
+01-01 00:00:08.412   270   270 I SoftKeymaster: system/keymaster/soft_keymaster_device.cpp, Line 131: Creating device
+01-01 00:00:08.412   270   270 D SoftKeymaster: system/keymaster/soft_keymaster_device.cpp, Line 132: Device address: 0xb3932000
+01-01 00:00:08.412   270   270 I keystore: Keymaster0 module is software-only.  Using SoftKeymasterDevice instead.
+01-01 00:00:08.412   270   270 I SoftKeymaster: system/keymaster/soft_keymaster_device.cpp, Line 131: Creating device
+01-01 00:00:08.412   270   270 D SoftKeymaster: system/keymaster/soft_keymaster_device.cpp, Line 132: Device address: 0xb3932200
+01-01 00:00:08.475   282   282 I touch   : type=1400 audit(0.0:33): avc: denied { write } for name="vcan" dev="tmpfs" ino=6980 scontext=u:r:obd:s0 tcontext=u:object_r:socket_device:s0 tclass=sock_file permissive=1
+01-01 00:00:08.486   276   276 D MagDaemon: init_sensors
+01-01 00:00:08.507   275   275 I Netd    : Netd 1.0 starting
+01-01 00:00:08.507   275   275 D TetherController: Setting IP forward enable = 0
+01-01 00:00:08.576   260   260 I SurfaceFlinger: SurfaceFlinger is starting
+01-01 00:00:08.580   260   260 I SurfaceFlinger: SurfaceFlinger's main thread ready to run. Initializing graphics H/W...
+01-01 00:00:08.649   260   260 D libEGL  : loaded /system/lib/egl/libEGL_VIVANTE.so
+01-01 00:00:08.772   260   260 D libEGL  : loaded /system/lib/egl/libGLESv1_CM_VIVANTE.so
+01-01 00:00:08.875   271   271 I mediacodec: @@@ mediacodecservice starting
+01-01 00:00:08.890   271   271 W /system/bin/mediacodec: libminijail: allowing syscall: clock_gettime
+01-01 00:00:08.890   271   271 W /system/bin/mediacodec: libminijail: allowing syscall: connect
+01-01 00:00:08.890   271   271 W /system/bin/mediacodec: libminijail: allowing syscall: fcntl64
+01-01 00:00:08.890   271   271 W /system/bin/mediacodec: libminijail: allowing syscall: socket
+01-01 00:00:08.891   271   271 W /system/bin/mediacodec: libminijail: allowing syscall: writev
+01-01 00:00:08.901   271   271 W /system/bin/mediacodec: libminijail: logging seccomp filter failures
+01-01 00:00:08.951   260   260 D libEGL  : loaded /system/lib/egl/libGLESv2_VIVANTE.so
+01-01 00:00:09.033   266   266 I cameraserver: ServiceManager: 0xb5c19380
+01-01 00:00:09.033   266   266 I CameraService: CameraService started (pid=266)
+01-01 00:00:09.033   266   266 I CameraService: CameraService process starting
+01-01 00:00:09.040   266   266 W BatteryNotifier: batterystats service unavailable!
+01-01 00:00:09.040   266   266 W BatteryNotifier: batterystats service unavailable!
+01-01 00:00:09.069   266   266 I FslCameraHAL: void CameraHAL::enumSensorSet()
+01-01 00:00:09.069   266   266 I FslCameraHAL: int32_t CameraHAL::matchDevNodes()
+01-01 00:00:09.069   266   266 I FslCameraHAL: getNodeName: dev path:/dev/video1
+01-01 00:00:09.073   273   273 V MediaUtils: physMem: 2107793408
+01-01 00:00:09.073   273   273 V MediaUtils: requested limit: 421558680
+01-01 00:00:09.073   273   273 V MediaUtils: actual limit: 3221225472
+01-01 00:00:09.073   273   273 V MediaUtils: original limits: 4294967295/4294967295
+01-01 00:00:09.073   273   273 V MediaUtils: new limits: 3221225472/4294967295
+01-01 00:00:09.074   273   273 W /system/bin/mediaextractor: libminijail: allowing syscall: clock_gettime
+01-01 00:00:09.074   273   273 W /system/bin/mediaextractor: libminijail: allowing syscall: connect
+01-01 00:00:09.074   273   273 W /system/bin/mediaextractor: libminijail: allowing syscall: fcntl64
+01-01 00:00:09.074   273   273 W /system/bin/mediaextractor: libminijail: allowing syscall: socket
+01-01 00:00:09.074   273   273 W /system/bin/mediaextractor: libminijail: allowing syscall: writev
+01-01 00:00:09.075   273   273 W /system/bin/mediaextractor: libminijail: logging seccomp filter failures
+01-01 00:00:09.084   266   266 W FslCameraHAL: int32_t CameraHAL::getNodeName(const char *, char *, size_t) open dev path:/dev/video1 failed:Try again
+01-01 00:00:09.084   266   266 I FslCameraHAL: getNodeName: dev path:/dev/video19
+01-01 00:00:09.095   266   266 W FslCameraHAL: int32_t CameraHAL::getNodeName(const char *, char *, size_t) dev path:/dev/video19 is not capture
+01-01 00:00:09.095   266   266 I FslCameraHAL: getNodeName: dev path:/dev/video17
+01-01 00:00:09.110   266   266 W FslCameraHAL: int32_t CameraHAL::getNodeName(const char *, char *, size_t) dev path:/dev/video17 is not capture
+01-01 00:00:09.110   266   266 I FslCameraHAL: getNodeName: dev path:/dev/video0
+01-01 00:00:09.115   266   266 W FslCameraHAL: int32_t CameraHAL::getNodeName(const char *, char *, size_t) open dev path:/dev/video0 failed:Try again
+01-01 00:00:09.115   266   266 I FslCameraHAL: getNodeName: dev path:/dev/video18
+01-01 00:00:09.150   266   266 W FslCameraHAL: int32_t CameraHAL::getNodeName(const char *, char *, size_t) dev path:/dev/video18 is not capture
+01-01 00:00:09.160   266   266 I FslCameraHAL: getNodeName: dev path:/dev/video16
+01-01 00:00:09.160   266   266 W FslCameraHAL: int32_t CameraHAL::getNodeName(const char *, char *, size_t) open dev path:/dev/video16 failed:Permission denied
+01-01 00:00:09.160   266   266 I FslCameraHAL: matchPropertyName: index:0, ov5640_mipi,ov5642_camera,ov5640_camera
+01-01 00:00:09.160   266   266 I FslCameraHAL: index:0, propName:ov5640_mipi
+01-01 00:00:09.160   266   266 I FslCameraHAL: int32_t CameraHAL::matchNodeName(const char *, nodeSet *, int32_t)
+01-01 00:00:09.160   266   266 I FslCameraHAL: index:0, propName:ov5642_camera
+01-01 00:00:09.160   266   266 I FslCameraHAL: int32_t CameraHAL::matchNodeName(const char *, nodeSet *, int32_t)
+01-01 00:00:09.160   266   266 I FslCameraHAL: index:0, propName:ov5640_camera
+01-01 00:00:09.160   266   266 I FslCameraHAL: int32_t CameraHAL::matchNodeName(const char *, nodeSet *, int32_t)
+01-01 00:00:09.160   266   266 I FslCameraHAL: matchPropertyName: index:1, uvc,ov5642_camera,ov5640_camera
+01-01 00:00:09.160   266   266 I FslCameraHAL: index:1, propName:uvc
+01-01 00:00:09.160   266   266 I FslCameraHAL: int32_t CameraHAL::matchNodeName(const char *, nodeSet *, int32_t)
+01-01 00:00:09.160   266   266 I FslCameraHAL: index:1, propName:ov5642_camera
+01-01 00:00:09.160   266   266 I FslCameraHAL: int32_t CameraHAL::matchNodeName(const char *, nodeSet *, int32_t)
+01-01 00:00:09.160   266   266 I FslCameraHAL: index:1, propName:ov5640_camera
+01-01 00:00:09.160   266   266 I FslCameraHAL: int32_t CameraHAL::matchNodeName(const char *, nodeSet *, int32_t)
+01-01 00:00:09.160   266   266 I FslCameraHAL: camera number is 0
+01-01 00:00:09.161   266   266 I CameraService: Loaded "Default Camera HAL" camera module
+01-01 00:00:09.162   266   266 I ServiceManager: Waiting for service media.camera.proxy...
+01-01 00:00:09.163   272   272 I mediaserver: ServiceManager: 0xa76993e0
+01-01 00:00:09.240   276   276 D MagDaemon: couldn't find 'FreescaleAccelerometer' input device
+01-01 00:00:09.240   276   276 D MagDaemon: inital sensor error
+01-01 00:00:09.276   265   265 I         : sMaxFastTracks = 8
+01-01 00:00:09.290   265   265 I audioserver: ServiceManager: 0xa6499380
+01-01 00:00:09.290   265   265 W BatteryNotifier: batterystats service unavailable!
+01-01 00:00:09.290   265   265 I AudioFlinger: Using default 3000 mSec as standby time.
+01-01 00:00:09.292   265   265 I AudioPolicyService: AudioPolicyService CSTOR in new mode
+01-01 00:00:09.365   265   265 W audio_hw_primary: Aravinth: card 0, id imx6qapalissgtl ,driver imx6q-apalis-sg, name imx6q-apalis-sgtl5000
+01-01 00:00:09.365   265   265 W audio_hw_primary: Aravinth: scan_available_device >0 name:imx6q-sgtl5000
+01-01 00:00:09.365   265   265 W audio_hw_primary: Aravinth: scan_available_device >0 Cardname:imx6q-apalis-sg
+01-01 00:00:09.365   265   265 W audio_hw_primary: Aravinth: scan_available_device >0 name:wm8958-audio
+01-01 00:00:09.365   265   265 W audio_hw_primary: Aravinth: scan_available_device >0 Cardname:imx6q-apalis-sg
+01-01 00:00:09.366   265   265 W audio_hw_primary: Aravinth: scan_available_device >0 name:wm8962-audio
+01-01 00:00:09.366   265   265 W audio_hw_primary: Aravinth: scan_available_device >0 Cardname:imx6q-apalis-sg
+01-01 00:00:09.366   265   265 W audio_hw_primary: Aravinth: scan_available_device >0 name:imx-hdmi-soc
+01-01 00:00:09.366   265   265 W audio_hw_primary: Aravinth: scan_available_device >0 Cardname:imx6q-apalis-sg
+01-01 00:00:09.366   265   265 W audio_hw_primary: Aravinth: scan_available_device >0 name:imx-spdif
+01-01 00:00:09.366   265   265 W audio_hw_primary: Aravinth: scan_available_device >0 Cardname:imx6q-apalis-sg
+01-01 00:00:09.366   265   265 W audio_hw_primary: Aravinth: scan_available_device >0 name:cs42888-audio
+01-01 00:00:09.366   265   265 W audio_hw_primary: Aravinth: scan_available_device >0 Cardname:imx6q-apalis-sg
+01-01 00:00:09.366   265   265 W audio_hw_primary: Aravinth: scan_available_device >0 name:wm8960-audio
+01-01 00:00:09.366   265   265 W audio_hw_primary: Aravinth: scan_available_device >0 Cardname:imx6q-apalis-sg
+01-01 00:00:09.366   265   265 W audio_hw_primary: Aravinth: scan_available_device >0 name:sii902x-audio
+01-01 00:00:09.366   265   265 W audio_hw_primary: Aravinth: scan_available_device >0 Cardname:imx6q-apalis-sg
+01-01 00:00:09.366   265   265 W audio_hw_primary: Aravinth: scan_available_device >0 name:rpmsg-audio
+01-01 00:00:09.366   265   265 W audio_hw_primary: Aravinth: scan_available_device >0 Cardname:imx6q-apalis-sg
+01-01 00:00:09.366   265   265 W audio_hw_primary: Aravinth: scan_available_device >0 name:null_card
+01-01 00:00:09.366   265   265 W audio_hw_primary: Aravinth: scan_available_device >0 Cardname:imx6q-apalis-sg
+01-01 00:00:09.366   265   265 W audio_hw_primary: Aravinth: scan_available_device >4
+01-01 00:00:09.366   265   265 W audio_hw_primary: unrecognized card found.
+01-01 00:00:09.366   265   265 W audio_hw_primary: Aravinth: card 1, id imxspdif ,driver imx-spdif, name imx-spdif
+01-01 00:00:09.366   265   265 W audio_hw_primary: Aravinth: scan_available_device >0 name:imx6q-sgtl5000
+01-01 00:00:09.366   265   265 W audio_hw_primary: Aravinth: scan_available_device >0 Cardname:imx-spdif
+01-01 00:00:09.366   265   265 W audio_hw_primary: Aravinth: scan_available_device >0 name:wm8958-audio
+01-01 00:00:09.366   265   265 W audio_hw_primary: Aravinth: scan_available_device >0 Cardname:imx-spdif
+01-01 00:00:09.366   265   265 W audio_hw_primary: Aravinth: scan_available_device >0 name:wm8962-audio
+01-01 00:00:09.366   265   265 W audio_hw_primary: Aravinth: scan_available_device >0 Cardname:imx-spdif
+01-01 00:00:09.367   265   265 W audio_hw_primary: Aravinth: scan_available_device >0 name:imx-hdmi-soc
+01-01 00:00:09.367   265   265 W audio_hw_primary: Aravinth: scan_available_device >0 Cardname:imx-spdif
+01-01 00:00:09.367   265   265 W audio_hw_primary: Aravinth: scan_available_device >0 name:imx-spdif
+01-01 00:00:09.367   265   265 W audio_hw_primary: Aravinth: scan_available_device >0 Cardname:imx-spdif
+01-01 00:00:09.367   265   265 W audio_hw_primary: Aravinth: scan_available_device >1
+01-01 00:00:09.367   265   265 W audio_hw_primary: Aravinth: scan_available_device >2
+01-01 00:00:09.367   265   265 W audio_hw_primary: Aravinth: scan_available_device >3
+01-01 00:00:09.367   265   265 W audio_hw_primary: out rate 44100
+01-01 00:00:09.372   265   265 W audio_hw_primary: in rate 44100, channels 2 format 3
+01-01 00:00:09.372   265   265 W audio_hw_primary: Aravinth: scan_available_device >4
+01-01 00:00:09.372   265   265 W audio_hw_primary: Aravinth: card 2, id imxhdmisoc ,driver imx-hdmi-soc, name imx-hdmi-soc
+01-01 00:00:09.372   265   265 W audio_hw_primary: Aravinth: scan_available_device >0 name:imx6q-sgtl5000
+01-01 00:00:09.372   265   265 W audio_hw_primary: Aravinth: scan_available_device >0 Cardname:imx-hdmi-soc
+01-01 00:00:09.372   265   265 W audio_hw_primary: Aravinth: scan_available_device >0 name:wm8958-audio
+01-01 00:00:09.373   265   265 W audio_hw_primary: Aravinth: scan_available_device >0 Cardname:imx-hdmi-soc
+01-01 00:00:09.373   265   265 W audio_hw_primary: Aravinth: scan_available_device >0 name:wm8962-audio
+01-01 00:00:09.373   265   265 W audio_hw_primary: Aravinth: scan_available_device >0 Cardname:imx-hdmi-soc
+01-01 00:00:09.373   265   265 W audio_hw_primary: Aravinth: scan_available_device >0 name:imx-hdmi-soc
+01-01 00:00:09.373   265   265 W audio_hw_primary: Aravinth: scan_available_device >0 Cardname:imx-hdmi-soc
+01-01 00:00:09.373   265   265 W audio_hw_primary: Aravinth: scan_available_device >1
+01-01 00:00:09.373   265   265 W audio_hw_primary: Aravinth: scan_available_device >2
+01-01 00:00:09.373   265   265 W audio_hw_primary: Aravinth: scan_available_device >3
+01-01 00:00:09.400   265   265 W audio_hw_primary: out rate 0
+01-01 00:00:09.420   265   265 W audio_hw_primary: in rate 0, channels 0 format 0
+01-01 00:00:09.421   265   265 W audio_hw_primary: Aravinth: scan_available_device >4
+01-01 00:00:09.421   265   265 W audio_hw_primary: Aravinth: adev_open >0 
+01-01 00:00:09.421   265   265 W audio_hw_primary: Aravinth: select_output_device >0 out_device=2
+01-01 00:00:09.421   265   265 W audio_hw_primary: headphone 0 ,headset 2 ,speaker 2, earpiece 0, bt_on 0
+01-01 00:00:09.421   265   265 I AudioFlinger: loadHwModule() Loaded primary audio interface from Freescale i.MX Audio HW HAL (audio) handle 10
+01-01 00:00:09.421   265   265 I AudioFlinger: openOutput(), module 10 Device 2, SamplingRate 44100, Format 0x000001, Channels 3, flags 2
+01-01 00:00:09.422   265   265 W audio_hw_primary: open output stream devices 2, format 1, channels 3, sample_rate 44100, flag 2
+01-01 00:00:09.422   265   265 V audio_hw_primary: adev_open_output_stream() normal buffer
+01-01 00:00:09.422   265   265 W audio_hw_primary: opened out stream...-1504889088, type 1
+01-01 00:00:09.423   265   265 I AudioFlinger: HAL output buffer size 192 frames, normal sink buffer size 768 frames
+01-01 00:00:09.508   265   265 I BufferProvider: found effect "Multichannel Downmix To Stereo" from The Android Open Source Project
+01-01 00:00:09.509   265   265 I AudioFlinger: Using module 10 has the primary audio interface
+01-01 00:00:09.540   265   312 I AudioFlinger: AudioFlinger's thread 0xa5f83980 ready to run
+01-01 00:00:09.540   265   312 W BatteryNotifier: batterystats service unavailable!
+01-01 00:00:09.541   265   312 W audio_hw_primary: out_set_parameters routing=2, ret 0, out -1504889088
+01-01 00:00:09.541   265   312 W BatteryNotifier: batterystats service unavailable!
+01-01 00:00:09.542   265   312 W BatteryNotifier: batterystats service unavailable!
+01-01 00:00:09.542   265   312 W AudioFlinger: no wake lock to update, system not ready yet
+01-01 00:00:09.544   265   265 W audio_hw_primary: In channels 2, rate 48000, devices 0x80000004
+01-01 00:00:09.545   265   265 W audio_hw_primary: get_input_buffer_size size = 208, channel_count = 2
+01-01 00:00:09.545   265   265 W audio_hw_primary: get_input_buffer_size size = 208, channel_count = 2
+01-01 00:00:09.548   265   315 I AudioFlinger: AudioFlinger's thread 0xa5b03580 ready to run
+01-01 00:00:09.548   265   314 E FastThread: did not receive expected priority boost
+01-01 00:00:09.562   265   265 I bt_a2dp_hw: adev_open:  adev_open in A2dp_hw module
+01-01 00:00:09.562   265   265 I AudioFlinger: loadHwModule() Loaded a2dp audio interface from A2DP Audio HW HAL (audio) handle 18
+01-01 00:00:09.571   265   265 I AudioFlinger: loadHwModule() Loaded usb audio interface from USB audio HW HAL (audio) handle 26
+01-01 00:00:09.579   265   265 I r_submix: adev_open(name=audio_hw_if)
+01-01 00:00:09.580   265   265 I r_submix: adev_init_check()
+01-01 00:00:09.581   265   265 I AudioFlinger: loadHwModule() Loaded r_submix audio interface from Wifi Display audio HAL (audio) handle 34
+01-01 00:00:09.581   265   265 D r_submix: adev_open_input_stream(addr=0)
+01-01 00:00:09.581   265   265 D r_submix: submix_audio_device_create_pipe_l(addr=0, idx=9)
+01-01 00:00:09.581   265   265 D r_submix:   now using address 0 for route 9
+01-01 00:00:09.584   274   274 I mediaserver: ServiceManager: 0xaff993e0
+01-01 00:00:09.585   265   316 I AudioFlinger: AudioFlinger's thread 0xa5a03a00 ready to run
+01-01 00:00:09.585   265   265 D r_submix: adev_close_input_stream()
+01-01 00:00:09.585   265   265 D r_submix: submix_audio_device_release_pipe_l(idx=9) addr=0
+01-01 00:00:09.585   265   265 D r_submix: submix_audio_device_destroy_pipe_l(): pipe destroyed
+01-01 00:00:09.588   265   265 I RadioService: RadioService
+01-01 00:00:09.588   265   265 I RadioService: onFirstRef
+01-01 00:00:09.589   265   265 E RadioService: couldn't load radio module radio.primary (No such file or directory)
+01-01 00:00:09.592   265   265 E SoundTriggerHwService: couldn't load sound trigger module sound_trigger.primary (No such file or directory)
+01-01 00:00:09.593   274   274 W BatteryNotifier: batterystats service unavailable!
+01-01 00:00:09.702   260   260 E gralloc : int gralloc1_device_open(const struct hw_module_t *, const char *, hw_device_t **) invalid name:fb0
+01-01 00:00:09.705   260   260 I hwcomposer: hwc_device_open,435
+01-01 00:00:09.705   260   260 I SurfaceFlinger: Using composer version 1.3
+01-01 00:00:09.737   260   260 I display : entry:fb1 get fb1
+01-01 00:00:09.738   260   260 I display : fb1 is overlay device
+01-01 00:00:09.738   260   260 I display : entry:fb2 get fb2
+01-01 00:00:09.738   260   260 I display : fb2 is hdmi
+01-01 00:00:09.738   260   260 I display :  device
+01-01 00:00:09.738   260   260 I display : fb2 device plugout
+01-01 00:00:09.738   260   260 I display : entry:fb0 get fb0
+01-01 00:00:09.739   260   260 I display : fb0 is ldb
+01-01 00:00:09.739   260   260 I display :  device
+01-01 00:00:09.739   260   260 W display : xres         = 1024 px
+01-01 00:00:09.739   260   260 W display : yres         = 768 px
+01-01 00:00:09.739   260   260 W display : fps          = 60.01 Hz
+01-01 00:00:09.739   260   260 W display : bpp          = 32
+01-01 00:00:09.739   260   260 W display : r            =  0:8
+01-01 00:00:09.739   260   260 W display : g            =  8:8
+01-01 00:00:09.739   260   260 W display : b            = 16:8
+01-01 00:00:09.743   260   260 I display : GPUManager exists
+01-01 00:00:09.744   260   260 I display : entry:fb3 get fb3
+01-01 00:00:09.745   260   260 I display : fb3 is overlay device
+01-01 00:00:09.745   260   260 E hwcomposer: unknown display attribute 6
+01-01 00:00:09.745   260   260 W SurfaceFlinger: no suitable EGLConfig found, trying a simpler query
+01-01 00:00:09.745   260   260 I SurfaceFlinger: EGL information:
+01-01 00:00:09.745   260   260 I SurfaceFlinger: vendor    : Android
+01-01 00:00:09.745   260   260 I SurfaceFlinger: version   : 1.4 Android META-EGL
+01-01 00:00:09.745   260   260 I SurfaceFlinger: extensions: EGL_KHR_get_all_proc_addresses EGL_ANDROID_presentation_time EGL_KHR_swap_buffers_with_damage EGL_ANDROID_create_native_client_buffer EGL_ANDROID_front_buffer_auto_refresh EGL_KHR_image EGL_KHR_image_base EGL_KHR_image_pixmap EGL_KHR_lock_surface EGL_KHR_gl_texture_2D_image EGL_KHR_gl_texture_cubemap_image EGL_KHR_gl_renderbuffer_image EGL_KHR_reusable_sync EGL_KHR_fence_sync EGL_KHR_create_context EGL_KHR_surfaceless_context EGL_EXT_create_context_robustness EGL_ANDROID_image_native_buffer EGL_KHR_wait_sync EGL_ANDROID_recordable EGL_EXT_buffer_age 
+01-01 00:00:09.745   260   260 I SurfaceFlinger: Client API: OpenGL_ES
+01-01 00:00:09.745   260   260 I SurfaceFlinger: EGLSurface: 8-8-8-8, config=0x15
+01-01 00:00:09.775   260   260 I SurfaceFlinger: OpenGL ES informations:
+01-01 00:00:09.775   260   260 I SurfaceFlinger: vendor    : Vivante Corporation
+01-01 00:00:09.775   260   260 I SurfaceFlinger: renderer  : Vivante GC2000
+01-01 00:00:09.775   260   260 I SurfaceFlinger: version   : OpenGL ES 3.0 V6.2.2.P1.96445
+01-01 00:00:09.775   260   260 I SurfaceFlinger: extensions: GL_EXT_debug_marker GL_OES_vertex_type_10_10_10_2 GL_OES_vertex_half_float GL_OES_element_index_uint GL_OES_mapbuffer GL_OES_vertex_array_object GL_OES_compressed_ETC1_RGB8_texture GL_OES_compressed_paletted_texture GL_OES_texture_npot GL_OES_rgb8_rgba8 GL_OES_depth_texture GL_OES_depth_texture_cube_map GL_OES_depth24 GL_OES_depth32 GL_OES_packed_depth_stencil GL_OES_fbo_render_mipmap GL_OES_get_program_binary GL_OES_fragment_precision_high GL_OES_standard_derivatives GL_OES_EGL_image GL_OES_EGL_image_external GL_OES_EGL_sync GL_OES_required_internalformat GL_OES_surfaceless_context GL_OES_texture_half_float GL_OES_texture_float GL_EXT_texture_type_2_10_10_10_REV GL_EXT_texture_filter_anisotropic GL_EXT_texture_format_BGRA8888 GL_EXT_read_format_bgra GL_EXT_multi_draw_arrays GL_EXT_frag_depth GL_EXT_discard_framebuffer GL_EXT_blend_minmax GL_EXT_multisampled_render_to_texture GL_EXT_robustness GL_EXT_texture_sRGB_decode GL_EXT_texture_rg GL_VIV_direct_texture 
+01-01 00:00:09.775   260   260 I SurfaceFlinger: GL_MAX_TEXTURE_SIZE = 8192
+01-01 00:00:09.775   260   260 I SurfaceFlinger: GL_MAX_VIEWPORT_DIMS = 8192
+01-01 00:00:09.780   260   260 E gralloc : int gralloc1_device_open(const struct hw_module_t *, const char *, hw_device_t **) invalid name:fb0
+01-01 00:00:09.780   260   260 I v_egl   : FramebufferSurface: bufferCount=3
+01-01 00:00:09.781   260   260 E libEGL  : eglSetSwapRectangleANDROID:1979 error 300d (EGL_BAD_SURFACE)
+01-01 00:00:10.162   266   266 I ServiceManager: Waiting for service media.camera.proxy...
+01-01 00:00:10.187   260   260 D SurfaceFlinger: shader cache generated - 24 shaders in 400.748657 ms
+01-01 00:00:10.192   260   260 D SurfaceFlinger: Set power mode=2, type=0 flinger=0xb0632000
+01-01 00:00:10.954   264   264 D AndroidRuntime: >>>>>> START com.android.internal.os.ZygoteInit uid 0 <<<<<<
+01-01 00:00:11.036   264   264 D AndroidRuntime: CheckJNI is OFF
+01-01 00:00:11.051   264   264 I art     : option[0]=-Xzygote
+01-01 00:00:11.051   264   264 I art     : option[1]=-Xstacktracefile:/data/anr/traces.txt
+01-01 00:00:11.051   264   264 I art     : option[2]=exit
+01-01 00:00:11.051   264   264 I art     : option[3]=vfprintf
+01-01 00:00:11.052   264   264 I art     : option[4]=sensitiveThread
+01-01 00:00:11.052   264   264 I art     : option[5]=-verbose:gc
+01-01 00:00:11.052   264   264 I art     : option[6]=-Xms8m
+01-01 00:00:11.052   264   264 I art     : option[7]=-Xmx384m
+01-01 00:00:11.052   264   264 I art     : option[8]=-XX:HeapGrowthLimit=128m
+01-01 00:00:11.052   264   264 I art     : option[9]=-XX:HeapMinFree=512k
+01-01 00:00:11.052   264   264 I art     : option[10]=-XX:HeapMaxFree=8m
+01-01 00:00:11.052   264   264 I art     : option[11]=-XX:HeapTargetUtilization=0.75
+01-01 00:00:11.052   264   264 I art     : option[12]=-Xusejit:true
+01-01 00:00:11.052   264   264 I art     : option[13]=-Xjitsaveprofilinginfo
+01-01 00:00:11.052   264   264 I art     : option[14]=-agentlib:jdwp=transport=dt_android_adb,suspend=n,server=y
+01-01 00:00:11.052   264   264 I art     : option[15]=-Ximage-compiler-option
+01-01 00:00:11.052   264   264 I art     : option[16]=--runtime-arg
+01-01 00:00:11.052   264   264 I art     : option[17]=-Ximage-compiler-option
+01-01 00:00:11.052   264   264 I art     : option[18]=-Xms64m
+01-01 00:00:11.052   264   264 I art     : option[19]=-Ximage-compiler-option
+01-01 00:00:11.052   264   264 I art     : option[20]=--runtime-arg
+01-01 00:00:11.052   264   264 I art     : option[21]=-Ximage-compiler-option
+01-01 00:00:11.052   264   264 I art     : option[22]=-Xmx64m
+01-01 00:00:11.052   264   264 I art     : option[23]=-Ximage-compiler-option
+01-01 00:00:11.052   264   264 I art     : option[24]=--image-classes=/system/etc/preloaded-classes
+01-01 00:00:11.052   264   264 I art     : option[25]=-Ximage-compiler-option
+01-01 00:00:11.053   264   264 I art     : option[26]=--compiled-classes=/system/etc/compiled-classes
+01-01 00:00:11.053   264   264 I art     : option[27]=-Xcompiler-option
+01-01 00:00:11.053   264   264 I art     : option[28]=--runtime-arg
+01-01 00:00:11.053   264   264 I art     : option[29]=-Xcompiler-option
+01-01 00:00:11.053   264   264 I art     : option[30]=-Xms64m
+01-01 00:00:11.053   264   264 I art     : option[31]=-Xcompiler-option
+01-01 00:00:11.053   264   264 I art     : option[32]=--runtime-arg
+01-01 00:00:11.053   264   264 I art     : option[33]=-Xcompiler-option
+01-01 00:00:11.053   264   264 I art     : option[34]=-Xmx512m
+01-01 00:00:11.053   264   264 I art     : option[35]=-Ximage-compiler-option
+01-01 00:00:11.053   264   264 I art     : option[36]=--instruction-set-variant=cortex-a9
+01-01 00:00:11.053   264   264 I art     : option[37]=-Xcompiler-option
+01-01 00:00:11.053   264   264 I art     : option[38]=--instruction-set-variant=cortex-a9
+01-01 00:00:11.053   264   264 I art     : option[39]=-Ximage-compiler-option
+01-01 00:00:11.053   264   264 I art     : option[40]=--instruction-set-features=default
+01-01 00:00:11.053   264   264 I art     : option[41]=-Xcompiler-option
+01-01 00:00:11.053   264   264 I art     : option[42]=--instruction-set-features=default
+01-01 00:00:11.053   264   264 I art     : option[43]=-Duser.locale=en-US
+01-01 00:00:11.053   264   264 I art     : option[44]=--cpu-abilist=armeabi-v7a,armeabi
+01-01 00:00:11.053   264   264 I art     : option[45]=-Xfingerprint:Android/toradex_apalis6q/toradex_apalis6q:7.1.2/2.0.0-rfp-rc6/20170930:user/release-keys
+01-01 00:00:11.085   264   264 I art     : Pruning dalvik-cache since we are relocating an image and will need to recompile
+01-01 00:00:11.085   264   264 I art     : RelocateImage: /system/bin/patchoat --input-image-location=/system/framework/boot.art --output-image-file=/data/dalvik-cache/arm/system@framework@boot.art --instruction-set=arm --base-offset-delta=11071488
+01-01 00:00:11.163   266   266 I ServiceManager: Waiting for service media.camera.proxy...
+01-01 00:00:11.813   349   405 D libEGL  : loaded /system/lib/egl/libEGL_VIVANTE.so
+01-01 00:00:11.869   349   405 D libEGL  : loaded /system/lib/egl/libGLESv1_CM_VIVANTE.so
+01-01 00:00:12.027   349   405 D libEGL  : loaded /system/lib/egl/libGLESv2_VIVANTE.so
+01-01 00:00:12.163   266   266 I ServiceManager: Waiting for service media.camera.proxy...
+01-01 00:00:12.549   265   312 W BatteryNotifier: batterystats service unavailable!
+01-01 00:00:12.707   349   405 I display : GPUManager exists
+01-01 00:00:13.835   264   264 D ICU     : No timezone override file found: /data/misc/zoneinfo/current/icu/icu_tzdata.dat
+01-01 00:00:14.249   264   264 E memtrack: Couldn't load memtrack module (No such file or directory)
+01-01 00:00:14.249   264   264 E android.os.Debug: failed to load memtrack module: -2
+01-01 00:00:14.252   264   264 I Radio-JNI: register_android_hardware_Radio DONE
+01-01 00:00:14.294   264   264 I SamplingProfilerIntegration: Profiling disabled.
+01-01 00:00:14.294   264   264 D Zygote  : begin preload
+01-01 00:00:14.294   264   264 I Zygote  : Installing ICU cache reference pinning...
+01-01 00:00:14.313   264   264 I Zygote  : Preloading ICU data...
+01-01 00:00:14.527   264   264 I Zygote  : Preloading classes...
+01-01 00:00:14.540   264   264 W Zygote  : Class not found for preloading: [Landroid.view.Display$ColorTransform;
+01-01 00:00:14.620   275   275 V NatController: runCmd(/system/bin/iptables -w -F natctrl_FORWARD) res=0
+01-01 00:00:14.645   275   275 V NatController: runCmd(/system/bin/ip6tables -w -F natctrl_FORWARD) res=0
+01-01 00:00:14.677   275   275 V NatController: runCmd(/system/bin/iptables -w -A natctrl_FORWARD -j DROP) res=0
+01-01 00:00:14.703   275   275 V NatController: runCmd(/system/bin/iptables -w -t nat -F natctrl_nat_POSTROUTING) res=0
+01-01 00:00:14.730   275   275 V NatController: runCmd(/system/bin/ip6tables -w -t raw -F natctrl_raw_PREROUTING) res=0
+01-01 00:00:14.761   275   275 V NatController: runCmd(/system/bin/iptables -w -F natctrl_tether_counters) res=1
+01-01 00:00:14.790   275   275 V NatController: runCmd(/system/bin/ip6tables -w -F natctrl_tether_counters) res=1
+01-01 00:00:14.819   275   275 V NatController: runCmd(/system/bin/iptables -w -X natctrl_tether_counters) res=1
+01-01 00:00:14.847   275   275 V NatController: runCmd(/system/bin/ip6tables -w -X natctrl_tether_counters) res=1
+01-01 00:00:14.876   275   275 V NatController: runCmd(/system/bin/iptables -w -N natctrl_tether_counters) res=0
+01-01 00:00:14.910   275   275 V NatController: runCmd(/system/bin/ip6tables -w -N natctrl_tether_counters) res=0
+01-01 00:00:14.937   275   275 V NatController: runCmd(/system/bin/iptables -w -t mangle -A natctrl_mangle_FORWARD -p tcp --tcp-flags SYN SYN -j TCPMSS --clamp-mss-to-pmtu) res=0
+01-01 00:00:15.305   275   275 E Netd    : cannot find interface dummy0
+01-01 00:00:15.308   275   275 D MDnsDS  : MDnsSdListener::Hander starting up
+01-01 00:00:15.310   275   531 D MDnsDS  : MDnsSdListener starting to monitor
+01-01 00:00:15.310   275   531 D MDnsDS  : Going to poll with pollCount 1
+01-01 00:00:15.339   264   264 E Typeface: Error mapping font file /system/fonts/DroidSansFallback.ttf
+01-01 00:00:15.993   264   264 I art     : Thread[1,tid=264,Native,Thread*=0xb3985400,peer=0x12c060d0,"main"] recursive attempt to load library "/system/lib/libmedia_jni.so"
+01-01 00:00:15.993   264   264 D MtpDeviceJNI: register_android_mtp_MtpDevice
+01-01 00:00:15.994   264   264 I art     : Thread[1,tid=264,Native,Thread*=0xb3985400,peer=0x12c060d0,"main"] recursive attempt to load library "/system/lib/libmedia_jni.so"
+01-01 00:00:15.994   264   264 I art     : Thread[1,tid=264,Native,Thread*=0xb3985400,peer=0x12c060d0,"main"] recursive attempt to load library "/system/lib/libmedia_jni.so"
+01-01 00:00:16.325   264   264 W Zygote  : Class not found for preloading: android.view.Display$ColorTransform
+01-01 00:00:16.325   264   264 W Zygote  : Class not found for preloading: android.view.Display$ColorTransform$1
+01-01 00:00:16.657   264   264 I System  : Loaded time zone names for "" in 106ms (100ms in ICU)
+01-01 00:00:16.718   264   264 I System  : Loaded time zone names for "en_US" in 60ms (55ms in ICU)
+01-01 00:00:16.786   264   264 I Zygote  : ...preloaded 4158 classes in 2259ms.
+01-01 00:00:16.786   264   264 I art     : VMRuntime.preloadDexCaches starting
+01-01 00:00:17.085   264   264 I art     : VMRuntime.preloadDexCaches strings total=284392 before=39790 after=39790
+01-01 00:00:17.086   264   264 I art     : VMRuntime.preloadDexCaches types total=23616 before=7880 after=7908
+01-01 00:00:17.086   264   264 I art     : VMRuntime.preloadDexCaches fields total=112271 before=40953 after=41170
+01-01 00:00:17.086   264   264 I art     : VMRuntime.preloadDexCaches methods total=197813 before=82503 after=83069
+01-01 00:00:17.086   264   264 I art     : VMRuntime.preloadDexCaches finished
+01-01 00:00:17.087   264   264 I Zygote  : Preloading resources...
+01-01 00:00:17.249   264   264 W Resources: Preloaded drawable resource #0x108025c (android:drawable/dialog_background_material) that varies with configuration!!
+01-01 00:00:17.251   264   264 W Resources: Preloaded drawable resource #0x1080298 (android:drawable/editbox_dropdown_background_dark) that varies with configuration!!
+01-01 00:00:17.270   264   264 W Resources: Preloaded color resource #0x10600ea (android:color/material_grey_800) that varies with configuration!!
+01-01 00:00:17.270   264   264 W Resources: Preloaded drawable resource #0x10802c9 (android:drawable/floating_popup_background_dark) that varies with configuration!!
+01-01 00:00:17.309   264   264 W Resources: Preloaded drawable resource #0x108030b (android:drawable/ic_clear_disabled) that varies with configuration!!
+01-01 00:00:17.310   264   264 W Resources: Preloaded drawable resource #0x1080310 (android:drawable/ic_clear_normal) that varies with configuration!!
+01-01 00:00:17.314   264   264 W Resources: Preloaded drawable resource #0x1080359 (android:drawable/ic_go) that varies with configuration!!
+01-01 00:00:17.322   264   264 W Resources: Preloaded drawable resource #0x1080038 (android:drawable/ic_menu_close_clear_cancel) that varies with configuration!!
+01-01 00:00:17.326   264   264 W Resources: Preloaded drawable resource #0x1080045 (android:drawable/ic_menu_more) that varies with configuration!!
+01-01 00:00:17.342   264   264 W Resources: Preloaded drawable resource #0x10804eb (android:drawable/menu_background_fill_parent_width) that varies with configuration!!
+01-01 00:00:17.412   264   264 W Resources: Preloaded drawable resource #0x1080783 (android:drawable/text_edit_paste_window) that varies with configuration!!
+01-01 00:00:17.417   264   264 W Resources: Preloaded drawable resource #0x1080096 (android:drawable/toast_frame) that varies with configuration!!
+01-01 00:00:17.417   264   264 I Zygote  : ...preloaded 114 resources in 330ms.
+01-01 00:00:17.427   264   264 W Resources: Preloaded color resource #0x1060114 (android:color/background_cache_hint_selector_material_dark) that varies with configuration!!
+01-01 00:00:17.428   264   264 W Resources: Preloaded color resource #0x1060119 (android:color/btn_default_material_dark) that varies with configuration!!
+01-01 00:00:17.430   264   264 I Zygote  : ...preloaded 41 resources in 13ms.
+01-01 00:00:17.442   264   264 D libEGL  : loaded /system/lib/egl/libEGL_VIVANTE.so
+01-01 00:00:17.465   264   264 D libEGL  : loaded /system/lib/egl/libGLESv1_CM_VIVANTE.so
+01-01 00:00:17.616   264   264 D libEGL  : loaded /system/lib/egl/libGLESv2_VIVANTE.so
+01-01 00:00:17.731   264   264 I Zygote  : Preloading shared libraries...
+01-01 00:00:17.770   264   264 I Zygote  : Uninstalled ICU cache reference pinning...
+01-01 00:00:17.773   264   264 I Zygote  : Installed AndroidKeyStoreProvider in 3ms.
+01-01 00:00:17.822   264   264 I Zygote  : Warmed up JCA providers in 49ms.
+01-01 00:00:17.822   264   264 D Zygote  : end preload
+01-01 00:00:17.822   264   264 I art     : Starting a blocking GC Explicit
+01-01 00:00:17.852   264   264 I art     : Explicit concurrent mark sweep GC freed 4953(259KB) AllocSpace objects, 0(0B) LOS objects, 39% free, 2MB/3MB, paused 418us total 29.506ms
+01-01 00:00:17.852   264   264 I art     : Starting a blocking GC Explicit
+01-01 00:00:17.878   264   264 I art     : Explicit concurrent mark sweep GC freed 104(3KB) AllocSpace objects, 0(0B) LOS objects, 39% free, 2MB/3MB, paused 414us total 25.462ms
+01-01 00:00:17.941   264   484 I art     : Starting a blocking GC HeapTrim
+01-01 00:00:17.949   264   264 I art     : Starting a blocking GC Background
+01-01 00:00:18.074   264   264 I Zygote  : System server process 538 has been created
+01-01 00:00:18.077   264   264 I Zygote  : Accepting command socket connections
+01-01 00:00:18.093   538   538 I InstallerConnection: connecting...
+01-01 00:00:18.095   268   268 I         : new connection
+01-01 00:00:18.198   538   538 I InstallerConnection: disconnecting...
+01-01 00:00:18.199   268   268 E         : eof
+01-01 00:00:18.199   268   268 E         : failed to read size
+01-01 00:00:18.199   268   268 I         : closing connection
+01-01 00:00:18.358   538   538 W SystemServer: System clock is before 1970; setting to 1970.
+01-01 00:00:18.360   538   538 I SystemServer: Entered the Android system server!
+01-01 00:00:18.603   538   538 I SystemServiceManager: Starting com.android.server.pm.Installer
+01-01 00:00:18.641   538   538 I Installer: Waiting for installd to be ready.
+01-01 00:00:18.641   538   538 I InstallerConnection: connecting...
+01-01 00:00:18.643   268   268 I         : new connection
+01-01 00:00:18.643   538   538 I SystemServiceManager: Starting com.android.server.am.ActivityManagerService$Lifecycle
+01-01 00:00:18.701   538   538 I ActivityManager: Memory class: 128
+01-01 00:00:18.759   538   538 D BatteryStatsImpl: Reading daily items from /data/system/batterystats-daily.xml
+01-01 00:00:18.920   538   538 I AppOps  : No existing app ops /data/system/appops.xml; starting empty
+01-01 00:00:18.985   263   263 I obd     : type=1400 audit(0.0:34): avc: denied { write } for path="socket:[10646]" dev="sockfs" ino=10646 scontext=u:r:obd:s0 tcontext=u:r:obd:s0 tclass=socket permissive=1
+01-01 00:00:18.993   538   538 I IntentFirewall: Read new rules (A:0 B:0 S:0)
+01-01 00:00:19.010   538   538 D AppOps  : AppOpsService published
+01-01 00:00:19.011   538   538 I SystemServiceManager: Starting com.android.server.power.PowerManagerService
+01-01 00:00:19.026   538   538 E SWITCHPROFILE: setprop: sys.interactive = active 
+01-01 00:00:19.027   538   538 W libsuspend: Error writing 'on' to /sys/power/state: Invalid argument
+01-01 00:00:19.027   538   538 I libsuspend: Selected wakeup count
+01-01 00:00:19.031   538   538 I SystemServiceManager: Starting com.android.server.lights.LightsService
+01-01 00:00:19.039   538   561 I SWITCHPROFILE: Switchprofile thread received GOV_INTERACTIVE from Power HAL
+01-01 00:00:19.051   538   538 I lights  : max backlight file is /sys/class/backlight/backlight/max_brightness
+01-01 00:00:19.051   538   538 I lights  : backlight brightness file is /sys/class/backlight/backlight/brightness
+01-01 00:00:19.052   538   538 I SystemServiceManager: Starting com.android.server.display.DisplayManagerService
+01-01 00:00:19.057   538   538 I SystemServiceManager: Starting phase 100
+01-01 00:00:19.068   538   558 I DisplayManagerService: Display device added: DisplayDeviceInfo{"Built-in Screen": uniqueId="local:0", 1024 x 768, modeId 1, defaultModeId 1, supportedModes [{id=1, width=1024, height=768, fps=60.006}], colorMode 0, supportedColorModes [0], HdrCapabilities android.view.Display$HdrCapabilities@a69d6308, density 160, 159.568 x 159.895 dpi, appVsyncOff 1000000, presDeadline 16665000, touch INTERNAL, rotation 0, type BUILT_IN, state UNKNOWN, FLAG_DEFAULT_DISPLAY, FLAG_ROTATES_WITH_CONTENT, FLAG_SECURE, FLAG_SUPPORTS_PROTECTED_BUFFERS}
+01-01 00:00:19.069   260   260 D SurfaceFlinger: Set power mode=2, type=0 flinger=0xb0632000
+01-01 00:00:19.069   260   260 D SurfaceFlinger: Screen type=0 is already mode=2
+01-01 00:00:19.071   538   538 I SystemServer: StartPackageManagerService
+01-01 00:00:19.071   538   558 I DisplayManagerService: Display device changed state: "Built-in Screen", ON
+01-01 00:00:19.090   538   561 E SWITCHPROFILE: setprop: sys.interactive = active 
+01-01 00:00:19.091   538   561 E SWITCHPROFILE: Could not open cpu gov:/sys/devices/system/cpu/cpufreq/interactive/boostpulse
+01-01 00:00:19.093   538   538 W FileUtils: Failed to chmod(/data/system/packages.list): android.system.ErrnoException: chmod failed: ENOENT (No such file or directory)
+01-01 00:00:19.097   538   538 W SystemConfig: No directory /system/etc/sysconfig, skipping
+01-01 00:00:19.177   538   538 D SELinuxMMAC: Using policy file /system/etc/security/mac_permissions.xml
+01-01 00:00:19.180   538   538 I PackageManager: No settings file; creating initial state
+01-01 00:00:19.216   538   538 E art     : DexFile_getDexOptNeeded file '/system/framework/org.apache.http.legacy.jar' does not exist
+01-01 00:00:19.217   538   538 W PackageManager: Library not found: /system/framework/org.apache.http.legacy.jar
+01-01 00:00:19.224   538   538 D PackageManager: No files in app dir /vendor/overlay
+01-01 00:00:19.231   538   538 W PackageManager: Failed to parse /system/framework/arm: Missing base APK in /system/framework/arm
+01-01 00:00:19.303   538   538 I PackageManager: /system/framework/framework-res.apk changed; collecting certs
+01-01 00:00:20.263   538   538 W PackageManager: Failed to parse /system/framework/oat: Missing base APK in /system/framework/oat
+01-01 00:00:20.286   538   538 I PackageManager: /system/priv-app/BackupRestoreConfirmation changed; collecting certs
+01-01 00:00:20.313   538   538 I PackageManager: /system/priv-app/BleClient changed; collecting certs
+01-01 00:00:20.334   538   538 I PackageManager: /system/priv-app/BleServerEmulator changed; collecting certs
+01-01 00:00:20.356   538   538 I PackageManager: /system/priv-app/BlockedNumberProvider changed; collecting certs
+01-01 00:00:20.361   538   538 I PackageManager: New shared user android.uid.shared: id=10003
+01-01 00:00:20.377   538   538 I PackageManager: /system/priv-app/CalendarProvider changed; collecting certs
+01-01 00:00:20.385   538   538 I PackageManager: New shared user android.uid.calendar: id=10004
+01-01 00:00:20.395   538   538 I PackageManager: /system/priv-app/CallLogBackup changed; collecting certs
+01-01 00:00:20.412   538   538 I PackageManager: /system/priv-app/CarrierConfig changed; collecting certs
+01-01 00:00:20.451   538   538 I PackageManager: /system/priv-app/CellBroadcastReceiver changed; collecting certs
+01-01 00:00:20.630   538   538 W PackageParser: No actions in intent filter at /system/priv-app/Contacts/Contacts.apk Binary XML file line #409
+01-01 00:00:20.634   538   538 I PackageManager: /system/priv-app/Contacts changed; collecting certs
+01-01 00:00:20.806   538   538 I PackageManager: /system/priv-app/ContactsProvider changed; collecting certs
+01-01 00:00:20.827   538   538 I PackageManager: /system/priv-app/CtsShimPrivPrebuilt changed; collecting certs
+01-01 00:00:20.842   538   538 I PackageManager: /system/priv-app/DefaultContainerService changed; collecting certs
+01-01 00:00:20.953   538   538 W PackageParser: No actions in intent filter at /system/priv-app/Dialer/Dialer.apk Binary XML file line #186
+01-01 00:00:20.957   538   538 I PackageManager: /system/priv-app/Dialer changed; collecting certs
+01-01 00:00:21.176   538   538 I PackageManager: /system/priv-app/DocumentsUI changed; collecting certs
+01-01 00:00:21.233   538   538 I PackageManager: /system/priv-app/DownloadProvider changed; collecting certs
+01-01 00:00:21.247   538   538 I PackageManager: New shared user android.media: id=10012
+01-01 00:00:21.249   538   538 W PackageManager: Permission android.permission.DOWNLOAD_WITHOUT_NOTIFICATION from package com.android.providers.downloads in an unknown group android.permission-group.NETWORK
+01-01 00:00:21.306   538   538 I PackageManager: /system/priv-app/EmergencyInfo changed; collecting certs
+01-01 00:00:21.386   538   538 I PackageManager: New shared user com.android.emergency.uid: id=10013
+01-01 00:00:21.404   538   538 I PackageManager: /system/priv-app/ExtServices changed; collecting certs
+01-01 00:00:21.421   538   538 I PackageManager: /system/priv-app/ExternalStorageProvider changed; collecting certs
+01-01 00:00:21.437   538   538 I PackageManager: /system/priv-app/FusedLocation changed; collecting certs
+01-01 00:00:21.463   538   538 I PackageManager: /system/priv-app/InputDevices changed; collecting certs
+01-01 00:00:21.504   538   538 I PackageManager: /system/priv-app/Launcher2 changed; collecting certs
+01-01 00:00:21.707   538   538 W PackageManager: Permission com.android.launcher.permission.PRELOAD_WORKSPACE from package com.android.launcher in an unknown group android.permission-group.SYSTEM_TOOLS
+01-01 00:00:21.707   538   538 W PackageManager: Permission com.android.launcher.permission.INSTALL_SHORTCUT from package com.android.launcher in an unknown group android.permission-group.SYSTEM_TOOLS
+01-01 00:00:21.707   538   538 W PackageManager: Permission com.android.launcher.permission.UNINSTALL_SHORTCUT from package com.android.launcher in an unknown group android.permission-group.SYSTEM_TOOLS
+01-01 00:00:21.708   538   538 W PackageManager: Permission com.android.launcher.permission.READ_SETTINGS from package com.android.launcher in an unknown group android.permission-group.SYSTEM_TOOLS
+01-01 00:00:21.708   538   538 W PackageManager: Permission com.android.launcher.permission.WRITE_SETTINGS from package com.android.launcher in an unknown group android.permission-group.SYSTEM_TOOLS
+01-01 00:00:21.744   538   538 I PackageManager: /system/priv-app/ManagedProvisioning changed; collecting certs
+01-01 00:00:21.784   538   538 I PackageManager: /system/priv-app/MediaProvider changed; collecting certs
+01-01 00:00:21.802   538   538 I PackageManager: /system/priv-app/MmsService changed; collecting certs
+01-01 00:00:21.818   538   538 I PackageManager: /system/priv-app/MtpDocumentsProvider changed; collecting certs
+01-01 00:00:21.839   538   538 I PackageManager: /system/priv-app/MusicFX changed; collecting certs
+01-01 00:00:21.854   538   538 I PackageManager: /system/priv-app/OneTimeInitializer changed; collecting certs
+01-01 00:00:21.945   538   538 I PackageManager: /system/priv-app/PackageInstaller changed; collecting certs
+01-01 00:00:22.073   538   538 I PackageManager: /system/priv-app/Provision changed; collecting certs
+01-01 00:00:22.089   538   538 I PackageManager: /system/priv-app/ProxyHandler changed; collecting certs
+01-01 00:00:22.276   538   538 W PackageParser: Ignoring duplicate uses-permissions/uses-permissions-sdk-m: android.permission.USE_CREDENTIALS in package: com.android.settings at: Binary XML file line #56
+01-01 00:00:22.276   538   538 W PackageParser: Ignoring duplicate uses-permissions/uses-permissions-sdk-m: android.permission.READ_SYNC_SETTINGS in package: com.android.settings at: Binary XML file line #61
+01-01 00:00:22.277   538   538 W PackageParser: Ignoring duplicate uses-permissions/uses-permissions-sdk-m: android.permission.WRITE_SYNC_SETTINGS in package: com.android.settings at: Binary XML file line #62
+01-01 00:00:22.398   538   538 I PackageManager: /system/priv-app/Settings changed; collecting certs
+01-01 00:00:23.215   538   538 I PackageManager: /system/priv-app/SettingsProvider changed; collecting certs
+01-01 00:00:23.232   538   538 I PackageManager: /system/priv-app/SharedStorageBackup changed; collecting certs
+01-01 00:00:23.252   538   538 W PackageParser: Ignoring duplicate uses-permissions/uses-permissions-sdk-m: android.permission.INSTALL_GRANT_RUNTIME_PERMISSIONS in package: com.android.shell at: Binary XML file line #103
+01-01 00:00:23.254   538   538 I PackageManager: /system/priv-app/Shell changed; collecting certs
+01-01 00:00:23.273   538   538 I PackageManager: /system/priv-app/StatementService changed; collecting certs
+01-01 00:00:23.338   538   538 I PackageManager: /system/priv-app/StorageManager changed; collecting certs
+01-01 00:00:23.529   538   538 W PackageParser: Ignoring duplicate uses-permissions/uses-permissions-sdk-m: android.permission.CONFIGURE_WIFI_DISPLAY in package: com.android.systemui at: Binary XML file line #123
+01-01 00:00:23.557   538   538 I PackageManager: /system/priv-app/SystemUI changed; collecting certs
+01-01 00:00:23.804   538   538 I PackageManager: New shared user android.uid.systemui: id=10026
+01-01 00:00:23.919   538   538 I PackageManager: /system/priv-app/TeleService changed; collecting certs
+01-01 00:00:24.137   538   538 I PackageManager: /system/priv-app/Telecom changed; collecting certs
+01-01 00:00:24.227   538   538 I PackageManager: /system/priv-app/TelephonyProvider changed; collecting certs
+01-01 00:00:24.253   538   538 I PackageManager: /system/priv-app/UjetLauncher changed; collecting certs
+01-01 00:00:24.340   538   538 I PackageManager: /system/priv-app/VpnDialogs changed; collecting certs
+01-01 00:00:24.358   538   538 I PackageManager: /system/priv-app/WallpaperCropper changed; collecting certs
+01-01 00:00:24.376   538   538 I PackageManager: /system/app/A2dpSinkApp changed; collecting certs
+01-01 00:00:24.402   538   538 I PackageManager: /system/app/BasicDreams changed; collecting certs
+01-01 00:00:24.435   538   538 W PackageParser: Ignoring duplicate uses-permissions/uses-permissions-sdk-m: android.permission.READ_CONTACTS in package: com.android.bluetooth at: Binary XML file line #61
+01-01 00:00:24.439   538   538 W PackageParser: No actions in intent filter at /system/app/Bluetooth/Bluetooth.apk Binary XML file line #222
+01-01 00:00:24.449   538   538 I PackageManager: /system/app/Bluetooth changed; collecting certs
+01-01 00:00:24.485   538   538 I PackageManager: /system/app/BluetoothMidiService changed; collecting certs
+01-01 00:00:24.498   538   538 I PackageManager: /system/app/BookmarkProvider changed; collecting certs
+01-01 00:00:24.515   538   538 I PackageManager: /system/app/Browser2 changed; collecting certs
+01-01 00:00:24.534   538   538 I PackageManager: /system/app/CactusPlayer changed; collecting certs
+01-01 00:00:24.591   538   538 I PackageManager: /system/app/Calendar changed; collecting certs
+01-01 00:00:24.655   538   538 W PackageManager: Non-privileged app; cap priority to 0; package: com.android.calendar activity: com.android.calendar.GoogleCalendarUriIntentFilter origPrio: 50
+01-01 00:00:24.702   538   538 I PackageManager: /system/app/Camera2 changed; collecting certs
+01-01 00:00:24.968   538   538 I PackageManager: /system/app/CaptivePortalLogin changed; collecting certs
+01-01 00:00:24.993   538   538 I PackageManager: /system/app/CertInstaller changed; collecting certs
+01-01 00:00:25.016   538   538 I PackageManager: /system/app/CtsShimPrebuilt changed; collecting certs
+01-01 00:00:25.023   538   538 W PackageManager: Non-privileged app; cap priority to 0; package: com.android.cts.ctsshim activity: com.android.cts.ctsshim.InstallPriority origPrio: 100
+01-01 00:00:25.023   538   538 W PackageManager: Non-privileged app; cap priority to 0; package: com.android.cts.ctsshim activity: com.android.cts.ctsshim.InstallPriority origPrio: 100
+01-01 00:00:25.023   538   538 W PackageManager: Non-privileged app; cap priority to 0; package: com.android.cts.ctsshim activity: com.android.cts.ctsshim.InstallPriority origPrio: 100
+01-01 00:00:25.024   538   538 W PackageManager: Non-privileged app; cap priority to 0; package: com.android.cts.ctsshim activity: com.android.cts.ctsshim.InstallPriority origPrio: 100
+01-01 00:00:25.024   538   538 W PackageManager: Non-privileged app; cap priority to 0; package: com.android.cts.ctsshim activity: com.android.cts.ctsshim.InstallPriority origPrio: 100
+01-01 00:00:25.034   538   538 I PackageManager: /system/app/CubeLiveWallpapers changed; collecting certs
+01-01 00:00:25.117   538   538 I PackageManager: /system/app/DeskClock changed; collecting certs
+01-01 00:00:25.232   538   538 I PackageManager: /system/app/DownloadProviderUi changed; collecting certs
+01-01 00:00:25.254   538   538 I PackageManager: /system/app/EasterEgg changed; collecting certs
+01-01 00:00:25.324   538   538 W PackageParser: Ignoring duplicate uses-permissions/uses-permissions-sdk-m: android.permission.WRITE_CONTACTS in package: com.android.email at: Binary XML file line #40
+01-01 00:00:25.357   538   538 I PackageManager: /system/app/Email changed; collecting certs
+01-01 00:00:25.503   538   538 I PackageManager: /system/app/ExactCalculator changed; collecting certs
+01-01 00:00:25.524   538   538 I PackageManager: /system/app/ExtShared changed; collecting certs
+01-01 00:00:25.538   538   538 I PackageManager: /system/app/FSLOta changed; collecting certs
+01-01 00:00:25.597   538   538 W PackageParser: Unknown element under <application>: permission at /system/app/Gallery2/Gallery2.apk Binary XML file line #253
+01-01 00:00:25.597   538   538 W PackageParser: Unknown element under <application>: permission at /system/app/Gallery2/Gallery2.apk Binary XML file line #256
+01-01 00:00:25.602   538   538 I PackageManager: /system/app/Gallery2 changed; collecting certs
+01-01 00:00:25.795   538   538 I PackageManager: /system/app/HTMLViewer changed; collecting certs
+01-01 00:00:25.811   538   538 I PackageManager: /system/app/HUDCore changed; collecting certs
+01-01 00:00:25.829   538   538 I PackageManager: /system/app/KeyChain changed; collecting certs
+01-01 00:00:25.935   538   538 I PackageManager: /system/app/LatinIME changed; collecting certs
+01-01 00:00:26.406   538   538 I PackageManager: /system/app/LiveWallpapersPicker changed; collecting certs
+01-01 00:00:26.465   538   538 I PackageManager: /system/app/Music changed; collecting certs
+01-01 00:00:26.503   538   538 I PackageManager: /system/app/OBD changed; collecting certs
+01-01 00:00:26.516   538   538 I PackageManager: /system/app/PacProcessor changed; collecting certs
+01-01 00:00:26.533   538   538 I PackageManager: /system/app/PicoTts changed; collecting certs
+01-01 00:00:26.549   538   538 I PackageManager: /system/app/PrintRecommendationService changed; collecting certs
+01-01 00:00:26.574   538   538 I PackageManager: /system/app/PrintSpooler changed; collecting certs
+01-01 00:00:26.606   538   538 I PackageManager: /system/app/QuickSearchBox changed; collecting certs
+01-01 00:00:26.633   538   538 I PackageManager: /system/app/SoundRecorder changed; collecting certs
+01-01 00:00:26.652   538   538 I PackageManager: /system/app/UserDictionaryProvider changed; collecting certs
+01-01 00:00:26.666   538   538 I PackageManager: /system/app/WallpaperBackup changed; collecting certs
+01-01 00:00:26.682   538   538 I PackageManager: /system/app/WfdSink changed; collecting certs
+01-01 00:00:26.703   538   538 I PackageManager: /system/app/ethernet changed; collecting certs
+01-01 00:00:26.742   538   538 I PackageManager: /system/app/webview changed; collecting certs
+01-01 00:00:27.868   538   538 D PackageManager: No files in app dir /system/vendor/app
+01-01 00:00:27.868   538   538 D PackageManager: No files in app dir /oem/app
+01-01 00:00:27.871   538   538 D PackageManager: No files in app dir /data/app
+01-01 00:00:27.871   538   538 D PackageManager: No files in app dir /data/app-private
+01-01 00:00:27.872   538   538 D PackageManager: No files in app dir /data/app-ephemeral
+01-01 00:00:27.874   538   538 W PackageManager: Protected action; cap priority to 0; package: com.android.cts.priv.ctsshim activity: com.android.cts.priv.ctsshim.InstallPriority origPrio: 100
+01-01 00:00:27.874   538   538 W PackageManager: Protected action; cap priority to 0; package: com.android.cts.priv.ctsshim activity: com.android.cts.priv.ctsshim.InstallPriority origPrio: 100
+01-01 00:00:27.874   538   538 W PackageManager: Protected action; cap priority to 0; package: com.android.cts.priv.ctsshim activity: com.android.cts.priv.ctsshim.InstallPriority origPrio: 100
+01-01 00:00:27.874   538   538 W PackageManager: Protected action; cap priority to 0; package: com.android.cts.priv.ctsshim activity: com.android.cts.priv.ctsshim.InstallPriority origPrio: 100
+01-01 00:00:27.874   538   538 W PackageManager: Protected action; cap priority to 0; package: com.android.packageinstaller activity: com.android.packageinstaller.PackageInstallerActivity origPrio: 1
+01-01 00:00:27.875   538   538 W PackageManager: Package com.android.gallery3d desires unavailable shared library com.google.android.media.effects; ignoring!
+01-01 00:00:27.875   538   538 W PackageManager: Package com.android.gallery3d desires unavailable shared library com.google.android.media.effects; ignoring!
+01-01 00:00:27.875   538   538 I PackageManager: Adjusting ABI for com.android.providers.downloads.ui to armeabi-v7a (requirer=com.android.mtp, scannedPackage=null)
+01-01 00:00:27.876   538   538 I PackageManager: Adjusting ABI for com.android.providers.media to armeabi-v7a (requirer=com.android.mtp, scannedPackage=null)
+01-01 00:00:27.877   538   538 I PackageManager: Adjusting ABI for com.android.providers.downloads to armeabi-v7a (requirer=com.android.mtp, scannedPackage=null)
+01-01 00:00:27.878   538   538 I PackageManager: Adjusting ABI for com.android.keychain to armeabi-v7a (requirer=android, scannedPackage=null)
+01-01 00:00:27.879   538   538 I PackageManager: Adjusting ABI for com.android.inputdevices to armeabi-v7a (requirer=android, scannedPackage=null)
+01-01 00:00:27.880   538   538 I PackageManager: Adjusting ABI for com.android.settings to armeabi-v7a (requirer=android, scannedPackage=null)
+01-01 00:00:27.881   538   538 I PackageManager: Adjusting ABI for com.android.providers.settings to armeabi-v7a (requirer=android, scannedPackage=null)
+01-01 00:00:27.881   538   538 I PackageManager: Adjusting ABI for com.android.server.telecom to armeabi-v7a (requirer=android, scannedPackage=null)
+01-01 00:00:27.882   538   538 I PackageManager: Adjusting ABI for com.android.location.fused to armeabi-v7a (requirer=android, scannedPackage=null)
+01-01 00:00:27.883   538   538 I PackageManager: Adjusting ABI for com.fsl.android.ota to armeabi-v7a (requirer=android, scannedPackage=null)
+01-01 00:00:27.884   538   538 I PackageManager: Adjusting ABI for com.android.wallpaperbackup to armeabi-v7a (requirer=android, scannedPackage=null)
+01-01 00:00:27.884   538   538 I PackageManager: Adjusting ABI for com.freescale.a2dpsinkapp to armeabi-v7a (requirer=android, scannedPackage=null)
+01-01 00:00:27.885   538   538 I PackageManager: Adjusting ABI for com.freescale.wfdsink to armeabi-v7a (requirer=android, scannedPackage=null)
+01-01 00:00:27.886   538   538 I PackageManager: Adjusting ABI for com.fsl.ethernet to armeabi-v7a (requirer=android, scannedPackage=null)
+01-01 00:00:27.889   538   538 I PackageManager: Time to scan packages: 8.701 seconds
+01-01 00:00:27.891   538   538 W PackageManager: Unknown permission com.google.android.googleapps.permission.GOOGLE_AUTH in package com.android.providers.calendar
+01-01 00:00:27.891   538   538 W PackageManager: Unknown permission com.google.android.googleapps.permission.GOOGLE_AUTH.cl in package com.android.providers.calendar
+01-01 00:00:27.892   538   538 W PackageManager: Not granting permission android.permission.GLOBAL_SEARCH to package com.android.quicksearchbox (protectionLevel=18 flags=0x3808be45)
+01-01 00:00:27.894   538   538 W PackageManager: Not granting permission android.permission.BIND_WALLPAPER to package com.android.camera2 (protectionLevel=18 flags=0x3058bc45)
+01-01 00:00:27.894   538   538 W PackageManager: Unknown permission com.google.android.googleapps.permission.GOOGLE_AUTH.mail in package com.android.calendar
+01-01 00:00:27.896   538   538 W PackageManager: Not granting permission android.permission.WRITE_MEDIA_STORAGE to package com.android.gallery3d (protectionLevel=18 flags=0x3858bc45)
+01-01 00:00:27.897   538   538 W PackageManager: Unknown permission com.google.android.permission.INSTALL_WEARABLE_PACKAGES in package com.android.packageinstaller
+01-01 00:00:27.897   538   538 W PackageManager: Not granting permission android.permission.DELETE_PACKAGES to package com.svox.pico (protectionLevel=18 flags=0x3808be45)
+01-01 00:00:27.897   538   538 W PackageManager: Unknown permission android.permission.RUN_INSTRUMENTATION in package org.chromium.webview_shell
+01-01 00:00:27.898   538   538 W PackageManager: Unknown permission com.google.android.googleapps.permission.GOOGLE_AUTH in package com.android.settings
+01-01 00:00:27.902   538   538 W PackageManager: Unknown permission com.android.smspush.WAPPUSH_MANAGER_BIND in package com.android.phone
+01-01 00:00:27.907   538   538 W PackageManager: Unknown permission android.permission.ACCESS_ALL_EXTERNAL_STORAGE in package com.freescale.wfdsink
+01-01 00:00:27.908   538   538 W PackageManager: Unknown permission com.google.android.gallery3d.permission.GALLERY_PROVIDER in package com.android.bluetooth
+01-01 00:00:27.910   538   538 V PackageManager: reconcileAppsData for null u0 0x3
+01-01 00:00:27.915   268   268 I SELinux : SELinux: Loaded file_contexts contexts from /file_contexts.bin.
+01-01 00:00:27.916   268   268 D installd: Detected label change from u:object_r:system_data_file:s0 to u:object_r:app_data_file:s0:c512,c768 at /data/data/com.android.cts.priv.ctsshim; running recursive restorecon
+01-01 00:00:27.919   268   268 D installd: Detected label change from u:object_r:system_data_file:s0 to u:object_r:app_data_file:s0:c512,c768 at /data/user_de/0/com.android.cts.priv.ctsshim; running recursive restorecon
+01-01 00:00:27.926   268   268 D installd: Detected label change from u:object_r:system_data_file:s0 to u:object_r:app_data_file:s0:c512,c768 at /data/data/com.freescale.bleserver; running recursive restorecon
+01-01 00:00:27.929   268   268 D installd: Detected label change from u:object_r:system_data_file:s0 to u:object_r:app_data_file:s0:c512,c768 at /data/user_de/0/com.freescale.bleserver; running recursive restorecon
+01-01 00:00:27.935   268   268 D installd: Detected label change from u:object_r:system_data_file:s0 to u:object_r:app_data_file:s0:c512,c768 at /data/data/com.example.android.livecubes; running recursive restorecon
+01-01 00:00:27.938   268   268 D installd: Detected label change from u:object_r:system_data_file:s0 to u:object_r:app_data_file:s0:c512,c768 at /data/user_de/0/com.example.android.livecubes; running recursive restorecon
+01-01 00:00:27.944   268   268 D installd: Detected label change from u:object_r:system_data_file:s0 to u:object_r:radio_data_file:s0 at /data/data/com.android.providers.telephony; running recursive restorecon
+01-01 00:00:27.947   268   268 D installd: Detected label change from u:object_r:system_data_file:s0 to u:object_r:radio_data_file:s0 at /data/user_de/0/com.android.providers.telephony; running recursive restorecon
+01-01 00:00:27.949   268   268 W installd: Requested default storage /data/user_de/0/com.android.providers.telephony is not active; migrating from /data/data/com.android.providers.telephony
+01-01 00:00:27.951   268   268 D installd: Detected label change from u:object_r:system_data_file:s0 to u:object_r:radio_data_file:s0 at /data/data/com.android.providers.telephony; running recursive restorecon
+01-01 00:00:27.956   268   268 D installd: Detected label change from u:object_r:system_data_file:s0 to u:object_r:system_app_data_file:s0 at /data/data/com.fsl.ethernet; running recursive restorecon
+01-01 00:00:27.959   268   268 D installd: Detected label change from u:object_r:system_data_file:s0 to u:object_r:system_app_data_file:s0 at /data/user_de/0/com.fsl.ethernet; running recursive restorecon
+01-01 00:00:27.966   268   268 D installd: Detected label change from u:object_r:system_data_file:s0 to u:object_r:app_data_file:s0:c512,c768 at /data/data/com.android.providers.calendar; running recursive restorecon
+01-01 00:00:27.969   268   268 D installd: Detected label change from u:object_r:system_data_file:s0 to u:object_r:app_data_file:s0:c512,c768 at /data/user_de/0/com.android.providers.calendar; running recursive restorecon
+01-01 00:00:27.976   268   268 D installd: Detected label change from u:object_r:system_data_file:s0 to u:object_r:app_data_file:s0:c512,c768 at /data/data/com.android.providers.media; running recursive restorecon
+01-01 00:00:27.979   268   268 D installd: Detected label change from u:object_r:system_data_file:s0 to u:object_r:app_data_file:s0:c512,c768 at /data/user_de/0/com.android.providers.media; running recursive restorecon
+01-01 00:00:27.987   268   268 D installd: Detected label change from u:object_r:system_data_file:s0 to u:object_r:app_data_file:s0:c512,c768 at /data/data/com.android.wallpapercropper; running recursive restorecon
+01-01 00:00:27.990   268   268 D installd: Detected label change from u:object_r:system_data_file:s0 to u:object_r:app_data_file:s0:c512,c768 at /data/user_de/0/com.android.wallpapercropper; running recursive restorecon
+01-01 00:00:27.996   268   268 D installd: Detected label change from u:object_r:system_data_file:s0 to u:object_r:app_data_file:s0:c512,c768 at /data/data/com.android.launcher; running recursive restorecon
+01-01 00:00:27.999   268   268 D installd: Detected label change from u:object_r:system_data_file:s0 to u:object_r:app_data_file:s0:c512,c768 at /data/user_de/0/com.android.launcher; running recursive restorecon
+01-01 00:00:28.006   268   268 D installd: Detected label change from u:object_r:system_data_file:s0 to u:object_r:app_data_file:s0:c512,c768 at /data/data/com.android.documentsui; running recursive restorecon
+01-01 00:00:28.009   268   268 D installd: Detected label change from u:object_r:system_data_file:s0 to u:object_r:app_data_file:s0:c512,c768 at /data/user_de/0/com.android.documentsui; running recursive restorecon
+01-01 00:00:28.015   268   268 D installd: Detected label change from u:object_r:system_data_file:s0 to u:object_r:app_data_file:s0:c512,c768 at /data/data/com.android.externalstorage; running recursive restorecon
+01-01 00:00:28.018   268   268 D installd: Detected label change from u:object_r:system_data_file:s0 to u:object_r:app_data_file:s0:c512,c768 at /data/user_de/0/com.android.externalstorage; running recursive restorecon
+01-01 00:00:28.025   268   268 D installd: Detected label change from u:object_r:system_data_file:s0 to u:object_r:app_data_file:s0:c512,c768 at /data/data/com.android.htmlviewer; running recursive restorecon
+01-01 00:00:28.028   268   268 D installd: Detected label change from u:object_r:system_data_file:s0 to u:object_r:app_data_file:s0:c512,c768 at /data/user_de/0/com.android.htmlviewer; running recursive restorecon
+01-01 00:00:28.034   268   268 D installd: Detected label change from u:object_r:system_data_file:s0 to u:object_r:app_data_file:s0:c512,c768 at /data/data/com.android.quicksearchbox; running recursive restorecon
+01-01 00:00:28.038   268   268 D installd: Detected label change from u:object_r:system_data_file:s0 to u:object_r:app_data_file:s0:c512,c768 at /data/user_de/0/com.android.quicksearchbox; running recursive restorecon
+01-01 00:00:28.044   268   268 D installd: Detected label change from u:object_r:system_data_file:s0 to u:object_r:radio_data_file:s0 at /data/data/com.android.mms.service; running recursive restorecon
+01-01 00:00:28.047   268   268 D installd: Detected label change from u:object_r:system_data_file:s0 to u:object_r:radio_data_file:s0 at /data/user_de/0/com.android.mms.service; running recursive restorecon
+01-01 00:00:28.053   268   268 D installd: Detected label change from u:object_r:system_data_file:s0 to u:object_r:app_data_file:s0:c512,c768 at /data/data/com.embitel.core; running recursive restorecon
+01-01 00:00:28.056   268   268 D installd: Detected label change from u:object_r:system_data_file:s0 to u:object_r:app_data_file:s0:c512,c768 at /data/user_de/0/com.embitel.core; running recursive restorecon
+01-01 00:00:28.062   268   268 D installd: Detected label change from u:object_r:system_data_file:s0 to u:object_r:app_data_file:s0:c512,c768 at /data/data/com.android.providers.downloads; running recursive restorecon
+01-01 00:00:28.066   268   268 D installd: Detected label change from u:object_r:system_data_file:s0 to u:object_r:app_data_file:s0:c512,c768 at /data/user_de/0/com.android.providers.downloads; running recursive restorecon
+01-01 00:00:28.074   268   268 D installd: Detected label change from u:object_r:system_data_file:s0 to u:object_r:app_data_file:s0:c512,c768 at /data/data/com.embitel^C
+130|toradex_apalis6q:/ # 
+130|toradex_apalis6q:/ # logcat -c
+toradex_apalis6q:/ # toradex_apalis6q:/ # logcat -c                                                    
+^C
+130|toradex_apalis6q:/ # blutype=1400 audit(184.055:40): avc: denied { getattr } for pid=257 comm="sh" path="/system/bin/bluetoothd" dev="mmcblk0p3" ino=245 scontext=u:r:shell:s0 tcontext=u:object_r:bluetoothd_exec:s0 tclass=file permissive=1
+
+bluetoothd          bluetoothd-stype=1400 audit(184.055:41): avc: denied { getattr } for pid=257 comm="sh" path="/system/bin/bluetoothd-snoop" dev="mmcblk0p3" ino=246 scontext=u:r:shell:s0 tcontext=u:object_r:bluetoothd_snoop_exec:s0 tclass=file permissive=1
+noop
+130|toradex_apalis6q:/ # btype=1400 audit(184.055:42): avc: denied { execute } for pid=257 comm="sh" name="bluetoothd" dev="mmcblk0p3" ino=245 scontext=u:r:shell:s0 tcontext=u:object_r:bluetoothd_exec:s0 tclass=file permissive=1
+luetoothd                        type=1400 audit(184.055:43): avc: denied { execute } for pid=257 comm="sh" name="bluetoothd-snoop" dev="mmcblk0p3" ino=246 scontext=u:r:shell:s0 tcontext=u:object_r:bluetoothd_snoop_exec:s0 tclass=file permissive=1
+                    
+bluetoothd          bluetoothd-snoop
+130|toradex_apalis6q:/ # bluetoothd                                                      
+
+U-Boot 2017.03-00002-gebf9dc2527 (Jan 29 2018 - 17:39:17 +0530)
+
+CPU:   Freescale i.MX6Q rev1.5 at 792 MHz
+Reset cause: POR
+I2C:   ready
+DRAM:  2 GiB
+PMIC: device id: 0x10, revision id: 0x21
+PMIC: programmed
+MMC:   FSL_SDHC: 0, FSL_SDHC: 1, FSL_SDHC: 2
+Unable to allocate framebuffer memory
+In:    serial
+Out:   serial
+Err:   serial
+Model: Toradex Apalis iMX6 Quad 2GB IT V1.1C, Serial# 05146387
+flash target is MMC:0
+Net:   using PHY at 7
+FEC [PRIME]
+Fastboot: Normal
+Hit any key to stop autoboot:  1  0 
+Apalis iMX6 # 
+Apalis iMX6 # 
+Apalis iMX6 # bmode usb
+resetting ...
+
+
+U-Boot 2017.03-dirty (Dec 14 2017 - 17:25:07 +0530)
+
+CPU:   Freescale i.MX6Q rev1.5 at 792 MHz
+Reset cause: WDOG
+I2C:   ready
+DRAM:  2 GiB
+PMIC: device id: 0x10, revision id: 0x21
+PMIC: programmed
+MMC:   FSL_SDHC: 0, FSL_SDHC: 1, FSL_SDHC: 2
+auto-detected panel vga-rgb
+Aravinth: Display: vga-rgb (640x480)
+In:    serial
+Out:   serial
+Err:   serial
+Model: Toradex Apalis iMX6 Quad 2GB IT V1.1C, Serial# 05146387
+Net:   using PHY at 7
+FEC [PRIME]
+Boot from USB for mfgtools
+Use default environment for 				 mfgtools
+Run bootcmd_mfg: run mfgtool_args;bootz 0x12000000 0x12C00000 0x18000000;
+Hit any key to stop autoboot:  0 
+Kernel image @ 0x12000000 [ 0x000000 - 0x5f06e8 ]
+## Loading init Ramdisk from Legacy Image at 12c00000 ...
+   Image Name:   fsl-image-mfgtool-initramfs-imx6
+   Image Type:   ARM Linux RAMDisk Image (gzip compressed)
+   Data Size:    8597466 Bytes = 8.2 MiB
+   Load Address: 00000000
+   Entry Point:  00000000
+   Verifying Checksum ... OK
+## Flattened Device Tree blob at 18000000
+   Booting using the fdt blob at 0x18000000
+   Using Device Tree in place at 18000000, end 180102d8
+
+Starting kernel ...
+
+Booting Linux on physical CPU 0x0
+Linux version 4.9.67+ (embadmin@ubuntu) (gcc version 4.9 20150123 (prerelease) (GCC) ) #9 SMP PREEMPT Fri Dec 22 16:56:14 IST 2017
+CPU: ARMv7 Processor [412fc09a] revision 10 (ARMv7), cr=10c5387d
+CPU: PIPT / VIPT nonaliasing data cache, VIPT aliasing instruction cache
+OF: fdt:Machine model: Aravinth Toradex Apalis iMX6Q/D Module on Ixora V1.1 Carrier Board
+cma: Reserved 320 MiB at 0x6c000000
+Memory policy: Data cache writealloc
+percpu: Embedded 14 pages/cpu @daef7000 s25728 r8192 d23424 u57344
+Built 1 zonelists in Zone order, mobility grouping on.  Total pages: 520704
+Kernel command line: console=ttymxc0,115200 rdinit=/linuxrc g_mass_storage.stall=0 g_mass_storage.removable=1 g_mass_storage.file=/fat g_mass_storage.ro=1 g_mass_storage.idVendor=0x066F g_mass_storage.idProduct=0x37FF g_mass_storage.iSerialNumber= enable_wait_mode=off
+PID hash table entries: 4096 (order: 2, 16384 bytes)
+Dentry cache hash table entries: 262144 (order: 8, 1048576 bytes)
+Inode-cache hash table entries: 131072 (order: 7, 524288 bytes)
+Memory: 1728936K/2097152K available (8192K kernel code, 334K rwdata, 2548K rodata, 1024K init, 448K bss, 40536K reserved, 327680K cma-reserved, 262144K highmem)
+Virtual kernel memory layout:
+    vector  : 0xffff0000 - 0xffff1000   (   4 kB)
+    fixmap  : 0xffc00000 - 0xfff00000   (3072 kB)
+    vmalloc : 0xf0800000 - 0xff800000   ( 240 MB)
+    lowmem  : 0x80000000 - 0xf0000000   (1792 MB)
+    pkmap   : 0x7fe00000 - 0x80000000   (   2 MB)
+    modules : 0x7f000000 - 0x7fe00000   (  14 MB)
+      .text : 0x80008000 - 0x80900000   (9184 kB)
+      .init : 0x80c00000 - 0x80d00000   (1024 kB)
+      .data : 0x80d00000 - 0x80d539c0   ( 335 kB)
+       .bss : 0x80d539c0 - 0x80dc3aac   ( 449 kB)
+SLUB: HWalign=64, Order=0-3, MinObjects=0, CPUs=4, Nodes=1
+Preemptible hierarchical RCU implementation.
+	Build-time adjustment of leaf fanout to 32.
+NR_IRQS:16 nr_irqs:16 16
+L2C-310 errata 752271 769419 enabled
+L2C-310 enabling early BRESP for Cortex-A9
+L2C-310 full line of zeros enabled for Cortex-A9
+L2C-310 ID prefetch enabled, offset 16 lines
+L2C-310 dynamic clock gating enabled, standby mode enabled
+L2C-310 cache controller enabled, 16 ways, 1024 kB
+L2C-310: CACHE_ID 0x410000c7, AUX_CTRL 0x76470001
+Switching to timer-based delay loop, resolution 333ns
+sched_clock: 32 bits at 3000kHz, resolution 333ns, wraps every 715827882841ns
+clocksource: mxc_timer1: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 637086815595 ns
+Console: colour dummy device 80x30
+Calibrating delay loop (skipped), value calculated using timer frequency.. 6.00 BogoMIPS (lpj=30000)
+pid_max: default: 32768 minimum: 301
+Mount-cache hash table entries: 4096 (order: 2, 16384 bytes)
+Mountpoint-cache hash table entries: 4096 (order: 2, 16384 bytes)
+CPU: Testing write buffer coherency: ok
+CPU0: update cpu_capacity 1024
+CPU0: thread -1, cpu 0, socket 0, mpidr 80000000
+Setting up static identity map for 0x10100000 - 0x10100070
+CPU1: update cpu_capacity 1024
+CPU1: thread -1, cpu 1, socket 0, mpidr 80000001
+CPU2: update cpu_capacity 1024
+CPU2: thread -1, cpu 2, socket 0, mpidr 80000002
+CPU3: update cpu_capacity 1024
+CPU3: thread -1, cpu 3, socket 0, mpidr 80000003
+Brought up 4 CPUs
+SMP: Total of 4 processors activated (24.00 BogoMIPS).
+CPU: All CPU(s) started in SVC mode.
+devtmpfs: initialized
+VFP support v0.3: implementor 41 architecture 3 part 30 variant 9 rev 4
+clocksource: jiffies: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 19112604462750000 ns
+futex hash table entries: 1024 (order: 4, 65536 bytes)
+pinctrl core: initialized pinctrl subsystem
+NET: Registered protocol family 16
+DMA: preallocated 256 KiB pool for atomic coherent allocations
+cpuidle: using governor menu
+CPU identified as i.MX6Q, silicon rev 1.5
+hw-breakpoint: found 5 (+1 reserved) breakpoint and 1 watchpoint registers.
+hw-breakpoint: maximum watchpoint size is 4 bytes.
+imx6q-pinctrl 20e0000.iomuxc: initialized IMX pinctrl driver
+imx-gpc 20dc000.gpc: no fsl,ldo-bypass found!
+imx-gpc 20dc000.gpc: Registered imx-gpc
+mxs-dma 110000.dma-apbh: initialized
+usb_host_vbus: supplied by usb_host_vbus_hub
+SCSI subsystem initialized
+usbcore: registered new interface driver usbfs
+usbcore: registered new interface driver hub
+usbcore: registered new device driver usb
+2000000.aips-bus:usbphy_nop1 supply vcc not found, using dummy regulator
+2000000.aips-bus:usbphy_nop2 supply vcc not found, using dummy regulator
+i2c i2c-1: IMX I2C adapter registered
+i2c i2c-1: can't use DMA, using PIO instead.
+stmpe-i2c 2-0041: stmpe811 detected, chip id: 0x811
+i2c i2c-2: IMX I2C adapter registered
+i2c i2c-2: can't use DMA, using PIO instead.
+i2c i2c-3: IMX I2C adapter registered
+i2c i2c-3: can't use DMA, using PIO instead.
+Linux video capture interface: v2.00
+pps_core: LinuxPPS API ver. 1 registered
+pps_core: Software ver. 5.3.6 - Copyright 2005-2007 Rodolfo Giometti <giometti@linux.it>
+PTP clock support registered
+imx-ipuv3 2400000.ipu: IPU DMFC NORMAL mode: 1(0~1), 5B(4,5), 5F(6,7)
+imx-ipuv3 2800000.ipu: IPU DMFC NORMAL mode: 1(0~1), 5B(4,5), 5F(6,7)
+imx rpmsg driver is registered.
+Advanced Linux Sound Architecture Driver Initialized.
+clocksource: Switched to clocksource mxc_timer1
+VFS: Disk quotas dquot_6.6.0
+VFS: Dquot-cache hash table entries: 1024 (order 0, 4096 bytes)
+NET: Registered protocol family 2
+TCP established hash table entries: 16384 (order: 4, 65536 bytes)
+TCP bind hash table entries: 16384 (order: 5, 131072 bytes)
+TCP: Hash tables configured (established 16384 bind 16384)
+UDP hash table entries: 1024 (order: 3, 32768 bytes)
+UDP-Lite hash table entries: 1024 (order: 3, 32768 bytes)
+NET: Registered protocol family 1
+RPC: Registered named UNIX socket transport module.
+RPC: Registered udp transport module.
+RPC: Registered tcp transport module.
+RPC: Registered tcp NFSv4.1 backchannel transport module.
+Trying to unpack rootfs image as initramfs...
+Freeing initrd memory: 8400K
+hw perfevents: enabled with armv7_cortex_a9 PMU driver, 7 counters available
+Bus freq driver module loaded
+workingset: timestamp_bits=30 max_order=19 bucket_order=0
+NFS: Registering the id_resolver key type
+Key type id_resolver registered
+Key type id_legacy registered
+jffs2: version 2.2. (NAND) Â© 2001-2006 Red Hat, Inc.
+fuse init (API version 7.26)
+bounce: pool size: 64 pages
+io scheduler noop registered
+io scheduler deadline registered
+io scheduler cfq registered (default)
+backlight supply power not found, using dummy regulator
+Aravinth: mxcfb_probe ---->
+mxc_sdc_fb fb@0: NO mxc display driver found!
+Aravinth: mxcfb_probe ---->
+mxc_sdc_fb fb@1: NO mxc display driver found!
+Aravinth: mxcfb_probe ---->
+mxc_sdc_fb fb@2: registered mxc display driver lcd
+Console: switching to colour frame buffer device 100x30
+Aravinth: mxcfb_probe Done ---->
+Aravinth: mxcfb_probe ---->
+mxc_sdc_fb fb@3: NO mxc display driver found!
+imx-sdma 20ec000.sdma: no iram assigned, using external mem
+imx-sdma 20ec000.sdma: loaded firmware 3.3
+pfuze100-regulator 2-0008: Full layer: 2, Metal layer: 1
+pfuze100-regulator 2-0008: FAB: 0, FIN: 0
+pfuze100-regulator 2-0008: pfuze100 found.
+2020000.serial: ttymxc0 at MMIO 0x2020000 (irq = 29, base_baud = 5000000) is a IMX
+console [ttymxc0] enabled
+21e8000.serial: ttymxc1 at MMIO 0x21e8000 (irq = 78, base_baud = 5000000) is a IMX
+21f0000.serial: ttymxc3 at MMIO 0x21f0000 (irq = 79, base_baud = 5000000) is a IMX
+21f4000.serial: ttymxc4 at MMIO 0x21f4000 (irq = 80, base_baud = 5000000) is a IMX
+imx sema4 driver is registered.
+[drm] Initialized
+[drm] Initialized vivante 1.0.0 20120216 on minor 0
+brd: module loaded
+loop: module loaded
+ahci-imx 2200000.sata: fsl,transmit-level-mV not specified, using 00000024
+ahci-imx 2200000.sata: fsl,transmit-boost-mdB not specified, using 00000480
+ahci-imx 2200000.sata: fsl,transmit-atten-16ths not specified, using 00002000
+ahci-imx 2200000.sata: fsl,receive-eq-mdB not specified, using 05000000
+ahci-imx 2200000.sata: SSS flag set, parallel bus scan disabled
+ahci-imx 2200000.sata: AHCI 0001.0300 32 slots 1 ports 3 Gbps 0x1 impl platform mode
+ahci-imx 2200000.sata: flags: ncq sntf stag pm led clo only pmp pio slum part ccc apst 
+scsi host0: ahci-imx
+ata1: SATA max UDMA/133 mmio [mem 0x02200000-0x02203fff] port 0x100 irq 87
+spi_imx 2008000.ecspi: probed
+libphy: Fixed MDIO Bus: probed
+2188000.ethernet supply phy not found, using dummy regulator
+pps pps0: new PPS source ptp0
+libphy: fec_enet_mii_bus: probed
+fec 2188000.ethernet eth0: registered PHC device 0
+ehci_hcd: USB 2.0 'Enhanced' Host Controller (EHCI) Driver
+ehci-mxc: Freescale On-Chip EHCI Host driver
+usbcore: registered new interface driver usb-storage
+2184800.usbmisc supply vbus-wakeup not found, using dummy regulator
+ci_hdrc ci_hdrc.1: EHCI Host Controller
+ci_hdrc ci_hdrc.1: new USB bus registered, assigned bus number 1
+ci_hdrc ci_hdrc.1: USB 2.0 started, EHCI 1.00
+hub 1-0:1.0: USB hub found
+hub 1-0:1.0: 1 port detected
+Mass Storage Function, version: 2009/09/11
+LUN: removable file: (no medium)
+LUN: removable read only file: /fat
+Number of LUNs=1
+g_mass_storage gadget: Mass Storage Gadget, version: 2009/09/11
+g_mass_storage gadget: g_mass_storage ready
+mousedev: PS/2 mouse device common for all mice
+input: stmpe-ts as /devices/soc0/soc/2100000.aips-bus/21a4000.i2c/i2c-2/2-0041/stmpe-ts/input/input0
+snvs_rtc 20cc000.snvs:snvs-rtc-lp: rtc core: registered 20cc000.snvs:snvs-r as rtc0
+i2c /dev entries driver
+IR NEC protocol handler initialized
+IR RC5(x/sz) protocol handler initialized
+IR RC6 protocol handler initialized
+IR JVC protocol handler initialized
+IR Sony protocol handler initialized
+IR SANYO protocol handler initialized
+IR Sharp protocol handler initialized
+IR MCE Keyboard/mouse protocol handler initialized
+IR XMP protocol handler initialized
+imx2-wdt 20bc000.wdog: timeout 60 sec (nowayout=0)
+sdhci: Secure Digital Host Controller Interface driver
+sdhci: Copyright(c) Pierre Ossman
+sdhci-pltfm: SDHCI platform and OF driver helper
+sdhci-esdhc-imx 2190000.usdhc: could not get ultra high speed state, work on normal mode
+sdhci-esdhc-imx 2190000.usdhc: Got CD GPIO
+ata1: SATA link down (SStatus 0 SControl 300)
+mmc1: SDHCI controller on 2190000.usdhc [2190000.usdhc] using ADMA
+sdhci-esdhc-imx 2198000.usdhc: could not get ultra high speed state, work on normal mode
+ahci-imx 2200000.sata: no device found, disabling link.
+ahci-imx 2200000.sata: pass ahci_imx..hotplug=1 to enable hotplug
+g_mass_storage gadget: high-speed config #1: Linux File-Backed Storage
+mmc0: SDHCI controller on 2198000.usdhc [2198000.usdhc] using ADMA
+random: fast init done
+mxc_vpu 2040000.vpu_fsl: VPU initialized
+mxc_vdoa 21e4000.vdoa: i.MX Video Data Order Adapter(VDOA) driver probed
+usbcore: registered new interface driver usbhid
+usbhid: USB HID core driver
+sgtl5000 2-000a: sgtl5000 revision 0x11
+fsl-ssi-dai 2028000.ssi: No cache defaults, reading back from HW
+usb 1-1: new high-speed USB device number 2 using ci_hdrc
+mmc0: new DDR MMC card at address 0001
+mmcblk0: mmc0:0001 Q2J54A 3.59 GiB 
+mmcblk0boot0: mmc0:0001 Q2J54A partition 1 16.0 MiB
+mmcblk0boot1: mmc0:0001 Q2J54A partition 2 16.0 MiB
+Alternate GPT is invalid, using primary GPT.
+ mmcblk0: p1 p2 p3 p4 p5 p6 p7 p8 p9 p10 p11
+imx-sgtl5000 sound: sgtl5000 <-> 2028000.ssi mapping ok
+imx-spdif sound-spdif: snd-soc-dummy-dai <-> 2004000.spdif mapping ok
+NET: Registered protocol family 10
+sit: IPv6, IPv4 and MPLS over IPv4 tunneling driver
+NET: Registered protocol family 17
+Key type dns_resolver registered
+cpu cpu0: Registered imx6q-cpufreq
+Registering SWP/SWPB emulation handler
+imx_thermal 2000000.aips-bus:tempmon: Industrial CPU temperature grade - max:105C critical:100C passive:95C
+hub 1-1:1.0: USB hub found
+hub 1-1:1.0: 4 ports detected
+input: gpio-keys as /devices/soc0/gpio-keys/input/input1
+snvs_rtc 20cc000.snvs:snvs-rtc-lp: setting system clock to 1970-01-01 00:00:00 UTC (0)
+usb_otg_vbus: disabling
+ALSA device list:
+  #0: imx6q-apalis-sgtl5000
+  #1: imx-spdif
+Freeing unused kernel memory: 1024K
+Starting UTP
+uuc 0.5 [built Apr 27 2017 13:40:16]
+UTP: Waiting for device to appear
+UTP: file/device node /dev/utp already exists
+cpu_id is 0
+UTP: received command '$ while [ ! -e /dev/mmcblk0 ]; do sleep 1; echo waiting...; done '
+UTP: executing "while [ ! -e /dev/mmcblk0 ]; do sleep 1; echo waiting...; done "
+UTP: sending Success to kernel for command $ while [ ! -e /dev/mmcblk0 ]; do sleep 1; echo waiting...; done .
+utp_poll: pass returned.
+UTP: received command '$ ls -l /dev/mmc* '
+UTP: executing "ls -l /dev/mmc* "
+brw------- 1 root root 179,  0 Jan  1 00:00 /dev/mmcblk0
+brw------- 1 root root 179, 16 Jan  1 00:00 /dev/mmcblk0boot0
+brw------- 1 root root 179, 32 Jan  1 00:00 /dev/mmcblk0boot1
+brw------- 1 root root 179,  1 Jan  1 00:00 /dev/mmcblk0p1
+brw------- 1 root root 179, 10 Jan  1 00:00 /dev/mmcblk0p10
+brw------- 1 root root 179, 11 Jan  1 00:00 /dev/mmcblk0p11
+brw------- 1 root root 179,  2 Jan  1 00:00 /dev/mmcblk0p2
+brw------- 1 root root 179,  3 Jan  1 00:00 /dev/mmcblk0p3
+brw------- 1 root root 179,  4 Jan  1 00:00 /dev/mmcblk0p4
+brw------- 1 root root 179,  5 Jan  1 00:00 /dev/mmcblk0p5
+brw------- 1 root root 179,  6 Jan  1 00:00 /dev/mmcblk0p6
+brw------- 1 root root 179,  7 Jan  1 00:00 /dev/mmcblk0p7
+brw------- 1 root root 179,  8 Jan  1 00:00 /dev/mmcblk0p8
+brw------- 1 root root 179,  9 Jan  1 00:00 /dev/mmcblk0p9
+UTP: sending Success to kernel for command $ ls -l /dev/mmc* .
+utp_poll: pass returned.
+UTP: received command '$ dd if=/dev/zero of=/dev/mmcblk0 bs=1k seek=768 conv=fsync count=136'
+UTP: executing "dd if=/dev/zero of=/dev/mmcblk0 bs=1k seek=768 conv=fsync count=136"
+136+0 records in
+136+0 records out
+139264 bytes (139 kB, 136 KiB) copied, 0.222446 s, 626 kB/s
+UTP: sending Success to kernel for command $ dd if=/dev/zero of=/dev/mmcblk0 bs=1k seek=768 conv=fsync count=1utp_poll: pass returned.
+36.
+UTP: received command '$ echo 0 > /sys/block/mmcblk0boot0/force_ro'
+UTP: executing "echo 0 > /sys/block/mmcblk0boot0/force_ro"
+UTP: sending Success to kernel for command $ echo 0 > /sys/block/mmcblk0boot0/force_ro.
+utp_poll: pass returned.
+UTP: received command 'send'
+UTP: sending Success to kernel for command send.
+UTP: received command '$ dd if=$FILE of=/dev/mmcblk0boot0 bs=512 seek=2'
+UTP: executing "dd if=$FILE of=/dev/mmcblk0boot0 bs=512 seek=2"
+686+0 records in
+686+0 records out
+351232 bytes (351 kB, 343 KiB) copied, 0.137279 s, 2.6 MB/s
+UTP: sending Success to kernel for command $ dd if=$FILE of=/dev/mmcblk0boot0 bs=512 seek=2.
+utp_poll: pass returned.
+UTP: received command '$ echo 1 > /sys/block/mmcblk0boot0/force_ro'
+UTP: executing "echo 1 > /sys/block/mmcblk0boot0/force_ro"
+UTP: sending Success to kernel for command $ echo 1 > /sys/block/mmcblk0boot0/force_ro.
+utp_poll: pass returned.
+UTP: received command '$ mmc bootpart enable 1 1 /dev/mmcblk0'
+UTP: executing "mmc bootpart enable 1 1 /dev/mmcblk0"
+UTP: sending Success to kernel for command $ mmc bootpart enable 1 1 /dev/mmcblk0.
+utp_poll: pass returned.
+UTP: received command '$ ls -l /dev/mmc* '
+UTP: executing "ls -l /dev/mmc* "
+brw------- 1 root root 179,  0 Jan  1 00:00 /dev/mmcblk0
+brw------- 1 root root 179, 16 Jan  1 00:00 /dev/mmcblk0boot0
+brw------- 1 root root 179, 32 Jan  1 00:00 /dev/mmcblk0boot1
+brw------- 1 root root 179,  1 Jan  1 00:00 /dev/mmcblk0p1
+brw------- 1 root root 179, 10 Jan  1 00:00 /dev/mmcblk0p10
+brw------- 1 root root 179, 11 Jan  1 00:00 /dev/mmcblk0p11
+brw------- 1 root root 179,  2 Jan  1 00:00 /dev/mmcblk0p2
+brw------- 1 root root 179,  3 Jan  1 00:00 /dev/mmcblk0p3
+brw------- 1 root root 179,  4 Jan  1 00:00 /dev/mmcblk0p4
+brw------- 1 root root 179,  5 Jan  1 00:00 /dev/mmcblk0p5
+brw------- 1 root root 179,  6 Jan  1 00:00 /dev/mmcblk0p6
+brw------- 1 root root 179,  7 Jan  1 00:00 /dev/mmcblk0p7
+brw------- 1 root root 179,  8 Jan  1 00:00 /dev/mmcblk0p8
+brw------- 1 root root 179,  9 Jan  1 00:00 /dev/mmcblk0p9
+UTP: sending Success to kernel for command $ ls -l /dev/mmc* .
+utp_poll: pass returned.
+UTP: received command 'send'
+UTP: sending Success to kernel for command send.
+UTP: received command '$ dd if=$FILE of=/dev/mmcblk0'
+UTP: executing "dd if=$FILE of=/dev/mmcblk0"
+67+0 records in
+67+0 records out
+34304 bytes (34 kB, 34 KiB) copied, 0.0149653 s, 2.3 MB/s
+UTP: sending Success to kernel for command $ dd if=$FILE of=/dev/mmcblk0.
+utp_poll: pass returned.
+UTP: received command '$ hdparm -z /dev/mmcblk0'
+UTP: executing "hdparm -z /dev/mmcblk0"
+
+/dev/mmcblk0:
+ re-reading partition table
+Alternate GPT is invalid, using primary GPT.
+ mmcblk0: p1 p2 p3 p4 p5 p6 p7 p8 p9 p10 p11
+UTP: sending Success to kernel for command $ hdparm -z /dev/mmcblk0.
+utp_poll: pass returned.
+UTP: received command '$ gdisk -l /dev/mmcblk0 '
+UTP: executing "gdisk -l /dev/mmcblk0 "
+GPT fdisk (gdisk) version 1.0.1
+
+Caution: invalid backup GPT header, but valid main header; regenerating
+backup header from main header.
+
+Warning! One or more CRCs don't match. You should repair the disk!
+
+Partition table scan:
+  MBR: protective
+  BSD: not present
+  APM: not present
+  GPT: damaged
+
+****************************************************************************
+Caution: Found protective or hybrid MBR and corrupt GPT. Using GPT, but disk
+verification and recovery are STRONGLY recommended.
+****************************************************************************
+Disk /dev/mmcblk0: 7520256 sectors, 3.6 GiB
+Logical sector size: 512 bytes
+Disk identifier (GUID): 19AB8570-19A3-4674-855A-1E10511C9045
+Partition table holds up to 128 entries
+First usable sector is 34, last usable sector is 7339998
+Partitions will be aligned on 2048-sector boundaries
+Total free space is 4029 sectors (2.0 MiB)
+
+Number  Start (sector)    End (sector)  Size       Code  Name
+   1            2048           67583   32.0 MiB    FFFF  boot
+   2           67584          133119   32.0 MiB    8300  recovery
+   3          133120         3278847   1.5 GiB     FFFF  system
+   4         3278848         4327423   512.0 MiB   FFFF  cache
+   5         4327424         4343807   8.0 MiB     FFFF  device
+   6         4343808         4351999   4.0 MiB     FFFF  misc
+   7         4352000         4356095   2.0 MiB     FFFF  datafooter
+   8         4356096         4360191   2.0 MiB     FFFF  metadata
+   9         4360192         4362239   1024.0 KiB  FFFF  presistdata
+  10         4362240         7335935   1.4 GiB     FFFF  userdata
+  11         7335936         7337983   1024.0 KiB  0700  fbmisc
+UTP: sending Success to kernel for command $ gdisk -l /dev/mmcblk0 .
+utp_poll: pass returned.
+UTP: received command 'send'
+UTP: sending Success to kernel for command send.
+UTP: received command '$ echo `gdisk -l /dev/mmcblk0 | grep -w boot | awk '{print $1}'` > /tmp/partIdx'
+UTP: executing "echo `gdisk -l /dev/mmcblk0 | grep -w boot | awk '{print $1}'` > /tmp/partIdx"
+Caution: invalid backup GPT header, but valid main header; regenerating
+backup header from main header.
+
+Warning! One or more CRCs don't match. You should repair the disk!
+
+UTP: sending Success to kernel for command $ echo `gdisk -l /dev/mmcblk0 | grep -w boot | awk '{print $1}'` > /tmp/partIdx.
+utp_poll: pass returned.
+UTP: received command '$ dd if=$FILE of=/dev/mmcblk0p`cat /tmp/partIdx`'
+UTP: executing "dd if=$FILE of=/dev/mmcblk0p`cat /tmp/partIdx`"
+22678+1 records in
+22678+1 records out
+11611432 bytes (12 MB, 11 MiB) copied, 1.84446 s, 6.3 MB/s
+UTP: sending Success to kernel for command $ dd if=$FILE of=/dev/mmcblk0p`cat /tmp/partIdx`.
+utp_poll: pass returned.
+UTP: received command '$ ls -l /dev/mmc* '
+UTP: executing "ls -l /dev/mmc* "
+brw------- 1 root root 179,  0 Jan  1 00:00 /dev/mmcblk0
+brw------- 1 root root 179, 16 Jan  1 00:00 /dev/mmcblk0boot0
+brw------- 1 root root 179, 32 Jan  1 00:00 /dev/mmcblk0boot1
+brw------- 1 root root 179,  1 Jan  1 00:00 /dev/mmcblk0p1
+brw------- 1 root root 179, 10 Jan  1 00:00 /dev/mmcblk0p10
+brw------- 1 root root 179, 11 Jan  1 00:00 /dev/mmcblk0p11
+brw------- 1 root root 179,  2 Jan  1 00:00 /dev/mmcblk0p2
+brw------- 1 root root 179,  3 Jan  1 00:00 /dev/mmcblk0p3
+brw------- 1 root root 179,  4 Jan  1 00:00 /dev/mmcblk0p4
+brw------- 1 root root 179,  5 Jan  1 00:00 /dev/mmcblk0p5
+brw------- 1 root root 179,  6 Jan  1 00:00 /dev/mmcblk0p6
+brw------- 1 root root 179,  7 Jan  1 00:00 /dev/mmcblk0p7
+brw------- 1 root root 179,  8 Jan  1 00:00 /dev/mmcblk0p8
+brw------- 1 root root 179,  9 Jan  1 00:00 /dev/mmcblk0p9
+UTP: sending Success to kernel for command $ ls -l /dev/mmc* .
+utp_poll: pass returned.
+UTP: received command '$ echo `gdisk -l /dev/mmcblk0 | grep -w cache | awk '{print $1}'` > /tmp/partIdx'
+UTP: executing "echo `gdisk -l /dev/mmcblk0 | grep -w cache | awk '{print $1}'` > /tmp/partIdx"
+Caution: invalid backup GPT header, but valid main header; regenerating
+backup header from main header.
+
+Warning! One or more CRCs don't match. You should repair the disk!
+
+UTP: sending Success to kernel for command $ echo `gdisk -l /dev/mmcblk0 | grep -w cache | awk '{print $1}'` > /tmp/partIdx.
+utp_poll: pass returned.
+UTP: received command '$ mkfs.ext4 -F -E nodiscard /dev/mmcblk0p`cat /tmp/partIdx`'
+UTP: executing "mkfs.ext4 -F -E nodiscard /dev/mmcblk0p`cat /tmp/partIdx`"
+mke2fs 1.43 (17-May-2016)
+/dev/mmcblk0p4 contains a ext4 file system
+	last mounted on Thu Jan  1 00:00:06 1970
+Creating filesystem with 131072 4k blocks and 32768 inodes
+Filesystem UUID: 74a9a00e-3f96-4eeb-a4b8-c4198ad1cace
+Superblock backups stored on blocks: 
+	32768, 98304
+
+Allocating group tables: 0/4   done                            
+Writing inode tables: 0/4   done                            
+Creating journal (4096 blocks): done
+Writing superblocks and filesystem accounting information: 0/4   done
+
+UTP: sending Success to kernel for command $ mkfs.ext4 -F -E nodiscard /dev/mmcblk0p`cat /tmp/partIdx`.
+utp_poll: pass returned.
+UTP: received command '$ echo `gdisk -l /dev/mmcblk0 | grep -w device | awk '{print $1}'` > /tmp/partIdx'
+UTP: executing "echo `gdisk -l /dev/mmcblk0 | grep -w device | awk '{print $1}'` > /tmp/partIdx"
+Caution: invalid backup GPT header, but valid main header; regenerating
+backup header from main header.
+
+Warning! One or more CRCs don't match. You should repair the disk!
+
+UTP: sending Success to kernel for command $ echo `gdisk -l /dev/mmcblk0 | grep -w device | awk '{print $1}'` > /tmp/partIdx.
+utp_poll: pass returned.
+UTP: received command '$ mkfs.ext4 -F -E nodiscard /dev/mmcblk0p`cat /tmp/partIdx`'
+UTP: executing "mkfs.ext4 -F -E nodiscard /dev/mmcblk0p`cat /tmp/partIdx`"
+mke2fs 1.43 (17-May-2016)
+/dev/mmcblk0p5 contains a ext4 file system
+	created on Thu Jan  1 00:00:11 1970
+Creating filesystem with 8192 1k blocks and 2048 inodes
+
+Allocating group tables: 0/1   done                            
+Writing inode tables: 0/1   done                            
+Creating journal (1024 blocks): done
+Writing superblocks and filesystem accounting information: 0/1   done
+
+UTP: sending Success to kernel for command $ mkfs.ext4 -F -E nodiscard /dev/mmcblk0p`cat /tmp/partIdx`.
+utp_poll: pass returned.
+UTP: received command '$ echo `gdisk -l /dev/mmcblk0 | grep -w userdata | awk '{print $1}'` > /tmp/partIdx'
+UTP: executing "echo `gdisk -l /dev/mmcblk0 | grep -w userdata | awk '{print $1}'` > /tmp/partIdx"
+Caution: invalid backup GPT header, but valid main header; regenerating
+backup header from main header.
+
+Warning! One or more CRCs don't match. You should repair the disk!
+
+UTP: sending Success to kernel for command $ echo `gdisk -l /dev/mmcblk0 | grep -w userdata | awk '{print $1}'` > /tmp/partIdx.
+utp_poll: pass returned.
+UTP: received command '$ mkfs.ext4 -F -E nodiscard -b 4096 -m 0 -O ^flex_bg,^uninit_bg /dev/mmcblk0p`cat /tmp/partIdx`'
+UTP: executing "mkfs.ext4 -F -E nodiscard -b 4096 -m 0 -O ^flex_bg,^uninit_bg /dev/mmcblk0p`cat /tmp/partIdx`"
+mke2fs 1.43 (17-May-2016)
+/dev/mmcblk0p10 contains a ext4 file system
+	last mounted on /data on Thu Jan  1 00:00:06 1970
+Creating filesystem with 371712 4k blocks and 92928 inodes
+Filesystem UUID: 973dabce-9331-4ccc-9038-dce245efbbe0
+Superblock backups stored on blocks: 
+	32768, 98304, 163840, 229376, 294912
+
+Allocating group tables:  0/12     done                            
+Writing inode tables:  0/12     done                            
+Creating journal (8192 blocks): done
+Writing superblocks and filesystem accounting information:  0/12     done
+
+UTP: sending Success to kernel for command $ mkfs.ext4 -F -E nodiscard -b 4096 -m 0 -O ^flex_bg,^uninit_bg /dev/mmcblk0p`cat /tmp/partIdx`.
+utp_poll: pass returned.
+UTP: received command '$ mount -o remount,size=1024M rootfs /'
+UTP: executing "mount -o remount,size=1024M rootfs /"
+UTP: sending Success to kernel for command $ mount -o remount,size=1024M rootfs /.
+utp_poll: pass returned.
+UTP: received command 'send'
+UTP: sending Success to kernel for command send.
+random: crng init done
+UTP: received command '$ echo `gdisk -l /dev/mmcblk0 | grep -w system | awk '{print $1}'` > /tmp/partIdx'
+UTP: executing "echo `gdisk -l /dev/mmcblk0 | grep -w system | awk '{print $1}'` > /tmp/partIdx"
+Caution: invalid backup GPT header, but valid main header; regenerating
+backup header from main header.
+
+Warning! One or more CRCs don't match. You should repair the disk!
+
+UTP: sending Success to kernel for command $ echo `gdisk -l /dev/mmcblk0 | grep -w system | awk '{print $1}'` > /tmp/partIdx.
+utp_poll: pass returned.
+UTP: received command '$ simg2img $FILE /dev/mmcblk0p`cat /tmp/partIdx`'
+UTP: executing "simg2img $FILE /dev/mmcblk0p`cat /tmp/partIdx`"

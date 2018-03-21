@@ -1,0 +1,3433 @@
+
+
+U-Boot 2017.03-00001-g610928540e-dirty (Dec 28 2017 - 14:21:59 +0530)
+
+CPU:   Freescale i.MX6Q rev1.5 at 792 MHz
+Reset cause: POR
+I2C:   ready
+DRAM:  2 GiB
+PMIC: device id: 0x10, revision id: 0x21
+PMIC: programmed
+MMC:   FSL_SDHC: 0, FSL_SDHC: 1, FSL_SDHC: 2
+auto-detected panel HDMI
+Aravinth: Display: HDMI (1024x768)
+In:    serial
+Out:   serial
+Err:   serial
+Model: Toradex Apalis iMX6 Quad 2GB IT V1.1C, Serial# 05146387
+flash target is MMC:0
+Net:   using PHY at 7
+FEC [PRIME]
+Fastboot: Normal
+Hit any key to stop autoboot:  1  0 
+boota mmc0 
+CACHE: Misaligned operation at range [8ffb70a0, 8ffb7120]
+CACHE: Misaligned operation at range [8ffb70a0, 8ffb7120]
+kernel   @ 14008000 (9802376)
+ramdisk  @ 15000000 (1628386)
+fdt      @ 14f00000 (53977)
+## Booting Android Image at 0x12000000 ...
+Kernel load addr 0x14008000 size 9573 KiB
+Kernel command line: console=ttymxc0,115200 init=/init video=mxcfb0:dev=ldb,fbpix=RGB32,bpp=32 video=mxcfb1:dev=hdmi,640x480M@60,if=RGB24,bpp=16 video=mxcfb2:off video=mxcfb3:off vmalloc=256M androidboot.console=ttymxc0 consoleblank=0 androidboot.hardware=freescale cma=448M androidboot.selinux=permissive androidboot.dm_verity=disabled buildvariant=user androidboot.serialno=1b2429d4ea997115 androidboot.storage_type=emmc
+## Flattened Device Tree blob at 14f00000
+   Booting using the fdt blob at 0x14f00000
+   Loading Kernel Image ... OK
+   Using Device Tree in place at 14f00000, end 14f102d8
+
+Starting kernel ...
+
+Booting Linux on physical CPU 0x0
+Linux version 4.9.67-07229-gdc6c16ec0433-dirty (embadmin@ubuntu) (gcc version 4.9 20150123 (prerelease) (GCC) ) #15 SMP PREEMPT Wed Dec 27 15:15:47 IST 2017
+CPU: ARMv7 Processor [412fc09a] revision 10 (ARMv7), cr=10c53c7d
+CPU: PIPT / VIPT nonaliasing data cache, VIPT aliasing instruction cache
+OF: fdt:Machine model: Aravinth :UJET Toradex Apalis iMX6Q/D Module on Ixora V1.1 Carrier Board
+cma: Reserved 448 MiB at 0x22000000
+Memory policy: Data cache writealloc
+percpu: Embedded 15 pages/cpu @ee6b3000 s31040 r8192 d22208 u61440
+Built 1 zonelists in Zone order, mobility grouping on.  Total pages: 522768
+Kernel command line: console=ttymxc0,115200 init=/init video=mxcfb0:dev=ldb,fbpix=RGB32,bpp=32 video=mxcfb1:dev=hdmi,640x480M@60,if=RGB24,bpp=16 video=mxcfb2:off video=mxcfb3:off vmalloc=256M androidboot.console=ttymxc0 consoleblank=0 androidboot.hardware=freescale cma=448M androidboot.selinux=permissive androidboot.dm_verity=disabled buildvariant=user androidboot.serialno=1b2429d4ea997115 androidboot.storage_type=emmc
+PID hash table entries: 4096 (order: 2, 16384 bytes)
+Dentry cache hash table entries: 131072 (order: 7, 524288 bytes)
+Inode-cache hash table entries: 65536 (order: 6, 262144 bytes)
+Memory: 1597048K/2097152K available (13312K kernel code, 1128K rwdata, 4016K rodata, 1024K init, 606K bss, 41352K reserved, 458752K cma-reserved, 1318912K highmem)
+Virtual kernel memory layout:
+    vector  : 0xffff0000 - 0xffff1000   (   4 kB)
+    fixmap  : 0xffc00000 - 0xfff00000   (3072 kB)
+    vmalloc : 0xf0000000 - 0xff800000   ( 248 MB)
+    lowmem  : 0xc0000000 - 0xef800000   ( 760 MB)
+    pkmap   : 0xbfe00000 - 0xc0000000   (   2 MB)
+    modules : 0xbf000000 - 0xbfe00000   (  14 MB)
+      .text : 0xc0008000 - 0xc0e00000   (14304 kB)
+      .init : 0xc1300000 - 0xc1400000   (1024 kB)
+      .data : 0xc1400000 - 0xc151a218   (1129 kB)
+       .bss : 0xc151a218 - 0xc15b1be0   ( 607 kB)
+SLUB: HWalign=64, Order=0-3, MinObjects=0, CPUs=4, Nodes=1
+Preemptible hierarchical RCU implementation.
+	Build-time adjustment of leaf fanout to 32.
+NR_IRQS:16 nr_irqs:16 16
+L2C-310 errata 752271 769419 enabled
+L2C-310 enabling early BRESP for Cortex-A9
+L2C-310 full line of zeros enabled for Cortex-A9
+L2C-310 ID prefetch enabled, offset 16 lines
+L2C-310 dynamic clock gating enabled, standby mode enabled
+L2C-310 cache controller enabled, 16 ways, 1024 kB
+L2C-310: CACHE_ID 0x410000c7, AUX_CTRL 0x76470001
+Switching to timer-based delay loop, resolution 333ns
+sched_clock: 32 bits at 3000kHz, resolution 333ns, wraps every 715827882841ns
+clocksource: mxc_timer1: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 637086815595 ns
+Console: colour dummy device 80x30
+Calibrating delay loop (skipped), value calculated using timer frequency.. 6.00 BogoMIPS (lpj=30000)
+pid_max: default: 32768 minimum: 301
+Security Framework initialized
+SELinux:  Initializing.
+Mount-cache hash table entries: 2048 (order: 1, 8192 bytes)
+Mountpoint-cache hash table entries: 2048 (order: 1, 8192 bytes)
+CPU: Testing write buffer coherency: ok
+CPU0: update cpu_capacity 1024
+CPU0: thread -1, cpu 0, socket 0, mpidr 80000000
+Setting up static identity map for 0x10100000 - 0x10100058
+CPU1: update cpu_capacity 1024
+CPU1: thread -1, cpu 1, socket 0, mpidr 80000001
+CPU2: update cpu_capacity 1024
+CPU2: thread -1, cpu 2, socket 0, mpidr 80000002
+CPU3: update cpu_capacity 1024
+CPU3: thread -1, cpu 3, socket 0, mpidr 80000003
+Brought up 4 CPUs
+SMP: Total of 4 processors activated (24.00 BogoMIPS).
+CPU: All CPU(s) started in SVC mode.
+CPU3: update max cpu_capacity 1024
+devtmpfs: initialized
+CPU2: update max cpu_capacity 1024
+VFP support v0.3: implementor 41 architecture 3 part 30 variant 9 rev 4
+clocksource: jiffies: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 19112604462750000 ns
+futex hash table entries: 1024 (order: 4, 65536 bytes)
+pinctrl core: initialized pinctrl subsystem
+NET: Registered protocol family 16
+DMA: preallocated 256 KiB pool for atomic coherent allocations
+cpuidle: using governor menu
+CPU identified as i.MX6Q, silicon rev 1.5
+hw-breakpoint: found 5 (+1 reserved) breakpoint and 1 watchpoint registers.
+hw-breakpoint: maximum watchpoint size is 4 bytes.
+imx6q-pinctrl 20e0000.iomuxc: initialized IMX pinctrl driver
+imx-gpc 20dc000.gpc: no fsl,ldo-bypass found!
+imx-gpc 20dc000.gpc: Registered imx-gpc
+mxs-dma 110000.dma-apbh: initialized
+usb_host_vbus: supplied by usb_host_vbus_hub
+SCSI subsystem initialized
+usbcore: registered new interface driver usbfs
+usbcore: registered new interface driver hub
+usbcore: registered new device driver usb
+2000000.aips-bus:usbphy_nop1 supply vcc not found, using dummy regulator
+2000000.aips-bus:usbphy_nop2 supply vcc not found, using dummy regulator
+i2c i2c-1: IMX I2C adapter registered
+i2c i2c-1: can't use DMA, using PIO instead.
+stmpe-i2c 2-0041: stmpe811 detected, chip id: 0x811
+i2c i2c-2: IMX I2C adapter registered
+i2c i2c-2: can't use DMA, using PIO instead.
+i2c i2c-3: IMX I2C adapter registered
+i2c i2c-3: can't use DMA, using PIO instead.
+Linux video capture interface: v2.00
+pps_core: LinuxPPS API ver. 1 registered
+pps_core: Software ver. 5.3.6 - Copyright 2005-2007 Rodolfo Giometti <giometti@linux.it>
+PTP clock support registered
+imx-ipuv3 2400000.ipu: IPU DMFC NORMAL mode: 1(0~1), 5B(4,5), 5F(6,7)
+imx-ipuv3 2800000.ipu: IPU DMFC NORMAL mode: 1(0~1), 5B(4,5), 5F(6,7)
+mxc_mipi_csi2 21dc000.mipi_csi: i.MX MIPI CSI2 driver probed ipu0 csi1
+mxc_mipi_csi2 21dc000.mipi_csi: i.MX MIPI CSI2 dphy version is 0x3130302a
+MIPI CSI2 driver module loaded
+imx rpmsg driver is registered.
+Advanced Linux Sound Architecture Driver Initialized.
+Bluetooth: Core ver 2.22
+NET: Registered protocol family 31
+Bluetooth: HCI device and connection manager initialized
+Bluetooth: HCI socket layer initialized
+Bluetooth: L2CAP socket layer initialized
+Bluetooth: SCO socket layer initialized
+clocksource: Switched to clocksource mxc_timer1
+VFS: Disk quotas dquot_6.6.0
+VFS: Dquot-cache hash table entries: 1024 (order 0, 4096 bytes)
+NET: Registered protocol family 2
+TCP established hash table entries: 8192 (order: 3, 32768 bytes)
+TCP bind hash table entries: 8192 (order: 4, 65536 bytes)
+TCP: Hash tables configured (established 8192 bind 8192)
+UDP hash table entries: 512 (order: 2, 16384 bytes)
+UDP-Lite hash table entries: 512 (order: 2, 16384 bytes)
+NET: Registered protocol family 1
+RPC: Registered named UNIX socket transport module.
+RPC: Registered udp transport module.
+RPC: Registered tcp transport module.
+RPC: Registered tcp NFSv4.1 backchannel transport module.
+Trying to unpack rootfs image as initramfs...
+Freeing initrd memory: 1592K
+hw perfevents: enabled with armv7_cortex_a9 PMU driver, 7 counters available
+Bus freq driver module loaded
+audit: initializing netlink subsys (disabled)
+audit: type=2000 audit(0.870:1): initialized
+workingset: timestamp_bits=30 max_order=19 bucket_order=0
+NFS: Registering the id_resolver key type
+Key type id_resolver registered
+Key type id_legacy registered
+ntfs: driver 2.1.32 [Flags: R/W DEBUG].
+jffs2: version 2.2. (NAND) © 2001-2006 Red Hat, Inc.
+fuse init (API version 7.26)
+bounce: pool size: 64 pages
+io scheduler noop registered
+io scheduler deadline registered
+io scheduler cfq registered (default)
+backlight supply power not found, using dummy regulator
+20e0000.hdmi_video supply HDMI not found, using dummy regulator
+mxc_sdc_fb fb@0: registered mxc display driver ldb
+imx-ipuv3 2800000.ipu: IPU DMFC DP HIGH RESOLUTION: 1(0,1), 5B(2~5), 5F(6,7)
+Console: switching to colour frame buffer device 128x48
+mxc_hdmi 20e0000.hdmi_video: Detected HDMI controller 0x13:0xa:0xa0:0xc1
+fbcvt: 640x480@60: CVT Name - .307M3
+mxc_sdc_fb fb@1: registered mxc display driver hdmi
+mxc_sdc_fb fb@2: Can't get fb option for mxcfb2!
+mxc_sdc_fb fb@3: Can't get fb option for mxcfb3!
+imx-sdma 20ec000.sdma: no iram assigned, using external mem
+imx-sdma 20ec000.sdma: loaded firmware 3.3
+pfuze100-regulator 2-0008: Full layer: 2, Metal layer: 1
+pfuze100-regulator 2-0008: FAB: 0, FIN: 0
+pfuze100-regulator 2-0008: pfuze100 found.
+mxc_hdmi 20e0000.hdmi_video: Read EDID again
+2020000.serial: ttymxc0 at MMIO 0x2020000 (irq = 29, base_baud = 5000000) is a IMX
+mxc_hdmi 20e0000.hdmi_video: create default modelist
+console [ttymxc0] enabled
+21e8000.serial: ttymxc1 at MMIO 0x21e8000 (irq = 78, base_baud = 5000000) is a IMX
+21f0000.serial: ttymxc3 at MMIO 0x21f0000 (irq = 79, base_baud = 5000000) is a IMX
+21f4000.serial: ttymxc4 at MMIO 0x21f4000 (irq = 80, base_baud = 5000000) is a IMX
+imx sema4 driver is registered.
+[drm] Initialized
+[drm] Initialized vivante 1.0.0 20120216 on minor 0
+brd: module loaded
+loop: module loaded
+zram: Added device: zram0
+ahci-imx 2200000.sata: fsl,transmit-level-mV not specified, using 00000024
+ahci-imx 2200000.sata: fsl,transmit-boost-mdB not specified, using 00000480
+ahci-imx 2200000.sata: fsl,transmit-atten-16ths not specified, using 00002000
+ahci-imx 2200000.sata: fsl,receive-eq-mdB not specified, using 05000000
+ahci-imx 2200000.sata: SSS flag set, parallel bus scan disabled
+ahci-imx 2200000.sata: AHCI 0001.0300 32 slots 1 ports 3 Gbps 0x1 impl platform mode
+ahci-imx 2200000.sata: flags: ncq sntf stag pm led clo only pmp pio slum part ccc apst 
+scsi host0: ahci-imx
+ata1: SATA max UDMA/133 mmio [mem 0x02200000-0x02203fff] port 0x100 irq 87
+spi_imx 2008000.ecspi: probed
+libphy: Fixed MDIO Bus: probed
+tun: Universal TUN/TAP device driver, 1.6
+tun: (C) 1999-2004 Max Krasnyansky <maxk@qualcomm.com>
+CAN device driver interface
+2090000.flexcan supply xceiver not found, using dummy regulator
+flexcan 2090000.flexcan: device registered (reg_base=f02f4000, irq=38)
+2094000.flexcan supply xceiver not found, using dummy regulator
+flexcan 2094000.flexcan: device registered (reg_base=f02fc000, irq=39)
+2188000.ethernet supply phy not found, using dummy regulator
+pps pps0: new PPS source ptp0
+libphy: fec_enet_mii_bus: probed
+fec 2188000.ethernet eth0: registered PHC device 0
+PPP generic driver version 2.4.2
+PPP BSD Compression module registered
+PPP Deflate Compression module registered
+PPP MPPE Compression module registered
+NET: Registered protocol family 24
+usbcore: registered new interface driver kaweth
+pegasus: v0.9.3 (2013/04/25), Pegasus/Pegasus II USB Ethernet driver
+usbcore: registered new interface driver pegasus
+usbcore: registered new interface driver rtl8150
+usbcore: registered new interface driver r8152
+usbcore: registered new interface driver asix
+usbcore: registered new interface driver ax88179_178a
+usbcore: registered new interface driver cdc_ether
+usbcore: registered new interface driver cdc_eem
+usbcore: registered new interface driver net1080
+usbcore: registered new interface driver cdc_subset
+usbcore: registered new interface driver zaurus
+usbcore: registered new interface driver cdc_ncm
+ehci_hcd: USB 2.0 'Enhanced' Host Controller (EHCI) Driver
+ehci-mxc: Freescale On-Chip EHCI Host driver
+usbcore: registered new interface driver cdc_acm
+cdc_acm: USB Abstract Control Model driver for USB modems and ISDN adapters
+usbcore: registered new interface driver usb-storage
+usbcore: registered new interface driver usbserial
+usbcore: registered new interface driver usbserial_generic
+usbserial: USB Serial support registered for generic
+usbcore: registered new interface driver ftdi_sio
+usbserial: USB Serial support registered for FTDI USB Serial Device
+usbcore: registered new interface driver option
+usbserial: USB Serial support registered for GSM modem (1-port)
+usbcore: registered new interface driver usbtest
+usbcore: registered new interface driver usb_ehset_test
+2184800.usbmisc supply vbus-wakeup not found, using dummy regulator
+ci_hdrc ci_hdrc.1: EHCI Host Controller
+ci_hdrc ci_hdrc.1: new USB bus registered, assigned bus number 1
+ci_hdrc ci_hdrc.1: USB 2.0 started, EHCI 1.00
+usb usb1: New USB device found, idVendor=1d6b, idProduct=0002
+usb usb1: New USB device strings: Mfr=3, Product=2, SerialNumber=1
+usb usb1: Product: EHCI Host Controller
+usb usb1: Manufacturer: Linux 4.9.67-07229-gdc6c16ec0433-dirty ehci_hcd
+usb usb1: SerialNumber: ci_hdrc.1
+hub 1-0:1.0: USB hub found
+ata1: SATA link down (SStatus 0 SControl 300)
+ahci-imx 2200000.sata: no device found, disabling link.
+ahci-imx 2200000.sata: pass ahci_imx..hotplug=1 to enable hotplug
+hub 1-0:1.0: 1 port detected
+mousedev: PS/2 mouse device common for all mice
+usbcore: registered new interface driver xpad
+usbcore: registered new interface driver usb_acecad
+usbcore: registered new interface driver aiptek
+usbcore: registered new interface driver gtco
+usbcore: registered new interface driver hanwang
+usbcore: registered new interface driver kbtab
+input: stmpe-ts as /devices/soc0/soc/2100000.aips-bus/21a4000.i2c/i2c-2/2-0041/stmpe-ts/input/input0
+snvs_rtc 20cc000.snvs:snvs-rtc-lp: rtc core: registered 20cc000.snvs:snvs-r as rtc0
+i2c /dev entries driver
+IR NEC protocol handler initialized
+IR RC5(x/sz) protocol handler initialized
+IR RC6 protocol handler initialized
+IR JVC protocol handler initialized
+IR Sony protocol handler initialized
+IR SANYO protocol handler initialized
+IR Sharp protocol handler initialized
+IR MCE Keyboard/mouse protocol handler initialized
+IR XMP protocol handler initialized
+mxc_v4l2_output v4l2_out: V4L2 device registered as video16
+mxc_v4l2_output v4l2_out: V4L2 device registered as video17
+mxc_v4l2_output v4l2_out: V4L2 device registered as video18
+mxc_v4l2_output v4l2_out: V4L2 device registered as video19
+ov564x_mipi 3-003c: found pwm2, period=0
+usb 1-1: new high-speed USB device number 2 using ci_hdrc
+ov5640_read_reg:write reg error:reg=300a
+camera ov5640_mipi is not found
+usbcore: registered new interface driver uvcvideo
+USB Video Class driver (1.1.1)
+imx2-wdt 20bc000.wdog: timeout 60 sec (nowayout=0)
+device-mapper: uevent: version 1.0.3
+device-mapper: ioctl: 4.35.0-ioctl (2016-06-23) initialised: dm-devel@redhat.com
+Bluetooth: HCI UART driver ver 2.3
+Bluetooth: HCI UART protocol H4 registered
+Bluetooth: HCI UART protocol BCSP registered
+Bluetooth: HCI UART protocol ATH3K registered
+usbcore: registered new interface driver btusb
+sdhci: Secure Digital Host Controller Interface driver
+sdhci: Copyright(c) Pierre Ossman
+sdhci-pltfm: SDHCI platform and OF driver helper
+sdhci-esdhc-imx 2190000.usdhc: could not get ultra high speed state, work on normal mode
+sdhci-esdhc-imx 2190000.usdhc: Got CD GPIO
+mmc1: SDHCI controller on 2190000.usdhc [2190000.usdhc] using ADMA
+sdhci-esdhc-imx 2198000.usdhc: could not get ultra high speed state, work on normal mode
+usb 1-1: New USB device found, idVendor=0424, idProduct=2514
+usb 1-1: New USB device strings: Mfr=0, Product=0, SerialNumber=0
+hub 1-1:1.0: USB hub found
+hub 1-1:1.0: 4 ports detected
+mmc0: SDHCI controller on 2198000.usdhc [2198000.usdhc] using ADMA
+mxc_vpu 2040000.vpu_fsl: VPU initialized
+mxc_vdoa 21e4000.vdoa: i.MX Video Data Order Adapter(VDOA) driver probed
+mxc_hdmi_cec soc:hdmi_cec@00120000: HDMI CEC initialized
+Galcore version 6.2.2.96445
+mmc0: new DDR MMC card at address 0001
+mmcblk0: mmc0:0001 Q2J54A 3.59 GiB 
+mmcblk0boot0: mmc0:0001 Q2J54A partition 1 16.0 MiB
+mmcblk0boot1: mmc0:0001 Q2J54A partition 2 16.0 MiB
+random: fast init done
+Alternate GPT is invalid, using primary GPT.
+ mmcblk0: p1 p2 p3 p4 p5 p6 p7 p8 p9 p10 p11
+usb 1-1.3: new low-speed USB device number 3 using ci_hdrc
+usb 1-1.3: New USB device found, idVendor=413c, idProduct=301a
+usb 1-1.3: New USB device strings: Mfr=1, Product=2, SerialNumber=0
+usb 1-1.3: Product: Dell MS116 USB Optical Mouse
+usb 1-1.3: Manufacturer: PixArt
+caam 2100000.caam: ERA source: CAAMVID.
+caam 2100000.caam: AXI pipeline throttling enabled.
+caam 2100000.caam: Instantiated RNG4 SH1
+caam 2100000.caam: device ID = 0x0a16010000000000 (Era 4)
+caam 2100000.caam: job rings = 2, qi = 0
+caam algorithms registered in /proc/crypto
+caam_jr 2101000.jr0: registering rng-caam
+platform caam_sm: blkkey_ex: 4 keystore units available
+platform caam_sm: 64-bit clear key:
+platform caam_sm: [0000] 00 01 02 03 04 0f 06 07
+platform caam_sm: 64-bit black key:
+platform caam_sm: [0000] be 81 48 f6 46 79 65 96
+platform caam_sm: [0008] 30 03 d8 c8 ad 58 ea e9
+platform caam_sm: 128-bit clear key:
+platform caam_sm: [0000] 00 01 02 03 04 0f 06 07
+platform caam_sm: [0008] 08 09 0a 0b 0c 0d 0e 0f
+platform caam_sm: 128-bit black key:
+platform caam_sm: [0000] 99 0e 24 6d ed 43 a9 82
+platform caam_sm: [0008] e6 2a cf f8 b4 e0 76 47
+platform caam_sm: 192-bit clear key:
+platform caam_sm: [0000] 00 01 02 03 04 0f 06 07
+platform caam_sm: [0008] 08 09 0a 0b 0c 0d 0e 0f
+platform caam_sm: [0016] 10 11 12 13 14 15 16 17
+platform caam_sm: 192-bit black key:
+platform caam_sm: [0000] 19 85 7c d1 95 e3 81 a6
+platform caam_sm: [0008] 49 49 4b 20 49 7b 6b 9a
+platform caam_sm: [0016] f5 bf 76 e3 b1 1e 3f e8
+platform caam_sm: [0024] 71 eb 74 fa 84 d5 62 99
+platform caam_sm: 256-bit clear key:
+platform caam_sm: [0000] 00 01 02 03 04 0f 06 07
+platform caam_sm: [0008] 08 09 0a 0b 0c 0d 0e 0f
+platform caam_sm: [0016] 10 11 12 13 14 15 16 17
+platform caam_sm: [0024] 18 19 1a 1b 1c 1d 1e 1f
+platform caam_sm: 256-bit black key:
+platform caam_sm: [0000] 82 4f ba b5 3c 62 f0 13
+platform caam_sm: [0008] c4 ff ff 77 bf a4 71 50
+platform caam_sm: [0016] 21 d1 fa 40 49 de 7a fe
+platform caam_sm: [0024] 26 6e 13 fc 21 8b a4 ba
+platform caam_sm: 64-bit unwritten blob:
+platform caam_sm: [0000] 00 00 00 00 00 00 00 00
+platform caam_sm: [0008] 00 00 00 00 00 00 00 00
+platform caam_sm: [0016] 00 00 00 00 00 00 00 00
+platform caam_sm: [0024] 00 00 00 00 00 00 00 00
+platform caam_sm: [0032] 00 00 00 00 00 00 00 00
+platform caam_sm: [0040] 00 00 00 00 00 00 00 00
+platform caam_sm: [0048] 00 00 00 00 00 00 00 00
+platform caam_sm: [0056] 00 00 00 00 00 00 00 00
+platform caam_sm: [0064] 00 00 00 00 00 00 00 00
+platform caam_sm: [0072] 00 00 00 00 00 00 00 00
+platform caam_sm: [0080] 00 00 00 00 00 00 00 00
+platform caam_sm: [0088] 00 00 00 00 00 00 00 00
+platform caam_sm: 128-bit unwritten blob:
+platform caam_sm: [0000] 00 00 00 00 00 00 00 00
+platform caam_sm: [0008] 00 00 00 00 00 00 00 00
+platform caam_sm: [0016] 00 00 00 00 00 00 00 00
+platform caam_sm: [0024] 00 00 00 00 00 00 00 00
+platform caam_sm: [0032] 00 00 00 00 00 00 00 00
+platform caam_sm: [0040] 00 00 00 00 00 00 00 00
+platform caam_sm: [0048] 00 00 00 00 00 00 00 00
+platform caam_sm: [0056] 00 00 00 00 00 00 00 00
+platform caam_sm: [0064] 00 00 00 00 00 00 00 00
+platform caam_sm: [0072] 00 00 00 00 00 00 00 00
+platform caam_sm: [0080] 00 00 00 00 00 00 00 00
+platform caam_sm: [0088] 00 00 00 00 00 00 00 00
+platform caam_sm: 196-bit unwritten blob:
+platform caam_sm: [0000] 00 00 00 00 00 00 00 00
+platform caam_sm: [0008] 00 00 00 00 00 00 00 00
+platform caam_sm: [0016] 00 00 00 00 00 00 00 00
+platform caam_sm: [0024] 00 00 00 00 00 00 00 00
+platform caam_sm: [0032] 00 00 00 00 00 00 00 00
+platform caam_sm: [0040] 00 00 00 00 00 00 00 00
+platform caam_sm: [0048] 00 00 00 00 00 00 00 00
+platform caam_sm: [0056] 00 00 00 00 00 00 00 00
+platform caam_sm: [0064] 00 00 00 00 00 00 00 00
+platform caam_sm: [0072] 00 00 00 00 00 00 00 00
+platform caam_sm: [0080] 00 00 00 00 00 00 00 00
+platform caam_sm: [0088] 00 00 00 00 00 00 00 00
+platform caam_sm: 256-bit unwritten blob:
+platform caam_sm: [0000] 00 00 00 00 00 00 00 00
+platform caam_sm: [0008] 00 00 00 00 00 00 00 00
+platform caam_sm: [0016] 00 00 00 00 00 00 00 00
+platform caam_sm: [0024] 00 00 00 00 00 00 00 00
+platform caam_sm: [0032] 00 00 00 00 00 00 00 00
+platform caam_sm: [0040] 00 00 00 00 00 00 00 00
+platform caam_sm: [0048] 00 00 00 00 00 00 00 00
+platform caam_sm: [0056] 00 00 00 00 00 00 00 00
+platform caam_sm: [0064] 00 00 00 00 00 00 00 00
+platform caam_sm: [0072] 00 00 00 00 00 00 00 00
+platform caam_sm: [0080] 00 00 00 00 00 00 00 00
+platform caam_sm: [0088] 00 00 00 00 00 00 00 00
+platform caam_sm: 64-bit black key in blob:
+platform caam_sm: [0000] e6 38 0b c9 e5 fc 10 3f
+platform caam_sm: [0008] 6c fd 4c ec 30 65 f3 cc
+platform caam_sm: [0016] 9b 5d 54 06 9f e6 33 30
+platform caam_sm: [0024] 76 2b 92 eb 20 76 25 a8
+platform caam_sm: [0032] 4a ae 30 76 32 e0 34 bb
+platform caam_sm: [0040] ac b9 80 3e 96 d1 2f a0
+platform caam_sm: [0048] 77 3e 77 9e 65 cb 43 11
+platform caam_sm: [0056] 00 00 00 00 00 00 00 00
+platform caam_sm: [0064] 00 00 00 00 00 00 00 00
+platform caam_sm: [0072] 00 00 00 00 00 00 00 00
+platform caam_sm: [0080] 00 00 00 00 00 00 00 00
+platform caam_sm: [0088] 00 00 00 00 00 00 00 00
+platform caam_sm: 128-bit black key in blob:
+platform caam_sm: [0000] 24 d3 b7 c3 ac 05 bd e1
+platform caam_sm: [0008] d9 17 12 33 c0 d6 5b 76
+platform caam_sm: [0016] ee 06 b6 1d 96 35 55 ff
+platform caam_sm: [0024] 9b e3 ad 3b 0d 17 74 c1
+platform caam_sm: [0032] 4b 66 ef ca 6b 57 dd 88
+platform caam_sm: [0040] 71 e0 97 38 70 71 46 ff
+platform caam_sm: [0048] 25 32 12 6b 6d 19 8e 0f
+platform caam_sm: [0056] 7a 9d 92 71 db 0a b6 c4
+platform caam_sm: [0064] 00 00 00 00 00 00 00 00
+platform caam_sm: [0072] 00 00 00 00 00 00 00 00
+platform caam_sm: [0080] 00 00 00 00 00 00 00 00
+platform caam_sm: [0088] 00 00 00 00 00 00 00 00
+platform caam_sm: 192-bit black key in blob:
+platform caam_sm: [0000] 20 01 d3 84 6f a7 d9 2f
+platform caam_sm: [0008] 5c 9f 8b 76 dd 69 f3 e0
+platform caam_sm: [0016] ff ec 8a b1 1f 0c fb be
+platform caam_sm: [0024] 20 05 e3 77 2a cd f2 79
+platform caam_sm: [0032] a8 9f 06 9b bc 6f ac 52
+platform caam_sm: [0040] 04 18 52 b3 25 47 db 24
+platform caam_sm: [0048] 48 17 4b 9d 38 f7 25 26
+platform caam_sm: [0056] 81 e8 f0 8d 83 74 13 59
+platform caam_sm: [0064] 83 d7 f3 da 05 43 6f 99
+platform caam_sm: [0072] 00 00 00 00 00 00 00 00
+platform caam_sm: [0080] 00 00 00 00 00 00 00 00
+platform caam_sm: [0088] 00 00 00 00 00 00 00 00
+platform caam_sm: 256-bit black key in blob:
+platform caam_sm: [0000] 3f 3c 8f 73 5d b8 d3 bf
+platform caam_sm: [0008] ef dd 39 16 3f 40 97 04
+platform caam_sm: [0016] 0d 80 fd a1 f8 18 3c 22
+platform caam_sm: [0024] 1d 5e 4d f0 ea 9a a0 8e
+platform caam_sm: [0032] 24 85 63 a9 e9 41 ba d9
+platform caam_sm: [0040] d1 3a c3 cd 74 66 fb d9
+platform caam_sm: [0048] 27 7c 54 35 4e 15 ed e2
+platform caam_sm: [0056] ea fb 16 d5 4b e8 10 29
+platform caam_sm: [0064] 81 fa 48 06 8a b5 62 a8
+platform caam_sm: [0072] cf d0 09 a5 af 5e 05 6a
+platform caam_sm: [0080] 00 00 00 00 00 00 00 00
+platform caam_sm: [0088] 00 00 00 00 00 00 00 00
+platform caam_sm: restored 64-bit black key:
+platform caam_sm: [0000] 93 52 6a 56 bc cc ba 87
+platform caam_sm: [0008] e5 c3 7b a7 a6 5d 5e c9
+platform caam_sm: restored 128-bit black key:
+platform caam_sm: [0000] 99 0e 24 6d ed 43 a9 82
+platform caam_sm: [0008] e6 2a cf f8 b4 e0 76 47
+platform caam_sm: restored 192-bit black key:
+platform caam_sm: [0000] 19 85 7c d1 95 e3 81 a6
+platform caam_sm: [0008] 49 49 4b 20 49 7b 6b 9a
+platform caam_sm: [0016] e2 77 53 7b b0 4d d2 72
+platform caam_sm: [0024] 9a 34 35 21 ff 61 7e 51
+platform caam_sm: restored 256-bit black key:
+platform caam_sm: [0000] 82 4f ba b5 3c 62 f0 13
+platform caam_sm: [0008] c4 ff ff 77 bf a4 71 50
+platform caam_sm: [0016] 21 d1 fa 40 49 de 7a fe
+platform caam_sm: [0024] 26 6e 13 fc 21 8b a4 ba
+snvs-secvio 20cc000.caam-snvs: can't get snvs clock
+snvs-secvio 20cc000.caam-snvs: violation handlers armed - non-secure state
+hidraw: raw HID events driver (C) Jiri Kosina
+input: PixArt Dell MS116 USB Optical Mouse as /devices/soc0/soc/2100000.aips-bus/2184200.usb/ci_hdrc.1/usb1/1-1/1-1.3/1-1.3:1.0/0003:413C:301A.0001/input/input1
+hid-generic 0003:413C:301A.0001: input,hidraw0: USB HID v1.11 Mouse [PixArt Dell MS116 USB Optical Mouse] on usb-ci_hdrc.1-1.3/input0
+usbcore: registered new interface driver usbhid
+usbhid: USB HID core driver
+ashmem: initialized
+usbcore: registered new interface driver snd-usb-audio
+sgtl5000 2-000a: sgtl5000 revision 0x11
+fsl-ssi-dai 2028000.ssi: No cache defaults, reading back from HW
+imx-sgtl5000 sound: sgtl5000 <-> 2028000.ssi mapping ok
+imx-spdif sound-spdif: snd-soc-dummy-dai <-> 2004000.spdif mapping ok
+imx-audio-hdmi sound-hdmi: hdmi-hifi.0 <-> soc:hdmi_audio@00120000 mapping ok
+NET: Registered protocol family 26
+u32 classifier
+    Actions configured
+Netfilter messages via NETLINK v0.30.
+nf_conntrack version 0.5.0 (16384 buckets, 65536 max)
+ctnetlink v0.93: registering with nfnetlink.
+xt_time: kernel timezone is -0000
+ip_tables: (C) 2000-2006 Netfilter Core Team
+arp_tables: arp_tables: (C) 2002 David S. Miller
+Initializing XFRM netlink socket
+NET: Registered protocol family 10
+mip6: Mobile IPv6
+ip6_tables: (C) 2000-2006 Netfilter Core Team
+sit: IPv6, IPv4 and MPLS over IPv4 tunneling driver
+NET: Registered protocol family 17
+NET: Registered protocol family 15
+can: controller area network core (rev 20120528 abi 9)
+NET: Registered protocol family 29
+can: raw protocol (rev 20120528)
+can: broadcast manager protocol (rev 20161123 t)
+can: netlink gateway (rev 20130117) max_hops=1
+Bluetooth: RFCOMM TTY layer initialized
+Bluetooth: RFCOMM socket layer initialized
+Bluetooth: RFCOMM ver 1.11
+Bluetooth: BNEP (Ethernet Emulation) ver 1.3
+Bluetooth: BNEP filters: protocol multicast
+Bluetooth: BNEP socket layer initialized
+Bluetooth: HIDP (Human Interface Emulation) ver 1.2
+Bluetooth: HIDP socket layer initialized
+8021q: 802.1Q VLAN Support v1.8
+Key type dns_resolver registered
+cpu cpu0: Registered imx6q-cpufreq
+registered taskstats version 1
+imx_thermal 2000000.aips-bus:tempmon: Industrial CPU temperature grade - max:105C critical:100C passive:95C
+dhd_module_init in
+input: gpio-keys as /devices/soc0/gpio-keys/input/input2
+snvs_rtc 20cc000.snvs:snvs-rtc-lp: setting system clock to 1970-01-01 00:02:20 UTC (140)
+usb_otg_vbus: disabling
+ALSA device list:
+  #0: imx6q-apalis-sgtl5000
+  #1: imx-spdif
+  #2: imx-hdmi-soc
+Freeing unused kernel memory: 1024K
+init: init first stage started!
+SELinux:  Permission validate_trans in class security not defined in policy.
+SELinux:  Class cap_userns not defined in policy.
+SELinux:  Class cap2_userns not defined in policy.
+SELinux: the above unknown classes and permissions will be denied
+audit: type=1403 audit(140.660:2): policy loaded auid=4294967295 ses=4294967295
+init: (Initializing SELinux non-enforcing took 0.14s.)
+init: init second stage started!
+init: Running restorecon...
+init: waitpid failed: No child processes
+init: (Loading properties from /default.prop took 0.00s.)
+init: (Parsing /init.environ.rc took 0.00s.)
+init: (Parsing /init.usb.rc took 0.00s.)
+init: (Parsing init.freescale.usb.rc took 0.00s.)
+init: (Parsing init.freescale.i.MX6Q.rc took 0.00s.)
+init: (Parsing init.freescale.emmc.rc took 0.00s.)
+init: (Parsing /init.freescale.rc took 0.02s.)
+ueventd: ueventd started!
+ueventd: Coldboot took 0.44s.
+Console: switching to colour dummy device 80x30
+watchdogd: started (interval 10, margin 20)!
+EXT4-fs (mmcblk0p3): mounted filesystem with ordered data mode. Opts: barrier=1
+EXT4-fs (mmcblk0p10): Ignoring removed nomblk_io_submit option
+EXT4-fs (mmcblk0p10): mounted filesystem with ordered data mode. Opts: nomblk_io_submit,noauto_da_alloc,errors=panic
+EXT4-fs (mmcblk0p4): Ignoring removed nomblk_io_submit option
+EXT4-fs (mmcblk0p4): mounted filesystem with ordered data mode. Opts: nomblk_io_submit
+EXT4-fs (mmcblk0p5): mounted filesystem with ordered data mode. Opts: (null)
+file system registered
+using random self ethernet address
+using random host ethernet address
+zram0: detected capacity change from 0 to 314572800
+logd.auditd: start
+logd.klogd: 7608654667
+Adding 307196k swap on /dev/block/zram0.  Priority:-1 extents:1 across:307196k SS
+binder: 255:255 transaction failed 29189, size 0-0
+logd.daemon: reinit
+toradex_apalis6q:/ # android_work: sent uevent USB_STATE=CONNECTED
+android_work: sent uevent USB_STATE=DISCONNECTED
+android_work: sent uevent USB_STATE=CONNECTED
+ci_hdrc ci_hdrc.0: freeing queued request
+android_work: sent uevent USB_STATE=DISCONNECTED
+android_work: sent uevent USB_STATE=CONNECTED
+android_work: sent uevent USB_STATE=DISCONNECTED
+android_work: sent uevent USB_STATE=CONNECTED
+android_work: sent uevent USB_STATE=DISCONNECTED
+ERROR: v4l2 capture: slave not found! V4L2_CID_HUE
+android_work: sent uevent USB_STATE=CONNECTED
+ERROR: v4l2 capture: slave not found! V4L2_CID_HUE
+healthd: No battery devices found
+configfs-gadget gadget: high-speed config #1: b
+android_work: sent uevent USB_STATE=CONFIGURED
+imx-hdmi-audio imx-hdmi-audio: HDMI Video is not ready!
+imx-hdmi-audio imx-hdmi-audio: ASoC: can't open platform imx-hdmi-audio: -22
+imx-hdmi-audio imx-hdmi-audio: HDMI Video is not ready!
+imx-hdmi-audio imx-hdmi-audio: ASoC: can't open platform imx-hdmi-audio: -22
+init: Starting service 'bootanim'...
+capability: warning: `main' uses 32-bit capabilities (legacy support in use)
+init: write_file: Unable to open '/sys/devices/system/cpu/cpufreq/interactive/timer_rate': No such file or directory
+init: write_file: Unable to open '/sys/devices/system/cpu/cpufreq/interactive/min_sample_time': No such file or directory
+init: write_file: Unable to open '/sys/devices/system/cpu/cpufreq/interactive/go_hispeed_load': No such file or directory
+random: crng init done
+
+toradex_apalis6q:/ # init: write_file: Unable to open '/proc/sys/vm/extra_free_kbytes': No such file or directory
+acc_open
+acc_release
+Micrel KSZ9031 Gigabit PHY 2188000.ethernet-1:07: attached PHY driver [Micrel KSZ9031 Gigabit PHY] (mii_bus:phy_addr=2188000.ethernet-1:07, irq=120)
+IPv6: ADDRCONF(NETDEV_UP): eth0: link is not ready
+
+toradex_apalis6q:/ # init: Service 'bootanim' (pid 336) exited with status 0
+
+toradex_apalis6q:/ # 
+toradex_apalis6q:/ # init: Starting service 'exec 3 (/system/bin/bootstat)'...
+init: Service 'exec 3 (/system/bin/bootstat)' (pid 1007) exited with status 0
+init: Starting service 'exec 4 (/system/bin/bootstat)'...
+init: Service 'exec 4 (/system/bin/bootstat)' (pid 1018) exited with status 0
+init: Starting service 'exec 5 (/system/bin/bootstat)'...
+init: Service 'exec 5 (/system/bin/bootstat)' (pid 1020) exited with status 0
+init: Starting service 'exec 6 (/system/bin/bootstat)'...
+init: Service 'exec 6 (/system/bin/bootstat)' (pid 1021) exited with status 0
+
+toradex_apalis6q:/ # 
+toradex_apalis6q:/ # 
+toradex_apalis6q:/ # 
+toradex_apalis6q:/ # 
+toradex_apalis6q:/ # 
+toradex_apalis6q:/ # 
+toradex_apalis6q:/ # 
+toradex_apalis6q:/ # 
+toradex_apalis6q:/ # 
+toradex_apalis6q:/ # 
+toradex_apalis6q:/ # 
+toradex_apalis6q:/ # 
+toradex_apalis6q:/ # mtp_open
+
+toradex_apalis6q:/ # 
+toradex_apalis6q:/ # 
+toradex_apalis6q:/ # 
+toradex_apalis6q:/ # 
+toradex_apalis6q:/ # 
+toradex_apalis6q:/ # 
+
+U-Boot 2017.03-00001-g610928540e-dirty (Dec 28 2017 - 14:21:59 +0530)
+
+CPU:   Freescale i.MX6Q rev1.5 at 792 MHz
+Reset cause: POR
+I2C:   ready
+DRAM:  2 GiB
+PMIC: device id: 0x10, revision id: 0x21
+PMIC: programmed
+MMC:   FSL_SDHC: 0, FSL_SDHC: 1, FSL_SDHC: 2
+auto-detected panel HDMI
+Aravinth: Display: HDMI (1024x768)
+In:    serial
+Out:   serial
+Err:   serial
+Model: Toradex Apalis iMX6 Quad 2GB IT V1.1C, Serial# 05146387
+flash target is MMC:0
+Net:   using PHY at 7
+FEC [PRIME]
+Fastboot: Normal
+Hit any key to stop autoboot:  1  0 
+boota mmc0 
+CACHE: Misaligned operation at range [8ffb70a0, 8ffb7120]
+CACHE: Misaligned operation at range [8ffb70a0, 8ffb7120]
+kernel   @ 14008000 (9802376)
+ramdisk  @ 15000000 (1628386)
+fdt      @ 14f00000 (53977)
+## Booting Android Image at 0x12000000 ...
+Kernel load addr 0x14008000 size 9573 KiB
+Kernel command line: console=ttymxc0,115200 init=/init video=mxcfb0:dev=ldb,fbpix=RGB32,bpp=32 video=mxcfb1:dev=hdmi,640x480M@60,if=RGB24,bpp=16 video=mxcfb2:off video=mxcfb3:off vmalloc=256M androidboot.console=ttymxc0 consoleblank=0 androidboot.hardware=freescale cma=448M androidboot.selinux=permissive androidboot.dm_verity=disabled buildvariant=user androidboot.serialno=1b2429d4ea997115 androidboot.storage_type=emmc
+## Flattened Device Tree blob at 14f00000
+   Booting using the fdt blob at 0x14f00000
+   Loading Kernel Image ... OK
+   Using Device Tree in place at 14f00000, end 14f102d8
+
+Starting kernel ...
+
+Booting Linux on physical CPU 0x0
+Linux version 4.9.67-07229-gdc6c16ec0433-dirty (embadmin@ubuntu) (gcc version 4.9 20150123 (prerelease) (GCC) ) #15 SMP PREEMPT Wed Dec 27 15:15:47 IST 2017
+CPU: ARMv7 Processor [412fc09a] revision 10 (ARMv7), cr=10c53c7d
+CPU: PIPT / VIPT nonaliasing data cache, VIPT aliasing instruction cache
+OF: fdt:Machine model: Aravinth :UJET Toradex Apalis iMX6Q/D Module on Ixora V1.1 Carrier Board
+cma: Reserved 448 MiB at 0x22000000
+Memory policy: Data cache writealloc
+percpu: Embedded 15 pages/cpu @ee6b3000 s31040 r8192 d22208 u61440
+Built 1 zonelists in Zone order, mobility grouping on.  Total pages: 522768
+Kernel command line: console=ttymxc0,115200 init=/init video=mxcfb0:dev=ldb,fbpix=RGB32,bpp=32 video=mxcfb1:dev=hdmi,640x480M@60,if=RGB24,bpp=16 video=mxcfb2:off video=mxcfb3:off vmalloc=256M androidboot.console=ttymxc0 consoleblank=0 androidboot.hardware=freescale cma=448M androidboot.selinux=permissive androidboot.dm_verity=disabled buildvariant=user androidboot.serialno=1b2429d4ea997115 androidboot.storage_type=emmc
+PID hash table entries: 4096 (order: 2, 16384 bytes)
+Dentry cache hash table entries: 131072 (order: 7, 524288 bytes)
+Inode-cache hash table entries: 65536 (order: 6, 262144 bytes)
+Memory: 1597048K/2097152K available (13312K kernel code, 1128K rwdata, 4016K rodata, 1024K init, 606K bss, 41352K reserved, 458752K cma-reserved, 1318912K highmem)
+Virtual kernel memory layout:
+    vector  : 0xffff0000 - 0xffff1000   (   4 kB)
+    fixmap  : 0xffc00000 - 0xfff00000   (3072 kB)
+    vmalloc : 0xf0000000 - 0xff800000   ( 248 MB)
+    lowmem  : 0xc0000000 - 0xef800000   ( 760 MB)
+    pkmap   : 0xbfe00000 - 0xc0000000   (   2 MB)
+    modules : 0xbf000000 - 0xbfe00000   (  14 MB)
+      .text : 0xc0008000 - 0xc0e00000   (14304 kB)
+      .init : 0xc1300000 - 0xc1400000   (1024 kB)
+      .data : 0xc1400000 - 0xc151a218   (1129 kB)
+       .bss : 0xc151a218 - 0xc15b1be0   ( 607 kB)
+SLUB: HWalign=64, Order=0-3, MinObjects=0, CPUs=4, Nodes=1
+Preemptible hierarchical RCU implementation.
+	Build-time adjustment of leaf fanout to 32.
+NR_IRQS:16 nr_irqs:16 16
+L2C-310 errata 752271 769419 enabled
+L2C-310 enabling early BRESP for Cortex-A9
+L2C-310 full line of zeros enabled for Cortex-A9
+L2C-310 ID prefetch enabled, offset 16 lines
+L2C-310 dynamic clock gating enabled, standby mode enabled
+L2C-310 cache controller enabled, 16 ways, 1024 kB
+L2C-310: CACHE_ID 0x410000c7, AUX_CTRL 0x76470001
+Switching to timer-based delay loop, resolution 333ns
+sched_clock: 32 bits at 3000kHz, resolution 333ns, wraps every 715827882841ns
+clocksource: mxc_timer1: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 637086815595 ns
+Console: colour dummy device 80x30
+Calibrating delay loop (skipped), value calculated using timer frequency.. 6.00 BogoMIPS (lpj=30000)
+pid_max: default: 32768 minimum: 301
+Security Framework initialized
+SELinux:  Initializing.
+Mount-cache hash table entries: 2048 (order: 1, 8192 bytes)
+Mountpoint-cache hash table entries: 2048 (order: 1, 8192 bytes)
+CPU: Testing write buffer coherency: ok
+CPU0: update cpu_capacity 1024
+CPU0: thread -1, cpu 0, socket 0, mpidr 80000000
+Setting up static identity map for 0x10100000 - 0x10100058
+CPU1: update cpu_capacity 1024
+CPU1: thread -1, cpu 1, socket 0, mpidr 80000001
+CPU2: update cpu_capacity 1024
+CPU2: thread -1, cpu 2, socket 0, mpidr 80000002
+CPU3: update cpu_capacity 1024
+CPU3: thread -1, cpu 3, socket 0, mpidr 80000003
+Brought up 4 CPUs
+SMP: Total of 4 processors activated (24.00 BogoMIPS).
+CPU: All CPU(s) started in SVC mode.
+CPU3: update max cpu_capacity 1024
+devtmpfs: initialized
+CPU2: update max cpu_capacity 1024
+VFP support v0.3: implementor 41 architecture 3 part 30 variant 9 rev 4
+clocksource: jiffies: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 19112604462750000 ns
+futex hash table entries: 1024 (order: 4, 65536 bytes)
+pinctrl core: initialized pinctrl subsystem
+NET: Registered protocol family 16
+DMA: preallocated 256 KiB pool for atomic coherent allocations
+cpuidle: using governor menu
+CPU identified as i.MX6Q, silicon rev 1.5
+hw-breakpoint: found 5 (+1 reserved) breakpoint and 1 watchpoint registers.
+hw-breakpoint: maximum watchpoint size is 4 bytes.
+imx6q-pinctrl 20e0000.iomuxc: initialized IMX pinctrl driver
+imx-gpc 20dc000.gpc: no fsl,ldo-bypass found!
+imx-gpc 20dc000.gpc: Registered imx-gpc
+mxs-dma 110000.dma-apbh: initialized
+usb_host_vbus: supplied by usb_host_vbus_hub
+SCSI subsystem initialized
+usbcore: registered new interface driver usbfs
+usbcore: registered new interface driver hub
+usbcore: registered new device driver usb
+2000000.aips-bus:usbphy_nop1 supply vcc not found, using dummy regulator
+2000000.aips-bus:usbphy_nop2 supply vcc not found, using dummy regulator
+i2c i2c-1: IMX I2C adapter registered
+i2c i2c-1: can't use DMA, using PIO instead.
+stmpe-i2c 2-0041: stmpe811 detected, chip id: 0x811
+i2c i2c-2: IMX I2C adapter registered
+i2c i2c-2: can't use DMA, using PIO instead.
+i2c i2c-3: IMX I2C adapter registered
+i2c i2c-3: can't use DMA, using PIO instead.
+Linux video capture interface: v2.00
+pps_core: LinuxPPS API ver. 1 registered
+pps_core: Software ver. 5.3.6 - Copyright 2005-2007 Rodolfo Giometti <giometti@linux.it>
+PTP clock support registered
+imx-ipuv3 2400000.ipu: IPU DMFC NORMAL mode: 1(0~1), 5B(4,5), 5F(6,7)
+imx-ipuv3 2800000.ipu: IPU DMFC NORMAL mode: 1(0~1), 5B(4,5), 5F(6,7)
+mxc_mipi_csi2 21dc000.mipi_csi: i.MX MIPI CSI2 driver probed ipu0 csi1
+mxc_mipi_csi2 21dc000.mipi_csi: i.MX MIPI CSI2 dphy version is 0x3130302a
+MIPI CSI2 driver module loaded
+imx rpmsg driver is registered.
+Advanced Linux Sound Architecture Driver Initialized.
+Bluetooth: Core ver 2.22
+NET: Registered protocol family 31
+Bluetooth: HCI device and connection manager initialized
+Bluetooth: HCI socket layer initialized
+Bluetooth: L2CAP socket layer initialized
+Bluetooth: SCO socket layer initialized
+clocksource: Switched to clocksource mxc_timer1
+VFS: Disk quotas dquot_6.6.0
+VFS: Dquot-cache hash table entries: 1024 (order 0, 4096 bytes)
+NET: Registered protocol family 2
+TCP established hash table entries: 8192 (order: 3, 32768 bytes)
+TCP bind hash table entries: 8192 (order: 4, 65536 bytes)
+TCP: Hash tables configured (established 8192 bind 8192)
+UDP hash table entries: 512 (order: 2, 16384 bytes)
+UDP-Lite hash table entries: 512 (order: 2, 16384 bytes)
+NET: Registered protocol family 1
+RPC: Registered named UNIX socket transport module.
+RPC: Registered udp transport module.
+RPC: Registered tcp transport module.
+RPC: Registered tcp NFSv4.1 backchannel transport module.
+Trying to unpack rootfs image as initramfs...
+Freeing initrd memory: 1592K
+hw perfevents: enabled with armv7_cortex_a9 PMU driver, 7 counters available
+Bus freq driver module loaded
+audit: initializing netlink subsys (disabled)
+audit: type=2000 audit(0.870:1): initialized
+workingset: timestamp_bits=30 max_order=19 bucket_order=0
+NFS: Registering the id_resolver key type
+Key type id_resolver registered
+Key type id_legacy registered
+ntfs: driver 2.1.32 [Flags: R/W DEBUG].
+jffs2: version 2.2. (NAND) © 2001-2006 Red Hat, Inc.
+fuse init (API version 7.26)
+bounce: pool size: 64 pages
+io scheduler noop registered
+io scheduler deadline registered
+io scheduler cfq registered (default)
+backlight supply power not found, using dummy regulator
+20e0000.hdmi_video supply HDMI not found, using dummy regulator
+mxc_sdc_fb fb@0: registered mxc display driver ldb
+imx-ipuv3 2800000.ipu: IPU DMFC DP HIGH RESOLUTION: 1(0,1), 5B(2~5), 5F(6,7)
+Console: switching to colour frame buffer device 128x48
+mxc_hdmi 20e0000.hdmi_video: Detected HDMI controller 0x13:0xa:0xa0:0xc1
+fbcvt: 640x480@60: CVT Name - .307M3
+mxc_sdc_fb fb@1: registered mxc display driver hdmi
+mxc_sdc_fb fb@2: Can't get fb option for mxcfb2!
+mxc_sdc_fb fb@3: Can't get fb option for mxcfb3!
+imx-sdma 20ec000.sdma: no iram assigned, using external mem
+imx-sdma 20ec000.sdma: loaded firmware 3.3
+pfuze100-regulator 2-0008: Full layer: 2, Metal layer: 1
+pfuze100-regulator 2-0008: FAB: 0, FIN: 0
+pfuze100-regulator 2-0008: pfuze100 found.
+mxc_hdmi 20e0000.hdmi_video: Read EDID again
+2020000.serial: ttymxc0 at MMIO 0x2020000 (irq = 29, base_baud = 5000000) is a IMX
+mxc_hdmi 20e0000.hdmi_video: create default modelist
+console [ttymxc0] enabled
+21e8000.serial: ttymxc1 at MMIO 0x21e8000 (irq = 78, base_baud = 5000000) is a IMX
+21f0000.serial: ttymxc3 at MMIO 0x21f0000 (irq = 79, base_baud = 5000000) is a IMX
+21f4000.serial: ttymxc4 at MMIO 0x21f4000 (irq = 80, base_baud = 5000000) is a IMX
+imx sema4 driver is registered.
+[drm] Initialized
+[drm] Initialized vivante 1.0.0 20120216 on minor 0
+brd: module loaded
+loop: module loaded
+zram: Added device: zram0
+ahci-imx 2200000.sata: fsl,transmit-level-mV not specified, using 00000024
+ahci-imx 2200000.sata: fsl,transmit-boost-mdB not specified, using 00000480
+ahci-imx 2200000.sata: fsl,transmit-atten-16ths not specified, using 00002000
+ahci-imx 2200000.sata: fsl,receive-eq-mdB not specified, using 05000000
+ahci-imx 2200000.sata: SSS flag set, parallel bus scan disabled
+ahci-imx 2200000.sata: AHCI 0001.0300 32 slots 1 ports 3 Gbps 0x1 impl platform mode
+ahci-imx 2200000.sata: flags: ncq sntf stag pm led clo only pmp pio slum part ccc apst 
+scsi host0: ahci-imx
+ata1: SATA max UDMA/133 mmio [mem 0x02200000-0x02203fff] port 0x100 irq 87
+spi_imx 2008000.ecspi: probed
+libphy: Fixed MDIO Bus: probed
+tun: Universal TUN/TAP device driver, 1.6
+tun: (C) 1999-2004 Max Krasnyansky <maxk@qualcomm.com>
+CAN device driver interface
+2090000.flexcan supply xceiver not found, using dummy regulator
+flexcan 2090000.flexcan: device registered (reg_base=f02f4000, irq=38)
+2094000.flexcan supply xceiver not found, using dummy regulator
+flexcan 2094000.flexcan: device registered (reg_base=f02fc000, irq=39)
+2188000.ethernet supply phy not found, using dummy regulator
+pps pps0: new PPS source ptp0
+libphy: fec_enet_mii_bus: probed
+fec 2188000.ethernet eth0: registered PHC device 0
+PPP generic driver version 2.4.2
+PPP BSD Compression module registered
+PPP Deflate Compression module registered
+PPP MPPE Compression module registered
+NET: Registered protocol family 24
+usbcore: registered new interface driver kaweth
+pegasus: v0.9.3 (2013/04/25), Pegasus/Pegasus II USB Ethernet driver
+usbcore: registered new interface driver pegasus
+usbcore: registered new interface driver rtl8150
+usbcore: registered new interface driver r8152
+usbcore: registered new interface driver asix
+usbcore: registered new interface driver ax88179_178a
+usbcore: registered new interface driver cdc_ether
+usbcore: registered new interface driver cdc_eem
+usbcore: registered new interface driver net1080
+usbcore: registered new interface driver cdc_subset
+usbcore: registered new interface driver zaurus
+usbcore: registered new interface driver cdc_ncm
+ehci_hcd: USB 2.0 'Enhanced' Host Controller (EHCI) Driver
+ehci-mxc: Freescale On-Chip EHCI Host driver
+usbcore: registered new interface driver cdc_acm
+cdc_acm: USB Abstract Control Model driver for USB modems and ISDN adapters
+usbcore: registered new interface driver usb-storage
+usbcore: registered new interface driver usbserial
+usbcore: registered new interface driver usbserial_generic
+usbserial: USB Serial support registered for generic
+usbcore: registered new interface driver ftdi_sio
+usbserial: USB Serial support registered for FTDI USB Serial Device
+usbcore: registered new interface driver option
+usbserial: USB Serial support registered for GSM modem (1-port)
+usbcore: registered new interface driver usbtest
+usbcore: registered new interface driver usb_ehset_test
+2184800.usbmisc supply vbus-wakeup not found, using dummy regulator
+ci_hdrc ci_hdrc.1: EHCI Host Controller
+ci_hdrc ci_hdrc.1: new USB bus registered, assigned bus number 1
+ci_hdrc ci_hdrc.1: USB 2.0 started, EHCI 1.00
+usb usb1: New USB device found, idVendor=1d6b, idProduct=0002
+usb usb1: New USB device strings: Mfr=3, Product=2, SerialNumber=1
+usb usb1: Product: EHCI Host Controller
+usb usb1: Manufacturer: Linux 4.9.67-07229-gdc6c16ec0433-dirty ehci_hcd
+usb usb1: SerialNumber: ci_hdrc.1
+hub 1-0:1.0: USB hub found
+ata1: SATA link down (SStatus 0 SControl 300)
+ahci-imx 2200000.sata: no device found, disabling link.
+ahci-imx 2200000.sata: pass ahci_imx..hotplug=1 to enable hotplug
+hub 1-0:1.0: 1 port detected
+mousedev: PS/2 mouse device common for all mice
+usbcore: registered new interface driver xpad
+usbcore: registered new interface driver usb_acecad
+usbcore: registered new interface driver aiptek
+usbcore: registered new interface driver gtco
+usbcore: registered new interface driver hanwang
+usbcore: registered new interface driver kbtab
+input: stmpe-ts as /devices/soc0/soc/2100000.aips-bus/21a4000.i2c/i2c-2/2-0041/stmpe-ts/input/input0
+snvs_rtc 20cc000.snvs:snvs-rtc-lp: rtc core: registered 20cc000.snvs:snvs-r as rtc0
+i2c /dev entries driver
+IR NEC protocol handler initialized
+IR RC5(x/sz) protocol handler initialized
+IR RC6 protocol handler initialized
+IR JVC protocol handler initialized
+IR Sony protocol handler initialized
+IR SANYO protocol handler initialized
+IR Sharp protocol handler initialized
+IR MCE Keyboard/mouse protocol handler initialized
+IR XMP protocol handler initialized
+mxc_v4l2_output v4l2_out: V4L2 device registered as video16
+mxc_v4l2_output v4l2_out: V4L2 device registered as video17
+mxc_v4l2_output v4l2_out: V4L2 device registered as video18
+mxc_v4l2_output v4l2_out: V4L2 device registered as video19
+ov564x_mipi 3-003c: found pwm2, period=0
+usb 1-1: new high-speed USB device number 2 using ci_hdrc
+ov5640_read_reg:write reg error:reg=300a
+camera ov5640_mipi is not found
+usbcore: registered new interface driver uvcvideo
+USB Video Class driver (1.1.1)
+imx2-wdt 20bc000.wdog: timeout 60 sec (nowayout=0)
+device-mapper: uevent: version 1.0.3
+device-mapper: ioctl: 4.35.0-ioctl (2016-06-23) initialised: dm-devel@redhat.com
+Bluetooth: HCI UART driver ver 2.3
+Bluetooth: HCI UART protocol H4 registered
+Bluetooth: HCI UART protocol BCSP registered
+Bluetooth: HCI UART protocol ATH3K registered
+usbcore: registered new interface driver btusb
+sdhci: Secure Digital Host Controller Interface driver
+sdhci: Copyright(c) Pierre Ossman
+sdhci-pltfm: SDHCI platform and OF driver helper
+sdhci-esdhc-imx 2190000.usdhc: could not get ultra high speed state, work on normal mode
+sdhci-esdhc-imx 2190000.usdhc: Got CD GPIO
+mmc1: SDHCI controller on 2190000.usdhc [2190000.usdhc] using ADMA
+sdhci-esdhc-imx 2198000.usdhc: could not get ultra high speed state, work on normal mode
+usb 1-1: New USB device found, idVendor=0424, idProduct=2514
+usb 1-1: New USB device strings: Mfr=0, Product=0, SerialNumber=0
+hub 1-1:1.0: USB hub found
+hub 1-1:1.0: 4 ports detected
+mmc0: SDHCI controller on 2198000.usdhc [2198000.usdhc] using ADMA
+mxc_vpu 2040000.vpu_fsl: VPU initialized
+mxc_vdoa 21e4000.vdoa: i.MX Video Data Order Adapter(VDOA) driver probed
+mxc_hdmi_cec soc:hdmi_cec@00120000: HDMI CEC initialized
+Galcore version 6.2.2.96445
+mmc0: new DDR MMC card at address 0001
+mmcblk0: mmc0:0001 Q2J54A 3.59 GiB 
+mmcblk0boot0: mmc0:0001 Q2J54A partition 1 16.0 MiB
+mmcblk0boot1: mmc0:0001 Q2J54A partition 2 16.0 MiB
+random: fast init done
+Alternate GPT is invalid, using primary GPT.
+ mmcblk0: p1 p2 p3 p4 p5 p6 p7 p8 p9 p10 p11
+usb 1-1.3: new low-speed USB device number 3 using ci_hdrc
+usb 1-1.3: New USB device found, idVendor=413c, idProduct=301a
+usb 1-1.3: New USB device strings: Mfr=1, Product=2, SerialNumber=0
+usb 1-1.3: Product: Dell MS116 USB Optical Mouse
+usb 1-1.3: Manufacturer: PixArt
+caam 2100000.caam: ERA source: CAAMVID.
+caam 2100000.caam: AXI pipeline throttling enabled.
+caam 2100000.caam: Instantiated RNG4 SH1
+caam 2100000.caam: device ID = 0x0a16010000000000 (Era 4)
+caam 2100000.caam: job rings = 2, qi = 0
+caam algorithms registered in /proc/crypto
+caam_jr 2101000.jr0: registering rng-caam
+platform caam_sm: blkkey_ex: 4 keystore units available
+platform caam_sm: 64-bit clear key:
+platform caam_sm: [0000] 00 01 02 03 04 0f 06 07
+platform caam_sm: 64-bit black key:
+platform caam_sm: [0000] 06 33 2b 90 b5 fe 16 41
+platform caam_sm: [0008] b5 7d 3f 46 a0 22 b5 70
+platform caam_sm: 128-bit clear key:
+platform caam_sm: [0000] 00 01 02 03 04 0f 06 07
+platform caam_sm: [0008] 08 09 0a 0b 0c 0d 0e 0f
+platform caam_sm: 128-bit black key:
+platform caam_sm: [0000] fd de a8 72 0b 68 42 2f
+platform caam_sm: [0008] 1b e0 dd d2 d8 a6 9c ba
+platform caam_sm: 192-bit clear key:
+platform caam_sm: [0000] 00 01 02 03 04 0f 06 07
+platform caam_sm: [0008] 08 09 0a 0b 0c 0d 0e 0f
+platform caam_sm: [0016] 10 11 12 13 14 15 16 17
+platform caam_sm: 192-bit black key:
+platform caam_sm: [0000] 4a d6 a0 98 f7 07 6e b7
+platform caam_sm: [0008] ba 12 ff 85 eb 8e a0 7c
+platform caam_sm: [0016] bf c4 d7 59 24 32 cb 95
+platform caam_sm: [0024] 07 a6 0c 1d 31 5b 59 9c
+platform caam_sm: 256-bit clear key:
+platform caam_sm: [0000] 00 01 02 03 04 0f 06 07
+platform caam_sm: [0008] 08 09 0a 0b 0c 0d 0e 0f
+platform caam_sm: [0016] 10 11 12 13 14 15 16 17
+platform caam_sm: [0024] 18 19 1a 1b 1c 1d 1e 1f
+platform caam_sm: 256-bit black key:
+platform caam_sm: [0000] 25 ec 5b 66 3a 4a 70 21
+platform caam_sm: [0008] 9d 84 54 68 71 d1 91 50
+platform caam_sm: [0016] 87 41 bb 47 95 3e 53 2b
+platform caam_sm: [0024] d8 65 3f 38 c8 b8 44 47
+platform caam_sm: 64-bit unwritten blob:
+platform caam_sm: [0000] 00 00 00 00 00 00 00 00
+platform caam_sm: [0008] 00 00 00 00 00 00 00 00
+platform caam_sm: [0016] 00 00 00 00 00 00 00 00
+platform caam_sm: [0024] 00 00 00 00 00 00 00 00
+platform caam_sm: [0032] 00 00 00 00 00 00 00 00
+platform caam_sm: [0040] 00 00 00 00 00 00 00 00
+platform caam_sm: [0048] 00 00 00 00 00 00 00 00
+platform caam_sm: [0056] 00 00 00 00 00 00 00 00
+platform caam_sm: [0064] 00 00 00 00 00 00 00 00
+platform caam_sm: [0072] 00 00 00 00 00 00 00 00
+platform caam_sm: [0080] 00 00 00 00 00 00 00 00
+platform caam_sm: [0088] 00 00 00 00 00 00 00 00
+platform caam_sm: 128-bit unwritten blob:
+platform caam_sm: [0000] 00 00 00 00 00 00 00 00
+platform caam_sm: [0008] 00 00 00 00 00 00 00 00
+platform caam_sm: [0016] 00 00 00 00 00 00 00 00
+platform caam_sm: [0024] 00 00 00 00 00 00 00 00
+platform caam_sm: [0032] 00 00 00 00 00 00 00 00
+platform caam_sm: [0040] 00 00 00 00 00 00 00 00
+platform caam_sm: [0048] 00 00 00 00 00 00 00 00
+platform caam_sm: [0056] 00 00 00 00 00 00 00 00
+platform caam_sm: [0064] 00 00 00 00 00 00 00 00
+platform caam_sm: [0072] 00 00 00 00 00 00 00 00
+platform caam_sm: [0080] 00 00 00 00 00 00 00 00
+platform caam_sm: [0088] 00 00 00 00 00 00 00 00
+platform caam_sm: 196-bit unwritten blob:
+platform caam_sm: [0000] 00 00 00 00 00 00 00 00
+platform caam_sm: [0008] 00 00 00 00 00 00 00 00
+platform caam_sm: [0016] 00 00 00 00 00 00 00 00
+platform caam_sm: [0024] 00 00 00 00 00 00 00 00
+platform caam_sm: [0032] 00 00 00 00 00 00 00 00
+platform caam_sm: [0040] 00 00 00 00 00 00 00 00
+platform caam_sm: [0048] 00 00 00 00 00 00 00 00
+platform caam_sm: [0056] 00 00 00 00 00 00 00 00
+platform caam_sm: [0064] 00 00 00 00 00 00 00 00
+platform caam_sm: [0072] 00 00 00 00 00 00 00 00
+platform caam_sm: [0080] 00 00 00 00 00 00 00 00
+platform caam_sm: [0088] 00 00 00 00 00 00 00 00
+platform caam_sm: 256-bit unwritten blob:
+platform caam_sm: [0000] 00 00 00 00 00 00 00 00
+platform caam_sm: [0008] 00 00 00 00 00 00 00 00
+platform caam_sm: [0016] 00 00 00 00 00 00 00 00
+platform caam_sm: [0024] 00 00 00 00 00 00 00 00
+platform caam_sm: [0032] 00 00 00 00 00 00 00 00
+platform caam_sm: [0040] 00 00 00 00 00 00 00 00
+platform caam_sm: [0048] 00 00 00 00 00 00 00 00
+platform caam_sm: [0056] 00 00 00 00 00 00 00 00
+platform caam_sm: [0064] 00 00 00 00 00 00 00 00
+platform caam_sm: [0072] 00 00 00 00 00 00 00 00
+platform caam_sm: [0080] 00 00 00 00 00 00 00 00
+platform caam_sm: [0088] 00 00 00 00 00 00 00 00
+platform caam_sm: 64-bit black key in blob:
+platform caam_sm: [0000] 74 1f 9a 33 f2 d7 a5 2e
+platform caam_sm: [0008] 1b b4 cd 66 47 d0 2b 0b
+platform caam_sm: [0016] 00 8e 27 56 42 91 5d 34
+platform caam_sm: [0024] 5f d7 e1 35 80 08 dc ba
+platform caam_sm: [0032] 5d ef 62 30 ee ac a0 02
+platform caam_sm: [0040] 6e fc aa 7c dc 0c 72 b1
+platform caam_sm: [0048] b2 ec c1 36 bc 1b 12 eb
+platform caam_sm: [0056] 00 00 00 00 00 00 00 00
+platform caam_sm: [0064] 00 00 00 00 00 00 00 00
+platform caam_sm: [0072] 00 00 00 00 00 00 00 00
+platform caam_sm: [0080] 00 00 00 00 00 00 00 00
+platform caam_sm: [0088] 00 00 00 00 00 00 00 00
+platform caam_sm: 128-bit black key in blob:
+platform caam_sm: [0000] 31 1c 02 cc 65 5b 3f e0
+platform caam_sm: [0008] 06 c0 af c3 c3 6f 9d 63
+platform caam_sm: [0016] e6 18 cd 49 2b 12 dd 11
+platform caam_sm: [0024] 3d 2d b8 96 94 58 0f 8a
+platform caam_sm: [0032] b0 18 92 b4 cf 5c cc 0f
+platform caam_sm: [0040] b8 dd d1 6a 5e b6 af b9
+platform caam_sm: [0048] 42 44 c8 6a a9 2a 85 e5
+platform caam_sm: [0056] bf ea 05 6a 32 df e5 27
+platform caam_sm: [0064] 00 00 00 00 00 00 00 00
+platform caam_sm: [0072] 00 00 00 00 00 00 00 00
+platform caam_sm: [0080] 00 00 00 00 00 00 00 00
+platform caam_sm: [0088] 00 00 00 00 00 00 00 00
+platform caam_sm: 192-bit black key in blob:
+platform caam_sm: [0000] fe f9 41 83 11 be 42 2a
+platform caam_sm: [0008] cf 44 fe 2e 04 09 c5 74
+platform caam_sm: [0016] 18 cd bf 76 9a c1 47 64
+platform caam_sm: [0024] 08 bf 7e a2 74 e5 5c e2
+platform caam_sm: [0032] 46 63 0e 7c ee 15 49 e4
+platform caam_sm: [0040] c6 2e 93 8e 16 fe 91 64
+platform caam_sm: [0048] 6b 19 4f f6 ed fd 62 96
+platform caam_sm: [0056] d3 fe 52 f9 81 fd a8 7d
+platform caam_sm: [0064] a5 3c 2e 80 e7 ad 0d 3a
+platform caam_sm: [0072] 00 00 00 00 00 00 00 00
+platform caam_sm: [0080] 00 00 00 00 00 00 00 00
+platform caam_sm: [0088] 00 00 00 00 00 00 00 00
+platform caam_sm: 256-bit black key in blob:
+platform caam_sm: [0000] b6 9c 08 dd 91 1e 16 27
+platform caam_sm: [0008] 59 7c 3e 15 b4 75 09 36
+platform caam_sm: [0016] 49 88 12 32 57 0b 48 a8
+platform caam_sm: [0024] f9 56 24 94 3e dc 45 d5
+platform caam_sm: [0032] 1a 17 e1 b2 a6 cb fd 1c
+platform caam_sm: [0040] 97 4b de 99 c9 fc 2f 27
+platform caam_sm: [0048] 94 d1 9c e9 9f 54 2b 9f
+platform caam_sm: [0056] e1 d2 6a dd 2a 47 03 42
+platform caam_sm: [0064] 02 ef 2f 2e c7 f9 ae 6f
+platform caam_sm: [0072] 99 c5 6f d0 61 b1 24 61
+platform caam_sm: [0080] 00 00 00 00 00 00 00 00
+platform caam_sm: [0088] 00 00 00 00 00 00 00 00
+platform caam_sm: restored 64-bit black key:
+platform caam_sm: [0000] fe 9b fb ed 60 28 c4 57
+platform caam_sm: [0008] eb ce 39 9f 5d c5 ef eb
+platform caam_sm: restored 128-bit black key:
+platform caam_sm: [0000] fd de a8 72 0b 68 42 2f
+platform caam_sm: [0008] 1b e0 dd d2 d8 a6 9c ba
+platform caam_sm: restored 192-bit black key:
+platform caam_sm: [0000] 4a d6 a0 98 f7 07 6e b7
+platform caam_sm: [0008] ba 12 ff 85 eb 8e a0 7c
+platform caam_sm: [0016] 99 07 14 9f 79 dd 4e c9
+platform caam_sm: [0024] e1 e0 dd 9e 89 bb 3f 3a
+platform caam_sm: restored 256-bit black key:
+platform caam_sm: [0000] 25 ec 5b 66 3a 4a 70 21
+platform caam_sm: [0008] 9d 84 54 68 71 d1 91 50
+platform caam_sm: [0016] 87 41 bb 47 95 3e 53 2b
+platform caam_sm: [0024] d8 65 3f 38 c8 b8 44 47
+snvs-secvio 20cc000.caam-snvs: can't get snvs clock
+snvs-secvio 20cc000.caam-snvs: violation handlers armed - non-secure state
+hidraw: raw HID events driver (C) Jiri Kosina
+input: PixArt Dell MS116 USB Optical Mouse as /devices/soc0/soc/2100000.aips-bus/2184200.usb/ci_hdrc.1/usb1/1-1/1-1.3/1-1.3:1.0/0003:413C:301A.0001/input/input1
+hid-generic 0003:413C:301A.0001: input,hidraw0: USB HID v1.11 Mouse [PixArt Dell MS116 USB Optical Mouse] on usb-ci_hdrc.1-1.3/input0
+usbcore: registered new interface driver usbhid
+usbhid: USB HID core driver
+ashmem: initialized
+usbcore: registered new interface driver snd-usb-audio
+sgtl5000 2-000a: sgtl5000 revision 0x11
+fsl-ssi-dai 2028000.ssi: No cache defaults, reading back from HW
+imx-sgtl5000 sound: sgtl5000 <-> 2028000.ssi mapping ok
+imx-spdif sound-spdif: snd-soc-dummy-dai <-> 2004000.spdif mapping ok
+imx-audio-hdmi sound-hdmi: hdmi-hifi.0 <-> soc:hdmi_audio@00120000 mapping ok
+NET: Registered protocol family 26
+u32 classifier
+    Actions configured
+Netfilter messages via NETLINK v0.30.
+nf_conntrack version 0.5.0 (16384 buckets, 65536 max)
+ctnetlink v0.93: registering with nfnetlink.
+xt_time: kernel timezone is -0000
+ip_tables: (C) 2000-2006 Netfilter Core Team
+arp_tables: arp_tables: (C) 2002 David S. Miller
+Initializing XFRM netlink socket
+NET: Registered protocol family 10
+mip6: Mobile IPv6
+ip6_tables: (C) 2000-2006 Netfilter Core Team
+sit: IPv6, IPv4 and MPLS over IPv4 tunneling driver
+NET: Registered protocol family 17
+NET: Registered protocol family 15
+can: controller area network core (rev 20120528 abi 9)
+NET: Registered protocol family 29
+can: raw protocol (rev 20120528)
+can: broadcast manager protocol (rev 20161123 t)
+can: netlink gateway (rev 20130117) max_hops=1
+Bluetooth: RFCOMM TTY layer initialized
+Bluetooth: RFCOMM socket layer initialized
+Bluetooth: RFCOMM ver 1.11
+Bluetooth: BNEP (Ethernet Emulation) ver 1.3
+Bluetooth: BNEP filters: protocol multicast
+Bluetooth: BNEP socket layer initialized
+Bluetooth: HIDP (Human Interface Emulation) ver 1.2
+Bluetooth: HIDP socket layer initialized
+8021q: 802.1Q VLAN Support v1.8
+Key type dns_resolver registered
+cpu cpu0: Registered imx6q-cpufreq
+registered taskstats version 1
+imx_thermal 2000000.aips-bus:tempmon: Industrial CPU temperature grade - max:105C critical:100C passive:95C
+dhd_module_init in
+input: gpio-keys as /devices/soc0/gpio-keys/input/input2
+snvs_rtc 20cc000.snvs:snvs-rtc-lp: setting system clock to 1970-01-01 00:04:40 UTC (280)
+usb_otg_vbus: disabling
+ALSA device list:
+  #0: imx6q-apalis-sgtl5000
+  #1: imx-spdif
+  #2: imx-hdmi-soc
+Freeing unused kernel memory: 1024K
+init: init first stage started!
+SELinux:  Permission validate_trans in class security not defined in policy.
+SELinux:  Class cap_userns not defined in policy.
+SELinux:  Class cap2_userns not defined in policy.
+SELinux: the above unknown classes and permissions will be denied
+audit: type=1403 audit(280.650:2): policy loaded auid=4294967295 ses=4294967295
+init: (Initializing SELinux non-enforcing took 0.13s.)
+init: init second stage started!
+init: Running restorecon...
+init: waitpid failed: No child processes
+init: (Loading properties from /default.prop took 0.00s.)
+init: (Parsing /init.environ.rc took 0.00s.)
+init: (Parsing /init.usb.rc took 0.00s.)
+init: (Parsing init.freescale.usb.rc took 0.00s.)
+init: (Parsing init.freescale.i.MX6Q.rc took 0.00s.)
+init: (Parsing init.freescale.emmc.rc took 0.00s.)
+init: (Parsing /init.freescale.rc took 0.02s.)
+ueventd: ueventd started!
+ueventd: Coldboot took 0.44s.
+Console: switching to colour dummy device 80x30
+watchdogd: started (interval 10, margin 20)!
+EXT4-fs (mmcblk0p3): mounted filesystem with ordered data mode. Opts: barrier=1
+EXT4-fs (mmcblk0p10): Ignoring removed nomblk_io_submit option
+EXT4-fs (mmcblk0p10): recovery complete
+EXT4-fs (mmcblk0p10): mounted filesystem with ordered data mode. Opts: nomblk_io_submit,noauto_da_alloc,errors=panic
+EXT4-fs (mmcblk0p4): Ignoring removed nomblk_io_submit option
+EXT4-fs (mmcblk0p4): recovery complete
+EXT4-fs (mmcblk0p4): mounted filesystem with ordered data mode. Opts: nomblk_io_submit
+EXT4-fs (mmcblk0p5): mounted filesystem with ordered data mode. Opts: (null)
+file system registered
+using random self ethernet address
+using random host ethernet address
+zram0: detected capacity change from 0 to 314572800
+logd.auditd: start
+logd.klogd: 7901228333
+Adding 307196k swap on /dev/block/zram0.  Priority:-1 extents:1 across:307196k SS
+binder: 253:253 transaction failed 29189, size 0-0
+logd.daemon: reinit
+toradex_apalis6q:/ # ERROR: v4l2 capture: slave not found! V4L2_CID_HUE
+ERROR: v4l2 capture: slave not found! V4L2_CID_HUE
+healthd: No battery devices found
+imx-hdmi-audio imx-hdmi-audio: HDMI Video is not ready!
+imx-hdmi-audio imx-hdmi-audio: ASoC: can't open platform imx-hdmi-audio: -22
+imx-hdmi-audio imx-hdmi-audio: HDMI Video is not ready!
+imx-hdmi-audio imx-hdmi-audio: ASoC: can't open platform imx-hdmi-audio: -22
+init: Starting service 'bootanim'...
+capability: warning: `main' uses 32-bit capabilities (legacy support in use)
+init: write_file: Unable to open '/sys/devices/system/cpu/cpufreq/interactive/timer_rate': No such file or directory
+init: write_file: Unable to open '/sys/devices/system/cpu/cpufreq/interactive/min_sample_time': No such file or directory
+init: write_file: Unable to open '/sys/devices/system/cpu/cpufreq/interactive/go_hispeed_load': No such file or directory
+random: crng init done
+init: write_file: Unable to open '/proc/sys/vm/extra_free_kbytes': No such file or directory
+init: write_file: Unable to write to '/config/usb_gadget/g1/UDC': No such device
+acc_open
+acc_release
+android_work: sent uevent USB_STATE=CONNECTED
+android_work: sent uevent USB_STATE=DISCONNECTED
+android_work: sent uevent USB_STATE=CONNECTED
+android_work: sk is not ready
+k is not ready
+android_work: sent uevent USB_STATE=CONNECTED
+android_work: sent uevent USB_STATE=CONNECTED
+android_work: sent uevent USB_STATE=CONNECTED
+android_work: sent uevent USB_STATE=CONNECTED
+android_work: sent uevent USB_STATE=CONNECTED
+android_work: sent uevent USB_STATE=CONNECTED
+android_work: sent uevent USB_STATE=CONNECTED
+android_work: sent uevent USB_STATE=CONNECTED
+android_work: sent uevent USB_STATE=CONNECTED
+android_work: sent uevent USB_STATE=CONNECTED
+android_work: sent uevent USB_STATE=CONNECTED
+android_work: sent uevent USB_STATE=CONNECTED
+android_work: sent uevent USB_STATE=CONNECTED
+android_work: sent uevent USB_STATE=CONNECTED
+android_work: sent uevent USB_STATE=CONNECTED
+android_work: sent uevent USB_STATE=CONNECTED
+android_work: sent uevent USB_STATE=CONNECTED
+android_work: sent uevent USB_STATE=CONNECTED
+android_work: sent uevent USB_STATE=CONNECTED
+android_work: sent uevent USB_STATE=CONNECTED
+android_work: sent uevent USB_STATE=CONNECTED
+android_work: sent uevent USB_STATE=CONNECTED
+android_work: sent uevent USB_STATE=CONNECTED
+android_work: sent uevent USB_STATE=CONNECTED
+android_work: sent uevent USB_STATE=CONNECTED
+android_work: sent uevent USB_STATE=CONNECTED
+android_work: sent uevent USB_STATE=CONNECTED
+android_work: sent uevent USB_STATE=CONNECTED
+android_work: sent uevent USB_STATE=CONNECTED
+android_work: sent uevent USB_STATE=CONNECTED
+android_work: sent uevent USB_STATE=CONNECTED
+android_work: sent uevent USB_STATE=CONNECTED
+android_work: sent uevent USB_STATE=CONNECTED
+android_work: sent uevent USB_STATE=CONNECTED
+android_work: sent uevent USB_STATE=CONNECTED
+android_work: sent uevent USB_STATE=CONNECTED
+android_work: sent uevent USB_STATE=CONNECTED
+android_work: sent uevent USB_STATE=CONNECTED
+android_work: sent uevent USB_STATE=CONNECTED
+android_work: sent uevent USB_STATE=CONNECTED
+android_work: sent uevent USB_STATE=CONNECTED
+android_work: sent uevent USB_STATE=CONNECTED
+android_work: sent uevent USB_STATE=CONNECTED
+android_work: sent uevent USB_STATE=CONNECTED
+android_work: sent uevent USB_STATE=CONNECTED
+android_work: sent uevent USB_STATE=CONNECTED
+android_work: sent uevent USB_STATE=CONNECTED
+android_work: sent uevent USB_STATE=CONNECTED
+android_work: sent uevent USB_STATE=CONNECTED
+android_work: sent uevent USB_STATE=CONNECTED
+android_work: sent uevent USB_STATE=CONNECTED
+android_work: sent uevent USB_STATE=CONNECTED
+android_work: sent uevent USB_STATE=CONNECTED
+android_work: sent uevent USB_STATE=CONNECTED
+android_work: sent uevent USB_STATE=CONNECTED
+android_work: sent uevent USB_STATE=CONNECTED
+android_work: sent uevent USB_STATE=CONNECTED
+android_work: sent uevent USB_STATE=CONNECTED
+android_work: sent uevent USB_STATE=CONNECTED
+android_work: sent uevent USB_STATE=CONNECTED
+android_work: sent uevent USB_STATE=CONNECTED
+android_work: sent uevent USB_STATE=CONNECTED
+android_work: sent uevent USB_STATE=CONNECTED
+android_work: sent uevent USB_STATE=CONNECTED
+android_work: sent uevent USB_STATE=CONNECTED
+android_work: sent uevent USB_STATE=CONNECTED
+android_work: sent uevent USB_STATE=CONNECTED
+android_work: sent uevent USB_STATE=CONNECTED
+android_work: sent uevent USB_STATE=CONNECTED
+android_work: sent uevent USB_STATE=CONNECTED
+android_work: sent uevent USB_STATE=CONNECTED
+android_work: sent uevent USB_STATE=CONNECTED
+android_work: sent uevent USB_STATE=CONNECTED
+android_work: sent uevent USB_STATE=CONNECTED
+android_work: sent uevent USB_STATE=DISCONNECTED
+android_work: sent uevent USB_STATE=CONNECTED
+android_work: sent uevent USB_STATE=DISCONNECTED
+android_work: sent uevent USB_STATE=CONNECTED
+configfs-gadget gadget: high-speed config #1: b
+android_work: sent uevent USB_STATE=CONFIGURED
+init: Service 'bootanim' (pid 333) exited with status 0
+init: Starting service 'exec 3 (/system/bin/bootstat)'...
+init: Service 'exec 3 (/system/bin/bootstat)' (pid 915) exited with status 0
+init: Starting service 'exec 4 (/system/bin/bootstat)'...
+init: Service 'exec 4 (/system/bin/bootstat)' (pid 928) exited with status 0
+init: Starting service 'exec 5 (/system/bin/bootstat)'...
+init: Service 'exec 5 (/system/bin/bootstat)' (pid 934) exited with status 0
+init: Starting service 'exec 6 (/system/bin/bootstat)'...
+init: Service 'exec 6 (/system/bin/bootstat)' (pid 940) exited with status 0
+
+toradex_apalis6q:/ # 
+toradex_apalis6q:/ # 
+toradex_apalis6q:/ # 
+toradex_apalis6q:/ # 
+toradex_apalis6q:/ # 
+toradex_apalis6q:/ # 
+toradex_apalis6q:/ # ls
+type=1400 audit(322.300:3): avc: denied { getattr } for pid=1208 comm="ls" path="/init" dev="rootfs" ino=6456 scontext=u:r:shell:s0 tcontext=u:object_r:init_exec:s0 tclass=file permissive=1
+acct                   init.freescale.i.MX6DL.rc  root                 
+bugreports             init.freescale.i.MX6Q.rc   sbin                 
+cache                  init.freescale.i.MX6QP.rc  sdcard               
+charger                init.freescale.rc          seapp_contexts       
+config                 init.freescale.sd.rc       selinux_version      
+d                      init.freescale.usb.rc      sepolicy             
+data                   init.rc                    service_contexts     
+default.prop           init.recovery.freescale.rc storage              
+dev                    init.usb.configfs.rc       sys                  
+device                 init.usb.rc                system               
+etc                    init.zygote32.rc           ueventd.freescale.rc 
+file_contexts.bin      mnt                        ueventd.rc           
+fstab.freescale        oem                        vendor               
+init                   proc                       verity_key           
+init.environ.rc        property_contexts          
+init.freescale.emmc.rc res                        
+toradex_apalis6q:/ # mount     df
+type=1400 audit(326.210:4): avc: denied { getattr } for pid=1209 comm="df" path="/dev/block" dev="tmpfs" ino=10351 scontext=u:r:shell:s0 tcontext=u:object_r:block_device:s0 tclass=dir permissive=1
+Filesystem            1K-blocks  type=1400 audit(326.210:5): avc: denied { getattr } for pid=1209 comm="df" path="/dev/block/mmcblk0p3" dev="tmpfs" ino=10468 scontext=u:r:shell:s0 tcontext=u:object_r:system_block_device:s0 tclass=blk_file permissive=1
+ Used Available Use% Mounted on
+type=1400 audit(326.210:6): avc: denied { getattr } for pid=1209 comm="df" path="/dev/block/mmcblk0p10" dev="tmpfs" ino=10450 scontext=u:r:shell:s0 tcontext=u:object_r:userdata_block_device:s0 tclass=blk_file permissive=1
+rootfs                   798524  type=1400 audit(326.210:7): avc: denied { getattr } for pid=1209 comm="df" path="/dev/block/mmcblk0p4" dev="tmpfs" ino=10440 scontext=u:r:shell:s0 tcontext=u:object_r:cache_block_device:s0 tclass=blk_file permissive=1
+ 3000    795524   1% /
+tmpfs    type=1400 audit(326.210:8): avc: denied { getattr } for pid=1209 comm="df" path="/dev/block/mmcblk0p5" dev="tmpfs" ino=10464 scontext=u:r:shell:s0 tcontext=u:object_r:block_device:s0 tclass=blk_file permissive=1
+               1029208    456   1type=1400 audit(326.210:9): avc: denied { getattr } for pid=1209 comm="df" path="/dev/fuse" dev="tmpfs" ino=10270 scontext=u:r:shell:s0 tcontext=u:object_r:fuse_device:s0 tclass=chr_file permissive=1
+028752   1% /dev
+tmpfs                   1029208      4   1029204   1% /mnt
+/dev/block/mmcblk0p3    1499760 621008    878752  42% /system
+/dev/block/mmcblk0p10   1430704  21608   1409096   2% /data
+/dev/block/mmcblk0p4     499656    412    499244   1% /cache
+/dev/block/mmcblk0p5       6907     45      6862   1% /device
+/dev/fuse               1430704  21608   1409096   2% /mnt/runtime/default/emulated
+/dev/fuse               1430704  21608   1409096   2% /mnt/runtime/read/emulated
+/dev/fuse               1430704  21608   1409096   2% /mnt/runtime/write/emulated
+toradex_apalis6q:/ # df
+Filesystem            1K-blocks   Used Available Use% Mounted on
+rootfs                   798524   3000    795524   1% /
+tmpfs                   1029208    456   1028752   1% /dev
+tmpfs                   1029208      4   1029204   1% /mnt
+/dev/block/mmcblk0p3    1499760 621008    878752  42% /system
+/dev/block/mmcblk0p10   1430704  21608   1409096   2% /data
+/dev/block/mmcblk0p4     499656    412    499244   1% /cache
+/dev/block/mmcblk0p5       6907     45      6862   1% /device
+/dev/fuse               1430704  21608   1409096   2% /mnt/runtime/default/emulated
+/dev/fuse               1430704  21608   1409096   2% /mnt/runtime/read/emulated
+/dev/fuse               1430704  21608   1409096   2% /mnt/runtime/write/emulated
+toradex_apalis6q:/ # 
+toradex_apalis6q:/ # 
+toradex_apalis6q:/ # 
+toradex_apalis6q:/ # mount -o remount,rw /system
+type=1400 audit(335.270:10): avc: denied { mounton } for pid=1211 comm="mount" path="/system" dev="mmcblk0p3" ino=2 scontext=u:r:shell:s0 tcontext=u:object_r:system_file:s0 tclass=dir permissive=1
+mount: '/dev/block/by-name/system'->'/stype=1400 audit(335.270:11): avc: denied { read } for pid=1211 comm="mount" name="mmcblk0p3" dev="tmpfs" ino=10468 scontext=u:r:shell:s0 tcontext=u:object_r:system_block_device:s0 tclass=blk_file permissive=1
+ystem': Device or resource busy
+type=1400 audit(335.270:12): avc: denied { open } for pid=1211 comm="mount" path="/dev/block/mmcblk0p3" dev="tmpfs" ino=10468 scontext=u:r:shell:s0 tcontext=u:object_r:system_block_device:s0 tclass=blk_file permissive=1
+type=1400 audit(335.270:13): avc: denied { ioctl } for pid=1211 comm="mount" path="/dev/block/mmcblk0p3" dev="tmpfs" ino=10468 ioctlcmd=0x125d scontext=u:r:shell:s0 tcontext=u:object_r:system_block_device:s0 tclass=blk_file permissive=1
+1|toradex_apalis6q:/ # 
+1|toradex_apalis6q:/ # 
+1|toradex_apalis6q:/ # 
+1|toradex_apalis6q:/ # 
+1|toradex_apalis6q:/ # df
+Filesystem            1K-blocks   Used Available Use% Mounted on
+rootfs                   798524   3000    795524   1% /
+tmpfs                   1029208    456   1028752   1% /dev
+tmpfs                   1029208      4   1029204   1% /mnt
+/dev/block/mmcblk0p3    1499760 621008    878752  42% /system
+/dev/block/mmcblk0p10   1430704  21608   1409096   2% /data
+/dev/block/mmcblk0p4     499656    412    499244   1% /cache
+/dev/block/mmcblk0p5       6907     45      6862   1% /device
+/dev/fuse               1430704  21608   1409096   2% /mnt/runtime/default/emulated
+/dev/fuse               1430704  21608   1409096   2% /mnt/runtime/read/emulated
+/dev/fuse               1430704  21608   1409096   2% /mnt/runtime/write/emulated
+toradex_apalis6q:/ # toradex_apalis6q:/ # df                                                        toradex_apalis6q:/ # mount -o remount,rw /system                               
+mount: '/dev/block/by-name/system'->'/system': Device or resource busy
+1|toradex_apalis6q:/ # mount
+rootfs on / type rootfs (ro,seclatype=1400 audit(350.070:14): avc: denied { read } for pid=1215 comm="mount" name="/" dev="tmpfs" ino=11265 scontext=u:r:shell:s0 tcontext=u:object_r:device:s0 tclass=dir permissive=1
+bel,size=798524k,nr_inodes=69534)type=1400 audit(350.070:15): avc: denied { open } for pid=1215 comm="mount" path="/dev" dev="tmpfs" ino=11265 scontext=u:r:shell:s0 tcontext=u:object_r:device:s0 tclass=dir permissive=1
+
+tmpfs on /dev type tmpfs (rw,setype=1400 audit(350.070:16): avc: denied { read } for pid=1215 comm="mount" name="block" dev="tmpfs" ino=10351 scontext=u:r:shell:s0 tcontext=u:object_r:block_device:s0 tclass=dir permissive=1
+clabel,nosuid,relatime,mode=755)type=1400 audit(350.070:17): avc: denied { open } for pid=1215 comm="mount" path="/dev/block" dev="tmpfs" ino=10351 scontext=u:r:shell:s0 tcontext=u:object_r:block_device:s0 tclass=dir permissive=1
+
+devpts on /dev/pts type devpts (rw,seclabel,relatime,mode=600,ptmxmode=000)
+proc on /proc type proc (rw,relatime)
+sysfs on /sys type sysfs (rw,seclabel,relatime)
+selinuxfs on /sys/fs/selinux type selinuxfs (rw,relatime)
+none on /sys/kernel/debug type debugfs (rw,seclabel,relatime,mode=755)
+none on /acct type cgroup (rw,relatime,cpuacct)
+tmpfs on /mnt type tmpfs (rw,seclabel,relatime,mode=755,gid=1000)
+none on /config type configfs (rw,relatime)
+none on /dev/cpuctl type cgroup (rw,relatime,cpu)
+pstore on /sys/fs/pstore type pstore (rw,seclabel,relatime)
+/dev/block/mmcblk0p3 on /system type ext4 (ro,seclabel,relatime,data=ordered)
+/dev/block/mmcblk0p10 on /data type ext4 (rw,seclabel,nosuid,nodev,noatime,nodiratime,noauto_da_alloc,errors=panic,data=ordered)
+/dev/block/mmcblk0p4 on /cache type ext4 (rw,seclabel,nosuid,nodev,relatime,data=ordered)
+/dev/block/mmcblk0p5 on /device type ext4 (ro,seclabel,nosuid,nodev,relatime,data=ordered)
+adb on /dev/usb-ffs/adb type functionfs (rw,relatime)
+tmpfs on /storage type tmpfs (rw,seclabel,relatime,mode=755,gid=1000)
+tracefs on /sys/kernel/debug/tracing type tracefs (rw,seclabel,relatime)
+/dev/fuse on /mnt/runtime/default/emulated type fuse (rw,nosuid,nodev,noexec,noatime,user_id=1023,group_id=1023,default_permissions,allow_other)
+/dev/fuse on /storage/emulated type fuse (rw,nosuid,nodev,noexec,noatime,user_id=1023,group_id=1023,default_permissions,allow_other)
+/dev/fuse on /mnt/runtime/read/emulated type fuse (rw,nosuid,nodev,noexec,noatime,user_id=1023,group_id=1023,default_permissions,allow_other)
+/dev/fuse on /mnt/runtime/write/emulated type fuse (rw,nosuid,nodev,noexec,noatime,user_id=1023,group_id=1023,default_permissions,allow_other)
+toradex_apalis6q:/ # 
+toradex_apalis6q:/ # 
+toradex_apalis6q:/ # toradex_apalis6q:/ # mount                                                     toradex_apalis6q:/ # mount -o remount,rw /system                               android_work: sent uevent USB_STATE=DISCONNECTED
+android_work: sent uevent USB_STATE=CONNECTED
+android_work: sent uevent USB_STATE=DISCONNECTED
+configfs-gadget gadget: high-speed config #1: b
+android_work: sent uevent USB_STATE=CONNECTED
+android_work: sent uevent USB_STATE=CONFIGURED
+mtp_open
+mtp_release
+android_work: sent uevent USB_STATE=DISCONNECTED
+ent uevent USB_STATE=DISCONNECTED
+configfs-gadget gadget: high-speed config #1: b
+android_work: sent uevent USB_STATE=CONNECTED
+android_work: sent uevent USB_STATE=CONFIGURED
+mtp_open
+configfs-gadget gadget: high-speed config #1: b
+mtp_release
+android_work: sent uevent USB_STATE=CONFIGURED
+
+mount: '/dev/block/by-name/system'->'/system': Device or resource busy
+1|toradex_apalis6q:/ # 
+1|toradex_apalis6q:/ # 
+1|toradex_apalis6q:/ # 
+1|toradex_apalis6q:/ # 1|toradex_apalis6q:/ # mount -o remount,rw /system                                    /dev/block/mmcblk0p3
+mount: '/dev/block/mmcblk0p3' not in /proc/mounts
+1|toradex_apalis6q:/ # 1|toradex_apalis6q:/ # mount -o remount,rw /dev/block/mmcblk0p3                 /
+mount: '/' not in /proc/mounts
+1|toradex_apalis6q:/ # 1|toradex_apalis6q:/ # mount -o remount,rw /dev/block/mmcblk0p3 /                                   
+mount: type=1400 audit(390.250:18): avc: denied { mounton } for pid=1223 comm="mount" path="/" dev="rootfs" ino=2 scontext=u:r:shell:s0 tcontext=u:object_r:rootfs:s0 tclass=dir permissive=1
+'rootfs'->'/': No such device
+1|toradex_apalis6q:/ # 1|toradex_apalis6q:/ # mount -o remount,rw /                                   sys
+sys/     system/
+1|toradex_apalis6q:/ # mount -o remount,rw /sys                                t1|toradex_apalis6q:/ # mount -o remount,rw /system/                            
+mount: '/system/' not in /proc/mounts
+1|toradex_apalis6q:/ # 
+1|toradex_apalis6q:/ # 
+1|toradex_apalis6q:/ # 1|toradex_apalis6q:/ # mount -o remount,rw /system/                             
+mount: '/dev/block/by-name/system'->'/system': Device or resource busy
+1|toradex_apalis6q:/ # 
+1|toradex_apalis6q:/ # 
+1|toradex_apalis6q:/ # cd /
+toradex_apalis6q:/ # ls
+acct                   init.freescale.i.MX6DL.rc  root                 
+bugreports             init.freescale.i.MX6Q.rc   sbin                 
+cache                  init.freescale.i.MX6QP.rc  sdcard               
+charger                init.freescale.rc          seapp_contexts       
+config                 init.freescale.sd.rc       selinux_version      
+d                      init.freescale.usb.rc      sepolicy             
+data                   init.rc                    service_contexts     
+default.prop           init.recovery.freescale.rc storage              
+dev                    init.usb.configfs.rc       sys                  
+device                 init.usb.rc                system               
+etc                    init.zygote32.rc           ueventd.freescale.rc 
+file_contexts.bin      mnt                        ueventd.rc           
+fstab.freescale        oem                        vendor               
+init                   proc                       verity_key           
+init.environ.rc        property_contexts          
+init.freescale.emmc.rc res                        
+toradex_apalis6q:/ # cd /sys
+sys/     system/
+toradex_apalis6q:/ # cd /sys                                                   ttoradex_apalis6q:/ # cd /system/                                               
+toradex_apalis6q:/system # ls
+app build.prop fake-libs framework lost+found priv-app vendor 
+bin etc        fonts     lib       media      usr      xbin   
+toradex_apalis6q:/system # cd ../etoradex_apalis6q:/system # cd ../etc/                                          
+toradex_apalis6q:/etc # ls
+NOTICE.html.gz                      media_codecs_google_audio.xml           
+a2dp_audio_policy_configuration.xml media_codecs_google_telephony.xml       
+apns-conf.xml                       media_codecs_google_video.xml           
+audio_effects.conf                  media_codecs_performance.xml            
+audio_policy_configuration.xml      media_profiles.xml                      
+audio_policy_volumes.xml            media_profiles_720p.xml                 
+bluetooth                           mkshrc                                  
+clatd.conf                          ota.conf                                
+compiled-classes                    permissions                             
+component_register                  ppp                                     
+contentpipe_register                preloaded-classes                       
+core_register                       public.libraries.txt                    
+default_volume_tables.xml           r_submix_audio_policy_configuration.xml 
+event-log-tags                      recovery-resource.dat                   
+firmware                            seccomp_policy                          
+fonts.xml                           security                                
+hosts                               usb_audio_policy_configuration.xml      
+init                                wifi                                    
+media_codecs.xml                    
+toradex_apalis6q:/etc # vi  bu
+bu           bugreport    bugreportz   builtin
+toradex_apalis6q:/etc # bu                                                     sy    vi fitoradex_apalis6q:/etc # vi firmware/                                                   otoradex_apalis6q:/etc # vi fonts.xml                                                      ottoradex_apalis6q:/etc # vi ota.conf                                             
+/system/bin/sh: vi: not found
+127|toradex_apalis6q:/etc # busybox vi  
+/system/bin/sh: busybox: not found
+127|toradex_apalis6q:/etc # 127|toradex_apalis6q:/etc # busybox                                            vi ot127|toradex_apalis6q:/etc # busybox vi ota.conf                                 
+/system/bin/sh: busybox: not found
+127|toradex_apalis6q:/etc # bu
+bu           bugreport    bugreportz   builtin
+127|toradex_apalis6q:/etc # bu                                                 
+bu           bugreport    bugreportz   builtin
+127|toradex_apalis6q:/etc # bu                                                   cd /
+toradex_apalis6q:/ # 
+toradex_apalis6q:/ # 
+toradex_apalis6q:/ # 
+toradex_apalis6q:/ # 
+toradex_apalis6q:/ # 
+toradex_apalis6q:/ # 
+toradex_apalis6q:/ # 
+toradex_apalis6q:/ # 
+toradex_apalis6q:/ # cd /
+toradex_apalis6q:/ # 
+toradex_apalis6q:/ # 
+toradex_apalis6q:/ # 
+toradex_apalis6q:/ # ls
+acct                   init.freescale.i.MX6DL.rc  root                 
+bugreports             init.freescale.i.MX6Q.rc   sbin                 
+cache                  init.freescale.i.MX6QP.rc  sdcard               
+charger                init.freescale.rc          seapp_contexts       
+config                 init.freescale.sd.rc       selinux_version      
+d                      init.freescale.usb.rc      sepolicy             
+data                   init.rc                    service_contexts     
+default.prop           init.recovery.freescale.rc storage              
+dev                    init.usb.configfs.rc       sys                  
+device                 init.usb.rc                system               
+etc                    init.zygote32.rc           ueventd.freescale.rc 
+file_contexts.bin      mnt                        ueventd.rc           
+fstab.freescale        oem                        vendor               
+init                   proc                       verity_key           
+init.environ.rc        property_contexts          
+init.freescale.emmc.rc res                        
+toradex_apalis6q:/ # catype=1400 audit(649.090:19): avc: denied { getattr } for pid=254 comm="sh" path="/system/bin/cameraserver" dev="mmcblk0p3" ino=243 scontext=u:r:shell:s0 tcontext=u:object_r:cameraserver_exec:s0 tclass=file permissive=1
+
+cal             cameraserver    type=1400 audit(649.090:20): avc: denied { execute } for pid=254 comm="sh" name="cameraserver" dev="mmcblk0p3" ino=243 scontext=u:r:shell:s0 tcontext=u:object_r:cameraserver_exec:s0 tclass=file permissive=1
+case            cat
+toradex_apalis6q:/ # ca                                                        t   bus   etype=1400 audit(659.130:21): avc: denied { getattr } for pid=254 comm="sh" path="/system/bin/e2fsck" dev="mmcblk0p3" ino=277 scontext=u:r:shell:s0 tcontext=u:object_r:fsck_exec:s0 tclass=file permissive=1
+
+e2fsck  egrep   else    esac   type=1400 audit(659.150:22): avc: denied { execute } for pid=254 comm="sh" name="e2fsck" dev="mmcblk0p3" ino=277 scontext=u:r:shell:s0 tcontext=u:object_r:fsck_exec:s0 tclass=file permissive=1
+ exec    expand  expr
+echo    elif    env     eval    exit    export
+toradex_apalis6q:/ # e                                                          vi  \\\   ls
+acct                   init.freescale.i.MX6DL.rc  root                 
+bugreports             init.freescale.i.MX6Q.rc   sbin                 
+cache                  init.freescale.i.MX6QP.rc  sdcard               
+charger                init.freescale.rc          seapp_contexts       
+config                 init.freescale.sd.rc       selinux_version      
+d                      init.freescale.usb.rc      sepolicy             
+data                   init.rc                    service_contexts     
+default.prop           init.recovery.freescale.rc storage              
+dev                    init.usb.configfs.rc       sys                  
+device                 init.usb.rc                system               
+etc                    init.zygote32.rc           ueventd.freescale.rc 
+file_contexts.bin      mnt                        ueventd.rc           
+fstab.freescale        oem                        vendor               
+init                   proc                       verity_key           
+init.environ.rc        property_contexts          
+init.freescale.emmc.rc res                        
+toradex_apalis6q:/ # 
+toradex_apalis6q:/ # 
+toradex_apalis6q:/ # 
+toradex_apalis6q:/ # cat ini
+init                                    init.freescale.sd.rc
+init.environ.rc                         init.freescale.usb.rc
+init.freescale.emmc.rc                  init.rc
+init.freescale.i.MX6DL.rc               init.recovery.freescale.rc
+init.freescale.i.MX6Q.rc                init.usb.configfs.rc
+init.freescale.i.MX6QP.rc               init.usb.rc
+init.freescale.rc                       init.zygote32.rc
+toradex_apalis6q:/ # cat init                                                  .etoradex_apalis6q:/ # cat init.environ.rc                                        
+type=1400 audit(701.460:23): avc: denied { read } for pid=254 comm="sh" name="init.environ.rc" dev="rootfs" ino=6457 scontext=u:r:shell:s0 tcontext=u:object_r:rootfs:s0 tclass=file permissive=1
+# set up the global environmenttype=1400 audit(701.470:24): avc: denied { open } for pid=254 comm="sh" path="/init.environ.rc" dev="rootfs" ino=6457 scontext=u:r:shell:s0 tcontext=u:object_r:rootfs:s0 tclass=file permissive=1
+
+on init
+    export ANDROID_BOOTLOGO 1
+    export ANDROID_ROOT /system
+    export ANDROID_ASSETS /system/app
+    export ANDROID_DATA /data
+    export ANDROID_STORAGE /storage
+    export EXTERNAL_STORAGE /sdcard
+    export ASEC_MOUNTPOINT /mnt/asec
+    export BOOTCLASSPATH /system/framework/core-oj.jar:/system/framework/core-libart.jar:/system/framework/conscrypt.jar:/system/framework/okhttp.jar:/system/framework/core-junit.jar:/system/framework/bouncycastle.jar:/system/framework/ext.jar:/system/framework/framework.jar:/system/framework/telephony-common.jar:/system/framework/voip-common.jar:/system/framework/ims-common.jar:/system/framework/apache-xml.jar:/system/framework/org.apache.http.legacy.boot.jar
+    export SYSTEMSERVERCLASSPATH /system/framework/services.jar:/system/framework/ethernet-service.jar:/system/framework/wifi-service.jar
+    
+toradex_apalis6q:/ # mk
+mkdir   mke2fs  mknod   mkswap  mktemp
+toradex_apalis6q:/ # mk                                                        dtoradex_apalis6q:/ # mkdir                                                      1
+mkdir: '1': Read-only file system
+1|toradex_apalis6q:/ # l
+/system/bin/sh: l: not found
+127|toradex_apalis6q:/ # sls
+/system/bin/sh: sls: not found
+127|toradex_apalis6q:/ # cd /
+toradex_apalis6q:/ # ls
+acct                   init.freescale.i.MX6DL.rc  root                 
+bugreports             init.freescale.i.MX6Q.rc   sbin                 
+cache                  init.freescale.i.MX6QP.rc  sdcard               
+charger                init.freescale.rc          seapp_contexts       
+config                 init.freescale.sd.rc       selinux_version      
+d                      init.freescale.usb.rc      sepolicy             
+data                   init.rc                    service_contexts     
+default.prop           init.recovery.freescale.rc storage              
+dev                    init.usb.configfs.rc       sys                  
+device                 init.usb.rc                system               
+etc                    init.zygote32.rc           ueventd.freescale.rc 
+file_contexts.bin      mnt                        ueventd.rc           
+fstab.freescale        oem                        vendor               
+init                   proc                       verity_key           
+init.environ.rc        property_contexts          
+init.freescale.emmc.rc res                        
+toradex_apalis6q:/ # mount -o remount,rw /
+mount: 'rootfs'->'/': No such device
+1|toradex_apalis6q:/ # 1|toradex_apalis6q:/ # mount -o remount,rw /                                   sys
+sys/     system/
+1|toradex_apalis6q:/ # mount -o remount,rw /sys                                t1|toradex_apalis6q:/ # mount -o remount,rw /system/                             
+mount: '/dev/block/by-name/system'->'/system': Device or resource busy
+1|toradex_apalis6q:/ # 
+
+1|toradex_apalis6q:/ # 
+1|toradex_apalis6q:/ # 
+1|toradex_apalis6q:/ # 
+1|toradex_apalis6q:/ # mount -o rw,remount /system
+type=1400 audit(813.230:25): avc: denied { remount } for pid=1235 comm="mount" scontext=u:r:shell:s0 tcontext=u:object_r:labeledfs:s0 tclass=filesystem permissive=1
+EXT4-fs (mmcblk0p3): re-mounted. Opts: data=ordered
+toradex_apalis6q:/ # 
+toradex_apalis6q:/ # df
+Filesystem            1K-blocks  type=1400 audit(815.710:26): avc: denied { getattr } for pid=1237 comm="df" path="/dev/block/mmcblk0p5" dev="tmpfs" ino=10464 scontext=u:r:shell:s0 tcontext=u:object_r:block_device:s0 tclass=blk_file permissive=1
+ Used Available Use% Mounted on
+rootfs                   798524   3000    795524   1% /
+tmpfs                   1029208    456   1028752   1% /dev
+tmpfs                   1029208      4   1029204   1% /mnt
+/dev/block/mmcblk0p3    1499760 621008    878752  42% /system
+/dev/block/mmcblk0p10   1430704  21608   1409096   2% /data
+/dev/block/mmcblk0p4     499656    412    499244   1% /cache
+/dev/block/mmcblk0p5       6907     45      6862   1% /device
+/dev/fuse               1430704  21608   1409096   2% /mnt/runtime/default/emulated
+/dev/fuse               1430704  21608   1409096   2% /mnt/runtime/read/emulated
+/dev/fuse               1430704  21608   1409096   2% /mnt/runtime/write/emulated
+toradex_apalis6q:/ # mkdir 1
+mkdir: '1': Read-only file system
+1|toradex_apalis6q:/ # 
+1|toradex_apalis6q:/ # 
+1|toradex_apalis6q:/ # 1|toradex_apalis6q:/ # mkdir 1                                                 1|toradex_apalis6q:/ # df                                                      1|toradex_apalis6q:/ # mount -o rw,remount /system                             
+EXT4-fs (mmcblk0p3): re-mounted. Opts: data=ordered
+toradex_apalis6q:/ # 
+toradex_apalis6q:/ # 
+toradex_apalis6q:/ # 
+toradex_apalis6q:/ # toradex_apalis6q:/ # mount -o rw,remount /system                               toradex_apalis6q:/ # mkdir 1                                                   
+mkdir: '1': Read-only file system
+1|toradex_apalis6q:/ # ls
+acct                   init.freescale.i.MX6DL.rc  root                 
+bugreports             init.freescale.i.MX6Q.rc   sbin                 
+cache                  init.freescale.i.MX6QP.rc  sdcard               
+charger                init.freescale.rc          seapp_contexts       
+config                 init.freescale.sd.rc       selinux_version      
+d                      init.freescale.usb.rc      sepolicy             
+data                   init.rc                    service_contexts     
+default.prop           init.recovery.freescale.rc storage              
+dev                    init.usb.configfs.rc       sys                  
+device                 init.usb.rc                system               
+etc                    init.zygote32.rc           ueventd.freescale.rc 
+file_contexts.bin      mnt                        ueventd.rc           
+fstab.freescale        oem                        vendor               
+init                   proc                       verity_key           
+init.environ.rc        property_contexts          
+init.freescale.emmc.rc res                        
+toradex_apalis6q:/ # cd /sys
+sys/     system/
+toradex_apalis6q:/ # cd /sys                                                   
+toradex_apalis6q:/sys # toradex_apalis6q:/sys # cd /sys                                                c ttoradex_apalis6q:/sys # cd /system/                                            
+toradex_apalis6q:/system # ls
+app build.prop fake-libs framework lost+found priv-app vendor 
+bin etc        fonts     lib       media      usr      xbin   
+toradex_apalis6q:/system # mkdir 1
+type=1400 audit(843.020:27): avc: denied { write } for pid=1243 comm="mkdir" name="/" dev="mmcblk0p3" ino=2 scontext=u:r:shell:s0 tcontext=u:object_r:system_file:s0 tclass=dir permissive=1
+toradex_apalis6q:/system # type=1400 audit(843.020:28): avc: denied { add_name } for pid=1243 comm="mkdir" name="1" scontext=u:r:shell:s0 tcontext=u:object_r:system_file:s0 tclass=dir permissive=1
+type=1400 audit(843.020:29): avc: denied { create } for pid=1243 comm="mkdir" name="1" scontext=u:r:shell:s0 tcontext=u:object_r:system_file:s0 tclass=dir permissive=1
+
+toradex_apalis6q:/system # 
+toradex_apalis6q:/system # 
+toradex_apalis6q:/system # l
+/system/bin/sh: l: not found
+127|toradex_apalis6q:/system # sl
+/system/bin/sh: sl: not found
+127|toradex_apalis6q:/system # s ls
+1   bin        etc       fonts     lib        media    usr    xbin 
+app build.prop fake-libs framework lost+found priv-app vendor 
+toradex_apalis6q:/system # cd /
+toradex_apalis6q:/ # toradex_apalis6q:/ # cd /                                                      toradex_apalis6q:/ # ls                                                        toradex_apalis6q:/ # sl                                                        toradex_apalis6q:/ # l                                                         toradex_apalis6q:/ # mkdir 1                                                   toradex_apalis6q:/ # ls                                                        toradex_apalis6q:/ # cd /system/                                               toradex_apalis6q:/ # cd /sys                                                   toradex_apalis6q:/ # ls                                                        toradex_apalis6q:/ # mkdir 1                                                   toradex_apalis6q:/ # mount -o rw,remount /system                               toradex_apalis6q:/ # mkdir 1                                                   toradex_apalis6q:/ # mount -o rw,remount /system                                     
+type=1400 audit(856.490:30): avc: denied { remount } for pid=1245 comm="mount" scontext=u:r:shell:s0 tcontext=u:object_r:rootfs:s0 tclass=filesystem permissive=1
+toradex_apalis6q:/ # type=1400 audit(856.490:31): avc: denied { sys_admin } for pid=1245 comm="mount" capability=21 scontext=u:r:shell:s0 tcontext=u:r:shell:s0 tclass=capability permissive=1
+
+toradex_apalis6q:/ # 
+toradex_apalis6q:/ # 
+toradex_apalis6q:/ # 
+toradex_apalis6q:/ # 
+toradex_apalis6q:/ # toradex_apalis6q:/ # mount -o rw,remount /                                     toradex_apalis6q:/ # cd /                                                      toradex_apalis6q:/ # ls                                                        toradex_apalis6q:/ # sl                                                        toradex_apalis6q:/ # l                                                         toradex_apalis6q:/ # mkdir 1                                                   
+type=1400 audit(861.420:32): avc: denied { write } for pid=1246 comm="mkdir" name="/" dev="rootfs" ino=2 scontext=u:r:shell:s0 tcontext=u:object_r:rootfs:s0 tclass=dir permissive=1
+type=1400 audit(861.420:33): avc: denied { add_name } for pid=1246 comm="mkdir" name="1" scontext=u:r:shell:s0 tcontext=u:object_r:rootfs:s0 tclass=dir permissive=1
+toradex_apalis6q:/ # type=1400 audit(861.420:34): avc: denied { create } for pid=1246 comm="mkdir" name="1" scontext=u:r:shell:s0 tcontext=u:object_r:rootfs:s0 tclass=dir permissive=1
+
+toradex_apalis6q:/ # 
+toradex_apalis6q:/ # 
+toradex_apalis6q:/ # 
+toradex_apalis6q:/ # ls
+1                 init.freescale.emmc.rc     res                  
+acct              init.freescale.i.MX6DL.rc  root                 
+bugreports        init.freescale.i.MX6Q.rc   sbin                 
+cache             init.freescale.i.MX6QP.rc  sdcard               
+charger           init.freescale.rc          seapp_contexts       
+config            init.freescale.sd.rc       selinux_version      
+d                 init.freescale.usb.rc      sepolicy             
+data              init.rc                    service_contexts     
+default.prop      init.recovery.freescale.rc storage              
+dev               init.usb.configfs.rc       sys                  
+device            init.usb.rc                system               
+etc               init.zygote32.rc           ueventd.freescale.rc 
+file_contexts.bin mnt                        ueventd.rc           
+fstab.freescale   oem                        vendor               
+init              proc                       verity_key           
+init.environ.rc   property_contexts          
+toradex_apalis6q:/ # 
+toradex_apalis6q:/ # 
+toradex_apalis6q:/ # 
+toradex_apalis6q:/ # 
+toradex_apalis6q:/ # bus   
+toradex_apalis6q:/ # 
+toradex_apalis6q:/ # 
+toradex_apalis6q:/ # date
+Thu Jan  1 00:17:05 GMT 1970
+toradex_apalis6q:/ # toradex_apalis6q:/ # date                                                       -hepl
+usage: date [-u] [-r FILE] [-d DATE] [+DISPLAY_FORMAT] [-D SET_FORMAT] [SET]
+
+Set/get the current date/time. With no SET shows the current date.
+
+Default SET format is "MMDDhhmm[[CC]YY][.ss]", that's (2 digits each)
+month, day, hour (0-23), and minute. Optionally century, year, and second.
+Also accepts "@UNIXTIME[.FRACTION]" as seconds since midnight Jan 1 1970.
+
+-d	Show DATE instead of current time (convert date format)
+-D	+FORMAT for SET or -d (instead of MMDDhhmm[[CC]YY][.ss])
+-r	Use modification time of FILE instead of current date
+-u	Use UTC instead of current timezone
+
++FORMAT specifies display format string using these escapes:
+
+%% literal %             %n newline              %t tab
+%S seconds (00-60)       %M minute (00-59)       %m month (01-12)
+%H hour (0-23)           %I hour (01-12)         %p AM/PM
+%y short year (00-99)    %Y year                 %C century
+%a short weekday name    %A weekday name         %u day of week (1-7, 1=mon)
+%b short month name      %B month name           %Z timezone name
+%j day of year (001-366) %d day of month (01-31) %e day of month ( 1-31)
+%s seconds past the Epoch
+
+%U Week of year (0-53 start sunday)   %W Week of year (0-53 start monday)
+%V Week of year (1-53 start monday, week < 4 days not part of this year)
+
+%D = "%m/%d/%y"    %r = "%I : %M : %S %p"   %T = "%H:%M:%S"   %h = "%b"
+%x locale date     %X locale time           %c locale date/time
+
+date: Unknown option hepl
+1|toradex_apalis6q:/ # date -d 28
+date: bad date '28'
+1|toradex_apalis6q:/ # 1|toradex_apalis6q:/ # date -d 28                                                12280252
+Sun Dec 28 02:52:00 GMT 1900
+toradex_apalis6q:/ # 
+toradex_apalis6q:/ # toradex_apalis6q:/ # date -d 12280252                                          toradex_apalis6q:/ # date -d 28                                                toradex_apalis6q:/ # date -hepl                                                toradex_apalis6q:/ # date -d 28                                                toradex_apalis6q:/ # date -d 12280252                                          
+130|toradex_apalis6q:/ # 
+130|toradex_apalis6q:/ # 
+130|toradex_apalis6q:/ # 
+130|toradex_apalis6q:/ # cd /
+toradex_apalis6q:/ # sync
+toradex_apalis6q:/ # reboot
+sysrq: SysRq : Emergency Remount R/O
+EXT4-fs (mmcblk0p4): re-mounted. Opts: (null)
+EXT4-fs (mmcblk0p10): re-mounted. Opts: (null)
+EXT4-fs (mmcblk0p3): re-mounted. Opts: (null)
+Emergency Remount complete
+imx2-wdt 20bc000.wdog: Device shutdown: Expect reboot!
+ci_hdrc ci_hdrc.1: remove, state 1
+usb usb1: USB disconnect, device number 1
+usb 1-1: USB disconnect, device number 2
+usb 1-1.3: USB disconnect, device number 3
+ci_hdrc ci_hdrc.1: USB bus 1 deregistered
+android_work: sent uevent USB_STATE=DISCONNECTED
+ueventd: SELinux:  Could not stat /sys/devices/soc0/soc/2100000.aips-bus/2184000.usb/ci_hdrc.0/udc/ci_hdrc.0: No such file or directory.
+reboot: Restarting system with command ''
+
+
+U-Boot 2017.03-00001-g610928540e-dirty (Dec 28 2017 - 14:21:59 +0530)
+
+CPU:   Freescale i.MX6Q rev1.5 at 792 MHz
+Reset cause: WDOG
+I2C:   ready
+DRAM:  2 GiB
+PMIC: device id: 0x10, revision id: 0x21
+PMIC: programmed
+MMC:   FSL_SDHC: 0, FSL_SDHC: 1, FSL_SDHC: 2
+auto-detected panel HDMI
+Aravinth: Display: HDMI (1024x768)
+In:    serial
+Out:   serial
+Err:   serial
+Model: Toradex Apalis iMX6 Quad 2GB IT V1.1C, Serial# 05146387
+flash target is MMC:0
+Net:   using PHY at 7
+FEC [PRIME]
+Fastboot: Normal
+Hit any key to stop autoboot:  1  0 
+boota mmc0 
+CACHE: Misaligned operation at range [8ffb70a0, 8ffb7120]
+CACHE: Misaligned operation at range [8ffb70a0, 8ffb7120]
+kernel   @ 14008000 (9802376)
+ramdisk  @ 15000000 (1628386)
+fdt      @ 14f00000 (53977)
+## Booting Android Image at 0x12000000 ...
+Kernel load addr 0x14008000 size 9573 KiB
+Kernel command line: console=ttymxc0,115200 init=/init video=mxcfb0:dev=ldb,fbpix=RGB32,bpp=32 video=mxcfb1:dev=hdmi,640x480M@60,if=RGB24,bpp=16 video=mxcfb2:off video=mxcfb3:off vmalloc=256M androidboot.console=ttymxc0 consoleblank=0 androidboot.hardware=freescale cma=448M androidboot.selinux=permissive androidboot.dm_verity=disabled buildvariant=user androidboot.serialno=1b2429d4ea997115 androidboot.storage_type=emmc
+## Flattened Device Tree blob at 14f00000
+   Booting using the fdt blob at 0x14f00000
+   Loading Kernel Image ... OK
+   Using Device Tree in place at 14f00000, end 14f102d8
+
+Starting kernel ...
+
+Booting Linux on physical CPU 0x0
+Linux version 4.9.67-07229-gdc6c16ec0433-dirty (embadmin@ubuntu) (gcc version 4.9 20150123 (prerelease) (GCC) ) #15 SMP PREEMPT Wed Dec 27 15:15:47 IST 2017
+CPU: ARMv7 Processor [412fc09a] revision 10 (ARMv7), cr=10c53c7d
+CPU: PIPT / VIPT nonaliasing data cache, VIPT aliasing instruction cache
+OF: fdt:Machine model: Aravinth :UJET Toradex Apalis iMX6Q/D Module on Ixora V1.1 Carrier Board
+cma: Reserved 448 MiB at 0x22000000
+Memory policy: Data cache writealloc
+percpu: Embedded 15 pages/cpu @ee6b3000 s31040 r8192 d22208 u61440
+Built 1 zonelists in Zone order, mobility grouping on.  Total pages: 522768
+Kernel command line: console=ttymxc0,115200 init=/init video=mxcfb0:dev=ldb,fbpix=RGB32,bpp=32 video=mxcfb1:dev=hdmi,640x480M@60,if=RGB24,bpp=16 video=mxcfb2:off video=mxcfb3:off vmalloc=256M androidboot.console=ttymxc0 consoleblank=0 androidboot.hardware=freescale cma=448M androidboot.selinux=permissive androidboot.dm_verity=disabled buildvariant=user androidboot.serialno=1b2429d4ea997115 androidboot.storage_type=emmc
+PID hash table entries: 4096 (order: 2, 16384 bytes)
+Dentry cache hash table entries: 131072 (order: 7, 524288 bytes)
+Inode-cache hash table entries: 65536 (order: 6, 262144 bytes)
+Memory: 1597048K/2097152K available (13312K kernel code, 1128K rwdata, 4016K rodata, 1024K init, 606K bss, 41352K reserved, 458752K cma-reserved, 1318912K highmem)
+Virtual kernel memory layout:
+    vector  : 0xffff0000 - 0xffff1000   (   4 kB)
+    fixmap  : 0xffc00000 - 0xfff00000   (3072 kB)
+    vmalloc : 0xf0000000 - 0xff800000   ( 248 MB)
+    lowmem  : 0xc0000000 - 0xef800000   ( 760 MB)
+    pkmap   : 0xbfe00000 - 0xc0000000   (   2 MB)
+    modules : 0xbf000000 - 0xbfe00000   (  14 MB)
+      .text : 0xc0008000 - 0xc0e00000   (14304 kB)
+      .init : 0xc1300000 - 0xc1400000   (1024 kB)
+      .data : 0xc1400000 - 0xc151a218   (1129 kB)
+       .bss : 0xc151a218 - 0xc15b1be0   ( 607 kB)
+SLUB: HWalign=64, Order=0-3, MinObjects=0, CPUs=4, Nodes=1
+Preemptible hierarchical RCU implementation.
+	Build-time adjustment of leaf fanout to 32.
+NR_IRQS:16 nr_irqs:16 16
+L2C-310 errata 752271 769419 enabled
+L2C-310 enabling early BRESP for Cortex-A9
+L2C-310 full line of zeros enabled for Cortex-A9
+L2C-310 ID prefetch enabled, offset 16 lines
+L2C-310 dynamic clock gating enabled, standby mode enabled
+L2C-310 cache controller enabled, 16 ways, 1024 kB
+L2C-310: CACHE_ID 0x410000c7, AUX_CTRL 0x76470001
+Switching to timer-based delay loop, resolution 333ns
+sched_clock: 32 bits at 3000kHz, resolution 333ns, wraps every 715827882841ns
+clocksource: mxc_timer1: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 637086815595 ns
+Console: colour dummy device 80x30
+Calibrating delay loop (skipped), value calculated using timer frequency.. 6.00 BogoMIPS (lpj=30000)
+pid_max: default: 32768 minimum: 301
+Security Framework initialized
+SELinux:  Initializing.
+Mount-cache hash table entries: 2048 (order: 1, 8192 bytes)
+Mountpoint-cache hash table entries: 2048 (order: 1, 8192 bytes)
+CPU: Testing write buffer coherency: ok
+CPU0: update cpu_capacity 1024
+CPU0: thread -1, cpu 0, socket 0, mpidr 80000000
+Setting up static identity map for 0x10100000 - 0x10100058
+CPU1: update cpu_capacity 1024
+CPU1: thread -1, cpu 1, socket 0, mpidr 80000001
+CPU2: update cpu_capacity 1024
+CPU2: thread -1, cpu 2, socket 0, mpidr 80000002
+CPU3: update cpu_capacity 1024
+CPU3: thread -1, cpu 3, socket 0, mpidr 80000003
+Brought up 4 CPUs
+SMP: Total of 4 processors activated (24.00 BogoMIPS).
+CPU: All CPU(s) started in SVC mode.
+CPU3: update max cpu_capacity 1024
+devtmpfs: initialized
+CPU2: update max cpu_capacity 1024
+VFP support v0.3: implementor 41 architecture 3 part 30 variant 9 rev 4
+clocksource: jiffies: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 19112604462750000 ns
+futex hash table entries: 1024 (order: 4, 65536 bytes)
+pinctrl core: initialized pinctrl subsystem
+NET: Registered protocol family 16
+DMA: preallocated 256 KiB pool for atomic coherent allocations
+cpuidle: using governor menu
+CPU identified as i.MX6Q, silicon rev 1.5
+hw-breakpoint: found 5 (+1 reserved) breakpoint and 1 watchpoint registers.
+hw-breakpoint: maximum watchpoint size is 4 bytes.
+imx6q-pinctrl 20e0000.iomuxc: initialized IMX pinctrl driver
+imx-gpc 20dc000.gpc: no fsl,ldo-bypass found!
+imx-gpc 20dc000.gpc: Registered imx-gpc
+mxs-dma 110000.dma-apbh: initialized
+usb_host_vbus: supplied by usb_host_vbus_hub
+SCSI subsystem initialized
+usbcore: registered new interface driver usbfs
+usbcore: registered new interface driver hub
+usbcore: registered new device driver usb
+2000000.aips-bus:usbphy_nop1 supply vcc not found, using dummy regulator
+2000000.aips-bus:usbphy_nop2 supply vcc not found, using dummy regulator
+i2c i2c-1: IMX I2C adapter registered
+i2c i2c-1: can't use DMA, using PIO instead.
+stmpe-i2c 2-0041: stmpe811 detected, chip id: 0x811
+i2c i2c-2: IMX I2C adapter registered
+i2c i2c-2: can't use DMA, using PIO instead.
+i2c i2c-3: IMX I2C adapter registered
+i2c i2c-3: can't use DMA, using PIO instead.
+Linux video capture interface: v2.00
+pps_core: LinuxPPS API ver. 1 registered
+pps_core: Software ver. 5.3.6 - Copyright 2005-2007 Rodolfo Giometti <giometti@linux.it>
+PTP clock support registered
+imx-ipuv3 2400000.ipu: IPU DMFC NORMAL mode: 1(0~1), 5B(4,5), 5F(6,7)
+imx-ipuv3 2800000.ipu: IPU DMFC NORMAL mode: 1(0~1), 5B(4,5), 5F(6,7)
+mxc_mipi_csi2 21dc000.mipi_csi: i.MX MIPI CSI2 driver probed ipu0 csi1
+mxc_mipi_csi2 21dc000.mipi_csi: i.MX MIPI CSI2 dphy version is 0x3130302a
+MIPI CSI2 driver module loaded
+imx rpmsg driver is registered.
+Advanced Linux Sound Architecture Driver Initialized.
+Bluetooth: Core ver 2.22
+NET: Registered protocol family 31
+Bluetooth: HCI device and connection manager initialized
+Bluetooth: HCI socket layer initialized
+Bluetooth: L2CAP socket layer initialized
+Bluetooth: SCO socket layer initialized
+clocksource: Switched to clocksource mxc_timer1
+VFS: Disk quotas dquot_6.6.0
+VFS: Dquot-cache hash table entries: 1024 (order 0, 4096 bytes)
+NET: Registered protocol family 2
+TCP established hash table entries: 8192 (order: 3, 32768 bytes)
+TCP bind hash table entries: 8192 (order: 4, 65536 bytes)
+TCP: Hash tables configured (established 8192 bind 8192)
+UDP hash table entries: 512 (order: 2, 16384 bytes)
+UDP-Lite hash table entries: 512 (order: 2, 16384 bytes)
+NET: Registered protocol family 1
+RPC: Registered named UNIX socket transport module.
+RPC: Registered udp transport module.
+RPC: Registered tcp transport module.
+RPC: Registered tcp NFSv4.1 backchannel transport module.
+Trying to unpack rootfs image as initramfs...
+Freeing initrd memory: 1592K
+hw perfevents: enabled with armv7_cortex_a9 PMU driver, 7 counters available
+Bus freq driver module loaded
+audit: initializing netlink subsys (disabled)
+audit: type=2000 audit(0.870:1): initialized
+workingset: timestamp_bits=30 max_order=19 bucket_order=0
+NFS: Registering the id_resolver key type
+Key type id_resolver registered
+Key type id_legacy registered
+ntfs: driver 2.1.32 [Flags: R/W DEBUG].
+jffs2: version 2.2. (NAND) © 2001-2006 Red Hat, Inc.
+fuse init (API version 7.26)
+bounce: pool size: 64 pages
+io scheduler noop registered
+io scheduler deadline registered
+io scheduler cfq registered (default)
+backlight supply power not found, using dummy regulator
+20e0000.hdmi_video supply HDMI not found, using dummy regulator
+mxc_sdc_fb fb@0: registered mxc display driver ldb
+imx-ipuv3 2800000.ipu: IPU DMFC DP HIGH RESOLUTION: 1(0,1), 5B(2~5), 5F(6,7)
+Console: switching to colour frame buffer device 128x48
+mxc_hdmi 20e0000.hdmi_video: Detected HDMI controller 0x13:0xa:0xa0:0xc1
+fbcvt: 640x480@60: CVT Name - .307M3
+mxc_sdc_fb fb@1: registered mxc display driver hdmi
+mxc_sdc_fb fb@2: Can't get fb option for mxcfb2!
+mxc_sdc_fb fb@3: Can't get fb option for mxcfb3!
+imx-sdma 20ec000.sdma: no iram assigned, using external mem
+imx-sdma 20ec000.sdma: loaded firmware 3.3
+pfuze100-regulator 2-0008: Full layer: 2, Metal layer: 1
+pfuze100-regulator 2-0008: FAB: 0, FIN: 0
+pfuze100-regulator 2-0008: pfuze100 found.
+mxc_hdmi 20e0000.hdmi_video: Read EDID again
+2020000.serial: ttymxc0 at MMIO 0x2020000 (irq = 29, base_baud = 5000000) is a IMX
+mxc_hdmi 20e0000.hdmi_video: create default modelist
+console [ttymxc0] enabled
+21e8000.serial: ttymxc1 at MMIO 0x21e8000 (irq = 78, base_baud = 5000000) is a IMX
+21f0000.serial: ttymxc3 at MMIO 0x21f0000 (irq = 79, base_baud = 5000000) is a IMX
+21f4000.serial: ttymxc4 at MMIO 0x21f4000 (irq = 80, base_baud = 5000000) is a IMX
+imx sema4 driver is registered.
+[drm] Initialized
+[drm] Initialized vivante 1.0.0 20120216 on minor 0
+brd: module loaded
+loop: module loaded
+zram: Added device: zram0
+ahci-imx 2200000.sata: fsl,transmit-level-mV not specified, using 00000024
+ahci-imx 2200000.sata: fsl,transmit-boost-mdB not specified, using 00000480
+ahci-imx 2200000.sata: fsl,transmit-atten-16ths not specified, using 00002000
+ahci-imx 2200000.sata: fsl,receive-eq-mdB not specified, using 05000000
+ahci-imx 2200000.sata: SSS flag set, parallel bus scan disabled
+ahci-imx 2200000.sata: AHCI 0001.0300 32 slots 1 ports 3 Gbps 0x1 impl platform mode
+ahci-imx 2200000.sata: flags: ncq sntf stag pm led clo only pmp pio slum part ccc apst 
+scsi host0: ahci-imx
+ata1: SATA max UDMA/133 mmio [mem 0x02200000-0x02203fff] port 0x100 irq 87
+spi_imx 2008000.ecspi: probed
+libphy: Fixed MDIO Bus: probed
+tun: Universal TUN/TAP device driver, 1.6
+tun: (C) 1999-2004 Max Krasnyansky <maxk@qualcomm.com>
+CAN device driver interface
+2090000.flexcan supply xceiver not found, using dummy regulator
+flexcan 2090000.flexcan: device registered (reg_base=f02f4000, irq=38)
+2094000.flexcan supply xceiver not found, using dummy regulator
+flexcan 2094000.flexcan: device registered (reg_base=f02fc000, irq=39)
+2188000.ethernet supply phy not found, using dummy regulator
+pps pps0: new PPS source ptp0
+libphy: fec_enet_mii_bus: probed
+fec 2188000.ethernet eth0: registered PHC device 0
+PPP generic driver version 2.4.2
+PPP BSD Compression module registered
+PPP Deflate Compression module registered
+PPP MPPE Compression module registered
+NET: Registered protocol family 24
+usbcore: registered new interface driver kaweth
+pegasus: v0.9.3 (2013/04/25), Pegasus/Pegasus II USB Ethernet driver
+usbcore: registered new interface driver pegasus
+usbcore: registered new interface driver rtl8150
+usbcore: registered new interface driver r8152
+usbcore: registered new interface driver asix
+usbcore: registered new interface driver ax88179_178a
+usbcore: registered new interface driver cdc_ether
+usbcore: registered new interface driver cdc_eem
+usbcore: registered new interface driver net1080
+usbcore: registered new interface driver cdc_subset
+usbcore: registered new interface driver zaurus
+usbcore: registered new interface driver cdc_ncm
+ehci_hcd: USB 2.0 'Enhanced' Host Controller (EHCI) Driver
+ehci-mxc: Freescale On-Chip EHCI Host driver
+usbcore: registered new interface driver cdc_acm
+cdc_acm: USB Abstract Control Model driver for USB modems and ISDN adapters
+usbcore: registered new interface driver usb-storage
+usbcore: registered new interface driver usbserial
+usbcore: registered new interface driver usbserial_generic
+usbserial: USB Serial support registered for generic
+usbcore: registered new interface driver ftdi_sio
+usbserial: USB Serial support registered for FTDI USB Serial Device
+usbcore: registered new interface driver option
+usbserial: USB Serial support registered for GSM modem (1-port)
+usbcore: registered new interface driver usbtest
+usbcore: registered new interface driver usb_ehset_test
+2184800.usbmisc supply vbus-wakeup not found, using dummy regulator
+ci_hdrc ci_hdrc.1: EHCI Host Controller
+ci_hdrc ci_hdrc.1: new USB bus registered, assigned bus number 1
+ci_hdrc ci_hdrc.1: USB 2.0 started, EHCI 1.00
+usb usb1: New USB device found, idVendor=1d6b, idProduct=0002
+usb usb1: New USB device strings: Mfr=3, Product=2, SerialNumber=1
+usb usb1: Product: EHCI Host Controller
+usb usb1: Manufacturer: Linux 4.9.67-07229-gdc6c16ec0433-dirty ehci_hcd
+usb usb1: SerialNumber: ci_hdrc.1
+hub 1-0:1.0: USB hub found
+hub 1-0:1.0: 1 port detected
+mousedev: PS/2 mouse device common for all mice
+usbcore: registered new interface driver xpad
+ata1: SATA link down (SStatus 0 SControl 300)
+ahci-imx 2200000.sata: no device found, disabling link.
+ahci-imx 2200000.sata: pass ahci_imx..hotplug=1 to enable hotplug
+usbcore: registered new interface driver usb_acecad
+usbcore: registered new interface driver aiptek
+usbcore: registered new interface driver gtco
+usbcore: registered new interface driver hanwang
+usbcore: registered new interface driver kbtab
+input: stmpe-ts as /devices/soc0/soc/2100000.aips-bus/21a4000.i2c/i2c-2/2-0041/stmpe-ts/input/input0
+snvs_rtc 20cc000.snvs:snvs-rtc-lp: rtc core: registered 20cc000.snvs:snvs-r as rtc0
+i2c /dev entries driver
+IR NEC protocol handler initialized
+IR RC5(x/sz) protocol handler initialized
+IR RC6 protocol handler initialized
+IR JVC protocol handler initialized
+IR Sony protocol handler initialized
+IR SANYO protocol handler initialized
+IR Sharp protocol handler initialized
+IR MCE Keyboard/mouse protocol handler initialized
+IR XMP protocol handler initialized
+mxc_v4l2_output v4l2_out: V4L2 device registered as video16
+mxc_v4l2_output v4l2_out: V4L2 device registered as video17
+mxc_v4l2_output v4l2_out: V4L2 device registered as video18
+mxc_v4l2_output v4l2_out: V4L2 device registered as video19
+ov564x_mipi 3-003c: found pwm2, period=0
+usb 1-1: new high-speed USB device number 2 using ci_hdrc
+ov5640_read_reg:write reg error:reg=300a
+camera ov5640_mipi is not found
+usbcore: registered new interface driver uvcvideo
+USB Video Class driver (1.1.1)
+imx2-wdt 20bc000.wdog: timeout 60 sec (nowayout=0)
+device-mapper: uevent: version 1.0.3
+device-mapper: ioctl: 4.35.0-ioctl (2016-06-23) initialised: dm-devel@redhat.com
+Bluetooth: HCI UART driver ver 2.3
+Bluetooth: HCI UART protocol H4 registered
+Bluetooth: HCI UART protocol BCSP registered
+Bluetooth: HCI UART protocol ATH3K registered
+usbcore: registered new interface driver btusb
+sdhci: Secure Digital Host Controller Interface driver
+sdhci: Copyright(c) Pierre Ossman
+sdhci-pltfm: SDHCI platform and OF driver helper
+sdhci-esdhc-imx 2190000.usdhc: could not get ultra high speed state, work on normal mode
+sdhci-esdhc-imx 2190000.usdhc: Got CD GPIO
+mmc1: SDHCI controller on 2190000.usdhc [2190000.usdhc] using ADMA
+sdhci-esdhc-imx 2198000.usdhc: could not get ultra high speed state, work on normal mode
+usb 1-1: New USB device found, idVendor=0424, idProduct=2514
+usb 1-1: New USB device strings: Mfr=0, Product=0, SerialNumber=0
+hub 1-1:1.0: USB hub found
+hub 1-1:1.0: 4 ports detected
+mmc0: SDHCI controller on 2198000.usdhc [2198000.usdhc] using ADMA
+mxc_vpu 2040000.vpu_fsl: VPU initialized
+mxc_vdoa 21e4000.vdoa: i.MX Video Data Order Adapter(VDOA) driver probed
+mxc_hdmi_cec soc:hdmi_cec@00120000: HDMI CEC initialized
+Galcore version 6.2.2.96445
+mmc0: new DDR MMC card at address 0001
+random: fast init done
+mmcblk0: mmc0:0001 Q2J54A 3.59 GiB 
+mmcblk0boot0: mmc0:0001 Q2J54A partition 1 16.0 MiB
+mmcblk0boot1: mmc0:0001 Q2J54A partition 2 16.0 MiB
+Alternate GPT is invalid, using primary GPT.
+ mmcblk0: p1 p2 p3 p4 p5 p6 p7 p8 p9 p10 p11
+usb 1-1.3: new low-speed USB device number 3 using ci_hdrc
+usb 1-1.3: New USB device found, idVendor=413c, idProduct=301a
+usb 1-1.3: New USB device strings: Mfr=1, Product=2, SerialNumber=0
+usb 1-1.3: Product: Dell MS116 USB Optical Mouse
+usb 1-1.3: Manufacturer: PixArt
+caam 2100000.caam: ERA source: CAAMVID.
+caam 2100000.caam: AXI pipeline throttling enabled.
+caam 2100000.caam: Instantiated RNG4 SH1
+caam 2100000.caam: device ID = 0x0a16010000000000 (Era 4)
+caam 2100000.caam: job rings = 2, qi = 0
+caam algorithms registered in /proc/crypto
+caam_jr 2101000.jr0: registering rng-caam
+platform caam_sm: blkkey_ex: 4 keystore units available
+platform caam_sm: 64-bit clear key:
+platform caam_sm: [0000] 00 01 02 03 04 0f 06 07
+platform caam_sm: 64-bit black key:
+platform caam_sm: [0000] ca 27 b6 b9 e6 4b c0 b8
+platform caam_sm: [0008] 5f 34 6c 46 d1 b0 54 13
+platform caam_sm: 128-bit clear key:
+platform caam_sm: [0000] 00 01 02 03 04 0f 06 07
+platform caam_sm: [0008] 08 09 0a 0b 0c 0d 0e 0f
+platform caam_sm: 128-bit black key:
+platform caam_sm: [0000] 39 07 52 79 27 63 4e de
+platform caam_sm: [0008] 37 9d 13 e9 80 ec 9a 13
+platform caam_sm: 192-bit clear key:
+platform caam_sm: [0000] 00 01 02 03 04 0f 06 07
+platform caam_sm: [0008] 08 09 0a 0b 0c 0d 0e 0f
+platform caam_sm: [0016] 10 11 12 13 14 15 16 17
+platform caam_sm: 192-bit black key:
+platform caam_sm: [0000] 50 d7 ba 5c 44 7c f4 1c
+platform caam_sm: [0008] 11 b1 bf ad 93 6a 94 48
+platform caam_sm: [0016] c2 0a c6 18 0c c5 95 6f
+platform caam_sm: [0024] 07 79 6b 5f ae b4 69 5c
+platform caam_sm: 256-bit clear key:
+platform caam_sm: [0000] 00 01 02 03 04 0f 06 07
+platform caam_sm: [0008] 08 09 0a 0b 0c 0d 0e 0f
+platform caam_sm: [0016] 10 11 12 13 14 15 16 17
+platform caam_sm: [0024] 18 19 1a 1b 1c 1d 1e 1f
+platform caam_sm: 256-bit black key:
+platform caam_sm: [0000] 8d b0 e0 f3 d2 e0 b2 e0
+platform caam_sm: [0008] 47 bd b7 3b 3c c8 1b a1
+platform caam_sm: [0016] 13 d2 50 e3 d3 fa 3b cb
+platform caam_sm: [0024] 3c 9f ff a9 cd a6 c0 18
+platform caam_sm: 64-bit unwritten blob:
+platform caam_sm: [0000] 00 00 00 00 00 00 00 00
+platform caam_sm: [0008] 00 00 00 00 00 00 00 00
+platform caam_sm: [0016] 00 00 00 00 00 00 00 00
+platform caam_sm: [0024] 00 00 00 00 00 00 00 00
+platform caam_sm: [0032] 00 00 00 00 00 00 00 00
+platform caam_sm: [0040] 00 00 00 00 00 00 00 00
+platform caam_sm: [0048] 00 00 00 00 00 00 00 00
+platform caam_sm: [0056] 00 00 00 00 00 00 00 00
+platform caam_sm: [0064] 00 00 00 00 00 00 00 00
+platform caam_sm: [0072] 00 00 00 00 00 00 00 00
+platform caam_sm: [0080] 00 00 00 00 00 00 00 00
+platform caam_sm: [0088] 00 00 00 00 00 00 00 00
+platform caam_sm: 128-bit unwritten blob:
+platform caam_sm: [0000] 00 00 00 00 00 00 00 00
+platform caam_sm: [0008] 00 00 00 00 00 00 00 00
+platform caam_sm: [0016] 00 00 00 00 00 00 00 00
+platform caam_sm: [0024] 00 00 00 00 00 00 00 00
+platform caam_sm: [0032] 00 00 00 00 00 00 00 00
+platform caam_sm: [0040] 00 00 00 00 00 00 00 00
+platform caam_sm: [0048] 00 00 00 00 00 00 00 00
+platform caam_sm: [0056] 00 00 00 00 00 00 00 00
+platform caam_sm: [0064] 00 00 00 00 00 00 00 00
+platform caam_sm: [0072] 00 00 00 00 00 00 00 00
+platform caam_sm: [0080] 00 00 00 00 00 00 00 00
+platform caam_sm: [0088] 00 00 00 00 00 00 00 00
+platform caam_sm: 196-bit unwritten blob:
+platform caam_sm: [0000] 00 00 00 00 00 00 00 00
+platform caam_sm: [0008] 00 00 00 00 00 00 00 00
+platform caam_sm: [0016] 00 00 00 00 00 00 00 00
+platform caam_sm: [0024] 00 00 00 00 00 00 00 00
+platform caam_sm: [0032] 00 00 00 00 00 00 00 00
+platform caam_sm: [0040] 00 00 00 00 00 00 00 00
+platform caam_sm: [0048] 00 00 00 00 00 00 00 00
+platform caam_sm: [0056] 00 00 00 00 00 00 00 00
+platform caam_sm: [0064] 00 00 00 00 00 00 00 00
+platform caam_sm: [0072] 00 00 00 00 00 00 00 00
+platform caam_sm: [0080] 00 00 00 00 00 00 00 00
+platform caam_sm: [0088] 00 00 00 00 00 00 00 00
+platform caam_sm: 256-bit unwritten blob:
+platform caam_sm: [0000] 00 00 00 00 00 00 00 00
+platform caam_sm: [0008] 00 00 00 00 00 00 00 00
+platform caam_sm: [0016] 00 00 00 00 00 00 00 00
+platform caam_sm: [0024] 00 00 00 00 00 00 00 00
+platform caam_sm: [0032] 00 00 00 00 00 00 00 00
+platform caam_sm: [0040] 00 00 00 00 00 00 00 00
+platform caam_sm: [0048] 00 00 00 00 00 00 00 00
+platform caam_sm: [0056] 00 00 00 00 00 00 00 00
+platform caam_sm: [0064] 00 00 00 00 00 00 00 00
+platform caam_sm: [0072] 00 00 00 00 00 00 00 00
+platform caam_sm: [0080] 00 00 00 00 00 00 00 00
+platform caam_sm: [0088] 00 00 00 00 00 00 00 00
+platform caam_sm: 64-bit black key in blob:
+platform caam_sm: [0000] 4c 16 5c 82 9e 63 47 15
+platform caam_sm: [0008] c9 07 96 f3 69 5c 43 a8
+platform caam_sm: [0016] 8e 41 0f 5c 4d c7 82 73
+platform caam_sm: [0024] 2b e6 c4 f8 39 df bc 8d
+platform caam_sm: [0032] cd da 6a 51 08 5f 3a 9b
+platform caam_sm: [0040] b4 54 16 ed 85 77 2f fc
+platform caam_sm: [0048] 9b f5 20 fb 6c b4 6a 8a
+platform caam_sm: [0056] 00 00 00 00 00 00 00 00
+platform caam_sm: [0064] 00 00 00 00 00 00 00 00
+platform caam_sm: [0072] 00 00 00 00 00 00 00 00
+platform caam_sm: [0080] 00 00 00 00 00 00 00 00
+platform caam_sm: [0088] 00 00 00 00 00 00 00 00
+platform caam_sm: 128-bit black key in blob:
+platform caam_sm: [0000] f6 4a 42 2d 33 24 f3 ea
+platform caam_sm: [0008] 6e f0 0f 6c 89 9c 0a cf
+platform caam_sm: [0016] b6 f8 a2 0a e5 1f 29 be
+platform caam_sm: [0024] e8 1e ab ce 78 99 b7 46
+platform caam_sm: [0032] 27 55 76 bd 0a 76 b3 6f
+platform caam_sm: [0040] ee 20 51 c1 57 2a 94 c0
+platform caam_sm: [0048] cb 1f 3a 82 50 e0 6c d1
+platform caam_sm: [0056] 50 f1 25 63 fb 33 0a 92
+platform caam_sm: [0064] 00 00 00 00 00 00 00 00
+platform caam_sm: [0072] 00 00 00 00 00 00 00 00
+platform caam_sm: [0080] 00 00 00 00 00 00 00 00
+platform caam_sm: [0088] 00 00 00 00 00 00 00 00
+platform caam_sm: 192-bit black key in blob:
+platform caam_sm: [0000] ba fd 99 7b 20 5f b8 4d
+platform caam_sm: [0008] c2 7e 95 06 cd 38 5c 3e
+platform caam_sm: [0016] 4f dd f4 41 1c 91 2e fb
+platform caam_sm: [0024] f3 50 ad e2 48 83 f7 d9
+platform caam_sm: [0032] e0 e3 17 40 bc 04 c6 5e
+platform caam_sm: [0040] b0 06 7e 40 bd c0 d3 3f
+platform caam_sm: [0048] 16 46 4d d2 00 c7 c2 00
+platform caam_sm: [0056] 56 bc 2d d8 09 9e b4 73
+platform caam_sm: [0064] 54 1d ff 3f fd fb 51 17
+platform caam_sm: [0072] 00 00 00 00 00 00 00 00
+platform caam_sm: [0080] 00 00 00 00 00 00 00 00
+platform caam_sm: [0088] 00 00 00 00 00 00 00 00
+platform caam_sm: 256-bit black key in blob:
+platform caam_sm: [0000] 69 03 dc e1 e5 13 c1 87
+platform caam_sm: [0008] 80 d4 9c 70 19 d8 1d 38
+platform caam_sm: [0016] 49 96 be 6e 74 ff 25 db
+platform caam_sm: [0024] 06 d6 2d 6d 5c 57 2a 6f
+platform caam_sm: [0032] 4f ee 53 6d eb 49 af 58
+platform caam_sm: [0040] a2 e7 cd f7 fd 04 37 4d
+platform caam_sm: [0048] f8 1a 60 89 2c d4 24 75
+platform caam_sm: [0056] ab 63 db 0f b4 dd 00 11
+platform caam_sm: [0064] 77 75 cb 77 42 2b c0 df
+platform caam_sm: [0072] 28 4a a1 ff 04 26 2f 8a
+platform caam_sm: [0080] 00 00 00 00 00 00 00 00
+platform caam_sm: [0088] 00 00 00 00 00 00 00 00
+platform caam_sm: restored 64-bit black key:
+platform caam_sm: [0000] cb e4 f1 04 66 81 2f 09
+platform caam_sm: [0008] 78 ab 88 be 9c 6e 01 55
+platform caam_sm: restored 128-bit black key:
+platform caam_sm: [0000] 39 07 52 79 27 63 4e de
+platform caam_sm: [0008] 37 9d 13 e9 80 ec 9a 13
+platform caam_sm: restored 192-bit black key:
+platform caam_sm: [0000] 50 d7 ba 5c 44 7c f4 1c
+platform caam_sm: [0008] 11 b1 bf ad 93 6a 94 48
+platform caam_sm: [0016] c3 2e f3 47 11 91 1d dc
+platform caam_sm: [0024] bf 81 c4 23 b7 14 da c0
+platform caam_sm: restored 256-bit black key:
+platform caam_sm: [0000] 8d b0 e0 f3 d2 e0 b2 e0
+platform caam_sm: [0008] 47 bd b7 3b 3c c8 1b a1
+platform caam_sm: [0016] 13 d2 50 e3 d3 fa 3b cb
+platform caam_sm: [0024] 3c 9f ff a9 cd a6 c0 18
+snvs-secvio 20cc000.caam-snvs: can't get snvs clock
+snvs-secvio 20cc000.caam-snvs: violation handlers armed - non-secure state
+hidraw: raw HID events driver (C) Jiri Kosina
+input: PixArt Dell MS116 USB Optical Mouse as /devices/soc0/soc/2100000.aips-bus/2184200.usb/ci_hdrc.1/usb1/1-1/1-1.3/1-1.3:1.0/0003:413C:301A.0001/input/input1
+hid-generic 0003:413C:301A.0001: input,hidraw0: USB HID v1.11 Mouse [PixArt Dell MS116 USB Optical Mouse] on usb-ci_hdrc.1-1.3/input0
+usbcore: registered new interface driver usbhid
+usbhid: USB HID core driver
+ashmem: initialized
+usbcore: registered new interface driver snd-usb-audio
+sgtl5000 2-000a: sgtl5000 revision 0x11
+fsl-ssi-dai 2028000.ssi: No cache defaults, reading back from HW
+imx-sgtl5000 sound: sgtl5000 <-> 2028000.ssi mapping ok
+imx-spdif sound-spdif: snd-soc-dummy-dai <-> 2004000.spdif mapping ok
+imx-audio-hdmi sound-hdmi: hdmi-hifi.0 <-> soc:hdmi_audio@00120000 mapping ok
+NET: Registered protocol family 26
+u32 classifier
+    Actions configured
+Netfilter messages via NETLINK v0.30.
+nf_conntrack version 0.5.0 (16384 buckets, 65536 max)
+ctnetlink v0.93: registering with nfnetlink.
+xt_time: kernel timezone is -0000
+ip_tables: (C) 2000-2006 Netfilter Core Team
+arp_tables: arp_tables: (C) 2002 David S. Miller
+Initializing XFRM netlink socket
+NET: Registered protocol family 10
+mip6: Mobile IPv6
+ip6_tables: (C) 2000-2006 Netfilter Core Team
+sit: IPv6, IPv4 and MPLS over IPv4 tunneling driver
+NET: Registered protocol family 17
+NET: Registered protocol family 15
+can: controller area network core (rev 20120528 abi 9)
+NET: Registered protocol family 29
+can: raw protocol (rev 20120528)
+can: broadcast manager protocol (rev 20161123 t)
+can: netlink gateway (rev 20130117) max_hops=1
+Bluetooth: RFCOMM TTY layer initialized
+Bluetooth: RFCOMM socket layer initialized
+Bluetooth: RFCOMM ver 1.11
+Bluetooth: BNEP (Ethernet Emulation) ver 1.3
+Bluetooth: BNEP filters: protocol multicast
+Bluetooth: BNEP socket layer initialized
+Bluetooth: HIDP (Human Interface Emulation) ver 1.2
+Bluetooth: HIDP socket layer initialized
+8021q: 802.1Q VLAN Support v1.8
+Key type dns_resolver registered
+cpu cpu0: Registered imx6q-cpufreq
+registered taskstats version 1
+imx_thermal 2000000.aips-bus:tempmon: Industrial CPU temperature grade - max:105C critical:100C passive:95C
+dhd_module_init in
+input: gpio-keys as /devices/soc0/gpio-keys/input/input2
+snvs_rtc 20cc000.snvs:snvs-rtc-lp: setting system clock to 1970-01-01 00:18:54 UTC (1134)
+usb_otg_vbus: disabling
+ALSA device list:
+  #0: imx6q-apalis-sgtl5000
+  #1: imx-spdif
+  #2: imx-hdmi-soc
+Freeing unused kernel memory: 1024K
+init: init first stage started!
+SELinux:  Permission validate_trans in class security not defined in policy.
+SELinux:  Class cap_userns not defined in policy.
+SELinux:  Class cap2_userns not defined in policy.
+SELinux: the above unknown classes and permissions will be denied
+audit: type=1403 audit(1134.620:2): policy loaded auid=4294967295 ses=4294967295
+init: (Initializing SELinux non-enforcing took 0.11s.)
+init: init second stage started!
+init: Running restorecon...
+init: waitpid failed: No child processes
+init: (Loading properties from /default.prop took 0.00s.)
+init: (Parsing /init.environ.rc took 0.00s.)
+init: (Parsing /init.usb.rc took 0.00s.)
+init: (Parsing init.freescale.usb.rc took 0.00s.)
+init: (Parsing init.freescale.i.MX6Q.rc took 0.00s.)
+init: (Parsing init.freescale.emmc.rc took 0.00s.)
+init: (Parsing /init.freescale.rc took 0.02s.)
+ueventd: ueventd started!
+ueventd: Coldboot took 0.44s.
+Console: switching to colour dummy device 80x30
+watchdogd: started (interval 10, margin 20)!
+EXT4-fs (mmcblk0p3): mounted filesystem with ordered data mode. Opts: barrier=1
+EXT4-fs (mmcblk0p10): Ignoring removed nomblk_io_submit option
+EXT4-fs (mmcblk0p10): mounted filesystem with ordered data mode. Opts: nomblk_io_submit,noauto_da_alloc,errors=panic
+EXT4-fs (mmcblk0p4): Ignoring removed nomblk_io_submit option
+EXT4-fs (mmcblk0p4): mounted filesystem with ordered data mode. Opts: nomblk_io_submit
+EXT4-fs (mmcblk0p5): mounted filesystem with ordered data mode. Opts: (null)
+file system registered
+using random self ethernet address
+using random host ethernet address
+zram0: detected capacity change from 0 to 314572800
+logd.auditd: start
+logd.klogd: 7230726999
+Adding 307196k swap on /dev/block/zram0.  Priority:-1 extents:1 across:307196k SS
+binder: 255:255 transaction failed 29189, size 0-0
+toradex_apalis6q:/ # logd.daemon: reinit
+
+toradex_apalis6q:/ # 
+toradex_apalis6q:/ # dERROR: v4l2 capture: slave not found! V4L2_CID_HUE
+ERROR: v4l2 capture: slave not found! V4L2_CID_HUE
+ahealthd: No battery devices found
+te
+Thu Jan  1 00:18:59 GMT 1970
+toradex_apalis6q:/ # toradex_apalis6q:/ # date                                                       capability: warning: `main' uses 32-bit capabilities (legacy support in use)
+init: write_file: Unable to open '/sys/devices/system/cpu/cpufreq/interactive/timer_rate': No such file or directory
+12init: write_file: Unable to open '/sys/devices/system/cpu/cpufreq/interactive/min_sample_time': No such file or directory
+init: write_file: Unable to open '/sys/devices/system/cpu/cpufreq/interactive/go_hispeed_load': No such file or directory
+2802:random: crng init done
+init: write_file: Unable to open '/proc/sys/vm/extra_free_kbytes': No such file or directory
+5init: write_file: Unable to write to '/config/usb_gadget/g1/UDC': No such device
+acc_open
+acc_release
+2android_work: sent uevent USB_STATE=CONNECTED
+android_work: sent uevent USB_STATE=DISCONNECTED
+android_work: sent uevent USB_STATE=CONNECTED
+android_work: sk is not ready
+k is not ready
+android_work: sent uevent USB_STATE=CONNECTED
+android_work: sent uevent USB_STATE=CONNECTED
+android_work: sent uevent USB_STATE=CONNECTED
+android_work: sent uevent USB_STATE=CONNECTED
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ent uevent USB_STATE=DISCONNECTED
+ent uevent USB_STATE=DISCONNECTED
+ent uevent USB_STATE=DISCONNECTED
+ent uevent USB_STATE=DISCONNECTED
+android_work: sent uevent USB_STATE=CONNECTED
+android_work: sent uevent USB_STATE=CONNECTED
+android_work: sent uevent USB_STATE=CONNECTED
+android_work: sent uevent USB_STATE=CONNECTED
+android_work: sent uevent USB_STATE=CONNECTED
+android_work: sent uevent USB_STATE=CONNECTED
+android_work: sent uevent USB_STATE=CONNECTED
+android_work: sent uevent USB_STATE=CONNECTED
+android_work: sent uevent USB_STATE=CONNECTED
+android_work: sent uevent USB_STATE=CONNECTED
+android_work: sent uevent USB_STATE=CONNECTED
+android_work: sent uevent USB_STATE=CONNECTED
+android_work: sent uevent USB_STATE=CONNECTED
+android_work: sent uevent USB_STATE=CONNECTED
+android_work: sent uevent USB_STATE=CONNECTED
+android_work: sent uevent USB_STATE=CONNECTED
+android_work: sent uevent USB_STATE=CONNECTED
+android_work: sent uevent USB_STATE=CONNECTED
+android_work: sent uevent USB_STATE=CONNECTED
+android_work: sent uevent USB_STATE=CONNECTED
+android_work: sent uevent USB_STATE=CONNECTED
+android_work: sent uevent USB_STATE=CONNECTED
+android_work: sent uevent USB_STATE=CONNECTED
+android_work: sent uevent USB_STATE=CONNECTED
+android_work: sent uevent USB_STATE=CONNECTED
+android_work: sent uevent USB_STATE=CONNECTED
+android_work: sent uevent USB_STATE=CONNECTED
+android_work: sent uevent USB_STATE=CONNECTED
+android_work: sent uevent USB_STATE=CONNECTED
+android_work: sent uevent USB_STATE=CONNECTED
+android_work: sent uevent USB_STATE=CONNECTED
+android_work: sent uevent USB_STATE=CONNECTED
+android_work: sent uevent USB_STATE=CONNECTED
+android_work: sent uevent USB_STATE=CONNECTED
+android_work: sent uevent USB_STATE=CONNECTED
+android_work: sent uevent USB_STATE=CONNECTED
+android_work: sent uevent USB_STATE=CONNECTED
+android_work: sent uevent USB_STATE=CONNECTED
+android_work: sent uevent USB_STATE=CONNECTED
+android_work: sent uevent USB_STATE=CONNECTED
+android_work: sent uevent USB_STATE=CONNECTED
+android_work: sent uevent USB_STATE=CONNECTED
+android_work: sent uevent USB_STATE=CONNECTED
+android_work: sent uevent USB_STATE=CONNECTED
+android_work: sent uevent USB_STATE=CONNECTED
+android_work: sent uevent USB_STATE=CONNECTED
+android_work: sent uevent USB_STATE=CONNECTED
+android_work: sent uevent USB_STATE=CONNECTED
+android_work: sent uevent USB_STATE=CONNECTED
+android_work: sent uevent USB_STATE=CONNECTED
+android_work: sent uevent USB_STATE=CONNECTED
+android_work: sent uevent USB_STATE=CONNECTED
+android_work: sent uevent USB_STATE=CONNECTED
+android_work: sent uevent USB_STATE=CONNECTED
+android_work: sent uevent USB_STATE=CONNECTED
+android_work: sent uevent USB_STATE=CONNECTED
+android_work: sent uevent USB_STATE=CONNECTED
+android_work: sent uevent USB_STATE=CONNECTED
+android_work: sent uevent USB_STATE=CONNECTED
+android_work: sent uevent USB_STATE=CONNECTED
+android_work: sent uevent USB_STATE=CONNECTED
+android_work: sent uevent USB_STATE=CONNECTED
+android_work: sent uevent USB_STATE=CONNECTED
+android_work: sent uevent USB_STATE=CONNECTED
+android_work: sent uevent USB_STATE=CONNECTED
+android_work: sent uevent USB_STATE=CONNECTED
+android_work: sent uevent USB_STATE=CONNECTED
+android_work: sent uevent USB_STATE=CONNECTED
+android_work: sent uevent USB_STATE=CONNECTED
+android_work: sent uevent USB_STATE=CONNECTED
+android_work: sent uevent USB_STATE=CONNECTED
+android_work: sent uevent USB_STATE=CONNECTED
+android_work: sent uevent USB_STATE=CONNECTED
+android_work: sent uevent USB_STATE=CONNECTED
+android_work: sent uevent USB_STATE=CONNECTED
+android_work: sent uevent USB_STATE=CONNECTED
+android_work: sent uevent USB_STATE=CONNECTED
+android_work: sent uevent USB_STATE=CONNECTED
+android_work: sent uevent USB_STATE=CONNECTED
+android_work: sent uevent USB_STATE=CONNECTED
+android_work: sent uevent USB_STATE=CONNECTED
+android_work: sent uevent USB_STATE=CONNECTED
+android_work: sent uevent USB_STATE=CONNECTED
+android_work: sent uevent USB_STATE=CONNECTED
+android_work: sent uevent USB_STATE=CONNECTED
+android_work: sent uevent USB_STATE=CONNECTED
+android_work: sent uevent USB_STATE=CONNECTED
+android_work: sent uevent USB_STATE=CONNECTED
+android_work: sent uevent USB_STATE=CONNECTED
+android_work: sent uevent USB_STATE=CONNECTED
+android_work: sent uevent USB_STATE=CONNECTED
+android_work: sent uevent USB_STATE=CONNECTED
+android_work: sent uevent USB_STATE=CONNECTED
+android_work: sent uevent USB_STATE=CONNECTED
+android_work: sent uevent USB_STATE=CONNECTED
+android_work: sent uevent USB_STATE=CONNECTED
+android_work: sent uevent USB_STATE=CONNECTED
+android_work: sent uevent USB_STATE=CONNECTED
+android_work: sent uevent USB_STATE=CONNECTED
+android_work: sent uevent USB_STATE=CONNECTED
+android_work: sent uevent USB_STATE=CONNECTED
+android_work: sent uevent USB_STATE=CONNECTED
+configfs-gadget gadget: high-speed config #1: b
+android_work: sent uevent USB_STATE=CONFIGURED
+
+1|toradex_apalis6q:/ # 
+1|toradex_apalis6q:/ # 
+1|toradex_apalis6q:/ # 
+1|toradex_apalis6q:/ # 1|toradex_apalis6q:/ # date 122802:52                                          \52
+date: bad date '122802:52'
+1|toradex_apalis6q:/ # 1|toradex_apalis6q:/ # date 122802:\52                                         52 52 
+Mon Dec 28 02:52:00 GMT 1970
+type=1400 audit(1159.120:3): avc: denied { sys_time } for pid=942 comm="date" capability=25 scontext=u:r:shell:s0 tcontext=u:r:shell:s0 tclass=capability permissive=1
+toradex_apalis6q:/ # 
+toradex_apalis6q:/ # 
+toradex_apalis6q:/ # 
+init: Service 'bootanim' (pid 328) exited with status 0
+toradex_apalis6q:/ # 
+init: Starting service 'exec 3 (/system/bin/bootstat)'...
+toradex_apalis6q:/ # init: Service 'exec 3 (/system/bin/bootstat)' (pid 965) exited with status 0
+init: Starting service 'exec 4 (/system/bin/bootstat)'...
+init: Service 'exec 4 (/system/bin/bootstat)' (pid 977) exited with status 0
+init: Starting service 'exec 5 (/system/bin/bootstat)'...
+init: Service 'exec 5 (/system/bin/bootstat)' (pid 978) exited with status 0
+init: Starting service 'exec 6 (/system/bin/bootstat)'...
+init: Service 'exec 6 (/system/bin/bootstat)' (pid 979) exited with status 0
+
+toradex_apalis6q:/ # 
+toradex_apalis6q:/ # 
+toradex_apalis6q:/ # 
+toradex_apalis6q:/ # 
+toradex_apalis6q:/ # 
+toradex_apalis6q:/ # 
+toradex_apalis6q:/ # 
+toradex_apalis6q:/ # mtp_open
+
+toradex_apalis6q:/ # toradex_apalis6q:/ # date 12280252                                             
+Mon Dec 28 02:52:00 GMT 1970
+type=1400 audit(31200726.680:4): avc: denied { sys_time } for pid=1215 comm="date" capability=25 scontext=u:r:shell:s0 tcontext=u:r:shell:s0 tclass=capability permissive=1
+toradex_apalis6q:/ # 
+toradex_apalis6q:/ # 
+toradex_apalis6q:/ # 
+toradex_apalis6q:/ # toradex_apalis6q:/ # date 12280252                                             
+Mon Dec 28 02:52:00 GMT 1970
+toradex_apalis6q:/ # 
+toradex_apalis6q:/ # 
+toradex_apalis6q:/ # 
+toradex_apalis6q:/ # 
+toradex_apalis6q:/ # 
+toradex_apalis6q:/ # toradex_apalis6q:/ # date 12280252                                              3
+Mon Dec 28 02:53:00 GMT 1970
+toradex_apalis6q:/ # 
+toradex_apalis6q:/ # 
+toradex_apalis6q:/ # toradex_apalis6q:/ # date 12280253                                              4
+Mon Dec 28 02:54:00 GMT 1970
+toradex_apalis6q:/ # 
+toradex_apalis6q:/ # 
+toradex_apalis6q:/ # 
+toradex_apalis6q:/ # toradex_apalis6q:/ # date 12280254                                               22
+Mon Dec 28 02:22:00 GMT 1970
+toradex_apalis6q:/ # toradex_apalis6q:/ # date 12280222                                               51
+Mon Dec 28 02:51:00 GMT 1970
+toradex_apalis6q:/ # 
+toradex_apalis6q:/ # 
+toradex_apalis6q:/ # 
+toradex_apalis6q:/ # 
+toradex_apalis6q:/ # 
+toradex_apalis6q:/ # 
+toradex_apalis6q:/ # to
+toolbox  top      touch    toybox
+toradex_apalis6q:/ # to                                                        ytoradex_apalis6q:/ # toybox                                                     
+acpi base64 basename blkid blockdev bunzip2 bzcat cal cat chattr chcon
+chgrp chmod chown chroot cksum clear cmp comm cp cpio cut date dd
+df dirname dmesg dos2unix du echo egrep env expand expr fallocate
+false fgrep find flock free freeramdisk fsfreeze getenforce getprop
+grep groups head help hostname hwclock id ifconfig inotifyd insmod
+install ionice iorenice kill killall ln load_policy logname losetup
+ls lsattr lsmod lsof lsusb makedevs md5sum mkdir mkfifo mknod mkswap
+mktemp modinfo more mount mountpoint mv nbd-client nc netcat netstat
+nice nl nohup od partprobe paste patch pgrep pidof pivot_root pkill
+pmap printenv printf ps pwd pwdx readlink realpath renice restorecon
+rev rfkill rm rmdir rmmod route runcon sed seq setenforce setprop
+setsid sha1sum sleep sort split stat strings swapoff swapon switch_root
+sync sysctl tac tail tar taskset tee time timeout top touch tr traceroute
+traceroute6 true truncate tty ulimit umount uname uniq unix2dos uptime
+usleep vconfig vmstat wc which whoami xargs xxd yes 
+toradex_apalis6q:/ # to
+toolbox  top      touch    toybox
+toradex_apalis6q:/ # to                                                        otoradex_apalis6q:/ # toolbox                                                    
+Toolbox!
+toradex_apalis6q:/ # if
+if        ifconfig  iftop
+toradex_apalis6q:/ # if                                                        
+if        ifconfig  iftop
+toradex_apalis6q:/ # if                                                        ctoradex_apalis6q:/ # ifconfig                                                   
+lo        Link encap:Local Loopbatype=1400 audit(31200773.820:5): avc: denied { net_raw } for pid=1240 comm="ifconfig" capability=13 scontext=u:r:shell:s0 tcontext=u:r:shell:s0 tclass=capability permissive=1
+ck  
+          inet addr:127.0.0type=1400 audit(31200773.820:6): avc: denied { ioctl } for pid=1240 comm="ifconfig" path="socket:[16142]" dev="sockfs" ino=16142 ioctlcmd=0x8927 scontext=u:r:shell:s0 tcontext=u:r:shell:s0 tclass=udp_socket permissive=1
+.1  Mask:255.0.0.0 
+          intype=1400 audit(31200773.840:7): avc: denied { ioctl } for pid=1240 comm="ifconfig" path="socket:[16142]" dev="sockfs" ino=16142 ioctlcmd=0x891d scontext=u:r:shell:s0 tcontext=u:r:shell:s0 tclass=udp_socket permissive=1
+et6 addr: ::1/128 Scope: Host
+  type=1400 audit(31200773.840:8): avc: denied { ioctl } for pid=1240 comm="ifconfig" path="socket:[16142]" dev="sockfs" ino=16142 ioctlcmd=0x8970 scontext=u:r:shell:s0 tcontext=u:r:shell:s0 tclass=udp_socket permissive=1
+        UP LOOPBACK RUNNING  MTU:65536  Metric:1
+          RX packets:0 errors:0 dropped:0 overruns:0 frame:0 
+          TX packets:0 errors:0 dropped:0 overruns:0 carrier:0 
+          collisions:0 txqueuelen:1 
+          RX bytes:0 TX bytes:0 
+
+eth0      Link encap:Ethernet  HWaddr 00:14:2d:4e:87:13
+          UP BROADCAST MULTICAST  MTU:1500  Metric:1
+          RX packets:0 errors:0 dropped:0 overruns:0 frame:0 
+          TX packets:0 errors:0 dropped:0 overruns:0 carrier:0 
+          collisions:0 txqueuelen:1000 
+          RX bytes:0 TX bytes:0 
+
+toradex_apalis6q:/ # toradex_apalis6q:/ # ifconfig                                                  -a
+can0      Link encap:UNSPEC  
+          NOARP  MTU:16  Metric:1
+          RX packets:0 errors:0 dropped:0 overruns:0 frame:0 
+          TX packets:0 errors:0 dropped:0 overruns:0 carrier:0 
+          collisions:0 txqueuelen:10 
+          RX bytes:0 TX bytes:0 
+          Interrupt:38 
+
+can1      Link encap:UNSPEC  
+          NOARP  MTU:16  Metric:1
+          RX packets:0 errors:0 dropped:0 overruns:0 frame:0 
+          TX packets:0 errors:0 dropped:0 overruns:0 carrier:0 
+          collisions:0 txqueuelen:10 
+          RX bytes:0 TX bytes:0 
+          Interrupt:39 
+
+lo        Link encap:Local Loopback  
+          inet addr:127.0.0.1  Mask:255.0.0.0 
+          inet6 addr: ::1/128 Scope: Host
+          UP LOOPBACK RUNNING  MTU:65536  Metric:1
+          RX packets:0 errors:0 dropped:0 overruns:0 frame:0 
+          TX packets:0 errors:0 dropped:0 overruns:0 carrier:0 
+          collisions:0 txqueuelen:1 
+          RX bytes:0 TX bytes:0 
+
+sit0      Link encap:IPv6-in-IPv4  
+          NOARP  MTU:1480  Metric:1
+          RX packets:0 errors:0 dropped:0 overruns:0 frame:0 
+          TX packets:0 errors:0 dropped:0 overruns:0 carrier:0 
+          collisions:0 txqueuelen:1 
+          RX bytes:0 TX bytes:0 
+
+eth0      Link encap:Ethernet  HWaddr 00:14:2d:4e:87:13
+          UP BROADCAST MULTICAST  MTU:1500  Metric:1
+          RX packets:0 errors:0 dropped:0 overruns:0 frame:0 
+          TX packets:0 errors:0 dropped:0 overruns:0 carrier:0 
+          collisions:0 txqueuelen:1000 
+          RX bytes:0 TX bytes:0 
+
+toradex_apalis6q:/ # dmesg | grep -ir can
+(standard input):i2c i2c-1: can't use DMA, using PIO instead.
+(standard input):i2c i2c-2: can't use DMA, using PIO instead.
+(standard input):i2c i2c-3: can't use DMA, using PIO instead.
+(standard input):mxc_sdc_fb fb@2: Can't get fb option for mxcfb2!
+(standard input):mxc_sdc_fb fb@3: Can't get fb option for mxcfb3!
+(standard input):ahci-imx 2200000.sata: SSS flag set, parallel bus scan disabled
+(standard input):CAN device driver interface
+(standard input):2090000.flexcan supply xceiver not found, using dummy regulator
+(standard input):flexcan 2090000.flexcan: device registered (reg_base=f02f4000, irq=38)
+(standard input):2094000.flexcan supply xceiver not found, using dummy regulator
+(standard input):flexcan 2094000.flexcan: device registered (reg_base=f02fc000, irq=39)
+(standard input):snvs-secvio 20cc000.caam-snvs: can't get snvs clock
+(standard input):can: controller area network core (rev 20120528 abi 9)
+(standard input):can: raw protocol (rev 20120528)
+(standard input):can: broadcast manager protocol (rev 20161123 t)
+(standard input):can: netlink gateway (rev 20130117) max_hops=1
+toradex_apalis6q:/ # 
+toradex_apalis6q:/ # 
+toradex_apalis6q:/ # 
+toradex_apalis6q:/ # 
+toradex_apalis6q:/ # 
+toradex_apalis6q:/ # reboot
+sysrq: SysRq : Emergency Remount R/O
+EXT4-fs (mmcblk0p4): re-mounted. Opts: (null)
+EXT4-fs (mmcblk0p10): re-mounted. Opts: (null)
+Emergency Remount complete
+imx2-wdt 20bc000.wdog: Device shutdown: Expect reboot!
+ci_hdrc ci_hdrc.1: remove, state 1
+usb usb1: USB disconnect, device number 1
+usb 1-1: USB disconnect, device number 2
+usb 1-1.3: USB disconnect, device number 3
+ci_hdrc ci_hdrc.1: USB bus 1 deregistered
+android_work: sent uevent USB_STATE=DISCONNECTED
+mtp_release
+reboot: Restarting system with command ''
+
+
+U-Boot 2017.03-00001-g610928540e-dirty (Dec 28 2017 - 14:21:59 +0530)
+
+CPU:   Freescale i.MX6Q rev1.5 at 792 MHz
+Reset cause: WDOG
+I2C:   ready
+DRAM:  2 GiB
+PMIC: device id: 0x10, revision id: 0x21
+PMIC: programmed
+MMC:   FSL_SDHC: 0, FSL_SDHC: 1, FSL_SDHC: 2
+auto-detected panel HDMI
+Aravinth: Display: HDMI (1024x768)
+In:    serial
+Out:   serial
+Err:   serial
+Model: Toradex Apalis iMX6 Quad 2GB IT V1.1C, Serial# 05146387
+flash target is MMC:0
+Net:   using PHY at 7
+FEC [PRIME]
+Fastboot: Normal
+Hit any key to stop autoboot:  1  0 
+Apalis iMX6 # 
+Apalis iMX6 # 
+Apalis iMX6 # 
+Apalis iMX6 # bmode usb
+resetting ...
+
+
+U-Boot 2017.03-dirty (Dec 14 2017 - 17:25:07 +0530)
+
+CPU:   Freescale i.MX6Q rev1.5 at 792 MHz
+Reset cause: WDOG
+I2C:   ready
+DRAM:  2 GiB
+PMIC: device id: 0x10, revision id: 0x21
+PMIC: programmed
+MMC:   FSL_SDHC: 0, FSL_SDHC: 1, FSL_SDHC: 2
+auto-detected panel HDMI
+Aravinth: Display: HDMI (1024x768)
+In:    serial
+Out:   serial
+Err:   serial
+Model: Toradex Apalis iMX6 Quad 2GB IT V1.1C, Serial# 05146387
+Net:   using PHY at 7
+FEC [PRIME]
+Boot from USB for mfgtools
+Use default environment for 				 mfgtools
+Run bootcmd_mfg: run mfgtool_args;bootz 0x12000000 0x12C00000 0x18000000;
+Hit any key to stop autoboot:  0 
+Kernel image @ 0x12000000 [ 0x000000 - 0x5f06e8 ]
+## Loading init Ramdisk from Legacy Image at 12c00000 ...
+   Image Name:   fsl-image-mfgtool-initramfs-imx6
+   Image Type:   ARM Linux RAMDisk Image (gzip compressed)
+   Data Size:    8597466 Bytes = 8.2 MiB
+   Load Address: 00000000
+   Entry Point:  00000000
+   Verifying Checksum ... OK
+## Flattened Device Tree blob at 18000000
+   Booting using the fdt blob at 0x18000000
+   Using Device Tree in place at 18000000, end 180102d8
+
+Starting kernel ...
+
+Booting Linux on physical CPU 0x0
+Linux version 4.9.67+ (embadmin@ubuntu) (gcc version 4.9 20150123 (prerelease) (GCC) ) #9 SMP PREEMPT Fri Dec 22 16:56:14 IST 2017
+CPU: ARMv7 Processor [412fc09a] revision 10 (ARMv7), cr=10c5387d
+CPU: PIPT / VIPT nonaliasing data cache, VIPT aliasing instruction cache
+OF: fdt:Machine model: Aravinth Toradex Apalis iMX6Q/D Module on Ixora V1.1 Carrier Board
+cma: Reserved 320 MiB at 0x6c000000
+Memory policy: Data cache writealloc
+percpu: Embedded 14 pages/cpu @daef7000 s25728 r8192 d23424 u57344
+Built 1 zonelists in Zone order, mobility grouping on.  Total pages: 520704
+Kernel command line: console=ttymxc0,115200 rdinit=/linuxrc g_mass_storage.stall=0 g_mass_storage.removable=1 g_mass_storage.file=/fat g_mass_storage.ro=1 g_mass_storage.idVendor=0x066F g_mass_storage.idProduct=0x37FF g_mass_storage.iSerialNumber= enable_wait_mode=off
+PID hash table entries: 4096 (order: 2, 16384 bytes)
+Dentry cache hash table entries: 262144 (order: 8, 1048576 bytes)
+Inode-cache hash table entries: 131072 (order: 7, 524288 bytes)
+Memory: 1728936K/2097152K available (8192K kernel code, 334K rwdata, 2548K rodata, 1024K init, 448K bss, 40536K reserved, 327680K cma-reserved, 262144K highmem)
+Virtual kernel memory layout:
+    vector  : 0xffff0000 - 0xffff1000   (   4 kB)
+    fixmap  : 0xffc00000 - 0xfff00000   (3072 kB)
+    vmalloc : 0xf0800000 - 0xff800000   ( 240 MB)
+    lowmem  : 0x80000000 - 0xf0000000   (1792 MB)
+    pkmap   : 0x7fe00000 - 0x80000000   (   2 MB)
+    modules : 0x7f000000 - 0x7fe00000   (  14 MB)
+      .text : 0x80008000 - 0x80900000   (9184 kB)
+      .init : 0x80c00000 - 0x80d00000   (1024 kB)
+      .data : 0x80d00000 - 0x80d539c0   ( 335 kB)
+       .bss : 0x80d539c0 - 0x80dc3aac   ( 449 kB)
+SLUB: HWalign=64, Order=0-3, MinObjects=0, CPUs=4, Nodes=1
+Preemptible hierarchical RCU implementation.
+	Build-time adjustment of leaf fanout to 32.
+NR_IRQS:16 nr_irqs:16 16
+L2C-310 errata 752271 769419 enabled
+L2C-310 enabling early BRESP for Cortex-A9
+L2C-310 full line of zeros enabled for Cortex-A9
+L2C-310 ID prefetch enabled, offset 16 lines
+L2C-310 dynamic clock gating enabled, standby mode enabled
+L2C-310 cache controller enabled, 16 ways, 1024 kB
+L2C-310: CACHE_ID 0x410000c7, AUX_CTRL 0x76470001
+Switching to timer-based delay loop, resolution 333ns
+sched_clock: 32 bits at 3000kHz, resolution 333ns, wraps every 715827882841ns
+clocksource: mxc_timer1: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 637086815595 ns
+Console: colour dummy device 80x30
+Calibrating delay loop (skipped), value calculated using timer frequency.. 6.00 BogoMIPS (lpj=30000)
+pid_max: default: 32768 minimum: 301
+Mount-cache hash table entries: 4096 (order: 2, 16384 bytes)
+Mountpoint-cache hash table entries: 4096 (order: 2, 16384 bytes)
+CPU: Testing write buffer coherency: ok
+CPU0: update cpu_capacity 1024
+CPU0: thread -1, cpu 0, socket 0, mpidr 80000000
+Setting up static identity map for 0x10100000 - 0x10100070
+CPU1: update cpu_capacity 1024
+CPU1: thread -1, cpu 1, socket 0, mpidr 80000001
+CPU2: update cpu_capacity 1024
+CPU2: thread -1, cpu 2, socket 0, mpidr 80000002
+CPU3: update cpu_capacity 1024
+CPU3: thread -1, cpu 3, socket 0, mpidr 80000003
+Brought up 4 CPUs
+SMP: Total of 4 processors activated (24.00 BogoMIPS).
+CPU: All CPU(s) started in SVC mode.
+devtmpfs: initialized
+VFP support v0.3: implementor 41 architecture 3 part 30 variant 9 rev 4
+clocksource: jiffies: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 19112604462750000 ns
+futex hash table entries: 1024 (order: 4, 65536 bytes)
+pinctrl core: initialized pinctrl subsystem
+NET: Registered protocol family 16
+DMA: preallocated 256 KiB pool for atomic coherent allocations
+cpuidle: using governor menu
+CPU identified as i.MX6Q, silicon rev 1.5
+hw-breakpoint: found 5 (+1 reserved) breakpoint and 1 watchpoint registers.
+hw-breakpoint: maximum watchpoint size is 4 bytes.
+imx6q-pinctrl 20e0000.iomuxc: initialized IMX pinctrl driver
+imx-gpc 20dc000.gpc: no fsl,ldo-bypass found!
+imx-gpc 20dc000.gpc: Registered imx-gpc
+mxs-dma 110000.dma-apbh: initialized
+usb_host_vbus: supplied by usb_host_vbus_hub
+SCSI subsystem initialized
+usbcore: registered new interface driver usbfs
+usbcore: registered new interface driver hub
+usbcore: registered new device driver usb
+2000000.aips-bus:usbphy_nop1 supply vcc not found, using dummy regulator
+2000000.aips-bus:usbphy_nop2 supply vcc not found, using dummy regulator
+i2c i2c-1: IMX I2C adapter registered
+i2c i2c-1: can't use DMA, using PIO instead.
+stmpe-i2c 2-0041: stmpe811 detected, chip id: 0x811
+i2c i2c-2: IMX I2C adapter registered
+i2c i2c-2: can't use DMA, using PIO instead.
+i2c i2c-3: IMX I2C adapter registered
+i2c i2c-3: can't use DMA, using PIO instead.
+Linux video capture interface: v2.00
+pps_core: LinuxPPS API ver. 1 registered
+pps_core: Software ver. 5.3.6 - Copyright 2005-2007 Rodolfo Giometti <giometti@linux.it>
+PTP clock support registered
+imx-ipuv3 2400000.ipu: IPU DMFC NORMAL mode: 1(0~1), 5B(4,5), 5F(6,7)
+imx-ipuv3 2800000.ipu: IPU DMFC NORMAL mode: 1(0~1), 5B(4,5), 5F(6,7)
+imx rpmsg driver is registered.
+Advanced Linux Sound Architecture Driver Initialized.
+clocksource: Switched to clocksource mxc_timer1
+VFS: Disk quotas dquot_6.6.0
+VFS: Dquot-cache hash table entries: 1024 (order 0, 4096 bytes)
+NET: Registered protocol family 2
+TCP established hash table entries: 16384 (order: 4, 65536 bytes)
+TCP bind hash table entries: 16384 (order: 5, 131072 bytes)
+TCP: Hash tables configured (established 16384 bind 16384)
+UDP hash table entries: 1024 (order: 3, 32768 bytes)
+UDP-Lite hash table entries: 1024 (order: 3, 32768 bytes)
+NET: Registered protocol family 1
+RPC: Registered named UNIX socket transport module.
+RPC: Registered udp transport module.
+RPC: Registered tcp transport module.
+RPC: Registered tcp NFSv4.1 backchannel transport module.
+Trying to unpack rootfs image as initramfs...
+Freeing initrd memory: 8400K
+hw perfevents: enabled with armv7_cortex_a9 PMU driver, 7 counters available
+Bus freq driver module loaded
+workingset: timestamp_bits=30 max_order=19 bucket_order=0
+NFS: Registering the id_resolver key type
+Key type id_resolver registered
+Key type id_legacy registered
+jffs2: version 2.2. (NAND) © 2001-2006 Red Hat, Inc.
+fuse init (API version 7.26)
+bounce: pool size: 64 pages
+io scheduler noop registered
+io scheduler deadline registered
+io scheduler cfq registered (default)
+backlight supply power not found, using dummy regulator
+Aravinth: mxcfb_probe ---->
+mxc_sdc_fb fb@0: NO mxc display driver found!
+Aravinth: mxcfb_probe ---->
+mxc_sdc_fb fb@1: NO mxc display driver found!
+Aravinth: mxcfb_probe ---->
+mxc_sdc_fb fb@2: registered mxc display driver lcd
+Console: switching to colour frame buffer device 100x30
+Aravinth: mxcfb_probe Done ---->
+Aravinth: mxcfb_probe ---->
+mxc_sdc_fb fb@3: NO mxc display driver found!
+imx-sdma 20ec000.sdma: no iram assigned, using external mem
+imx-sdma 20ec000.sdma: loaded firmware 3.3
+pfuze100-regulator 2-0008: Full layer: 2, Metal layer: 1
+pfuze100-regulator 2-0008: FAB: 0, FIN: 0
+pfuze100-regulator 2-0008: pfuze100 found.
+2020000.serial: ttymxc0 at MMIO 0x2020000 (irq = 29, base_baud = 5000000) is a IMX
+console [ttymxc0] enabled
+21e8000.serial: ttymxc1 at MMIO 0x21e8000 (irq = 78, base_baud = 5000000) is a IMX
+21f0000.serial: ttymxc3 at MMIO 0x21f0000 (irq = 79, base_baud = 5000000) is a IMX
+21f4000.serial: ttymxc4 at MMIO 0x21f4000 (irq = 80, base_baud = 5000000) is a IMX
+imx sema4 driver is registered.
+[drm] Initialized
+[drm] Initialized vivante 1.0.0 20120216 on minor 0
+brd: module loaded
+loop: module loaded
+ahci-imx 2200000.sata: fsl,transmit-level-mV not specified, using 00000024
+ahci-imx 2200000.sata: fsl,transmit-boost-mdB not specified, using 00000480
+ahci-imx 2200000.sata: fsl,transmit-atten-16ths not specified, using 00002000
+ahci-imx 2200000.sata: fsl,receive-eq-mdB not specified, using 05000000
+ahci-imx 2200000.sata: SSS flag set, parallel bus scan disabled
+ahci-imx 2200000.sata: AHCI 0001.0300 32 slots 1 ports 3 Gbps 0x1 impl platform mode
+ahci-imx 2200000.sata: flags: ncq sntf stag pm led clo only pmp pio slum part ccc apst 
+scsi host0: ahci-imx
+ata1: SATA max UDMA/133 mmio [mem 0x02200000-0x02203fff] port 0x100 irq 87
+spi_imx 2008000.ecspi: probed
+libphy: Fixed MDIO Bus: probed
+2188000.ethernet supply phy not found, using dummy regulator
+pps pps0: new PPS source ptp0
+libphy: fec_enet_mii_bus: probed
+fec 2188000.ethernet eth0: registered PHC device 0
+ehci_hcd: USB 2.0 'Enhanced' Host Controller (EHCI) Driver
+ehci-mxc: Freescale On-Chip EHCI Host driver
+usbcore: registered new interface driver usb-storage
+2184800.usbmisc supply vbus-wakeup not found, using dummy regulator
+ci_hdrc ci_hdrc.1: EHCI Host Controller
+ci_hdrc ci_hdrc.1: new USB bus registered, assigned bus number 1
+ci_hdrc ci_hdrc.1: USB 2.0 started, EHCI 1.00
+hub 1-0:1.0: USB hub found
+hub 1-0:1.0: 1 port detected
+Mass Storage Function, version: 2009/09/11
+LUN: removable file: (no medium)
+LUN: removable read only file: /fat
+Number of LUNs=1
+g_mass_storage gadget: Mass Storage Gadget, version: 2009/09/11
+g_mass_storage gadget: g_mass_storage ready
+mousedev: PS/2 mouse device common for all mice
+input: stmpe-ts as /devices/soc0/soc/2100000.aips-bus/21a4000.i2c/i2c-2/2-0041/stmpe-ts/input/input0
+snvs_rtc 20cc000.snvs:snvs-rtc-lp: rtc core: registered 20cc000.snvs:snvs-r as rtc0
+i2c /dev entries driver
+IR NEC protocol handler initialized
+IR RC5(x/sz) protocol handler initialized
+IR RC6 protocol handler initialized
+IR JVC protocol handler initialized
+IR Sony protocol handler initialized
+IR SANYO protocol handler initialized
+IR Sharp protocol handler initialized
+IR MCE Keyboard/mouse protocol handler initialized
+IR XMP protocol handler initialized
+imx2-wdt 20bc000.wdog: timeout 60 sec (nowayout=0)
+sdhci: Secure Digital Host Controller Interface driver
+sdhci: Copyright(c) Pierre Ossman
+sdhci-pltfm: SDHCI platform and OF driver helper
+sdhci-esdhc-imx 2190000.usdhc: could not get ultra high speed state, work on normal mode
+sdhci-esdhc-imx 2190000.usdhc: Got CD GPIO
+ata1: SATA link down (SStatus 0 SControl 300)
+ahci-imx 2200000.sata: no device found, disabling link.
+ahci-imx 2200000.sata: pass ahci_imx..hotplug=1 to enable hotplug
+mmc1: SDHCI controller on 2190000.usdhc [2190000.usdhc] using ADMA
+sdhci-esdhc-imx 2198000.usdhc: could not get ultra high speed state, work on normal mode
+g_mass_storage gadget: high-speed config #1: Linux File-Backed Storage
+mmc0: SDHCI controller on 2198000.usdhc [2198000.usdhc] using ADMA
+random: fast init done
+mxc_vpu 2040000.vpu_fsl: VPU initialized
+mxc_vdoa 21e4000.vdoa: i.MX Video Data Order Adapter(VDOA) driver probed
+usbcore: registered new interface driver usbhid
+usbhid: USB HID core driver
+sgtl5000 2-000a: sgtl5000 revision 0x11
+fsl-ssi-dai 2028000.ssi: No cache defaults, reading back from HW
+mmc0: new DDR MMC card at address 0001
+usb 1-1: new high-speed USB device number 2 using ci_hdrc
+mmcblk0: mmc0:0001 Q2J54A 3.59 GiB 
+mmcblk0boot0: mmc0:0001 Q2J54A partition 1 16.0 MiB
+mmcblk0boot1: mmc0:0001 Q2J54A partition 2 16.0 MiB
+Alternate GPT is invalid, using primary GPT.
+ mmcblk0: p1 p2 p3 p4 p5 p6 p7 p8 p9 p10 p11
+imx-sgtl5000 sound: sgtl5000 <-> 2028000.ssi mapping ok
+imx-spdif sound-spdif: snd-soc-dummy-dai <-> 2004000.spdif mapping ok
+NET: Registered protocol family 10
+sit: IPv6, IPv4 and MPLS over IPv4 tunneling driver
+NET: Registered protocol family 17
+Key type dns_resolver registered
+cpu cpu0: Registered imx6q-cpufreq
+Registering SWP/SWPB emulation handler
+imx_thermal 2000000.aips-bus:tempmon: Industrial CPU temperature grade - max:105C critical:100C passive:95C
+input: gpio-keys as /devices/soc0/gpio-keys/input/input1
+snvs_rtc 20cc000.snvs:snvs-rtc-lp: setting system clock to 1970-01-01 00:53:30 UTC (3210)
+usb_otg_vbus: disabling
+ALSA device list:
+  #0: imx6q-apalis-sgtl5000
+  #1: imx-spdif
+hub 1-1:1.0: USB hub found
+Freeing unused kernel memory: 1024K
+hub 1-1:1.0: 4 ports detected
+Starting UTP
+uuc 0.5 [built Apr 27 2017 13:40:16]
+UTP: Waiting for device to appear
+UTP: file/device node /dev/utp already exists
+cpu_id is 0
+UTP: received command '$ while [ ! -e /dev/mmcblk0 ]; do sleep 1; echo waiting...; done '
+UTP: executing "while [ ! -e /dev/mmcblk0 ]; do sleep 1; echo waiting...; done "
+UTP: sending Success to kernel for command $ while [ ! -e /dev/mmcblk0 ]; do sleep 1; echo waiting...; done .
+usb 1-1.3: new low-speed USB device number 3 using ci_hdrc
+utp_poll: pass returned.
+UTP: received command '$ ls -l /dev/mmc* '
+UTP: executing "ls -l /dev/mmc* "
+brw------- 1 root root 179,  0 Jan  1 00:00 /dev/mmcblk0
+brw------- 1 root root 179, 16 Jan  1 00:00 /dev/mmcblk0boot0
+brw------- 1 root root 179, 32 Jan  1 00:00 /dev/mmcblk0boot1
+brw------- 1 root root 179,  1 Jan  1 00:00 /dev/mmcblk0p1
+brw------- 1 root root 179, 10 Jan  1 00:00 /dev/mmcblk0p10
+brw------- 1 root root 179, 11 Jan  1 00:00 /dev/mmcblk0p11
+brw------- 1 root root 179,  2 Jan  1 00:00 /dev/mmcblk0p2
+brw------- 1 root root 179,  3 Jan  1 00:00 /dev/mmcblk0p3
+brw------- 1 root root 179,  4 Jan  1 00:00 /dev/mmcblk0p4
+brw------- 1 root root 179,  5 Jan  1 00:00 /dev/mmcblk0p5
+brw------- 1 root root 179,  6 Jan  1 00:00 /dev/mmcblk0p6
+brw------- 1 root root 179,  7 Jan  1 00:00 /dev/mmcblk0p7
+brw------- 1 root root 179,  8 Jan  1 00:00 /dev/mmcblk0p8
+brw------- 1 root root 179,  9 Jan  1 00:00 /dev/mmcblk0p9
+UTP: sending Success to kernel for command $ ls -l /dev/mmc* .
+input: PixArt Dell MS116 USB Optical Mouse as /devices/soc0/soc/2100000.aips-bus/2184200.usb/ci_hdrc.1/usb1/1-1/1-1.3/1-1.3:1.0/0003:413C:301A.0001/input/input2
+hid-generic 0003:413C:301A.0001: input: USB HID v1.11 Mouse [PixArt Dell MS116 USB Optical Mouse] on usb-ci_hdrc.1-1.3/input0
+utp_poll: pass returned.
+UTP: received command '$ dd if=/dev/zero of=/dev/mmcblk0 bs=1k seek=768 conv=fsync count=136'
+UTP: executing "dd if=/dev/zero of=/dev/mmcblk0 bs=1k seek=768 conv=fsync count=136"
+136+0 records in
+136+0 records out
+139264 bytes (139 kB, 136 KiB) copied, 0.0580033 s, 2.4 MB/s
+UTP: sending Success to kernel for command $ dd if=/dev/zero of=/dev/mmcblk0 bs=1k seek=768 conv=fsync count=136.
+utp_poll: pass returned.
+UTP: received command '$ echo 0 > /sys/block/mmcblk0boot0/force_ro'
+UTP: executing "echo 0 > /sys/block/mmcblk0boot0/force_ro"
+UTP: sending Success to kernel for command $ echo 0 > /sys/block/mmcblk0boot0/force_ro.
+utp_poll: pass returned.
+UTP: received command 'send'
+UTP: sending Success to kernel for command send.
+UTP: received command '$ dd if=$FILE of=/dev/mmcblk0boot0 bs=512 seek=2'
+UTP: executing "dd if=$FILE of=/dev/mmcblk0boot0 bs=512 seek=2"
+734+0 records in
+734+0 records out
+375808 bytes (376 kB, 367 KiB) copied, 0.143115 s, 2.6 MB/s
+UTP: sending Success to kernel for command $ dd if=$FILE of=/dev/mmcblk0boot0 bs=512 seek=2.
+utp_poll: pass returned.
+UTP: received command '$ echo 1 > /sys/block/mmcblk0boot0/force_ro'
+UTP: executing "echo 1 > /sys/block/mmcblk0boot0/force_ro"
+UTP: sending Success to kernel for command $ echo 1 > /sys/block/mmcblk0boot0/force_ro.
+utp_poll: pass returned.
+UTP: received command '$ mmc bootpart enable 1 1 /dev/mmcblk0'
+UTP: executing "mmc bootpart enable 1 1 /dev/mmcblk0"
+UTP: sending Success to kernel for command $ mmc bootpart enable 1 1 /dev/mmcblk0.
+utp_poll: pass returned.
+UTP: received command '$ ls -l /dev/mmc* '
+UTP: executing "ls -l /dev/mmc* "
+brw------- 1 root root 179,  0 Jan  1 00:53 /dev/mmcblk0
+brw------- 1 root root 179, 16 Jan  1 00:53 /dev/mmcblk0boot0
+brw------- 1 root root 179, 32 Jan  1 00:00 /dev/mmcblk0boot1
+brw------- 1 root root 179,  1 Jan  1 00:00 /dev/mmcblk0p1
+brw------- 1 root root 179, 10 Jan  1 00:00 /dev/mmcblk0p10
+brw------- 1 root root 179, 11 Jan  1 00:00 /dev/mmcblk0p11
+brw------- 1 root root 179,  2 Jan  1 00:00 /dev/mmcblk0p2
+brw------- 1 root root 179,  3 Jan  1 00:00 /dev/mmcblk0p3
+brw------- 1 root root 179,  4 Jan  1 00:00 /dev/mmcblk0p4
+brw------- 1 root root 179,  5 Jan  1 00:00 /dev/mmcblk0p5
+brw------- 1 root root 179,  6 Jan  1 00:00 /dev/mmcblk0p6
+brw------- 1 root root 179,  7 Jan  1 00:00 /dev/mmcblk0p7
+brw------- 1 root root 179,  8 Jan  1 00:00 /dev/mmcblk0p8
+brw------- 1 root root 179,  9 Jan  1 00:00 /dev/mmcblk0p9
+UTP: sending Success to kernel for command $ ls -l /dev/mmc* .
+utp_poll: pass returned.
+UTP: received command 'send'
+UTP: sending Success to kernel for command send.
+UTP: received command '$ dd if=$FILE of=/dev/mmcblk0'
+UTP: executing "dd if=$FILE of=/dev/mmcblk0"
+67+0 records in
+67+0 records out
+34304 bytes (34 kB, 34 KiB) copied, 0.0171503 s, 2.0 MB/s
+UTP: sending Success to kernel for command $ dd if=$FILE of=/dev/mmcblk0.
+utp_poll: pass returned.
+UTP: received command '$ hdparm -z /dev/mmcblk0'
+UTP: executing "hdparm -z /dev/mmcblk0"
+
+/dev/mmcblk0:
+ re-reading partition table
+Alternate GPT is invalid, using primary GPT.
+ mmcblk0: p1 p2 p3 p4 p5 p6 p7 p8 p9 p10 p11
+UTP: sending Success to kernel for command $ hdparm -z /dev/mmcblk0.
+utp_poll: pass returned.
+UTP: received command '$ gdisk -l /dev/mmcblk0 '
+UTP: executing "gdisk -l /dev/mmcblk0 "
+GPT fdisk (gdisk) version 1.0.1
+
+Caution: invalid backup GPT header, but valid main header; regenerating
+backup header from main header.
+
+Warning! One or more CRCs don't match. You should repair the disk!
+
+Partition table scan:
+  MBR: protective
+  BSD: not present
+  APM: not present
+  GPT: damaged
+
+****************************************************************************
+Caution: Found protective or hybrid MBR and corrupt GPT. Using GPT, but disk
+verification and recovery are STRONGLY recommended.
+****************************************************************************
+Disk /dev/mmcblk0: 7520256 sectors, 3.6 GiB
+Logical sector size: 512 bytes
+Disk identifier (GUID): 903E7CE6-FF47-43ED-BD2B-E031307E8BB8
+Partition table holds up to 128 entries
+First usable sector is 34, last usable sector is 7339998
+Partitions will be aligned on 2048-sector boundaries
+Total free space is 4029 sectors (2.0 MiB)
+
+Number  Start (sector)    End (sector)  Size       Code  Name
+   1            2048           67583   32.0 MiB    FFFF  boot
+   2           67584          133119   32.0 MiB    8300  recovery
+   3          133120         3278847   1.5 GiB     FFFF  system
+   4         3278848         4327423   512.0 MiB   FFFF  cache
+   5         4327424         4343807   8.0 MiB     FFFF  device
+   6         4343808         4351999   4.0 MiB     FFFF  misc
+   7         4352000         4356095   2.0 MiB     FFFF  datafooter
+   8         4356096         4360191   2.0 MiB     FFFF  metadata
+   9         4360192         4362239   1024.0 KiB  FFFF  presistdata
+  10         4362240         7335935   1.4 GiB     FFFF  userdata
+  11         7335936         7337983   1024.0 KiB  0700  fbmisc
+UTP: sending Success to kernel for command $ gdisk -l /dev/mmcblk0 .
+utp_poll: pass returned.
+UTP: received command 'send'
+UTP: sending Success to kernel for command send.
+UTP: received command '$ echo `gdisk -l /dev/mmcblk0 | grep -w boot | awk '{print $1}'` > /tmp/partIdx'
+UTP: executing "echo `gdisk -l /dev/mmcblk0 | grep -w boot | awk '{print $1}'` > /tmp/partIdx"
+Caution: invalid backup GPT header, but valid main header; regenerating
+backup header from main header.
+
+Warning! One or more CRCs don't match. You should repair the disk!
+
+UTP: sending Success to kernel for command $ echo `gdisk -l /dev/mmcblk0 | grep -w boot | awk '{print $1}'` > /tmp/partIdx.
+utp_poll: pass returned.
+UTP: received command '$ dd if=$FILE of=/dev/mmcblk0p`cat /tmp/partIdx`'
+UTP: executing "dd if=$FILE of=/dev/mmcblk0p`cat /tmp/partIdx`"
+22446+1 records in
+22446+1 records out
+11492648 bytes (11 MB, 11 MiB) copied, 1.81839 s, 6.3 MB/s
+UTP: sending Success to kernel for command $ dd if=$FILE of=/dev/mmcblk0p`cat /tmp/partIdx`.
+utp_poll: pass returned.
+UTP: received command '$ ls -l /dev/mmc* '
+UTP: executing "ls -l /dev/mmc* "
+brw------- 1 root root 179,  0 Jan  1 00:53 /dev/mmcblk0
+brw------- 1 root root 179, 16 Jan  1 00:53 /dev/mmcblk0boot0
+brw------- 1 root root 179, 32 Jan  1 00:00 /dev/mmcblk0boot1
+brw------- 1 root root 179,  1 Jan  1 00:53 /dev/mmcblk0p1
+brw------- 1 root root 179, 10 Jan  1 00:53 /dev/mmcblk0p10
+brw------- 1 root root 179, 11 Jan  1 00:53 /dev/mmcblk0p11
+brw------- 1 root root 179,  2 Jan  1 00:53 /dev/mmcblk0p2
+brw------- 1 root root 179,  3 Jan  1 00:53 /dev/mmcblk0p3
+brw------- 1 root root 179,  4 Jan  1 00:53 /dev/mmcblk0p4
+brw------- 1 root root 179,  5 Jan  1 00:53 /dev/mmcblk0p5
+brw------- 1 root root 179,  6 Jan  1 00:53 /dev/mmcblk0p6
+brw------- 1 root root 179,  7 Jan  1 00:53 /dev/mmcblk0p7
+brw------- 1 root root 179,  8 Jan  1 00:53 /dev/mmcblk0p8
+brw------- 1 root root 179,  9 Jan  1 00:53 /dev/mmcblk0p9
+UTP: sending Success to kernel for command $ ls -l /dev/mmc* .
+utp_poll: pass returned.
+UTP: received command '$ echo `gdisk -l /dev/mmcblk0 | grep -w cache | awk '{print $1}'` > /tmp/partIdx'
+UTP: executing "echo `gdisk -l /dev/mmcblk0 | grep -w cache | awk '{print $1}'` > /tmp/partIdx"
+Caution: invalid backup GPT header, but valid main header; regenerating
+backup header from main header.
+
+Warning! One or more CRCs don't match. You should repair the disk!
+
+UTP: sending Success to kernel for command $ echo `gdisk -l /dev/mmcblk0 | grep -w cache | awk '{print $1}'` > /tmp/partIdx.
+utp_poll: pass returned.
+UTP: received command '$ mkfs.ext4 -F -E nodiscard /dev/mmcblk0p`cat /tmp/partIdx`'
+UTP: executing "mkfs.ext4 -F -E nodiscard /dev/mmcblk0p`cat /tmp/partIdx`"
+mke2fs 1.43 (17-May-2016)
+/dev/mmcblk0p4 contains a ext4 file system
+	last mounted on Thu Jan  1 00:18:56 1970
+Creating filesystem with 131072 4k blocks and 32768 inodes
+Filesystem UUID: 67952261-d432-482e-b7a6-17e7892b89cb
+Superblock backups stored on blocks: 
+	32768, 98304
+
+Allocating group tables: 0/4   done                            
+Writing inode tables: 0/4   done                            
+Creating journal (4096 blocks): done
+Writing superblocks and filesystem accounting information: 0/4   done
+
+UTP: sending Success to kernel for command $ mkfs.ext4 -F -E nodiscard /dev/mmcblk0p`cat /tmp/partIdx`.
+utp_poll: pass returned.
+UTP: received command '$ echo `gdisk -l /dev/mmcblk0 | grep -w device | awk '{print $1}'` > /tmp/partIdx'
+UTP: executing "echo `gdisk -l /dev/mmcblk0 | grep -w device | awk '{print $1}'` > /tmp/partIdx"
+Caution: invalid backup GPT header, but valid main header; regenerating
+backup header from main header.
+
+Warning! One or more CRCs don't match. You should repair the disk!
+
+UTP: sending Success to kernel for command $ echo `gdisk -l /dev/mmcblk0 | grep -w device | awk '{print $1}'` > /tmp/partIdx.
+utp_poll: pass returned.
+UTP: received command '$ mkfs.ext4 -F -E nodiscard /dev/mmcblk0p`cat /tmp/partIdx`'
+UTP: executing "mkfs.ext4 -F -E nodiscard /dev/mmcblk0p`cat /tmp/partIdx`"
+mke2fs 1.43 (17-May-2016)
+/dev/mmcblk0p5 contains a ext4 file system
+	created on Thu Jan  1 00:00:14 1970
+Creating filesystem with 8192 1k blocks and 2048 inodes
+
+Allocating group tables: 0/1   done                            
+Writing inode tables: 0/1   done                            
+Creating journal (1024 blocks): done
+Writing superblocks and filesystem accounting information: 0/1   done
+
+UTP: sending Success to kernel for command $ mkfs.ext4 -F -E nodiscard /dev/mmcblk0p`cat /tmp/partIdx`.
+utp_poll: pass returned.
+UTP: received command '$ echo `gdisk -l /dev/mmcblk0 | grep -w userdata | awk '{print $1}'` > /tmp/partIdx'
+UTP: executing "echo `gdisk -l /dev/mmcblk0 | grep -w userdata | awk '{print $1}'` > /tmp/partIdx"
+Caution: invalid backup GPT header, but valid main header; regenerating
+backup header from main header.
+
+Warning! One or more CRCs don't match. You should repair the disk!
+
+UTP: sending Success to kernel for command $ echo `gdisk -l /dev/mmcblk0 | grep -w userdata | awk '{print $1}'` > /tmp/partIdx.
+utp_poll: pass returned.
+UTP: received command '$ mkfs.ext4 -F -E nodiscard -b 4096 -m 0 -O ^flex_bg,^uninit_bg /dev/mmcblk0p`cat /tmp/partIdx`'
+UTP: executing "mkfs.ext4 -F -E nodiscard -b 4096 -m 0 -O ^flex_bg,^uninit_bg /dev/mmcblk0p`cat /tmp/partIdx`"
+mke2fs 1.43 (17-May-2016)
+/dev/mmcblk0p10 contains a ext4 file system
+	last mounted on /data on Thu Jan  1 00:18:55 1970
+Creating filesystem with 371712 4k blocks and 92928 inodes
+Filesystem UUID: 1971c059-e80e-4a60-a4e4-6d20186293d4
+Superblock backups stored on blocks: 
+	32768, 98304, 163840, 229376, 294912
+
+Allocating group tables:  0/12     done                            
+Writing inode tables:  0/12     done                            
+Creating journal (8192 blocks): done
+Writing superblocks and filesystem accounting information:  0/12     done
+
+UTP: sending Success to kernel for command $ mkfs.ext4 -F -E nodiscard -b 4096 -m 0 -O ^flex_bg,^uninit_bg /dev/mmcblk0p`cat /tmp/partIdx`.
+utp_poll: pass returned.
+UTP: received command '$ mount -o remount,size=1024M rootfs /'
+UTP: executing "mount -o remount,size=1024M rootfs /"
+UTP: sending Success to kernel for command $ mount -o remount,size=1024M rootfs /.
+utp_poll: pass returned.
+UTP: received command 'send'
+UTP: sending Success to kernel for command send.
+random: crng init done
+UTP: received command '$ echo `gdisk -l /dev/mmcblk0 | grep -w system | awk '{print $1}'` > /tmp/partIdx'
+UTP: executing "echo `gdisk -l /dev/mmcblk0 | grep -w system | awk '{print $1}'` > /tmp/partIdx"
+Caution: invalid backup GPT header, but valid main header; regenerating
+backup header from main header.
+
+Warning! One or more CRCs don't match. You should repair the disk!
+
+UTP: sending Success to kernel for command $ echo `gdisk -l /dev/mmcblk0 | grep -w system | awk '{print $1}'` > /tmp/partIdx.
+utp_poll: pass returned.
+UTP: received command '$ simg2img $FILE /dev/mmcblk0p`cat /tmp/partIdx`'
+UTP: executing "simg2img $FILE /dev/mmcblk0p`cat /tmp/partIdx`"
+UTP: sending Success to kernel for command $ simg2img $FILE /dev/mmcblk0p`cat /tmp/partIdx`.
+utp_poll: pass returned.
+UTP: received command 'send'
+UTP: sending Success to kernel for command send.
+UTP: received command '$ echo `gdisk -l /dev/mmcblk0 | grep -w 'recovery$' | awk '{print $1}'` > /tmp/partIdx'
+UTP: executing "echo `gdisk -l /dev/mmcblk0 | grep -w 'recovery$' | awk '{print $1}'` > /tmp/partIdx"
+Caution: invalid backup GPT header, but valid main header; regenerating
+backup header from main header.
+
+Warning! One or more CRCs don't match. You should repair the disk!
+
+UTP: sending Success to kernel for command $ echo `gdisk -l /dev/mmcblk0 | grep -w 'recovery$' | awk '{print $1}'` > /tmp/partIdx.
+utp_poll: pass returned.
+UTP: received command '$ dd if=$FILE of=/dev/mmcblk0p`cat /tmp/partIdx`'
+UTP: executing "dd if=$FILE of=/dev/mmcblk0p`cat /tmp/partIdx`"
+27218+1 records in
+27218+1 records out
+13935916 bytes (14 MB, 13 MiB) copied, 2.19485 s, 6.3 MB/s
+UTP: sending Success to kernel for command $ dd if=$FILE of=/dev/mmcblk0p`cat /tmp/partIdx`.
+utp_poll: pass returned.
+UTP: received command '$ sync'
+UTP: executing "sync"
+UTP: sending Success to kernel for command $ sync.
+utp_poll: pass returned.
+UTP: received command 'frf'
+UTP: closing the file
+UTP: sending Success to kernel for command frf.
+utp_poll: pass returned.
+UTP: received command '$ echo Update Complete!'
+UTP: executing "echo Update Complete!"
+Update Complete!
+UTP: sending Success to kernel for command $ echo Update Complete!.
+utp_poll: pass returned.

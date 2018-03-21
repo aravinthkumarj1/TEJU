@@ -1,0 +1,4295 @@
+kernel   @ 14008000 (9921584)
+ramdisk  @ 15000000 (1628986)
+fdt      @ 14f00000 (54143)
+## Booting Android Image at 0x12000000 ...
+Kernel load addr 0x14008000 size 9690 KiB
+Kernel command line: console=ttymxc0,115200 init=/init video=mxcfb1:off video=mxcfb0:dev=hdmi,640x480M@60,if=RGB24,bpp=16 video=mxcfb2:off video=mxcfb3:off fbmem=32M vmalloc=400M androidboot.console=ttymxc0 consoleblank=0 androidboot.hardware=freescale cma=448M androidboot.selinux=permissive androidboot.dm_verity=disabled androidboot.serialno=1b2429d4ea997115 androidboot.storage_type=emmc
+## Flattened Device Tree blob at 14f00000
+   Booting using the fdt blob at 0x14f00000
+   Loading Kernel Image ... OK
+   Using Device Tree in place at 14f00000, end 14f1037e
+
+Starting kernel ...
+
+Booting Linux on physical CPU 0x0
+Linux version 4.9.67-07229-gdc6c16ec0433-dirty (embadmin@ubuntu) (gcc version 4.9 20150123 (prerelease) (GCC) ) #67 SMP PREEMPT Thu Feb 15 15:25:35 IST 2018
+CPU: ARMv7 Processor [412fc09a] revision 10 (ARMv7), cr=10c53c7d
+CPU: PIPT / VIPT nonaliasing data cache, VIPT aliasing instruction cache
+OF: fdt:Machine model: Aravinth : Toradex Apalis iMX6Q/D Module on Ixora V1.1 Carrier Board
+cma: Reserved 448 MiB at 0x1a000000
+Memory policy: Data cache writealloc
+percpu: Embedded 15 pages/cpu @e66b3000 s31040 r8192 d22208 u61440
+Built 1 zonelists in Zone order, mobility grouping on.  Total pages: 523056
+Kernel command line: console=ttymxc0,115200 init=/init video=mxcfb1:off video=mxcfb0:dev=hdmi,640x480M@60,if=RGB24,bpp=16 video=mxcfb2:off video=mxcfb3:off fbmem=32M vmalloc=400M androidboot.console=ttymxc0 consoleblank=0 androidboot.hardware=freescale cma=448M androidboot.selinux=permissive androidboot.dm_verity=disabled androidboot.serialno=1b2429d4ea997115 androidboot.storage_type=emmc
+PID hash table entries: 4096 (order: 2, 16384 bytes)
+Dentry cache hash table entries: 131072 (order: 7, 524288 bytes)
+Inode-cache hash table entries: 65536 (order: 6, 262144 bytes)
+Memory: 1597024K/2097152K available (13312K kernel code, 1154K rwdata, 4044K rodata, 1024K init, 604K bss, 41376K reserved, 458752K cma-reserved, 1466368K highmem)
+Virtual kernel memory layout:
+    vector  : 0xffff0000 - 0xffff1000   (   4 kB)
+    fixmap  : 0xffc00000 - 0xfff00000   (3072 kB)
+    vmalloc : 0xe7000000 - 0xff800000   ( 392 MB)
+    lowmem  : 0xc0000000 - 0xe6800000   ( 616 MB)
+    pkmap   : 0xbfe00000 - 0xc0000000   (   2 MB)
+    modules : 0xbf000000 - 0xbfe00000   (  14 MB)
+      .text : 0xc0008000 - 0xc0e00000   (14304 kB)
+      .init : 0xc1300000 - 0xc1400000   (1024 kB)
+      .data : 0xc1400000 - 0xc1520b98   (1155 kB)
+       .bss : 0xc1520b98 - 0xc15b7c28   ( 605 kB)
+SLUB: HWalign=64, Order=0-3, MinObjects=0, CPUs=4, Nodes=1
+Preemptible hierarchical RCU implementation.
+	Build-time adjustment of leaf fanout to 32.
+NR_IRQS:16 nr_irqs:16 16
+L2C-310 errata 752271 769419 enabled
+L2C-310 enabling early BRESP for Cortex-A9
+L2C-310 full line of zeros enabled for Cortex-A9
+L2C-310 ID prefetch enabled, offset 16 lines
+L2C-310 dynamic clock gating enabled, standby mode enabled
+L2C-310 cache controller enabled, 16 ways, 1024 kB
+L2C-310: CACHE_ID 0x410000c7, AUX_CTRL 0x76470001
+Switching to timer-based delay loop, resolution 333ns
+sched_clock: 32 bits at 3000kHz, resolution 333ns, wraps every 715827882841ns
+clocksource: mxc_timer1: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 637086815595 ns
+Console: colour dummy device 80x30
+Calibrating delay loop (skipped), value calculated using timer frequency.. 6.00 BogoMIPS (lpj=30000)
+pid_max: default: 32768 minimum: 301
+Security Framework initialized
+SELinux:  Initializing.
+Mount-cache hash table entries: 2048 (order: 1, 8192 bytes)
+Mountpoint-cache hash table entries: 2048 (order: 1, 8192 bytes)
+CPU: Testing write buffer coherency: ok
+CPU0: update cpu_capacity 1024
+CPU0: thread -1, cpu 0, socket 0, mpidr 80000000
+Setting up static identity map for 0x10100000 - 0x10100058
+CPU1: update cpu_capacity 1024
+CPU1: thread -1, cpu 1, socket 0, mpidr 80000001
+CPU2: update cpu_capacity 1024
+CPU2: thread -1, cpu 2, socket 0, mpidr 80000002
+CPU3: update cpu_capacity 1024
+CPU3: thread -1, cpu 3, socket 0, mpidr 80000003
+Brought up 4 CPUs
+SMP: Total of 4 processors activated (24.00 BogoMIPS).
+CPU: All CPU(s) started in SVC mode.
+CPU3: update max cpu_capacity 1024
+devtmpfs: initialized
+CPU2: update max cpu_capacity 1024
+VFP support v0.3: implementor 41 architecture 3 part 30 variant 9 rev 4
+clocksource: jiffies: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 19112604462750000 ns
+futex hash table entries: 1024 (order: 4, 65536 bytes)
+pinctrl core: initialized pinctrl subsystem
+NET: Registered protocol family 16
+DMA: preallocated 256 KiB pool for atomic coherent allocations
+cpuidle: using governor menu
+CPU identified as i.MX6Q, silicon rev 1.5
+hw-breakpoint: found 5 (+1 reserved) breakpoint and 1 watchpoint registers.
+hw-breakpoint: maximum watchpoint size is 4 bytes.
+imx6q-pinctrl 20e0000.iomuxc: initialized IMX pinctrl driver
+imx-gpc 20dc000.gpc: no fsl,ldo-bypass found!
+imx-gpc 20dc000.gpc: Registered imx-gpc
+mxs-dma 110000.dma-apbh: initialized
+usb_host_vbus: supplied by usb_host_vbus_hub
+SCSI subsystem initialized
+usbcore: registered new interface driver usbfs
+usbcore: registered new interface driver hub
+usbcore: registered new device driver usb
+2000000.aips-bus:usbphy_nop1 supply vcc not found, using dummy regulator
+2000000.aips-bus:usbphy_nop2 supply vcc not found, using dummy regulator
+i2c i2c-1: IMX I2C adapter registered
+i2c i2c-1: can't use DMA, using PIO instead.
+i2c i2c-2: of_i2c: invalid reg on /soc/aips-bus@02100000/i2c@021a4000/i2c_sw_edid
+i2c i2c-2: Failed to create I2C device for /soc/aips-bus@02100000/i2c@021a4000/i2c_sw_edid
+stmpe-i2c 2-0041: stmpe811 detected, chip id: 0x811
+i2c i2c-2: IMX I2C adapter registered
+i2c i2c-2: can't use DMA, using PIO instead.
+i2c i2c-3: IMX I2C adapter registered
+i2c i2c-3: can't use DMA, using PIO instead.
+Aravinth: i2c_adap_sw_edid_init 
+Linux video capture interface: v2.00
+pps_core: LinuxPPS API ver. 1 registered
+pps_core: Software ver. 5.3.6 - Copyright 2005-2007 Rodolfo Giometti <giometti@linux.it>
+PTP clock support registered
+imx-ipuv3 2400000.ipu: IPU DMFC NORMAL mode: 1(0~1), 5B(4,5), 5F(6,7)
+imx-ipuv3 2800000.ipu: IPU DMFC NORMAL mode: 1(0~1), 5B(4,5), 5F(6,7)
+mxc_mipi_csi2 21dc000.mipi_csi: i.MX MIPI CSI2 driver probed ipu0 csi1
+mxc_mipi_csi2 21dc000.mipi_csi: i.MX MIPI CSI2 dphy version is 0x3130302a
+MIPI CSI2 driver module loaded
+imx rpmsg driver is registered.
+Advanced Linux Sound Architecture Driver Initialized.
+Bluetooth: Core ver 2.22
+NET: Registered protocol family 31
+Bluetooth: HCI device and connection manager initialized
+Bluetooth: HCI socket layer initialized
+Bluetooth: L2CAP socket layer initialized
+Bluetooth: SCO socket layer initialized
+clocksource: Switched to clocksource mxc_timer1
+VFS: Disk quotas dquot_6.6.0
+VFS: Dquot-cache hash table entries: 1024 (order 0, 4096 bytes)
+NET: Registered protocol family 2
+TCP established hash table entries: 8192 (order: 3, 32768 bytes)
+TCP bind hash table entries: 8192 (order: 4, 65536 bytes)
+TCP: Hash tables configured (established 8192 bind 8192)
+UDP hash table entries: 512 (order: 2, 16384 bytes)
+UDP-Lite hash table entries: 512 (order: 2, 16384 bytes)
+NET: Registered protocol family 1
+RPC: Registered named UNIX socket transport module.
+RPC: Registered udp transport module.
+RPC: Registered tcp transport module.
+RPC: Registered tcp NFSv4.1 backchannel transport module.
+Trying to unpack rootfs image as initramfs...
+Freeing initrd memory: 1592K
+hw perfevents: enabled with armv7_cortex_a9 PMU driver, 7 counters available
+Bus freq driver module loaded
+audit: initializing netlink subsys (disabled)
+audit: type=2000 audit(0.870:1): initialized
+workingset: timestamp_bits=30 max_order=19 bucket_order=0
+NFS: Registering the id_resolver key type
+Key type id_resolver registered
+Key type id_legacy registered
+ntfs: driver 2.1.32 [Flags: R/W DEBUG].
+jffs2: version 2.2. (NAND) Â© 2001-2006 Red Hat, Inc.
+fuse init (API version 7.26)
+NET: Registered protocol family 38
+bounce: pool size: 64 pages
+io scheduler noop registered
+io scheduler deadline registered
+io scheduler cfq registered (default)
+backlight supply power not found, using dummy regulator
+Aravinth: mxc_hdmi_i2c_probe 
+Aravinth: mxc_hdmi_probe 
+20e0000.hdmi_video supply HDMI not found, using dummy regulator
+Aravinth: mxc_hdmi_disp_init 
+mxc_hdmi 20e0000.hdmi_video: Detected HDMI controller 0x13:0xa:0xa0:0xc1
+Aravinth:fb_find_mode 
+modedb fb_find_mode: CVT mode 640x480@60Hz
+fbcvt: 640x480@60: CVT Name - .307M3
+Aravinth:fb_try_mode 
+modedb fb_try_mode: Trying mode noname 640x480-16@60
+modedb fb_find_mode: modedb CVT: CVT mode ok
+Aravinth:fb_destroy_modelist 
+Aravinth:fb_add_videomode 
+Aravinth:fb_add_videomode 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_add_videomode 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_add_videomode 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_add_videomode 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_add_videomode 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_add_videomode 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_add_videomode 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_add_videomode 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_add_videomode 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_add_videomode 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_add_videomode 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_add_videomode 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_add_videomode 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_add_videomode 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_add_videomode 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_add_videomode 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_add_videomode 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_add_videomode 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_add_videomode 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_add_videomode 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_add_videomode 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_var_to_videomode 
+Aravinth:fb_find_nearest_mode 
+Aravinth: fb_videomode_to_var 
+Aravinth: fb_videomode_to_var var->xres=640 yres=480 xres_virtual=640 >yres_virtual=480 pixclock=39722 
+Aravinth: fb_videomode_to_var Done
+mxc_sdc_fb fb@0: registered mxc display driver hdmi
+Aravinth:fb_var_to_videomode 
+Aravinth:fb_add_videomode 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_match_mode 
+Aravinth:fb_var_to_videomode 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth: mxc_hdmi_phy_init 
+Aravinth:fb_var_to_videomode 
+Aravinth:fb_add_videomode 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_var_to_videomode 
+Aravinth:fb_add_videomode 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_match_mode 
+Aravinth:fb_var_to_videomode 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_match_mode 
+Aravinth:fb_var_to_videomode 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth: mxc_hdmi_phy_init 
+Aravinth: fb_videomode_to_var 
+Aravinth: fb_videomode_to_var var->xres=640 yres=480 xres_virtual=640 >yres_virtual=480 pixclock=39722 
+Aravinth: fb_videomode_to_var Done
+Console: switching to colour frame buffer device 80x30
+Aravinth: fb_videomode_to_var 
+Aravinth: fb_videomode_to_var var->xres=640 yres=480 xres_virtual=640 >yres_virtual=480 pixclock=39722 
+Aravinth: fb_videomode_to_var Done
+Aravinth:fb_var_to_videomode 
+Aravinth:fb_add_videomode 
+Aravinth:fb_var_to_videomode 
+Aravinth:fb_add_videomode 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_var_to_videomode 
+Aravinth:fb_add_videomode 
+Aravinth:fb_mode_is_equal 
+mxc_sdc_fb fb@1: Can't get fb option for mxcfb1!
+mxc_sdc_fb fb@2: Can't get fb option for mxcfb2!
+mxc_sdc_fb fb@3: Can't get fb option for mxcfb3!
+imx-sdma 20ec000.sdma: no iram assigned, using external mem
+imx-sdma 20ec000.sdma: loaded firmware 3.3
+pfuze100-regulator 2-0008: Full layer: 2, Metal layer: 1
+pfuze100-regulator 2-0008: FAB: 0, FIN: 0
+pfuze100-regulator 2-0008: pfuze100 found.
+mxc_hdmi 20e0000.hdmi_video: Read EDID again
+2020000.serial: ttymxc0 at MMIO 0x2020000 (irq = 29, base_baud = 5000000) is a IMX
+Aravinth: mxc_hdmi_cable_connected edid_status=-1
+Aravinth: mxc_hdmi_default_modelist 
+mxc_hdmi 20e0000.hdmi_video: create default modelist
+Aravinth:fb_destroy_modelist 
+Aravinth: mxc_hdmi_default_modelist 
+Aravinth:fb_add_videomode 
+Aravinth: fb_videomode_to_var 
+Aravinth: fb_videomode_to_var var->xres=640 yres=480 xres_virtual=640 >yres_virtual=480 pixclock=39722 
+Aravinth: fb_videomode_to_var Done
+Aravinth:fb_var_to_videomode 
+Aravinth:fb_mode_is_equal 
+Aravinth: fb_videomode_to_var 
+Aravinth: fb_videomode_to_var var->xres=640 yres=480 xres_virtual=640 >yres_virtual=480 pixclock=39722 
+Aravinth: fb_videomode_to_var Done
+Aravinth:fb_find_nearest_mode 
+Aravinth: fb_videomode_to_var 
+Aravinth: fb_videomode_to_var var->xres=640 yres=480 xres_virtual=640 >yres_virtual=480 pixclock=39722 
+Aravinth: fb_videomode_to_var Done
+Aravinth:fb_match_mode 
+Aravinth:fb_var_to_videomode 
+Aravinth:fb_mode_is_equal 
+console [ttymxc0] enabled
+21e8000.serial: ttymxc1 at MMIO 0x21e8000 (irq = 78, base_baud = 5000000) is a IMX
+21f0000.serial: ttymxc3 at MMIO 0x21f0000 (irq = 79, base_baud = 5000000) is a IMX
+21f4000.serial: ttymxc4 at MMIO 0x21f4000 (irq = 80, base_baud = 5000000) is a IMX
+imx sema4 driver is registered.
+[drm] Initialized
+[drm] Initialized vivante 1.0.0 20120216 on minor 0
+brd: module loaded
+Aravinth:fb_match_mode 
+Aravinth:fb_var_to_videomode 
+Aravinth:fb_mode_is_equal 
+Aravinth: mxc_hdmi_phy_init 
+loop: module loaded
+zram: Added device: zram0
+ahci-imx 2200000.sata: fsl,transmit-level-mV not specified, using 00000024
+ahci-imx 2200000.sata: fsl,transmit-boost-mdB not specified, using 00000480
+ahci-imx 2200000.sata: fsl,transmit-atten-16ths not specified, using 00002000
+ahci-imx 2200000.sata: fsl,receive-eq-mdB not specified, using 05000000
+ahci-imx 2200000.sata: SSS flag set, parallel bus scan disabled
+ahci-imx 2200000.sata: AHCI 0001.0300 32 slots 1 ports 3 Gbps 0x1 impl platform mode
+ahci-imx 2200000.sata: flags: ncq sntf stag pm led clo only pmp pio slum part ccc apst 
+scsi host0: ahci-imx
+ata1: SATA max UDMA/133 mmio [mem 0x02200000-0x02203fff] port 0x100 irq 87
+Aravinth:fb_var_to_videomode 
+Aravinth:fb_add_videomode 
+Aravinth:fb_mode_is_equal 
+Aravinth: fb_videomode_to_var 
+spi_imx 2008000.ecspi: probed
+libphy: Fixed MDIO Bus: probed
+tun: Universal TUN/TAP device driver, 1.6
+tun: (C) 1999-2004 Max Krasnyansky <maxk@qualcomm.com>
+CAN device driver interface
+2090000.flexcan supply xceiver not found, using dummy regulator
+flexcan 2090000.flexcan: device registered (reg_base=e72f4000, irq=38)
+2094000.flexcan supply xceiver not found, using dummy regulator
+flexcan 2094000.flexcan: device registered (reg_base=e72fc000, irq=39)
+2188000.ethernet supply phy not found, using dummy regulator
+Aravinth: fb_videomode_to_var var->xres=640 yres=480 xres_virtual=640 >yres_virtual=480 pixclock=39722 
+Aravinth: fb_videomode_to_var Done
+pps pps0: new PPS source ptp0
+libphy: fec_enet_mii_bus: probed
+fec 2188000.ethernet eth0: registered PHC device 0
+PPP generic driver version 2.4.2
+PPP BSD Compression module registered
+PPP Deflate Compression module registered
+PPP MPPE Compression module registered
+NET: Registered protocol family 24
+usbcore: registered new interface driver rtl8xxxu
+usbcore: registered new interface driver kaweth
+pegasus: v0.9.3 (2013/04/25), Pegasus/Pegasus II USB Ethernet driver
+usbcore: registered new interface driver pegasus
+usbcore: registered new interface driver rtl8150
+usbcore: registered new interface driver r8152
+usbcore: registered new interface driver asix
+usbcore: registered new interface driver ax88179_178a
+usbcore: registered new interface driver cdc_ether
+usbcore: registered new interface driver cdc_eem
+usbcore: registered new interface driver net1080
+usbcore: registered new interface driver cdc_subset
+usbcore: registered new interface driver zaurus
+usbcore: registered new interface driver cdc_ncm
+ehci_hcd: USB 2.0 'Enhanced' Host Controller (EHCI) Driver
+ehci-mxc: Freescale On-Chip EHCI Host driver
+ohci_hcd: USB 1.1 'Open' Host Controller (OHCI) Driver
+usbcore: registered new interface driver cdc_acm
+cdc_acm: USB Abstract Control Model driver for USB modems and ISDN adapters
+usbcore: registered new interface driver cdc_wdm
+usbcore: registered new interface driver usb-storage
+usbcore: registered new interface driver usbserial
+usbcore: registered new interface driver usbserial_generic
+usbserial: USB Serial support registered for generic
+usbcore: registered new interface driver ftdi_sio
+usbserial: USB Serial support registered for FTDI USB Serial Device
+usbcore: registered new interface driver option
+usbserial: USB Serial support registered for GSM modem (1-port)
+usbcore: registered new interface driver usbtest
+usbcore: registered new interface driver usb_ehset_test
+2184800.usbmisc supply vbus-wakeup not found, using dummy regulator
+ci_hdrc ci_hdrc.1: EHCI Host Controller
+ci_hdrc ci_hdrc.1: new USB bus registered, assigned bus number 1
+Aravinth:fb_match_mode 
+Aravinth:fb_var_to_videomode 
+Aravinth:fb_mode_is_equal 
+Aravinth: mxc_hdmi_phy_init 
+ci_hdrc ci_hdrc.1: USB 2.0 started, EHCI 1.00
+usb usb1: New USB device found, idVendor=1d6b, idProduct=0002
+usb usb1: New USB device strings: Mfr=3, Product=2, SerialNumber=1
+usb usb1: Product: EHCI Host Controller
+usb usb1: Manufacturer: Linux 4.9.67-07229-gdc6c16ec0433-dirty ehci_hcd
+usb usb1: SerialNumber: ci_hdrc.1
+hub 1-0:1.0: USB hub found
+hub 1-0:1.0: 1 port detected
+mousedev: PS/2 mouse device common for all mice
+usbcore: registered new interface driver xpad
+usbcore: registered new interface driver usb_acecad
+usbcore: registered new interface driver aiptek
+usbcore: registered new interface driver gtco
+usbcore: registered new interface driver hanwang
+usbcore: registered new interface driver kbtab
+Aravinth:fb_var_to_videomode 
+Aravinth:fb_add_videomode 
+Aravinth:fb_mode_is_equal 
+input: stmpe-ts as /devices/soc0/soc/2100000.aips-bus/21a4000.i2c/i2c-2/2-0041/stmpe-ts/input/input0
+snvs_rtc 20cc000.snvs:snvs-rtc-lp: rtc core: registered 20cc000.snvs:snvs-r as rtc0
+i2c /dev entries driver
+IR NEC protocol handler initialized
+IR RC5(x/sz) protocol handler initialized
+IR RC6 protocol handler initialized
+IR JVC protocol handler initialized
+IR Sony protocol handler initialized
+IR SANYO protocol handler initialized
+IR Sharp protocol handler initialized
+IR MCE Keyboard/mouse protocol handler initialized
+IR XMP protocol handler initialized
+mxc_v4l2_output v4l2_out: V4L2 device registered as video16
+mxc_v4l2_output v4l2_out: V4L2 device registered as video17
+ov564x_mipi 3-003c: found pwm2, period=0
+ata1: SATA link down (SStatus 0 SControl 300)
+ahci-imx 2200000.sata: no device found, disabling link.
+ahci-imx 2200000.sata: pass ahci_imx..hotplug=1 to enable hotplug
+ov5640_read_reg:write reg error:reg=300a
+camera ov5640_mipi is not found
+usbcore: registered new interface driver uvcvideo
+USB Video Class driver (1.1.1)
+imx2-wdt 20bc000.wdog: timeout 60 sec (nowayout=0)
+device-mapper: uevent: version 1.0.3
+device-mapper: ioctl: 4.35.0-ioctl (2016-06-23) initialised: dm-devel@redhat.com
+Bluetooth: HCI UART driver ver 2.3
+Bluetooth: HCI UART protocol H4 registered
+Bluetooth: HCI UART protocol BCSP registered
+Bluetooth: HCI UART protocol ATH3K registered
+usbcore: registered new interface driver btusb
+sdhci: Secure Digital Host Controller Interface driver
+sdhci: Copyright(c) Pierre Ossman
+sdhci-pltfm: SDHCI platform and OF driver helper
+sdhci-esdhc-imx 2190000.usdhc: could not get ultra high speed state, work on normal mode
+sdhci-esdhc-imx 2190000.usdhc: Got CD GPIO
+mmc1: SDHCI controller on 2190000.usdhc [2190000.usdhc] using ADMA
+sdhci-esdhc-imx 2198000.usdhc: could not get ultra high speed state, work on normal mode
+mmc0: SDHCI controller on 2198000.usdhc [2198000.usdhc] using ADMA
+mxc_vpu 2040000.vpu_fsl: VPU initialized
+mxc_vdoa 21e4000.vdoa: i.MX Video Data Order Adapter(VDOA) driver probed
+mxc_hdmi_cec soc:hdmi_cec@00120000: HDMI CEC initialized
+Galcore version 6.2.2.96445
+Aravinth: mxc_hdmi_set_mode 
+Aravinth: fb_videomode_to_var 
+Aravinth: fb_videomode_to_var var->xres=640 yres=480 xres_virtual=640 >yres_virtual=480 pixclock=39722 
+Aravinth: fb_videomode_to_var Done
+Aravinth:fb_var_to_videomode 
+Aravinth:fb_find_nearest_mode 
+Aravinth:fb_mode_is_equal 
+Aravinth: mxc_hdmi_set_mode_to_vga_dvi 
+Aravinth: fb_videomode_to_var 
+Aravinth: fb_videomode_to_var var->xres=640 yres=480 xres_virtual=640 >yres_virtual=480 pixclock=39721 
+Aravinth: fb_videomode_to_var Done
+Aravinth:fb_match_mode 
+Aravinth:fb_var_to_videomode 
+Aravinth:fb_mode_is_equal 
+Aravinth: mxc_hdmi_phy_init 
+Aravinth:fb_var_to_videomode 
+Aravinth:fb_add_videomode 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_match_mode 
+Aravinth:fb_var_to_videomode 
+Aravinth:fb_mode_is_equal 
+Aravinth: fb_videomode_to_var 
+Aravinth: fb_videomode_to_var var->xres=640 yres=480 xres_virtual=640 >yres_virtual=480 pixclock=39721 
+Aravinth: fb_videomode_to_var Done
+Aravinth:fb_mode_is_equal 
+Aravinth: mxc_hdmi_setup 
+Aravinth:fb_var_to_videomode 
+Aravinth:fb_var_to_videomode 
+Aravinth: mxc_hdmi_phy_init 
+mmc0: new DDR MMC card at address 0001
+mmcblk0: mmc0:0001 Q2J54A 3.59 GiB 
+mmcblk0boot0: mmc0:0001 Q2J54A partition 1 16.0 MiB
+mmcblk0boot1: mmc0:0001 Q2J54A partition 2 16.0 MiB
+Aravinth:fb_var_to_videomode 
+Aravinth:fb_find_nearest_mode 
+Alternate GPT is invalid, using primary GPT.
+ mmcblk0: p1 p2 p3 p4 p5 p6 p7 p8 p9 p10 p11
+Aravinth: fb_videomode_to_var 
+Aravinth: fb_videomode_to_var var->xres=640 yres=480 xres_virtual=640 >yres_virtual=480 pixclock=39722 
+Aravinth: fb_videomode_to_var Done
+random: fast init done
+Aravinth:fb_match_mode 
+Aravinth:fb_var_to_videomode 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth: mxc_hdmi_phy_init 
+Aravinth:fb_var_to_videomode 
+Aravinth:fb_add_videomode 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_match_mode 
+Aravinth:fb_var_to_videomode 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth: fb_videomode_to_var 
+Aravinth: fb_videomode_to_var var->xres=640 yres=480 xres_virtual=640 >yres_virtual=480 pixclock=39722 
+Aravinth: fb_videomode_to_var Done
+Aravinth:fb_mode_is_equal 
+Aravinth: mxc_hdmi_setup 
+Aravinth:fb_var_to_videomode 
+Aravinth:fb_find_nearest_mode 
+Aravinth:fb_var_to_videomode 
+Aravinth: mxc_hdmi_phy_init 
+Aravinth:fb_var_to_videomode 
+Aravinth:fb_find_nearest_mode 
+usb 1-1: new high-speed USB device number 2 using ci_hdrc
+usb 1-1: New USB device found, idVendor=0424, idProduct=2514
+usb 1-1: New USB device strings: Mfr=0, Product=0, SerialNumber=0
+hub 1-1:1.0: USB hub found
+hub 1-1:1.0: 4 ports detected
+caam 2100000.caam: ERA source: CAAMVID.
+caam 2100000.caam: AXI pipeline throttling enabled.
+caam 2100000.caam: Instantiated RNG4 SH1
+caam 2100000.caam: device ID = 0x0a16010000000000 (Era 4)
+caam 2100000.caam: job rings = 2, qi = 0
+caam algorithms registered in /proc/crypto
+caam_jr 2101000.jr0: registering rng-caam
+platform caam_sm: blkkey_ex: 4 keystore units available
+platform caam_sm: 64-bit clear key:
+platform caam_sm: [0000] 00 01 02 03 04 0f 06 07
+platform caam_sm: 64-bit black key:
+platform caam_sm: [0000] e7 a9 f1 5e 37 77 d4 c9
+platform caam_sm: [0008] ed a0 ed df 36 09 25 46
+platform caam_sm: 128-bit clear key:
+platform caam_sm: [0000] 00 01 02 03 04 0f 06 07
+platform caam_sm: [0008] 08 09 0a 0b 0c 0d 0e 0f
+platform caam_sm: 128-bit black key:
+platform caam_sm: [0000] ee be 77 e0 e3 88 45 95
+platform caam_sm: [0008] 83 c0 9c 81 03 2b 58 da
+platform caam_sm: 192-bit clear key:
+platform caam_sm: [0000] 00 01 02 03 04 0f 06 07
+platform caam_sm: [0008] 08 09 0a 0b 0c 0d 0e 0f
+platform caam_sm: [0016] 10 11 12 13 14 15 16 17
+platform caam_sm: 192-bit black key:
+platform caam_sm: [0000] 5b d4 8b 66 ea aa 01 2f
+platform caam_sm: [0008] 42 e8 70 1a 8b 5d de 59
+platform caam_sm: [0016] 1f c4 ce ad e6 ac 19 ad
+platform caam_sm: [0024] a7 6d 56 35 09 b3 58 34
+platform caam_sm: 256-bit clear key:
+platform caam_sm: [0000] 00 01 02 03 04 0f 06 07
+platform caam_sm: [0008] 08 09 0a 0b 0c 0d 0e 0f
+platform caam_sm: [0016] 10 11 12 13 14 15 16 17
+platform caam_sm: [0024] 18 19 1a 1b 1c 1d 1e 1f
+platform caam_sm: 256-bit black key:
+platform caam_sm: [0000] ca bb 76 7c 9d c4 bb 1d
+platform caam_sm: [0008] 18 45 bf a3 0f 83 0d 01
+platform caam_sm: [0016] 0e e7 a1 f0 90 9f 85 97
+platform caam_sm: [0024] 6c d8 5d 33 b7 dd 8a d7
+platform caam_sm: 64-bit unwritten blob:
+platform caam_sm: [0000] 00 00 00 00 00 00 00 00
+platform caam_sm: [0008] 00 00 00 00 00 00 00 00
+platform caam_sm: [0016] 00 00 00 00 00 00 00 00
+platform caam_sm: [0024] 00 00 00 00 00 00 00 00
+platform caam_sm: [0032] 00 00 00 00 00 00 00 00
+platform caam_sm: [0040] 00 00 00 00 00 00 00 00
+platform caam_sm: [0048] 00 00 00 00 00 00 00 00
+platform caam_sm: [0056] 00 00 00 00 00 00 00 00
+platform caam_sm: [0064] 00 00 00 00 00 00 00 00
+platform caam_sm: [0072] 00 00 00 00 00 00 00 00
+platform caam_sm: [0080] 00 00 00 00 00 00 00 00
+platform caam_sm: [0088] 00 00 00 00 00 00 00 00
+platform caam_sm: 128-bit unwritten blob:
+platform caam_sm: [0000] 00 00 00 00 00 00 00 00
+platform caam_sm: [0008] 00 00 00 00 00 00 00 00
+usb 1-1.2: new low-speed USB device number 3 using ci_hdrc
+platform caam_sm: [0016] 00 00 00 00 00 00 00 00
+platform caam_sm: [0024] 00 00 00 00 00 00 00 00
+platform caam_sm: [0032] 00 00 00 00 00 00 00 00
+platform caam_sm: [0040] 00 00 00 00 00 00 00 00
+platform caam_sm: [0048] 00 00 00 00 00 00 00 00
+platform caam_sm: [0056] 00 00 00 00 00 00 00 00
+platform caam_sm: [0064] 00 00 00 00 00 00 00 00
+platform caam_sm: [0072] 00 00 00 00 00 00 00 00
+platform caam_sm: [0080] 00 00 00 00 00 00 00 00
+platform caam_sm: [0088] 00 00 00 00 00 00 00 00
+platform caam_sm: 196-bit unwritten blob:
+platform caam_sm: [0000] 00 00 00 00 00 00 00 00
+platform caam_sm: [0008] 00 00 00 00 00 00 00 00
+platform caam_sm: [0016] 00 00 00 00 00 00 00 00
+platform caam_sm: [0024] 00 00 00 00 00 00 00 00
+platform caam_sm: [0032] 00 00 00 00 00 00 00 00
+platform caam_sm: [0040] 00 00 00 00 00 00 00 00
+platform caam_sm: [0048] 00 00 00 00 00 00 00 00
+platform caam_sm: [0056] 00 00 00 00 00 00 00 00
+platform caam_sm: [0064] 00 00 00 00 00 00 00 00
+platform caam_sm: [0072] 00 00 00 00 00 00 00 00
+platform caam_sm: [0080] 00 00 00 00 00 00 00 00
+platform caam_sm: [0088] 00 00 00 00 00 00 00 00
+platform caam_sm: 256-bit unwritten blob:
+platform caam_sm: [0000] 00 00 00 00 00 00 00 00
+platform caam_sm: [0008] 00 00 00 00 00 00 00 00
+platform caam_sm: [0016] 00 00 00 00 00 00 00 00
+platform caam_sm: [0024] 00 00 00 00 00 00 00 00
+platform caam_sm: [0032] 00 00 00 00 00 00 00 00
+platform caam_sm: [0040] 00 00 00 00 00 00 00 00
+platform caam_sm: [0048] 00 00 00 00 00 00 00 00
+platform caam_sm: [0056] 00 00 00 00 00 00 00 00
+platform caam_sm: [0064] 00 00 00 00 00 00 00 00
+platform caam_sm: [0072] 00 00 00 00 00 00 00 00
+platform caam_sm: [0080] 00 00 00 00 00 00 00 00
+usb 1-1.2: New USB device found, idVendor=413c, idProduct=301a
+usb 1-1.2: New USB device strings: Mfr=1, Product=2, SerialNumber=0
+usb 1-1.2: Product: Dell MS116 USB Optical Mouse
+usb 1-1.2: Manufacturer: PixArt
+platform caam_sm: [0088] 00 00 00 00 00 00 00 00
+platform caam_sm: 64-bit black key in blob:
+platform caam_sm: [0000] ce 58 1b 99 a4 2f 6b 17
+platform caam_sm: [0008] fe 95 cb f6 04 41 9f 45
+platform caam_sm: [0016] 86 fa f1 42 30 cd 5c 4c
+platform caam_sm: [0024] ea 95 f6 af e4 1f c1 ef
+platform caam_sm: [0032] 16 41 22 c2 42 fa 69 e1
+platform caam_sm: [0040] 4c a8 70 5d 40 36 77 40
+platform caam_sm: [0048] 80 90 8d fc 89 59 62 2c
+platform caam_sm: [0056] 00 00 00 00 00 00 00 00
+platform caam_sm: [0064] 00 00 00 00 00 00 00 00
+platform caam_sm: [0072] 00 00 00 00 00 00 00 00
+platform caam_sm: [0080] 00 00 00 00 00 00 00 00
+platform caam_sm: [0088] 00 00 00 00 00 00 00 00
+platform caam_sm: 128-bit black key in blob:
+platform caam_sm: [0000] 0e f5 f9 29 d9 6a d1 76
+platform caam_sm: [0008] 2e 8b 78 4b b0 54 97 86
+platform caam_sm: [0016] 8f e9 15 23 fb 6a ca 7e
+platform caam_sm: [0024] c2 b8 9d be d3 94 c6 21
+platform caam_sm: [0032] 52 63 bc 2e 1c d9 fa 3c
+platform caam_sm: [0040] 41 0a 72 96 61 1b 9d fb
+platform caam_sm: [0048] 20 3f a1 1c e5 35 5b f5
+platform caam_sm: [0056] 7c d8 19 f6 bc 93 af 63
+platform caam_sm: [0064] 00 00 00 00 00 00 00 00
+platform caam_sm: [0072] 00 00 00 00 00 00 00 00
+platform caam_sm: [0080] 00 00 00 00 00 00 00 00
+platform caam_sm: [0088] 00 00 00 00 00 00 00 00
+platform caam_sm: 192-bit black key in blob:
+platform caam_sm: [0000] 1e bb 4b 40 eb 35 7e 4d
+platform caam_sm: [0008] 3a 17 b0 8e 7d 23 2a f8
+platform caam_sm: [0016] fe c8 46 22 76 25 06 09
+platform caam_sm: [0024] a8 47 09 29 5c 50 6f 98
+platform caam_sm: [0032] d2 30 37 7f aa b5 59 79
+platform caam_sm: [0040] d7 58 c6 1b e2 90 05 84
+platform caam_sm: [0048] dd 0c ce 1b 83 f6 d8 f2
+platform caam_sm: [0056] ef 6c 12 98 90 6f d0 f6
+platform caam_sm: [0064] 5e f8 52 5b 54 44 63 eb
+platform caam_sm: [0072] 00 00 00 00 00 00 00 00
+platform caam_sm: [0080] 00 00 00 00 00 00 00 00
+platform caam_sm: [0088] 00 00 00 00 00 00 00 00
+platform caam_sm: 256-bit black key in blob:
+platform caam_sm: [0000] 1e 24 a4 95 e3 60 f9 b3
+platform caam_sm: [0008] 3d a2 b7 60 8d f0 9f 97
+platform caam_sm: [0016] 94 f6 85 71 31 0c b1 83
+platform caam_sm: [0024] df 8c ff 61 0d 1e 03 b7
+platform caam_sm: [0032] ca 4b 02 73 3a e2 65 4d
+platform caam_sm: [0040] 7a 7f 25 4e 15 30 7a a9
+platform caam_sm: [0048] ea f6 ee 7a 17 df f1 a8
+platform caam_sm: [0056] 76 3e 52 f7 ca 41 5e 46
+platform caam_sm: [0064] 41 04 ef 2d b3 b2 27 00
+platform caam_sm: [0072] ce 77 f1 af df 9f 51 eb
+platform caam_sm: [0080] 00 00 00 00 00 00 00 00
+platform caam_sm: [0088] 00 00 00 00 00 00 00 00
+platform caam_sm: restored 64-bit black key:
+platform caam_sm: [0000] 53 94 ee cf dd 27 de 00
+platform caam_sm: [0008] 1b 37 44 0a fe 3c 8e 20
+platform caam_sm: restored 128-bit black key:
+platform caam_sm: [0000] ee be 77 e0 e3 88 45 95
+platform caam_sm: [0008] 83 c0 9c 81 03 2b 58 da
+platform caam_sm: restored 192-bit black key:
+platform caam_sm: [0000] 5b d4 8b 66 ea aa 01 2f
+platform caam_sm: [0008] 42 e8 70 1a 8b 5d de 59
+platform caam_sm: [0016] a3 cb b6 c0 c5 d8 b0 19
+platform caam_sm: [0024] 4a 42 a5 4f 9f b8 63 f3
+platform caam_sm: restored 256-bit black key:
+platform caam_sm: [0000] ca bb 76 7c 9d c4 bb 1d
+platform caam_sm: [0008] 18 45 bf a3 0f 83 0d 01
+platform caam_sm: [0016] 0e e7 a1 f0 90 9f 85 97
+platform caam_sm: [0024] 6c d8 5d 33 b7 dd 8a d7
+snvs-secvio 20cc000.caam-snvs: can't get snvs clock
+snvs-secvio 20cc000.caam-snvs: violation handlers armed - non-secure state
+hidraw: raw HID events driver (C) Jiri Kosina
+input: PixArt Dell MS116 USB Optical Mouse as /devices/soc0/soc/2100000.aips-bus/2184200.usb/ci_hdrc.1/usb1/1-1/1-1.2/1-1.2:1.0/0003:413C:301A.0001/input/input1
+hid-generic 0003:413C:301A.0001: input,hidraw0: USB HID v1.11 Mouse [PixArt Dell MS116 USB Optical Mouse] on usb-ci_hdrc.1-1.2/input0
+usbcore: registered new interface driver usbhid
+usbhid: USB HID core driver
+ashmem: initialized
+usbcore: registered new interface driver snd-usb-audio
+sgtl5000 2-000a: sgtl5000 revision 0x11
+fsl-ssi-dai 2028000.ssi: No cache defaults, reading back from HW
+imx-sgtl5000 sound: sgtl5000 <-> 2028000.ssi mapping ok
+imx-spdif sound-spdif: snd-soc-dummy-dai <-> 2004000.spdif mapping ok
+imx-audio-hdmi sound-hdmi: hdmi-hifi.0 <-> soc:hdmi_audio@00120000 mapping ok
+NET: Registered protocol family 26
+u32 classifier
+    Actions configured
+Netfilter messages via NETLINK v0.30.
+nf_conntrack version 0.5.0 (16384 buckets, 65536 max)
+ctnetlink v0.93: registering with nfnetlink.
+xt_time: kernel timezone is -0000
+ip_tables: (C) 2000-2006 Netfilter Core Team
+arp_tables: arp_tables: (C) 2002 David S. Miller
+Initializing XFRM netlink socket
+NET: Registered protocol family 10
+mip6: Mobile IPv6
+ip6_tables: (C) 2000-2006 Netfilter Core Team
+sit: IPv6, IPv4 and MPLS over IPv4 tunneling driver
+NET: Registered protocol family 17
+NET: Registered protocol family 15
+bridge: filtering via arp/ip/ip6tables is no longer available by default. Update your scripts to load br_netfilter if you need this.
+can: controller area network core (rev 20120528 abi 9)
+NET: Registered protocol family 29
+can: raw protocol (rev 20120528)
+can: broadcast manager protocol (rev 20161123 t)
+can: netlink gateway (rev 20130117) max_hops=1
+Bluetooth: RFCOMM TTY layer initialized
+Bluetooth: RFCOMM socket layer initialized
+Bluetooth: RFCOMM ver 1.11
+Bluetooth: BNEP (Ethernet Emulation) ver 1.3
+Bluetooth: BNEP filters: protocol multicast
+Bluetooth: BNEP socket layer initialized
+Bluetooth: HIDP (Human Interface Emulation) ver 1.2
+Bluetooth: HIDP socket layer initialized
+8021q: 802.1Q VLAN Support v1.8
+Key type dns_resolver registered
+cpu cpu0: Registered imx6q-cpufreq
+registered taskstats version 1
+imx_thermal 2000000.aips-bus:tempmon: Industrial CPU temperature grade - max:105C critical:100C passive:95C
+dhd_module_init in
+input: gpio-keys as /devices/soc0/gpio-keys/input/input2
+snvs_rtc 20cc000.snvs:snvs-rtc-lp: setting system clock to 1970-01-01 00:04:06 UTC (246)
+usb_otg_vbus: disabling
+ALSA device list:
+  #0: imx6q-apalis-sgtl5000
+  #1: imx-spdif
+  #2: imx-hdmi-soc
+Freeing unused kernel memory: 1024K
+init: init first stage started!
+SELinux:  Permission validate_trans in class security not defined in policy.
+SELinux:  Class cap_userns not defined in policy.
+SELinux:  Class cap2_userns not defined in policy.
+SELinux: the above unknown classes and permissions will be denied
+audit: type=1403 audit(246.630:2): policy loaded auid=4294967295 ses=4294967295
+init: (Initializing SELinux non-enforcing took 0.11s.)
+init: init second stage started!
+init: Running restorecon...
+init: waitpid failed: No child processes
+init: (Loading properties from /default.prop took 0.00s.)
+init: (Parsing /init.environ.rc took 0.00s.)
+init: (Parsing /init.usb.rc took 0.00s.)
+init: (Parsing init.freescale.usb.rc took 0.00s.)
+init: (Parsing init.freescale.i.MX6Q.rc took 0.00s.)
+init: (Parsing init.freescale.emmc.rc took 0.00s.)
+init: (Parsing /init.freescale.rc took 0.02s.)
+ueventd: ueventd started!
+ueventd: Coldboot took 0.44s.
+Console: switching to colour dummy device 80x30
+watchdogd: started (interval 10, margin 20)!
+EXT4-fs (mmcblk0p3): mounted filesystem with ordered data mode. Opts: barrier=1
+EXT4-fs (mmcblk0p10): Ignoring removed nomblk_io_submit option
+EXT4-fs (mmcblk0p10): mounted filesystem with ordered data mode. Opts: nomblk_io_submit,noauto_da_alloc,errors=panic
+EXT4-fs (mmcblk0p4): Ignoring removed nomblk_io_submit option
+EXT4-fs (mmcblk0p4): mounted filesystem with ordered data mode. Opts: nomblk_io_submit
+EXT4-fs (mmcblk0p5): mounted filesystem with ordered data mode. Opts: (null)
+file system registered
+using random self ethernet address
+using random host ethernet address
+zram0: detected capacity change from 0 to 314572800
+logd.auditd: start
+logd.klogd: 8323785666
+Adding 307196k swap on /dev/block/zram0.  Priority:-1 extents:1 across:307196k SS
+binder: 255:255 transaction failed 29189, size 0-0
+type=1400 audit(249.730:3): avc: denied { entrypoint } for pid=261 comm="init" path="/system/bin/can-config.sh" dev="mmcblk0p3" ino=254 scontext=u:r:obd:s0 tcontext=u:object_r:system_file:s0 tclass=file permissive=1
+type=1400 audit(249.740:4): avc: denied { getattr } for pid=262 comm="obd" path="/vendor" dev="rootfs" ino=6500 scontext=u:r:obd:s0 tcontext=u:object_r:rootfs:s0 tclass=lnk_file permissive=1
+type=1400 audit(249.760:5): avc: denied { read execute } for pid=261 comm="can-config.sh" path="/system/bin/sh" dev="mmcblk0p3" ino=441 scontext=u:r:obd:s0 tcontext=u:object_r:shell_exec:s0 tclass=file permissive=1
+logd.daemon: reinit
+type=1400 audit(249.760:6): avc: denied { getattr } for pid=261 comm="can-config.sh" path="/system/bin/sh" dev="mmcblk0p3" ino=441 scontext=u:r:obd:s0 tcontext=u:object_r:shell_exec:s0 tclass=file permissive=1
+toradex_apalis6q:/ # type=1400 audit(249.820:7): avc: denied { execute_no_trans } for pid=274 comm="can-config.sh" path="/system/bin/ip" dev="mmcblk0p3" ino=333 scontext=u:r:obd:s0 tcontext=u:object_r:system_file:s0 tclass=file permissive=1
+type=1400 audit(249.840:8): avc: denied { create } for pid=262 comm="obd" scontext=u:r:obd:s0 tcontext=u:r:obd:s0 tclass=socket permissive=1
+type=1400 audit(249.840:9): avc: denied { ioctl } for pid=262 comm="obd" path="socket:[8281]" dev="sockfs" ino=8281 ioctlcmd=0x8933 scontext=u:r:obd:s0 tcontext=u:r:obd:s0 tclass=socket permissive=1
+IPv6: ADDRCONF(NETDEV_CHANGE): can0: link becomes ready
+healthd: No battery devices found
+ERROR: v4l2 capture: slave not found! V4L2_CID_HUE
+ERROR: v4l2 capture: slave not found! V4L2_CID_HUE
+Aravinth:fb_match_mode 
+Aravinth:fb_var_to_videomode 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth: mxc_hdmi_phy_init 
+Aravinth:fb_var_to_videomode 
+Aravinth:fb_add_videomode 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+init: Starting service 'bootanim'...
+capability: warning: `main' uses 32-bit capabilities (legacy support in use)
+type=1400 audit(259.070:35): avc: denied { write } for pid=262 comm="obd" path="socket:[8281]" dev="sockfs" ino=8281 scontext=u:r:obd:s0 tcontext=u:r:obd:s0 tclass=socket permissive=1
+init: write_file: Unable to open '/sys/devices/system/cpu/cpufreq/interactive/timer_rate': No such file or directory
+init: write_file: Unable to open '/sys/devices/system/cpu/cpufreq/interactive/min_sample_time': No such file or directory
+init: write_file: Unable to open '/sys/devices/system/cpu/cpufreq/interactive/go_hispeed_load': No such file or directory
+
+toradex_apalis6q:/ # 
+toradex_apalis6q:/ # 
+toradex_apalis6q:/ # 
+toradex_apalis6q:/ # 
+toradex_apalis6q:/ # 
+toradex_apalis6q:/ # 
+toradex_apalis6q:/ # 
+toradex_apalis6q:/ # 
+toradex_apalis6q:/ # 
+toradex_apalis6q:/ # dmesg | init: write_file: Unable to open '/proc/sys/vm/extra_free_kbytes': No such file or directory
+grep init: write_file: Unable to write to '/config/usb_gadget/g1/UDC': No such device
+acc_open
+acc_release
+Micrel KSZ9031 Gigabit PHY 2188000.ethernet-1:07: attached PHY driver [Micrel KSZ9031 Gigabit PHY] (mii_bus:phy_addr=2188000.ethernet-1:07, irq=120)
+IPv6: ADDRCONF(NETDEV_UP): eth0: link is not ready
+random: crng init done
+sw_edid
+i2c i2c-2: of_i2c: invalid reg on /soc/aips-bus@02100000/i2c@021a4000/i2c_sw_edid
+i2c i2c-2: Failed to create I2C device for /soc/aips-bus@02100000/i2c@021a4000/i2c_sw_edid
+Aravinth: i2c_adap_sw_edid_init 
+toradex_apalis6q:/ # 
+toradex_apalis6q:/ # 
+toradex_apalis6q:/ # 
+toradex_apalis6q:/ # type=1400 audit(266.890:36): avc: denied { write } for pid=262 comm="obd" path="socket:[8281]" dev="sockfs" ino=8281 scontext=u:r:obd:s0 tcontext=u:r:obd:s0 tclass=socket permissive=1
+
+toradex_apalis6q:/ # 
+toradex_apalis6q:/ # 
+toradex_apalis6q:/ # 
+toradex_apalis6q:/ # toradex_apalis6q:/ # dmesg | grep sw_edid                                      
+i2c i2c-2: of_i2c: invalid reg on /soc/aips-bus@02100000/i2c@021a4000/i2c_sw_edid
+i2c i2c-2: Failed to create I2C device for /soc/aips-bus@02100000/i2c@021a4000/i2c_sw_edid
+Aravinth: i2c_adap_sw_edid_init 
+toradex_apalis6q:/ # 
+toradex_apalis6q:/ # 
+toradex_apalis6q:/ # 
+toradex_apalis6q:/ # init: Service 'bootanim' (pid 355) exited with status 0
+init: Starting service 'exec 3 (/system/bin/bootstat)'...
+init: Service 'exec 3 (/system/bin/bootstat)' (pid 952) exited with status 0
+init: Starting service 'exec 4 (/system/bin/bootstat)'...
+init: Service 'exec 4 (/system/bin/bootstat)' (pid 963) exited with status 0
+init: Starting service 'exec 5 (/system/bin/bootstat)'...
+type=1400 audit(271.320:37): avc: denied { write } for pid=262 comm="obd" path="socket:[8281]" dev="sockfs" ino=8281 scontext=u:r:obd:s0 tcontext=u:r:obd:s0 tclass=socket permissive=1
+init: Service 'exec 5 (/system/bin/bootstat)' (pid 965) exited with status 0
+init: Starting service 'exec 6 (/system/bin/bootstat)'...
+init: Service 'exec 6 (/system/bin/bootstat)' (pid 966) exited with status 0
+type=1400 audit(276.260:38): avc: denied { write } for pid=1206 comm="Thread-2" name="vcan" dev="tmpfs" ino=8283 scontext=u:r:untrusted_app:s0:c512,c768 tcontext=u:object_r:socket_device:s0 tclass=sock_file permissive=1
+type=1400 audit(276.260:39): avc: denied { connectto } for pid=1206 comm="Thread-2" path="/dev/socket/vcan" scontext=u:r:untrusted_app:s0:c512,c768 tcontext=u:r:obd:s0 tclass=unix_stream_socket permissive=1
+
+toradex_apalis6q:/ # 
+toradex_apalis6q:/ # 
+toradex_apalis6q:/ # 
+
+U-Boot 2017.03-00002-gebf9dc2527 (Jan 29 2018 - 17:39:17 +0530)
+
+CPU:   Freescale i.MX6Q rev1.5 at 792 MHz
+Reset cause: POR
+I2C:   ready
+DRAM:  2 GiB
+PMIC: device id: 0x10, revision id: 0x21
+PMIC: programmed
+MMC:   FSL_SDHC: 0, FSL_SDHC: 1, FSL_SDHC: 2
+Unable to allocate framebuffer memory
+In:    serial
+Out:   serial
+Err:   serial
+Model: Toradex Apalis iMX6 Quad 2GB IT V1.1C, Serial# 05146387
+flash target is MMC:0
+Net:   using PHY at 7
+FEC [PRIME]
+Fastboot: Normal
+Hit any key to stop autoboot:  1  0 
+Apalis iMX6 # bmode usb
+resetting ...
+
+
+U-Boot 2017.03-dirty (Dec 14 2017 - 17:25:07 +0530)
+
+CPU:   Freescale i.MX6Q rev1.5 at 792 MHz
+Reset cause: WDOG
+I2C:   ready
+DRAM:  2 GiB
+PMIC: device id: 0x10, revision id: 0x21
+PMIC: programmed
+MMC:   FSL_SDHC: 0, FSL_SDHC: 1, FSL_SDHC: 2
+auto-detected panel HDMI
+Aravinth: Display: HDMI (1024x768)
+In:    serial
+Out:   serial
+Err:   serial
+Model: Toradex Apalis iMX6 Quad 2GB IT V1.1C, Serial# 05146387
+Net:   using PHY at 7
+FEC [PRIME]
+Boot from USB for mfgtools
+Use default environment for 				 mfgtools
+Run bootcmd_mfg: run mfgtool_args;bootz 0x12000000 0x12C00000 0x18000000;
+Hit any key to stop autoboot:  0 
+Kernel image @ 0x12000000 [ 0x000000 - 0x5f06e8 ]
+## Loading init Ramdisk from Legacy Image at 12c00000 ...
+   Image Name:   fsl-image-mfgtool-initramfs-imx6
+   Image Type:   ARM Linux RAMDisk Image (gzip compressed)
+   Data Size:    8597466 Bytes = 8.2 MiB
+   Load Address: 00000000
+   Entry Point:  00000000
+   Verifying Checksum ... OK
+## Flattened Device Tree blob at 18000000
+   Booting using the fdt blob at 0x18000000
+   Using Device Tree in place at 18000000, end 180102d8
+
+Starting kernel ...
+
+Booting Linux on physical CPU 0x0
+Linux version 4.9.67+ (embadmin@ubuntu) (gcc version 4.9 20150123 (prerelease) (GCC) ) #9 SMP PREEMPT Fri Dec 22 16:56:14 IST 2017
+CPU: ARMv7 Processor [412fc09a] revision 10 (ARMv7), cr=10c5387d
+CPU: PIPT / VIPT nonaliasing data cache, VIPT aliasing instruction cache
+OF: fdt:Machine model: Aravinth Toradex Apalis iMX6Q/D Module on Ixora V1.1 Carrier Board
+cma: Reserved 320 MiB at 0x6c000000
+Memory policy: Data cache writealloc
+percpu: Embedded 14 pages/cpu @daef7000 s25728 r8192 d23424 u57344
+Built 1 zonelists in Zone order, mobility grouping on.  Total pages: 520704
+Kernel command line: console=ttymxc0,115200 rdinit=/linuxrc g_mass_storage.stall=0 g_mass_storage.removable=1 g_mass_storage.file=/fat g_mass_storage.ro=1 g_mass_storage.idVendor=0x066F g_mass_storage.idProduct=0x37FF g_mass_storage.iSerialNumber= enable_wait_mode=off
+PID hash table entries: 4096 (order: 2, 16384 bytes)
+Dentry cache hash table entries: 262144 (order: 8, 1048576 bytes)
+Inode-cache hash table entries: 131072 (order: 7, 524288 bytes)
+Memory: 1728936K/2097152K available (8192K kernel code, 334K rwdata, 2548K rodata, 1024K init, 448K bss, 40536K reserved, 327680K cma-reserved, 262144K highmem)
+Virtual kernel memory layout:
+    vector  : 0xffff0000 - 0xffff1000   (   4 kB)
+    fixmap  : 0xffc00000 - 0xfff00000   (3072 kB)
+    vmalloc : 0xf0800000 - 0xff800000   ( 240 MB)
+    lowmem  : 0x80000000 - 0xf0000000   (1792 MB)
+    pkmap   : 0x7fe00000 - 0x80000000   (   2 MB)
+    modules : 0x7f000000 - 0x7fe00000   (  14 MB)
+      .text : 0x80008000 - 0x80900000   (9184 kB)
+      .init : 0x80c00000 - 0x80d00000   (1024 kB)
+      .data : 0x80d00000 - 0x80d539c0   ( 335 kB)
+       .bss : 0x80d539c0 - 0x80dc3aac   ( 449 kB)
+SLUB: HWalign=64, Order=0-3, MinObjects=0, CPUs=4, Nodes=1
+Preemptible hierarchical RCU implementation.
+	Build-time adjustment of leaf fanout to 32.
+NR_IRQS:16 nr_irqs:16 16
+L2C-310 errata 752271 769419 enabled
+L2C-310 enabling early BRESP for Cortex-A9
+L2C-310 full line of zeros enabled for Cortex-A9
+L2C-310 ID prefetch enabled, offset 16 lines
+L2C-310 dynamic clock gating enabled, standby mode enabled
+L2C-310 cache controller enabled, 16 ways, 1024 kB
+L2C-310: CACHE_ID 0x410000c7, AUX_CTRL 0x76470001
+Switching to timer-based delay loop, resolution 333ns
+sched_clock: 32 bits at 3000kHz, resolution 333ns, wraps every 715827882841ns
+clocksource: mxc_timer1: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 637086815595 ns
+Console: colour dummy device 80x30
+Calibrating delay loop (skipped), value calculated using timer frequency.. 6.00 BogoMIPS (lpj=30000)
+pid_max: default: 32768 minimum: 301
+Mount-cache hash table entries: 4096 (order: 2, 16384 bytes)
+Mountpoint-cache hash table entries: 4096 (order: 2, 16384 bytes)
+CPU: Testing write buffer coherency: ok
+CPU0: update cpu_capacity 1024
+CPU0: thread -1, cpu 0, socket 0, mpidr 80000000
+Setting up static identity map for 0x10100000 - 0x10100070
+CPU1: update cpu_capacity 1024
+CPU1: thread -1, cpu 1, socket 0, mpidr 80000001
+CPU2: update cpu_capacity 1024
+CPU2: thread -1, cpu 2, socket 0, mpidr 80000002
+CPU3: update cpu_capacity 1024
+CPU3: thread -1, cpu 3, socket 0, mpidr 80000003
+Brought up 4 CPUs
+SMP: Total of 4 processors activated (24.00 BogoMIPS).
+CPU: All CPU(s) started in SVC mode.
+devtmpfs: initialized
+VFP support v0.3: implementor 41 architecture 3 part 30 variant 9 rev 4
+clocksource: jiffies: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 19112604462750000 ns
+futex hash table entries: 1024 (order: 4, 65536 bytes)
+pinctrl core: initialized pinctrl subsystem
+NET: Registered protocol family 16
+DMA: preallocated 256 KiB pool for atomic coherent allocations
+cpuidle: using governor menu
+CPU identified as i.MX6Q, silicon rev 1.5
+hw-breakpoint: found 5 (+1 reserved) breakpoint and 1 watchpoint registers.
+hw-breakpoint: maximum watchpoint size is 4 bytes.
+imx6q-pinctrl 20e0000.iomuxc: initialized IMX pinctrl driver
+imx-gpc 20dc000.gpc: no fsl,ldo-bypass found!
+imx-gpc 20dc000.gpc: Registered imx-gpc
+mxs-dma 110000.dma-apbh: initialized
+usb_host_vbus: supplied by usb_host_vbus_hub
+SCSI subsystem initialized
+usbcore: registered new interface driver usbfs
+usbcore: registered new interface driver hub
+usbcore: registered new device driver usb
+2000000.aips-bus:usbphy_nop1 supply vcc not found, using dummy regulator
+2000000.aips-bus:usbphy_nop2 supply vcc not found, using dummy regulator
+i2c i2c-1: IMX I2C adapter registered
+i2c i2c-1: can't use DMA, using PIO instead.
+stmpe-i2c 2-0041: stmpe811 detected, chip id: 0x811
+i2c i2c-2: IMX I2C adapter registered
+i2c i2c-2: can't use DMA, using PIO instead.
+i2c i2c-3: IMX I2C adapter registered
+i2c i2c-3: can't use DMA, using PIO instead.
+Linux video capture interface: v2.00
+pps_core: LinuxPPS API ver. 1 registered
+pps_core: Software ver. 5.3.6 - Copyright 2005-2007 Rodolfo Giometti <giometti@linux.it>
+PTP clock support registered
+imx-ipuv3 2400000.ipu: IPU DMFC NORMAL mode: 1(0~1), 5B(4,5), 5F(6,7)
+imx-ipuv3 2800000.ipu: IPU DMFC NORMAL mode: 1(0~1), 5B(4,5), 5F(6,7)
+imx rpmsg driver is registered.
+Advanced Linux Sound Architecture Driver Initialized.
+clocksource: Switched to clocksource mxc_timer1
+VFS: Disk quotas dquot_6.6.0
+VFS: Dquot-cache hash table entries: 1024 (order 0, 4096 bytes)
+NET: Registered protocol family 2
+TCP established hash table entries: 16384 (order: 4, 65536 bytes)
+TCP bind hash table entries: 16384 (order: 5, 131072 bytes)
+TCP: Hash tables configured (established 16384 bind 16384)
+UDP hash table entries: 1024 (order: 3, 32768 bytes)
+UDP-Lite hash table entries: 1024 (order: 3, 32768 bytes)
+NET: Registered protocol family 1
+RPC: Registered named UNIX socket transport module.
+RPC: Registered udp transport module.
+RPC: Registered tcp transport module.
+RPC: Registered tcp NFSv4.1 backchannel transport module.
+Trying to unpack rootfs image as initramfs...
+Freeing initrd memory: 8400K
+hw perfevents: enabled with armv7_cortex_a9 PMU driver, 7 counters available
+Bus freq driver module loaded
+workingset: timestamp_bits=30 max_order=19 bucket_order=0
+NFS: Registering the id_resolver key type
+Key type id_resolver registered
+Key type id_legacy registered
+jffs2: version 2.2. (NAND) Â© 2001-2006 Red Hat, Inc.
+fuse init (API version 7.26)
+bounce: pool size: 64 pages
+io scheduler noop registered
+io scheduler deadline registered
+io scheduler cfq registered (default)
+backlight supply power not found, using dummy regulator
+Aravinth: mxcfb_probe ---->
+mxc_sdc_fb fb@0: NO mxc display driver found!
+Aravinth: mxcfb_probe ---->
+mxc_sdc_fb fb@1: NO mxc display driver found!
+Aravinth: mxcfb_probe ---->
+mxc_sdc_fb fb@2: registered mxc display driver lcd
+Console: switching to colour frame buffer device 100x30
+Aravinth: mxcfb_probe Done ---->
+Aravinth: mxcfb_probe ---->
+mxc_sdc_fb fb@3: NO mxc display driver found!
+imx-sdma 20ec000.sdma: no iram assigned, using external mem
+imx-sdma 20ec000.sdma: loaded firmware 3.3
+pfuze100-regulator 2-0008: Full layer: 2, Metal layer: 1
+pfuze100-regulator 2-0008: FAB: 0, FIN: 0
+pfuze100-regulator 2-0008: pfuze100 found.
+2020000.serial: ttymxc0 at MMIO 0x2020000 (irq = 29, base_baud = 5000000) is a IMX
+console [ttymxc0] enabled
+21e8000.serial: ttymxc1 at MMIO 0x21e8000 (irq = 78, base_baud = 5000000) is a IMX
+21f0000.serial: ttymxc3 at MMIO 0x21f0000 (irq = 79, base_baud = 5000000) is a IMX
+21f4000.serial: ttymxc4 at MMIO 0x21f4000 (irq = 80, base_baud = 5000000) is a IMX
+imx sema4 driver is registered.
+[drm] Initialized
+[drm] Initialized vivante 1.0.0 20120216 on minor 0
+brd: module loaded
+loop: module loaded
+ahci-imx 2200000.sata: fsl,transmit-level-mV not specified, using 00000024
+ahci-imx 2200000.sata: fsl,transmit-boost-mdB not specified, using 00000480
+ahci-imx 2200000.sata: fsl,transmit-atten-16ths not specified, using 00002000
+ahci-imx 2200000.sata: fsl,receive-eq-mdB not specified, using 05000000
+ahci-imx 2200000.sata: SSS flag set, parallel bus scan disabled
+ahci-imx 2200000.sata: AHCI 0001.0300 32 slots 1 ports 3 Gbps 0x1 impl platform mode
+ahci-imx 2200000.sata: flags: ncq sntf stag pm led clo only pmp pio slum part ccc apst 
+scsi host0: ahci-imx
+ata1: SATA max UDMA/133 mmio [mem 0x02200000-0x02203fff] port 0x100 irq 87
+spi_imx 2008000.ecspi: probed
+libphy: Fixed MDIO Bus: probed
+2188000.ethernet supply phy not found, using dummy regulator
+pps pps0: new PPS source ptp0
+libphy: fec_enet_mii_bus: probed
+fec 2188000.ethernet eth0: registered PHC device 0
+ehci_hcd: USB 2.0 'Enhanced' Host Controller (EHCI) Driver
+ehci-mxc: Freescale On-Chip EHCI Host driver
+usbcore: registered new interface driver usb-storage
+2184800.usbmisc supply vbus-wakeup not found, using dummy regulator
+ci_hdrc ci_hdrc.1: EHCI Host Controller
+ci_hdrc ci_hdrc.1: new USB bus registered, assigned bus number 1
+ci_hdrc ci_hdrc.1: USB 2.0 started, EHCI 1.00
+hub 1-0:1.0: USB hub found
+hub 1-0:1.0: 1 port detected
+Mass Storage Function, version: 2009/09/11
+LUN: removable file: (no medium)
+LUN: removable read only file: /fat
+Number of LUNs=1
+g_mass_storage gadget: Mass Storage Gadget, version: 2009/09/11
+g_mass_storage gadget: g_mass_storage ready
+mousedev: PS/2 mouse device common for all mice
+input: stmpe-ts as /devices/soc0/soc/2100000.aips-bus/21a4000.i2c/i2c-2/2-0041/stmpe-ts/input/input0
+snvs_rtc 20cc000.snvs:snvs-rtc-lp: rtc core: registered 20cc000.snvs:snvs-r as rtc0
+i2c /dev entries driver
+IR NEC protocol handler initialized
+IR RC5(x/sz) protocol handler initialized
+IR RC6 protocol handler initialized
+IR JVC protocol handler initialized
+IR Sony protocol handler initialized
+IR SANYO protocol handler initialized
+IR Sharp protocol handler initialized
+IR MCE Keyboard/mouse protocol handler initialized
+IR XMP protocol handler initialized
+imx2-wdt 20bc000.wdog: timeout 60 sec (nowayout=0)
+sdhci: Secure Digital Host Controller Interface driver
+sdhci: Copyright(c) Pierre Ossman
+sdhci-pltfm: SDHCI platform and OF driver helper
+sdhci-esdhc-imx 2190000.usdhc: could not get ultra high speed state, work on normal mode
+sdhci-esdhc-imx 2190000.usdhc: Got CD GPIO
+mmc1: SDHCI controller on 2190000.usdhc [2190000.usdhc] using ADMA
+sdhci-esdhc-imx 2198000.usdhc: could not get ultra high speed state, work on normal mode
+ata1: SATA link down (SStatus 0 SControl 300)
+ahci-imx 2200000.sata: no device found, disabling link.
+ahci-imx 2200000.sata: pass ahci_imx..hotplug=1 to enable hotplug
+g_mass_storage gadget: high-speed config #1: Linux File-Backed Storage
+random: fast init done
+mmc0: SDHCI controller on 2198000.usdhc [2198000.usdhc] using ADMA
+mxc_vpu 2040000.vpu_fsl: VPU initialized
+mxc_vdoa 21e4000.vdoa: i.MX Video Data Order Adapter(VDOA) driver probed
+usbcore: registered new interface driver usbhid
+usbhid: USB HID core driver
+sgtl5000 2-000a: sgtl5000 revision 0x11
+fsl-ssi-dai 2028000.ssi: No cache defaults, reading back from HW
+usb 1-1: new high-speed USB device number 2 using ci_hdrc
+mmc0: new DDR MMC card at address 0001
+mmcblk0: mmc0:0001 Q2J54A 3.59 GiB 
+mmcblk0boot0: mmc0:0001 Q2J54A partition 1 16.0 MiB
+mmcblk0boot1: mmc0:0001 Q2J54A partition 2 16.0 MiB
+Alternate GPT is invalid, using primary GPT.
+ mmcblk0: p1 p2 p3 p4 p5 p6 p7 p8 p9 p10 p11
+imx-sgtl5000 sound: sgtl5000 <-> 2028000.ssi mapping ok
+imx-spdif sound-spdif: snd-soc-dummy-dai <-> 2004000.spdif mapping ok
+NET: Registered protocol family 10
+sit: IPv6, IPv4 and MPLS over IPv4 tunneling driver
+NET: Registered protocol family 17
+Key type dns_resolver registered
+cpu cpu0: Registered imx6q-cpufreq
+Registering SWP/SWPB emulation handler
+hub 1-1:1.0: USB hub found
+hub 1-1:1.0: 4 ports detected
+imx_thermal 2000000.aips-bus:tempmon: Industrial CPU temperature grade - max:105C critical:100C passive:95C
+input: gpio-keys as /devices/soc0/gpio-keys/input/input1
+snvs_rtc 20cc000.snvs:snvs-rtc-lp: setting system clock to 1970-01-01 00:00:00 UTC (0)
+usb_otg_vbus: disabling
+ALSA device list:
+  #0: imx6q-apalis-sgtl5000
+  #1: imx-spdif
+Freeing unused kernel memory: 1024K
+Starting UTP
+uuc 0.5 [built Apr 27 2017 13:40:16]
+UTP: Waiting for device to appear
+UTP: file/device node /dev/utp already exists
+cpu_id is 0
+UTP: received command '$ while [ ! -e /dev/mmcblk0 ]; do sleep 1; echo waiting...; done '
+UTP: executing "while [ ! -e /dev/mmcblk0 ]; do sleep 1; echo waiting...; done "
+UTP: sending Success to kernel for command $ while [ ! -e /dev/mmcblk0 ]; do sleep 1; echo waiting...; done .
+usb 1-1.2: new low-speed USB device number 3 using ci_hdrc
+utp_poll: pass returned.
+UTP: received command '$ ls -l /dev/mmc* '
+UTP: executing "ls -l /dev/mmc* "
+brw------- 1 root root 179,  0 Jan  1 00:00 /dev/mmcblk0
+brw------- 1 root root 179, 16 Jan  1 00:00 /dev/mmcblk0boot0
+brw------- 1 root root 179, 32 Jan  1 00:00 /dev/mmcblk0boot1
+brw------- 1 root root 179,  1 Jan  1 00:00 /dev/mmcblk0p1
+brw------- 1 root root 179, 10 Jan  1 00:00 /input: PixArt Dell MS116 USB Optical Mouse as /devices/soc0/soc/2100000.aips-bus/2184200.usb/ci_hdrc.1/usb1/1-1/1-1.2/1-1.2:1.0/0003:413C:301A.0001/input/input2
+dev/mmcblk0p10
+brw------- 1 roothid-generic 0003:413C:301A.0001: input: USB HID v1.11 Mouse [PixArt Dell MS116 USB Optical Mouse] on usb-ci_hdrc.1-1.2/input0
+ root 179, 11 Jan  1 00:00 /dev/mmcblk0p11
+brw------- 1 root root 179,  2 Jan  1 00:00 /dev/mmcblk0p2
+brw------- 1 root root 179,  3 Jan  1 00:00 /dev/mmcblk0p3
+brw------- 1 root root 179,  4 Jan  1 00:00 /dev/mmcblk0p4
+brw------- 1 root root 179,  5 Jan  1 00:00 /dev/mmcblk0p5
+brw------- 1 root root 179,  6 Jan  1 00:00 /dev/mmcblk0p6
+brw------- 1 root root 179,  7 Jan  1 00:00 /dev/mmcblk0p7
+brw------- 1 root root 179,  8 Jan  1 00:00 /dev/mmcblk0p8
+brw------- 1 root root 179,  9 Jan  1 00:00 /dev/mmcblk0p9
+UTP: sending Success to kernel for command $ ls -l /dev/mmc* .
+utp_poll: pass returned.
+UTP: received command '$ dd if=/dev/zero of=/dev/mmcblk0 bs=1k seek=768 conv=fsync count=136'
+UTP: executing "dd if=/dev/zero of=/dev/mmcblk0 bs=1k seek=768 conv=fsync count=136"
+136+0 records in
+136+0 records out
+139264 bytes (139 kB, 136 KiB) copied, 0.173259 s, 804 kB/s
+UTP: sending Success to kernel for command $ dd if=/dev/zero of=/dev/mmcblk0 bs=1k seek=768 conv=fsync count=136.
+utp_poll: pass returned.
+UTP: received command '$ echo 0 > /sys/block/mmcblk0boot0/force_ro'
+UTP: executing "echo 0 > /sys/block/mmcblk0boot0/force_ro"
+UTP: sending Success to kernel for command $ echo 0 > /sys/block/mmcblk0boot0/force_ro.
+utp_poll: pass returned.
+UTP: received command 'send'
+UTP: sending Success to kernel for command send.
+UTP: received command '$ dd if=$FILE of=/dev/mmcblk0boot0 bs=512 seek=2'
+UTP: executing "dd if=$FILE of=/dev/mmcblk0boot0 bs=512 seek=2"
+686+0 records in
+686+0 records out
+351232 bytes (351 kB, 343 KiB) copied, 0.139166 s, 2.5 MB/s
+UTP: sending Success to kernel for command $ dd if=$FILE of=/dev/mmcblk0boot0 bs=512 seek=2.
+utp_poll: pass returned.
+UTP: received command '$ echo 1 > /sys/block/mmcblk0boot0/force_ro'
+UTP: executing "echo 1 > /sys/block/mmcblk0boot0/force_ro"
+UTP: sending Success to kernel for command $ echo 1 > /sys/block/mmcblk0boot0/force_ro.
+utp_poll: pass returned.
+UTP: received command '$ mmc bootpart enable 1 1 /dev/mmcblk0'
+UTP: executing "mmc bootpart enable 1 1 /dev/mmcblk0"
+UTP: sending Success to kernel for command $ mmc bootpart enable 1 1 /dev/mmcblk0.
+utp_poll: pass returned.
+UTP: received command '$ ls -l /dev/mmc* '
+UTP: executing "ls -l /dev/mmc* "
+brw------- 1 root root 179,  0 Jan  1 00:00 /dev/mmcblk0
+brw------- 1 root root 179, 16 Jan  1 00:00 /dev/mmcblk0boot0
+brw------- 1 root root 179, 32 Jan  1 00:00 /dev/mmcblk0boot1
+brw------- 1 root root 179,  1 Jan  1 00:00 /dev/mmcblk0p1
+brw------- 1 root root 179, 10 Jan  1 00:00 /dev/mmcblk0p10
+brw------- 1 root root 179, 11 Jan  1 00:00 /dev/mmcblk0p11
+brw------- 1 root root 179,  2 Jan  1 00:00 /dev/mmcblk0p2
+brw------- 1 root root 179,  3 Jan  1 00:00 /dev/mmcblk0p3
+brw------- 1 root root 179,  4 Jan  1 00:00 /dev/mmcblk0p4
+brw------- 1 root root 179,  5 Jan  1 00:00 /dev/mmcblk0p5
+brw------- 1 root root 179,  6 Jan  1 00:00 /dev/mmcblk0p6
+brw------- 1 root root 179,  7 Jan  1 00:00 /dev/mmcblk0p7
+brw------- 1 root root 179,  8 Jan  1 00:00 /dev/mmcblk0p8
+brw------- 1 root root 179,  9 Jan  1 00:00 /dev/mmcblk0p9
+UTP: sending Success to kernel for command $ ls -l /dev/mmc* .
+utp_poll: pass returned.
+UTP: received command 'send'
+UTP: sending Success to kernel for command send.
+UTP: received command '$ dd if=$FILE of=/dev/mmcblk0'
+UTP: executing "dd if=$FILE of=/dev/mmcblk0"
+67+0 records in
+67+0 records out
+34304 bytes (34 kB, 34 KiB) copied, 0.0174277 s, 2.0 MB/s
+UTP: sending Success to kernel for command $ dd if=$FILE of=/dev/mmcblk0.
+utp_poll: pass returned.
+UTP: received command '$ hdparm -z /dev/mmcblk0'
+UTP: executing "hdparm -z /dev/mmcblk0"
+
+/dev/mmcblk0:
+ re-reading partition table
+Alternate GPT is invalid, using primary GPT.
+ mmcblk0: p1 p2 p3 p4 p5 p6 p7 p8 p9 p10 p11
+UTP: sending Success to kernel for command $ hdparm -z /dev/mmcblk0.
+utp_poll: pass returned.
+UTP: received command '$ gdisk -l /dev/mmcblk0 '
+UTP: executing "gdisk -l /dev/mmcblk0 "
+GPT fdisk (gdisk) version 1.0.1
+
+Caution: invalid backup GPT header, but valid main header; regenerating
+backup header from main header.
+
+Warning! One or more CRCs don't match. You should repair the disk!
+
+Partition table scan:
+  MBR: protective
+  BSD: not present
+  APM: not present
+  GPT: damaged
+
+****************************************************************************
+Caution: Found protective or hybrid MBR and corrupt GPT. Using GPT, but disk
+verification and recovery are STRONGLY recommended.
+****************************************************************************
+Disk /dev/mmcblk0: 7520256 sectors, 3.6 GiB
+Logical sector size: 512 bytes
+Disk identifier (GUID): 19AB8570-19A3-4674-855A-1E10511C9045
+Partition table holds up to 128 entries
+First usable sector is 34, last usable sector is 7339998
+Partitions will be aligned on 2048-sector boundaries
+Total free space is 4029 sectors (2.0 MiB)
+
+Number  Start (sector)    End (sector)  Size       Code  Name
+   1            2048           67583   32.0 MiB    FFFF  boot
+   2           67584          133119   32.0 MiB    8300  recovery
+   3          133120         3278847   1.5 GiB     FFFF  system
+   4         3278848         4327423   512.0 MiB   FFFF  cache
+   5         4327424         4343807   8.0 MiB     FFFF  device
+   6         4343808         4351999   4.0 MiB     FFFF  misc
+   7         4352000         4356095   2.0 MiB     FFFF  datafooter
+   8         4356096         4360191   2.0 MiB     FFFF  metadata
+   9         4360192         4362239   1024.0 KiB  FFFF  presistdata
+  10         4362240         7335935   1.4 GiB     FFFF  userdata
+  11         7335936         7337983   1024.0 KiB  0700  fbmisc
+UTP: sending Success to kernel for command $ gdisk -l /dev/mmcblk0 .
+utp_poll: pass returned.
+UTP: received command 'send'
+UTP: sending Success to kernel for command send.
+UTP: received command '$ echo `gdisk -l /dev/mmcblk0 | grep -w boot | awk '{print $1}'` > /tmp/partIdx'
+UTP: executing "echo `gdisk -l /dev/mmcblk0 | grep -w boot | awk '{print $1}'` > /tmp/partIdx"
+Caution: invalid backup GPT header, but valid main header; regenerating
+backup header from main header.
+
+Warning! One or more CRCs don't match. You should repair the disk!
+
+UTP: sending Success to kernel for command $ echo `gdisk -l /dev/mmcblk0 | grep -w boot | awk '{print $1}'` > /tmp/partIdx.
+utp_poll: pass returned.
+UTP: received command '$ dd if=$FILE of=/dev/mmcblk0p`cat /tmp/partIdx`'
+UTP: executing "dd if=$FILE of=/dev/mmcblk0p`cat /tmp/partIdx`"
+22678+1 records in
+22678+1 records out
+11611432 bytes (12 MB, 11 MiB) copied, 1.92439 s, 6.0 MB/s
+UTP: sending Success to kernel for command $ dd if=$FILE of=/dev/mmcblk0p`cat /tmp/partIdx`.
+utp_poll: pass returned.
+UTP: received command '$ ls -l /dev/mmc* '
+UTP: executing "ls -l /dev/mmc* "
+brw------- 1 root root 179,  0 Jan  1 00:00 /dev/mmcblk0
+brw------- 1 root root 179, 16 Jan  1 00:00 /dev/mmcblk0boot0
+brw------- 1 root root 179, 32 Jan  1 00:00 /dev/mmcblk0boot1
+brw------- 1 root root 179,  1 Jan  1 00:00 /dev/mmcblk0p1
+brw------- 1 root root 179, 10 Jan  1 00:00 /dev/mmcblk0p10
+brw------- 1 root root 179, 11 Jan  1 00:00 /dev/mmcblk0p11
+brw------- 1 root root 179,  2 Jan  1 00:00 /dev/mmcblk0p2
+brw------- 1 root root 179,  3 Jan  1 00:00 /dev/mmcblk0p3
+brw------- 1 root root 179,  4 Jan  1 00:00 /dev/mmcblk0p4
+brw------- 1 root root 179,  5 Jan  1 00:00 /dev/mmcblk0p5
+brw------- 1 root root 179,  6 Jan  1 00:00 /dev/mmcblk0p6
+brw------- 1 root root 179,  7 Jan  1 00:00 /dev/mmcblk0p7
+brw------- 1 root root 179,  8 Jan  1 00:00 /dev/mmcblk0p8
+brw------- 1 root root 179,  9 Jan  1 00:00 /dev/mmcblk0p9
+UTP: sending Success to kernel for command $ ls -l /dev/mmc* .
+utp_poll: pass returned.
+UTP: received command '$ echo `gdisk -l /dev/mmcblk0 | grep -w cache | awk '{print $1}'` > /tmp/partIdx'
+UTP: executing "echo `gdisk -l /dev/mmcblk0 | grep -w cache | awk '{print $1}'` > /tmp/partIdx"
+Caution: invalid backup GPT header, but valid main header; regenerating
+backup header from main header.
+
+Warning! One or more CRCs don't match. You should repair the disk!
+
+UTP: sending Success to kernel for command $ echo `gdisk -l /dev/mmcblk0 | grep -w cache | awk '{print $1}'` > /tmp/partIdx.
+utp_poll: pass returned.
+UTP: received command '$ mkfs.ext4 -F -E nodiscard /dev/mmcblk0p`cat /tmp/partIdx`'
+UTP: executing "mkfs.ext4 -F -E nodiscard /dev/mmcblk0p`cat /tmp/partIdx`"
+mke2fs 1.43 (17-May-2016)
+/dev/mmcblk0p4 contains a ext4 file system
+	last mounted on Thu Jan  1 00:04:08 1970
+Creating filesystem with 131072 4k blocks and 32768 inodes
+Filesystem UUID: 7bd431e9-078f-4ed4-86ae-9ed9c89b0ab6
+Superblock backups stored on blocks: 
+	32768, 98304
+
+Allocating group tables: 0/4   done                            
+Writing inode tables: 0/4   done                            
+Creating journal (4096 blocks): done
+Writing superblocks and filesystem accounting information: 0/4   done
+
+UTP: sending Success to kernel for command $ mkfs.ext4 -F -E nodiscard /dev/mmcblk0p`cat /tmp/parutp_poll: pass returned.
+tIdx`.
+UTP: received command '$ echo `gdisk -l /dev/mmcblk0 | grep -w device | awk '{print $1}'` > /tmp/partIdx'
+UTP: executing "echo `gdisk -l /dev/mmcblk0 | grep -w device | awk '{print $1}'` > /tmp/partIdx"
+Caution: invalid backup GPT header, but valid main header; regenerating
+backup header from main header.
+
+Warning! One or more CRCs don't match. You should repair the disk!
+
+UTP: sending Success to kernel for command $ echo `gdisk -l /dev/mmcblk0 | grep -w device | awk '{print $1}'` > /tmp/partIdx.
+utp_poll: pass returned.
+UTP: received command '$ mkfs.ext4 -F -E nodiscard /dev/mmcblk0p`cat /tmp/partIdx`'
+UTP: executing "mkfs.ext4 -F -E nodiscard /dev/mmcblk0p`cat /tmp/partIdx`"
+mke2fs 1.43 (17-May-2016)
+/dev/mmcblk0p5 contains a ext4 file system
+	created on Thu Jan  1 00:00:11 1970
+Creating filesystem with 8192 1k blocks and 2048 inodes
+
+Allocating group tables: 0/1   done                            
+Writing inode tables: 0/1   done                            
+Creating journal (1024 blocks): done
+Writing superblocks and filesystem accounting information: 0/1   done
+
+UTP: sending Success to kernel for command $ mkfs.ext4 -F -E nodiscard /dev/mmcblk0p`cat /tmp/partIdx`.
+utp_poll: pass returned.
+UTP: received command '$ echo `gdisk -l /dev/mmcblk0 | grep -w userdata | awk '{print $1}'` > /tmp/partIdx'
+UTP: executing "echo `gdisk -l /dev/mmcblk0 | grep -w userdata | awk '{print $1}'` > /tmp/partIdx"
+Caution: invalid backup GPT header, but valid main header; regenerating
+backup header from main header.
+
+Warning! One or more CRCs don't match. You should repair the disk!
+
+UTP: sending Success to kernel for command $ echo `gdisk -l /dev/mmcblk0 | grep -w userdata | awk '{print $1}'` > /tmp/partIdx.
+utp_poll: pass returned.
+UTP: received command '$ mkfs.ext4 -F -E nodiscard -b 4096 -m 0 -O ^flex_bg,^uninit_bg /dev/mmcblk0p`cat /tmp/partIdx`'
+UTP: executing "mkfs.ext4 -F -E nodiscard -b 4096 -m 0 -O ^flex_bg,^uninit_bg /dev/mmcblk0p`cat /tmp/partIdx`"
+mke2fs 1.43 (17-May-2016)
+/dev/mmcblk0p10 contains a ext4 file system
+	last mounted on /data on Thu Jan  1 00:04:08 1970
+Creating filesystem with 371712 4k blocks and 92928 inodes
+Filesystem UUID: 2b6d33b2-23b8-45ee-9406-3c0f33e9e1b5
+Superblock backups stored on blocks: 
+	32768, 98304, 163840, 229376, 294912
+
+Allocating group tables:  0/12     done                            
+Writing inode tables:  0/12     done                            
+Creating journal (8192 blocks): done
+Writing superblocks and filesystem accounting information:  0/12     done
+
+UTP: sending Success to kernel for command $ mkfs.ext4 -F -E nodiscard -b 4096 -m 0 -O ^flex_bg,^uninit_bg /dev/mmcblk0p`cat /tmp/partIdx`.
+utp_poll: pass returned.
+UTP: received command '$ mount -o remount,size=1024M rootfs /'
+UTP: executing "mount -o remount,size=1024M rootfs /"
+UTP: sending Success to kernel for command $ mount -o remount,size=1024M rootfs /.
+utp_poll: pass returned.
+UTP: received command 'send'
+UTP: sending Success to kernel for command send.
+random: crng init done
+UTP: received command '$ echo `gdisk -l /dev/mmcblk0 | grep -w system | awk '{print $1}'` > /tmp/partIdx'
+UTP: executing "echo `gdisk -l /dev/mmcblk0 | grep -w system | awk '{print $1}'` > /tmp/partIdx"
+Caution: invalid backup GPT header, but valid main header; regenerating
+backup header from main header.
+
+Warning! One or more CRCs don't match. You should repair the disk!
+
+UTP: sending Success to kernel for command $ echo `gdisk -l /dev/mmcblk0 | grep -w system | awk '{print $1}'` > /tmp/partIdx.
+utp_poll: pass returned.
+UTP: received command '$ simg2img $FILE /dev/mmcblk0p`cat /tmp/partIdx`'
+UTP: executing "simg2img $FILE /dev/mmcblk0p`cat /tmp/partIdx`"
+UTP: sending Success to kernel for command $ simg2img $FILE /dev/mmcblk0p`cat /tmp/partIdx`.
+utp_poll: pass returned.
+UTP: received command 'send'
+UTP: sending Success to kernel for command send.
+UTP: received command '$ echo `gdisk -l /dev/mmcblk0 | grep -w 'recovery$' | awk '{print $1}'` > /tmp/partIdx'
+UTP: executing "echo `gdisk -l /dev/mmcblk0 | grep -w 'recovery$' | awk '{print $1}'` > /tmp/partIdx"
+Caution: invalid backup GPT header, but valid main header; regenerating
+backup header from main header.
+
+Warning! One or more CRCs don't match. You should repair the disk!
+
+UTP: sending Success to kernel for command $ echo `gdisk -l /dev/mmcblk0 | grep -w 'recovery$' | awk '{print $1}'` > /tmp/partIdx.
+utp_poll: pass returned.
+UTP: received command '$ dd if=$FILE of=/dev/mmcblk0p`cat /tmp/partIdx`'
+UTP: executing "dd if=$FILE of=/dev/mmcblk0p`cat /tmp/partIdx`"
+27218+1 records in
+27218+1 records out
+13935916 bytes (14 MB, 13 MiB) copied, 2.2646 s, 6.2 MB/s
+UTP: sending Success to kernel for command $ dd if=$FILE of=/dev/mmcblk0p`cat /tmp/partIdx`.
+utp_poll: pass returned.
+UTP: received command '$ sync'
+UTP: executing "sync"
+UTP: sending Success to kernel for command $ sync.
+utp_poll: pass returned.
+UTP: received command 'frf'
+UTP: closing the file
+UTP: sending Success to kernel for command frf.
+utp_poll: pass returned.
+UTP: received command '$ echo Update Complete!'
+UTP: executing "echo Update Complete!"
+Update Complete!
+UTP: sending Success to kernel for command $ echo Update Complete!.
+utp_poll: pass returned.
+
+
+U-Boot 2017.03-00002-gebf9dc2527 (Jan 29 2018 - 17:39:17 +0530)
+
+CPU:   Freescale i.MX6Q rev1.5 at 792 MHz
+Reset cause: POR
+I2C:   ready
+DRAM:  2 GiB
+PMIC: device id: 0x10, revision id: 0x21
+PMIC: programmed
+MMC:   FSL_SDHC: 0, FSL_SDHC: 1, FSL_SDHC: 2
+Unable to allocate framebuffer memory
+In:    serial
+Out:   serial
+Err:   serial
+Model: Toradex Apalis iMX6 Quad 2GB IT V1.1C, Serial# 05146387
+flash target is MMC:0
+Net:   using PHY at 7
+FEC [PRIME]
+Fastboot: Normal
+Hit any key to stop autoboot:  1  0 
+boota mmc0 
+CACHE: Misaligned operation at range [8ffb79a0, 8ffb7a20]
+CACHE: Misaligned operation at range [8ffb79a0, 8ffb7a20]
+kernel   @ 14008000 (9921584)
+ramdisk  @ 15000000 (1628986)
+fdt      @ 14f00000 (54143)
+## Booting Android Image at 0x12000000 ...
+Kernel load addr 0x14008000 size 9690 KiB
+Kernel command line: console=ttymxc0,115200 init=/init video=mxcfb1:off video=mxcfb0:dev=hdmi,640x480M@60,if=RGB24,bpp=16 video=mxcfb2:off video=mxcfb3:off fbmem=32M vmalloc=400M androidboot.console=ttymxc0 consoleblank=0 androidboot.hardware=freescale cma=448M androidboot.selinux=permissive androidboot.dm_verity=disabled androidboot.serialno=1b2429d4ea997115 androidboot.storage_type=emmc
+## Flattened Device Tree blob at 14f00000
+   Booting using the fdt blob at 0x14f00000
+   Loading Kernel Image ... OK
+   Using Device Tree in place at 14f00000, end 14f1037e
+
+Starting kernel ...
+
+Booting Linux on physical CPU 0x0
+Linux version 4.9.67-07229-gdc6c16ec0433-dirty (embadmin@ubuntu) (gcc version 4.9 20150123 (prerelease) (GCC) ) #67 SMP PREEMPT Thu Feb 15 15:25:35 IST 2018
+CPU: ARMv7 Processor [412fc09a] revision 10 (ARMv7), cr=10c53c7d
+CPU: PIPT / VIPT nonaliasing data cache, VIPT aliasing instruction cache
+OF: fdt:Machine model: Aravinth : Toradex Apalis iMX6Q/D Module on Ixora V1.1 Carrier Board
+cma: Reserved 448 MiB at 0x1a000000
+Memory policy: Data cache writealloc
+percpu: Embedded 15 pages/cpu @e66b3000 s31040 r8192 d22208 u61440
+Built 1 zonelists in Zone order, mobility grouping on.  Total pages: 523056
+Kernel command line: console=ttymxc0,115200 init=/init video=mxcfb1:off video=mxcfb0:dev=hdmi,640x480M@60,if=RGB24,bpp=16 video=mxcfb2:off video=mxcfb3:off fbmem=32M vmalloc=400M androidboot.console=ttymxc0 consoleblank=0 androidboot.hardware=freescale cma=448M androidboot.selinux=permissive androidboot.dm_verity=disabled androidboot.serialno=1b2429d4ea997115 androidboot.storage_type=emmc
+PID hash table entries: 4096 (order: 2, 16384 bytes)
+Dentry cache hash table entries: 131072 (order: 7, 524288 bytes)
+Inode-cache hash table entries: 65536 (order: 6, 262144 bytes)
+Memory: 1597024K/2097152K available (13312K kernel code, 1154K rwdata, 4044K rodata, 1024K init, 604K bss, 41376K reserved, 458752K cma-reserved, 1466368K highmem)
+Virtual kernel memory layout:
+    vector  : 0xffff0000 - 0xffff1000   (   4 kB)
+    fixmap  : 0xffc00000 - 0xfff00000   (3072 kB)
+    vmalloc : 0xe7000000 - 0xff800000   ( 392 MB)
+    lowmem  : 0xc0000000 - 0xe6800000   ( 616 MB)
+    pkmap   : 0xbfe00000 - 0xc0000000   (   2 MB)
+    modules : 0xbf000000 - 0xbfe00000   (  14 MB)
+      .text : 0xc0008000 - 0xc0e00000   (14304 kB)
+      .init : 0xc1300000 - 0xc1400000   (1024 kB)
+      .data : 0xc1400000 - 0xc1520b98   (1155 kB)
+       .bss : 0xc1520b98 - 0xc15b7c28   ( 605 kB)
+SLUB: HWalign=64, Order=0-3, MinObjects=0, CPUs=4, Nodes=1
+Preemptible hierarchical RCU implementation.
+	Build-time adjustment of leaf fanout to 32.
+NR_IRQS:16 nr_irqs:16 16
+L2C-310 errata 752271 769419 enabled
+L2C-310 enabling early BRESP for Cortex-A9
+L2C-310 full line of zeros enabled for Cortex-A9
+L2C-310 ID prefetch enabled, offset 16 lines
+L2C-310 dynamic clock gating enabled, standby mode enabled
+L2C-310 cache controller enabled, 16 ways, 1024 kB
+L2C-310: CACHE_ID 0x410000c7, AUX_CTRL 0x76470001
+Switching to timer-based delay loop, resolution 333ns
+sched_clock: 32 bits at 3000kHz, resolution 333ns, wraps every 715827882841ns
+clocksource: mxc_timer1: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 637086815595 ns
+Console: colour dummy device 80x30
+Calibrating delay loop (skipped), value calculated using timer frequency.. 6.00 BogoMIPS (lpj=30000)
+pid_max: default: 32768 minimum: 301
+Security Framework initialized
+SELinux:  Initializing.
+Mount-cache hash table entries: 2048 (order: 1, 8192 bytes)
+Mountpoint-cache hash table entries: 2048 (order: 1, 8192 bytes)
+CPU: Testing write buffer coherency: ok
+CPU0: update cpu_capacity 1024
+CPU0: thread -1, cpu 0, socket 0, mpidr 80000000
+Setting up static identity map for 0x10100000 - 0x10100058
+CPU1: update cpu_capacity 1024
+CPU1: thread -1, cpu 1, socket 0, mpidr 80000001
+CPU2: update cpu_capacity 1024
+CPU2: thread -1, cpu 2, socket 0, mpidr 80000002
+CPU3: update cpu_capacity 1024
+CPU3: thread -1, cpu 3, socket 0, mpidr 80000003
+Brought up 4 CPUs
+SMP: Total of 4 processors activated (24.00 BogoMIPS).
+CPU: All CPU(s) started in SVC mode.
+CPU3: update max cpu_capacity 1024
+devtmpfs: initialized
+CPU2: update max cpu_capacity 1024
+VFP support v0.3: implementor 41 architecture 3 part 30 variant 9 rev 4
+clocksource: jiffies: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 19112604462750000 ns
+futex hash table entries: 1024 (order: 4, 65536 bytes)
+pinctrl core: initialized pinctrl subsystem
+NET: Registered protocol family 16
+DMA: preallocated 256 KiB pool for atomic coherent allocations
+cpuidle: using governor menu
+CPU identified as i.MX6Q, silicon rev 1.5
+hw-breakpoint: found 5 (+1 reserved) breakpoint and 1 watchpoint registers.
+hw-breakpoint: maximum watchpoint size is 4 bytes.
+imx6q-pinctrl 20e0000.iomuxc: initialized IMX pinctrl driver
+imx-gpc 20dc000.gpc: no fsl,ldo-bypass found!
+imx-gpc 20dc000.gpc: Registered imx-gpc
+mxs-dma 110000.dma-apbh: initialized
+usb_host_vbus: supplied by usb_host_vbus_hub
+SCSI subsystem initialized
+usbcore: registered new interface driver usbfs
+usbcore: registered new interface driver hub
+usbcore: registered new device driver usb
+2000000.aips-bus:usbphy_nop1 supply vcc not found, using dummy regulator
+2000000.aips-bus:usbphy_nop2 supply vcc not found, using dummy regulator
+i2c i2c-1: IMX I2C adapter registered
+i2c i2c-1: can't use DMA, using PIO instead.
+stmpe-i2c 2-0041: stmpe811 detected, chip id: 0x811
+i2c i2c-2: IMX I2C adapter registered
+i2c i2c-2: can't use DMA, using PIO instead.
+i2c i2c-3: IMX I2C adapter registered
+i2c i2c-3: can't use DMA, using PIO instead.
+Aravinth: i2c_adap_sw_edid_init 
+Linux video capture interface: v2.00
+pps_core: LinuxPPS API ver. 1 registered
+pps_core: Software ver. 5.3.6 - Copyright 2005-2007 Rodolfo Giometti <giometti@linux.it>
+PTP clock support registered
+imx-ipuv3 2400000.ipu: IPU DMFC NORMAL mode: 1(0~1), 5B(4,5), 5F(6,7)
+imx-ipuv3 2800000.ipu: IPU DMFC NORMAL mode: 1(0~1), 5B(4,5), 5F(6,7)
+mxc_mipi_csi2 21dc000.mipi_csi: i.MX MIPI CSI2 driver probed ipu0 csi1
+mxc_mipi_csi2 21dc000.mipi_csi: i.MX MIPI CSI2 dphy version is 0x3130302a
+MIPI CSI2 driver module loaded
+imx rpmsg driver is registered.
+Advanced Linux Sound Architecture Driver Initialized.
+Bluetooth: Core ver 2.22
+NET: Registered protocol family 31
+Bluetooth: HCI device and connection manager initialized
+Bluetooth: HCI socket layer initialized
+Bluetooth: L2CAP socket layer initialized
+Bluetooth: SCO socket layer initialized
+clocksource: Switched to clocksource mxc_timer1
+VFS: Disk quotas dquot_6.6.0
+VFS: Dquot-cache hash table entries: 1024 (order 0, 4096 bytes)
+NET: Registered protocol family 2
+TCP established hash table entries: 8192 (order: 3, 32768 bytes)
+TCP bind hash table entries: 8192 (order: 4, 65536 bytes)
+TCP: Hash tables configured (established 8192 bind 8192)
+UDP hash table entries: 512 (order: 2, 16384 bytes)
+UDP-Lite hash table entries: 512 (order: 2, 16384 bytes)
+NET: Registered protocol family 1
+RPC: Registered named UNIX socket transport module.
+RPC: Registered udp transport module.
+RPC: Registered tcp transport module.
+RPC: Registered tcp NFSv4.1 backchannel transport module.
+Trying to unpack rootfs image as initramfs...
+Freeing initrd memory: 1592K
+hw perfevents: enabled with armv7_cortex_a9 PMU driver, 7 counters available
+Bus freq driver module loaded
+audit: initializing netlink subsys (disabled)
+audit: type=2000 audit(0.870:1): initialized
+workingset: timestamp_bits=30 max_order=19 bucket_order=0
+NFS: Registering the id_resolver key type
+Key type id_resolver registered
+Key type id_legacy registered
+ntfs: driver 2.1.32 [Flags: R/W DEBUG].
+jffs2: version 2.2. (NAND) Â© 2001-2006 Red Hat, Inc.
+fuse init (API version 7.26)
+NET: Registered protocol family 38
+bounce: pool size: 64 pages
+io scheduler noop registered
+io scheduler deadline registered
+io scheduler cfq registered (default)
+backlight supply power not found, using dummy regulator
+Aravinth: mxc_hdmi_i2c_probe 
+Aravinth: mxc_hdmi_probe 
+20e0000.hdmi_video supply HDMI not found, using dummy regulator
+Aravinth: mxc_hdmi_disp_init 
+mxc_hdmi 20e0000.hdmi_video: Detected HDMI controller 0x13:0xa:0xa0:0xc1
+Aravinth:fb_find_mode 
+modedb fb_find_mode: CVT mode 640x480@60Hz
+fbcvt: 640x480@60: CVT Name - .307M3
+Aravinth:fb_try_mode 
+modedb fb_try_mode: Trying mode noname 640x480-16@60
+modedb fb_find_mode: modedb CVT: CVT mode ok
+Aravinth:fb_destroy_modelist 
+Aravinth:fb_add_videomode 
+Aravinth:fb_add_videomode 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_add_videomode 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_add_videomode 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_add_videomode 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_add_videomode 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_add_videomode 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_add_videomode 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_add_videomode 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_add_videomode 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_add_videomode 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_add_videomode 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_add_videomode 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_add_videomode 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_add_videomode 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_add_videomode 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_add_videomode 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_add_videomode 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_add_videomode 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_add_videomode 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_add_videomode 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_add_videomode 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_var_to_videomode 
+Aravinth:fb_find_nearest_mode 
+Aravinth: fb_videomode_to_var 
+Aravinth: fb_videomode_to_var var->xres=640 yres=480 xres_virtual=640 >yres_virtual=480 pixclock=39722 
+Aravinth: fb_videomode_to_var Done
+mxc_sdc_fb fb@0: registered mxc display driver hdmi
+Aravinth:fb_var_to_videomode 
+Aravinth:fb_add_videomode 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_match_mode 
+Aravinth:fb_var_to_videomode 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth: mxc_hdmi_phy_init 
+Aravinth:fb_var_to_videomode 
+Aravinth:fb_add_videomode 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_var_to_videomode 
+Aravinth:fb_add_videomode 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_match_mode 
+Aravinth:fb_var_to_videomode 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_match_mode 
+Aravinth:fb_var_to_videomode 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth: mxc_hdmi_phy_init 
+Aravinth: fb_videomode_to_var 
+Aravinth: fb_videomode_to_var var->xres=640 yres=480 xres_virtual=640 >yres_virtual=480 pixclock=39722 
+Aravinth: fb_videomode_to_var Done
+Console: switching to colour frame buffer device 80x30
+Aravinth: fb_videomode_to_var 
+Aravinth: fb_videomode_to_var var->xres=640 yres=480 xres_virtual=640 >yres_virtual=480 pixclock=39722 
+Aravinth: fb_videomode_to_var Done
+Aravinth:fb_var_to_videomode 
+Aravinth:fb_add_videomode 
+Aravinth:fb_var_to_videomode 
+Aravinth:fb_add_videomode 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_var_to_videomode 
+Aravinth:fb_add_videomode 
+Aravinth:fb_mode_is_equal 
+mxc_sdc_fb fb@1: Can't get fb option for mxcfb1!
+mxc_sdc_fb fb@2: Can't get fb option for mxcfb2!
+mxc_sdc_fb fb@3: Can't get fb option for mxcfb3!
+imx-sdma 20ec000.sdma: no iram assigned, using external mem
+imx-sdma 20ec000.sdma: loaded firmware 3.3
+pfuze100-regulator 2-0008: Full layer: 2, Metal layer: 1
+pfuze100-regulator 2-0008: FAB: 0, FIN: 0
+pfuze100-regulator 2-0008: pfuze100 found.
+mxc_hdmi 20e0000.hdmi_video: Read EDID again
+2020000.serial: ttymxc0 at MMIO 0x2020000 (irq = 29, base_baud = 5000000) is a IMX
+Aravinth: mxc_hdmi_cable_connected edid_status=-1
+Aravinth: mxc_hdmi_default_modelist 
+mxc_hdmi 20e0000.hdmi_video: create default modelist
+Aravinth:fb_destroy_modelist 
+Aravinth: mxc_hdmi_default_modelist 
+Aravinth:fb_add_videomode 
+Aravinth: fb_videomode_to_var 
+Aravinth: fb_videomode_to_var var->xres=640 yres=480 xres_virtual=640 >yres_virtual=480 pixclock=39722 
+Aravinth: fb_videomode_to_var Done
+Aravinth:fb_var_to_videomode 
+Aravinth:fb_mode_is_equal 
+Aravinth: fb_videomode_to_var 
+Aravinth: fb_videomode_to_var var->xres=640 yres=480 xres_virtual=640 >yres_virtual=480 pixclock=39722 
+Aravinth: fb_videomode_to_var Done
+Aravinth:fb_find_nearest_mode 
+Aravinth: fb_videomode_to_var 
+Aravinth: fb_videomode_to_var var->xres=640 yres=480 xres_virtual=640 >yres_virtual=480 pixclock=39722 
+Aravinth: fb_videomode_to_var Done
+Aravinth:fb_match_mode 
+Aravinth:fb_var_to_videomode 
+Aravinth:fb_mode_is_equal 
+console [ttymxc0] enabled
+21e8000.serial: ttymxc1 at MMIO 0x21e8000 (irq = 78, base_baud = 5000000) is a IMX
+21f0000.serial: ttymxc3 at MMIO 0x21f0000 (irq = 79, base_baud = 5000000) is a IMX
+21f4000.serial: ttymxc4 at MMIO 0x21f4000 (irq = 80, base_baud = 5000000) is a IMX
+imx sema4 driver is registered.
+[drm] Initialized
+[drm] Initialized vivante 1.0.0 20120216 on minor 0
+brd: module loaded
+loop: module loaded
+zram: Added device: zram0
+ahci-imx 2200000.sata: fsl,transmit-level-mV not specified, using 00000024
+ahci-imx 2200000.sata: fsl,transmit-boost-mdB not specified, using 00000480
+ahci-imx 2200000.sata: fsl,transmit-atten-16ths not specified, using 00002000
+ahci-imx 2200000.sata: fsl,receive-eq-mdB not specified, using 05000000
+Aravinth:fb_match_mode 
+Aravinth:fb_var_to_videomode 
+Aravinth:fb_mode_is_equal 
+Aravinth: mxc_hdmi_phy_init 
+ahci-imx 2200000.sata: SSS flag set, parallel bus scan disabled
+ahci-imx 2200000.sata: AHCI 0001.0300 32 slots 1 ports 3 Gbps 0x1 impl platform mode
+ahci-imx 2200000.sata: flags: ncq sntf stag pm led clo only pmp pio slum part ccc apst 
+scsi host0: ahci-imx
+ata1: SATA max UDMA/133 mmio [mem 0x02200000-0x02203fff] port 0x100 irq 87
+spi_imx 2008000.ecspi: probed
+libphy: Fixed MDIO Bus: probed
+tun: Universal TUN/TAP device driver, 1.6
+tun: (C) 1999-2004 Max Krasnyansky <maxk@qualcomm.com>
+CAN device driver interface
+2090000.flexcan supply xceiver not found, using dummy regulator
+flexcan 2090000.flexcan: device registered (reg_base=e72f4000, irq=38)
+2094000.flexcan supply xceiver not found, using dummy regulator
+flexcan 2094000.flexcan: device registered (reg_base=e72fc000, irq=39)
+2188000.ethernet supply phy not found, using dummy regulator
+Aravinth:fb_var_to_videomode 
+Aravinth:fb_add_videomode 
+Aravinth:fb_mode_is_equal 
+Aravinth: fb_videomode_to_var 
+Aravinth: fb_videomode_to_var var->xres=640 yres=480 xres_virtual=640 >yres_virtual=480 pixclock=39722 
+Aravinth: fb_videomode_to_var Done
+pps pps0: new PPS source ptp0
+libphy: fec_enet_mii_bus: probed
+fec 2188000.ethernet eth0: registered PHC device 0
+PPP generic driver version 2.4.2
+PPP BSD Compression module registered
+PPP Deflate Compression module registered
+PPP MPPE Compression module registered
+NET: Registered protocol family 24
+usbcore: registered new interface driver rtl8xxxu
+usbcore: registered new interface driver kaweth
+pegasus: v0.9.3 (2013/04/25), Pegasus/Pegasus II USB Ethernet driver
+usbcore: registered new interface driver pegasus
+usbcore: registered new interface driver rtl8150
+usbcore: registered new interface driver r8152
+usbcore: registered new interface driver asix
+usbcore: registered new interface driver ax88179_178a
+usbcore: registered new interface driver cdc_ether
+usbcore: registered new interface driver cdc_eem
+usbcore: registered new interface driver net1080
+usbcore: registered new interface driver cdc_subset
+usbcore: registered new interface driver zaurus
+usbcore: registered new interface driver cdc_ncm
+ehci_hcd: USB 2.0 'Enhanced' Host Controller (EHCI) Driver
+ehci-mxc: Freescale On-Chip EHCI Host driver
+ohci_hcd: USB 1.1 'Open' Host Controller (OHCI) Driver
+usbcore: registered new interface driver cdc_acm
+cdc_acm: USB Abstract Control Model driver for USB modems and ISDN adapters
+usbcore: registered new interface driver cdc_wdm
+usbcore: registered new interface driver usb-storage
+usbcore: registered new interface driver usbserial
+usbcore: registered new interface driver usbserial_generic
+usbserial: USB Serial support registered for generic
+usbcore: registered new interface driver ftdi_sio
+usbserial: USB Serial support registered for FTDI USB Serial Device
+usbcore: registered new interface driver option
+usbserial: USB Serial support registered for GSM modem (1-port)
+usbcore: registered new interface driver usbtest
+usbcore: registered new interface driver usb_ehset_test
+2184800.usbmisc supply vbus-wakeup not found, using dummy regulator
+ci_hdrc ci_hdrc.1: EHCI Host Controller
+ci_hdrc ci_hdrc.1: new USB bus registered, assigned bus number 1
+Aravinth:fb_match_mode 
+Aravinth:fb_var_to_videomode 
+Aravinth:fb_mode_is_equal 
+Aravinth: mxc_hdmi_phy_init 
+ci_hdrc ci_hdrc.1: USB 2.0 started, EHCI 1.00
+usb usb1: New USB device found, idVendor=1d6b, idProduct=0002
+usb usb1: New USB device strings: Mfr=3, Product=2, SerialNumber=1
+usb usb1: Product: EHCI Host Controller
+usb usb1: Manufacturer: Linux 4.9.67-07229-gdc6c16ec0433-dirty ehci_hcd
+usb usb1: SerialNumber: ci_hdrc.1
+hub 1-0:1.0: USB hub found
+hub 1-0:1.0: 1 port detected
+mousedev: PS/2 mouse device common for all mice
+usbcore: registered new interface driver xpad
+usbcore: registered new interface driver usb_acecad
+usbcore: registered new interface driver aiptek
+usbcore: registered new interface driver gtco
+usbcore: registered new interface driver hanwang
+usbcore: registered new interface driver kbtab
+Aravinth:fb_var_to_videomode 
+Aravinth:fb_add_videomode 
+Aravinth:fb_mode_is_equal 
+input: stmpe-ts as /devices/soc0/soc/2100000.aips-bus/21a4000.i2c/i2c-2/2-0041/stmpe-ts/input/input0
+snvs_rtc 20cc000.snvs:snvs-rtc-lp: rtc core: registered 20cc000.snvs:snvs-r as rtc0
+i2c /dev entries driver
+IR NEC protocol handler initialized
+IR RC5(x/sz) protocol handler initialized
+IR RC6 protocol handler initialized
+IR JVC protocol handler initialized
+IR Sony protocol handler initialized
+IR SANYO protocol handler initialized
+IR Sharp protocol handler initialized
+IR MCE Keyboard/mouse protocol handler initialized
+IR XMP protocol handler initialized
+mxc_v4l2_output v4l2_out: V4L2 device registered as video16
+mxc_v4l2_output v4l2_out: V4L2 device registered as video17
+ov564x_mipi 3-003c: found pwm2, period=0
+ata1: SATA link down (SStatus 0 SControl 300)
+ahci-imx 2200000.sata: no device found, disabling link.
+ahci-imx 2200000.sata: pass ahci_imx..hotplug=1 to enable hotplug
+ov5640_read_reg:write reg error:reg=300a
+camera ov5640_mipi is not found
+usbcore: registered new interface driver uvcvideo
+USB Video Class driver (1.1.1)
+imx2-wdt 20bc000.wdog: timeout 60 sec (nowayout=0)
+device-mapper: uevent: version 1.0.3
+device-mapper: ioctl: 4.35.0-ioctl (2016-06-23) initialised: dm-devel@redhat.com
+Bluetooth: HCI UART driver ver 2.3
+Bluetooth: HCI UART protocol H4 registered
+Bluetooth: HCI UART protocol BCSP registered
+Bluetooth: HCI UART protocol ATH3K registered
+usbcore: registered new interface driver btusb
+sdhci: Secure Digital Host Controller Interface driver
+sdhci: Copyright(c) Pierre Ossman
+sdhci-pltfm: SDHCI platform and OF driver helper
+sdhci-esdhc-imx 2190000.usdhc: could not get ultra high speed state, work on normal mode
+sdhci-esdhc-imx 2190000.usdhc: Got CD GPIO
+usb 1-1: new high-speed USB device number 2 using ci_hdrc
+mmc1: SDHCI controller on 2190000.usdhc [2190000.usdhc] using ADMA
+sdhci-esdhc-imx 2198000.usdhc: could not get ultra high speed state, work on normal mode
+mmc0: SDHCI controller on 2198000.usdhc [2198000.usdhc] using ADMA
+mxc_vpu 2040000.vpu_fsl: VPU initialized
+mxc_vdoa 21e4000.vdoa: i.MX Video Data Order Adapter(VDOA) driver probed
+mxc_hdmi_cec soc:hdmi_cec@00120000: HDMI CEC initialized
+Galcore version 6.2.2.96445
+usb 1-1: New USB device found, idVendor=0424, idProduct=2514
+usb 1-1: New USB device strings: Mfr=0, Product=0, SerialNumber=0
+hub 1-1:1.0: USB hub found
+hub 1-1:1.0: 4 ports detected
+mmc0: new DDR MMC card at address 0001
+mmcblk0: mmc0:0001 Q2J54A 3.59 GiB 
+mmcblk0boot0: mmc0:0001 Q2J54A partition 1 16.0 MiB
+mmcblk0boot1: mmc0:0001 Q2J54A partition 2 16.0 MiB
+random: fast init done
+Alternate GPT is invalid, using primary GPT.
+ mmcblk0: p1 p2 p3 p4 p5 p6 p7 p8 p9 p10 p11
+Aravinth: mxc_hdmi_set_mode 
+Aravinth: fb_videomode_to_var 
+Aravinth: fb_videomode_to_var var->xres=640 yres=480 xres_virtual=640 >yres_virtual=480 pixclock=39722 
+Aravinth: fb_videomode_to_var Done
+Aravinth:fb_var_to_videomode 
+Aravinth:fb_find_nearest_mode 
+Aravinth:fb_mode_is_equal 
+Aravinth: mxc_hdmi_set_mode_to_vga_dvi 
+Aravinth: fb_videomode_to_var 
+Aravinth: fb_videomode_to_var var->xres=640 yres=480 xres_virtual=640 >yres_virtual=480 pixclock=39721 
+Aravinth: fb_videomode_to_var Done
+Aravinth:fb_match_mode 
+Aravinth:fb_var_to_videomode 
+Aravinth:fb_mode_is_equal 
+Aravinth: mxc_hdmi_phy_init 
+Aravinth:fb_var_to_videomode 
+Aravinth:fb_add_videomode 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_match_mode 
+Aravinth:fb_var_to_videomode 
+Aravinth:fb_mode_is_equal 
+Aravinth: fb_videomode_to_var 
+Aravinth: fb_videomode_to_var var->xres=640 yres=480 xres_virtual=640 >yres_virtual=480 pixclock=39721 
+Aravinth: fb_videomode_to_var Done
+Aravinth:fb_mode_is_equal 
+Aravinth: mxc_hdmi_setup 
+Aravinth:fb_var_to_videomode 
+Aravinth:fb_var_to_videomode 
+Aravinth: mxc_hdmi_phy_init 
+Aravinth:fb_var_to_videomode 
+Aravinth:fb_find_nearest_mode 
+usb 1-1.2: new low-speed USB device number 3 using ci_hdrc
+Aravinth: fb_videomode_to_var 
+Aravinth: fb_videomode_to_var var->xres=640 yres=480 xres_virtual=640 >yres_virtual=480 pixclock=39722 
+Aravinth: fb_videomode_to_var Done
+Aravinth:fb_match_mode 
+Aravinth:fb_var_to_videomode 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth: mxc_hdmi_phy_init 
+Aravinth:fb_var_to_videomode 
+Aravinth:fb_add_videomode 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_match_mode 
+Aravinth:fb_var_to_videomode 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth: fb_videomode_to_var 
+Aravinth: fb_videomode_to_var var->xres=640 yres=480 xres_virtual=640 >yres_virtual=480 pixclock=39722 
+Aravinth: fb_videomode_to_var Done
+Aravinth:fb_mode_is_equal 
+Aravinth: mxc_hdmi_setup 
+Aravinth:fb_var_to_videomode 
+Aravinth:fb_find_nearest_mode 
+Aravinth:fb_var_to_videomode 
+Aravinth: mxc_hdmi_phy_init 
+usb 1-1.2: New USB device found, idVendor=413c, idProduct=301a
+usb 1-1.2: New USB device strings: Mfr=1, Product=2, SerialNumber=0
+usb 1-1.2: Product: Dell MS116 USB Optical Mouse
+usb 1-1.2: Manufacturer: PixArt
+Aravinth:fb_var_to_videomode 
+Aravinth:fb_find_nearest_mode 
+caam 2100000.caam: ERA source: CAAMVID.
+caam 2100000.caam: AXI pipeline throttling enabled.
+caam 2100000.caam: Instantiated RNG4 SH1
+caam 2100000.caam: device ID = 0x0a16010000000000 (Era 4)
+caam 2100000.caam: job rings = 2, qi = 0
+caam algorithms registered in /proc/crypto
+caam_jr 2101000.jr0: registering rng-caam
+platform caam_sm: blkkey_ex: 4 keystore units available
+platform caam_sm: 64-bit clear key:
+platform caam_sm: [0000] 00 01 02 03 04 0f 06 07
+platform caam_sm: 64-bit black key:
+platform caam_sm: [0000] a3 c3 94 ba 1a 67 af 5a
+platform caam_sm: [0008] 1e d3 2a ba 2d 99 9f d9
+platform caam_sm: 128-bit clear key:
+platform caam_sm: [0000] 00 01 02 03 04 0f 06 07
+platform caam_sm: [0008] 08 09 0a 0b 0c 0d 0e 0f
+platform caam_sm: 128-bit black key:
+platform caam_sm: [0000] 55 6c 1d c8 ed d7 54 66
+platform caam_sm: [0008] 38 1e 0d 55 4f be 6e 27
+platform caam_sm: 192-bit clear key:
+platform caam_sm: [0000] 00 01 02 03 04 0f 06 07
+platform caam_sm: [0008] 08 09 0a 0b 0c 0d 0e 0f
+platform caam_sm: [0016] 10 11 12 13 14 15 16 17
+platform caam_sm: 192-bit black key:
+platform caam_sm: [0000] 70 63 a9 2e 19 17 a3 05
+platform caam_sm: [0008] 20 a2 1a df 7e 91 ff 18
+platform caam_sm: [0016] 37 13 b8 e5 43 0c 61 5d
+platform caam_sm: [0024] dd b0 03 9d bd 61 b7 5c
+platform caam_sm: 256-bit clear key:
+platform caam_sm: [0000] 00 01 02 03 04 0f 06 07
+platform caam_sm: [0008] 08 09 0a 0b 0c 0d 0e 0f
+platform caam_sm: [0016] 10 11 12 13 14 15 16 17
+platform caam_sm: [0024] 18 19 1a 1b 1c 1d 1e 1f
+platform caam_sm: 256-bit black key:
+platform caam_sm: [0000] 5f 8e 56 21 27 66 18 0e
+platform caam_sm: [0008] 18 d3 e0 79 03 0d 78 00
+platform caam_sm: [0016] 5f 2a 05 ca c3 74 2b f2
+platform caam_sm: [0024] bc 0a 3a b0 05 61 28 ba
+platform caam_sm: 64-bit unwritten blob:
+platform caam_sm: [0000] 00 00 00 00 00 00 00 00
+platform caam_sm: [0008] 00 00 00 00 00 00 00 00
+platform caam_sm: [0016] 00 00 00 00 00 00 00 00
+platform caam_sm: [0024] 00 00 00 00 00 00 00 00
+platform caam_sm: [0032] 00 00 00 00 00 00 00 00
+platform caam_sm: [0040] 00 00 00 00 00 00 00 00
+platform caam_sm: [0048] 00 00 00 00 00 00 00 00
+platform caam_sm: [0056] 00 00 00 00 00 00 00 00
+platform caam_sm: [0064] 00 00 00 00 00 00 00 00
+platform caam_sm: [0072] 00 00 00 00 00 00 00 00
+platform caam_sm: [0080] 00 00 00 00 00 00 00 00
+platform caam_sm: [0088] 00 00 00 00 00 00 00 00
+platform caam_sm: 128-bit unwritten blob:
+platform caam_sm: [0000] 00 00 00 00 00 00 00 00
+platform caam_sm: [0008] 00 00 00 00 00 00 00 00
+platform caam_sm: [0016] 00 00 00 00 00 00 00 00
+platform caam_sm: [0024] 00 00 00 00 00 00 00 00
+platform caam_sm: [0032] 00 00 00 00 00 00 00 00
+platform caam_sm: [0040] 00 00 00 00 00 00 00 00
+platform caam_sm: [0048] 00 00 00 00 00 00 00 00
+platform caam_sm: [0056] 00 00 00 00 00 00 00 00
+platform caam_sm: [0064] 00 00 00 00 00 00 00 00
+platform caam_sm: [0072] 00 00 00 00 00 00 00 00
+platform caam_sm: [0080] 00 00 00 00 00 00 00 00
+platform caam_sm: [0088] 00 00 00 00 00 00 00 00
+platform caam_sm: 196-bit unwritten blob:
+platform caam_sm: [0000] 00 00 00 00 00 00 00 00
+platform caam_sm: [0008] 00 00 00 00 00 00 00 00
+platform caam_sm: [0016] 00 00 00 00 00 00 00 00
+platform caam_sm: [0024] 00 00 00 00 00 00 00 00
+platform caam_sm: [0032] 00 00 00 00 00 00 00 00
+platform caam_sm: [0040] 00 00 00 00 00 00 00 00
+platform caam_sm: [0048] 00 00 00 00 00 00 00 00
+platform caam_sm: [0056] 00 00 00 00 00 00 00 00
+platform caam_sm: [0064] 00 00 00 00 00 00 00 00
+platform caam_sm: [0072] 00 00 00 00 00 00 00 00
+platform caam_sm: [0080] 00 00 00 00 00 00 00 00
+platform caam_sm: [0088] 00 00 00 00 00 00 00 00
+platform caam_sm: 256-bit unwritten blob:
+platform caam_sm: [0000] 00 00 00 00 00 00 00 00
+platform caam_sm: [0008] 00 00 00 00 00 00 00 00
+platform caam_sm: [0016] 00 00 00 00 00 00 00 00
+platform caam_sm: [0024] 00 00 00 00 00 00 00 00
+platform caam_sm: [0032] 00 00 00 00 00 00 00 00
+platform caam_sm: [0040] 00 00 00 00 00 00 00 00
+platform caam_sm: [0048] 00 00 00 00 00 00 00 00
+platform caam_sm: [0056] 00 00 00 00 00 00 00 00
+platform caam_sm: [0064] 00 00 00 00 00 00 00 00
+platform caam_sm: [0072] 00 00 00 00 00 00 00 00
+platform caam_sm: [0080] 00 00 00 00 00 00 00 00
+platform caam_sm: [0088] 00 00 00 00 00 00 00 00
+platform caam_sm: 64-bit black key in blob:
+platform caam_sm: [0000] df 10 c9 46 1a 6d d7 1f
+platform caam_sm: [0008] b6 43 41 ed c3 ab 46 69
+platform caam_sm: [0016] 5e bb ac e0 18 a8 92 2a
+platform caam_sm: [0024] a8 a2 fa e8 84 42 57 68
+platform caam_sm: [0032] 31 18 11 45 c8 34 e1 ff
+platform caam_sm: [0040] ac 79 4c 56 2f 6f d6 72
+platform caam_sm: [0048] 43 49 4e cb 6a 94 9a 93
+platform caam_sm: [0056] 00 00 00 00 00 00 00 00
+platform caam_sm: [0064] 00 00 00 00 00 00 00 00
+platform caam_sm: [0072] 00 00 00 00 00 00 00 00
+platform caam_sm: [0080] 00 00 00 00 00 00 00 00
+platform caam_sm: [0088] 00 00 00 00 00 00 00 00
+platform caam_sm: 128-bit black key in blob:
+platform caam_sm: [0000] eb e8 45 ab c9 d5 6d bd
+platform caam_sm: [0008] 35 c9 a0 2e ea 3d e1 cb
+platform caam_sm: [0016] 5e 3b 70 24 22 c9 3d 03
+platform caam_sm: [0024] da 78 5c a9 6a b9 49 b4
+platform caam_sm: [0032] 53 30 15 78 64 72 45 0d
+platform caam_sm: [0040] ca a7 d0 98 07 f7 b9 a2
+platform caam_sm: [0048] 07 5a 46 04 1b f4 b6 66
+platform caam_sm: [0056] 40 3c 45 85 51 c0 b2 21
+platform caam_sm: [0064] 00 00 00 00 00 00 00 00
+platform caam_sm: [0072] 00 00 00 00 00 00 00 00
+platform caam_sm: [0080] 00 00 00 00 00 00 00 00
+platform caam_sm: [0088] 00 00 00 00 00 00 00 00
+platform caam_sm: 192-bit black key in blob:
+platform caam_sm: [0000] aa 0e 23 b4 5f e9 6f 7d
+platform caam_sm: [0008] 6a f4 50 29 dc 27 3f 50
+platform caam_sm: [0016] 3d 6b df 2e 3b c5 dd 7f
+platform caam_sm: [0024] 25 08 13 e3 60 94 c3 65
+platform caam_sm: [0032] 1e 59 fd 6b e0 7b e9 06
+platform caam_sm: [0040] bb 87 90 8e 7d ca 59 e5
+platform caam_sm: [0048] e4 75 68 8b 03 42 97 63
+platform caam_sm: [0056] af da 5e 20 80 ad 6a b8
+platform caam_sm: [0064] 59 bc fa 14 a2 e0 25 7d
+platform caam_sm: [0072] 00 00 00 00 00 00 00 00
+platform caam_sm: [0080] 00 00 00 00 00 00 00 00
+platform caam_sm: [0088] 00 00 00 00 00 00 00 00
+platform caam_sm: 256-bit black key in blob:
+platform caam_sm: [0000] cb 94 8b 00 7f 7e db 9a
+platform caam_sm: [0008] f2 f7 b1 38 43 4d 2b 44
+platform caam_sm: [0016] 9b 02 4b 67 b5 d3 a7 76
+platform caam_sm: [0024] c8 9c 5a 68 f7 31 59 e5
+platform caam_sm: [0032] 48 5e 5a 03 38 56 8f e6
+platform caam_sm: [0040] 64 2c e6 d2 e5 ce bd ab
+platform caam_sm: [0048] 53 0c 4c 15 fe 2e 5a 6b
+platform caam_sm: [0056] 8b 19 78 35 6e f7 0d f5
+platform caam_sm: [0064] 19 39 d7 0a c2 b1 57 7d
+platform caam_sm: [0072] 1b ad e9 38 e4 11 00 cd
+platform caam_sm: [0080] 00 00 00 00 00 00 00 00
+platform caam_sm: [0088] 00 00 00 00 00 00 00 00
+platform caam_sm: restored 64-bit black key:
+platform caam_sm: [0000] 8c 06 47 67 fb a1 ad 9f
+platform caam_sm: [0008] 0e c3 5f 26 6c f6 a4 b4
+platform caam_sm: restored 128-bit black key:
+platform caam_sm: [0000] 55 6c 1d c8 ed d7 54 66
+platform caam_sm: [0008] 38 1e 0d 55 4f be 6e 27
+platform caam_sm: restored 192-bit black key:
+platform caam_sm: [0000] 70 63 a9 2e 19 17 a3 05
+platform caam_sm: [0008] 20 a2 1a df 7e 91 ff 18
+platform caam_sm: [0016] 31 5e 6b 90 5d 39 ce c1
+platform caam_sm: [0024] b9 6e 7a 63 8d 30 a7 a7
+platform caam_sm: restored 256-bit black key:
+platform caam_sm: [0000] 5f 8e 56 21 27 66 18 0e
+platform caam_sm: [0008] 18 d3 e0 79 03 0d 78 00
+platform caam_sm: [0016] 5f 2a 05 ca c3 74 2b f2
+platform caam_sm: [0024] bc 0a 3a b0 05 61 28 ba
+snvs-secvio 20cc000.caam-snvs: can't get snvs clock
+snvs-secvio 20cc000.caam-snvs: violation handlers armed - non-secure state
+hidraw: raw HID events driver (C) Jiri Kosina
+input: PixArt Dell MS116 USB Optical Mouse as /devices/soc0/soc/2100000.aips-bus/2184200.usb/ci_hdrc.1/usb1/1-1/1-1.2/1-1.2:1.0/0003:413C:301A.0001/input/input1
+hid-generic 0003:413C:301A.0001: input,hidraw0: USB HID v1.11 Mouse [PixArt Dell MS116 USB Optical Mouse] on usb-ci_hdrc.1-1.2/input0
+usbcore: registered new interface driver usbhid
+usbhid: USB HID core driver
+ashmem: initialized
+usbcore: registered new interface driver snd-usb-audio
+sgtl5000 2-000a: sgtl5000 revision 0x11
+fsl-ssi-dai 2028000.ssi: No cache defaults, reading back from HW
+imx-sgtl5000 sound: sgtl5000 <-> 2028000.ssi mapping ok
+imx-spdif sound-spdif: snd-soc-dummy-dai <-> 2004000.spdif mapping ok
+imx-audio-hdmi sound-hdmi: hdmi-hifi.0 <-> soc:hdmi_audio@00120000 mapping ok
+NET: Registered protocol family 26
+u32 classifier
+    Actions configured
+Netfilter messages via NETLINK v0.30.
+nf_conntrack version 0.5.0 (16384 buckets, 65536 max)
+ctnetlink v0.93: registering with nfnetlink.
+xt_time: kernel timezone is -0000
+ip_tables: (C) 2000-2006 Netfilter Core Team
+arp_tables: arp_tables: (C) 2002 David S. Miller
+Initializing XFRM netlink socket
+NET: Registered protocol family 10
+mip6: Mobile IPv6
+ip6_tables: (C) 2000-2006 Netfilter Core Team
+sit: IPv6, IPv4 and MPLS over IPv4 tunneling driver
+NET: Registered protocol family 17
+NET: Registered protocol family 15
+bridge: filtering via arp/ip/ip6tables is no longer available by default. Update your scripts to load br_netfilter if you need this.
+can: controller area network core (rev 20120528 abi 9)
+NET: Registered protocol family 29
+can: raw protocol (rev 20120528)
+can: broadcast manager protocol (rev 20161123 t)
+can: netlink gateway (rev 20130117) max_hops=1
+Bluetooth: RFCOMM TTY layer initialized
+Bluetooth: RFCOMM socket layer initialized
+Bluetooth: RFCOMM ver 1.11
+Bluetooth: BNEP (Ethernet Emulation) ver 1.3
+Bluetooth: BNEP filters: protocol multicast
+Bluetooth: BNEP socket layer initialized
+Bluetooth: HIDP (Human Interface Emulation) ver 1.2
+Bluetooth: HIDP socket layer initialized
+8021q: 802.1Q VLAN Support v1.8
+Key type dns_resolver registered
+cpu cpu0: Registered imx6q-cpufreq
+registered taskstats version 1
+imx_thermal 2000000.aips-bus:tempmon: Industrial CPU temperature grade - max:105C critical:100C passive:95C
+dhd_module_init in
+input: gpio-keys as /devices/soc0/gpio-keys/input/input2
+snvs_rtc 20cc000.snvs:snvs-rtc-lp: setting system clock to 1970-01-01 00:02:14 UTC (134)
+usb_otg_vbus: disabling
+ALSA device list:
+  #0: imx6q-apalis-sgtl5000
+  #1: imx-spdif
+  #2: imx-hdmi-soc
+Freeing unused kernel memory: 1024K
+init: init first stage started!
+SELinux:  Permission validate_trans in class security not defined in policy.
+SELinux:  Class cap_userns not defined in policy.
+SELinux:  Class cap2_userns not defined in policy.
+SELinux: the above unknown classes and permissions will be denied
+audit: type=1403 audit(134.620:2): policy loaded auid=4294967295 ses=4294967295
+init: (Initializing SELinux non-enforcing took 0.11s.)
+init: init second stage started!
+init: Running restorecon...
+init: waitpid failed: No child processes
+init: (Loading properties from /default.prop took 0.00s.)
+init: (Parsing /init.environ.rc took 0.00s.)
+init: (Parsing /init.usb.rc took 0.00s.)
+init: (Parsing init.freescale.usb.rc took 0.00s.)
+init: (Parsing init.freescale.i.MX6Q.rc took 0.00s.)
+init: (Parsing init.freescale.emmc.rc took 0.00s.)
+init: (Parsing /init.freescale.rc took 0.02s.)
+ueventd: ueventd started!
+ueventd: Coldboot took 0.44s.
+Console: switching to colour dummy device 80x30
+watchdogd: started (interval 10, margin 20)!
+EXT4-fs (mmcblk0p3): mounted filesystem with ordered data mode. Opts: barrier=1
+EXT4-fs (mmcblk0p10): Ignoring removed nomblk_io_submit option
+EXT4-fs (mmcblk0p10): mounted filesystem with ordered data mode. Opts: nomblk_io_submit,noauto_da_alloc,errors=panic
+EXT4-fs (mmcblk0p4): Ignoring removed nomblk_io_submit option
+EXT4-fs (mmcblk0p4): mounted filesystem with ordered data mode. Opts: nomblk_io_submit
+EXT4-fs (mmcblk0p5): mounted filesystem with ordered data mode. Opts: (null)
+file system registered
+using random self ethernet address
+using random host ethernet address
+zram0: detected capacity change from 0 to 314572800
+logd.auditd: start
+logd.klogd: 8163387333
+Adding 307196k swap on /dev/block/zram0.  Priority:-1 extents:1 across:307196k SS
+binder: 256:256 transaction failed 29189, size 0-0
+logd.daemon: reinit
+type=1400 audit(137.570:3): avc: denied { entrypoint } for pid=263 comm="init" path="/system/bin/can-config.sh" dev="mmcblk0p3" ino=254 scontext=u:r:obd:s0 tcontext=u:object_r:system_file:s0 tclass=file permissive=1
+toradex_apalis6q:/ # type=1400 audit(137.580:4): avc: denied { read execute } for pid=263 comm="can-config.sh" path="/system/bin/sh" dev="mmcblk0p3" ino=441 scontext=u:r:obd:s0 tcontext=u:object_r:shell_exec:s0 tclass=file permissive=1
+type=1400 audit(137.620:5): avc: denied { getattr } for pid=263 comm="can-config.sh" path="/system/bin/sh" dev="mmcblk0p3" ino=441 scontext=u:r:obd:s0 tcontext=u:object_r:shell_exec:s0 tclass=file permissive=1
+type=1400 audit(137.630:6): avc: denied { getattr } for pid=263 comm="can-config.sh" path="/vendor" dev="rootfs" ino=6500 scontext=u:r:obd:s0 tcontext=u:object_r:rootfs:s0 tclass=lnk_file permissive=1
+type=1400 audit(137.790:7): avc: denied { execute_no_trans } for pid=278 comm="can-config.sh" path="/system/bin/ip" dev="mmcblk0p3" ino=333 scontext=u:r:obd:s0 tcontext=u:object_r:system_file:s0 tclass=file permissive=1
+type=1400 audit(137.800:8): avc: denied { create } for pid=264 comm="obd" scontext=u:r:obd:s0 tcontext=u:r:obd:s0 tclass=socket permissive=1
+type=1400 audit(137.800:9): avc: denied { ioctl } for pid=264 comm="obd" path="socket:[11382]" dev="sockfs" ino=11382 ioctlcmd=0x8933 scontext=u:r:obd:s0 tcontext=u:r:obd:s0 tclass=socket permissive=1
+IPv6: ADDRCONF(NETDEV_CHANGE): can0: link becomes ready
+ERROR: v4l2 capture: slave not found! V4L2_CID_HUE
+healthd: No battery devices found
+ERROR: v4l2 capture: slave not found! V4L2_CID_HUE
+Aravinth:fb_match_mode 
+Aravinth:fb_var_to_videomode 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth: mxc_hdmi_phy_init 
+Aravinth:fb_var_to_videomode 
+Aravinth:fb_add_videomode 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+init: Starting service 'bootanim'...
+capability: warning: `main' uses 32-bit capabilities (legacy support in use)
+init: write_file: Unable to open '/sys/devices/system/cpu/cpufreq/interactive/timer_rate': No such file or directory
+init: write_file: Unable to open '/sys/devices/system/cpu/cpufreq/interactive/min_sample_time': No such file or directory
+init: write_file: Unable to open '/sys/devices/system/cpu/cpufreq/interactive/go_hispeed_load': No such file or directory
+type=1400 audit(148.650:34): avc: denied { write } for pid=264 comm="obd" path="socket:[11382]" dev="sockfs" ino=11382 scontext=u:r:obd:s0 tcontext=u:r:obd:s0 tclass=socket permissive=1
+random: crng init done
+init: write_file: Unable to open '/proc/sys/vm/extra_free_kbytes': No such file or directory
+acc_open
+acc_release
+
+toradex_apalis6q:/ # Micrel KSZ9031 Gigabit PHY 2188000.ethernet-1:07: attached PHY driver [Micrel KSZ9031 Gigabit PHY] (mii_bus:phy_addr=2188000.ethernet-1:07, irq=120)
+IPv6: ADDRCONF(NETDEV_UP): eth0: link is not ready
+
+toradex_apalis6q:/ # 
+toradex_apalis6q:/ # 
+toradex_apalis6q:/ # 
+toradex_apalis6q:/ # 
+toradex_apalis6q:/ # type=1400 audit(163.570:35): avc: denied { write } for pid=264 comm="obd" path="socket:[11382]" dev="sockfs" ino=11382 scontext=u:r:obd:s0 tcontext=u:r:obd:s0 tclass=socket permissive=1
+
+toradex_apalis6q:/ # init: Service 'bootanim' (pid 346) exited with status 0
+init: Starting service 'exec 3 (/system/bin/bootstat)'...
+type=1400 audit(170.400:36): avc: denied { write } for pid=264 comm="obd" path="socket:[11382]" dev="sockfs" ino=11382 scontext=u:r:obd:s0 tcontext=u:r:obd:s0 tclass=socket permissive=1
+init: Service 'exec 3 (/system/bin/bootstat)' (pid 1022) exited with status 0
+init: Starting service 'exec 4 (/system/bin/bootstat)'...
+init: Service 'exec 4 (/system/bin/bootstat)' (pid 1032) exited with status 0
+init: Starting service 'exec 5 (/system/bin/bootstat)'...
+init: Service 'exec 5 (/system/bin/bootstat)' (pid 1033) exited with status 0
+init: Starting service 'exec 6 (/system/bin/bootstat)'...
+init: Service 'exec 6 (/system/bin/bootstat)' (pid 1034) exited with status 0
+
+toradex_apalis6q:/ # 
+toradex_apalis6q:/ # 
+toradex_apalis6q:/ # 
+toradex_apalis6q:/ # 
+toradex_apalis6q:/ # dmesg | grep -r    type=1400 audit(176.510:37): avc: denied { write } for pid=264 comm="obd" path="socket:[11382]" dev="sockfs" ino=11382 scontext=u:r:obd:s0 tcontext=u:r:obd:s0 tclass=socket permissive=1
+sw_edid
+Aravinth: i2c_adap_sw_edid_init 
+toradex_apalis6q:/ # 
+toradex_apalis6q:/ # 
+toradex_apalis6q:/ # toradex_apalis6q:/ # dmesg | grep sw_edid                                      
+Aravinth: i2c_adap_sw_edid_init 
+toradex_apalis6q:/ # 
+toradex_apalis6q:/ # 
+toradex_apalis6q:/ # 
+toradex_apalis6q:/ # type=1400 audit(180.390:38): avc: denied { write } for pid=1328 comm="Thread-2" name="vcan" dev="tmpfs" ino=11390 scontext=u:r:untrusted_app:s0:c512,c768 tcontext=u:object_r:socket_device:s0 tclass=sock_file permissive=1
+type=1400 audit(180.390:39): avc: denied { connectto } for pid=1328 comm="Thread-2" path="/dev/socket/vcan" scontext=u:r:untrusted_app:s0:c512,c768 tcontext=u:r:obd:s0 tclass=unix_stream_socket permissive=1
+
+toradex_apalis6q:/ # 
+toradex_apalis6q:/ # 
+toradex_apalis6q:/ # 
+
+U-Boot 2017.03-00002-gebf9dc2527 (Jan 29 2018 - 17:39:17 +0530)
+
+CPU:   Freescale i.MX6Q rev1.5 at 792 MHz
+Reset cause: POR
+I2C:   ready
+DRAM:  2 GiB
+PMIC: device id: 0x10, revision id: 0x21
+PMIC: programmed
+MMC:   FSL_SDHC: 0, FSL_SDHC: 1, FSL_SDHC: 2
+Unable to allocate framebuffer memory
+In:    serial
+Out:   serial
+Err:   serial
+Model: Toradex Apalis iMX6 Quad 2GB IT V1.1C, Serial# 05146387
+flash target is MMC:0
+Net:   using PHY at 7
+FEC [PRIME]
+Fastboot: Normal
+Hit any key to stop autoboot:  1  0 
+Apalis iMX6 # bmode usb
+resetting ...
+
+
+
+
+
+U-Boot 2017.03-00002-gebf9dc2527 (Jan 29 2018 - 17:39:17 +0530)
+
+CPU:   Freescale i.MX6Q rev1.5 at 792 MHz
+Reset cause: POR
+I2C:   ready
+DRAM:  2 GiB
+PMIC: device id: 0x10, revision id: 0x21
+PMIC: programmed
+MMC:   FSL_SDHC: 0, FSL_SDHC: 1, FSL_SDHC: 2
+Unable to allocate framebuffer memory
+In:    serial
+Out:   serial
+Err:   serial
+Model: Toradex Apalis iMX6 Quad 2GB IT V1.1C, Serial# 05146387
+flash target is MMC:0
+Net:   using PHY at 7
+FEC [PRIME]
+Fastboot: Normal
+Hit any key to stop autoboot:  1  0 
+boota mmc0 
+CACHE: Misaligned operation at range [8ffb79a0, 8ffb7a20]
+CACHE: Misaligned operation at range [8ffb79a0, 8ffb7a20]
+kernel   @ 14008000 (9921584)
+ramdisk  @ 15000000 (1628986)
+fdt      @ 14f00000 (54139)
+## Booting Android Image at 0x12000000 ...
+Kernel load addr 0x14008000 size 9690 KiB
+Kernel command line: console=ttymxc0,115200 init=/init video=mxcfb1:off video=mxcfb0:dev=hdmi,640x480M@60,if=RGB24,bpp=16 video=mxcfb2:off video=mxcfb3:off fbmem=32M vmalloc=400M androidboot.console=ttymxc0 consoleblank=0 androidboot.hardware=freescale cma=448M androidboot.selinux=permissive androidboot.dm_verity=disabled androidboot.serialno=1b2429d4ea997115 androidboot.storage_type=emmc
+## Flattened Device Tree blob at 14f00000
+   Booting using the fdt blob at 0x14f00000
+   Loading Kernel Image ... OK
+   Using Device Tree in place at 14f00000, end 14f1037a
+
+Starting kernel ...
+
+Booting Linux on physical CPU 0x0
+Linux version 4.9.67-07229-gdc6c16ec0433-dirty (embadmin@ubuntu) (gcc version 4.9 20150123 (prerelease) (GCC) ) #67 SMP PREEMPT Thu Feb 15 15:25:35 IST 2018
+CPU: ARMv7 Processor [412fc09a] revision 10 (ARMv7), cr=10c53c7d
+CPU: PIPT / VIPT nonaliasing data cache, VIPT aliasing instruction cache
+OF: fdt:Machine model: Aravinth : Toradex Apalis iMX6Q/D Module on Ixora V1.1 Carrier Board
+cma: Reserved 448 MiB at 0x1a000000
+Memory policy: Data cache writealloc
+percpu: Embedded 15 pages/cpu @e66b3000 s31040 r8192 d22208 u61440
+Built 1 zonelists in Zone order, mobility grouping on.  Total pages: 523056
+Kernel command line: console=ttymxc0,115200 init=/init video=mxcfb1:off video=mxcfb0:dev=hdmi,640x480M@60,if=RGB24,bpp=16 video=mxcfb2:off video=mxcfb3:off fbmem=32M vmalloc=400M androidboot.console=ttymxc0 consoleblank=0 androidboot.hardware=freescale cma=448M androidboot.selinux=permissive androidboot.dm_verity=disabled androidboot.serialno=1b2429d4ea997115 androidboot.storage_type=emmc
+PID hash table entries: 4096 (order: 2, 16384 bytes)
+Dentry cache hash table entries: 131072 (order: 7, 524288 bytes)
+Inode-cache hash table entries: 65536 (order: 6, 262144 bytes)
+Memory: 1597024K/2097152K available (13312K kernel code, 1154K rwdata, 4044K rodata, 1024K init, 604K bss, 41376K reserved, 458752K cma-reserved, 1466368K highmem)
+Virtual kernel memory layout:
+    vector  : 0xffff0000 - 0xffff1000   (   4 kB)
+    fixmap  : 0xffc00000 - 0xfff00000   (3072 kB)
+    vmalloc : 0xe7000000 - 0xff800000   ( 392 MB)
+    lowmem  : 0xc0000000 - 0xe6800000   ( 616 MB)
+    pkmap   : 0xbfe00000 - 0xc0000000   (   2 MB)
+    modules : 0xbf000000 - 0xbfe00000   (  14 MB)
+      .text : 0xc0008000 - 0xc0e00000   (14304 kB)
+      .init : 0xc1300000 - 0xc1400000   (1024 kB)
+      .data : 0xc1400000 - 0xc1520b98   (1155 kB)
+       .bss : 0xc1520b98 - 0xc15b7c28   ( 605 kB)
+SLUB: HWalign=64, Order=0-3, MinObjects=0, CPUs=4, Nodes=1
+Preemptible hierarchical RCU implementation.
+	Build-time adjustment of leaf fanout to 32.
+NR_IRQS:16 nr_irqs:16 16
+L2C-310 errata 752271 769419 enabled
+L2C-310 enabling early BRESP for Cortex-A9
+L2C-310 full line of zeros enabled for Cortex-A9
+L2C-310 ID prefetch enabled, offset 16 lines
+L2C-310 dynamic clock gating enabled, standby mode enabled
+L2C-310 cache controller enabled, 16 ways, 1024 kB
+L2C-310: CACHE_ID 0x410000c7, AUX_CTRL 0x76470001
+Switching to timer-based delay loop, resolution 333ns
+sched_clock: 32 bits at 3000kHz, resolution 333ns, wraps every 715827882841ns
+clocksource: mxc_timer1: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 637086815595 ns
+Console: colour dummy device 80x30
+Calibrating delay loop (skipped), value calculated using timer frequency.. 6.00 BogoMIPS (lpj=30000)
+pid_max: default: 32768 minimum: 301
+Security Framework initialized
+SELinux:  Initializing.
+Mount-cache hash table entries: 2048 (order: 1, 8192 bytes)
+Mountpoint-cache hash table entries: 2048 (order: 1, 8192 bytes)
+CPU: Testing write buffer coherency: ok
+CPU0: update cpu_capacity 1024
+CPU0: thread -1, cpu 0, socket 0, mpidr 80000000
+Setting up static identity map for 0x10100000 - 0x10100058
+CPU1: update cpu_capacity 1024
+CPU1: thread -1, cpu 1, socket 0, mpidr 80000001
+CPU2: update cpu_capacity 1024
+CPU2: thread -1, cpu 2, socket 0, mpidr 80000002
+CPU3: update cpu_capacity 1024
+CPU3: thread -1, cpu 3, socket 0, mpidr 80000003
+Brought up 4 CPUs
+SMP: Total of 4 processors activated (24.00 BogoMIPS).
+CPU: All CPU(s) started in SVC mode.
+CPU3: update max cpu_capacity 1024
+devtmpfs: initialized
+CPU2: update max cpu_capacity 1024
+VFP support v0.3: implementor 41 architecture 3 part 30 variant 9 rev 4
+clocksource: jiffies: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 19112604462750000 ns
+futex hash table entries: 1024 (order: 4, 65536 bytes)
+pinctrl core: initialized pinctrl subsystem
+NET: Registered protocol family 16
+DMA: preallocated 256 KiB pool for atomic coherent allocations
+cpuidle: using governor menu
+CPU identified as i.MX6Q, silicon rev 1.5
+hw-breakpoint: found 5 (+1 reserved) breakpoint and 1 watchpoint registers.
+hw-breakpoint: maximum watchpoint size is 4 bytes.
+imx6q-pinctrl 20e0000.iomuxc: initialized IMX pinctrl driver
+imx-gpc 20dc000.gpc: no fsl,ldo-bypass found!
+imx-gpc 20dc000.gpc: Registered imx-gpc
+mxs-dma 110000.dma-apbh: initialized
+usb_host_vbus: supplied by usb_host_vbus_hub
+SCSI subsystem initialized
+usbcore: registered new interface driver usbfs
+usbcore: registered new interface driver hub
+usbcore: registered new device driver usb
+2000000.aips-bus:usbphy_nop1 supply vcc not found, using dummy regulator
+2000000.aips-bus:usbphy_nop2 supply vcc not found, using dummy regulator
+i2c i2c-1: IMX I2C adapter registered
+i2c i2c-1: can't use DMA, using PIO instead.
+stmpe-i2c 2-0041: stmpe811 detected, chip id: 0x811
+i2c i2c-2: IMX I2C adapter registered
+i2c i2c-2: can't use DMA, using PIO instead.
+i2c i2c-3: IMX I2C adapter registered
+i2c i2c-3: can't use DMA, using PIO instead.
+Aravinth: i2c_adap_sw_edid_init 
+Linux video capture interface: v2.00
+pps_core: LinuxPPS API ver. 1 registered
+pps_core: Software ver. 5.3.6 - Copyright 2005-2007 Rodolfo Giometti <giometti@linux.it>
+PTP clock support registered
+imx-ipuv3 2400000.ipu: IPU DMFC NORMAL mode: 1(0~1), 5B(4,5), 5F(6,7)
+imx-ipuv3 2800000.ipu: IPU DMFC NORMAL mode: 1(0~1), 5B(4,5), 5F(6,7)
+mxc_mipi_csi2 21dc000.mipi_csi: i.MX MIPI CSI2 driver probed ipu0 csi1
+mxc_mipi_csi2 21dc000.mipi_csi: i.MX MIPI CSI2 dphy version is 0x3130302a
+MIPI CSI2 driver module loaded
+imx rpmsg driver is registered.
+Advanced Linux Sound Architecture Driver Initialized.
+Bluetooth: Core ver 2.22
+NET: Registered protocol family 31
+Bluetooth: HCI device and connection manager initialized
+Bluetooth: HCI socket layer initialized
+Bluetooth: L2CAP socket layer initialized
+Bluetooth: SCO socket layer initialized
+clocksource: Switched to clocksource mxc_timer1
+VFS: Disk quotas dquot_6.6.0
+VFS: Dquot-cache hash table entries: 1024 (order 0, 4096 bytes)
+NET: Registered protocol family 2
+TCP established hash table entries: 8192 (order: 3, 32768 bytes)
+TCP bind hash table entries: 8192 (order: 4, 65536 bytes)
+TCP: Hash tables configured (established 8192 bind 8192)
+UDP hash table entries: 512 (order: 2, 16384 bytes)
+UDP-Lite hash table entries: 512 (order: 2, 16384 bytes)
+NET: Registered protocol family 1
+RPC: Registered named UNIX socket transport module.
+RPC: Registered udp transport module.
+RPC: Registered tcp transport module.
+RPC: Registered tcp NFSv4.1 backchannel transport module.
+Trying to unpack rootfs image as initramfs...
+Freeing initrd memory: 1592K
+hw perfevents: enabled with armv7_cortex_a9 PMU driver, 7 counters available
+Bus freq driver module loaded
+audit: initializing netlink subsys (disabled)
+audit: type=2000 audit(0.880:1): initialized
+workingset: timestamp_bits=30 max_order=19 bucket_order=0
+NFS: Registering the id_resolver key type
+Key type id_resolver registered
+Key type id_legacy registered
+ntfs: driver 2.1.32 [Flags: R/W DEBUG].
+jffs2: version 2.2. (NAND) Â© 2001-2006 Red Hat, Inc.
+fuse init (API version 7.26)
+NET: Registered protocol family 38
+bounce: pool size: 64 pages
+io scheduler noop registered
+io scheduler deadline registered
+io scheduler cfq registered (default)
+backlight supply power not found, using dummy regulator
+Aravinth: mxc_hdmi_i2c_probe 
+Aravinth: mxc_hdmi_probe 
+20e0000.hdmi_video supply HDMI not found, using dummy regulator
+Aravinth: mxc_hdmi_disp_init 
+mxc_hdmi 20e0000.hdmi_video: Detected HDMI controller 0x13:0xa:0xa0:0xc1
+Aravinth:fb_find_mode 
+modedb fb_find_mode: CVT mode 640x480@60Hz
+fbcvt: 640x480@60: CVT Name - .307M3
+Aravinth:fb_try_mode 
+modedb fb_try_mode: Trying mode noname 640x480-16@60
+modedb fb_find_mode: modedb CVT: CVT mode ok
+Aravinth:fb_destroy_modelist 
+Aravinth:fb_add_videomode 
+Aravinth:fb_add_videomode 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_add_videomode 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_add_videomode 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_add_videomode 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_add_videomode 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_add_videomode 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_add_videomode 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_add_videomode 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_add_videomode 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_add_videomode 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_add_videomode 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_add_videomode 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_add_videomode 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_add_videomode 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_add_videomode 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_add_videomode 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_add_videomode 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_add_videomode 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_add_videomode 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_add_videomode 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_add_videomode 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_var_to_videomode 
+Aravinth:fb_find_nearest_mode 
+Aravinth: fb_videomode_to_var 
+Aravinth: fb_videomode_to_var var->xres=640 yres=480 xres_virtual=640 >yres_virtual=480 pixclock=39722 
+Aravinth: fb_videomode_to_var Done
+mxc_sdc_fb fb@0: registered mxc display driver hdmi
+Aravinth:fb_var_to_videomode 
+Aravinth:fb_add_videomode 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_match_mode 
+Aravinth:fb_var_to_videomode 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth: mxc_hdmi_phy_init 
+Aravinth:fb_var_to_videomode 
+Aravinth:fb_add_videomode 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_var_to_videomode 
+Aravinth:fb_add_videomode 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_match_mode 
+Aravinth:fb_var_to_videomode 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_match_mode 
+Aravinth:fb_var_to_videomode 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth: mxc_hdmi_phy_init 
+Aravinth: fb_videomode_to_var 
+Aravinth: fb_videomode_to_var var->xres=640 yres=480 xres_virtual=640 >yres_virtual=480 pixclock=39722 
+Aravinth: fb_videomode_to_var Done
+Console: switching to colour frame buffer device 80x30
+Aravinth: fb_videomode_to_var 
+Aravinth: fb_videomode_to_var var->xres=640 yres=480 xres_virtual=640 >yres_virtual=480 pixclock=39722 
+Aravinth: fb_videomode_to_var Done
+Aravinth:fb_var_to_videomode 
+Aravinth:fb_add_videomode 
+Aravinth:fb_var_to_videomode 
+Aravinth:fb_add_videomode 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_var_to_videomode 
+Aravinth:fb_add_videomode 
+Aravinth:fb_mode_is_equal 
+mxc_sdc_fb fb@1: Can't get fb option for mxcfb1!
+mxc_sdc_fb fb@2: Can't get fb option for mxcfb2!
+mxc_sdc_fb fb@3: Can't get fb option for mxcfb3!
+imx-sdma 20ec000.sdma: no iram assigned, using external mem
+imx-sdma 20ec000.sdma: loaded firmware 3.3
+pfuze100-regulator 2-0008: Full layer: 2, Metal layer: 1
+pfuze100-regulator 2-0008: FAB: 0, FIN: 0
+pfuze100-regulator 2-0008: pfuze100 found.
+mxc_hdmi 20e0000.hdmi_video: Read EDID again
+2020000.serial: ttymxc0 at MMIO 0x2020000 (irq = 29, base_baud = 5000000) is a IMX
+Aravinth: mxc_hdmi_cable_connected edid_status=-1
+Aravinth: mxc_hdmi_default_modelist 
+mxc_hdmi 20e0000.hdmi_video: create default modelist
+Aravinth:fb_destroy_modelist 
+Aravinth: mxc_hdmi_default_modelist 
+Aravinth:fb_add_videomode 
+Aravinth: fb_videomode_to_var 
+Aravinth: fb_videomode_to_var var->xres=640 yres=480 xres_virtual=640 >yres_virtual=480 pixclock=39722 
+Aravinth: fb_videomode_to_var Done
+Aravinth:fb_var_to_videomode 
+Aravinth:fb_mode_is_equal 
+Aravinth: fb_videomode_to_var 
+Aravinth: fb_videomode_to_var var->xres=640 yres=480 xres_virtual=640 >yres_virtual=480 pixclock=39722 
+Aravinth: fb_videomode_to_var Done
+Aravinth:fb_find_nearest_mode 
+Aravinth: fb_videomode_to_var 
+Aravinth: fb_videomode_to_var var->xres=640 yres=480 xres_virtual=640 >yres_virtual=480 pixclock=39722 
+Aravinth: fb_videomode_to_var Done
+Aravinth:fb_match_mode 
+Aravinth:fb_var_to_videomode 
+Aravinth:fb_mode_is_equal 
+console [ttymxc0] enabled
+21e8000.serial: ttymxc1 at MMIO 0x21e8000 (irq = 78, base_baud = 5000000) is a IMX
+21f0000.serial: ttymxc3 at MMIO 0x21f0000 (irq = 79, base_baud = 5000000) is a IMX
+21f4000.serial: ttymxc4 at MMIO 0x21f4000 (irq = 80, base_baud = 5000000) is a IMX
+imx sema4 driver is registered.
+[drm] Initialized
+[drm] Initialized vivante 1.0.0 20120216 on minor 0
+brd: module loaded
+loop: module loaded
+zram: Added device: zram0
+ahci-imx 2200000.sata: fsl,transmit-level-mV not specified, using 00000024
+ahci-imx 2200000.sata: fsl,transmit-boost-mdB not specified, using 00000480
+ahci-imx 2200000.sata: fsl,transmit-atten-16ths not specified, using 00002000
+ahci-imx 2200000.sata: fsl,receive-eq-mdB not specified, using 05000000
+Aravinth:fb_match_mode 
+Aravinth:fb_var_to_videomode 
+Aravinth:fb_mode_is_equal 
+Aravinth: mxc_hdmi_phy_init 
+ahci-imx 2200000.sata: SSS flag set, parallel bus scan disabled
+ahci-imx 2200000.sata: AHCI 0001.0300 32 slots 1 ports 3 Gbps 0x1 impl platform mode
+ahci-imx 2200000.sata: flags: ncq sntf stag pm led clo only pmp pio slum part ccc apst 
+scsi host0: ahci-imx
+ata1: SATA max UDMA/133 mmio [mem 0x02200000-0x02203fff] port 0x100 irq 87
+spi_imx 2008000.ecspi: probed
+libphy: Fixed MDIO Bus: probed
+tun: Universal TUN/TAP device driver, 1.6
+tun: (C) 1999-2004 Max Krasnyansky <maxk@qualcomm.com>
+CAN device driver interface
+2090000.flexcan supply xceiver not found, using dummy regulator
+flexcan 2090000.flexcan: device registered (reg_base=e72f4000, irq=38)
+2094000.flexcan supply xceiver not found, using dummy regulator
+flexcan 2094000.flexcan: device registered (reg_base=e72fc000, irq=39)
+2188000.ethernet supply phy not found, using dummy regulator
+Aravinth:fb_var_to_videomode 
+Aravinth:fb_add_videomode 
+Aravinth:fb_mode_is_equal 
+Aravinth: fb_videomode_to_var 
+Aravinth: fb_videomode_to_var var->xres=640 yres=480 xres_virtual=640 >yres_virtual=480 pixclock=39722 
+Aravinth: fb_videomode_to_var Done
+pps pps0: new PPS source ptp0
+libphy: fec_enet_mii_bus: probed
+fec 2188000.ethernet eth0: registered PHC device 0
+PPP generic driver version 2.4.2
+PPP BSD Compression module registered
+PPP Deflate Compression module registered
+PPP MPPE Compression module registered
+NET: Registered protocol family 24
+usbcore: registered new interface driver rtl8xxxu
+usbcore: registered new interface driver kaweth
+pegasus: v0.9.3 (2013/04/25), Pegasus/Pegasus II USB Ethernet driver
+usbcore: registered new interface driver pegasus
+usbcore: registered new interface driver rtl8150
+usbcore: registered new interface driver r8152
+usbcore: registered new interface driver asix
+usbcore: registered new interface driver ax88179_178a
+usbcore: registered new interface driver cdc_ether
+usbcore: registered new interface driver cdc_eem
+usbcore: registered new interface driver net1080
+usbcore: registered new interface driver cdc_subset
+usbcore: registered new interface driver zaurus
+usbcore: registered new interface driver cdc_ncm
+ehci_hcd: USB 2.0 'Enhanced' Host Controller (EHCI) Driver
+ehci-mxc: Freescale On-Chip EHCI Host driver
+ohci_hcd: USB 1.1 'Open' Host Controller (OHCI) Driver
+usbcore: registered new interface driver cdc_acm
+cdc_acm: USB Abstract Control Model driver for USB modems and ISDN adapters
+usbcore: registered new interface driver cdc_wdm
+usbcore: registered new interface driver usb-storage
+usbcore: registered new interface driver usbserial
+usbcore: registered new interface driver usbserial_generic
+usbserial: USB Serial support registered for generic
+usbcore: registered new interface driver ftdi_sio
+usbserial: USB Serial support registered for FTDI USB Serial Device
+usbcore: registered new interface driver option
+usbserial: USB Serial support registered for GSM modem (1-port)
+usbcore: registered new interface driver usbtest
+usbcore: registered new interface driver usb_ehset_test
+2184800.usbmisc supply vbus-wakeup not found, using dummy regulator
+ci_hdrc ci_hdrc.1: EHCI Host Controller
+ci_hdrc ci_hdrc.1: new USB bus registered, assigned bus number 1
+Aravinth:fb_match_mode 
+Aravinth:fb_var_to_videomode 
+Aravinth:fb_mode_is_equal 
+Aravinth: mxc_hdmi_phy_init 
+ci_hdrc ci_hdrc.1: USB 2.0 started, EHCI 1.00
+usb usb1: New USB device found, idVendor=1d6b, idProduct=0002
+usb usb1: New USB device strings: Mfr=3, Product=2, SerialNumber=1
+usb usb1: Product: EHCI Host Controller
+usb usb1: Manufacturer: Linux 4.9.67-07229-gdc6c16ec0433-dirty ehci_hcd
+usb usb1: SerialNumber: ci_hdrc.1
+hub 1-0:1.0: USB hub found
+hub 1-0:1.0: 1 port detected
+mousedev: PS/2 mouse device common for all mice
+usbcore: registered new interface driver xpad
+usbcore: registered new interface driver usb_acecad
+usbcore: registered new interface driver aiptek
+usbcore: registered new interface driver gtco
+usbcore: registered new interface driver hanwang
+usbcore: registered new interface driver kbtab
+Aravinth:fb_var_to_videomode 
+Aravinth:fb_add_videomode 
+Aravinth:fb_mode_is_equal 
+input: stmpe-ts as /devices/soc0/soc/2100000.aips-bus/21a4000.i2c/i2c-2/2-0041/stmpe-ts/input/input0
+snvs_rtc 20cc000.snvs:snvs-rtc-lp: rtc core: registered 20cc000.snvs:snvs-r as rtc0
+i2c /dev entries driver
+IR NEC protocol handler initialized
+IR RC5(x/sz) protocol handler initialized
+IR RC6 protocol handler initialized
+IR JVC protocol handler initialized
+IR Sony protocol handler initialized
+IR SANYO protocol handler initialized
+IR Sharp protocol handler initialized
+IR MCE Keyboard/mouse protocol handler initialized
+IR XMP protocol handler initialized
+mxc_v4l2_output v4l2_out: V4L2 device registered as video16
+mxc_v4l2_output v4l2_out: V4L2 device registered as video17
+ov564x_mipi 3-003c: found pwm2, period=0
+ata1: SATA link down (SStatus 0 SControl 300)
+ahci-imx 2200000.sata: no device found, disabling link.
+ahci-imx 2200000.sata: pass ahci_imx..hotplug=1 to enable hotplug
+ov5640_read_reg:write reg error:reg=300a
+camera ov5640_mipi is not found
+usbcore: registered new interface driver uvcvideo
+USB Video Class driver (1.1.1)
+imx2-wdt 20bc000.wdog: timeout 60 sec (nowayout=0)
+device-mapper: uevent: version 1.0.3
+device-mapper: ioctl: 4.35.0-ioctl (2016-06-23) initialised: dm-devel@redhat.com
+Bluetooth: HCI UART driver ver 2.3
+Bluetooth: HCI UART protocol H4 registered
+Bluetooth: HCI UART protocol BCSP registered
+Bluetooth: HCI UART protocol ATH3K registered
+usbcore: registered new interface driver btusb
+sdhci: Secure Digital Host Controller Interface driver
+sdhci: Copyright(c) Pierre Ossman
+sdhci-pltfm: SDHCI platform and OF driver helper
+sdhci-esdhc-imx 2190000.usdhc: could not get ultra high speed state, work on normal mode
+sdhci-esdhc-imx 2190000.usdhc: Got CD GPIO
+usb 1-1: new high-speed USB device number 2 using ci_hdrc
+mmc1: SDHCI controller on 2190000.usdhc [2190000.usdhc] using ADMA
+sdhci-esdhc-imx 2198000.usdhc: could not get ultra high speed state, work on normal mode
+mmc0: SDHCI controller on 2198000.usdhc [2198000.usdhc] using ADMA
+mxc_vpu 2040000.vpu_fsl: VPU initialized
+mxc_vdoa 21e4000.vdoa: i.MX Video Data Order Adapter(VDOA) driver probed
+mxc_hdmi_cec soc:hdmi_cec@00120000: HDMI CEC initialized
+Galcore version 6.2.2.96445
+usb 1-1: New USB device found, idVendor=0424, idProduct=2514
+usb 1-1: New USB device strings: Mfr=0, Product=0, SerialNumber=0
+hub 1-1:1.0: USB hub found
+hub 1-1:1.0: 4 ports detected
+mmc0: new DDR MMC card at address 0001
+mmcblk0: mmc0:0001 Q2J54A 3.59 GiB 
+mmcblk0boot0: mmc0:0001 Q2J54A partition 1 16.0 MiB
+random: fast init done
+mmcblk0boot1: mmc0:0001 Q2J54A partition 2 16.0 MiB
+Alternate GPT is invalid, using primary GPT.
+ mmcblk0: p1 p2 p3 p4 p5 p6 p7 p8 p9 p10 p11
+Aravinth: mxc_hdmi_set_mode 
+Aravinth: fb_videomode_to_var 
+Aravinth: fb_videomode_to_var var->xres=640 yres=480 xres_virtual=640 >yres_virtual=480 pixclock=39722 
+Aravinth: fb_videomode_to_var Done
+Aravinth:fb_var_to_videomode 
+Aravinth:fb_find_nearest_mode 
+Aravinth:fb_mode_is_equal 
+Aravinth: mxc_hdmi_set_mode_to_vga_dvi 
+Aravinth: fb_videomode_to_var 
+Aravinth: fb_videomode_to_var var->xres=640 yres=480 xres_virtual=640 >yres_virtual=480 pixclock=39721 
+Aravinth: fb_videomode_to_var Done
+Aravinth:fb_match_mode 
+Aravinth:fb_var_to_videomode 
+Aravinth:fb_mode_is_equal 
+Aravinth: mxc_hdmi_phy_init 
+Aravinth:fb_var_to_videomode 
+Aravinth:fb_add_videomode 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_match_mode 
+Aravinth:fb_var_to_videomode 
+Aravinth:fb_mode_is_equal 
+Aravinth: fb_videomode_to_var 
+Aravinth: fb_videomode_to_var var->xres=640 yres=480 xres_virtual=640 >yres_virtual=480 pixclock=39721 
+Aravinth: fb_videomode_to_var Done
+Aravinth:fb_mode_is_equal 
+Aravinth: mxc_hdmi_setup 
+Aravinth:fb_var_to_videomode 
+Aravinth:fb_var_to_videomode 
+Aravinth: mxc_hdmi_phy_init 
+Aravinth:fb_var_to_videomode 
+Aravinth:fb_find_nearest_mode 
+usb 1-1.2: new low-speed USB device number 3 using ci_hdrc
+Aravinth: fb_videomode_to_var 
+Aravinth: fb_videomode_to_var var->xres=640 yres=480 xres_virtual=640 >yres_virtual=480 pixclock=39722 
+Aravinth: fb_videomode_to_var Done
+Aravinth:fb_match_mode 
+Aravinth:fb_var_to_videomode 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth: mxc_hdmi_phy_init 
+Aravinth:fb_var_to_videomode 
+Aravinth:fb_add_videomode 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_match_mode 
+Aravinth:fb_var_to_videomode 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth: fb_videomode_to_var 
+Aravinth: fb_videomode_to_var var->xres=640 yres=480 xres_virtual=640 >yres_virtual=480 pixclock=39722 
+Aravinth: fb_videomode_to_var Done
+Aravinth:fb_mode_is_equal 
+Aravinth: mxc_hdmi_setup 
+Aravinth:fb_var_to_videomode 
+Aravinth:fb_find_nearest_mode 
+Aravinth:fb_var_to_videomode 
+Aravinth: mxc_hdmi_phy_init 
+usb 1-1.2: New USB device found, idVendor=413c, idProduct=301a
+usb 1-1.2: New USB device strings: Mfr=1, Product=2, SerialNumber=0
+usb 1-1.2: Product: Dell MS116 USB Optical Mouse
+usb 1-1.2: Manufacturer: PixArt
+Aravinth:fb_var_to_videomode 
+Aravinth:fb_find_nearest_mode 
+caam 2100000.caam: ERA source: CAAMVID.
+caam 2100000.caam: AXI pipeline throttling enabled.
+caam 2100000.caam: Instantiated RNG4 SH1
+caam 2100000.caam: device ID = 0x0a16010000000000 (Era 4)
+caam 2100000.caam: job rings = 2, qi = 0
+caam algorithms registered in /proc/crypto
+caam_jr 2101000.jr0: registering rng-caam
+platform caam_sm: blkkey_ex: 4 keystore units available
+platform caam_sm: 64-bit clear key:
+platform caam_sm: [0000] 00 01 02 03 04 0f 06 07
+platform caam_sm: 64-bit black key:
+platform caam_sm: [0000] dd 3e 2c 6a c3 da e5 35
+platform caam_sm: [0008] 3f e4 c3 45 d9 b9 fc de
+platform caam_sm: 128-bit clear key:
+platform caam_sm: [0000] 00 01 02 03 04 0f 06 07
+platform caam_sm: [0008] 08 09 0a 0b 0c 0d 0e 0f
+platform caam_sm: 128-bit black key:
+platform caam_sm: [0000] 2f bf d2 90 d8 6d 6f f1
+platform caam_sm: [0008] 4f 7a 94 da 6e 0f b1 48
+platform caam_sm: 192-bit clear key:
+platform caam_sm: [0000] 00 01 02 03 04 0f 06 07
+platform caam_sm: [0008] 08 09 0a 0b 0c 0d 0e 0f
+platform caam_sm: [0016] 10 11 12 13 14 15 16 17
+platform caam_sm: 192-bit black key:
+platform caam_sm: [0000] c9 d4 b2 f8 00 e3 32 23
+platform caam_sm: [0008] 27 a2 65 e2 37 f0 13 1f
+platform caam_sm: [0016] b0 0c bb b4 d8 27 1a a0
+platform caam_sm: [0024] 20 25 d7 a7 92 b8 85 af
+platform caam_sm: 256-bit clear key:
+platform caam_sm: [0000] 00 01 02 03 04 0f 06 07
+platform caam_sm: [0008] 08 09 0a 0b 0c 0d 0e 0f
+platform caam_sm: [0016] 10 11 12 13 14 15 16 17
+platform caam_sm: [0024] 18 19 1a 1b 1c 1d 1e 1f
+platform caam_sm: 256-bit black key:
+platform caam_sm: [0000] 85 ef 11 ec 87 77 03 ad
+platform caam_sm: [0008] e0 81 84 55 1a 16 8b 4e
+platform caam_sm: [0016] 50 96 01 d9 07 fd c8 cb
+platform caam_sm: [0024] b0 c4 cd 64 37 89 17 ec
+platform caam_sm: 64-bit unwritten blob:
+platform caam_sm: [0000] 00 00 00 00 00 00 00 00
+platform caam_sm: [0008] 00 00 00 00 00 00 00 00
+platform caam_sm: [0016] 00 00 00 00 00 00 00 00
+platform caam_sm: [0024] 00 00 00 00 00 00 00 00
+platform caam_sm: [0032] 00 00 00 00 00 00 00 00
+platform caam_sm: [0040] 00 00 00 00 00 00 00 00
+platform caam_sm: [0048] 00 00 00 00 00 00 00 00
+platform caam_sm: [0056] 00 00 00 00 00 00 00 00
+platform caam_sm: [0064] 00 00 00 00 00 00 00 00
+platform caam_sm: [0072] 00 00 00 00 00 00 00 00
+platform caam_sm: [0080] 00 00 00 00 00 00 00 00
+platform caam_sm: [0088] 00 00 00 00 00 00 00 00
+platform caam_sm: 128-bit unwritten blob:
+platform caam_sm: [0000] 00 00 00 00 00 00 00 00
+platform caam_sm: [0008] 00 00 00 00 00 00 00 00
+platform caam_sm: [0016] 00 00 00 00 00 00 00 00
+platform caam_sm: [0024] 00 00 00 00 00 00 00 00
+platform caam_sm: [0032] 00 00 00 00 00 00 00 00
+platform caam_sm: [0040] 00 00 00 00 00 00 00 00
+platform caam_sm: [0048] 00 00 00 00 00 00 00 00
+platform caam_sm: [0056] 00 00 00 00 00 00 00 00
+platform caam_sm: [0064] 00 00 00 00 00 00 00 00
+platform caam_sm: [0072] 00 00 00 00 00 00 00 00
+platform caam_sm: [0080] 00 00 00 00 00 00 00 00
+platform caam_sm: [0088] 00 00 00 00 00 00 00 00
+platform caam_sm: 196-bit unwritten blob:
+platform caam_sm: [0000] 00 00 00 00 00 00 00 00
+platform caam_sm: [0008] 00 00 00 00 00 00 00 00
+platform caam_sm: [0016] 00 00 00 00 00 00 00 00
+platform caam_sm: [0024] 00 00 00 00 00 00 00 00
+platform caam_sm: [0032] 00 00 00 00 00 00 00 00
+platform caam_sm: [0040] 00 00 00 00 00 00 00 00
+platform caam_sm: [0048] 00 00 00 00 00 00 00 00
+platform caam_sm: [0056] 00 00 00 00 00 00 00 00
+platform caam_sm: [0064] 00 00 00 00 00 00 00 00
+platform caam_sm: [0072] 00 00 00 00 00 00 00 00
+platform caam_sm: [0080] 00 00 00 00 00 00 00 00
+platform caam_sm: [0088] 00 00 00 00 00 00 00 00
+platform caam_sm: 256-bit unwritten blob:
+platform caam_sm: [0000] 00 00 00 00 00 00 00 00
+platform caam_sm: [0008] 00 00 00 00 00 00 00 00
+platform caam_sm: [0016] 00 00 00 00 00 00 00 00
+platform caam_sm: [0024] 00 00 00 00 00 00 00 00
+platform caam_sm: [0032] 00 00 00 00 00 00 00 00
+platform caam_sm: [0040] 00 00 00 00 00 00 00 00
+platform caam_sm: [0048] 00 00 00 00 00 00 00 00
+platform caam_sm: [0056] 00 00 00 00 00 00 00 00
+platform caam_sm: [0064] 00 00 00 00 00 00 00 00
+platform caam_sm: [0072] 00 00 00 00 00 00 00 00
+platform caam_sm: [0080] 00 00 00 00 00 00 00 00
+platform caam_sm: [0088] 00 00 00 00 00 00 00 00
+platform caam_sm: 64-bit black key in blob:
+platform caam_sm: [0000] 1c 57 ad de b8 5d 56 29
+platform caam_sm: [0008] 1b c0 1b 99 61 32 10 26
+platform caam_sm: [0016] 42 67 77 d4 f7 70 af 31
+platform caam_sm: [0024] 6e bc 53 5a db 7d 3e d1
+platform caam_sm: [0032] c1 ab a4 a4 10 61 43 10
+platform caam_sm: [0040] 9e 4b 68 4f be 7b 71 a1
+platform caam_sm: [0048] 13 27 79 af 43 f1 f0 3f
+platform caam_sm: [0056] 00 00 00 00 00 00 00 00
+platform caam_sm: [0064] 00 00 00 00 00 00 00 00
+platform caam_sm: [0072] 00 00 00 00 00 00 00 00
+platform caam_sm: [0080] 00 00 00 00 00 00 00 00
+platform caam_sm: [0088] 00 00 00 00 00 00 00 00
+platform caam_sm: 128-bit black key in blob:
+platform caam_sm: [0000] a5 b0 92 1b af ae 2c 7d
+platform caam_sm: [0008] 9e 94 ee 70 ae 85 13 36
+platform caam_sm: [0016] 94 06 31 14 a3 7f 0a 0e
+platform caam_sm: [0024] 9d 55 c2 68 70 09 82 cb
+platform caam_sm: [0032] a0 0f 3c 6c d1 0e d0 c6
+platform caam_sm: [0040] 6a 24 bc 2e 93 04 f8 57
+platform caam_sm: [0048] b9 78 cc 34 16 5f 5c a6
+platform caam_sm: [0056] 79 cb 5b 96 63 ec c1 cd
+platform caam_sm: [0064] 00 00 00 00 00 00 00 00
+platform caam_sm: [0072] 00 00 00 00 00 00 00 00
+platform caam_sm: [0080] 00 00 00 00 00 00 00 00
+platform caam_sm: [0088] 00 00 00 00 00 00 00 00
+platform caam_sm: 192-bit black key in blob:
+platform caam_sm: [0000] 0c 37 8e 33 2b fa 55 1a
+platform caam_sm: [0008] 13 a0 d5 0b a5 96 fc 7a
+platform caam_sm: [0016] 0b fc 36 01 54 79 76 7f
+platform caam_sm: [0024] 4f 91 d1 de 23 03 2e c0
+platform caam_sm: [0032] 98 19 0d 35 6b f0 d2 e5
+platform caam_sm: [0040] 91 b2 46 db 3e 10 eb 66
+platform caam_sm: [0048] ea 33 cb 0f ef 17 f4 c1
+platform caam_sm: [0056] a4 df c3 0b 1a 40 48 50
+platform caam_sm: [0064] f6 cd 4e 04 d9 e4 ce ac
+platform caam_sm: [0072] 00 00 00 00 00 00 00 00
+platform caam_sm: [0080] 00 00 00 00 00 00 00 00
+platform caam_sm: [0088] 00 00 00 00 00 00 00 00
+platform caam_sm: 256-bit black key in blob:
+platform caam_sm: [0000] 8b 56 39 78 87 e8 eb d1
+platform caam_sm: [0008] e1 dc d4 25 21 ff bb c3
+platform caam_sm: [0016] 90 a7 01 3a f8 37 35 c9
+platform caam_sm: [0024] 87 e3 e1 f8 3c 49 d8 e6
+platform caam_sm: [0032] eb 16 17 e8 9c b4 b1 8b
+platform caam_sm: [0040] ec ae 42 35 c0 52 6b 86
+platform caam_sm: [0048] a0 0d 1c 81 db 6e 36 c2
+platform caam_sm: [0056] cb de 9e 8f 37 c9 c2 81
+platform caam_sm: [0064] 93 c6 b9 f9 29 81 5c 5d
+platform caam_sm: [0072] 2e 9f a4 88 52 2e ec 95
+platform caam_sm: [0080] 00 00 00 00 00 00 00 00
+platform caam_sm: [0088] 00 00 00 00 00 00 00 00
+platform caam_sm: restored 64-bit black key:
+platform caam_sm: [0000] 42 39 da e5 3d 88 ed ad
+platform caam_sm: [0008] 9b 13 8d 6f ab 44 8c 05
+platform caam_sm: restored 128-bit black key:
+platform caam_sm: [0000] 2f bf d2 90 d8 6d 6f f1
+platform caam_sm: [0008] 4f 7a 94 da 6e 0f b1 48
+platform caam_sm: restored 192-bit black key:
+platform caam_sm: [0000] c9 d4 b2 f8 00 e3 32 23
+platform caam_sm: [0008] 27 a2 65 e2 37 f0 13 1f
+platform caam_sm: [0016] 57 50 14 63 0c 0a d6 5a
+platform caam_sm: [0024] 25 05 59 90 04 c1 3a eb
+platform caam_sm: restored 256-bit black key:
+platform caam_sm: [0000] 85 ef 11 ec 87 77 03 ad
+platform caam_sm: [0008] e0 81 84 55 1a 16 8b 4e
+platform caam_sm: [0016] 50 96 01 d9 07 fd c8 cb
+platform caam_sm: [0024] b0 c4 cd 64 37 89 17 ec
+snvs-secvio 20cc000.caam-snvs: can't get snvs clock
+snvs-secvio 20cc000.caam-snvs: violation handlers armed - non-secure state
+hidraw: raw HID events driver (C) Jiri Kosina
+input: PixArt Dell MS116 USB Optical Mouse as /devices/soc0/soc/2100000.aips-bus/2184200.usb/ci_hdrc.1/usb1/1-1/1-1.2/1-1.2:1.0/0003:413C:301A.0001/input/input1
+hid-generic 0003:413C:301A.0001: input,hidraw0: USB HID v1.11 Mouse [PixArt Dell MS116 USB Optical Mouse] on usb-ci_hdrc.1-1.2/input0
+usbcore: registered new interface driver usbhid
+usbhid: USB HID core driver
+ashmem: initialized
+usbcore: registered new interface driver snd-usb-audio
+sgtl5000 2-000a: sgtl5000 revision 0x11
+fsl-ssi-dai 2028000.ssi: No cache defaults, reading back from HW
+imx-sgtl5000 sound: sgtl5000 <-> 2028000.ssi mapping ok
+imx-spdif sound-spdif: snd-soc-dummy-dai <-> 2004000.spdif mapping ok
+imx-audio-hdmi sound-hdmi: hdmi-hifi.0 <-> soc:hdmi_audio@00120000 mapping ok
+NET: Registered protocol family 26
+u32 classifier
+    Actions configured
+Netfilter messages via NETLINK v0.30.
+nf_conntrack version 0.5.0 (16384 buckets, 65536 max)
+ctnetlink v0.93: registering with nfnetlink.
+xt_time: kernel timezone is -0000
+ip_tables: (C) 2000-2006 Netfilter Core Team
+arp_tables: arp_tables: (C) 2002 David S. Miller
+Initializing XFRM netlink socket
+NET: Registered protocol family 10
+mip6: Mobile IPv6
+ip6_tables: (C) 2000-2006 Netfilter Core Team
+sit: IPv6, IPv4 and MPLS over IPv4 tunneling driver
+NET: Registered protocol family 17
+NET: Registered protocol family 15
+bridge: filtering via arp/ip/ip6tables is no longer available by default. Update your scripts to load br_netfilter if you need this.
+can: controller area network core (rev 20120528 abi 9)
+NET: Registered protocol family 29
+can: raw protocol (rev 20120528)
+can: broadcast manager protocol (rev 20161123 t)
+can: netlink gateway (rev 20130117) max_hops=1
+Bluetooth: RFCOMM TTY layer initialized
+Bluetooth: RFCOMM socket layer initialized
+Bluetooth: RFCOMM ver 1.11
+Bluetooth: BNEP (Ethernet Emulation) ver 1.3
+Bluetooth: BNEP filters: protocol multicast
+Bluetooth: BNEP socket layer initialized
+Bluetooth: HIDP (Human Interface Emulation) ver 1.2
+Bluetooth: HIDP socket layer initialized
+8021q: 802.1Q VLAN Support v1.8
+Key type dns_resolver registered
+cpu cpu0: Registered imx6q-cpufreq
+registered taskstats version 1
+imx_thermal 2000000.aips-bus:tempmon: Industrial CPU temperature grade - max:105C critical:100C passive:95C
+dhd_module_init in
+input: gpio-keys as /devices/soc0/gpio-keys/input/input2
+snvs_rtc 20cc000.snvs:snvs-rtc-lp: setting system clock to 1970-01-01 00:02:18 UTC (138)
+usb_otg_vbus: disabling
+ALSA device list:
+  #0: imx6q-apalis-sgtl5000
+  #1: imx-spdif
+  #2: imx-hdmi-soc
+Freeing unused kernel memory: 1024K
+init: init first stage started!
+SELinux:  Permission validate_trans in class security not defined in policy.
+SELinux:  Class cap_userns not defined in policy.
+SELinux:  Class cap2_userns not defined in policy.
+SELinux: the above unknown classes and permissions will be denied
+audit: type=1403 audit(138.620:2): policy loaded auid=4294967295 ses=4294967295
+init: (Initializing SELinux non-enforcing took 0.11s.)
+init: init second stage started!
+init: Running restorecon...
+init: waitpid failed: No child processes
+init: (Loading properties from /default.prop took 0.00s.)
+init: (Parsing /init.environ.rc took 0.00s.)
+init: (Parsing /init.usb.rc took 0.00s.)
+init: (Parsing init.freescale.usb.rc took 0.00s.)
+init: (Parsing init.freescale.i.MX6Q.rc took 0.00s.)
+init: (Parsing init.freescale.emmc.rc took 0.00s.)
+init: (Parsing /init.freescale.rc took 0.02s.)
+ueventd: ueventd started!
+ueventd: Coldboot took 0.44s.
+Console: switching to colour dummy device 80x30
+watchdogd: started (interval 10, margin 20)!
+EXT4-fs (mmcblk0p3): mounted filesystem with ordered data mode. Opts: barrier=1
+EXT4-fs (mmcblk0p10): Ignoring removed nomblk_io_submit option
+EXT4-fs (mmcblk0p10): mounted filesystem with ordered data mode. Opts: nomblk_io_submit,noauto_da_alloc,errors=panic
+EXT4-fs (mmcblk0p4): Ignoring removed nomblk_io_submit option
+EXT4-fs (mmcblk0p4): mounted filesystem with ordered data mode. Opts: nomblk_io_submit
+EXT4-fs (mmcblk0p5): mounted filesystem with ordered data mode. Opts: (null)
+file system registered
+using random self ethernet address
+using random host ethernet address
+zram0: detected capacity change from 0 to 314572800
+logd.auditd: start
+logd.klogd: 8310346333
+Adding 307196k swap on /dev/block/zram0.  Priority:-1 extents:1 across:307196k SS
+binder: 256:256 transaction failed 29189, size 0-0
+logd.daemon: reinit
+type=1400 audit(141.710:3): avc: denied { entrypoint } for pid=263 comm="init" path="/system/bin/can-config.sh" dev="mmcblk0p3" ino=254 scontext=u:r:obd:s0 tcontext=u:object_r:system_file:s0 tclass=file permissive=1
+toradex_apalis6q:/ # type=1400 audit(141.730:4): avc: denied { getattr } for pid=264 comm="obd" path="/vendor" dev="rootfs" ino=6500 scontext=u:r:obd:s0 tcontext=u:object_r:rootfs:s0 tclass=lnk_file permissive=1
+
+type=1400 audit(141.740:5): avc: denied { read execute } for pid=263 comm="can-config.sh" path="/system/bin/sh" dev="mmcblk0p3" ino=441 scontext=u:r:obd:s0 tcontext=u:object_r:shell_exec:s0 tclass=file permissive=1
+type=1400 audit(141.740:6): avc: denied { getattr } for pid=263 comm="can-config.sh" path="/system/bin/sh" dev="mmcblk0p3" ino=441 scontext=u:r:obd:s0 tcontext=u:object_r:shell_exec:s0 tclass=file permissive=1
+type=1400 audit(141.790:7): avc: denied { execute_no_trans } for pid=278 comm="can-config.sh" path="/system/bin/ip" dev="mmcblk0p3" ino=333 scontext=u:r:obd:s0 tcontext=u:object_r:system_file:s0 tclass=file permissive=1
+toradex_apalis6q:/ # type=1400 audit(141.800:8): avc: denied { create } for pid=264 comm="obd" scontext=u:r:obd:s0 tcontext=u:r:obd:s0 tclass=socket permissive=1
+type=1400 audit(141.800:9): avc: denied { ioctl } for pid=264 comm="obd" path="socket:[7591]" dev="sockfs" ino=7591 ioctlcmd=0x8933 scontext=u:r:obd:s0 tcontext=u:r:obd:s0 tclass=socket permissive=1
+
+toradex_apalis6q:/ # 
+toradex_apalis6q:/ # IPv6: ADDRCONF(NETDEV_CHANGE): can0: link becomes ready
+
+toradex_apalis6q:/ # healthd: No battery devices found
+ERROR: v4l2 capture: slave not found! V4L2_CID_HUE
+ERROR: v4l2 capture: slave not found! V4L2_CID_HUE
+Aravinth:fb_match_mode 
+Aravinth:fb_var_to_videomode 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth: mxc_hdmi_phy_init 
+Aravinth:fb_var_to_videomode 
+Aravinth:fb_add_videomode 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+Aravinth:fb_mode_is_equal 
+init: Starting service 'bootanim'...
+
+toradex_apalis6q:/ # 
+toradex_apalis6q:/ # 
+toradex_apalis6q:/ # 
+toradex_apalis6q:/ # capability: warning: `main' uses 32-bit capabilities (legacy support in use)
+dmesgtype=1400 audit(151.830:34): avc: denied { write } for pid=264 comm="obd" path="socket:[7591]" dev="sockfs" ino=7591 scontext=u:r:obd:s0 tcontext=u:r:obd:s0 tclass=socket permissive=1
+ |init: write_file: Unable to open '/sys/devices/system/cpu/cpufreq/interactive/timer_rate': No such file or directory
+init: write_file: Unable to open '/sys/devices/system/cpu/cpufreq/interactive/min_sample_time': No such file or directory
+init: write_file: Unable to open '/sys/devices/system/cpu/cpufreq/interactive/go_hispeed_load': No such file or directory
+ grep sw_edid
+Aravinth: i2c_adap_sw_edid_init 
+toradex_apalis6q:/ # 
+toradex_apalis6q:/ # 
+toradex_apalis6q:/ # toradex_apalis6q:/ # dmesg | grep sw_edid                                      
+Aravinth: i2c_adap_sw_edid_init 
+toradex_apalis6q:/ # 
+toradex_apalis6q:/ # 
+toradex_apalis6q:/ # 
+toradex_apalis6q:/ # 
+toradex_apalis6q:/ # 
+toradex_apalis6q:/ # 
+toradex_apalis6q:/ # random: crng init done
+
+toradex_apalis6q:/ # 
+toradex_apalis6q:/ # cd /dev   init: write_file: Unable to open '/proc/sys/vm/extra_free_kbytes': No such file or directory
+sys
+sys/     system/
+toradex_apalis6q:/ # cd /sys                                                   /
+block/     class/     devices/   fs/        kernel/    power/
+bus/       dev/       firmware/  fsl_otp/   module/
+toradex_apalis6q:/ # cd /sys/                                                  acc_open
+acc_release
+Micrel KSZ9031 Gigabit PHY 2188000.ethernet-1:07: attached PHY driver [Micrel KSZ9031 Gigabit PHY] (mii_bus:phy_addr=2188000.ethernet-1:07, irq=120)
+IPv6: ADDRCONF(NETDEV_UP): eth0: link is not ready
+bustoradex_apalis6q:/ # cd /sys/bus/                                              type=1400 audit(167.750:35): avc: denied { write } for pid=264 comm="obd" path="socket:[7591]" dev="sockfs" ino=7591 scontext=u:r:obd:s0 tcontext=u:r:obd:s0 tclass=socket permissive=1
+
+clockevents/    gpio/           mmc/            sdio/           usb/
+clocksource/    hid/            nvmem/          serio/          virtio/
+container/      i2c/            platform/       soc/            workqueue/
+cpu/            iio/            rpmsg/          spi/
+event_source/   mdio_bus/       scsi/           usb-serial/
+toradex_apalis6q:/ # cd /sys/bus/                                              i2toradex_apalis6q:/ # cd /sys/bus/i2c/                                          
+toradex_apalis6q:/sys/bus/i2c # ls
+devices drivers drivers_autoprobe drivetype=1400 audit(170.800:36): avc: denied { getattr } for pid=801 comm="ls" path="/sys/bus/i2c/drivers_probe" dev="sysfs" ino=2746 scontext=u:r:shell:s0 tcontext=u:object_r:sysfs:s0 tclass=file permissive=1
+rs_probe uevent 
+toradex_apalis6q:/sys/bus/i2c # 
+toradex_apalis6q:/sys/bus/i2c # 
+toradex_apalis6q:/sys/bus/i2c # lstype=1400 audit(172.670:37): avc: denied { write } for pid=264 comm="obd" path="socket:[7591]" dev="sockfs" ino=7591 scontext=u:r:obd:s0 tcontext=u:r:obd:s0 tclass=socket permissive=1
+
+devices drivers drivers_autoprobe drivers_probe uevent 
+toradex_apalis6q:/sys/bus/i2c # 
+toradex_apalis6q:/sys/bus/i2c # 
+toradex_apalis6q:/sys/bus/i2c # linit: Service 'bootanim' (pid 345) exited with status 0
+s
+type=1400 audit(174.220:38): avc: denied { getattr } for pid=1015 comm="ls" path="/sys/bus/i2c/drivers_probe" dev="sysfs" ino=2746 scontext=u:r:shell:s0 tcontext=u:object_r:sysfs:s0 tclass=file permissive=1
+devices drivers drivers_autoprobe drivers_probe uevent 
+toradex_apalis6q:/sys/bus/i2c # init: Starting service 'exec 3 (/system/bin/bootstat)'...
+init: Service 'exec 3 (/system/bin/bootstat)' (pid 1023) exited with status 0
+init: Starting service 'exec 4 (/system/bin/bootstat)'...
+init: Service 'exec 4 (/system/bin/bootstat)' (pid 1034) exited with status 0
+init: Starting service 'exec 5 (/system/bin/bootstat)'...
+init: Service 'exec 5 (/system/bin/bootstat)' (pid 1035) exited with status 0
+init: Starting service 'exec 6 (/system/bin/bootstat)'...
+init: Service 'exec 6 (/system/bin/bootstat)' (pid 1036) exited with status 0
+
+toradex_apalis6q:/sys/bus/i2c # 
+toradex_apalis6q:/sys/bus/i2c # 
+toradex_apalis6q:/sys/bus/i2c # 
+toradex_apalis6q:/sys/bus/i2c # ls
+devices drivers drivers_autoprobe drivers_probe uevent 
+toradex_apalis6q:/sys/bus/i2c # type=1400 audit(176.280:39): avc: denied { write } for pid=264 comm="obd" path="socket:[7591]" dev="sockfs" ino=7591 scontext=u:r:obd:s0 tcontext=u:r:obd:s0 tclass=socket permissive=1
+cd dr
+drivers/            drivers_autoprobe   drivers_probe
+toradex_apalis6q:/sys/bus/i2c # cd drivers                              type=1400 audit(181.550:40): avc: denied { getattr } for pid=257 comm="sh" path="/sys/bus/i2c/drivers_probe" dev="sysfs" ino=2746 scontext=u:r:shell:s0 tcontext=u:object_r:sysfs:s0 tclass=file permissive=1
+       
+drivers/            drivers_autoprobe   drivers_probe
+toradex_apalis6q:/sys/bus/i2c # cd drivers                                     type=1400 audit(185.150:41): avc: denied { write } for pid=1327 comm="Thread-2" name="vcan" dev="tmpfs" ino=7593 scontext=u:r:untrusted_app:s0:c512,c768 tcontext=u:object_r:socket_device:s0 tclass=sock_file permissive=1
+type=1400 audit(185.150:42): avc: denied { connectto } for pid=1327 comm="Thread-2" path="/dev/socket/vcan" scontext=u:r:untrusted_app:s0:c512,c768 tcontext=u:r:obd:s0 tclass=unix_stream_socket permissive=1
+
+toradex_apalis6q:/sys/bus/i2c/drivers # ls
+adv7180    fts_ts      max17135     ov5640      pfuze100-regulator wm8960 
+adv7535    fxas2100x   max732x      ov5640_mipi sgtl5000           wm8962 
+at24       fxls8471    mc13xxx      ov5642      si476x-core        wm8994 
+cs42xx8    fxos8700    mma8450      ov5647_mipi sii902x            
+da9052     ir-kbd-i2c  mma8x5x      ov564x      stmpe-i2c          
+dummy      isl29023    mpl3115      ov564x_mipi tlv320aic23-codec  
+egalax_ts  mag3110     mxc_hdmi_i2c pca953x     tsc2007            
+elan-touch max11801_ts ov2640       pf1550      vtl_ts             
+toradex_apalis6q:/sys/bus/i2c/drivers # 
+toradex_apalis6q:/sys/bus/i2c/drivers # 
+toradex_apalis6q:/sys/bus/i2c/drivers # toradex_apalis6q:/sys/bus/i2c/drivers # ls                                     toradex_apalis6q:/sys/bus/i2c/drivers # cd drivers                             toradex_apalis6q:/sys/bus/i2c/drivers # ls                                     toradex_apalis6q:/sys/bus/i2c/drivers # cd /sys/bus/i2c/                       toradex_apalis6q:/sys/bus/i2c/drivers # dmesg | grep sw_edid                   
+130|toradex_apalis6q:/sys/bus/i2c/drivers # cd ../dr
+drivers/            drivers_autoprobe   drivers_probe
+d ../drivers                                                                  <_
+drivers_autoprobe   drivers_probe
+d ../drivers_                                                                 <pd ../drivers_probe                                                            < 
+/system/bin/sh: cd: /sys/bus/i2c/drivers_probe: Not a directory
+2|toradex_apalis6q:/sys/bus/i2c/drivers # 2|toradex_apalis6q:/sys/bus/i2c/drivers # cd ../drivers_probe                  d ../drivers_probe   ../drivers_probe  ../drivers_probe  ./drivers_probe  /drivers_probe  drivers_probe  cdrivers_probe adrivers_probe tdrivers_probe  drivers_probe 
+/system/bin/sh: cat: drivers_probe: No such file or directory
+1|toradex_apalis6q:/sys/bus/i2c/drivers # 1|toradex_apalis6q:/sys/bus/i2c/drivers # cat drivers_probe                                      ls
+adv7180    fts_ts      max17135     ov5640      pfuze100-regulator wm8960 
+adv7535    fxas2100x   max732x      ov5640_mipi sgtl5000           wm8962 
+at24       fxls8471    mc13xxx      ov5642      si476x-core        wm8994 
+cs42xx8    fxos8700    mma8450      ov5647_mipi sii902x            
+da9052     ir-kbd-i2c  mma8x5x      ov564x      stmpe-i2c          
+dummy      isl29023    mpl3115      ov564x_mipi tlv320aic23-codec  
+egalax_ts  mag3110     mxc_hdmi_i2c pca953x     tsc2007            
+elan-touch max11801_ts ov2640       pf1550      vtl_ts             
+toradex_apalis6q:/sys/bus/i2c/drivers # cd ../
+toradex_apalis6q:/sys/bus/i2c # toradex_apalis6q:/sys/bus/i2c # cd ../                                         toradex_apalis6q:/sys/bus/i2c # ls                                             toradex_apalis6q:/sys/bus/i2c # cat drivers_probe                              
+devices/            drivers_autoprobe   uevent
+drivers/            drivers_probe
+toradex_apalis6q:/sys/bus/i2c # cat drivers_probe                                toradex_apalis6q:/sys/bus/i2c # cat drivers_probe                               
+devices/            drivers_autoprobe   uevent
+drivers/            drivers_probe
+toradex_apalis6q:/sys/bus/i2c # cat drivers_probe                              
+/system/bin/sh: cat: drivers_probtype=1400 audit(230.930:43): avc: denied { read } for pid=257 comm="sh" name="drivers_probe" dev="sysfs" ino=2746 scontext=u:r:shell:s0 tcontext=u:object_r:sysfs:s0 tclass=file permissive=1
+e: Permission denied
+type=1400 audit(230.930:44): avc: denied { open } for pid=257 comm="sh" path="/sys/bus/i2c/drivers_probe" dev="sysfs" ino=2746 scontext=u:r:shell:s0 tcontext=u:object_r:sysfs:s0 tclass=file permissive=1
+1|toradex_apalis6q:/sys/bus/i2c # 
+1|toradex_apalis6q:/sys/bus/i2c # 
+1|toradex_apalis6q:/sys/bus/i2c # 1|toradex_apalis6q:/sys/bus/i2c # cat drivers_probe                            
+/system/bin/sh: cat: drivers_probe: Permission denied
+1|toradex_apalis6q:/sys/bus/i2c # cd devi1|toradex_apalis6q:/sys/bus/i2c # cd devices/                                  
+toradex_apalis6q:/sys/bus/i2c/devices # ls
+type=1400 audit(238.700:45): avc: denied { getattr } for pid=1393 comm="ls" path="/sys/bus/i2c/devices/3-0020" dev="sysfs" ino=8351 scontext=u:r:shell:s0 tcontext=u:object_r:sysfs:s0 tclass=lnk_file permissive=1
+1-0010 2-0008 2-0041 3-0020 3-003c i2c-2 
+1-0068 2-000a 2-0050 3-0021 i2c-1  i2c-3 
+toradex_apalis6q:/sys/bus/i2c/devices # cd 2
+2-0008/  2-000a/  2-0041/  2-0050/
+toradex_apalis6q:/sys/bus/i2c/devices # cd 2-00                                5toradex_apalis6q:/sys/bus/i2c/devices # cd 2-0050/                             
+toradex_apalis6q:/sys/bus/i2c/devices/2-0050 # ls
+driver modalias name of_node power subsystem uevent 
+toradex_apalis6q:/sys/bus/i2c/devices/2-0050 # cat naat name                                                                       < 
+imx6-hdmi-i2c
+toradex_apalis6q:/sys/bus/i2c/devices/2-0050 # 
+toradex_apalis6q:/sys/bus/i2c/devices/2-0050 # 
+toradex_apalis6q:/sys/bus/i2c/devices/2-0050 # 
+toradex_apalis6q:/sys/bus/i2c/devices/2-0050 # ls
+driver modalias name of_node power subsystem uevent 
+toradex_apalis6q:/sys/bus/i2c/devices/2-0050 # cat ofat of_node/                                                                   <
+/system/bin/sh: cat: of_node/: Is a directory
+1|toradex_apalis6q:/sys/bus/i2c/devices/2-0050 # 1|toradex_apalis6q:/sys/bus/i2c/devices/2-0050 # cat of_node/                  
+compatible   name         reg          sw_edid/
+at of_node/                                                                   <swat of_node/sw_edid/                                                           <
+#address-cells  #size-cells     compatible      edid-data       name
+at of_node/sw_edid/                                                           <coat of_node/sw_edid/compatible                                                 < 
+sw_edidtoradex_apalis6q:/sys/bus/i2c/devices/2-0050 # 
+toradex_apalis6q:/sys/bus/i2c/devices/2-0050 # 
+toradex_apalis6q:/sys/bus/i2c/devices/2-0050 # cd ofd of_node/                                                                    <
+toradex_apalis6q:/sys/bus/i2c/devices/2-0050/of_node # ks  ls
+compatible name reg sw_edid 
+toradex_apalis6q:/sys/bus/i2c/devices/2-0050/of_node # cd red reg                                                                         < 
+/system/bin/sh: cd: /sys/bus/i2c/devices/2-0050/of_node/reg: Not a directory
+2|toradex_apalis6q:/sys/bus/i2c/devices/2-0050/of_node # cat reat reg                                                                        < 
+Ptoradex_apalis6q:/sys/bus/i2c/devices/2-0050/of_node # 
+toradex_apalis6q:/sys/bus/i2c/devices/2-0050/of_node # 
+toradex_apalis6q:/sys/bus/i2c/devices/2-0050/of_node # ls
+compatible name reg sw_edid 
+toradex_apalis6q:/sys/bus/i2c/devices/2-0050/of_node # cd swd sw_edid/                                                                    <
+toradex_apalis6q:/sys/bus/i2c/devices/2-0050/of_node/sw_edid # ls
+#address-cells #size-cells compatible edid-data name 
+toradex_apalis6q:/sys/bus/i2c/devices/2-0050/of_node/sw_edid # cat naat name                                                                       < 
+sw_edidtoradex_apalis6q:/sys/bus/i2c/devices/2-0050/of_node/sw_edid # toradex_apalis6q:/sys/bus/i2c/devices/2-0050/of_node/sw_edid # cat name             edat edid-data                                                                  < 
+ÿÿÿÿÿÿ¯<xµ—XW’&ÿÿÿÿÿÿÿÎVÒP&0>5­ßVÒP&0>5­9Ì<d   Øtoradex_apalis6q:/sys/bus/i2c/devices/2-0050/of_node/sw_edid # 
+toradex_apalis6q:/sys/bus/i2c/devices/2-0050/of_node/sw_edid # 
+toradex_apalis6q:/sys/bus/i2c/devices/2-0050/of_node/sw_edid # 
+toradex_apalis6q:/sys/bus/i2c/devices/2-0050/of_node/sw_edid # 
+toradex_apalis6q:/sys/bus/i2c/devices/2-0050/of_node/sw_edid # 
+toradex_apalis6q:/sys/bus/i2c/devices/2-0050/of_node/sw_edid # 
+toradex_apalis6q:/sys/bus/i2c/devices/2-0050/of_node/sw_edid # 
+toradex_apalis6q:/sys/bus/i2c/devices/2-0050/of_node/sw_edid # 
+toradex_apalis6q:/sys/bus/i2c/devices/2-0050/of_node/sw_edid # 
+toradex_apalis6q:/sys/bus/i2c/devices/2-0050/of_node/sw_edid # 
+toradex_apalis6q:/sys/bus/i2c/devices/2-0050/of_node/sw_edid # cd /
+toradex_apalis6q:/ # 
+toradex_apalis6q:/ # 
+toradex_apalis6q:/ # 
+toradex_apalis6q:/ # 
+toradex_apalis6q:/ # 
+toradex_apalis6q:/ # 
+toradex_apalis6q:/ # 
+toradex_apalis6q:/ # 
+toradex_apalis6q:/ # 
+toradex_apalis6q:/ # 
+toradex_apalis6q:/ # 
+toradex_apalis6q:/ # 

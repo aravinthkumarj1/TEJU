@@ -1,0 +1,253 @@
+run setu
+  setup setupdate setusbupdate
+Apalis iMX6 # run setup
+  setup setupdate
+Apalis iMX6 # run setupdate 
+reading flash_blk.img
+710 bytes read in 12 ms (57.6 KiB/s)
+## Executing script at 12000000
+reading apalis_imx6/flash_blk.img
+3818 bytes read in 18 ms (207 KiB/s)
+## Executing script at 12000000
+enter "run update" or "run update_it" to update the uboot
+Apalis iMX6 # run update          pri
+arch=arm
+baudrate=115200
+board=apalis_imx6
+board_name=apalis_imx6
+board_rev=011c
+boot_file=uImage
+bootcmd=run emmcboot ; echo ; echo emmcboot failed ; run nfsboot ; echo ; echo nfsboot failed ; usb start ;setenv stdout serial,vga ; setenv stdin serial,usbkbd
+bootdelay=1
+check_1=setenv conf_blk_offset 0x1fff; mmc read ${loadaddr} ${conf_blk_offset} 1
+check_2=setenv conf_blk_offset 0xfff; mmc read ${loadaddr} ${conf_blk_offset} 1
+check_3=setenv conf_blk_offset 0x7ff; mmc read ${loadaddr} ${conf_blk_offset} 1
+check_configblock=setexpr toradex_oui_addr ${loadaddr} + 8; mw.l ${kernel_addr_r} 0x002d1400; mmc dev 0 1; run check_1 || run check_2 || run check_3; cmp.b ${kernel_addr_r} ${toradex_oui_addr} 3
+console=ttymxc0
+cp_file_chunk=load ${interface} ${drive}:1 ${loadaddr} ${board_name}/root.ext3 ${filesize} ${filepos}; run set_blkcnt; mmc dev 0 0 && mmc write ${loadaddr} ${blkstart} ${blkcnt}
+cpu=armv7
+defargs=enable_wait_mode=off vmalloc=400M
+dfu_alt_info=u-boot.imx raw 0x2 0x3ff mmcpart 0;boot part 0 1;rootfs part 0 2;uImage fat 0 1;imx6q-colibri-eval-v3.dtb fat 0 1;imx6q-colibri-cam-eval-v3.dtb fat 0 1
+drive=1
+echo_migrate=echo successfully updated U-Boot
+echo_migrate-it=echo successfully updated U-Boot
+emmcargs=ip=off root=/dev/mmcblk0p2 rw,noatime rootfstype=ext3 rootwait
+emmcboot=run setup; setenv bootargs ${defargs} ${emmcargs} ${setupargs} ${vidargs}; echo Booting from internal eMMC chip...; run emmcdtbload; load mmc 0:1 ${kernel_addr_r} ${boot_file} && run fdt_fixup && bootm ${kernel_addr_r} ${dtbparam}
+emmcdtbload=setenv dtbparam; load mmc 0:1 ${fdt_addr_r} ${fdt_file} && setenv dtbparam " - ${fdt_addr_r}" && true
+ethact=FEC
+ethaddr=00:14:2d:4e:87:13
+ethprime=FEC
+fdt_addr_r=0x12000000
+fdt_file=imx6q-apalis-eval.dtb
+fdt_fixup=;
+fdt_high=0xffffffff
+fileaddr=12000000
+filesize=eea
+initrd_high=0xffffffff
+interface=mmc
+ipaddr=192.168.10.2
+kernel_addr_r=0x11000000
+loadaddr=0x12000000
+migrate=run migrate_configblock; run update_latest; reset
+migrate_configblock=run check_configblock; mmc dev 0 0 && mmc read ${loadaddr} 0x500 1 && cmp.b ${kernel_addr_r} ${toradex_oui_addr} 3 && mmc dev 0 1 && mmc write ${loadaddr} ${conf_blk_offset} 1
+migrate_it=setenv module_type -it; run migrate
+migrate_uboot=load ${interface} ${drive}:1 ${loadaddr} ${board_name}/u-boot.imx${module_type} && run set_blkcnt && mmc dev 0 1 && mmc write ${loadaddr} 2 ${blkcnt} && mmc bootbus 0 2 1 2 && mmc partconf 0 1 1 0
+migrate_uboot_old=load ${interface} ${drive}:1 ${loadaddr} ${board_name}/u-boot.imx${module_type} && run set_blkcnt && mmc dev 0 0 && mmc write ${loadaddr} 2 ${blkcnt}
+netmask=255.255.255.0
+nfsargs=ip=:::::eth0:on root=/dev/nfs rw
+nfsboot=run setup; setenv bootargs ${defargs} ${nfsargs} ${setupargs} ${vidargs}; echo Booting via DHCP/TFTP/NFS...; run nfsdtbload; dhcp ${kernel_addr_r} && run fdt_fixup && bootm ${kernel_addr_r} ${dtbparam}
+nfsdtbload=setenv dtbparam; tftp ${fdt_addr_r} ${fdt_file} && setenv dtbparam " - ${fdt_addr_r}" && true
+ramdisk_addr_r=0x12100000
+sdargs=ip=off root=/dev/mmcblk1p2 rw,noatime rootfstype=ext3 rootwait
+sdboot=run setup; setenv bootargs ${defargs} ${sdargs} ${setupargs} ${vidargs}; echo Booting from SD card; run sddtbload; load mmc 1:1 ${kernel_addr_r} ${boot_file} && run fdt_fixup && bootm ${kernel_addr_r} ${dtbparam}
+sddtbload=setenv dtbparam; load mmc 1:1 ${fdt_addr_r} ${fdt_file} && setenv dtbparam " - ${fdt_addr_r}" && true
+serial#=05146387
+serverip=192.168.10.1
+set_blkcnt=setexpr blkcnt ${filesize} + 0x1ff && setexpr blkcnt ${blkcnt} / 0x200
+set_nextpos=setexpr filepos ${filepos} + ${filesize}; setexpr blkstart ${blkstart} + ${blkcnt}
+setethupdate=if env exists ethaddr; then; else setenv ethaddr 00:14:2d:00:00:00; fi; tftpboot ${loadaddr} flash_eth.img && source ${loadaddr}
+setsdupdate=setenv interface mmc; setenv drive 1; mmc rescan; load ${interface} ${drive}:1 ${loadaddr} flash_blk.img && source ${loadaddr}
+setup=setenv setupargs fec_mac=${ethaddr} consoleblank=0 no_console_suspend=1 console=tty1 console=${console},${baudrate}n8
+setupdate=run setsdupdate || run setusbupdate || run setethupdate
+setusbupdate=usb start && setenv interface usb; setenv drive 0; load ${interface} ${drive}:1 ${loadaddr} flash_blk.img && source ${loadaddr}
+soc=mx6
+splashpos=m,m
+update=mmc bootbus 0 2 0 1 && run update_new && exit; run update_v2.4b1
+update_1=load ${interface} ${drive}:1 ${loadaddr} ${board_name}/mbr.bin && mmc dev 0 0 && mmc write ${loadaddr} 0x0 0x1
+update_2=load ${interface} ${drive}:1 ${loadaddr} ${board_name}/boot.vfat && run set_blkcnt && mmc dev 0 0 && mmc write ${loadaddr} 0x2000 ${blkcnt}
+update_3=setenv filesize 4000000; setenv filepos 0; setenv blkstart a000; while test ${filesize} -eq "4000000"; do run cp_file_chunk; run set_nextpos; done; true
+update_configblock=run check_configblock; load ${interface} ${drive}:1 ${loadaddr} ${board_name}/configblock.bin && mmc dev 0 1 && mmc write ${loadaddr} ${conf_blk_offset} 1
+update_fdt=load ${interface} ${drive}:1 ${loadaddr} ${board_name}/${fdt_file} && fatwrite mmc 0:1 ${loadaddr} ${fdt_file} ${filesize}
+update_it=setenv module_type -it; run update
+update_kernel=load ${interface} ${drive}:1 ${loadaddr} ${board_name}/uImage && fatwrite mmc 0:1 ${loadaddr} uImage ${filesize}
+update_latest=run update_uboot; run update_1; run update_2; run update_kernel; run update_fdt; run update_3
+update_new=updt_fuse -n && run update_uboot && reset; run update_v2.5b3
+update_uboot=load ${interface} ${drive}:1 ${loadaddr} ${board_name}/u-boot.imx${module_type} && run set_blkcnt && mmc dev 0 1 && mmc write ${loadaddr} 2 ${blkcnt} && updt_fuse && mmc bootbus 0 2 0 1 && mmc partconf 0 1 1 0 && mmc rst-function 0 1
+update_uboot_it=setenv module_type -it; run update_uboot
+update_v2.4b1=run check_configblock || run migrate_configblock; run migrate_uboot_old && run echo_migrate${module_type}
+update_v2.5b3=run check_configblock || run migrate_configblock; run migrate_uboot && run echo_migrate${module_type}
+vendor=toradex
+ver=U-Boot 2017.03-dirty (Dec 14 2017 - 17:49:07 +0530)
+vidargs=mxc_hdmi.only_cea=1 video=mxcfb0:dev=hdmi,1920x1080M@60,if=RGB24 video=mxcfb1:off video=mxcfb2:off video=mxcfb3:off fbmem=32M
+
+Environment size: 6316/8188 bytes
+Apalis iMX6 # run update_uboot
+reading apalis_imx6/u-boot.imx
+351232 bytes read in 36 ms (9.3 MiB/s)
+switch to partitions #1, OK
+mmc0(part 1) is current device
+
+MMC write: dev # 0, block # 2, count 686 ... 686 blocks written: OK
+Fuse 0, 5:     5072
+Fast boot mode already fused, no need to fuse
+Apalis iMX6 # 
+Apalis iMX6 # re
+resetting ...
+
+
+U-Boot 2017.03-dirty (Dec 15 2017 - 10:56:49 +0530)
+
+CPU:   Freescale i.MX6Q rev1.5 at 792 MHz
+Reset cause: WDOG
+I2C:   ready
+DRAM:  2 GiB
+PMIC: device id: 0x10, revision id: 0x21
+PMIC: programmed
+MMC:   FSL_SDHC: 0, FSL_SDHC: 1, FSL_SDHC: 2
+auto-detected panel vga-rgb
+Aravinth: Display: vga-rgb (640x480)
+In:    serial
+Out:   serial
+Err:   serial
+Model: Toradex Apalis iMX6 Quad 2GB IT V1.1C, Serial# 05146387
+unsupported boot devices
+Net:   using PHY at 7
+FEC [PRIME]
+can't find partition: misc, dump the partition table
+cannot get the partion info for misc
+Cannot find partition 4080
+do_raw_read failed, ret 1
+read_bootctl, bcb_rw_block read failed
+read command failed
+Fastboot: Normal
+Hit any key to stop autoboot:  1  0 
+Apalis iMX6 # 
+
+U-Boot 2017.03-dirty (Dec 15 2017 - 10:56:49 +0530)
+
+CPU:   Freescale i.MX6Q rev1.5 at 792 MHz
+Reset cause: POR
+I2C:   ready
+DRAM:  2 GiB
+PMIC: device id: 0x10, revision id: 0x21
+PMIC: programmed
+MMC:   FSL_SDHC: 0, FSL_SDHC: 1, FSL_SDHC: 2
+auto-detected panel vga-rgb
+Aravinth: Display: vga-rgb (640x480)
+In:    serial
+Out:   serial
+Err:   serial
+Model: Toradex Apalis iMX6 Quad 2GB IT V1.1C, Serial# 05146387
+unsupported boot devices
+Net:   using PHY at 7
+FEC [PRIME]
+can't find partition: misc, dump the partition table
+cannot get the partion info for misc
+Cannot find partition 4080
+do_raw_read failed, ret 1
+read_bootctl, bcb_rw_block read failed
+read command failed
+Fastboot: Normal
+Hit any key to stop autoboot:  1  0 
+Apalis iMX6 # ?
+?       - alias for 'help'
+askenv  - get environment variables from stdin
+base    - print or set address offset
+bdinfo  - print Board Info structure
+bmode   - mmc|sd|normal|usb|sata|ecspi1:0|ecspi1:1|ecspi1:2|ecspi1:3|esdhc1|esdhc2|esdhc3|esdhc4 [noreset]
+bmp     - manipulate BMP image data
+boot    - boot default, i.e., run 'bootcmd'
+bootd   - boot default, i.e., run 'bootcmd'
+bootm   - boot application image from memory
+bootp   - boot image via network using BOOTP/TFTP protocol
+bootz   - boot Linux zImage image from memory
+cfgblock- Toradex config block handling commands
+clocks  - display clocks
+clrlogo - fill the boot logo area with black
+cmp     - memory compare
+coninfo - print console devices and information
+cp      - memory copy
+cpu     - Multiprocessor CPU boot manipulation and release
+crc32   - checksum calculation
+dcache  - enable or disable data cache
+dfu     - Device Firmware Upgrade
+dhcp    - boot image via network using DHCP/TFTP protocol
+dm      - Driver model low level access
+echo    - echo args to console
+editenv - edit environment variable
+env     - environment handling commands
+erase   - erase FLASH memory
+exit    - exit script
+ext4load- load binary file from a Ext4 filesystem
+ext4ls  - list files in a directory (default /)
+ext4size- determine a file's size
+false   - do nothing, unsuccessfully
+fastboot- use USB Fastboot protocol
+fatinfo - print information about filesystem
+fatload - load binary file from a dos filesystem
+fatls   - list files in a directory (default /)
+fatsize - determine a file's size
+fatwrite- write file into a dos filesystem
+fdt     - flattened device tree utility commands
+flinfo  - print FLASH memory information
+fstype  - Look up a filesystem type
+fuse    - Fuse sub-system
+go      - start application at address 'addr'
+gpio    - query and control gpio pins
+hdmidet - detect HDMI monitor
+help    - print command description/usage
+i2c     - I2C sub-system
+icache  - enable or disable instruction cache
+itest   - return true/false on integer compare
+load    - load binary file from a filesystem
+loop    - infinite loop on address range
+ls      - list files in a directory (default /)
+md      - memory display
+mdio    - MDIO utility commands
+mfgr_fuse- OTP fusing during module production
+mii     - MII utility commands
+mm      - memory modify (auto-incrementing address)
+mmc     - MMC sub system
+mmcinfo - display MMC info
+mtest   - simple RAM read/write test
+mw      - memory write (fill)
+nm      - memory modify (constant address)
+pf0100_otp_prog- Program the OTP fuses on the PMIC PF0100
+ping    - send ICMP ECHO_REQUEST to network host
+printenv- print environment variables
+protect - enable or disable FLASH write protection
+read    - Load binary data from a partition
+reset   - Perform RESET of the CPU
+run     - run commands in an environment variable
+sata    - SATA sub system
+save    - save file to a filesystem
+saveenv - save environment variables to persistent storage
+setenv  - set environment variables
+setexpr - set environment variable as the result of eval expression
+showvar - print local hushshell variables
+size    - determine a file's size
+sleep   - delay execution for some time
+source  - run script from memory
+test    - minimal test like /bin/sh
+tftpboot- boot image via network using TFTP protocol
+time    - run commands and summarize execution time
+true    - do nothing, successfully
+ums     - Use the UMS [USB Mass Storage]
+updt_fuse- OTP fusing during module update
+usb     - USB sub-system
+usbboot - boot from USB device
+version - print monitor, compiler and linker version
+write   - write binary data to a partition
+Apalis iMX6 # boota mmc1
+Unknown command 'boota' - try 'help'
+Apalis iMX6 # 

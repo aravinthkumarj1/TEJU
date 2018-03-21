@@ -1,0 +1,6837 @@
+
+
+U-Boot 2017.03-00002-gebf9dc2527 (Jan 29 2018 - 17:39:17 +0530)
+
+CPU:   Freescale i.MX6Q rev1.5 at 792 MHz
+Reset cause: POR
+I2C:   ready
+DRAM:  2 GiB
+PMIC: device id: 0x10, revision id: 0x21
+PMIC: programmed
+MMC:   FSL_SDHC: 0, FSL_SDHC: 1, FSL_SDHC: 2
+Unable to allocate framebuffer memory
+In:    serial
+Out:   serial
+Err:   serial
+Model: Toradex Apalis iMX6 Quad 2GB IT V1.1C, Serial# 05146387
+flash target is MMC:0
+Net:   using PHY at 7
+FEC [PRIME]
+Fastboot: Normal
+Hit any key to stop autoboot:  1  0 
+boota mmc0 
+CACHE: Misaligned operation at range [8ffb79a0, 8ffb7a20]
+CACHE: Misaligned operation at range [8ffb79a0, 8ffb7a20]
+kernel   @ 14008000 (9802160)
+ramdisk  @ 15000000 (1628983)
+fdt      @ 14f00000 (53981)
+## Booting Android Image at 0x12000000 ...
+Kernel load addr 0x14008000 size 9573 KiB
+Kernel command line: console=ttymxc0,115200 init=/init video=mxcfb0:dev=ldb,fbpix=RGB32,bpp=32 video=mxcfb1:dev=hdmi,640x480M@60,if=RGB24,bpp=16 video=mxcfb2:off video=mxcfb3:off vmalloc=256M androidboot.console=ttymxc0 consoleblank=0 androidboot.hardware=freescale cma=448M androidboot.selinux=permissive androidboot.dm_verity=disabled buildvariant=user androidboot.serialno=1b2429d4ea997115 androidboot.storage_type=emmc
+## Flattened Device Tree blob at 14f00000
+   Booting using the fdt blob at 0x14f00000
+   Loading Kernel Image ... OK
+   Using Device Tree in place at 14f00000, end 14f102dc
+
+Starting kernel ...
+
+Booting Linux on physical CPU 0x0
+Linux version 4.9.67-07229-gdc6c16ec0433 (embadmin@ubuntu) (gcc version 4.9 20150123 (prerelease) (GCC) ) #73 SMP PREEMPT Mon Feb 19 12:20:06 IST 2018
+CPU: ARMv7 Processor [412fc09a] revision 10 (ARMv7), cr=10c53c7d
+CPU: PIPT / VIPT nonaliasing data cache, VIPT aliasing instruction cache
+OF: fdt:Machine model: Aravinth : Toradex Apalis iMX6Q/D Module on Ixora V1.1 Carrier Board
+cma: Reserved 448 MiB at 0x22000000
+Memory policy: Data cache writealloc
+percpu: Embedded 15 pages/cpu @ee6b3000 s31040 r8192 d22208 u61440
+Built 1 zonelists in Zone order, mobility grouping on.  Total pages: 522768
+Kernel command line: console=ttymxc0,115200 init=/init video=mxcfb0:dev=ldb,fbpix=RGB32,bpp=32 video=mxcfb1:dev=hdmi,640x480M@60,if=RGB24,bpp=16 video=mxcfb2:off video=mxcfb3:off vmalloc=256M androidboot.console=ttymxc0 consoleblank=0 androidboot.hardware=freescale cma=448M androidboot.selinux=permissive androidboot.dm_verity=disabled buildvariant=user androidboot.serialno=1b2429d4ea997115 androidboot.storage_type=emmc
+PID hash table entries: 4096 (order: 2, 16384 bytes)
+Dentry cache hash table entries: 131072 (order: 7, 524288 bytes)
+Inode-cache hash table entries: 65536 (order: 6, 262144 bytes)
+Memory: 1597048K/2097152K available (13312K kernel code, 1128K rwdata, 4016K rodata, 1024K init, 606K bss, 41352K reserved, 458752K cma-reserved, 1318912K highmem)
+Virtual kernel memory layout:
+    vector  : 0xffff0000 - 0xffff1000   (   4 kB)
+    fixmap  : 0xffc00000 - 0xfff00000   (3072 kB)
+    vmalloc : 0xf0000000 - 0xff800000   ( 248 MB)
+    lowmem  : 0xc0000000 - 0xef800000   ( 760 MB)
+    pkmap   : 0xbfe00000 - 0xc0000000   (   2 MB)
+    modules : 0xbf000000 - 0xbfe00000   (  14 MB)
+      .text : 0xc0008000 - 0xc0e00000   (14304 kB)
+      .init : 0xc1300000 - 0xc1400000   (1024 kB)
+      .data : 0xc1400000 - 0xc151a218   (1129 kB)
+       .bss : 0xc151a218 - 0xc15b1be0   ( 607 kB)
+SLUB: HWalign=64, Order=0-3, MinObjects=0, CPUs=4, Nodes=1
+Preemptible hierarchical RCU implementation.
+	Build-time adjustment of leaf fanout to 32.
+NR_IRQS:16 nr_irqs:16 16
+L2C-310 errata 752271 769419 enabled
+L2C-310 enabling early BRESP for Cortex-A9
+L2C-310 full line of zeros enabled for Cortex-A9
+L2C-310 ID prefetch enabled, offset 16 lines
+L2C-310 dynamic clock gating enabled, standby mode enabled
+L2C-310 cache controller enabled, 16 ways, 1024 kB
+L2C-310: CACHE_ID 0x410000c7, AUX_CTRL 0x76470001
+Switching to timer-based delay loop, resolution 333ns
+sched_clock: 32 bits at 3000kHz, resolution 333ns, wraps every 715827882841ns
+clocksource: mxc_timer1: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 637086815595 ns
+Console: colour dummy device 80x30
+Calibrating delay loop (skipped), value calculated using timer frequency.. 6.00 BogoMIPS (lpj=30000)
+pid_max: default: 32768 minimum: 301
+Security Framework initialized
+SELinux:  Initializing.
+Mount-cache hash table entries: 2048 (order: 1, 8192 bytes)
+Mountpoint-cache hash table entries: 2048 (order: 1, 8192 bytes)
+CPU: Testing write buffer coherency: ok
+CPU0: update cpu_capacity 1024
+CPU0: thread -1, cpu 0, socket 0, mpidr 80000000
+Setting up static identity map for 0x10100000 - 0x10100058
+CPU1: update cpu_capacity 1024
+CPU1: thread -1, cpu 1, socket 0, mpidr 80000001
+CPU2: update cpu_capacity 1024
+CPU2: thread -1, cpu 2, socket 0, mpidr 80000002
+CPU3: update cpu_capacity 1024
+CPU3: thread -1, cpu 3, socket 0, mpidr 80000003
+Brought up 4 CPUs
+SMP: Total of 4 processors activated (24.00 BogoMIPS).
+CPU: All CPU(s) started in SVC mode.
+CPU3: update max cpu_capacity 1024
+devtmpfs: initialized
+CPU2: update max cpu_capacity 1024
+VFP support v0.3: implementor 41 architecture 3 part 30 variant 9 rev 4
+clocksource: jiffies: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 19112604462750000 ns
+futex hash table entries: 1024 (order: 4, 65536 bytes)
+pinctrl core: initialized pinctrl subsystem
+NET: Registered protocol family 16
+DMA: preallocated 256 KiB pool for atomic coherent allocations
+cpuidle: using governor menu
+CPU identified as i.MX6Q, silicon rev 1.5
+hw-breakpoint: found 5 (+1 reserved) breakpoint and 1 watchpoint registers.
+hw-breakpoint: maximum watchpoint size is 4 bytes.
+imx6q-pinctrl 20e0000.iomuxc: initialized IMX pinctrl driver
+imx-gpc 20dc000.gpc: no fsl,ldo-bypass found!
+imx-gpc 20dc000.gpc: Registered imx-gpc
+mxs-dma 110000.dma-apbh: initialized
+usb_host_vbus: supplied by usb_host_vbus_hub
+SCSI subsystem initialized
+usbcore: registered new interface driver usbfs
+usbcore: registered new interface driver hub
+usbcore: registered new device driver usb
+2000000.aips-bus:usbphy_nop1 supply vcc not found, using dummy regulator
+2000000.aips-bus:usbphy_nop2 supply vcc not found, using dummy regulator
+i2c i2c-1: IMX I2C adapter registered
+i2c i2c-1: can't use DMA, using PIO instead.
+stmpe-i2c 2-0041: stmpe811 detected, chip id: 0x811
+i2c i2c-2: IMX I2C adapter registered
+i2c i2c-2: can't use DMA, using PIO instead.
+i2c i2c-3: IMX I2C adapter registered
+i2c i2c-3: can't use DMA, using PIO instead.
+Linux video capture interface: v2.00
+pps_core: LinuxPPS API ver. 1 registered
+pps_core: Software ver. 5.3.6 - Copyright 2005-2007 Rodolfo Giometti <giometti@linux.it>
+PTP clock support registered
+imx-ipuv3 2400000.ipu: IPU DMFC NORMAL mode: 1(0~1), 5B(4,5), 5F(6,7)
+imx-ipuv3 2800000.ipu: IPU DMFC NORMAL mode: 1(0~1), 5B(4,5), 5F(6,7)
+mxc_mipi_csi2 21dc000.mipi_csi: i.MX MIPI CSI2 driver probed ipu0 csi1
+mxc_mipi_csi2 21dc000.mipi_csi: i.MX MIPI CSI2 dphy version is 0x3130302a
+MIPI CSI2 driver module loaded
+imx rpmsg driver is registered.
+Advanced Linux Sound Architecture Driver Initialized.
+Bluetooth: Core ver 2.22
+NET: Registered protocol family 31
+Bluetooth: HCI device and connection manager initialized
+Bluetooth: HCI socket layer initialized
+Bluetooth: L2CAP socket layer initialized
+Bluetooth: SCO socket layer initialized
+clocksource: Switched to clocksource mxc_timer1
+VFS: Disk quotas dquot_6.6.0
+VFS: Dquot-cache hash table entries: 1024 (order 0, 4096 bytes)
+NET: Registered protocol family 2
+TCP established hash table entries: 8192 (order: 3, 32768 bytes)
+TCP bind hash table entries: 8192 (order: 4, 65536 bytes)
+TCP: Hash tables configured (established 8192 bind 8192)
+UDP hash table entries: 512 (order: 2, 16384 bytes)
+UDP-Lite hash table entries: 512 (order: 2, 16384 bytes)
+NET: Registered protocol family 1
+RPC: Registered named UNIX socket transport module.
+RPC: Registered udp transport module.
+RPC: Registered tcp transport module.
+RPC: Registered tcp NFSv4.1 backchannel transport module.
+Trying to unpack rootfs image as initramfs...
+Freeing initrd memory: 1592K
+hw perfevents: enabled with armv7_cortex_a9 PMU driver, 7 counters available
+Bus freq driver module loaded
+audit: initializing netlink subsys (disabled)
+audit: type=2000 audit(0.870:1): initialized
+workingset: timestamp_bits=30 max_order=19 bucket_order=0
+NFS: Registering the id_resolver key type
+Key type id_resolver registered
+Key type id_legacy registered
+ntfs: driver 2.1.32 [Flags: R/W DEBUG].
+jffs2: version 2.2. (NAND) ¬© 2001-2006 Red Hat, Inc.
+fuse init (API version 7.26)
+bounce: pool size: 64 pages
+io scheduler noop registered
+io scheduler deadline registered
+io scheduler cfq registered (default)
+backlight supply power not found, using dummy regulator
+20e0000.hdmi_video supply HDMI not found, using dummy regulator
+mxc_sdc_fb fb@0: registered mxc display driver ldb
+imx-ipuv3 2800000.ipu: IPU DMFC DP HIGH RESOLUTION: 1(0,1), 5B(2~5), 5F(6,7)
+Console: switching to colour frame buffer device 128x48
+mxc_hdmi 20e0000.hdmi_video: Detected HDMI controller 0x13:0xa:0xa0:0xc1
+fbcvt: 640x480@60: CVT Name - .307M3
+mxc_sdc_fb fb@1: registered mxc display driver hdmi
+mxc_sdc_fb fb@2: Can't get fb option for mxcfb2!
+mxc_sdc_fb fb@3: Can't get fb option for mxcfb3!
+imx-sdma 20ec000.sdma: no iram assigned, using external mem
+imx-sdma 20ec000.sdma: loaded firmware 3.3
+pfuze100-regulator 2-0008: Full layer: 2, Metal layer: 1
+pfuze100-regulator 2-0008: FAB: 0, FIN: 0
+pfuze100-regulator 2-0008: pfuze100 found.
+2020000.serial: ttymxc0 at MMIO 0x2020000 (irq = 29, base_baud = 5000000) is a IMX
+console [ttymxc0] enabled
+21e8000.serial: ttymxc1 at MMIO 0x21e8000 (irq = 78, base_baud = 5000000) is a IMX
+21f0000.serial: ttymxc3 at MMIO 0x21f0000 (irq = 79, base_baud = 5000000) is a IMX
+21f4000.serial: ttymxc4 at MMIO 0x21f4000 (irq = 80, base_baud = 5000000) is a IMX
+imx sema4 driver is registered.
+[drm] Initialized
+[drm] Initialized vivante 1.0.0 20120216 on minor 0
+brd: module loaded
+loop: module loaded
+zram: Added device: zram0
+ahci-imx 2200000.sata: fsl,transmit-level-mV not specified, using 00000024
+ahci-imx 2200000.sata: fsl,transmit-boost-mdB not specified, using 00000480
+ahci-imx 2200000.sata: fsl,transmit-atten-16ths not specified, using 00002000
+ahci-imx 2200000.sata: fsl,receive-eq-mdB not specified, using 05000000
+ahci-imx 2200000.sata: SSS flag set, parallel bus scan disabled
+ahci-imx 2200000.sata: AHCI 0001.0300 32 slots 1 ports 3 Gbps 0x1 impl platform mode
+ahci-imx 2200000.sata: flags: ncq sntf stag pm led clo only pmp pio slum part ccc apst 
+scsi host0: ahci-imx
+ata1: SATA max UDMA/133 mmio [mem 0x02200000-0x02203fff] port 0x100 irq 87
+spi_imx 2008000.ecspi: probed
+libphy: Fixed MDIO Bus: probed
+tun: Universal TUN/TAP device driver, 1.6
+tun: (C) 1999-2004 Max Krasnyansky <maxk@qualcomm.com>
+CAN device driver interface
+2090000.flexcan supply xceiver not found, using dummy regulator
+flexcan 2090000.flexcan: device registered (reg_base=f02f4000, irq=38)
+2094000.flexcan supply xceiver not found, using dummy regulator
+flexcan 2094000.flexcan: device registered (reg_base=f02fc000, irq=39)
+2188000.ethernet supply phy not found, using dummy regulator
+pps pps0: new PPS source ptp0
+libphy: fec_enet_mii_bus: probed
+fec 2188000.ethernet eth0: registered PHC device 0
+PPP generic driver version 2.4.2
+PPP BSD Compression module registered
+PPP Deflate Compression module registered
+PPP MPPE Compression module registered
+NET: Registered protocol family 24
+usbcore: registered new interface driver kaweth
+pegasus: v0.9.3 (2013/04/25), Pegasus/Pegasus II USB Ethernet driver
+usbcore: registered new interface driver pegasus
+usbcore: registered new interface driver rtl8150
+usbcore: registered new interface driver r8152
+usbcore: registered new interface driver asix
+usbcore: registered new interface driver ax88179_178a
+usbcore: registered new interface driver cdc_ether
+usbcore: registered new interface driver cdc_eem
+usbcore: registered new interface driver net1080
+usbcore: registered new interface driver cdc_subset
+usbcore: registered new interface driver zaurus
+usbcore: registered new interface driver cdc_ncm
+ehci_hcd: USB 2.0 'Enhanced' Host Controller (EHCI) Driver
+ehci-mxc: Freescale On-Chip EHCI Host driver
+usbcore: registered new interface driver cdc_acm
+cdc_acm: USB Abstract Control Model driver for USB modems and ISDN adapters
+usbcore: registered new interface driver usb-storage
+usbcore: registered new interface driver usbserial
+usbcore: registered new interface driver usbserial_generic
+usbserial: USB Serial support registered for generic
+usbcore: registered new interface driver ftdi_sio
+usbserial: USB Serial support registered for FTDI USB Serial Device
+usbcore: registered new interface driver option
+usbserial: USB Serial support registered for GSM modem (1-port)
+usbcore: registered new interface driver usbtest
+usbcore: registered new interface driver usb_ehset_test
+2184800.usbmisc supply vbus-wakeup not found, using dummy regulator
+ci_hdrc ci_hdrc.1: EHCI Host Controller
+ci_hdrc ci_hdrc.1: new USB bus registered, assigned bus number 1
+ci_hdrc ci_hdrc.1: USB 2.0 started, EHCI 1.00
+usb usb1: New USB device found, idVendor=1d6b, idProduct=0002
+usb usb1: New USB device strings: Mfr=3, Product=2, SerialNumber=1
+usb usb1: Product: EHCI Host Controller
+usb usb1: Manufacturer: Linux 4.9.67-07229-gdc6c16ec0433 ehci_hcd
+usb usb1: SerialNumber: ci_hdrc.1
+hub 1-0:1.0: USB hub found
+hub 1-0:1.0: 1 port detected
+ata1: SATA link down (SStatus 0 SControl 300)
+ahci-imx 2200000.sata: no device found, disabling link.
+ahci-imx 2200000.sata: pass ahci_imx..hotplug=1 to enable hotplug
+mousedev: PS/2 mouse device common for all mice
+usbcore: registered new interface driver xpad
+usbcore: registered new interface driver usb_acecad
+usbcore: registered new interface driver aiptek
+usbcore: registered new interface driver gtco
+usbcore: registered new interface driver hanwang
+usbcore: registered new interface driver kbtab
+input: stmpe-ts as /devices/soc0/soc/2100000.aips-bus/21a4000.i2c/i2c-2/2-0041/stmpe-ts/input/input0
+snvs_rtc 20cc000.snvs:snvs-rtc-lp: rtc core: registered 20cc000.snvs:snvs-r as rtc0
+i2c /dev entries driver
+IR NEC protocol handler initialized
+IR RC5(x/sz) protocol handler initialized
+IR RC6 protocol handler initialized
+IR JVC protocol handler initialized
+IR Sony protocol handler initialized
+IR SANYO protocol handler initialized
+IR Sharp protocol handler initialized
+IR MCE Keyboard/mouse protocol handler initialized
+IR XMP protocol handler initialized
+mxc_v4l2_output v4l2_out: V4L2 device registered as video16
+mxc_v4l2_output v4l2_out: V4L2 device registered as video17
+mxc_v4l2_output v4l2_out: V4L2 device registered as video18
+mxc_v4l2_output v4l2_out: V4L2 device registered as video19
+ov564x_mipi 3-003c: found pwm2, period=0
+usb 1-1: new high-speed USB device number 2 using ci_hdrc
+ov5640_read_reg:write reg error:reg=300a
+camera ov5640_mipi is not found
+usbcore: registered new interface driver uvcvideo
+USB Video Class driver (1.1.1)
+imx2-wdt 20bc000.wdog: timeout 60 sec (nowayout=0)
+device-mapper: uevent: version 1.0.3
+device-mapper: ioctl: 4.35.0-ioctl (2016-06-23) initialised: dm-devel@redhat.com
+Bluetooth: HCI UART driver ver 2.3
+Bluetooth: HCI UART protocol H4 registered
+Bluetooth: HCI UART protocol BCSP registered
+Bluetooth: HCI UART protocol ATH3K registered
+usbcore: registered new interface driver btusb
+sdhci: Secure Digital Host Controller Interface driver
+sdhci: Copyright(c) Pierre Ossman
+sdhci-pltfm: SDHCI platform and OF driver helper
+sdhci-esdhc-imx 2190000.usdhc: could not get ultra high speed state, work on normal mode
+sdhci-esdhc-imx 2190000.usdhc: Got CD GPIO
+mmc1: SDHCI controller on 2190000.usdhc [2190000.usdhc] using ADMA
+sdhci-esdhc-imx 2198000.usdhc: could not get ultra high speed state, work on normal mode
+usb 1-1: New USB device found, idVendor=0424, idProduct=2514
+usb 1-1: New USB device strings: Mfr=0, Product=0, SerialNumber=0
+hub 1-1:1.0: USB hub found
+hub 1-1:1.0: 4 ports detected
+mmc0: SDHCI controller on 2198000.usdhc [2198000.usdhc] using ADMA
+mxc_vpu 2040000.vpu_fsl: VPU initialized
+mxc_vdoa 21e4000.vdoa: i.MX Video Data Order Adapter(VDOA) driver probed
+mxc_hdmi_cec soc:hdmi_cec@00120000: HDMI CEC initialized
+Galcore version 6.2.2.96445
+mmc0: new DDR MMC card at address 0001
+mmcblk0: mmc0:0001 Q2J54A 3.59 GiB 
+mmcblk0boot0: mmc0:0001 Q2J54A partition 1 16.0 MiB
+mmcblk0boot1: mmc0:0001 Q2J54A partition 2 16.0 MiB
+random: fast init done
+Alternate GPT is invalid, using primary GPT.
+ mmcblk0: p1 p2 p3 p4 p5 p6 p7 p8 p9 p10 p11
+caam 2100000.caam: ERA source: CAAMVID.
+caam 2100000.caam: AXI pipeline throttling enabled.
+caam 2100000.caam: Instantiated RNG4 SH1
+caam 2100000.caam: device ID = 0x0a16010000000000 (Era 4)
+caam 2100000.caam: job rings = 2, qi = 0
+caam algorithms registered in /proc/crypto
+caam_jr 2101000.jr0: registering rng-caam
+platform caam_sm: blkkey_ex: 4 keystore units available
+platform caam_sm: 64-bit clear key:
+platform caam_sm: [0000] 00 01 02 03 04 0f 06 07
+platform caam_sm: 64-bit black key:
+platform caam_sm: [0000] c0 61 8f 3b b9 35 73 6b
+platform caam_sm: [0008] 16 40 bf eb 20 24 41 f5
+platform caam_sm: 128-bit clear key:
+platform caam_sm: [0000] 00 01 02 03 04 0f 06 07
+platform caam_sm: [0008] 08 09 0a 0b 0c 0d 0e 0f
+platform caam_sm: 128-bit black key:
+platform caam_sm: [0000] 75 91 83 49 4c 13 8e e5
+platform caam_sm: [0008] 21 a6 c1 66 38 1b de a9
+platform caam_sm: 192-bit clear key:
+platform caam_sm: [0000] 00 01 02 03 04 0f 06 07
+platform caam_sm: [0008] 08 09 0a 0b 0c 0d 0e 0f
+platform caam_sm: [0016] 10 11 12 13 14 15 16 17
+platform caam_sm: 192-bit black key:
+platform caam_sm: [0000] 87 ad 22 d8 79 60 5c 3c
+platform caam_sm: [0008] 6d 51 cf d7 e8 e0 08 ee
+platform caam_sm: [0016] cf 2f 28 68 63 c4 f8 f1
+platform caam_sm: [0024] b3 3d 50 38 0f d2 87 e7
+platform caam_sm: 256-bit clear key:
+platform caam_sm: [0000] 00 01 02 03 04 0f 06 07
+platform caam_sm: [0008] 08 09 0a 0b 0c 0d 0e 0f
+platform caam_sm: [0016] 10 11 12 13 14 15 16 17
+platform caam_sm: [0024] 18 19 1a 1b 1c 1d 1e 1f
+platform caam_sm: 256-bit black key:
+platform caam_sm: [0000] 01 c8 ed 6f 64 8b 40 39
+platform caam_sm: [0008] 38 e5 0c 93 59 44 f8 20
+platform caam_sm: [0016] d0 9d fb 1a d6 14 aa 64
+platform caam_sm: [0024] ba 5f 63 26 19 8d 63 83
+platform caam_sm: 64-bit unwritten blob:
+platform caam_sm: [0000] 00 00 00 00 00 00 00 00
+platform caam_sm: [0008] 00 00 00 00 00 00 00 00
+platform caam_sm: [0016] 00 00 00 00 00 00 00 00
+platform caam_sm: [0024] 00 00 00 00 00 00 00 00
+platform caam_sm: [0032] 00 00 00 00 00 00 00 00
+platform caam_sm: [0040] 00 00 00 00 00 00 00 00
+platform caam_sm: [0048] 00 00 00 00 00 00 00 00
+platform caam_sm: [0056] 00 00 00 00 00 00 00 00
+platform caam_sm: [0064] 00 00 00 00 00 00 00 00
+platform caam_sm: [0072] 00 00 00 00 00 00 00 00
+platform caam_sm: [0080] 00 00 00 00 00 00 00 00
+platform caam_sm: [0088] 00 00 00 00 00 00 00 00
+platform caam_sm: 128-bit unwritten blob:
+platform caam_sm: [0000] 00 00 00 00 00 00 00 00
+platform caam_sm: [0008] 00 00 00 00 00 00 00 00
+platform caam_sm: [0016] 00 00 00 00 00 00 00 00
+platform caam_sm: [0024] 00 00 00 00 00 00 00 00
+platform caam_sm: [0032] 00 00 00 00 00 00 00 00
+platform caam_sm: [0040] 00 00 00 00 00 00 00 00
+platform caam_sm: [0048] 00 00 00 00 00 00 00 00
+platform caam_sm: [0056] 00 00 00 00 00 00 00 00
+platform caam_sm: [0064] 00 00 00 00 00 00 00 00
+platform caam_sm: [0072] 00 00 00 00 00 00 00 00
+platform caam_sm: [0080] 00 00 00 00 00 00 00 00
+platform caam_sm: [0088] 00 00 00 00 00 00 00 00
+platform caam_sm: 196-bit unwritten blob:
+platform caam_sm: [0000] 00 00 00 00 00 00 00 00
+platform caam_sm: [0008] 00 00 00 00 00 00 00 00
+platform caam_sm: [0016] 00 00 00 00 00 00 00 00
+platform caam_sm: [0024] 00 00 00 00 00 00 00 00
+platform caam_sm: [0032] 00 00 00 00 00 00 00 00
+platform caam_sm: [0040] 00 00 00 00 00 00 00 00
+platform caam_sm: [0048] 00 00 00 00 00 00 00 00
+platform caam_sm: [0056] 00 00 00 00 00 00 00 00
+platform caam_sm: [0064] 00 00 00 00 00 00 00 00
+platform caam_sm: [0072] 00 00 00 00 00 00 00 00
+platform caam_sm: [0080] 00 00 00 00 00 00 00 00
+platform caam_sm: [0088] 00 00 00 00 00 00 00 00
+platform caam_sm: 256-bit unwritten blob:
+platform caam_sm: [0000] 00 00 00 00 00 00 00 00
+platform caam_sm: [0008] 00 00 00 00 00 00 00 00
+platform caam_sm: [0016] 00 00 00 00 00 00 00 00
+platform caam_sm: [0024] 00 00 00 00 00 00 00 00
+platform caam_sm: [0032] 00 00 00 00 00 00 00 00
+platform caam_sm: [0040] 00 00 00 00 00 00 00 00
+platform caam_sm: [0048] 00 00 00 00 00 00 00 00
+platform caam_sm: [0056] 00 00 00 00 00 00 00 00
+platform caam_sm: [0064] 00 00 00 00 00 00 00 00
+platform caam_sm: [0072] 00 00 00 00 00 00 00 00
+platform caam_sm: [0080] 00 00 00 00 00 00 00 00
+platform caam_sm: [0088] 00 00 00 00 00 00 00 00
+platform caam_sm: 64-bit black key in blob:
+platform caam_sm: [0000] 9a ed 74 c3 e7 4d d2 18
+platform caam_sm: [0008] 18 69 b6 99 e7 9f ca 77
+platform caam_sm: [0016] b6 a4 54 41 6c bf 68 18
+platform caam_sm: [0024] bd 4b f0 00 56 73 99 49
+platform caam_sm: [0032] ea 05 a0 a8 33 a8 8f bd
+platform caam_sm: [0040] 8a 33 87 62 8a 7d 3b 27
+platform caam_sm: [0048] 46 48 85 81 20 f2 59 96
+platform caam_sm: [0056] 00 00 00 00 00 00 00 00
+platform caam_sm: [0064] 00 00 00 00 00 00 00 00
+platform caam_sm: [0072] 00 00 00 00 00 00 00 00
+platform caam_sm: [0080] 00 00 00 00 00 00 00 00
+platform caam_sm: [0088] 00 00 00 00 00 00 00 00
+platform caam_sm: 128-bit black key in blob:
+platform caam_sm: [0000] 9b 30 e4 e9 af fb 32 b4
+platform caam_sm: [0008] 01 5d 5c f1 f4 4e f2 07
+platform caam_sm: [0016] f5 03 9c d8 b9 6d 2a 74
+platform caam_sm: [0024] 7d b6 9b d5 62 bb 56 e4
+platform caam_sm: [0032] a8 23 fa 5d 32 8b e1 f8
+platform caam_sm: [0040] 33 9d f0 f6 d1 54 92 e9
+platform caam_sm: [0048] 00 55 ea 1d a3 8b 56 8b
+platform caam_sm: [0056] f5 b8 df 86 41 7c ea 54
+platform caam_sm: [0064] 00 00 00 00 00 00 00 00
+platform caam_sm: [0072] 00 00 00 00 00 00 00 00
+platform caam_sm: [0080] 00 00 00 00 00 00 00 00
+platform caam_sm: [0088] 00 00 00 00 00 00 00 00
+platform caam_sm: 192-bit black key in blob:
+platform caam_sm: [0000] d0 ad 8e 56 a8 ca fc a3
+platform caam_sm: [0008] 3b 64 b1 7f ed e3 56 9b
+platform caam_sm: [0016] cd a2 92 15 c1 72 b0 8b
+platform caam_sm: [0024] 52 60 b5 99 4d 88 83 72
+platform caam_sm: [0032] 66 c4 98 74 b1 8c 5f 00
+platform caam_sm: [0040] 55 33 88 67 ab 86 99 c2
+platform caam_sm: [0048] 06 13 a2 aa df d4 e6 24
+platform caam_sm: [0056] 97 66 9d e5 46 71 4a 53
+platform caam_sm: [0064] 2f 41 e8 b7 cc cd bf 8c
+platform caam_sm: [0072] 00 00 00 00 00 00 00 00
+platform caam_sm: [0080] 00 00 00 00 00 00 00 00
+platform caam_sm: [0088] 00 00 00 00 00 00 00 00
+platform caam_sm: 256-bit black key in blob:
+platform caam_sm: [0000] a8 67 df af 86 28 27 ab
+platform caam_sm: [0008] 52 c8 a2 12 86 91 c2 36
+platform caam_sm: [0016] d1 1b 5f 82 84 59 d7 6e
+platform caam_sm: [0024] 81 3b 75 d7 e4 7d fb 39
+platform caam_sm: [0032] 27 e5 40 37 39 17 fa 5e
+platform caam_sm: [0040] 8d af 0f e2 76 3b ad 7e
+platform caam_sm: [0048] f1 86 98 d9 01 87 4a 3e
+platform caam_sm: [0056] e4 ef 2c 31 48 20 cd d8
+platform caam_sm: [0064] fb ca 78 84 ed 83 07 27
+platform caam_sm: [0072] ad 14 b3 42 7b 11 78 3e
+platform caam_sm: [0080] 00 00 00 00 00 00 00 00
+platform caam_sm: [0088] 00 00 00 00 00 00 00 00
+platform caam_sm: restored 64-bit black key:
+platform caam_sm: [0000] 01 81 bc b4 6d 8d 68 00
+platform caam_sm: [0008] 5f 8a bf 1d 3d 21 b0 9d
+platform caam_sm: restored 128-bit black key:
+platform caam_sm: [0000] 75 91 83 49 4c 13 8e e5
+platform caam_sm: [0008] 21 a6 c1 66 38 1b de a9
+platform caam_sm: restored 192-bit black key:
+platform caam_sm: [0000] 87 ad 22 d8 79 60 5c 3c
+platform caam_sm: [0008] 6d 51 cf d7 e8 e0 08 ee
+platform caam_sm: [0016] 64 44 79 b3 c6 bf 76 0c
+platform caam_sm: [0024] 81 d5 5c 9e bc 57 0f 24
+platform caam_sm: restored 256-bit black key:
+platform caam_sm: [0000] 01 c8 ed 6f 64 8b 40 39
+platform caam_sm: [0008] 38 e5 0c 93 59 44 f8 20
+platform caam_sm: [0016] d0 9d fb 1a d6 14 aa 64
+platform caam_sm: [0024] ba 5f 63 26 19 8d 63 83
+snvs-secvio 20cc000.caam-snvs: can't get snvs clock
+snvs-secvio 20cc000.caam-snvs: violation handlers armed - non-secure state
+hidraw: raw HID events driver (C) Jiri Kosina
+usbcore: registered new interface driver usbhid
+usbhid: USB HID core driver
+ashmem: initialized
+usbcore: registered new interface driver snd-usb-audio
+sgtl5000 2-000a: sgtl5000 revision 0x11
+fsl-ssi-dai 2028000.ssi: No cache defaults, reading back from HW
+imx-sgtl5000 sound: sgtl5000 <-> 2028000.ssi mapping ok
+imx-spdif sound-spdif: snd-soc-dummy-dai <-> 2004000.spdif mapping ok
+imx-audio-hdmi sound-hdmi: hdmi-hifi.0 <-> soc:hdmi_audio@00120000 mapping ok
+NET: Registered protocol family 26
+u32 classifier
+    Actions configured
+Netfilter messages via NETLINK v0.30.
+nf_conntrack version 0.5.0 (16384 buckets, 65536 max)
+ctnetlink v0.93: registering with nfnetlink.
+xt_time: kernel timezone is -0000
+ip_tables: (C) 2000-2006 Netfilter Core Team
+arp_tables: arp_tables: (C) 2002 David S. Miller
+Initializing XFRM netlink socket
+NET: Registered protocol family 10
+mip6: Mobile IPv6
+ip6_tables: (C) 2000-2006 Netfilter Core Team
+sit: IPv6, IPv4 and MPLS over IPv4 tunneling driver
+NET: Registered protocol family 17
+NET: Registered protocol family 15
+can: controller area network core (rev 20120528 abi 9)
+NET: Registered protocol family 29
+can: raw protocol (rev 20120528)
+can: broadcast manager protocol (rev 20161123 t)
+can: netlink gateway (rev 20130117) max_hops=1
+Bluetooth: RFCOMM TTY layer initialized
+Bluetooth: RFCOMM socket layer initialized
+Bluetooth: RFCOMM ver 1.11
+Bluetooth: BNEP (Ethernet Emulation) ver 1.3
+Bluetooth: BNEP filters: protocol multicast
+Bluetooth: BNEP socket layer initialized
+Bluetooth: HIDP (Human Interface Emulation) ver 1.2
+Bluetooth: HIDP socket layer initialized
+8021q: 802.1Q VLAN Support v1.8
+Key type dns_resolver registered
+cpu cpu0: Registered imx6q-cpufreq
+registered taskstats version 1
+imx_thermal 2000000.aips-bus:tempmon: Industrial CPU temperature grade - max:105C critical:100C passive:95C
+dhd_module_init in
+input: gpio-keys as /devices/soc0/gpio-keys/input/input1
+snvs_rtc 20cc000.snvs:snvs-rtc-lp: setting system clock to 1970-01-01 00:00:02 UTC (2)
+usb_otg_vbus: disabling
+ALSA device list:
+  #0: imx6q-apalis-sgtl5000
+  #1: imx-spdif
+  #2: imx-hdmi-soc
+Freeing unused kernel memory: 1024K
+init: init first stage started!
+SELinux:  Permission validate_trans in class security not defined in policy.
+SELinux:  Class cap_userns not defined in policy.
+SELinux:  Class cap2_userns not defined in policy.
+SELinux: the above unknown classes and permissions will be denied
+audit: type=1403 audit(5.017:2): policy loaded auid=4294967295 ses=4294967295
+init: (Initializing SELinux non-enforcing took 0.10s.)
+init: init second stage started!
+init: Running restorecon...
+init: waitpid failed: No child processes
+init: (Loading properties from /default.prop took 0.00s.)
+init: (Parsing /init.environ.rc took 0.00s.)
+init: (Parsing /init.usb.rc took 0.00s.)
+init: (Parsing init.freescale.usb.rc took 0.00s.)
+init: (Parsing init.freescale.i.MX6Q.rc took 0.00s.)
+init: (Parsing init.freescale.emmc.rc took 0.00s.)
+init: (Parsing /init.freescale.rc took 0.02s.)
+ueventd: ueventd started!
+ueventd: Coldboot took 0.43s.
+Console: switching to colour dummy device 80x30
+watchdogd: started (interval 10, margin 20)!
+EXT4-fs (mmcblk0p3): mounted filesystem with ordered data mode. Opts: barrier=1
+EXT4-fs (mmcblk0p10): Ignoring removed nomblk_io_submit option
+EXT4-fs (mmcblk0p10): mounted filesystem with ordered data mode. Opts: nomblk_io_submit,noauto_da_alloc,errors=panic
+EXT4-fs (mmcblk0p4): Ignoring removed nomblk_io_submit option
+EXT4-fs (mmcblk0p4): mounted filesystem with ordered data mode. Opts: nomblk_io_submit
+EXT4-fs (mmcblk0p5): mounted filesystem with ordered data mode. Opts: (null)
+file system registered
+using random self ethernet address
+using random host ethernet address
+zram0: detected capacity change from 0 to 314572800
+logd.auditd: start
+logd.klogd: 7292040000
+Adding 307196k swap on /dev/block/zram0.  Priority:-1 extents:1 across:307196k SS
+binder: 253:253 transaction failed 29189, size 0-0
+type=1400 audit(7.847:3): avc: denied { entrypoint } for pid=259 comm="init" path="/system/bin/can-config.sh" dev="mmcblk0p3" ino=255 scontext=u:r:obd:s0 tcontext=u:object_r:system_file:s0 tclass=file permissive=1
+logd.daemon: reinit
+toradex_apalis6q:/ # type=1400 audit(7.867:4): avc: denied { read execute } for pid=259 comm="can-config.sh" path="/system/bin/sh" dev="mmcblk0p3" ino=442 scontext=u:r:obd:s0 tcontext=u:object_r:shell_exec:s0 tclass=file permissive=1
+type=1400 audit(7.887:5): avc: denied { getattr } for pid=260 comm="obd" path="/vendor" dev="rootfs" ino=6500 scontext=u:r:obd:s0 tcontext=u:object_r:rootfs:s0 tclass=lnk_file permissive=1
+type=1400 audit(7.897:6): avc: denied { getattr } for pid=259 comm="can-config.sh" path="/system/bin/sh" dev="mmcblk0p3" ino=442 scontext=u:r:obd:s0 tcontext=u:object_r:shell_exec:s0 tclass=file permissive=1
+type=1400 audit(7.967:7): avc: denied { create } for pid=260 comm="obd" scontext=u:r:obd:s0 tcontext=u:r:obd:s0 tclass=socket permissive=1
+type=1400 audit(7.967:8): avc: denied { ioctl } for pid=260 comm="obd" path="socket:[10889]" dev="sockfs" ino=10889 ioctlcmd=0x8933 scontext=u:r:obd:s0 tcontext=u:r:obd:s0 tclass=socket permissive=1
+type=1400 audit(7.967:9): avc: denied { bind } for pid=260 comm="obd" scontext=u:r:obd:s0 tcontext=u:r:obd:s0 tclass=socket permissive=1
+IPv6: ADDRCONF(NETDEV_CHANGE): can0: link becomes ready
+healthd: No battery devices found
+imx-hdmi-audio imx-hdmi-audio: HDMI Video is not ready!
+imx-hdmi-audio imx-hdmi-audio: ASoC: can't open platform imx-hdmi-audio: -22
+ERROR: v4l2 capture: slave not found! V4L2_CID_HUE
+imx-hdmi-audio imx-hdmi-audio: HDMI Video is not ready!
+imx-hdmi-audio imx-hdmi-audio: ASoC: can't open platform imx-hdmi-audio: -22
+ERROR: v4l2 capture: slave not found! V4L2_CID_HUE
+init: Starting service 'bootanim'...
+capability: warning: `main' uses 32-bit capabilities (legacy support in use)
+type=1400 audit(16.987:34): avc: denied { write } for pid=260 comm="obd" path="socket:[10889]" dev="sockfs" ino=10889 scontext=u:r:obd:s0 tcontext=u:r:obd:s0 tclass=socket permissive=1
+init: write_file: Unable to open '/sys/devices/system/cpu/cpufreq/interactive/timer_rate': No such file or directory
+init: write_file: Unable to open '/sys/devices/system/cpu/cpufreq/interactive/min_sample_time': No such file or directory
+init: write_file: Unable to open '/sys/devices/system/cpu/cpufreq/interactive/go_hispeed_load': No such file or directory
+init: write_file: Unable to open '/proc/sys/vm/extra_free_kbytes': No such file or directory
+init: write_file: Unable to write to '/config/usb_gadget/g1/UDC': No such device
+acc_open
+acc_release
+Micrel KSZ9031 Gigabit PHY 2188000.ethernet-1:07: attached PHY driver [Micrel KSZ9031 Gigabit PHY] (mii_bus:phy_addr=2188000.ethernet-1:07, irq=120)
+IPv6: ADDRCONF(NETDEV_UP): eth0: link is not ready
+random: crng init done
+type=1400 audit(24.907:35): avc: denied { write } for pid=260 comm="obd" path="socket:[10889]" dev="sockfs" ino=10889 scontext=u:r:obd:s0 tcontext=u:r:obd:s0 tclass=socket permissive=1
+init: Service 'bootanim' (pid 346) exited with status 0
+init: Starting service 'exec 3 (/system/bin/bootstat)'...
+init: Service 'exec 3 (/system/bin/bootstat)' (pid 949) exited with status 0
+init: Starting service 'exec 4 (/system/bin/bootstat)'...
+init: Service 'exec 4 (/system/bin/bootstat)' (pid 960) exited with status 0
+init: Starting service 'exec 5 (/system/bin/bootstat)'...
+init: Service 'exec 5 (/system/bin/bootstat)' (pid 962) exited with status 0
+init: Starting service 'exec 6 (/system/bin/bootstat)'...
+init: Service 'exec 6 (/system/bin/bootstat)' (pid 963) exited with status 0
+type=1400 audit(30.017:36): avc: denied { write } for pid=260 comm="obd" path="socket:[10889]" dev="sockfs" ino=10889 scontext=u:r:obd:s0 tcontext=u:r:obd:s0 tclass=socket permissive=1
+type=1400 audit(34.297:37): avc: denied { write } for pid=1208 comm="Thread-2" name="vcan" dev="tmpfs" ino=11342 scontext=u:r:untrusted_app:s0:c512,c768 tcontext=u:object_r:socket_device:s0 tclass=sock_file permissive=1
+type=1400 audit(34.297:38): avc: denied { connectto } for pid=1208 comm="Thread-2" path="/dev/socket/vcan" scontext=u:r:untrusted_app:s0:c512,c768 tcontext=u:r:obd:s0 tclass=unix_stream_socket permissive=1
+
+toradex_apalis6q:/ # cd /
+toradex_apalis6q:/ # 
+toradex_apalis6q:/ # type=1400 audit(37.137:39): avc: denied { write } for pid=260 comm="obd" path="socket:[10889]" dev="sockfs" ino=10889 scontext=u:r:obd:s0 tcontext=u:r:obd:s0 tclass=socket permissive=1
+
+toradex_apalis6q:/ # 
+toradex_apalis6q:/ # 
+toradex_apalis6q:/ # 
+toradex_apalis6q:/ # 
+toradex_apalis6q:/ # 
+toradex_apalis6q:/ # 
+toradex_apalis6q:/ # 
+toradex_apalis6q:/ # cat /dev/ttyt mxc3 &
+[1] 1268
+toradex_apalis6q:/ # echo ""S"E"T"" > /dev/ttymxc3
+toradex_apalis6q:/ # SET
+
+SET BT BDADDR 88:6b:0f:62:71:88
+
+SET BT NAME WT32i-AJ
+
+SET BT CLASS 280428
+
+SET BT IDENT BT:47 f000 6.0.0 Bluegiga iWRAP
+
+SET BT LAP 9e8b33
+
+SET BT PAGEMODE 4 2000 1
+
+SET BT POWER 6 6 6
+
+SET BT ROLE 0 f 2580
+
+SET BT SNIFF 0 20 1 8
+
+SET BT SSP 3 0
+
+SET BT MTU 667
+
+SET CONTROL AUDIO INTERNAL INTERNAL
+
+SET CONTROL BAUD 115200,8n1
+
+SET CONTROL CD 00 0
+
+SET CONTROL CODEC SBC JOINT_STEREO 44100 0
+
+SET CONTROL CONFIG 0000 0000 0000 1100
+
+SET CONTROL ECHO 7
+
+SET CONTROL ESCAPE 43 00 1
+
+SET CONTROL GAIN 8 8
+
+SET CONTROL MICBIAS b 0
+
+SET CONTROL MSC DTE 00 00 00 00 00 00
+
+SET CONTROL PIO 00 00 00
+
+SET CONTROL PREAMP 1 1
+
+SET CONTROL READY 00
+
+SET CONTROL VREGEN 0 00
+
+SET PROFILE A2DP SOURCE
+
+SET PROFILE SPP Bluetooth Serial Port
+
+SET PROFILE HSP-AG Voice Gateway
+
+SET PROFILE AVRCP TARGET 07
+
+SET
+
+SET
+
+SET BT BDADDR 88:6b:0f:62:71:88
+
+SET BT NAME WT32i-AJ
+
+SET BT CLASS 280428
+
+SET BT IDENT BT:47 f000 6.0.0 Bluegiga iWRAP
+
+SET BT LAP 9e8b33
+
+SET BT PAGEMODE 4 2000 1
+
+SET BT POWER 6 6 6
+
+SET BT ROLE 0 f 2580
+
+SET BT SNIFF 0 20 1 8
+
+SET BT SSP 3 0
+
+SET BT MTU 667
+
+SET CONTROL AUDIO INTERNAL INTERNAL
+
+SET CONTROL BAUD 115200,8n1
+
+SET CONTROL CD 00 0
+
+SET CONTROL CODEC SBC JOINT_STEREO 44100 0
+
+SET CONTROL CONFIG 0000 0000 0000 1100
+
+SET CONTROL ECHO 7
+
+SET CONTROL ESCAPE 43 00 1
+
+SET CONTROL GAIN 8 8
+
+SET CONTROL MICBIAS b 0
+
+SET CONTROL MSC DTE 00 00 00 00 00 00
+
+SET CONTROL PIO 00 00 00
+
+SET CONTROL PREAMP 1 1
+
+SET CONTROL READY 00
+
+SET CONTROL VREGEN 0 00
+
+SET PROFILE A2DP SOURCE
+
+SET PROFILE SPP Bluetooth Serial Port
+
+SET PROFILE HSP-AG Voice Gateway
+
+SET PROFILE AVRCP TARGET 07
+
+SET
+
+
+
+SET BT BDADDR 88:6b:0f:62:71:88
+
+SYNTAX ERROR
+
+
+
+SET BT NAME WT32i-AJ
+
+
+
+SET BT CLASS 280428
+
+
+
+SET BT IDENT BT:47 f000 6.0.0 Bluegiga iWRAP
+
+
+
+SET BT LAP 9e8b33
+
+
+
+SET BT PAGEMODE 4 2000 1
+
+
+
+SET BT POWER 6 6 6
+
+
+
+SET BT ROLE 0 f 2580
+
+
+
+SET BT SNIFF 0 20 1 8
+
+
+
+SET BT SSP 3 0
+
+
+
+SET BT MTU 667
+
+
+
+SET CONTROL AUDIO INTERNAL INTERNAL
+
+
+
+SET CONTROL BAUD 115200,8n1
+
+
+
+SET CONTROL CD 00 0
+
+
+
+SET CONTROL CODEC SBC JOINT_STEREO 44100 0
+
+
+
+SET CONTROL CONFIG 0000 0000 0000 1100
+
+
+
+SET CONTROL ECHO 7
+
+
+
+SET CONTROL ESCAPE 43 00 1
+
+
+
+SET CONTROL GAIN 8 8
+
+
+
+SET CONTROL MICBIAS b 0
+
+
+
+SET CONTROL MSC DTE 00 00 00 00 00 00
+
+
+
+SET CONTROL PIO 00 00 00
+
+
+
+SET CONTROL PREAMP 1 1
+
+
+
+SET CONTROL READY 00
+
+
+
+SET CONTROL VREGEN 0 00
+
+
+
+SET PROFILE A2DP SOURCE
+
+WRAP THOR AI (6.0.0 build 952)
+
+Copyright (c) 2003-2014 Bluegiga Technologies Inc.
+
+WRAP THOR AI (6.0.0 build 952)
+
+SYNTAX ERROR
+
+
+
+Copyright (c) 2003-2014 Bluegiga Technologies Inc.
+
+SYNTAX ERROR
+
+
+
+WRAP THOR AI (6.0.0 build 952)
+
+SYNTAX ERROR
+
+
+
+SYNTAX ERROR
+
+SYNTAX ERROR
+
+
+
+
+
+
+
+Copyright (c) 2003-2014 Bluegiga Technologies Inc.
+
+SYNTAX ERROR
+
+
+
+SYNTAX ERROR
+
+SYNTAX ERROR
+
+
+
+
+
+
+
+WRAP THOR AI (6.0.0 build 952)
+
+SYNTAX ERROR
+
+
+
+SYNTAX ERROR
+
+SYNTAX ERROR
+
+
+
+
+
+
+
+SYNTAX ERROR
+
+SYNTAX ERROR
+
+
+
+SYNTAX ERROR
+
+SYNTAX ERROR
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Copyright (c) 2003-2014 Bluegiga Technologies Inc.
+
+SYNTAX ERROR
+
+
+
+SYNTAX ERROR
+
+SYNTAX ERROR
+
+
+
+
+
+
+
+SYNTAX ERROR
+
+SYNTAX ERROR
+
+
+
+SYNTAX ERROR
+
+SYNTAX ERROR
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+WRAP THOR AI (6.0.0 build 952)
+
+SYNTAX ERROR
+
+
+
+SYNTAX ERROR
+
+SYNTAX ERROR
+
+
+
+
+
+
+
+SYNTAX ERROR
+
+SYNTAX ERROR
+
+
+
+SYNTAX ERROR
+
+SYNTAX ERROR
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+SYNTAX ERROR
+
+SYNTAX ERROR
+
+
+
+SYNTAX ERROR
+
+SYNTAX ERROR
+
+
+
+
+
+
+
+SYNTAX ERROR
+
+SYNTAX ERROR
+
+
+
+SYNTAX ERROR
+
+SYNTAX ERROR
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Copyright (c) 2003-2014 Bluegiga Technologies Inc.
+
+SYNTAX ERROR
+
+
+
+SYNTAX ERROR
+
+SYNTAX ERROR
+
+
+
+
+
+
+
+SYNTAX ERROR
+
+SYNTAX ERROR
+
+
+
+SYNTAX ERROR
+
+SYNTAX ERROR
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+SYNTAX ERROR
+
+SYNTAX ERROR
+
+
+
+SYNTAX ERROR
+
+SYNTAX ERROR
+
+
+
+
+
+
+
+SYNTAX ERROR
+
+SYNTAX ERROR
+
+
+
+SYNTAX ERROR
+
+SYNTAX ERROR
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+WRAP THOR AI (6.0.0 build 952)
+
+SYNTAX ERROR
+
+
+
+SYNTAX ERROR
+
+SYNTAX ERROR
+
+
+
+
+
+
+
+SYNTAX ERROR
+
+SYNTAX ERROR
+
+
+
+SYNTAX ERROR
+
+SYNTAX ERROR
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+SYNTAX ERROR
+
+SYNTAX ERROR
+
+
+
+SYNTAX ERROR
+
+SYNTAX ERROR
+
+
+
+
+
+
+
+SYNTAX ERROR
+
+SYNTAX ERROR
+
+
+
+SYNTAX ERROR
+
+SYNTAX ERROR
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+SYNTAX ERROR
+
+SYNTAX ERROR
+
+
+
+SYNTAX ERROR
+
+SYNTAX ERROR
+
+
+
+
+
+
+
+SYNTAX ERROR
+
+SYNTAX ERROR
+
+
+
+SYNTAX ERROR
+
+SYNTAX ERROR
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+SYNTAX ERROR
+
+SYNTAX ERROR
+
+
+
+SYNTAX ERROR
+
+SYNTAX ERROR
+
+
+
+
+
+
+
+SYNTAX ERROR
+
+SYNTAX ERROR
+
+
+
+SYNTAX ERROR
+
+SYNTAX ERROR
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Copyright (c) 2003-2014 Bluegiga Technologies Inc.
+
+SYNTAX ERROR
+
+
+
+SYNTAX ERROR
+
+SYNTAX ERROR
+
+
+
+
+
+
+
+SYNTAX ERROR
+
+SYNTAX ERROR
+
+
+
+SYNTAX ERROR
+
+SYNTAX ERROR
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+SYNTAX ERROR
+
+SYNTAX ERROR
+
+
+
+SYNTAX ERROR
+
+SYNTAX ERROR
+
+
+
+
+
+
+
+SYNTAX ERROR
+
+SYNTAX ERROR
+
+
+
+SYNTAX ERROR
+
+SYNTAX ERROR
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+SYNTAX ERROR
+
+SYNTAX ERROR
+
+
+
+SYNTAX ERROR
+
+SYNTAX ERROR
+
+
+
+
+
+
+
+SYNTAX ERROR
+
+SYNTAX ERROR
+
+
+
+SYNTAX ERROR
+
+SYNTAX ERROR
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+SYNTAX ERROR
+
+SYNTAX ERROR
+
+
+
+SYNTAX ERROR
+
+SYNTAX ERROR
+
+
+
+
+
+
+
+SYNTAX ERROR
+
+SYNTAX ERROR
+
+
+
+SYNTAX ERROR
+
+WRAP THOR AI (6.0.0 build 952)
+
+Copyright (c) 2003-2014 Bluegiga Technologies Inc.
+
+WRAP THOR AI (6.0.0 build 952)
+
+SYNTAX ERROR
+
+
+
+Copyright (c) 2003-2014 Bluegiga Technologies Inc.
+
+SYNTAX ERROR
+
+
+
+WRAP THOR AI (6.0.0 build 952)
+
+SYNTAX ERROR
+
+
+
+SYNTAX ERROR
+
+SYNTAX ERROR
+
+
+
+
+
+
+
+Copyright (c) 2003-2014 Bluegiga Technologies Inc.
+
+SYNTAX ERROR
+
+
+
+SYNTAX ERROR
+
+SYNTAX ERROR
+
+
+
+
+
+
+
+WRAP THOR AI (6.0.0 build 952)
+
+SYNTAX ERROR
+
+
+
+SYNTAX ERROR
+
+SYNTAX ERROR
+
+
+
+
+
+
+
+SYNTAX ERROR
+
+SYNTAX ERROR
+
+
+
+SYNTAX ERROR
+
+SYNTAX ERROR
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Copyright (c) 2003-2014 Bluegiga Technologies Inc.
+
+SYNTAX ERROR
+
+
+
+SYNTAX ERROR
+
+SYNTAX ERROR
+
+
+
+
+
+
+
+SYNTAX ERROR
+
+SYNTAX ERROR
+
+
+
+SYNTAX ERROR
+
+SYNTAX ERROR
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+WRAP THOR AI (6.0.0 build 952)
+
+SYNTAX ERROR
+
+
+
+SYNTAX ERROR
+
+SYNTAX ERROR
+
+
+
+
+
+
+
+SYNTAX ERROR
+
+SYNTAX ERROR
+
+
+
+SYNTAX ERROR
+
+SYNTAX ERROR
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+SYNTAX ERROR
+
+SYNTAX ERROR
+
+
+
+SYNTAX ERROR
+
+SYNTAX ERROR
+
+
+
+
+
+
+
+SYNTAX ERROR
+
+SYNTAX ERROR
+
+
+
+SYNTAX ERROR
+
+SYNTAX ERROR
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Copyright (c) 2003-2014 Bluegiga Technologies Inc.
+
+SYNTAX ERROR
+
+
+
+SYNTAX ERROR
+
+SYNTAX ERROR
+
+
+
+
+
+
+
+SYNTAX ERROR
+
+SYNTAX ERROR
+
+
+
+SYNTAX ERROR
+
+SYNTAX ERROR
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+SYNTAX ERROR
+
+SYNTAX ERROR
+
+
+
+SYNTAX ERROR
+
+SYNTAX ERROR
+
+
+
+
+
+
+
+SYNTAX ERROR
+
+SYNTAX ERROR
+
+
+
+SYNTAX ERROR
+
+SYNTAX ERROR
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+WRAP THOR AI (6.0.0 build 952)
+
+SYNTAX ERROR
+
+
+
+SYNTAX ERROR
+
+SYNTAX ERROR
+
+
+
+
+
+
+
+SYNTAX ERROR
+
+SYNTAX ERROR
+
+
+
+SYNTAX ERROR
+
+SYNTAX ERROR
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+SYNTAX ERROR
+
+SYNTAX ERROR
+
+
+
+SYNTAX ERROR
+
+SYNTAX ERROR
+
+
+
+
+
+
+
+SYNTAX ERROR
+
+SYNTAX ERROR
+
+
+
+SYNTAX ERROR
+
+SYNTAX ERROR
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+SYNTAX ERROR
+
+SYNTAX ERROR
+
+
+
+SYNTAX ERROR
+
+SYNTAX ERROR
+
+
+
+
+
+
+
+SYNTAX ERROR
+
+SYNTAX ERROR
+
+
+
+SYNTAX ERROR
+
+SYNTAX ERROR
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+SYNTAX ERROR
+
+SYNTAX ERROR
+
+
+
+SYNTAX ERROR
+
+SYNTAX ERROR
+
+
+
+
+
+
+
+SYNTAX ERROR
+
+SYNTAX ERROR
+
+
+
+SYNTAX ERROR
+
+
+130|toradex_apalis6q:/ # SYNTAX ERROR
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Copyright (c) 2003-2014 Bluegiga Technologies Inc.
+
+SYNTAX ERROR
+
+
+
+SYNTAX ERROR
+
+SYNTAX ERROR
+
+
+
+
+
+
+
+SYNTAX ERROR
+
+SYNTAX ERROR
+
+
+
+SYNTAX ERROR
+
+SYNTAX ERROR
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+SYNTAX ERROR
+
+SYNTAX ERROR
+
+
+
+SYNTAX ERROR
+
+SYNTAX ERROR
+
+
+
+
+
+
+
+SYNTAX ERROR
+
+SYNTAX ERROR
+
+
+
+SYNTAX ERROR
+
+SYNTAX ERROR
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+SYNTAX ERROR
+
+SYNTAX ERROR
+
+
+
+SYNTAX ERROR
+
+SYNTAX ERROR
+
+
+
+
+
+
+
+SYNTAX ERROR
+
+SYNTAX ERROR
+
+
+
+SYNTAX ERROR
+
+SYNTAX ERROR
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+SYNTAX ERROR
+
+SYNTAX ERROR
+
+
+
+SYNTAX ERROR
+
+SYNTAX ERROR
+
+
+
+
+
+
+
+SYNTAX ERROR
+
+SYNTAX ERROR
+
+
+
+SYNTAX ERROR
+
+reWRAP THOR AI (6.0.0 build 952)
+
+Copyright (c) 2003-2014 Bluegiga Technologies Inc.
+
+WRAP THOR AI (6.0.0 build 952)
+
+SYNTAX ERROR
+
+
+
+Copyright (c) 2003-2014 Bluegiga Technologies Inc.
+
+SYNTAX ERROR
+
+
+
+WRAP THOR AI (6.0.0 build 952)
+
+SYNTAX ERROR
+
+
+
+SYNTAX ERROR
+
+SYNTAX ERROR
+
+
+
+
+
+
+
+Copyright (c) 2003-2014 Bluegiga Technologies Inc.
+
+SYNTAX ERROR
+
+
+
+SYNTAX ERROR
+
+SYNTAX ERROR
+
+
+
+
+
+
+
+WRAP THOR AI (6.0.0 build 952)
+
+SYNTAX ERROR
+
+
+
+SYNTAX ERROR
+
+SYNTAX ERROR
+
+
+
+
+
+
+
+SYNTAX ERROR
+
+SYNTAX ERROR
+
+
+
+SYNTAX ERROR
+
+SYNTAX ERROR
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+bCopyright (c) 2003-2014 Bluegiga Technologies Inc.
+
+SYNTAX ERROR
+
+
+
+SYNTAX ERROR
+
+SYNTAX ERROR
+
+
+
+
+
+
+
+SYNTAX ERROR
+
+SYNTAX ERROR
+
+
+
+SYNTAX ERROR
+
+SYNTAX ERROR
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+WRAP THOR AI (6.0.0 build 952)
+
+SYNTAX ERROR
+
+
+
+SYNTAX ERROR
+
+SYNTAX ERROR
+
+
+
+
+
+
+
+SYNTAX ERROR
+
+oSYNTAX ERROR
+
+
+
+SYNTAX ERROR
+
+SYNTAX ERROR
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+SYNTAX ERROR
+
+SYNTAX ERROR
+
+
+
+SYNTAX ERROR
+
+SYNTAX ERROR
+
+
+
+
+
+
+
+SYNTAX ERROR
+
+SYNTAX ERROR
+
+
+
+SYNTAX ERROR
+
+SYNTAX ERROR
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Copyright (c) 2003-2014 Bluegiga Technologies Inc.
+
+oSYNTAX ERROR
+
+
+
+SYNTAX ERROR
+
+SYNTAX ERROR
+
+
+
+
+
+
+
+SYNTAX ERROR
+
+SYNTAX ERROR
+
+
+
+SYNTAX ERROR
+
+SYNTAX ERROR
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+SYNTAX ERROR
+
+SYNTAX ERROR
+
+
+
+SYNTAX ERROR
+
+SYNTAX ERROR
+
+
+
+
+
+
+
+SYNTAX ERROR
+
+SYNTAX ERROR
+
+
+
+SYNTAX ERROR
+
+tSYNTAX ERROR
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+WRAP THOR AI (6.0.0 build 952)
+
+SYNTAX ERROR
+
+
+
+SYNTAX ERROR
+
+SYNTAX ERROR
+
+
+
+
+
+
+
+SYNTAX ERROR
+
+SYNTAX ERROR
+
+
+
+SYNTAX ERROR
+
+SYNTAX ERROR
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+SYNTAX ERROR
+
+SYNTAX ERROR
+
+
+
+SYNTAX ERROR
+
+SYNTAX ERROR
+
+
+
+
+
+
+
+SYNTAX ERROR
+
+
+SYNTAX ERROR
+
+
+
+SYNTAX ERROR
+
+SYNTAX ERROR
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+SYNTAX ERROR
+
+SYNTAX ERROR
+
+
+
+SYNTAX ERROR
+
+sysrq: SysRq : Emergency Remount R/O
+EXT4-fs (mmcblk0p4): re-mounted. Opts: (null)
+SYNTAX ERROR
+
+
+
+
+
+
+
+SYNTAX ERROR
+
+EXT4-fs (mmcblk0p10): re-mounted. Opts: (null)
+SYNTAX ERROR
+
+
+
+SYNTAX ERROR
+
+Emergency Remount complete
+SYNTAX ERROR
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+SYNTAX ERROR
+
+SYNTAX ERROR
+
+
+
+SYNTAX ERROR
+
+SYNTAX ERROR
+
+
+
+
+
+
+
+SYNTAX ERROR
+
+SYNTAX ERROR
+
+
+
+SYNTAX ERROR
+
+imx2-wdt 20bc000.wdog: Device shutdown: Expect reboot!
+ci_hdrc ci_hdrc.1: remove, state 4
+usb usb1: USB disconnect, device number 1
+usb 1-1: USB disconnect, device number 2
+SYNTAX ERROR
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ci_hdrc ci_hdrc.1: USB bus 1 deregistered
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+android_work: did not send uevent (0 0   (null))
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Copyright (c) 2003-2014 Bluegiga Technologies Inc.
+
+SYNTAX ERROR
+
+
+
+SYNTAX ERROR
+
+SYNTAX ERROR
+
+
+
+
+
+
+
+SYNTAX ERROR
+
+reboot: Restarting system with command ''
+
+
+U-Boot 2017.03-00002-gebf9dc2527 (Jan 29 2018 - 17:39:17 +0530)
+
+CPU:   Freescale i.MX6Q rev1.5 at 792 MHz
+Reset cause: WDOG
+I2C:   ready
+DRAM:  2 GiB
+PMIC: device id: 0x10, revision id: 0x21
+PMIC: programmed
+MMC:   FSL_SDHC: 0, FSL_SDHC: 1, FSL_SDHC: 2
+Unable to allocate framebuffer memory
+In:    serial
+Out:   serial
+Err:   serial
+Model: Toradex Apalis iMX6 Quad 2GB IT V1.1C, Serial# 05146387
+flash target is MMC:0
+Net:   using PHY at 7
+FEC [PRIME]
+Fastboot: Normal
+Hit any key to stop autoboot:  1  0 
+boota mmc0 
+CACHE: Misaligned operation at range [8ffb79a0, 8ffb7a20]
+CACHE: Misaligned operation at range [8ffb79a0, 8ffb7a20]
+kernel   @ 14008000 (9802160)
+ramdisk  @ 15000000 (1628983)
+fdt      @ 14f00000 (53981)
+## Booting Android Image at 0x12000000 ...
+Kernel load addr 0x14008000 size 9573 KiB
+Kernel command line: console=ttymxc0,115200 init=/init video=mxcfb0:dev=ldb,fbpix=RGB32,bpp=32 video=mxcfb1:dev=hdmi,640x480M@60,if=RGB24,bpp=16 video=mxcfb2:off video=mxcfb3:off vmalloc=256M androidboot.console=ttymxc0 consoleblank=0 androidboot.hardware=freescale cma=448M androidboot.selinux=permissive androidboot.dm_verity=disabled buildvariant=user androidboot.serialno=1b2429d4ea997115 androidboot.storage_type=emmc
+## Flattened Device Tree blob at 14f00000
+   Booting using the fdt blob at 0x14f00000
+   Loading Kernel Image ... OK
+   Using Device Tree in place at 14f00000, end 14f102dc
+
+Starting kernel ...
+
+Booting Linux on physical CPU 0x0
+Linux version 4.9.67-07229-gdc6c16ec0433 (embadmin@ubuntu) (gcc version 4.9 20150123 (prerelease) (GCC) ) #73 SMP PREEMPT Mon Feb 19 12:20:06 IST 2018
+CPU: ARMv7 Processor [412fc09a] revision 10 (ARMv7), cr=10c53c7d
+CPU: PIPT / VIPT nonaliasing data cache, VIPT aliasing instruction cache
+OF: fdt:Machine model: Aravinth : Toradex Apalis iMX6Q/D Module on Ixora V1.1 Carrier Board
+cma: Reserved 448 MiB at 0x22000000
+Memory policy: Data cache writealloc
+percpu: Embedded 15 pages/cpu @ee6b3000 s31040 r8192 d22208 u61440
+Built 1 zonelists in Zone order, mobility grouping on.  Total pages: 522768
+Kernel command line: console=ttymxc0,115200 init=/init video=mxcfb0:dev=ldb,fbpix=RGB32,bpp=32 video=mxcfb1:dev=hdmi,640x480M@60,if=RGB24,bpp=16 video=mxcfb2:off video=mxcfb3:off vmalloc=256M androidboot.console=ttymxc0 consoleblank=0 androidboot.hardware=freescale cma=448M androidboot.selinux=permissive androidboot.dm_verity=disabled buildvariant=user androidboot.serialno=1b2429d4ea997115 androidboot.storage_type=emmc
+PID hash table entries: 4096 (order: 2, 16384 bytes)
+Dentry cache hash table entries: 131072 (order: 7, 524288 bytes)
+Inode-cache hash table entries: 65536 (order: 6, 262144 bytes)
+Memory: 1597048K/2097152K available (13312K kernel code, 1128K rwdata, 4016K rodata, 1024K init, 606K bss, 41352K reserved, 458752K cma-reserved, 1318912K highmem)
+Virtual kernel memory layout:
+    vector  : 0xffff0000 - 0xffff1000   (   4 kB)
+    fixmap  : 0xffc00000 - 0xfff00000   (3072 kB)
+    vmalloc : 0xf0000000 - 0xff800000   ( 248 MB)
+    lowmem  : 0xc0000000 - 0xef800000   ( 760 MB)
+    pkmap   : 0xbfe00000 - 0xc0000000   (   2 MB)
+    modules : 0xbf000000 - 0xbfe00000   (  14 MB)
+      .text : 0xc0008000 - 0xc0e00000   (14304 kB)
+      .init : 0xc1300000 - 0xc1400000   (1024 kB)
+      .data : 0xc1400000 - 0xc151a218   (1129 kB)
+       .bss : 0xc151a218 - 0xc15b1be0   ( 607 kB)
+SLUB: HWalign=64, Order=0-3, MinObjects=0, CPUs=4, Nodes=1
+Preemptible hierarchical RCU implementation.
+	Build-time adjustment of leaf fanout to 32.
+NR_IRQS:16 nr_irqs:16 16
+L2C-310 errata 752271 769419 enabled
+L2C-310 enabling early BRESP for Cortex-A9
+L2C-310 full line of zeros enabled for Cortex-A9
+L2C-310 ID prefetch enabled, offset 16 lines
+L2C-310 dynamic clock gating enabled, standby mode enabled
+L2C-310 cache controller enabled, 16 ways, 1024 kB
+L2C-310: CACHE_ID 0x410000c7, AUX_CTRL 0x76470001
+Switching to timer-based delay loop, resolution 333ns
+sched_clock: 32 bits at 3000kHz, resolution 333ns, wraps every 715827882841ns
+clocksource: mxc_timer1: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 637086815595 ns
+Console: colour dummy device 80x30
+Calibrating delay loop (skipped), value calculated using timer frequency.. 6.00 BogoMIPS (lpj=30000)
+pid_max: default: 32768 minimum: 301
+Security Framework initialized
+SELinux:  Initializing.
+Mount-cache hash table entries: 2048 (order: 1, 8192 bytes)
+Mountpoint-cache hash table entries: 2048 (order: 1, 8192 bytes)
+CPU: Testing write buffer coherency: ok
+CPU0: update cpu_capacity 1024
+CPU0: thread -1, cpu 0, socket 0, mpidr 80000000
+Setting up static identity map for 0x10100000 - 0x10100058
+CPU1: update cpu_capacity 1024
+CPU1: thread -1, cpu 1, socket 0, mpidr 80000001
+CPU2: update cpu_capacity 1024
+CPU2: thread -1, cpu 2, socket 0, mpidr 80000002
+CPU3: update cpu_capacity 1024
+CPU3: thread -1, cpu 3, socket 0, mpidr 80000003
+Brought up 4 CPUs
+SMP: Total of 4 processors activated (24.00 BogoMIPS).
+CPU: All CPU(s) started in SVC mode.
+CPU3: update max cpu_capacity 1024
+devtmpfs: initialized
+CPU2: update max cpu_capacity 1024
+VFP support v0.3: implementor 41 architecture 3 part 30 variant 9 rev 4
+clocksource: jiffies: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 19112604462750000 ns
+futex hash table entries: 1024 (order: 4, 65536 bytes)
+pinctrl core: initialized pinctrl subsystem
+NET: Registered protocol family 16
+DMA: preallocated 256 KiB pool for atomic coherent allocations
+cpuidle: using governor menu
+CPU identified as i.MX6Q, silicon rev 1.5
+hw-breakpoint: found 5 (+1 reserved) breakpoint and 1 watchpoint registers.
+hw-breakpoint: maximum watchpoint size is 4 bytes.
+imx6q-pinctrl 20e0000.iomuxc: initialized IMX pinctrl driver
+imx-gpc 20dc000.gpc: no fsl,ldo-bypass found!
+imx-gpc 20dc000.gpc: Registered imx-gpc
+mxs-dma 110000.dma-apbh: initialized
+usb_host_vbus: supplied by usb_host_vbus_hub
+SCSI subsystem initialized
+usbcore: registered new interface driver usbfs
+usbcore: registered new interface driver hub
+usbcore: registered new device driver usb
+2000000.aips-bus:usbphy_nop1 supply vcc not found, using dummy regulator
+2000000.aips-bus:usbphy_nop2 supply vcc not found, using dummy regulator
+i2c i2c-1: IMX I2C adapter registered
+i2c i2c-1: can't use DMA, using PIO instead.
+stmpe-i2c 2-0041: stmpe811 detected, chip id: 0x811
+i2c i2c-2: IMX I2C adapter registered
+i2c i2c-2: can't use DMA, using PIO instead.
+i2c i2c-3: IMX I2C adapter registered
+i2c i2c-3: can't use DMA, using PIO instead.
+Linux video capture interface: v2.00
+pps_core: LinuxPPS API ver. 1 registered
+pps_core: Software ver. 5.3.6 - Copyright 2005-2007 Rodolfo Giometti <giometti@linux.it>
+PTP clock support registered
+imx-ipuv3 2400000.ipu: IPU DMFC NORMAL mode: 1(0~1), 5B(4,5), 5F(6,7)
+imx-ipuv3 2800000.ipu: IPU DMFC NORMAL mode: 1(0~1), 5B(4,5), 5F(6,7)
+mxc_mipi_csi2 21dc000.mipi_csi: i.MX MIPI CSI2 driver probed ipu0 csi1
+mxc_mipi_csi2 21dc000.mipi_csi: i.MX MIPI CSI2 dphy version is 0x3130302a
+MIPI CSI2 driver module loaded
+imx rpmsg driver is registered.
+Advanced Linux Sound Architecture Driver Initialized.
+Bluetooth: Core ver 2.22
+NET: Registered protocol family 31
+Bluetooth: HCI device and connection manager initialized
+Bluetooth: HCI socket layer initialized
+Bluetooth: L2CAP socket layer initialized
+Bluetooth: SCO socket layer initialized
+clocksource: Switched to clocksource mxc_timer1
+VFS: Disk quotas dquot_6.6.0
+VFS: Dquot-cache hash table entries: 1024 (order 0, 4096 bytes)
+NET: Registered protocol family 2
+TCP established hash table entries: 8192 (order: 3, 32768 bytes)
+TCP bind hash table entries: 8192 (order: 4, 65536 bytes)
+TCP: Hash tables configured (established 8192 bind 8192)
+UDP hash table entries: 512 (order: 2, 16384 bytes)
+UDP-Lite hash table entries: 512 (order: 2, 16384 bytes)
+NET: Registered protocol family 1
+RPC: Registered named UNIX socket transport module.
+RPC: Registered udp transport module.
+RPC: Registered tcp transport module.
+RPC: Registered tcp NFSv4.1 backchannel transport module.
+Trying to unpack rootfs image as initramfs...
+Freeing initrd memory: 1592K
+hw perfevents: enabled with armv7_cortex_a9 PMU driver, 7 counters available
+Bus freq driver module loaded
+audit: initializing netlink subsys (disabled)
+audit: type=2000 audit(0.870:1): initialized
+workingset: timestamp_bits=30 max_order=19 bucket_order=0
+NFS: Registering the id_resolver key type
+Key type id_resolver registered
+Key type id_legacy registered
+ntfs: driver 2.1.32 [Flags: R/W DEBUG].
+jffs2: version 2.2. (NAND) ¬© 2001-2006 Red Hat, Inc.
+fuse init (API version 7.26)
+bounce: pool size: 64 pages
+io scheduler noop registered
+io scheduler deadline registered
+io scheduler cfq registered (default)
+backlight supply power not found, using dummy regulator
+20e0000.hdmi_video supply HDMI not found, using dummy regulator
+mxc_sdc_fb fb@0: registered mxc display driver ldb
+imx-ipuv3 2800000.ipu: IPU DMFC DP HIGH RESOLUTION: 1(0,1), 5B(2~5), 5F(6,7)
+Console: switching to colour frame buffer device 128x48
+mxc_hdmi 20e0000.hdmi_video: Detected HDMI controller 0x13:0xa:0xa0:0xc1
+fbcvt: 640x480@60: CVT Name - .307M3
+mxc_sdc_fb fb@1: registered mxc display driver hdmi
+mxc_sdc_fb fb@2: Can't get fb option for mxcfb2!
+mxc_sdc_fb fb@3: Can't get fb option for mxcfb3!
+imx-sdma 20ec000.sdma: no iram assigned, using external mem
+imx-sdma 20ec000.sdma: loaded firmware 3.3
+pfuze100-regulator 2-0008: Full layer: 2, Metal layer: 1
+pfuze100-regulator 2-0008: FAB: 0, FIN: 0
+pfuze100-regulator 2-0008: pfuze100 found.
+2020000.serial: ttymxc0 at MMIO 0x2020000 (irq = 29, base_baud = 5000000) is a IMX
+console [ttymxc0] enabled
+21e8000.serial: ttymxc1 at MMIO 0x21e8000 (irq = 78, base_baud = 5000000) is a IMX
+21f0000.serial: ttymxc3 at MMIO 0x21f0000 (irq = 79, base_baud = 5000000) is a IMX
+21f4000.serial: ttymxc4 at MMIO 0x21f4000 (irq = 80, base_baud = 5000000) is a IMX
+imx sema4 driver is registered.
+[drm] Initialized
+[drm] Initialized vivante 1.0.0 20120216 on minor 0
+brd: module loaded
+loop: module loaded
+zram: Added device: zram0
+ahci-imx 2200000.sata: fsl,transmit-level-mV not specified, using 00000024
+ahci-imx 2200000.sata: fsl,transmit-boost-mdB not specified, using 00000480
+ahci-imx 2200000.sata: fsl,transmit-atten-16ths not specified, using 00002000
+ahci-imx 2200000.sata: fsl,receive-eq-mdB not specified, using 05000000
+ahci-imx 2200000.sata: SSS flag set, parallel bus scan disabled
+ahci-imx 2200000.sata: AHCI 0001.0300 32 slots 1 ports 3 Gbps 0x1 impl platform mode
+ahci-imx 2200000.sata: flags: ncq sntf stag pm led clo only pmp pio slum part ccc apst 
+scsi host0: ahci-imx
+ata1: SATA max UDMA/133 mmio [mem 0x02200000-0x02203fff] port 0x100 irq 87
+spi_imx 2008000.ecspi: probed
+libphy: Fixed MDIO Bus: probed
+tun: Universal TUN/TAP device driver, 1.6
+tun: (C) 1999-2004 Max Krasnyansky <maxk@qualcomm.com>
+CAN device driver interface
+2090000.flexcan supply xceiver not found, using dummy regulator
+flexcan 2090000.flexcan: device registered (reg_base=f02f4000, irq=38)
+2094000.flexcan supply xceiver not found, using dummy regulator
+flexcan 2094000.flexcan: device registered (reg_base=f02fc000, irq=39)
+2188000.ethernet supply phy not found, using dummy regulator
+pps pps0: new PPS source ptp0
+libphy: fec_enet_mii_bus: probed
+fec 2188000.ethernet eth0: registered PHC device 0
+PPP generic driver version 2.4.2
+PPP BSD Compression module registered
+PPP Deflate Compression module registered
+PPP MPPE Compression module registered
+NET: Registered protocol family 24
+usbcore: registered new interface driver kaweth
+pegasus: v0.9.3 (2013/04/25), Pegasus/Pegasus II USB Ethernet driver
+usbcore: registered new interface driver pegasus
+usbcore: registered new interface driver rtl8150
+usbcore: registered new interface driver r8152
+usbcore: registered new interface driver asix
+usbcore: registered new interface driver ax88179_178a
+usbcore: registered new interface driver cdc_ether
+usbcore: registered new interface driver cdc_eem
+usbcore: registered new interface driver net1080
+usbcore: registered new interface driver cdc_subset
+usbcore: registered new interface driver zaurus
+usbcore: registered new interface driver cdc_ncm
+ehci_hcd: USB 2.0 'Enhanced' Host Controller (EHCI) Driver
+ehci-mxc: Freescale On-Chip EHCI Host driver
+usbcore: registered new interface driver cdc_acm
+cdc_acm: USB Abstract Control Model driver for USB modems and ISDN adapters
+usbcore: registered new interface driver usb-storage
+usbcore: registered new interface driver usbserial
+usbcore: registered new interface driver usbserial_generic
+usbserial: USB Serial support registered for generic
+usbcore: registered new interface driver ftdi_sio
+usbserial: USB Serial support registered for FTDI USB Serial Device
+usbcore: registered new interface driver option
+usbserial: USB Serial support registered for GSM modem (1-port)
+usbcore: registered new interface driver usbtest
+usbcore: registered new interface driver usb_ehset_test
+2184800.usbmisc supply vbus-wakeup not found, using dummy regulator
+ci_hdrc ci_hdrc.1: EHCI Host Controller
+ci_hdrc ci_hdrc.1: new USB bus registered, assigned bus number 1
+ci_hdrc ci_hdrc.1: USB 2.0 started, EHCI 1.00
+usb usb1: New USB device found, idVendor=1d6b, idProduct=0002
+usb usb1: New USB device strings: Mfr=3, Product=2, SerialNumber=1
+usb usb1: Product: EHCI Host Controller
+usb usb1: Manufacturer: Linux 4.9.67-07229-gdc6c16ec0433 ehci_hcd
+usb usb1: SerialNumber: ci_hdrc.1
+hub 1-0:1.0: USB hub found
+hub 1-0:1.0: 1 port detected
+ata1: SATA link down (SStatus 0 SControl 300)
+ahci-imx 2200000.sata: no device found, disabling link.
+ahci-imx 2200000.sata: pass ahci_imx..hotplug=1 to enable hotplug
+mousedev: PS/2 mouse device common for all mice
+usbcore: registered new interface driver xpad
+usbcore: registered new interface driver usb_acecad
+usbcore: registered new interface driver aiptek
+usbcore: registered new interface driver gtco
+usbcore: registered new interface driver hanwang
+usbcore: registered new interface driver kbtab
+input: stmpe-ts as /devices/soc0/soc/2100000.aips-bus/21a4000.i2c/i2c-2/2-0041/stmpe-ts/input/input0
+snvs_rtc 20cc000.snvs:snvs-rtc-lp: rtc core: registered 20cc000.snvs:snvs-r as rtc0
+i2c /dev entries driver
+IR NEC protocol handler initialized
+IR RC5(x/sz) protocol handler initialized
+IR RC6 protocol handler initialized
+IR JVC protocol handler initialized
+IR Sony protocol handler initialized
+IR SANYO protocol handler initialized
+IR Sharp protocol handler initialized
+IR MCE Keyboard/mouse protocol handler initialized
+IR XMP protocol handler initialized
+mxc_v4l2_output v4l2_out: V4L2 device registered as video16
+mxc_v4l2_output v4l2_out: V4L2 device registered as video17
+mxc_v4l2_output v4l2_out: V4L2 device registered as video18
+mxc_v4l2_output v4l2_out: V4L2 device registered as video19
+ov564x_mipi 3-003c: found pwm2, period=0
+usb 1-1: new high-speed USB device number 2 using ci_hdrc
+ov5640_read_reg:write reg error:reg=300a
+camera ov5640_mipi is not found
+usbcore: registered new interface driver uvcvideo
+USB Video Class driver (1.1.1)
+imx2-wdt 20bc000.wdog: timeout 60 sec (nowayout=0)
+device-mapper: uevent: version 1.0.3
+device-mapper: ioctl: 4.35.0-ioctl (2016-06-23) initialised: dm-devel@redhat.com
+Bluetooth: HCI UART driver ver 2.3
+Bluetooth: HCI UART protocol H4 registered
+Bluetooth: HCI UART protocol BCSP registered
+Bluetooth: HCI UART protocol ATH3K registered
+usbcore: registered new interface driver btusb
+sdhci: Secure Digital Host Controller Interface driver
+sdhci: Copyright(c) Pierre Ossman
+sdhci-pltfm: SDHCI platform and OF driver helper
+sdhci-esdhc-imx 2190000.usdhc: could not get ultra high speed state, work on normal mode
+sdhci-esdhc-imx 2190000.usdhc: Got CD GPIO
+mmc1: SDHCI controller on 2190000.usdhc [2190000.usdhc] using ADMA
+sdhci-esdhc-imx 2198000.usdhc: could not get ultra high speed state, work on normal mode
+usb 1-1: New USB device found, idVendor=0424, idProduct=2514
+usb 1-1: New USB device strings: Mfr=0, Product=0, SerialNumber=0
+hub 1-1:1.0: USB hub found
+hub 1-1:1.0: 4 ports detected
+mmc0: SDHCI controller on 2198000.usdhc [2198000.usdhc] using ADMA
+mxc_vpu 2040000.vpu_fsl: VPU initialized
+mxc_vdoa 21e4000.vdoa: i.MX Video Data Order Adapter(VDOA) driver probed
+mxc_hdmi_cec soc:hdmi_cec@00120000: HDMI CEC initialized
+Galcore version 6.2.2.96445
+mmc0: new DDR MMC card at address 0001
+mmcblk0: mmc0:0001 Q2J54A 3.59 GiB 
+mmcblk0boot0: mmc0:0001 Q2J54A partition 1 16.0 MiB
+mmcblk0boot1: mmc0:0001 Q2J54A partition 2 16.0 MiB
+random: fast init done
+Alternate GPT is invalid, using primary GPT.
+ mmcblk0: p1 p2 p3 p4 p5 p6 p7 p8 p9 p10 p11
+caam 2100000.caam: ERA source: CAAMVID.
+caam 2100000.caam: AXI pipeline throttling enabled.
+caam 2100000.caam: Instantiated RNG4 SH1
+caam 2100000.caam: device ID = 0x0a16010000000000 (Era 4)
+caam 2100000.caam: job rings = 2, qi = 0
+caam algorithms registered in /proc/crypto
+caam_jr 2101000.jr0: registering rng-caam
+platform caam_sm: blkkey_ex: 4 keystore units available
+platform caam_sm: 64-bit clear key:
+platform caam_sm: [0000] 00 01 02 03 04 0f 06 07
+platform caam_sm: 64-bit black key:
+platform caam_sm: [0000] 47 39 ab ef e9 6d 45 4d
+platform caam_sm: [0008] b0 e1 11 3a 31 a5 52 75
+platform caam_sm: 128-bit clear key:
+platform caam_sm: [0000] 00 01 02 03 04 0f 06 07
+platform caam_sm: [0008] 08 09 0a 0b 0c 0d 0e 0f
+platform caam_sm: 128-bit black key:
+platform caam_sm: [0000] 1e da 9c b7 1d 1e a7 fd
+platform caam_sm: [0008] 5f 99 81 65 30 eb 43 52
+platform caam_sm: 192-bit clear key:
+platform caam_sm: [0000] 00 01 02 03 04 0f 06 07
+platform caam_sm: [0008] 08 09 0a 0b 0c 0d 0e 0f
+platform caam_sm: [0016] 10 11 12 13 14 15 16 17
+platform caam_sm: 192-bit black key:
+platform caam_sm: [0000] ff 05 42 a9 0c 58 68 1d
+platform caam_sm: [0008] 77 f3 c2 0a b6 46 48 ab
+platform caam_sm: [0016] e8 fa 4e 65 d6 f0 d2 7d
+platform caam_sm: [0024] 8d 2c 40 c0 cd d9 6f ed
+platform caam_sm: 256-bit clear key:
+platform caam_sm: [0000] 00 01 02 03 04 0f 06 07
+platform caam_sm: [0008] 08 09 0a 0b 0c 0d 0e 0f
+platform caam_sm: [0016] 10 11 12 13 14 15 16 17
+platform caam_sm: [0024] 18 19 1a 1b 1c 1d 1e 1f
+platform caam_sm: 256-bit black key:
+platform caam_sm: [0000] 99 cb 7a d3 17 6f 54 88
+platform caam_sm: [0008] b6 f8 c5 15 01 f8 89 d9
+platform caam_sm: [0016] 73 4a 0c cd 31 0f 95 30
+platform caam_sm: [0024] c2 22 b5 db 92 44 76 1e
+platform caam_sm: 64-bit unwritten blob:
+platform caam_sm: [0000] 00 00 00 00 00 00 00 00
+platform caam_sm: [0008] 00 00 00 00 00 00 00 00
+platform caam_sm: [0016] 00 00 00 00 00 00 00 00
+platform caam_sm: [0024] 00 00 00 00 00 00 00 00
+platform caam_sm: [0032] 00 00 00 00 00 00 00 00
+platform caam_sm: [0040] 00 00 00 00 00 00 00 00
+platform caam_sm: [0048] 00 00 00 00 00 00 00 00
+platform caam_sm: [0056] 00 00 00 00 00 00 00 00
+platform caam_sm: [0064] 00 00 00 00 00 00 00 00
+platform caam_sm: [0072] 00 00 00 00 00 00 00 00
+platform caam_sm: [0080] 00 00 00 00 00 00 00 00
+platform caam_sm: [0088] 00 00 00 00 00 00 00 00
+platform caam_sm: 128-bit unwritten blob:
+platform caam_sm: [0000] 00 00 00 00 00 00 00 00
+platform caam_sm: [0008] 00 00 00 00 00 00 00 00
+platform caam_sm: [0016] 00 00 00 00 00 00 00 00
+platform caam_sm: [0024] 00 00 00 00 00 00 00 00
+platform caam_sm: [0032] 00 00 00 00 00 00 00 00
+platform caam_sm: [0040] 00 00 00 00 00 00 00 00
+platform caam_sm: [0048] 00 00 00 00 00 00 00 00
+platform caam_sm: [0056] 00 00 00 00 00 00 00 00
+platform caam_sm: [0064] 00 00 00 00 00 00 00 00
+platform caam_sm: [0072] 00 00 00 00 00 00 00 00
+platform caam_sm: [0080] 00 00 00 00 00 00 00 00
+platform caam_sm: [0088] 00 00 00 00 00 00 00 00
+platform caam_sm: 196-bit unwritten blob:
+platform caam_sm: [0000] 00 00 00 00 00 00 00 00
+platform caam_sm: [0008] 00 00 00 00 00 00 00 00
+platform caam_sm: [0016] 00 00 00 00 00 00 00 00
+platform caam_sm: [0024] 00 00 00 00 00 00 00 00
+platform caam_sm: [0032] 00 00 00 00 00 00 00 00
+platform caam_sm: [0040] 00 00 00 00 00 00 00 00
+platform caam_sm: [0048] 00 00 00 00 00 00 00 00
+platform caam_sm: [0056] 00 00 00 00 00 00 00 00
+platform caam_sm: [0064] 00 00 00 00 00 00 00 00
+platform caam_sm: [0072] 00 00 00 00 00 00 00 00
+platform caam_sm: [0080] 00 00 00 00 00 00 00 00
+platform caam_sm: [0088] 00 00 00 00 00 00 00 00
+platform caam_sm: 256-bit unwritten blob:
+platform caam_sm: [0000] 00 00 00 00 00 00 00 00
+platform caam_sm: [0008] 00 00 00 00 00 00 00 00
+platform caam_sm: [0016] 00 00 00 00 00 00 00 00
+platform caam_sm: [0024] 00 00 00 00 00 00 00 00
+platform caam_sm: [0032] 00 00 00 00 00 00 00 00
+platform caam_sm: [0040] 00 00 00 00 00 00 00 00
+platform caam_sm: [0048] 00 00 00 00 00 00 00 00
+platform caam_sm: [0056] 00 00 00 00 00 00 00 00
+platform caam_sm: [0064] 00 00 00 00 00 00 00 00
+platform caam_sm: [0072] 00 00 00 00 00 00 00 00
+platform caam_sm: [0080] 00 00 00 00 00 00 00 00
+platform caam_sm: [0088] 00 00 00 00 00 00 00 00
+platform caam_sm: 64-bit black key in blob:
+platform caam_sm: [0000] 2b d8 51 02 64 7b 7a be
+platform caam_sm: [0008] a1 1e 25 75 f0 96 16 cc
+platform caam_sm: [0016] 0c c7 77 1f f0 b5 4b f5
+platform caam_sm: [0024] b2 47 63 88 3d 94 69 a8
+platform caam_sm: [0032] 13 21 69 f9 7c d9 86 2c
+platform caam_sm: [0040] 38 4e 67 df 3f 01 e5 43
+platform caam_sm: [0048] dc b8 44 ca 84 05 50 dd
+platform caam_sm: [0056] 00 00 00 00 00 00 00 00
+platform caam_sm: [0064] 00 00 00 00 00 00 00 00
+platform caam_sm: [0072] 00 00 00 00 00 00 00 00
+platform caam_sm: [0080] 00 00 00 00 00 00 00 00
+platform caam_sm: [0088] 00 00 00 00 00 00 00 00
+platform caam_sm: 128-bit black key in blob:
+platform caam_sm: [0000] c9 7b 57 af 04 43 ee e7
+platform caam_sm: [0008] 26 ac 7a 6b 1a 25 82 68
+platform caam_sm: [0016] 86 99 a0 b9 97 b6 d4 13
+platform caam_sm: [0024] 84 be 82 6f 27 d5 5a 6b
+platform caam_sm: [0032] 1e 90 2b 2f 51 36 62 2c
+platform caam_sm: [0040] 1d f1 c3 29 74 a0 ea 71
+platform caam_sm: [0048] c6 f8 df 0b 85 4a d4 ff
+platform caam_sm: [0056] 53 2e fa 72 b9 c7 cb 49
+platform caam_sm: [0064] 00 00 00 00 00 00 00 00
+platform caam_sm: [0072] 00 00 00 00 00 00 00 00
+platform caam_sm: [0080] 00 00 00 00 00 00 00 00
+platform caam_sm: [0088] 00 00 00 00 00 00 00 00
+platform caam_sm: 192-bit black key in blob:
+platform caam_sm: [0000] 2e 1c d4 12 fc 74 91 21
+platform caam_sm: [0008] a7 5e 38 bc 44 4f 0f 45
+platform caam_sm: [0016] 4b 9a 10 ab 7b 0b a4 43
+platform caam_sm: [0024] 22 53 1b 55 ca d5 43 b2
+platform caam_sm: [0032] 39 f9 32 c8 b9 88 2b 8a
+platform caam_sm: [0040] b3 a2 87 22 e8 4e c9 6c
+platform caam_sm: [0048] 91 4d 95 33 68 c8 d2 a7
+platform caam_sm: [0056] b5 dc db 6e d8 fe c4 54
+platform caam_sm: [0064] c2 2b 2c 60 98 e1 b4 a4
+platform caam_sm: [0072] 00 00 00 00 00 00 00 00
+platform caam_sm: [0080] 00 00 00 00 00 00 00 00
+platform caam_sm: [0088] 00 00 00 00 00 00 00 00
+platform caam_sm: 256-bit black key in blob:
+platform caam_sm: [0000] 33 7c c6 36 9b ad 98 de
+platform caam_sm: [0008] 79 26 63 ad a1 3a ed fc
+platform caam_sm: [0016] f3 ac e0 75 9a 83 47 67
+platform caam_sm: [0024] 18 d7 41 fa c9 29 5d d3
+platform caam_sm: [0032] 01 4f b6 86 db b7 2f 60
+platform caam_sm: [0040] b8 da cc ee 1c 1d fd 58
+platform caam_sm: [0048] 3c a3 fd 08 4d 6d 92 c1
+platform caam_sm: [0056] 0e ab 4a 07 7f 35 a6 a2
+platform caam_sm: [0064] c7 36 40 79 65 95 fb 53
+platform caam_sm: [0072] ab d7 85 c9 4c 03 73 ac
+platform caam_sm: [0080] 00 00 00 00 00 00 00 00
+platform caam_sm: [0088] 00 00 00 00 00 00 00 00
+platform caam_sm: restored 64-bit black key:
+platform caam_sm: [0000] e8 d9 4e 50 9d 2e 69 18
+platform caam_sm: [0008] 2f e2 09 39 be 35 fc 33
+platform caam_sm: restored 128-bit black key:
+platform caam_sm: [0000] 1e da 9c b7 1d 1e a7 fd
+platform caam_sm: [0008] 5f 99 81 65 30 eb 43 52
+platform caam_sm: restored 192-bit black key:
+platform caam_sm: [0000] ff 05 42 a9 0c 58 68 1d
+platform caam_sm: [0008] 77 f3 c2 0a b6 46 48 ab
+platform caam_sm: [0016] ea 76 54 62 77 8f 9f 55
+platform caam_sm: [0024] e2 39 04 66 72 21 aa 10
+platform caam_sm: restored 256-bit black key:
+platform caam_sm: [0000] 99 cb 7a d3 17 6f 54 88
+platform caam_sm: [0008] b6 f8 c5 15 01 f8 89 d9
+platform caam_sm: [0016] 73 4a 0c cd 31 0f 95 30
+platform caam_sm: [0024] c2 22 b5 db 92 44 76 1e
+snvs-secvio 20cc000.caam-snvs: can't get snvs clock
+snvs-secvio 20cc000.caam-snvs: violation handlers armed - non-secure state
+hidraw: raw HID events driver (C) Jiri Kosina
+usbcore: registered new interface driver usbhid
+usbhid: USB HID core driver
+ashmem: initialized
+usbcore: registered new interface driver snd-usb-audio
+sgtl5000 2-000a: sgtl5000 revision 0x11
+fsl-ssi-dai 2028000.ssi: No cache defaults, reading back from HW
+imx-sgtl5000 sound: sgtl5000 <-> 2028000.ssi mapping ok
+imx-spdif sound-spdif: snd-soc-dummy-dai <-> 2004000.spdif mapping ok
+imx-audio-hdmi sound-hdmi: hdmi-hifi.0 <-> soc:hdmi_audio@00120000 mapping ok
+NET: Registered protocol family 26
+u32 classifier
+    Actions configured
+Netfilter messages via NETLINK v0.30.
+nf_conntrack version 0.5.0 (16384 buckets, 65536 max)
+ctnetlink v0.93: registering with nfnetlink.
+xt_time: kernel timezone is -0000
+ip_tables: (C) 2000-2006 Netfilter Core Team
+arp_tables: arp_tables: (C) 2002 David S. Miller
+Initializing XFRM netlink socket
+NET: Registered protocol family 10
+mip6: Mobile IPv6
+ip6_tables: (C) 2000-2006 Netfilter Core Team
+sit: IPv6, IPv4 and MPLS over IPv4 tunneling driver
+NET: Registered protocol family 17
+NET: Registered protocol family 15
+can: controller area network core (rev 20120528 abi 9)
+NET: Registered protocol family 29
+can: raw protocol (rev 20120528)
+can: broadcast manager protocol (rev 20161123 t)
+can: netlink gateway (rev 20130117) max_hops=1
+Bluetooth: RFCOMM TTY layer initialized
+Bluetooth: RFCOMM socket layer initialized
+Bluetooth: RFCOMM ver 1.11
+Bluetooth: BNEP (Ethernet Emulation) ver 1.3
+Bluetooth: BNEP filters: protocol multicast
+Bluetooth: BNEP socket layer initialized
+Bluetooth: HIDP (Human Interface Emulation) ver 1.2
+Bluetooth: HIDP socket layer initialized
+8021q: 802.1Q VLAN Support v1.8
+Key type dns_resolver registered
+cpu cpu0: Registered imx6q-cpufreq
+registered taskstats version 1
+imx_thermal 2000000.aips-bus:tempmon: Industrial CPU temperature grade - max:105C critical:100C passive:95C
+dhd_module_init in
+input: gpio-keys as /devices/soc0/gpio-keys/input/input1
+snvs_rtc 20cc000.snvs:snvs-rtc-lp: setting system clock to 1970-01-01 00:01:20 UTC (80)
+usb_otg_vbus: disabling
+ALSA device list:
+  #0: imx6q-apalis-sgtl5000
+  #1: imx-spdif
+  #2: imx-hdmi-soc
+Freeing unused kernel memory: 1024K
+init: init first stage started!
+SELinux:  Permission validate_trans in class security not defined in policy.
+SELinux:  Class cap_userns not defined in policy.
+SELinux:  Class cap2_userns not defined in policy.
+SELinux: the above unknown classes and permissions will be denied
+audit: type=1403 audit(80.630:2): policy loaded auid=4294967295 ses=4294967295
+init: (Initializing SELinux non-enforcing took 0.11s.)
+init: init second stage started!
+init: Running restorecon...
+init: waitpid failed: No child processes
+init: (Loading properties from /default.prop took 0.00s.)
+init: (Parsing /init.environ.rc took 0.00s.)
+init: (Parsing /init.usb.rc took 0.00s.)
+init: (Parsing init.freescale.usb.rc took 0.00s.)
+init: (Parsing init.freescale.i.MX6Q.rc took 0.00s.)
+init: (Parsing init.freescale.emmc.rc took 0.00s.)
+init: (Parsing /init.freescale.rc took 0.02s.)
+ueventd: ueventd started!
+ueventd: Coldboot took 0.43s.
+Console: switching to colour dummy device 80x30
+watchdogd: started (interval 10, margin 20)!
+EXT4-fs (mmcblk0p3): mounted filesystem with ordered data mode. Opts: barrier=1
+EXT4-fs (mmcblk0p10): Ignoring removed nomblk_io_submit option
+EXT4-fs (mmcblk0p10): mounted filesystem with ordered data mode. Opts: nomblk_io_submit,noauto_da_alloc,errors=panic
+EXT4-fs (mmcblk0p4): Ignoring removed nomblk_io_submit option
+EXT4-fs (mmcblk0p4): mounted filesystem with ordered data mode. Opts: nomblk_io_submit
+EXT4-fs (mmcblk0p5): mounted filesystem with ordered data mode. Opts: (null)
+file system registered
+using random self ethernet address
+using random host ethernet address
+zram0: detected capacity change from 0 to 314572800
+logd.auditd: start
+logd.klogd: 7215961000
+Adding 307196k swap on /dev/block/zram0.  Priority:-1 extents:1 across:307196k SS
+binder: 254:254 transaction failed 29189, size 0-0
+type=1400 audit(83.340:3): avc: denied { entrypoint } for pid=260 comm="init" path="/system/bin/can-config.sh" dev="mmcblk0p3" ino=255 scontext=u:r:obd:s0 tcontext=u:object_r:system_file:s0 tclass=file permissive=1
+toradex_apalis6q:/ # logd.daemon: reinit
+type=1400 audit(83.350:4): avc: denied { read execute } for pid=260 comm="can-config.sh" path="/system/bin/sh" dev="mmcblk0p3" ino=442 scontext=u:r:obd:s0 tcontext=u:object_r:shell_exec:s0 tclass=file permissive=1
+type=1400 audit(83.400:5): avc: denied { getattr } for pid=260 comm="can-config.sh" path="/system/bin/sh" dev="mmcblk0p3" ino=442 scontext=u:r:obd:s0 tcontext=u:object_r:shell_exec:s0 tclass=file permissive=1
+type=1400 audit(83.410:6): avc: denied { getattr } for pid=260 comm="can-config.sh" path="/vendor" dev="rootfs" ino=6500 scontext=u:r:obd:s0 tcontext=u:object_r:rootfs:s0 tclass=lnk_file permissive=1
+type=1400 audit(83.490:7): avc: denied { create } for pid=261 comm="obd" scontext=u:r:obd:s0 tcontext=u:r:obd:s0 tclass=socket permissive=1
+type=1400 audit(83.490:8): avc: denied { ioctl } for pid=261 comm="obd" path="socket:[12340]" dev="sockfs" ino=12340 ioctlcmd=0x8933 scontext=u:r:obd:s0 tcontext=u:r:obd:s0 tclass=socket permissive=1
+type=1400 audit(83.490:9): avc: denied { bind } for pid=261 comm="obd" scontext=u:r:obd:s0 tcontext=u:r:obd:s0 tclass=socket permissive=1
+IPv6: ADDRCONF(NETDEV_CHANGE): can0: link becomes ready
+healthd: No battery devices found
+ERROR: v4l2 capture: slave not found! V4L2_CID_HUE
+ERROR: v4l2 capture: slave not found! V4L2_CID_HUE
+imx-hdmi-audio imx-hdmi-audio: HDMI Video is not ready!
+imx-hdmi-audio imx-hdmi-audio: ASoC: can't open platform imx-hdmi-audio: -22
+imx-hdmi-audio imx-hdmi-audio: HDMI Video is not ready!
+imx-hdmi-audio imx-hdmi-audio: ASoC: can't open platform imx-hdmi-audio: -22
+
+toradex_apalis6q:/ # capability: warning: `main' uses 32-bit capabilities (legacy support in use)
+init: write_file: Unable to open '/sys/devices/system/cpu/cpufreq/interactive/timer_rate': No such file or directory
+init: write_file: Unable to open '/sys/devices/system/cpu/cpufreq/interactive/min_sample_time': No such file or directory
+type=1400 audit(92.620:34): avc: denied { write } for pid=261 comm="obd" path="socket:[12340]" dev="sockfs" ino=12340 scontext=u:r:obd:s0 tcontext=u:r:obd:s0 tclass=socket permissive=1
+
+toradex_apalis6q:/ # 
+toradex_apalis6q:/ # 
+toradex_apalis6q:/ # 
+toradex_apalis6q:/ # init: write_file: Unable to open '/proc/sys/vm/extra_free_kbytes': No such file or directory
+init: write_file: Unable to write to '/config/usb_gadget/g1/UDC': No such device
+acc_open
+acc_release
+
+toradex_apalis6q:/ # 
+toradex_apalis6q:/ # Micrel KSZ9031 Gigabit PHY 2188000.ethernet-1:07: attached PHY driver [Micrel KSZ9031 Gigabit PHY] (mii_bus:phy_addr=2188000.ethernet-1:07, irq=120)
+IPv6: ADDRCONF(NETDEV_UP): eth0: link is not ready
+
+toradex_apalis6q:/ # 
+toradex_apalis6q:/ # random: crng init done
+type=1400 audit(100.440:35): avc: denied { write } for pid=261 comm="obd" path="socket:[12340]" dev="sockfs" ino=12340 scontext=u:r:obd:s0 tcontext=u:r:obd:s0 tclass=socket permissive=1
+
+toradex_apalis6q:/ # 
+toradex_apalis6q:/ # 
+toradex_apalis6q:/ # 
+toradex_apalis6q:/ # 
+toradex_apalis6q:/ # cat /deinit: Service 'bootanim' (pid 341) exited with status 0
+vinit: Starting service 'exec 3 (/system/bin/bootstat)'...
+/init: Service 'exec 3 (/system/bin/bootstat)' (pid 931) exited with status 0
+init: Starting service 'exec 4 (/system/bin/bootstat)'...
+init: Service 'exec 4 (/system/bin/bootstat)' (pid 942) exited with status 0
+init: Starting service 'exec 5 (/system/bin/bootstat)'...
+init: Service 'exec 5 (/system/bin/bootstat)' (pid 947) exited with status 0
+init: Starting service 'exec 6 (/system/bin/bootstat)'...
+init: Service 'exec 6 (/system/bin/bootstat)' (pid 951) exited with status 0
+tttype=1400 audit(104.850:36): avc: denied { write } for pid=261 comm="obd" path="socket:[12340]" dev="sockfs" ino=12340 scontext=u:r:obd:s0 tcontext=u:r:obd:s0 tclass=socket permissive=1
+ym
+ttymxc0  ttymxc1  ttymxc3  ttymxc4
+toradex_apalis6q:/ # cat /dev/ttymxc                                           type=1400 audit(105.290:37): avc: denied { read } for pid=255 comm="sh" name="/" dev="tmpfs" ino=10241 scontext=u:r:shell:s0 tcontext=u:object_r:device:s0 tclass=dir permissive=1
+type=1400 audit(105.300:38): avc: denied { open } for pid=255 comm="sh" path="/dev" dev="tmpfs" ino=10241 scontext=u:r:shell:s0 tcontext=u:object_r:device:s0 tclass=dir permissive=1
+
+ttymxc0  ttymxc1  ttymxc3  ttymxc4
+toradex_apalis6q:/ # cat /dev/ttymxc                                           2 3toradex_apalis6q:/ # cat /dev/ttytype=1400 audit(107.780:39): avc: denied { read } for pid=255 comm="sh" name="/" dev="tmpfs" ino=10241 scontext=u:r:shell:s0 tcontext=u:object_r:device:s0 tclass=dir permissive=1
+mxc3                             type=1400 audit(107.780:40): avc: denied { open } for pid=255 comm="sh" path="/dev" dev="tmpfs" ino=10241 scontext=u:r:shell:s0 tcontext=u:object_r:device:s0 tclass=dir permissive=1
+              type=1400 audit(108.670:41): avc: denied { getattr } for pid=255 comm="sh" path="/init" dev="rootfs" ino=6456 scontext=u:r:shell:s0 tcontext=u:object_r:init_exec:s0 tclass=file permissive=1
+
+acct/                                   init.recovery.freescale.rc
+bugreports                              init.usb.configfs.rc
+cache/                                  init.usb.rc
+charger                                 init.zygote32.rc
+config/                                 mnt/
+d/                                      oem/
+data/                                   proc/
+default.prop                            property_contexts
+dev/                                    res/
+device/                                 root/
+etc/                                    sbin/
+file_contexts.bin                       sdcard/
+fstab.freescale                         seapp_contexts
+init                                    selinux_version
+init.bluetooth.rc                       sepolicy
+init.environ.rc                         service_contexts
+init.freescale.emmc.rc                  storage/
+init.freescale.i.MX6DL.rc               sys/
+init.freescale.i.MX6Q.rc                system/
+init.freescale.i.MX6QP.rc               ueventd.freescale.rc
+init.freescale.rc                       ueventd.rc
+init.freescale.sd.rc                    vendor/
+init.freescale.usb.rc                   verity_key
+init.rc
+toradex_apalis6q:/ # cat /dev/ttymxc3                                          | type=1400 audit(110.260:42): avc: denied { write } for pid=261 comm="obd" path="socket:[12340]" dev="sockfs" ino=12340 scontext=u:r:obd:s0 tcontext=u:r:obd:s0 tclass=socket permissive=1
+type=1400 audit(111.050:43): avc: denied { write } for pid=1210 comm="Thread-2" name="vcan" dev="tmpfs" ino=12342 scontext=u:r:untrusted_app:s0:c512,c768 tcontext=u:object_r:socket_device:s0 tclass=sock_file permissive=1
+type=1400 audit(111.050:44): avc: denied { connectto } for pid=1210 comm="Thread-2" path="/dev/socket/vcan" scontext=u:r:untrusted_app:s0:c512,c768 tcontext=u:r:obd:s0 tclass=unix_stream_socket permissive=1
+tee -a /caat /dev/ttymxc3 | tee -a /cache/                                              <BT-mxc3-1.txtx  &* 
+[1] 1264 1265
+toradex_apalis6q:/ # alloc_contig_range: [2aa20, 2aa34) PFNs busy
+type=1400 audit(132.880:45): avc: denied { write } for pid=1265 comm="tee" name="/" dev="mmcblk0p4" ino=2 scontext=u:r:shell:s0 tcontext=u:object_r:cache_file:s0 tclass=dir permissive=1
+type=1400 audit(132.880:46): avc: denied { add_name } for pid=1265 comm="tee" name="BT-mxc3-1.txt" scontext=u:r:shell:s0 tcontext=u:object_r:cache_file:s0 tclass=dir permissive=1
+type=1400 audit(132.880:47): avc: denied { create } for pid=1265 comm="tee" name="BT-mxc3-1.txt" scontext=u:r:shell:s0 tcontext=u:object_r:cache_file:s0 tclass=file permissive=1
+type=1400 audit(132.900:48): avc: denied { read append open } for pid=1265 comm="tee" path="/cache/BT-mxc3-1.txt" dev="mmcblk0p4" ino=12 scontext=u:r:shell:s0 tcontext=u:object_r:cache_file:s0 tclass=file permissive=1
+
+toradex_apalis6q:/ # 
+toradex_apalis6q:/ # 
+toradex_apalis6q:/ # 
+toradex_apalis6q:/ # 
+toradex_apalis6q:/ # toradex_apalis6q:/ # cat /dev/ttymxc3 | tee -a /cache/BT-mxc3-1.txt &          -1.txt & 4-1.txt & | tee -a /cache/BT-mxc4-1.txt & 4 | tee -a /cache/BT-mxc4-1.txt &
+[2] 1266 1267
+toradex_apalis6q:/ # 
+toradex_apalis6q:/ # 
+toradex_apalis6q:/ # 
+toradex_apalis6q:/ # 
+toradex_apalis6q:/ # 
+toradex_apalis6q:/ # echo "SET" > /dev/ttymxc3
+toradex_apalis6q:/ # SET
+
+SET BT BDADDR 88:6b:0f:62:71:88
+
+SET BT NAME WT32i-AJ
+
+SET BT CLASS 280428
+
+SET BT IDENT BT:47 f000 6.0.0 Bluegiga iWRAP
+
+SET BT LAP 9e8b33
+
+SET BT PAGEMODE 4 2000 1
+
+SET BT POWER 6 6 6
+
+SET BT ROLE 0 f 2580
+
+SET BT SNIFF 0 20 1 8
+
+SET BT SSP 3 0
+
+SET BT MTU 667
+
+SET CONTROL AUDIO INTERNAL INTERNAL
+
+SET CONTROL BAUD 115200,8n1
+
+SET CONTROL CD 00 0
+
+SET CONTROL CODEC SBC JOINT_STEREO 44100 0
+
+SET CONTROL CONFIG 0000 0000 0000 1100
+
+SET CONTROL ECHO 7
+
+SET CONTROL ESCAPE 43 00 1
+
+SET CONTROL GAIN 8 8
+
+SET CONTROL MICBIAS b 0
+
+SET CONTROL MSC DTE 00 00 00 00 00 00
+
+SET CONTROL PIO 00 00 00
+
+SET CONTROL PREAMP 1 1
+
+SET CONTROL READY 00
+
+SET CONTROL VREGEN 0 00
+
+SET PROFILE A2DP SOURCE
+
+SET PROFILE SPP Bluetooth Serial Port
+
+SET PROFILE HSP-AG Voice Gateway
+
+SET PROFILE AVRCP TARGET 07
+
+SET
+
+SET
+
+SET BT BDADDR 88:6b:0f:62:71:88
+
+SET BT NAME WT32i-AJ
+
+SET BT CLASS 280428
+
+SET BT IDENT BT:47 f000 6.0.0 Bluegiga iWRAP
+
+SET BT LAP 9e8b33
+
+SET BT PAGEMODE 4 2000 1
+
+SET BT POWER 6 6 6
+
+SET BT ROLE 0 f 2580
+
+SET BT SNIFF 0 20 1 8
+
+SET BT SSP 3 0
+
+SET BT MTU 667
+
+SET CONTROL AUDIO INTERNAL INTERNAL
+
+SET CONTROL BAUD 115200,8n1
+
+SET CONTROL CD 00 0
+
+SET CONTROL CODEC SBC JOINT_STEREO 44100 0
+
+SET CONTROL CONFIG 0000 0000 0000 1100
+
+SET CONTROL ECHO 7
+
+SET CONTROL ESCAPE 43 00 1
+
+SET CONTROL GAIN 8 8
+
+SET CONTROL MICBIAS b 0
+
+SET CONTROL MSC DTE 00 00 00 00 00 00
+
+SET CONTROL PIO 00 00 00
+
+SET CONTROL PREAMP 1 1
+
+SET CONTROL READY 00
+
+SET CONTROL VREGEN 0 00
+
+SET PROFILE A2DP SOURCE
+
+SET PROFILE SPP Bluetooth Serial Port
+
+SET PROFILE HSP-AG Voice Gateway
+
+SET PROFILE AVRCP TARGET 07
+
+SET
+
+
+
+SET BT BDADDR 88:6b:0f:62:71:88
+
+SYNTAX ERROR
+
+
+
+SET BT NAME WT32i-AJ
+
+
+
+SET BT CLASS 280428
+
+
+
+SET BT IDENT BT:47 f000 6.0.0 Bluegiga iWRAP
+
+
+
+SET BT LAP 9e8b33
+
+
+
+SET BT PAGEMODE 4 2000 1
+
+
+
+SET BT POWER 6 6 6
+
+
+
+SET BT ROLE 0 f 2580
+
+
+
+SET BT SNIFF 0 20 1 8
+
+
+
+SET BT SSP 3 0
+
+
+
+SET BT MTU 667
+
+
+
+SET CONTROL AUDIO INTERNAL INTERNAL
+
+
+
+SET CONTROL BAUD 115200,8n1
+
+
+
+SET CONTROL CD 00 0
+
+
+
+SET CONTROL CODEC SBC JOINT_STEREO 44100 0
+
+
+
+SET CONTROL CONFIG 0000 0000 0000 1100
+
+
+
+SET CONTROL ECHO 7
+
+
+
+SET CONTROL ESCAPE 43 00 1
+
+
+
+SET CONTROL GAIN 8 8
+
+
+
+SET CONTROL MICBIAS b 0
+
+
+
+SET CONTROL MSC DTE 00 00 00 00 00 00
+
+
+
+SET CONTROL PIO 00 00 00
+
+
+
+SET CONTROL PREAMP 1 1
+
+
+
+SET CONTROL READY 00
+
+
+
+SET CONTROL VREGEN 0 00
+
+WRAP THOR AI (6.0.0 build 952)
+
+Copyright (c) 2003-2014 Bluegiga Technologies Inc.
+
+WRAP THOR AI (6.0.0 build 952)
+
+SYNTAX ERROR
+
+
+
+Copyright (c) 2003-2014 Bluegiga Technologies Inc.
+
+SYNTAX ERROR
+
+
+
+WRAP THOR AI (6.0.0 build 952)
+
+SYNTAX ERROR
+
+
+
+SYNTAX ERROR
+
+SYNTAX ERROR
+
+
+
+
+
+
+
+Copyright (c) 2003-2014 Bluegiga Technologies Inc.
+
+SYNTAX ERROR
+
+
+
+SYNTAX ERROR
+
+SYNTAX ERROR
+
+
+
+
+
+
+
+WRAP THOR AI (6.0.0 build 952)
+
+SYNTAX ERROR
+
+
+
+SYNTAX ERROR
+
+SYNTAX ERROR
+
+
+
+
+
+
+
+SYNTAX ERROR
+
+SYNTAX ERROR
+
+
+
+SYNTAX ERROR
+
+SYNTAX ERROR
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Copyright (c) 2003-2014 Bluegiga Technologies Inc.
+
+SYNTAX ERROR
+
+
+
+SYNTAX ERROR
+
+SYNTAX ERROR
+
+
+
+
+
+
+
+SYNTAX ERROR
+
+SYNTAX ERROR
+
+
+
+SYNTAX ERROR
+
+SYNTAX ERROR
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+WRAP THOR AI (6.0.0 build 952)
+
+SYNTAX ERROR
+
+
+
+SYNTAX ERROR
+
+SYNTAX ERROR
+
+
+
+
+
+
+
+SYNTAX ERROR
+
+SYNTAX ERROR
+
+
+
+SYNTAX ERROR
+
+SYNTAX ERROR
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+SYNTAX ERROR
+
+SYNTAX ERROR
+
+
+
+SYNTAX ERROR
+
+SYNTAX ERROR
+
+
+
+
+
+
+
+SYNTAX ERROR
+
+SYNTAX ERROR
+
+
+
+SYNTAX ERROR
+
+SYNTAX ERROR
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Copyright (c) 2003-2014 Bluegiga Technologies Inc.
+
+SYNTAX ERROR
+
+
+
+SYNTAX ERROR
+
+SYNTAX ERROR
+
+
+
+
+
+
+
+SYNTAX ERROR
+
+SYNTAX ERROR
+
+
+
+SYNTAX ERROR
+
+SYNTAX ERROR
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+SYNTAX ERROR
+
+SYNTAX ERROR
+
+
+
+SYNTAX ERROR
+
+SYNTAX ERROR
+
+
+
+
+
+
+
+SYNTAX ERROR
+
+SYNTAX ERROR
+
+
+
+SYNTAX ERROR
+
+SYNTAX ERROR
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+WRAP THOR AI (6.0.0 build 952)
+
+SYNTAX ERROR
+
+
+
+SYNTAX ERROR
+
+SYNTAX ERROR
+
+
+
+
+
+
+
+SYNTAX ERROR
+
+SYNTAX ERROR
+
+
+
+SYNTAX ERROR
+
+SYNTAX ERROR
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+SYNTAX ERROR
+
+SYNTAX ERROR
+
+
+
+SYNTAX ERROR
+
+SYNTAX ERROR
+
+
+
+
+
+
+
+SYNTAX ERROR
+
+SYNTAX ERROR
+
+
+
+SYNTAX ERROR
+
+SYNTAX ERROR
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+SYNTAX ERROR
+
+SYNTAX ERROR
+
+
+
+SYNTAX ERROR
+
+SYNTAX ERROR
+
+
+
+
+
+
+
+SYNTAX ERROR
+
+SYNTAX ERROR
+
+
+
+SYNTAX ERROR
+
+SYNTAX ERROR
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+SYNTAX ERROR
+
+SYNTAX ERROR
+
+
+
+SYNTAX ERROR
+
+SYNTAX ERROR
+
+
+
+
+
+
+
+SYNTAX ERROR
+
+SYNTAX ERROR
+
+
+
+SYNTAX ERROR
+
+SYNTAX ERROR
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Copyright (c) 2003-2014 Bluegiga Technologies Inc.
+
+SYNTAX ERROR
+
+
+
+SYNTAX ERROR
+
+SYNTAX ERROR
+
+
+
+
+
+
+
+SYNTAX ERROR
+
+SYNTAX ERROR
+
+
+
+SYNTAX ERROR
+
+SYNTAX ERROR
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+SYNTAX ERROR
+
+SYNTAX ERROR
+
+
+
+SYNTAX ERROR
+
+SYNTAX ERROR
+
+
+
+
+
+
+
+SYNTAX ERROR
+
+SYNTAX ERROR
+
+
+
+SYNTAX ERROR
+
+SYNTAX ERROR
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+SYNTAX ERROR
+
+SYNTAX ERROR
+
+
+
+SYNTAX ERROR
+
+SYNTAX ERROR
+
+
+
+
+
+
+
+SYNTAX ERROR
+
+SYNTAX ERROR
+
+
+
+SYNTAX ERROR
+
+SYNTAX ERROR
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+SYNTAX ERROR
+
+SYNTAX ERROR
+
+
+
+SYNTAX ERROR
+
+
+SYNTAX ERROR
+
+
+
+
+
+
+
+SYNTAX ERROR
+
+toradex_apalis6q:/ # SYNTAX ERROR
+
+
+
+SYNTAX ERROR
+
+
+toradex_apalis6q:/ # 
+toradex_apalis6q:/ # 
+toradex_apalis6q:/ # 
+toradex_apalis6q:/ # 
+toradex_apalis6q:/ # 
+toradex_apalis6q:/ # 
+toradex_apalis6q:/ # 
+toradex_apalis6q:/ # WRAP THOR AI (6.0.0 build 952)
+
+Copyright (c) 2003-2014 Bluegiga Technologies Inc.
+
+WRAP THOR AI (6.0.0 build 952)
+
+SYNTAX ERROR
+
+
+
+Copyright (c) 2003-2014 Bluegiga Technologies Inc.
+
+SYNTAX ERROR
+
+
+
+WRAP THOR AI (6.0.0 build 952)
+
+SYNTAX ERROR
+
+
+
+SYNTAX ERROR
+
+SYNTAX ERROR
+
+
+
+
+
+
+
+Copyright (c) 2003-2014 Bluegiga Technologies Inc.
+
+SYNTAX ERROR
+
+
+
+SYNTAX ERROR
+
+SYNTAX ERROR
+
+
+
+
+
+
+
+WRAP THOR AI (6.0.0 build 952)
+
+SYNTAX ERROR
+
+
+
+SYNTAX ERROR
+
+SYNTAX ERROR
+
+
+
+
+
+
+
+SYNTAX ERROR
+
+SYNTAX ERROR
+
+
+
+SYNTAX ERROR
+
+SYNTAX ERROR
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Copyright (c) 2003-2014 Bluegiga Technologies Inc.
+
+SYNTAX ERROR
+
+
+
+SYNTAX ERROR
+
+SYNTAX ERROR
+
+
+
+
+
+
+
+SYNTAX ERROR
+
+SYNTAX ERROR
+
+
+
+SYNTAX ERROR
+
+SYNTAX ERROR
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+WRAP THOR AI (6.0.0 build 952)
+
+SYNTAX ERROR
+
+
+
+SYNTAX ERROR
+
+SYNTAX ERROR
+
+
+
+
+
+
+
+SYNTAX ERROR
+
+SYNTAX ERROR
+
+
+
+SYNTAX ERROR
+
+SYNTAX ERROR
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+SYNTAX ERROR
+
+SYNTAX ERROR
+
+
+
+SYNTAX ERROR
+
+SYNTAX ERROR
+
+
+
+
+
+
+
+SYNTAX ERROR
+
+SYNTAX ERROR
+
+
+
+SYNTAX ERROR
+
+SYNTAX ERROR
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Copyright (c) 2003-2014 Bluegiga Technologies Inc.
+
+SYNTAX ERROR
+
+
+
+SYNTAX ERROR
+
+SYNTAX ERROR
+
+
+
+
+
+
+
+SYNTAX ERROR
+
+SYNTAX ERROR
+
+
+
+SYNTAX ERROR
+
+SYNTAX ERROR
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+SYNTAX ERROR
+
+SYNTAX ERROR
+
+
+
+SYNTAX ERROR
+
+SYNTAX ERROR
+
+
+
+
+
+
+
+SYNTAX ERROR
+
+SYNTAX ERROR
+
+
+
+SYNTAX ERROR
+
+SYNTAX ERROR
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+WRAP THOR AI (6.0.0 build 952)
+
+SYNTAX ERROR
+
+
+
+SYNTAX ERROR
+
+SYNTAX ERROR
+
+
+
+
+
+
+
+SYNTAX ERROR
+
+SYNTAX ERROR
+
+
+
+SYNTAX ERROR
+
+SYNTAX ERROR
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+SYNTAX ERROR
+
+SYNTAX ERROR
+
+
+
+SYNTAX ERROR
+
+SYNTAX ERROR
+
+
+
+
+
+
+
+SYNTAX ERROR
+
+SYNTAX ERROR
+
+
+
+SYNTAX ERROR
+
+SYNTAX ERROR
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+SYNTAX ERROR
+
+SYNTAX ERROR
+
+
+
+SYNTAX ERROR
+
+SYNTAX ERROR
+
+
+
+
+
+
+
+SYNTAX ERROR
+
+SYNTAX ERROR
+
+
+
+SYNTAX ERROR
+
+SYNTAX ERROR
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+SYNTAX ERROR
+
+SYNTAX ERROR
+
+
+
+SYNTAX ERROR
+
+SYNTAX ERROR
+
+
+
+
+
+
+
+SYNTAX ERROR
+
+SYNTAX ERROR
+
+
+
+SYNTAX ERROR
+
+SYNTAX ERROR
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Copyright (c) 2003-2014 Bluegiga Technologies Inc.
+
+SYNTAX ERROR
+
+
+
+SYNTAX ERROR
+
+SYNTAX ERROR
+
+
+
+
+
+
+
+SYNTAX ERROR
+
+SYNTAX ERROR
+
+
+
+SYNTAX ERROR
+
+SYNTAX ERROR
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+SYNTAX ERROR
+
+SYNTAX ERROR
+
+
+
+SYNTAX ERROR
+
+SYNTAX ERROR
+
+
+
+
+
+
+
+SYNTAX ERROR
+
+
+SYNTAX ERROR
+
+
+
+SYNTAX ERROR
+
+toradex_apalis6q:/ # SYNTAX ERROR
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+SYNTAX ERROR
+
+SYNTAX ERROR
+
+
+
+SYNTAX ERROR
+
+SYNTAX ERROR
+
+
+
+
+
+
+
+SYNTAX ERROR
+
+SYNTAX ERROR
+
+
+
+SYNTAX ERROR
+
+SYNTAX ERROR
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+SYNTAX ERROR
+
+SYNTAX ERROR
+
+
+
+SYNTAX ERROR
+
+SYNTAX ERROR
+
+
+
+
+
+
+
+SYNTAX ERROR
+
+SYNTAX ERROR
+
+
+
+SYNTAX ERROR
+
+
+toradex_apalis6q:/ # 
+toradex_apalis6q:/ # 
+toradex_apalis6q:/ # 
+toradex_apalis6q:/ # reWRAP THOR AI (6.0.0 build 952)
+
+Copyright (c) 2003-2014 Bluegiga Technologies Inc.
+
+WRAP THOR AI (6.0.0 build 952)
+
+SYNTAX ERROR
+
+
+
+Copyright (c) 2003-2014 Bluegiga Technologies Inc.
+
+SYNTAX ERROR
+
+
+
+WRAP THOR AI (6.0.0 build 952)
+
+SYNTAX ERROR
+
+
+
+SYNTAX ERROR
+
+SYNTAX ERROR
+
+
+
+
+
+
+
+Copyright (c) 2003-2014 Bluegiga Technologies Inc.
+
+bSYNTAX ERROR
+
+
+
+SYNTAX ERROR
+
+SYNTAX ERROR
+
+
+
+
+
+
+
+WRAP THOR AI (6.0.0 build 952)
+
+SYNTAX ERROR
+
+
+
+SYNTAX ERROR
+
+SYNTAX ERROR
+
+
+
+
+
+
+
+SYNTAX ERROR
+
+SYNTAX ERROR
+
+
+
+SYNTAX ERROR
+
+SYNTAX ERROR
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Copyright (c) 2003-2014 Bluegiga Technologies Inc.
+
+SYNTAX ERROR
+
+
+
+SYNTAX ERROR
+
+oSYNTAX ERROR
+
+
+
+
+
+
+
+SYNTAX ERROR
+
+SYNTAX ERROR
+
+
+
+SYNTAX ERROR
+
+SYNTAX ERROR
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+WRAP THOR AI (6.0.0 build 952)
+
+SYNTAX ERROR
+
+
+
+SYNTAX ERROR
+
+SYNTAX ERROR
+
+
+
+
+
+
+
+SYNTAX ERROR
+
+SYNTAX ERROR
+
+
+
+SYNTAX ERROR
+
+SYNTAX ERROR
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+SYNTAX ERROR
+
+oSYNTAX ERROR
+
+
+
+SYNTAX ERROR
+
+SYNTAX ERROR
+
+
+
+
+
+
+
+SYNTAX ERROR
+
+SYNTAX ERROR
+
+
+
+SYNTAX ERROR
+
+SYNTAX ERROR
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+tCopyright (c) 2003-2014 Bluegiga Technologies Inc.
+
+SYNTAX ERROR
+
+
+
+SYNTAX ERROR
+
+SYNTAX ERROR
+
+
+
+
+
+
+
+SYNTAX ERROR
+
+SYNTAX ERROR
+
+
+
+SYNTAX ERROR
+
+SYNTAX ERROR
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+SYNTAX ERROR
+
+SYNTAX ERROR
+
+
+
+SYNTAX ERROR
+
+SYNTAX ERROR
+
+
+
+
+
+
+
+SYNTAX ERROR
+
+SYNTAX ERROR
+
+
+
+SYNTAX ERROR
+
+
+SYNTAX ERROR
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+WRAP THOR AI (6.0.0 build 952)
+
+SYNTAX ERROR
+
+
+
+SYNTAX ERROR
+
+SYNTAX ERROR
+
+
+
+
+
+
+
+SYNTAX ERROR
+
+sysrq: SysRq : Emergency Remount R/O
+SYNTAX ERROR
+
+
+
+SYNTAX ERROR
+
+EXT4-fs (mmcblk0p4): re-mounted. Opts: (null)
+SYNTAX ERROR
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+SYNTAX ERROR
+
+EXT4-fs (mmcblk0p10): re-mounted. Opts: (null)
+SYNTAX ERROR
+
+
+
+SYNTAX ERROR
+
+Emergency Remount complete
+SYNTAX ERROR
+
+
+
+
+
+
+
+SYNTAX ERROR
+
+SYNTAX ERROR
+
+
+
+SYNTAX ERROR
+
+SYNTAX ERROR
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+SYNTAX ERROR
+
+SYNTAX ERRORimx2-wdt 20bc000.wdog: Device shutdown: Expect reboot!
+
+
+
+
+SYNTAX ERROR
+
+ci_hdrc ci_hdrc.1: remove, state 4
+usb usb1: USB disconnect, device number 1
+usb 1-1: USB disconnect, device number 2
+SYNTAX ERROR
+
+
+
+
+
+
+
+SYNTAX ERROR
+
+ci_hdrc ci_hdrc.1: USB bus 1 deregistered
+android_work: did not send uevent (0 0   (null))
+SYNTAX ERROR
+
+
+
+SYNTAX ERROR
+
+SYNTAX ERROR
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+SYNTAX ERROR
+
+SYNTAX ERROR
+
+
+
+SYNTAX ERROR
+
+reboot: Restarting system with command ''
+
+
+U-Boot 2017.03-00002-gebf9dc2527 (Jan 29 2018 - 17:39:17 +0530)
+
+CPU:   Freescale i.MX6Q rev1.5 at 792 MHz
+Reset cause: WDOG
+I2C:   ready
+DRAM:  2 GiB
+PMIC: device id: 0x10, revision id: 0x21
+PMIC: programmed
+MMC:   FSL_SDHC: 0, FSL_SDHC: 1, FSL_SDHC: 2
+Unable to allocate framebuffer memory
+In:    serial
+Out:   serial
+Err:   serial
+Model: Toradex Apalis iMX6 Quad 2GB IT V1.1C, Serial# 05146387
+flash target is MMC:0
+Net:   using PHY at 7
+FEC [PRIME]
+Fastboot: Normal
+Hit any key to stop autoboot:  1  0 
+Apalis iMX6 # boot
+boota mmc0 
+CACHE: Misaligned operation at range [8ffb79a0, 8ffb7a20]
+CACHE: Misaligned operation at range [8ffb79a0, 8ffb7a20]
+kernel   @ 14008000 (9802160)
+ramdisk  @ 15000000 (1628983)
+fdt      @ 14f00000 (53981)
+## Booting Android Image at 0x12000000 ...
+Kernel load addr 0x14008000 size 9573 KiB
+Kernel command line: console=ttymxc0,115200 init=/init video=mxcfb0:dev=ldb,fbpix=RGB32,bpp=32 video=mxcfb1:dev=hdmi,640x480M@60,if=RGB24,bpp=16 video=mxcfb2:off video=mxcfb3:off vmalloc=256M androidboot.console=ttymxc0 consoleblank=0 androidboot.hardware=freescale cma=448M androidboot.selinux=permissive androidboot.dm_verity=disabled buildvariant=user androidboot.serialno=1b2429d4ea997115 androidboot.storage_type=emmc
+## Flattened Device Tree blob at 14f00000
+   Booting using the fdt blob at 0x14f00000
+   Loading Kernel Image ... OK
+   Using Device Tree in place at 14f00000, end 14f102dc
+
+Starting kernel ...
+
+Booting Linux on physical CPU 0x0
+Linux version 4.9.67-07229-gdc6c16ec0433 (embadmin@ubuntu) (gcc version 4.9 20150123 (prerelease) (GCC) ) #73 SMP PREEMPT Mon Feb 19 12:20:06 IST 2018
+CPU: ARMv7 Processor [412fc09a] revision 10 (ARMv7), cr=10c53c7d
+CPU: PIPT / VIPT nonaliasing data cache, VIPT aliasing instruction cache
+OF: fdt:Machine model: Aravinth : Toradex Apalis iMX6Q/D Module on Ixora V1.1 Carrier Board
+cma: Reserved 448 MiB at 0x22000000
+Memory policy: Data cache writealloc
+percpu: Embedded 15 pages/cpu @ee6b3000 s31040 r8192 d22208 u61440
+Built 1 zonelists in Zone order, mobility grouping on.  Total pages: 522768
+Kernel command line: console=ttymxc0,115200 init=/init video=mxcfb0:dev=ldb,fbpix=RGB32,bpp=32 video=mxcfb1:dev=hdmi,640x480M@60,if=RGB24,bpp=16 video=mxcfb2:off video=mxcfb3:off vmalloc=256M androidboot.console=ttymxc0 consoleblank=0 androidboot.hardware=freescale cma=448M androidboot.selinux=permissive androidboot.dm_verity=disabled buildvariant=user androidboot.serialno=1b2429d4ea997115 androidboot.storage_type=emmc
+PID hash table entries: 4096 (order: 2, 16384 bytes)
+Dentry cache hash table entries: 131072 (order: 7, 524288 bytes)
+Inode-cache hash table entries: 65536 (order: 6, 262144 bytes)
+Memory: 1597048K/2097152K available (13312K kernel code, 1128K rwdata, 4016K rodata, 1024K init, 606K bss, 41352K reserved, 458752K cma-reserved, 1318912K highmem)
+Virtual kernel memory layout:
+    vector  : 0xffff0000 - 0xffff1000   (   4 kB)
+    fixmap  : 0xffc00000 - 0xfff00000   (3072 kB)
+    vmalloc : 0xf0000000 - 0xff800000   ( 248 MB)
+    lowmem  : 0xc0000000 - 0xef800000   ( 760 MB)
+    pkmap   : 0xbfe00000 - 0xc0000000   (   2 MB)
+    modules : 0xbf000000 - 0xbfe00000   (  14 MB)
+      .text : 0xc0008000 - 0xc0e00000   (14304 kB)
+      .init : 0xc1300000 - 0xc1400000   (1024 kB)
+      .data : 0xc1400000 - 0xc151a218   (1129 kB)
+       .bss : 0xc151a218 - 0xc15b1be0   ( 607 kB)
+SLUB: HWalign=64, Order=0-3, MinObjects=0, CPUs=4, Nodes=1
+Preemptible hierarchical RCU implementation.
+	Build-time adjustment of leaf fanout to 32.
+NR_IRQS:16 nr_irqs:16 16
+L2C-310 errata 752271 769419 enabled
+L2C-310 enabling early BRESP for Cortex-A9
+L2C-310 full line of zeros enabled for Cortex-A9
+L2C-310 ID prefetch enabled, offset 16 lines
+L2C-310 dynamic clock gating enabled, standby mode enabled
+L2C-310 cache controller enabled, 16 ways, 1024 kB
+L2C-310: CACHE_ID 0x410000c7, AUX_CTRL 0x76470001
+Switching to timer-based delay loop, resolution 333ns
+sched_clock: 32 bits at 3000kHz, resolution 333ns, wraps every 715827882841ns
+clocksource: mxc_timer1: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 637086815595 ns
+Console: colour dummy device 80x30
+Calibrating delay loop (skipped), value calculated using timer frequency.. 6.00 BogoMIPS (lpj=30000)
+pid_max: default: 32768 minimum: 301
+Security Framework initialized
+SELinux:  Initializing.
+Mount-cache hash table entries: 2048 (order: 1, 8192 bytes)
+Mountpoint-cache hash table entries: 2048 (order: 1, 8192 bytes)
+CPU: Testing write buffer coherency: ok
+CPU0: update cpu_capacity 1024
+CPU0: thread -1, cpu 0, socket 0, mpidr 80000000
+Setting up static identity map for 0x10100000 - 0x10100058
+CPU1: update cpu_capacity 1024
+CPU1: thread -1, cpu 1, socket 0, mpidr 80000001
+CPU2: update cpu_capacity 1024
+CPU2: thread -1, cpu 2, socket 0, mpidr 80000002
+CPU3: update cpu_capacity 1024
+CPU3: thread -1, cpu 3, socket 0, mpidr 80000003
+Brought up 4 CPUs
+SMP: Total of 4 processors activated (24.00 BogoMIPS).
+CPU: All CPU(s) started in SVC mode.
+CPU3: update max cpu_capacity 1024
+devtmpfs: initialized
+CPU2: update max cpu_capacity 1024
+VFP support v0.3: implementor 41 architecture 3 part 30 variant 9 rev 4
+clocksource: jiffies: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 19112604462750000 ns
+futex hash table entries: 1024 (order: 4, 65536 bytes)
+pinctrl core: initialized pinctrl subsystem
+NET: Registered protocol family 16
+DMA: preallocated 256 KiB pool for atomic coherent allocations
+cpuidle: using governor menu
+CPU identified as i.MX6Q, silicon rev 1.5
+hw-breakpoint: found 5 (+1 reserved) breakpoint and 1 watchpoint registers.
+hw-breakpoint: maximum watchpoint size is 4 bytes.
+imx6q-pinctrl 20e0000.iomuxc: initialized IMX pinctrl driver
+imx-gpc 20dc000.gpc: no fsl,ldo-bypass found!
+imx-gpc 20dc000.gpc: Registered imx-gpc
+mxs-dma 110000.dma-apbh: initialized
+usb_host_vbus: supplied by usb_host_vbus_hub
+SCSI subsystem initialized
+usbcore: registered new interface driver usbfs
+usbcore: registered new interface driver hub
+usbcore: registered new device driver usb
+2000000.aips-bus:usbphy_nop1 supply vcc not found, using dummy regulator
+2000000.aips-bus:usbphy_nop2 supply vcc not found, using dummy regulator
+i2c i2c-1: IMX I2C adapter registered
+i2c i2c-1: can't use DMA, using PIO instead.
+stmpe-i2c 2-0041: stmpe811 detected, chip id: 0x811
+i2c i2c-2: IMX I2C adapter registered
+i2c i2c-2: can't use DMA, using PIO instead.
+i2c i2c-3: IMX I2C adapter registered
+i2c i2c-3: can't use DMA, using PIO instead.
+Linux video capture interface: v2.00
+pps_core: LinuxPPS API ver. 1 registered
+pps_core: Software ver. 5.3.6 - Copyright 2005-2007 Rodolfo Giometti <giometti@linux.it>
+PTP clock support registered
+imx-ipuv3 2400000.ipu: IPU DMFC NORMAL mode: 1(0~1), 5B(4,5), 5F(6,7)
+imx-ipuv3 2800000.ipu: IPU DMFC NORMAL mode: 1(0~1), 5B(4,5), 5F(6,7)
+mxc_mipi_csi2 21dc000.mipi_csi: i.MX MIPI CSI2 driver probed ipu0 csi1
+mxc_mipi_csi2 21dc000.mipi_csi: i.MX MIPI CSI2 dphy version is 0x3130302a
+MIPI CSI2 driver module loaded
+imx rpmsg driver is registered.
+Advanced Linux Sound Architecture Driver Initialized.
+Bluetooth: Core ver 2.22
+NET: Registered protocol family 31
+Bluetooth: HCI device and connection manager initialized
+Bluetooth: HCI socket layer initialized
+Bluetooth: L2CAP socket layer initialized
+Bluetooth: SCO socket layer initialized
+clocksource: Switched to clocksource mxc_timer1
+VFS: Disk quotas dquot_6.6.0
+VFS: Dquot-cache hash table entries: 1024 (order 0, 4096 bytes)
+NET: Registered protocol family 2
+TCP established hash table entries: 8192 (order: 3, 32768 bytes)
+TCP bind hash table entries: 8192 (order: 4, 65536 bytes)
+TCP: Hash tables configured (established 8192 bind 8192)
+UDP hash table entries: 512 (order: 2, 16384 bytes)
+UDP-Lite hash table entries: 512 (order: 2, 16384 bytes)
+NET: Registered protocol family 1
+RPC: Registered named UNIX socket transport module.
+RPC: Registered udp transport module.
+RPC: Registered tcp transport module.
+RPC: Registered tcp NFSv4.1 backchannel transport module.
+Trying to unpack rootfs image as initramfs...
+Freeing initrd memory: 1592K
+hw perfevents: enabled with armv7_cortex_a9 PMU driver, 7 counters available
+Bus freq driver module loaded
+audit: initializing netlink subsys (disabled)
+audit: type=2000 audit(0.870:1): initialized
+workingset: timestamp_bits=30 max_order=19 bucket_order=0
+NFS: Registering the id_resolver key type
+Key type id_resolver registered
+Key type id_legacy registered
+ntfs: driver 2.1.32 [Flags: R/W DEBUG].
+jffs2: version 2.2. (NAND) ¬© 2001-2006 Red Hat, Inc.
+fuse init (API version 7.26)
+bounce: pool size: 64 pages
+io scheduler noop registered
+io scheduler deadline registered
+io scheduler cfq registered (default)
+backlight supply power not found, using dummy regulator
+20e0000.hdmi_video supply HDMI not found, using dummy regulator
+mxc_sdc_fb fb@0: registered mxc display driver ldb
+imx-ipuv3 2800000.ipu: IPU DMFC DP HIGH RESOLUTION: 1(0,1), 5B(2~5), 5F(6,7)
+Console: switching to colour frame buffer device 128x48
+mxc_hdmi 20e0000.hdmi_video: Detected HDMI controller 0x13:0xa:0xa0:0xc1
+fbcvt: 640x480@60: CVT Name - .307M3
+mxc_sdc_fb fb@1: registered mxc display driver hdmi
+mxc_sdc_fb fb@2: Can't get fb option for mxcfb2!
+mxc_sdc_fb fb@3: Can't get fb option for mxcfb3!
+imx-sdma 20ec000.sdma: no iram assigned, using external mem
+imx-sdma 20ec000.sdma: loaded firmware 3.3
+pfuze100-regulator 2-0008: Full layer: 2, Metal layer: 1
+pfuze100-regulator 2-0008: FAB: 0, FIN: 0
+pfuze100-regulator 2-0008: pfuze100 found.
+2020000.serial: ttymxc0 at MMIO 0x2020000 (irq = 29, base_baud = 5000000) is a IMX
+console [ttymxc0] enabled
+21e8000.serial: ttymxc1 at MMIO 0x21e8000 (irq = 78, base_baud = 5000000) is a IMX
+21f0000.serial: ttymxc3 at MMIO 0x21f0000 (irq = 79, base_baud = 5000000) is a IMX
+21f4000.serial: ttymxc4 at MMIO 0x21f4000 (irq = 80, base_baud = 5000000) is a IMX
+imx sema4 driver is registered.
+[drm] Initialized
+[drm] Initialized vivante 1.0.0 20120216 on minor 0
+brd: module loaded
+loop: module loaded
+zram: Added device: zram0
+ahci-imx 2200000.sata: fsl,transmit-level-mV not specified, using 00000024
+ahci-imx 2200000.sata: fsl,transmit-boost-mdB not specified, using 00000480
+ahci-imx 2200000.sata: fsl,transmit-atten-16ths not specified, using 00002000
+ahci-imx 2200000.sata: fsl,receive-eq-mdB not specified, using 05000000
+ahci-imx 2200000.sata: SSS flag set, parallel bus scan disabled
+ahci-imx 2200000.sata: AHCI 0001.0300 32 slots 1 ports 3 Gbps 0x1 impl platform mode
+ahci-imx 2200000.sata: flags: ncq sntf stag pm led clo only pmp pio slum part ccc apst 
+scsi host0: ahci-imx
+ata1: SATA max UDMA/133 mmio [mem 0x02200000-0x02203fff] port 0x100 irq 87
+spi_imx 2008000.ecspi: probed
+libphy: Fixed MDIO Bus: probed
+tun: Universal TUN/TAP device driver, 1.6
+tun: (C) 1999-2004 Max Krasnyansky <maxk@qualcomm.com>
+CAN device driver interface
+2090000.flexcan supply xceiver not found, using dummy regulator
+flexcan 2090000.flexcan: device registered (reg_base=f02f4000, irq=38)
+2094000.flexcan supply xceiver not found, using dummy regulator
+flexcan 2094000.flexcan: device registered (reg_base=f02fc000, irq=39)
+2188000.ethernet supply phy not found, using dummy regulator
+pps pps0: new PPS source ptp0
+libphy: fec_enet_mii_bus: probed
+fec 2188000.ethernet eth0: registered PHC device 0
+PPP generic driver version 2.4.2
+PPP BSD Compression module registered
+PPP Deflate Compression module registered
+PPP MPPE Compression module registered
+NET: Registered protocol family 24
+usbcore: registered new interface driver kaweth
+pegasus: v0.9.3 (2013/04/25), Pegasus/Pegasus II USB Ethernet driver
+usbcore: registered new interface driver pegasus
+usbcore: registered new interface driver rtl8150
+usbcore: registered new interface driver r8152
+usbcore: registered new interface driver asix
+usbcore: registered new interface driver ax88179_178a
+usbcore: registered new interface driver cdc_ether
+usbcore: registered new interface driver cdc_eem
+usbcore: registered new interface driver net1080
+usbcore: registered new interface driver cdc_subset
+usbcore: registered new interface driver zaurus
+usbcore: registered new interface driver cdc_ncm
+ehci_hcd: USB 2.0 'Enhanced' Host Controller (EHCI) Driver
+ehci-mxc: Freescale On-Chip EHCI Host driver
+usbcore: registered new interface driver cdc_acm
+cdc_acm: USB Abstract Control Model driver for USB modems and ISDN adapters
+usbcore: registered new interface driver usb-storage
+usbcore: registered new interface driver usbserial
+usbcore: registered new interface driver usbserial_generic
+usbserial: USB Serial support registered for generic
+usbcore: registered new interface driver ftdi_sio
+usbserial: USB Serial support registered for FTDI USB Serial Device
+usbcore: registered new interface driver option
+usbserial: USB Serial support registered for GSM modem (1-port)
+usbcore: registered new interface driver usbtest
+usbcore: registered new interface driver usb_ehset_test
+2184800.usbmisc supply vbus-wakeup not found, using dummy regulator
+ci_hdrc ci_hdrc.1: EHCI Host Controller
+ci_hdrc ci_hdrc.1: new USB bus registered, assigned bus number 1
+ci_hdrc ci_hdrc.1: USB 2.0 started, EHCI 1.00
+usb usb1: New USB device found, idVendor=1d6b, idProduct=0002
+usb usb1: New USB device strings: Mfr=3, Product=2, SerialNumber=1
+usb usb1: Product: EHCI Host Controller
+usb usb1: Manufacturer: Linux 4.9.67-07229-gdc6c16ec0433 ehci_hcd
+usb usb1: SerialNumber: ci_hdrc.1
+hub 1-0:1.0: USB hub found
+hub 1-0:1.0: 1 port detected
+ata1: SATA link down (SStatus 0 SControl 300)
+ahci-imx 2200000.sata: no device found, disabling link.
+ahci-imx 2200000.sata: pass ahci_imx..hotplug=1 to enable hotplug
+mousedev: PS/2 mouse device common for all mice
+usbcore: registered new interface driver xpad
+usbcore: registered new interface driver usb_acecad
+usbcore: registered new interface driver aiptek
+usbcore: registered new interface driver gtco
+usbcore: registered new interface driver hanwang
+usbcore: registered new interface driver kbtab
+input: stmpe-ts as /devices/soc0/soc/2100000.aips-bus/21a4000.i2c/i2c-2/2-0041/stmpe-ts/input/input0
+snvs_rtc 20cc000.snvs:snvs-rtc-lp: rtc core: registered 20cc000.snvs:snvs-r as rtc0
+i2c /dev entries driver
+IR NEC protocol handler initialized
+IR RC5(x/sz) protocol handler initialized
+IR RC6 protocol handler initialized
+IR JVC protocol handler initialized
+IR Sony protocol handler initialized
+IR SANYO protocol handler initialized
+IR Sharp protocol handler initialized
+IR MCE Keyboard/mouse protocol handler initialized
+IR XMP protocol handler initialized
+mxc_v4l2_output v4l2_out: V4L2 device registered as video16
+mxc_v4l2_output v4l2_out: V4L2 device registered as video17
+mxc_v4l2_output v4l2_out: V4L2 device registered as video18
+mxc_v4l2_output v4l2_out: V4L2 device registered as video19
+ov564x_mipi 3-003c: found pwm2, period=0
+usb 1-1: new high-speed USB device number 2 using ci_hdrc
+ov5640_read_reg:write reg error:reg=300a
+camera ov5640_mipi is not found
+usbcore: registered new interface driver uvcvideo
+USB Video Class driver (1.1.1)
+imx2-wdt 20bc000.wdog: timeout 60 sec (nowayout=0)
+device-mapper: uevent: version 1.0.3
+device-mapper: ioctl: 4.35.0-ioctl (2016-06-23) initialised: dm-devel@redhat.com
+Bluetooth: HCI UART driver ver 2.3
+Bluetooth: HCI UART protocol H4 registered
+Bluetooth: HCI UART protocol BCSP registered
+Bluetooth: HCI UART protocol ATH3K registered
+usbcore: registered new interface driver btusb
+sdhci: Secure Digital Host Controller Interface driver
+sdhci: Copyright(c) Pierre Ossman
+sdhci-pltfm: SDHCI platform and OF driver helper
+sdhci-esdhc-imx 2190000.usdhc: could not get ultra high speed state, work on normal mode
+sdhci-esdhc-imx 2190000.usdhc: Got CD GPIO
+mmc1: SDHCI controller on 2190000.usdhc [2190000.usdhc] using ADMA
+sdhci-esdhc-imx 2198000.usdhc: could not get ultra high speed state, work on normal mode
+usb 1-1: New USB device found, idVendor=0424, idProduct=2514
+usb 1-1: New USB device strings: Mfr=0, Product=0, SerialNumber=0
+hub 1-1:1.0: USB hub found
+hub 1-1:1.0: 4 ports detected
+mmc0: SDHCI controller on 2198000.usdhc [2198000.usdhc] using ADMA
+mxc_vpu 2040000.vpu_fsl: VPU initialized
+mxc_vdoa 21e4000.vdoa: i.MX Video Data Order Adapter(VDOA) driver probed
+mxc_hdmi_cec soc:hdmi_cec@00120000: HDMI CEC initialized
+Galcore version 6.2.2.96445
+mmc0: new DDR MMC card at address 0001
+mmcblk0: mmc0:0001 Q2J54A 3.59 GiB 
+mmcblk0boot0: mmc0:0001 Q2J54A partition 1 16.0 MiB
+mmcblk0boot1: mmc0:0001 Q2J54A partition 2 16.0 MiB
+random: fast init done
+Alternate GPT is invalid, using primary GPT.
+ mmcblk0: p1 p2 p3 p4 p5 p6 p7 p8 p9 p10 p11
+caam 2100000.caam: ERA source: CAAMVID.
+caam 2100000.caam: AXI pipeline throttling enabled.
+caam 2100000.caam: Instantiated RNG4 SH1
+caam 2100000.caam: device ID = 0x0a16010000000000 (Era 4)
+caam 2100000.caam: job rings = 2, qi = 0
+caam algorithms registered in /proc/crypto
+caam_jr 2101000.jr0: registering rng-caam
+platform caam_sm: blkkey_ex: 4 keystore units available
+platform caam_sm: 64-bit clear key:
+platform caam_sm: [0000] 00 01 02 03 04 0f 06 07
+platform caam_sm: 64-bit black key:
+platform caam_sm: [0000] da 85 c2 57 bf 99 ce 64
+platform caam_sm: [0008] 09 6a 31 c1 ee 04 01 b1
+platform caam_sm: 128-bit clear key:
+platform caam_sm: [0000] 00 01 02 03 04 0f 06 07
+platform caam_sm: [0008] 08 09 0a 0b 0c 0d 0e 0f
+platform caam_sm: 128-bit black key:
+platform caam_sm: [0000] 54 7d 00 15 c4 90 cf 21
+platform caam_sm: [0008] 45 cc 6e e5 80 ac d2 da
+platform caam_sm: 192-bit clear key:
+platform caam_sm: [0000] 00 01 02 03 04 0f 06 07
+platform caam_sm: [0008] 08 09 0a 0b 0c 0d 0e 0f
+platform caam_sm: [0016] 10 11 12 13 14 15 16 17
+platform caam_sm: 192-bit black key:
+platform caam_sm: [0000] 3f ec d3 90 84 d2 46 4c
+platform caam_sm: [0008] 4b d6 a2 de 7e b4 74 e5
+platform caam_sm: [0016] 17 72 1e 02 c9 44 10 08
+platform caam_sm: [0024] ea fb 7e fb 74 46 05 03
+platform caam_sm: 256-bit clear key:
+platform caam_sm: [0000] 00 01 02 03 04 0f 06 07
+platform caam_sm: [0008] 08 09 0a 0b 0c 0d 0e 0f
+platform caam_sm: [0016] 10 11 12 13 14 15 16 17
+platform caam_sm: [0024] 18 19 1a 1b 1c 1d 1e 1f
+platform caam_sm: 256-bit black key:
+platform caam_sm: [0000] 8e 97 8a 3f dc 07 dd ad
+platform caam_sm: [0008] 3e 7b 16 06 e4 e6 c1 6d
+platform caam_sm: [0016] 43 c4 c0 da 89 f0 9d a2
+platform caam_sm: [0024] 43 d1 49 3b ef 27 10 74
+platform caam_sm: 64-bit unwritten blob:
+platform caam_sm: [0000] 00 00 00 00 00 00 00 00
+platform caam_sm: [0008] 00 00 00 00 00 00 00 00
+platform caam_sm: [0016] 00 00 00 00 00 00 00 00
+platform caam_sm: [0024] 00 00 00 00 00 00 00 00
+platform caam_sm: [0032] 00 00 00 00 00 00 00 00
+platform caam_sm: [0040] 00 00 00 00 00 00 00 00
+platform caam_sm: [0048] 00 00 00 00 00 00 00 00
+platform caam_sm: [0056] 00 00 00 00 00 00 00 00
+platform caam_sm: [0064] 00 00 00 00 00 00 00 00
+platform caam_sm: [0072] 00 00 00 00 00 00 00 00
+platform caam_sm: [0080] 00 00 00 00 00 00 00 00
+platform caam_sm: [0088] 00 00 00 00 00 00 00 00
+platform caam_sm: 128-bit unwritten blob:
+platform caam_sm: [0000] 00 00 00 00 00 00 00 00
+platform caam_sm: [0008] 00 00 00 00 00 00 00 00
+platform caam_sm: [0016] 00 00 00 00 00 00 00 00
+platform caam_sm: [0024] 00 00 00 00 00 00 00 00
+platform caam_sm: [0032] 00 00 00 00 00 00 00 00
+platform caam_sm: [0040] 00 00 00 00 00 00 00 00
+platform caam_sm: [0048] 00 00 00 00 00 00 00 00
+platform caam_sm: [0056] 00 00 00 00 00 00 00 00
+platform caam_sm: [0064] 00 00 00 00 00 00 00 00
+platform caam_sm: [0072] 00 00 00 00 00 00 00 00
+platform caam_sm: [0080] 00 00 00 00 00 00 00 00
+platform caam_sm: [0088] 00 00 00 00 00 00 00 00
+platform caam_sm: 196-bit unwritten blob:
+platform caam_sm: [0000] 00 00 00 00 00 00 00 00
+platform caam_sm: [0008] 00 00 00 00 00 00 00 00
+platform caam_sm: [0016] 00 00 00 00 00 00 00 00
+platform caam_sm: [0024] 00 00 00 00 00 00 00 00
+platform caam_sm: [0032] 00 00 00 00 00 00 00 00
+platform caam_sm: [0040] 00 00 00 00 00 00 00 00
+platform caam_sm: [0048] 00 00 00 00 00 00 00 00
+platform caam_sm: [0056] 00 00 00 00 00 00 00 00
+platform caam_sm: [0064] 00 00 00 00 00 00 00 00
+platform caam_sm: [0072] 00 00 00 00 00 00 00 00
+platform caam_sm: [0080] 00 00 00 00 00 00 00 00
+platform caam_sm: [0088] 00 00 00 00 00 00 00 00
+platform caam_sm: 256-bit unwritten blob:
+platform caam_sm: [0000] 00 00 00 00 00 00 00 00
+platform caam_sm: [0008] 00 00 00 00 00 00 00 00
+platform caam_sm: [0016] 00 00 00 00 00 00 00 00
+platform caam_sm: [0024] 00 00 00 00 00 00 00 00
+platform caam_sm: [0032] 00 00 00 00 00 00 00 00
+platform caam_sm: [0040] 00 00 00 00 00 00 00 00
+platform caam_sm: [0048] 00 00 00 00 00 00 00 00
+platform caam_sm: [0056] 00 00 00 00 00 00 00 00
+platform caam_sm: [0064] 00 00 00 00 00 00 00 00
+platform caam_sm: [0072] 00 00 00 00 00 00 00 00
+platform caam_sm: [0080] 00 00 00 00 00 00 00 00
+platform caam_sm: [0088] 00 00 00 00 00 00 00 00
+platform caam_sm: 64-bit black key in blob:
+platform caam_sm: [0000] 34 78 76 03 39 85 bd 1a
+platform caam_sm: [0008] 57 cf 41 58 d7 21 db 73
+platform caam_sm: [0016] 4c e7 c7 7e 34 86 0b 4f
+platform caam_sm: [0024] 52 0c 18 c1 25 77 26 f8
+platform caam_sm: [0032] 43 3f 86 9c 49 8c 2b be
+platform caam_sm: [0040] 7b 74 6c e8 38 50 56 07
+platform caam_sm: [0048] c7 2d f1 86 36 ea a0 3a
+platform caam_sm: [0056] 00 00 00 00 00 00 00 00
+platform caam_sm: [0064] 00 00 00 00 00 00 00 00
+platform caam_sm: [0072] 00 00 00 00 00 00 00 00
+platform caam_sm: [0080] 00 00 00 00 00 00 00 00
+platform caam_sm: [0088] 00 00 00 00 00 00 00 00
+platform caam_sm: 128-bit black key in blob:
+platform caam_sm: [0000] d5 51 d1 79 ad bd e0 37
+platform caam_sm: [0008] aa 95 ca 4b 52 37 62 7e
+platform caam_sm: [0016] ad 0a 93 65 a3 94 5e 06
+platform caam_sm: [0024] 01 c5 07 47 a1 4f 9a c6
+platform caam_sm: [0032] 32 2d be af ca e3 d5 80
+platform caam_sm: [0040] 8f 1a ea b8 72 b2 09 03
+platform caam_sm: [0048] 81 d7 e9 51 d2 53 b3 94
+platform caam_sm: [0056] 32 77 c5 55 53 18 46 86
+platform caam_sm: [0064] 00 00 00 00 00 00 00 00
+platform caam_sm: [0072] 00 00 00 00 00 00 00 00
+platform caam_sm: [0080] 00 00 00 00 00 00 00 00
+platform caam_sm: [0088] 00 00 00 00 00 00 00 00
+platform caam_sm: 192-bit black key in blob:
+platform caam_sm: [0000] c8 0a 97 23 9e 81 bc 13
+platform caam_sm: [0008] ac 8a 6b c0 40 7b 95 15
+platform caam_sm: [0016] cb ee c6 2d d4 c5 5f 2c
+platform caam_sm: [0024] 47 95 f1 7d 5f 50 6f e7
+platform caam_sm: [0032] 5b 7f b1 22 ba 41 cf 62
+platform caam_sm: [0040] a8 e9 da ee d0 da ae fb
+platform caam_sm: [0048] 30 6f 46 91 ee 65 b4 96
+platform caam_sm: [0056] d3 70 d6 e9 41 ce 44 9b
+platform caam_sm: [0064] c8 a1 d4 28 5a e0 64 af
+platform caam_sm: [0072] 00 00 00 00 00 00 00 00
+platform caam_sm: [0080] 00 00 00 00 00 00 00 00
+platform caam_sm: [0088] 00 00 00 00 00 00 00 00
+platform caam_sm: 256-bit black key in blob:
+platform caam_sm: [0000] 42 02 8d e6 5c 29 d7 97
+platform caam_sm: [0008] dd fe ef 3a 3c 05 7c 58
+platform caam_sm: [0016] 9c 73 1f cc e1 7e bb 2e
+platform caam_sm: [0024] ef 01 ea de 91 bf 19 31
+platform caam_sm: [0032] 22 6c b8 d6 ec 96 b1 ed
+platform caam_sm: [0040] 81 36 a6 bc d8 c0 e9 9a
+platform caam_sm: [0048] eb 7e 2b 83 54 76 34 f9
+platform caam_sm: [0056] 43 bd f0 44 09 16 d9 07
+platform caam_sm: [0064] fa e7 4f 32 b3 c5 49 6c
+platform caam_sm: [0072] d5 e4 44 d7 90 80 4b 0b
+platform caam_sm: [0080] 00 00 00 00 00 00 00 00
+platform caam_sm: [0088] 00 00 00 00 00 00 00 00
+platform caam_sm: restored 64-bit black key:
+platform caam_sm: [0000] 53 d1 51 38 c7 ce 76 ad
+platform caam_sm: [0008] f3 47 7c 02 8e 64 ef 50
+platform caam_sm: restored 128-bit black key:
+platform caam_sm: [0000] 54 7d 00 15 c4 90 cf 21
+platform caam_sm: [0008] 45 cc 6e e5 80 ac d2 da
+platform caam_sm: restored 192-bit black key:
+platform caam_sm: [0000] 3f ec d3 90 84 d2 46 4c
+platform caam_sm: [0008] 4b d6 a2 de 7e b4 74 e5
+platform caam_sm: [0016] c8 41 d7 92 ec 98 5f 88
+platform caam_sm: [0024] 94 ea 85 f6 59 15 6b 13
+platform caam_sm: restored 256-bit black key:
+platform caam_sm: [0000] 8e 97 8a 3f dc 07 dd ad
+platform caam_sm: [0008] 3e 7b 16 06 e4 e6 c1 6d
+platform caam_sm: [0016] 43 c4 c0 da 89 f0 9d a2
+platform caam_sm: [0024] 43 d1 49 3b ef 27 10 74
+snvs-secvio 20cc000.caam-snvs: can't get snvs clock
+snvs-secvio 20cc000.caam-snvs: violation handlers armed - non-secure state
+hidraw: raw HID events driver (C) Jiri Kosina
+usbcore: registered new interface driver usbhid
+usbhid: USB HID core driver
+ashmem: initialized
+usbcore: registered new interface driver snd-usb-audio
+sgtl5000 2-000a: sgtl5000 revision 0x11
+fsl-ssi-dai 2028000.ssi: No cache defaults, reading back from HW
+imx-sgtl5000 sound: sgtl5000 <-> 2028000.ssi mapping ok
+imx-spdif sound-spdif: snd-soc-dummy-dai <-> 2004000.spdif mapping ok
+imx-audio-hdmi sound-hdmi: hdmi-hifi.0 <-> soc:hdmi_audio@00120000 mapping ok
+NET: Registered protocol family 26
+u32 classifier
+    Actions configured
+Netfilter messages via NETLINK v0.30.
+nf_conntrack version 0.5.0 (16384 buckets, 65536 max)
+ctnetlink v0.93: registering with nfnetlink.
+xt_time: kernel timezone is -0000
+ip_tables: (C) 2000-2006 Netfilter Core Team
+arp_tables: arp_tables: (C) 2002 David S. Miller
+Initializing XFRM netlink socket
+NET: Registered protocol family 10
+mip6: Mobile IPv6
+ip6_tables: (C) 2000-2006 Netfilter Core Team
+sit: IPv6, IPv4 and MPLS over IPv4 tunneling driver
+NET: Registered protocol family 17
+NET: Registered protocol family 15
+can: controller area network core (rev 20120528 abi 9)
+NET: Registered protocol family 29
+can: raw protocol (rev 20120528)
+can: broadcast manager protocol (rev 20161123 t)
+can: netlink gateway (rev 20130117) max_hops=1
+Bluetooth: RFCOMM TTY layer initialized
+Bluetooth: RFCOMM socket layer initialized
+Bluetooth: RFCOMM ver 1.11
+Bluetooth: BNEP (Ethernet Emulation) ver 1.3
+Bluetooth: BNEP filters: protocol multicast
+Bluetooth: BNEP socket layer initialized
+Bluetooth: HIDP (Human Interface Emulation) ver 1.2
+Bluetooth: HIDP socket layer initialized
+8021q: 802.1Q VLAN Support v1.8
+Key type dns_resolver registered
+cpu cpu0: Registered imx6q-cpufreq
+registered taskstats version 1
+imx_thermal 2000000.aips-bus:tempmon: Industrial CPU temperature grade - max:105C critical:100C passive:95C
+dhd_module_init in
+input: gpio-keys as /devices/soc0/gpio-keys/input/input1
+snvs_rtc 20cc000.snvs:snvs-rtc-lp: setting system clock to 1970-01-01 00:02:46 UTC (166)
+usb_otg_vbus: disabling
+ALSA device list:
+  #0: imx6q-apalis-sgtl5000
+  #1: imx-spdif
+  #2: imx-hdmi-soc
+Freeing unused kernel memory: 1024K
+init: init first stage started!
+SELinux:  Permission validate_trans in class security not defined in policy.
+SELinux:  Class cap_userns not defined in policy.
+SELinux:  Class cap2_userns not defined in policy.
+SELinux: the above unknown classes and permissions will be denied
+audit: type=1403 audit(166.650:2): policy loaded auid=4294967295 ses=4294967295
+init: (Initializing SELinux non-enforcing took 0.13s.)
+init: init second stage started!
+init: Running restorecon...
+init: waitpid failed: No child processes
+init: (Loading properties from /default.prop took 0.00s.)
+init: (Parsing /init.environ.rc took 0.00s.)
+init: (Parsing /init.usb.rc took 0.00s.)
+init: (Parsing init.freescale.usb.rc took 0.00s.)
+init: (Parsing init.freescale.i.MX6Q.rc took 0.00s.)
+init: (Parsing init.freescale.emmc.rc took 0.00s.)
+init: (Parsing /init.freescale.rc took 0.02s.)
+ueventd: ueventd started!
+ueventd: Coldboot took 0.43s.
+Console: switching to colour dummy device 80x30
+watchdogd: started (interval 10, margin 20)!
+EXT4-fs (mmcblk0p3): mounted filesystem with ordered data mode. Opts: barrier=1
+EXT4-fs (mmcblk0p10): Ignoring removed nomblk_io_submit option
+EXT4-fs (mmcblk0p10): mounted filesystem with ordered data mode. Opts: nomblk_io_submit,noauto_da_alloc,errors=panic
+EXT4-fs (mmcblk0p4): Ignoring removed nomblk_io_submit option
+EXT4-fs (mmcblk0p4): mounted filesystem with ordered data mode. Opts: nomblk_io_submit
+EXT4-fs (mmcblk0p5): mounted filesystem with ordered data mode. Opts: (null)
+file system registered
+using random self ethernet address
+using random host ethernet address
+zram0: detected capacity change from 0 to 314572800
+logd.auditd: start
+logd.klogd: 7211156333
+Adding 307196k swap on /dev/block/zram0.  Priority:-1 extents:1 across:307196k SS
+binder: 254:254 transaction failed 29189, size 0-0
+logd.daemon: reinit
+toradex_apalis6q:/ # type=1400 audit(169.330:3): avc: denied { entrypoint } for pid=260 comm="init" path="/system/bin/can-config.sh" dev="mmcblk0p3" ino=255 scontext=u:r:obd:s0 tcontext=u:object_r:system_file:s0 tclass=file permissive=1
+type=1400 audit(169.330:4): avc: denied { read execute } for pid=260 comm="can-config.sh" path="/system/bin/sh" dev="mmcblk0p3" ino=442 scontext=u:r:obd:s0 tcontext=u:object_r:shell_exec:s0 tclass=file permissive=1
+type=1400 audit(169.360:5): avc: denied { getattr } for pid=260 comm="can-config.sh" path="/system/bin/sh" dev="mmcblk0p3" ino=442 scontext=u:r:obd:s0 tcontext=u:object_r:shell_exec:s0 tclass=file permissive=1
+type=1400 audit(169.360:6): avc: denied { getattr } for pid=260 comm="can-config.sh" path="/vendor" dev="rootfs" ino=6500 scontext=u:r:obd:s0 tcontext=u:object_r:rootfs:s0 tclass=lnk_file permissive=1
+type=1400 audit(169.420:7): avc: denied { create } for pid=261 comm="obd" scontext=u:r:obd:s0 tcontext=u:r:obd:s0 tclass=socket permissive=1
+type=1400 audit(169.420:8): avc: denied { ioctl } for pid=261 comm="obd" path="socket:[6959]" dev="sockfs" ino=6959 ioctlcmd=0x8933 scontext=u:r:obd:s0 tcontext=u:r:obd:s0 tclass=socket permissive=1
+type=1400 audit(169.420:9): avc: denied { bind } for pid=261 comm="obd" scontext=u:r:obd:s0 tcontext=u:r:obd:s0 tclass=socket permissive=1
+IPv6: ADDRCONF(NETDEV_CHANGE): can0: link becomes ready
+healthd: No battery devices found
+ERROR: v4l2 capture: slave not found! V4L2_CID_HUE
+ERROR: v4l2 capture: slave not found! V4L2_CID_HUE
+imx-hdmi-audio imx-hdmi-audio: HDMI Video is not ready!
+imx-hdmi-audio imx-hdmi-audio: ASoC: can't open platform imx-hdmi-audio: -22
+imx-hdmi-audio imx-hdmi-audio: HDMI Video is not ready!
+imx-hdmi-audio imx-hdmi-audio: ASoC: can't open platform imx-hdmi-audio: -22
+capability: warning: `main' uses 32-bit capabilities (legacy support in use)
+
+toradex_apalis6q:/ # 
+toradex_apalis6q:/ # 
+toradex_apalis6q:/ # 
+toradex_apalis6q:/ # init: write_file: Unable to open '/sys/devices/system/cpu/cpufreq/interactive/timer_rate': No such file or directory
+init: write_file: Unable to open '/sys/devices/system/cpu/cpufreq/interactive/min_sample_time': No such file or directory
+init: write_file: Unable to open '/sys/devices/system/cpu/cpufreq/interactive/go_hispeed_load': No such file or directory
+init: write_file: Unable to open '/proc/sys/vm/extra_free_kbytes': No such file or directory
+init: write_file: Unable to write to '/config/usb_gadget/g1/UDC': No such device
+acc_open
+acc_release
+Micrel KSZ9031 Gigabit PHY 2188000.ethernet-1:07: attached PHY driver [Micrel KSZ9031 Gigabit PHY] (mii_bus:phy_addr=2188000.ethernet-1:07, irq=120)
+IPv6: ADDRCONF(NETDEV_UP): eth0: link is not ready
+random: crng init done
+type=1400 audit(186.080:36): avc: denied { write } for pid=261 comm="obd" path="socket:[6959]" dev="sockfs" ino=6959 scontext=u:r:obd:s0 tcontext=u:r:obd:s0 tclass=socket permissive=1
+init: Service 'bootanim' (pid 351) exited with status 0
+init: Starting service 'exec 3 (/system/bin/bootstat)'...
+init: Service 'exec 3 (/system/bin/bootstat)' (pid 919) exited with status 0
+init: Starting service 'exec 4 (/system/bin/bootstat)'...
+init: Service 'exec 4 (/system/bin/bootstat)' (pid 938) exited with status 0
+init: Starting service 'exec 5 (/system/bin/bootstat)'...
+init: Service 'exec 5 (/system/bin/bootstat)' (pid 944) exited with status 0
+init: Starting service 'exec 6 (/system/bin/bootstat)'...
+init: Service 'exec 6 (/system/bin/bootstat)' (pid 951) exited with status 0
+type=1400 audit(190.490:37): avc: denied { write } for pid=261 comm="obd" path="socket:[6959]" dev="sockfs" ino=6959 scontext=u:r:obd:s0 tcontext=u:r:obd:s0 tclass=socket permissive=1
+
+toradex_apalis6q:/ # 
+toradex_apalis6q:/ # 
+toradex_apalis6q:/ # echo "CALL 01:01:01:01:05:76 19 A2DP" > /dev/ttymxc3
+alloc_contig_range: [2aa20, 2aa34) PFNs busy
+toradex_apalis6q:/ # type=1400 audit(197.150:38): avc: denied { write } for pid=261 comm="obd" path="socket:[6959]" dev="sockfs" ino=6959 scontext=u:r:obd:s0 tcontext=u:r:obd:s0 tclass=socket permissive=1
+type=1400 audit(197.810:39): avc: denied { write } for pid=1214 comm="Thread-2" name="vcan" dev="tmpfs" ino=6965 scontext=u:r:untrusted_app:s0:c512,c768 tcontext=u:object_r:socket_device:s0 tclass=sock_file permissive=1
+type=1400 audit(197.810:40): avc: denied { connectto } for pid=1214 comm="Thread-2" path="/dev/socket/vcan" scontext=u:r:untrusted_app:s0:c512,c768 tcontext=u:r:obd:s0 tclass=unix_stream_socket permissive=1
+
+toradex_apalis6q:/ # 
+toradex_apalis6q:/ # 
+toradex_apalis6q:/ # 
+toradex_apalis6q:/ # 
+toradex_apalis6q:/ # echo "CALL 01:01:01:01:05:76 17 AVRCP" > /dev/ttymxc3
+alloc_contig_range: [2aa20, 2aa34) PFNs busy
+alloc_contig_range: [2aa40, 2aa54) PFNs busy
+toradex_apalis6q:/ # 
+toradex_apalis6q:/ # 
+toradex_apalis6q:/ # toradex_apalis6q:/ # echo "CALL 01:01:01:01:05:76 17 AVRCP" > /dev/ttymxc3     
+alloc_contig_range: [2aa20, 2aa34) PFNs busy
+alloc_contig_range: [2aa40, 2aa54) PFNs busy
+toradex_apalis6q:/ # 
+toradex_apalis6q:/ # micr    mi type=1400 audit(427.640:41): avc: denied { getattr } for pid=255 comm="sh" path="/system/bin/magd" dev="mmcblk0p3" ino=359 scontext=u:r:shell:s0 tcontext=u:object_r:sensors_exec:s0 tclass=file permissive=1
+
+magd            mdnsd           type=1400 audit(427.640:42): avc: denied { getattr } for pid=255 comm="sh" path="/system/bin/mdnsd" dev="mmcblk0p3" ino=363 scontext=u:r:shell:s0 tcontext=u:object_r:mdnsd_exec:s0 tclass=file permissive=1
+mediaserver     mktemp          mtype=1400 audit(427.640:43): avc: denied { getattr } for pid=255 comm="sh" path="/system/bin/mediacodec" dev="mmcblk0p3" ino=365 scontext=u:r:shell:s0 tcontext=u:object_r:mediacodec_exec:s0 tclass=file permissive=1
+ountpoint
+make_ext4fs     media type=1400 audit(427.640:44): avc: denied { getattr } for pid=255 comm="sh" path="/system/bin/mediadrmserver" dev="mmcblk0p3" ino=366 scontext=u:r:shell:s0 tcontext=u:object_r:mediadrmserver_exec:s0 tclass=file permissive=1
+          mkdir           modinfotype=1400 audit(427.640:45): avc: denied { getattr } for pid=255 comm="sh" path="/system/bin/mediaextractor" dev="mmcblk0p3" ino=367 scontext=u:r:shell:s0 tcontext=u:object_r:mediaextractor_exec:s0 tclass=file permissive=1
+         mtpd
+make_f2fs       metype=1400 audit(427.650:46): avc: denied { getattr } for pid=255 comm="sh" path="/system/bin/mediaserver" dev="mmcblk0p3" ino=368 scontext=u:r:shell:s0 tcontext=u:object_r:mediaserver_exec:s0 tclass=file permissive=1
+diacodec      mke2fs          montype=1400 audit(427.650:47): avc: denied { getattr } for pid=255 comm="sh" path="/system/bin/mtpd" dev="mmcblk0p3" ino=379 scontext=u:r:shell:s0 tcontext=u:object_r:mtp_exec:s0 tclass=file permissive=1
+key          mv
+mcaptest        type=1400 audit(427.650:48): avc: denied { execute } for pid=255 comm="sh" name="magd" dev="mmcblk0p3" ino=359 scontext=u:r:shell:s0 tcontext=u:object_r:sensors_exec:s0 tclass=file permissive=1
+mediadrmserver  mknod           mtype=1400 audit(427.650:49): avc: denied { execute } for pid=255 comm="sh" name="mdnsd" dev="mmcblk0p3" ino=363 scontext=u:r:shell:s0 tcontext=u:object_r:mdnsd_exec:s0 tclass=file permissive=1
+ore
+md5sum          mediaextracttype=1400 audit(427.650:50): avc: denied { execute } for pid=255 comm="sh" name="mediacodec" dev="mmcblk0p3" ino=365 scontext=u:r:shell:s0 tcontext=u:object_r:mediacodec_exec:s0 tclass=file permissive=1
+or  mkswap          mount
+toradex_apalis6q:/ # m                                                         i 
+magd            mdnsd           mediaserver     mktemp          mountpoint
+make_ext4fs     media           mkdir           modinfo         mtpd
+make_f2fs       mediacodec      mke2fs          monkey          mv
+mcaptest        mediadrmserver  mknod           more
+md5sum          mediaextractor  mkswap          mount
+toradex_apalis6q:/ # m                                                          bustoradex_apalis6q:/ # busybox                                                    
+BusyBox v1.22.1 (2014-02-14 10:20:10 CST) multi-call binary.
+BusyBox is copyrighted by many authors between 1998-2012.
+Licensed under GPLv2. See source distribution for detailed
+copyright notices.
+
+Usage: busybox [function [arguments]...]
+   or: busybox --list[-full]
+   or: busybox --install [-s] [DIR]
+   or: function [arguments]...
+
+	BusyBox is a multi-call binary that combines many common Unix
+	utilities into a single executable.  Most people will create a
+	link to busybox for each function they wish to use and BusyBox
+	will act like whatever it was invoked as.
+
+Currently defined functions:
+	[, [[, acpid, add-shell, addgroup, adduser, adjtimex, arp, arping, ash,
+	awk, base64, basename, beep, blkid, blockdev, bootchartd, brctl,
+	bunzip2, bzcat, bzip2, cal, cat, catv, chat, chattr, chgrp, chmod,
+	chown, chpasswd, chpst, chroot, chrt, chvt, cksum, clear, cmp, comm,
+	conspy, cp, cpio, crond, crontab, cryptpw, cttyhack, cut, date, dc, dd,
+	deallocvt, delgroup, deluser, depmod, devmem, df, dhcprelay, diff,
+	dirname, dmesg, dnsd, dnsdomainname, dos2unix, du, dumpkmap,
+	dumpleases, echo, ed, egrep, eject, env, envdir, envuidgid, ether-wake,
+	expand, expr, fakeidentd, false, fbset, fbsplash, fdflush, fdformat,
+	fdisk, fgconsole, fgrep, find, findfs, flock, fold, free, freeramdisk,
+	fsck, fsck.minix, fstrim, fsync, ftpd, ftpget, ftpput, fuser, getopt,
+	getty, grep, groups, gunzip, gzip, halt, hd, hdparm, head, hexdump,
+	hostid, hostname, httpd, hush, hwclock, id, ifconfig, ifdown,
+	ifenslave, ifplugd, ifup, inetd, init, insmod, install, ionice, iostat,
+	ip, ipaddr, ipcalc, ipcrm, ipcs, iplink, iproute, iprule, iptunnel,
+	kbd_mode, kill, killall, killall5, klogd, last, less, linux32, linux64,
+	linuxrc, ln, loadfont, loadkmap, logger, login, logname, logread,
+	losetup, lpd, lpq, lpr, ls, lsattr, lsmod, lsof, lspci, lsusb, lzcat,
+	lzma, lzop, lzopcat, makedevs, makemime, man, md5sum, mdev, mesg,
+	microcom, mkdir, mkdosfs, mke2fs, mkfifo, mkfs.ext2, mkfs.minix,
+	mkfs.vfat, mknod, mkpasswd, mkswap, mktemp, modinfo, modprobe, more,
+	mount, mountpoint, mpstat, mt, mv, nameif, nanddump, nandwrite,
+	nbd-client, nc, netstat, nice, nmeter, nohup, nslookup, ntpd, od,
+	openvt, passwd, patch, pgrep, pidof, ping, ping6, pipe_progress,
+	pivot_root, pkill, pmap, popmaildir, poweroff, powertop, printenv,
+	printf, ps, pscan, pstree, pwd, pwdx, raidautorun, rdate, rdev,
+	readahead, readlink, readprofile, realpath, reboot, reformime,
+	remove-shell, renice, reset, resize, rev, rm, rmdir, rmmod, route, rpm,
+	rpm2cpio, rtcwake, run-parts, runlevel, runsv, runsvdir, rx, script,
+	scriptreplay, sed, sendmail, seq, setarch, setconsole, setfont,
+	setkeycodes, setlogcons, setserial, setsid, setuidgid, sh, sha1sum,
+	sha256sum, sha3sum, sha512sum, showkey, slattach, sleep, smemcap,
+	softlimit, sort, split, start-stop-daemon, stat, strings, stty, su,
+	sulogin, sum, sv, svlogd, swapoff, swapon, switch_root, sync, sysctl,
+	syslogd, tac, tail, tar, taskset, tcpsvd, tee, telnet, telnetd, test,
+	tftp, tftpd, time, timeout, top, touch, tr, traceroute, traceroute6,
+	true, tty, ttysize, tunctl, ubiattach, ubidetach, ubimkvol, ubirmvol,
+	ubirsvol, ubiupdatevol, udhcpc, udhcpd, udpsvd, umount, uname,
+	unexpand, uniq, unix2dos, unlzma, unlzop, unxz, unzip, uptime, users,
+	usleep, uudecode, uuencode, vconfig, vi, vlock, volname, wall, watch,
+	watchdog, wc, wget, which, who, whoami, whois, xargs, xz, xzcat, yes,
+	zcat, zcip
+
+toradex_apalis6q:/ # toradex_apalis6q:/ # busybox                                                    micrp ocom -s 115200 /dev/ttymxc3
+alloc_contig_range: [2aa20, 2aa34) PFNs busy
+alloc_contig_range: [2aa40, 2aa54) PFNs busy
+
+set
+SET BT BDADDR 88:6b:0f:62:71:88
+SET BT NAME WT32i-AJ
+SET BT CLASS 280428
+SET BT IDENT BT:47 f000 6.0.0 Bluegiga iWRAP
+SET BT LAP 9e8b33
+SET BT PAGEMODE 4 2000 1
+SET BT PAIR 01:01:01:01:05:76 50515562d8c29439dd91cf4fbb2385aa
+SET BT POWER 6 6 6
+SET BT ROLE 0 f 2580
+SET BT SNIFF 0 20 1 8
+SET BT SSP 3 0
+SET BT MTU 667
+SET CONTROL AUDIO INTERNAL INTERNAL
+SET CONTROL BAUD 115200,8n1
+SET CONTROL CD 00 0
+SET CONTROL CODEC SBC JOINT_STEREO 44100 0
+SET CONTROL CONFIG 0000 0000 0000 1100
+SET CONTROL ECHO 7
+SET CONTROL ESCAPE 43 00 1
+SET CONTROL GAIN 8 8
+SET CONTROL MICBIAS b 0
+SET CONTROL MSC DTE 00 00 00 00 00 00
+SET CONTROL PIO 00 00 00
+SET CONTROL PREAMP 1 1
+SET CONTROL READY 00
+SET CONTROL VREGEN 0 00
+SET PROFILE A2DP SOURCE
+SET PROFILE SPP Bluetooth Serial Port
+SET PROFILE HSP-AG Voice Gateway
+SET PROFILE AVRCP TARGET 07
+SET
+
+
+SYNTAX ERROR
+exit
+SYNTAX ERROR
+
+toradex_apalis6q:/ # 
+toradex_apalis6q:/ # 
+toradex_apalis6q:/ # 
+toradex_apalis6q:/ # toradex_apalis6q:/ # busybox  microcom -s 115200 /dev/ttymxc3                   4
+alloc_contig_range: [2aa20, 2aa34) PFNs busy
+alloc_contig_range: [2aa40, 2aa54) PFNs busy
+
+
+
+set
+SET BT BDADDR 88:6b:0f:62:71:86
+SET BT NAME WT32i-A
+SET BT CLASS 240438
+SET BT IDENT BT:47 f000 6.0.0 Bluegiga iWRAP
+SET BT LAP 9e8b33
+SET BT PAGEMODE 4 2000 1
+SET BT PAIR bc:d1:1f:5b:f2:c1 8b5db582e3882c8260b2b23d1634719f
+SET BT POWER 6 6 6
+SET BT ROLE 0 f 2580
+SET BT SNIFF 0 20 1 8
+SET BT SSP 3 0
+SET BT MTU 667
+SET CONTROL AUDIO INTERNAL INTERNAL
+SET CONTROL BAUD 115200,8n1
+SET CONTROL BIND 0 20 F CLOSE 0
+SET CONTROL BIND 1 20 F SET BT PAIR *
+SET CONTROL CD 00 0
+SET CONTROL CODEC SBC JOINT_STEREO 44100 0
+SET CONTROL CONFIG 0000 0000 0000 1100
+SET CONTROL ECHO 7
+SET CONTROL ESCAPE 43 00 1
+SET CONTROL GAIN 8 8
+SET CONTROL MICBIAS b 0
+SET CONTROL MSC DTE 00 00 00 00 00 00
+SET CONTROL PIO 00 00 00
+SET CONTROL PREAMP 1 1
+SET CONTROL READY 00
+SET CONTROL VREGEN 0 00
+SET PROFILE A2DP SINK
+SET PROFILE SPP Bluetooth Serial Port
+SET PROFILE AVRCP CONTROLLER 03
+SET
+
+
+AVRCP UP
+AVRCP UP
+AVRCP DN
+AVRCP DN
+ANRCP DN
+SYNTAX ERROR
+
+AVRCP MUTE
+AVRCP PDU 20 1 2 1 2
+AVRCP 2 GET_ELEMENT_ATTRIBUTES_RSP COUNT 2 TITLE 16 "Over the Horizon" ARTIST 7 "Samsung"
+
+
+
+
+AVRCP PDU 20 2 1 2
+AVRCP 2 GET_ELEMENT_ATTRIBUTES_RSP COUNT 2 TITLE 26 "Paavangalai [Starmusiq.cc]" ARTIST 54 "Mukesh, Senthildass, Yuvan Shankar Raja [Starmusiq.cc]"
+AVRCP PDU 31n 1 1
+AVRCP 2 REGISTER_NOTIFICATION_RSP INTERIM PLAYBACK_STATUS_CHANGED STOPPED
+AVRCP 2 REGISTER_NOTIFICATION_RSP CHANGED PLAYBACK_STATUS_CHANGED PLAYING
+
+
+AVRCP PDU 10 3
+AVRCP 2 GET_CAPABILITIES_RSP EVENT COUNT 7 PLAYBACK_STATUS_CHANGED TRACK_CHANGED PLAYBACK_POSITION_CHANGED PLAYER_APP_SETTING_CHANGED NOW_PLAYING_CHANGED AVAILABLE_PLAYERS_CHANGED ADDRESSED_PLAYER_CHANGED
+
+
+
+AVRCP PDU 20 2 1 2
+AVRCP 2 GET_ELEMENT_ATTRIBUTES_RSP COUNT 2 TITLE 37 "Yaaro Ucchikilai Meley [Starmusiq.cc]" ARTIST 33 "Yuvan Shankar Raja [Starmusiq.cc]"
+
+
+
+A2DP STREAMING STOP 0
+A2DP STREAMING START 0
+
+
+
+LIST
+LIST 3
+LIST 0 CONNECTED A2DP 672 0 0 1286 0 0 bc:d1:1f:5b:f2:c1 19 INCOMING ACTIVE SLAVE ENCRYPTED 0
+LIST 1 CONNECTED A2DP 1008 0 0 1286 0 0 bc:d1:1f:5b:f2:c1 19 INCOMING ACTIVE SLAVE ENCRYPTED 0
+LIST 2 CONNECTED AVRCP 512 0 0 1282 0 0 bc:d1:1f:5b:f2:c1 17 INCOMING ACTIVE SLAVE ENCRYPTED 0
+
+
+
+SET PROFILE HFP Hands-Free
+SET PROFILE HSP ON
+
+
+
+SET PROFILE PBAP ON
+
+
+
+RESET
+WRAP THOR AI (6.0.0 build 952)
+Copyright (c) 2003-2014 Bluegiga Technologies Inc.
+READY.
+
+
+SET
+SET BT BDADDR 88:6b:0f:62:71:86
+SET BT NAME WT32i-A
+SET BT CLASS 240438
+SET BT IDENT BT:47 f000 6.0.0 Bluegiga iWRAP
+SET BT LAP 9e8b33
+SET BT PAGEMODE 4 2000 1
+SET BT PAIR bc:d1:1f:5b:f2:c1 8b5db582e3882c8260b2b23d1634719f
+SET BT POWER 6 6 6
+SET BT ROLE 0 f 2580
+SET BT SNIFF 0 20 1 8
+SET BT SSP 3 0
+SET BT MTU 667
+SET CONTROL AUDIO INTERNAL INTERNAL
+SET CONTROL BAUD 115200,8n1
+SET CONTROL BIND 0 20 F CLOSE 0
+SET CONTROL BIND 1 20 F SET BT PAIR *
+SET CONTROL CD 00 0
+SET CONTROL CODEC SBC JOINT_STEREO 44100 0
+SET CONTROL CONFIG 0000 0000 0000 1100
+SET CONTROL ECHO 7
+SET CONTROL ESCAPE 43 00 1
+SET CONTROL GAIN 8 8
+SET CONTROL MICBIAS b 0
+SET CONTROL MSC DTE 00 00 00 00 00 00
+SET CONTROL PIO 00 00 00
+SET CONTROL PREAMP 1 1
+SET CONTROL READY 00
+SET CONTROL VREGEN 0 00
+SET PROFILE A2DP SINK
+SET PROFILE HFP Hands-Free
+SET PROFILE SPP Bluetooth Serial Port
+SET PROFILE HSP Headset
+SET PROFILE PBAP ON
+SET PROFILE AVRCP CONTROLLER 03
+SET
+
+RING 0 bc:d1:1f:5b:f2:c1 19 A2DP 
+RING 1 bc:d1:1f:5b:f2:c1 19 A2DP 
+RING 2 bc:d1:1f:5b:f2:c1 17 AVRCP 
+
+
+
+
+A2DP STREAMING START 0
+
+
+
+CALL bc:d1:1f:5b:f2:c1 112F PBAP
+CALL 3
+CONNECT 3 PBAP 13
+OBEX 3 READY
+
+
+
+PBAP 00 1
+†GÀI?BEGIN:VCARD
+VERSION:2.1
+FN:My name
+N:My name
+END:VCARD
+
+
+
+PBAP 01 2
+SYNTAX ERROR
+
+
+PBAP 01 2
+†ÀIBEGIN:VCARD
+VERSION:2.1
+FN:Aravinth
+N:Aravinth
+TEL;CELL:+918508139500
+X-IRMC-CALL-DATETIME;RECEIVED:20180223T195930
+END:VCARD
+BEGIN:VCARD
+VERSION:2.1
+FN:Aravinth
+N:Aravinth
+TEL;CELL:+918508139500
+X-IRMC-CALL-DATETIME;RECEIVED:20180223T171716
+END:VCARD
+A2DP STREAMING STOP 0
+A2DP STREAMING START 0
+
+
+
+PBAP 01 2
+†ÀIBEGIN:VCARD
+VERSION:2.1
+FN:Aravinth
+N:Aravinth
+TEL;CELL:+918508139500
+X-IRMC-CALL-DATETIME;RECEIVED:20180302T131048
+END:VCARD
+BEGIN:VCARD
+VERSION:2.1
+FN:Aravinth
+N:Aravinth
+TEL;CELL:+918508139500
+X-IRMC-CALL-DATETIME;RECEIVED:20180223T195930
+END:VCARD
+PBAP 01 33
+êˇÀH˜BEGIN:VCARD
+VERSION:2.1
+FN:Aravinth
+N:Aravinth
+TEL;CELL:+918508139500
+X-IRMC-CALL-DATETIME;RECEIVED:20180302T131048
+END:VCARD
+BEGIN:VCARD
+VERSION:2.1
+FN:Aravinth
+N:Aravinth
+TEL;CELL:+918508139500
+X-IRMC-CALL-DATETIME;RECEIVED:20180223T195930
+END:VCARD
+BEGIN:VCARD
+VERSION:2.1
+FN:Aravinth
+N:Aravinth
+TEL;CELL:+918508139500
+X-IRMC-CALL-DATETIME;RECEIVED:20180223T171716
+END:VCARD
+BEGIN:VCARD
+VERSION:2.1
+FN:Aravinth
+N:Aravinth
+TEL;CELL:+918508139500
+X-IRMC-CALL-DATETIME;RECEI†¸ÀIÙVED:20180222T191210
+END:VCARD
+BEGIN:VCARD
+VERSION:2.1
+FN:
+N:
+TEL;X-0:00491727450109
+X-IRMC-CALL-DATETIME;RECEIVED:20180222T181204
+END:VCARD
+BEGIN:VCARD
+VERSION:2.1
+FN:
+N:
+TEL;X-0:+918884276444
+X-IRMC-CALL-DATETIME;RECEIVED:20180220T124832
+END:VCARD
+BEGIN:VCARD
+VERSION:2.1
+FN:
+N:
+TEL;X-0:+919481247950
+X-IRMC-CALL-DATETIME;RECEIVED:20180219T163922
+END:VCARD
+BEGIN:VCARD
+VERSION:2.1
+FN:
+N:
+TEL;X-0:+919481247950
+X-IRMC-CALL-DATETIME;RECEIVED:20180219T163557
+END:VCARD
+
+
+
+
+
+CALL bc:d1:1f:5b:f2:c1 1132 MAP
+CALL 4
+CONNECT 4 MAP 5
+OBEX 4 READY
+
+
+A2DP STREAMING STOP 0
+A2DP STREAMING START 0
+
+
+
+MSG 0 0 20000100001
+OBEX 4 BAD REQUEST
+
+MAP telecom/msg/inbox
+êˇÀL d20180302T132322+0600H◊<?xml version='1.0' encoding='utf-8' standalone='yes' ?>
+<MAP-msg-listing version="1.0">
+    <msg handle="0200000000000207" subject="Register on My Idea App for the " datetime="20180222T181053" sender_name="IX-IDEA" sender_addressing="11" recipient_addressing="11" type="SMS_GSM" size="120" reception_status="complete" attachment_size="0" read="no" />
+    <msg handle="0200000000000206" subject="LST USG:0.280MB,Pack:3GB Pack,BA" datetime="20180222T000747" sender_nameêﬂÀH◊="IA-IDEA" sender_addressing="11" recipient_addressing="11" type="SMS_GSM" size="97" reception_status="complete" attachment_size="0" read="no" />
+    <msg handle="0200000000000205" subject="LST USG:0.120MB,Pack:3GB Pack,BA" datetime="20180221T203819" sender_name="IA-IDEA" sender_addressing="11" recipient_addressing="11" type="SMS_GSM" size="97" reception_status="complete" attachment_size="0" read="no" />
+    <msg handle="0200000000000204" subject="LST USG:1.881MB,êﬂÀH◊Pack:3GB Pack,BA" datetime="20180221T161902" sender_name="IA-IDEA" sender_addressing="11" recipient_addressing="11" type="SMS_GSM" size="97" reception_status="complete" attachment_size="0" read="no" />
+    <msg handle="0200000000000203" subject="LST USG:0.080MB,Pack:3GB Pack,BA" datetime="20180221T110842" sender_name="IA-IDEA" sender_addressing="11" recipient_addressing="11" type="SMS_GSM" size="97" reception_status="complete" attachment_size="0" read="no" />
+    êﬂÀH◊<msg handle="0200000000000202" subject="LST USG:0.040MB,Pack:3GB Pack,BA" datetime="20180221T074121" sender_name="IA-IDEA" sender_addressing="11" recipient_addressing="11" type="SMS_GSM" size="97" reception_status="complete" attachment_size="0" read="no" />
+    <msg handle="0200000000000201" subject="LST USG:0.080MB,Pack:3GB Pack,BA" datetime="20180221T034212" sender_name="IA-IDEA" sender_addressing="11" recipient_addressing="11" type="SMS_GSM" size="97" receptionêﬂÀH◊_status="complete" attachment_size="0" read="no" />
+    <msg handle="0200000000000200" subject="LST USG:0.080MB,Pack:3GB Pack,BA" datetime="20180220T213006" sender_name="IA-IDEA" sender_addressing="11" recipient_addressing="11" type="SMS_GSM" size="97" reception_status="complete" attachment_size="0" read="no" />
+    <msg handle="02000000000001FF" subject="LST USG:0.040MB,Pack:3GB Pack,BA" datetime="20180220T131823" sender_name="IA-IDEA" sender_addressing="11" reciêﬂÀH◊pient_addressing="11" type="SMS_GSM" size="97" reception_status="complete" attachment_size="0" read="no" />
+    <msg handle="02000000000001FE" subject="While receiving International Ca" datetime="20180219T172117" sender_name="IZ-IDEA" sender_addressing="11" recipient_addressing="11" type="SMS_GSM" size="157" reception_status="complete" attachment_size="0" read="no" />
+    <msg handle="02000000000001FD" subject="LST USG:0.080MB,Pack:3GB Pack,BA" datetime="20180214TêﬂÀH◊163339" sender_name="IA-IDEA" sender_addressing="11" recipient_addressing="11" type="SMS_GSM" size="97" reception_status="complete" attachment_size="0" read="no" />
+    <msg handle="02000000000001FC" subject="LST USG:0.080MB,Pack:3GB Pack,BA" datetime="20180214T122232" sender_name="IA-IDEA" sender_addressing="11" recipient_addressing="11" type="SMS_GSM" size="97" reception_status="complete" attachment_size="0" read="no" />
+    <msg handle="02000000000001FB" subjecêﬂÀH◊t="LST USG:0.040MB,Pack:3GB Pack,BA" datetime="20180214T042620" sender_name="IA-IDEA" sender_addressing="11" recipient_addressing="11" type="SMS_GSM" size="97" reception_status="complete" attachment_size="0" read="no" />
+    <msg handle="02000000000001FA" subject="LST USG:0.080MB,Pack:3GB Pack,BA" datetime="20180213T192449" sender_name="IA-IDEA" sender_addressing="11" recipient_addressing="11" type="SMS_GSM" size="97" reception_status="complete" attachment_size="0êﬂÀH◊" read="no" />
+    <msg handle="02000000000001F9" subject="LST USG:143.900MB,Pack:3GB Pack," datetime="20180213T160437" sender_name="IA-IDEA" sender_addressing="11" recipient_addressing="11" type="SMS_GSM" size="99" reception_status="complete" attachment_size="0" read="yes" />
+    <msg handle="02000000000001F8" subject="LST USG:19.298MB,Pack:3GB Pack,B" datetime="20180208T153533" sender_name="IA-IDEA" sender_addressing="11" recipient_addressing="11" type="SMS_GSM"êﬂÀH◊ size="98" reception_status="complete" attachment_size="0" read="yes" />
+    <msg handle="02000000000001F7" subject="‡≤∞‡≥Ç.10‡≤∞ ‡≤®‡≤æ‡≤£‡≥ç‡≤Ø‡≤µ‡≥Å ‡≤∞‡≥Ç‡≤™‡≤æ‡≤Ø‡≤ø ‡≤ö‡≤ø‡≤π‡≥ç‡≤®‡≥Ü ‡≤∏‡≤π‡≤ø" datetime="20180207T134010" sender_name="VM-RBISAY" sender_addressing="11" recipient_addressing="11" type="SMS_GSM" size="134" reception_status="complete" attachment_size="0" read="no" />
+    <msg handle="02000000000001F6" subject="LST USG:2.802MB,Pack:3GB Pack,BA" daêﬂÀH◊tetime="20180202T212726" sender_name="IA-IDEA" sender_addressing="11" recipient_addressing="11" type="SMS_GSM" size="97" reception_status="complete" attachment_size="0" read="no" />
+    <msg handle="02000000000001F5" subject="LST USG:0.120MB,Pack:3GB Pack,BA" datetime="20180202T160221" sender_name="IA-IDEA" sender_addressing="11" recipient_addressing="11" type="SMS_GSM" size="97" reception_status="complete" attachment_size="0" read="yes" />
+    <msg handle="020000êﬂÀH◊00000001F4" subject="LST USG:0.320MB,Pack:3GB Pack,BA" datetime="20180202T155046" sender_name="IA-IDEA" sender_addressing="11" recipient_addressing="11" type="SMS_GSM" size="97" reception_status="complete" attachment_size="0" read="yes" />
+    <msg handle="02000000000001F3" subject="LST USG:0.080MB,Pack:3GB Pack,BA" datetime="20180202T152343" sender_name="IA-IDEA" sender_addressing="11" recipient_addressing="11" type="SMS_GSM" size="97" reception_status="complete"êﬂÀH◊ attachment_size="0" read="yes" />
+    <msg handle="02000000000001F2" subject="LST USG:1.641MB,Pack:3GB Pack,BA" datetime="20180202T151940" sender_name="IA-IDEA" sender_addressing="11" recipient_addressing="11" type="SMS_GSM" size="97" reception_status="complete" attachment_size="0" read="yes" />
+    <msg handle="02000000000001F1" subject="LST USG:0.960MB,Pack:3GB Pack,BA" datetime="20180201T172831" sender_name="IA-IDEA" sender_addressing="11" recipient_addressingêﬂÀH◊="11" type="SMS_GSM" size="97" reception_status="complete" attachment_size="0" read="no" />
+    <msg handle="02000000000001F0" subject="LST USG:0.080MB,Pack:3GB Pack,BA" datetime="20180201T162340" sender_name="IA-IDEA" sender_addressing="11" recipient_addressing="11" type="SMS_GSM" size="97" reception_status="complete" attachment_size="0" read="yes" />
+    <msg handle="02000000000001EF" subject="LST USG:1.241MB,Pack:3GB Pack,BA" datetime="20180201T162337" sender_nêﬂÀH◊ame="IA-IDEA" sender_addressing="11" recipient_addressing="11" type="SMS_GSM" size="97" reception_status="complete" attachment_size="0" read="no" />
+    <msg handle="02000000000001EE" subject="LST USG:0.120MB,Pack:3GB Pack,BA" datetime="20180201T124139" sender_name="IA-IDEA" sender_addressing="11" recipient_addressing="11" type="SMS_GSM" size="97" reception_status="complete" attachment_size="0" read="no" />
+    <msg handle="02000000000001ED" subject="LST USG:20.37êﬂÀH◊9MB,Pack:3GB Pack,B" datetime="20180130T232251" sender_name="IA-IDEA" sender_addressing="11" recipient_addressing="11" type="SMS_GSM" size="97" reception_status="complete" attachment_size="0" read="no" />
+    <msg handle="02000000000001EC" subject="LST USG:42.201MB,Pack:3GB Pack,B" datetime="20180124T170739" sender_name="IA-IDEA" sender_addressing="11" recipient_addressing="11" type="SMS_GSM" size="97" reception_status="complete" attachment_size="0" read="yes" />
+êﬂÀH◊    <msg handle="02000000000001EB" subject="Dear Customer, Incase of non-usa" datetime="20180123T120259" sender_name="IZ-IDEA" sender_addressing="11" recipient_addressing="11" type="SMS_GSM" size="166" reception_status="complete" attachment_size="0" read="no" />
+    <msg handle="02000000000001EA" subject="LST USG:0.040MB,Pack:3GB Pack,BA" datetime="20180122T174746" sender_name="IA-IDEA" sender_addressing="11" recipient_addressing="11" type="SMS_GSM" size="96" receêﬂÀH◊ption_status="complete" attachment_size="0" read="no" />
+    <msg handle="02000000000001E9" subject="LST USG:0.080MB,Pack:3GB Pack,BA" datetime="20180122T160931" sender_name="IA-IDEA" sender_addressing="11" recipient_addressing="11" type="SMS_GSM" size="96" reception_status="complete" attachment_size="0" read="no" />
+    <msg handle="02000000000001E8" subject="LST USG:0.080MB,Pack:3GB Pack,BA" datetime="20180122T155014" sender_name="IA-IDEA" sender_addressing="11"êﬂÀH◊ recipient_addressing="11" type="SMS_GSM" size="96" reception_status="complete" attachment_size="0" read="no" />
+    <msg handle="02000000000001E7" subject="LST USG:0.040MB,Pack:3GB Pack,BA" datetime="20180122T154455" sender_name="IA-IDEA" sender_addressing="11" recipient_addressing="11" type="SMS_GSM" size="96" reception_status="complete" attachment_size="0" read="no" />
+    <msg handle="02000000000001E6" subject="LST USG:0.120MB,Pack:3GB Pack,BA" datetime="20180êﬂÀH◊122T153204" sender_name="IA-IDEA" sender_addressing="11" recipient_addressing="11" type="SMS_GSM" size="96" reception_status="complete" attachment_size="0" read="no" />
+    <msg handle="02000000000001E5" subject="LST USG:0.440MB,Pack:3GB Pack,BA" datetime="20180122T150052" sender_name="IA-IDEA" sender_addressing="11" recipient_addressing="11" type="SMS_GSM" size="96" reception_status="complete" attachment_size="0" read="no" />
+    <msg handle="02000000000001E4" suêﬂÀH◊bject="LST USG:5.965MB,Pack:3GB Pack,BA" datetime="20180122T142704" sender_name="IA-IDEA" sender_addressing="11" recipient_addressing="11" type="SMS_GSM" size="96" reception_status="complete" attachment_size="0" read="no" />
+    <msg handle="02000000000001E3" subject="LST USG:3.723MB,Pack:3GB Pack,BA" datetime="20180117T193541" sender_name="IA-IDEA" sender_addressing="11" recipient_addressing="11" type="SMS_GSM" size="96" reception_status="complete" attachment_sizêﬂÀH◊e="0" read="yes" />
+    <msg handle="02000000000001E2" subject="LST USG:0.960MB,Pack:3GB Pack,BA" datetime="20180113T211208" sender_name="IA-IDEA" sender_addressing="11" recipient_addressing="11" type="SMS_GSM" size="96" reception_status="complete" attachment_size="0" read="no" />
+    <msg handle="02000000000001E1" subject="LST USG:1.521MB,Pack:3GB Pack,BA" datetime="20180113T190834" sender_name="IA-IDEA" sender_addressing="11" recipient_addressing="11" type="SMS_êﬂÀH◊GSM" size="96" reception_status="complete" attachment_size="0" read="no" />
+    <msg handle="02000000000001E0" subject="LST USG:1.161MB,Pack:3GB Pack,BA" datetime="20180113T170754" sender_name="IA-IDEA" sender_addressing="11" recipient_addressing="11" type="SMS_GSM" size="96" reception_status="complete" attachment_size="0" read="no" />
+    <msg handle="02000000000001DF" subject="Get Rs.8000 Paytm cash back when" datetime="20180113T150724" sender_name="DM-SAMSNG" sêﬂÀH◊ender_addressing="11" recipient_addressing="11" type="SMS_GSM" size="161" reception_status="complete" attachment_size="0" read="no" />
+    <msg handle="02000000000001DE" subject="LST USG:0.600MB,Pack:3GB Pack,BA" datetime="20180113T130840" sender_name="IA-IDEA" sender_addressing="11" recipient_addressing="11" type="SMS_GSM" size="96" reception_status="complete" attachment_size="0" read="no" />
+    <msg handle="02000000000001DD" subject="LST USG:0.360MB,Pack:3GB PaêﬂÀH◊ck,BA" datetime="20180113T090928" sender_name="IA-IDEA" sender_addressing="11" recipient_addressing="11" type="SMS_GSM" size="96" reception_status="complete" attachment_size="0" read="no" />
+    <msg handle="02000000000001DC" subject="LST USG:0.600MB,Pack:3GB Pack,BA" datetime="20180113T051018" sender_name="IA-IDEA" sender_addressing="11" recipient_addressing="11" type="SMS_GSM" size="96" reception_status="complete" attachment_size="0" read="no" />
+    <msg handleêﬂÀH◊="02000000000001DB" subject="LST USG:1.921MB,Pack:3GB Pack,BA" datetime="20180113T011104" sender_name="IA-IDEA" sender_addressing="11" recipient_addressing="11" type="SMS_GSM" size="96" reception_status="complete" attachment_size="0" read="no" />
+    <msg handle="02000000000001DA" subject="LST USG:7.607MB,Pack:3GB Pack,BA" datetime="20180112T174615" sender_name="IA-IDEA" sender_addressing="11" recipient_addressing="11" type="SMS_GSM" size="96" reception_status="coêﬂÀH◊mplete" attachment_size="0" read="no" />
+    <msg handle="02000000000001D9" subject="LST USG:4.564MB,Pack:3GB Pack,BA" datetime="20180109T184451" sender_name="IA-IDEA" sender_addressing="11" recipient_addressing="11" type="SMS_GSM" size="96" reception_status="complete" attachment_size="0" read="yes" />
+    <msg handle="02000000000001D8" subject="LST USG:6.486MB,Pack:3GB Pack,BA" datetime="20180108T191556" sender_name="IA-IDEA" sender_addressing="11" recipient_addrêﬂÀH◊essing="11" type="SMS_GSM" size="96" reception_status="complete" attachment_size="0" read="no" />
+    <msg handle="02000000000001D7" subject="While receiving International Ca" datetime="20180108T163613" sender_name="IZ-IDEA" sender_addressing="11" recipient_addressing="11" type="SMS_GSM" size="157" reception_status="complete" attachment_size="0" read="no" />
+    <msg handle="02000000000001D6" subject="LST USG:5.245MB,Pack:3GB Pack,BA" datetime="20180104T172309" seêﬂÀH◊nder_name="IA-IDEA" sender_addressing="11" recipient_addressing="11" type="SMS_GSM" size="96" reception_status="complete" attachment_size="0" read="yes" />
+    <msg handle="02000000000001D5" subject="LST USG:5.805MB,Pack:3GB Pack,BA" datetime="20180103T164502" sender_name="IA-IDEA" sender_addressing="11" recipient_addressing="11" type="SMS_GSM" size="96" reception_status="complete" attachment_size="0" read="yes" />
+    <msg handle="02000000000001D4" subject="LST UêﬂÀH◊SG:12.171MB,Pack:3GB Pack,B" datetime="20171222T052849" sender_name="IA-IDEA" sender_addressing="11" recipient_addressing="11" type="SMS_GSM" size="98" reception_status="complete" attachment_size="0" read="no" />
+    <msg handle="02000000000001D3" subject="LST USG:0.280MB,Pack:3GB Pack,BA" datetime="20171222T041742" sender_name="IA-IDEA" sender_addressing="11" recipient_addressing="11" type="SMS_GSM" size="97" reception_status="complete" attachment_size="0" read="êﬂÀH◊no" />
+    <msg handle="02000000000001D2" subject="LST USG:1.761MB,Pack:3GB Pack,BA" datetime="20171222T012437" sender_name="IA-IDEA" sender_addressing="11" recipient_addressing="11" type="SMS_GSM" size="97" reception_status="complete" attachment_size="0" read="no" />
+    <msg handle="02000000000001D1" subject="LST USG:2.202MB,Pack:3GB Pack,BA" datetime="20171221T173110" sender_name="IA-IDEA" sender_addressing="11" recipient_addressing="11" type="SMS_GSM" size="97êﬂÀH◊" reception_status="complete" attachment_size="0" read="no" />
+    <msg handle="02000000000001D0" subject="LST USG:1.681MB,Pack:3GB Pack,BA" datetime="20171221T154629" sender_name="IA-IDEA" sender_addressing="11" recipient_addressing="11" type="SMS_GSM" size="97" reception_status="complete" attachment_size="0" read="no" />
+    <msg handle="02000000000001CF" subject="LST USG:0.600MB,Pack:3GB Pack,BA" datetime="20171221T125440" sender_name="IA-IDEA" sender_addressinêﬂÀH◊g="11" recipient_addressing="11" type="SMS_GSM" size="97" reception_status="complete" attachment_size="0" read="no" />
+    <msg handle="02000000000001CE" subject="Dear Customer, you can now call " datetime="20171221T124739" sender_name="IZ-IDEA" sender_addressing="11" recipient_addressing="11" type="SMS_GSM" size="131" reception_status="complete" attachment_size="0" read="no" />
+    <msg handle="02000000000001CD" subject="LST USG:1.881MB,Pack:3GB Pack,BA" datetimeêﬂÀH◊="20171221T092744" sender_name="IA-IDEA" sender_addressing="11" recipient_addressing="11" type="SMS_GSM" size="97" reception_status="complete" attachment_size="0" read="no" />
+    <msg handle="02000000000001CC" subject="LST USG:0.280MB,Pack:3GB Pack,BA" datetime="20171221T052830" sender_name="IA-IDEA" sender_addressing="11" recipient_addressing="11" type="SMS_GSM" size="97" reception_status="complete" attachment_size="0" read="no" />
+    <msg handle="0200000000000êﬂÀH◊1CB" subject="Just invited you to Hike and sen" datetime="20171205T170116" sender_name="8892811822" sender_addressing="8892811822" recipient_addressing="11" type="SMS_GSM" size="151" reception_status="complete" attachment_size="0" read="no" />
+    <msg handle="02000000000001CA" subject="LST USG:3.803MB,Pack:3GB Pack,BA" datetime="20171202T033739" sender_name="IA-IDEA" sender_addressing="11" recipient_addressing="11" type="SMS_GSM" size="97" reception_status="complêﬂÀH◊ete" attachment_size="0" read="no" />
+    <msg handle="02000000000001C9" subject="LST USG:4.284MB,Pack:3GB Pack,BA" datetime="20171202T024143" sender_name="IA-IDEA" sender_addressing="11" recipient_addressing="11" type="SMS_GSM" size="97" reception_status="complete" attachment_size="0" read="no" />
+    <msg handle="02000000000001C8" subject="Dear Customer, You are missing o" datetime="20171201T154025" sender_name="IA-IDEA" sender_addressing="11" recipient_addressiêﬂÀH◊ng="11" type="SMS_GSM" size="126" reception_status="complete" attachment_size="0" read="no" />
+    <msg handle="02000000000001C7" subject="Dear Customer, You are missing o" datetime="20171201T154017" sender_name="IA-IDEA" sender_addressing="11" recipient_addressing="11" type="SMS_GSM" size="126" reception_status="complete" attachment_size="0" read="no" />
+    <msg handle="02000000000001C6" subject="LST USG:0.520MB,Pack:3GB Pack,BA" datetime="20171125T072527" sendeêﬂÀH◊r_name="IA-IDEA" sender_addressing="11" recipient_addressing="11" type="SMS_GSM" size="96" reception_status="complete" attachment_size="0" read="no" />
+    <msg handle="02000000000001C5" subject="LST USG:1.081MB,Pack:3GB Pack,BA" datetime="20171125T035507" sender_name="IA-IDEA" sender_addressing="11" recipient_addressing="11" type="SMS_GSM" size="96" reception_status="complete" attachment_size="0" read="no" />
+    <msg handle="02000000000001C4" subject="LST USG:0.êﬂÀH◊360MB,Pack:3GB Pack,BA" datetime="20171125T032118" sender_name="IA-IDEA" sender_addressing="11" recipient_addressing="11" type="SMS_GSM" size="96" reception_status="complete" attachment_size="0" read="no" />
+    <msg handle="02000000000001C3" subject="LST USG:8.528MB,Pack:3GB Pack,BA" datetime="20171124T200553" sender_name="IA-IDEA" sender_addressing="11" recipient_addressing="11" type="SMS_GSM" size="96" reception_status="complete" attachment_size="0" read="no" /êﬂÀH◊>
+    <msg handle="02000000000001C2" subject="LST USG:0.400MB,Pack:3GB Pack,BA" datetime="20171124T115900" sender_name="IA-IDEA" sender_addressing="11" recipient_addressing="11" type="SMS_GSM" size="96" reception_status="complete" attachment_size="0" read="no" />
+    <msg handle="02000000000001C1" subject="Dear Customer, You are missing o" datetime="20171124T102847" sender_name="IA-IDEA" sender_addressing="11" recipient_addressing="11" type="SMS_GSM" size="126" reêﬂÀH◊ception_status="complete" attachment_size="0" read="no" />
+    <msg handle="02000000000001C0" subject="LST USG:1.441MB,Pack:3GB Pack,BA" datetime="20171124T062929" sender_name="IA-IDEA" sender_addressing="11" recipient_addressing="11" type="SMS_GSM" size="96" reception_status="complete" attachment_size="0" read="no" />
+    <msg handle="02000000000001BF" subject="LST USG:3.923MB,Pack:3GB Pack,BA" datetime="20171124T023016" sender_name="IA-IDEA" sender_addressing="1êﬂÀH◊1" recipient_addressing="11" type="SMS_GSM" size="96" reception_status="complete" attachment_size="0" read="no" />
+    <msg handle="02000000000001BE" subject="LST USG:2.602MB,Pack:3GB Pack,BA" datetime="20171123T170102" sender_name="IA-IDEA" sender_addressing="11" recipient_addressing="11" type="SMS_GSM" size="96" reception_status="complete" attachment_size="0" read="no" />
+    <msg handle="02000000000001BA" subject="Just invited you to Hike and sen" datetime="201êﬂÀH◊71121T163846" sender_name="9036966566" sender_addressing="9036966566" recipient_addressing="11" type="SMS_GSM" size="138" reception_status="complete" attachment_size="0" read="yes" />
+    <msg handle="02000000000001B9" subject="LST USG:29.628MB,Pack:3GB Pack,B" datetime="20171121T152245" sender_name="IA-IDEA" sender_addressing="11" recipient_addressing="11" type="SMS_GSM" size="97" reception_status="complete" attachment_size="0" read="no" />
+    <msg handle="02000êﬂÀH◊000000001B8" subject="LST USG:0.120MB,Pack:3GB Pack,BA" datetime="20171121T062508" sender_name="IA-IDEA" sender_addressing="11" recipient_addressing="11" type="SMS_GSM" size="96" reception_status="complete" attachment_size="0" read="yes" />
+    <msg handle="02000000000001B7" subject="Dear Customer, You are missing o" datetime="20171121T062336" sender_name="IA-IDEA" sender_addressing="11" recipient_addressing="11" type="SMS_GSM" size="126" reception_status="completêﬂÀH◊e" attachment_size="0" read="yes" />
+    <msg handle="02000000000001B6" subject="LST USG:5.044MB,Pack:3GB Pack,BA" datetime="20171121T000417" sender_name="IA-IDEA" sender_addressing="11" recipient_addressing="11" type="SMS_GSM" size="96" reception_status="complete" attachment_size="0" read="yes" />
+    <msg handle="02000000000001B5" subject="What Krishna what he told" datetime="20171120T221445" sender_name="+918884276444" sender_addressing="+918884276444" recipienêﬂÀH◊t_addressing="11" type="SMS_GSM" size="25" reception_status="complete" attachment_size="0" read="yes" />
+    <msg handle="02000000000001B1" subject="LST USG:3.203MB,Pack:3GB Pack,BA" datetime="20171120T173800" sender_name="IA-IDEA" sender_addressing="11" recipient_addressing="11" type="SMS_GSM" size="96" reception_status="complete" attachment_size="0" read="yes" />
+    <msg handle="02000000000001B0" subject="LST USG:1.281MB,Pack:3GB Pack,BA" datetime="20171120T084êﬂÀH◊352" sender_name="IA-IDEA" sender_addressing="11" recipient_addressing="11" type="SMS_GSM" size="97" reception_status="complete" attachment_size="0" read="yes" />
+    <msg handle="02000000000001AF" subject="LST USG:0.200MB,Pack:3GB Pack,BA" datetime="20171120T053035" sender_name="IA-IDEA" sender_addressing="11" recipient_addressing="11" type="SMS_GSM" size="97" reception_status="complete" attachment_size="0" read="yes" />
+    <msg handle="02000000000001AE" subjectêﬂÀH◊="LST USG:0.040MB,Pack:3GB Pack,BA" datetime="20171120T012914" sender_name="IA-IDEA" sender_addressing="11" recipient_addressing="11" type="SMS_GSM" size="97" reception_status="complete" attachment_size="0" read="yes" />
+    <msg handle="02000000000001AD" subject="LST USG:0.240MB,Pack:3GB Pack,BA" datetime="20171119T212256" sender_name="IA-IDEA" sender_addressing="11" recipient_addressing="11" type="SMS_GSM" size="97" reception_status="complete" attachment_size="0êﬂÀH◊" read="yes" />
+    <msg handle="02000000000001AC" subject="‡≤¶‡≥ä‡≤°‡≥ç‡≤° ‡≤Æ‡≥ä‡≤§‡≥ç‡≤§ ‡≤™‡≤°‡≥Ü‡≤Ø‡≤≤‡≥Å ‡≤∂‡≥Å‡≤≤‡≥ç‡≤ï ‡≤™‡≤æ‡≤µ‡≤§‡≤ø‡≤∏‡≤¨" datetime="20171118T172240" sender_name="DM-RBISAY" sender_addressing="11" recipient_addressing="11" type="SMS_GSM" size="134" reception_status="complete" attachment_size="0" read="yes" />
+    <msg handle="02000000000001AA" subject="What Shall we do Krishna??" datetime="20171118T130043" sender_name="+918884204566" senêﬂÀH◊der_addressing="+918884204566" recipient_addressing="11" type="SMS_GSM" size="26" reception_status="complete" attachment_size="0" read="yes" />
+    <msg handle="02000000000001A6" subject="Hi Khrisna, the last statuts is " datetime="20171117T214947" sender_name="+33762813248" sender_addressing="+33762813248" recipient_addressing="11" type="SMS_GSM" size="195" reception_status="complete" attachment_size="0" read="yes" />
+    <msg handle="02000000000001A5" subject="LêﬂÀH◊ST USG:0.040MB,Pack:3GB Pack,BA" datetime="20171117T202157" sender_name="IA-IDEA" sender_addressing="11" recipient_addressing="11" type="SMS_GSM" size="97" reception_status="complete" attachment_size="0" read="yes" />
+    <msg handle="02000000000001A4" subject="LST USG:6.646MB,Pack:3GB Pack,BA" datetime="20171117T173556" sender_name="IA-IDEA" sender_addressing="11" recipient_addressing="11" type="SMS_GSM" size="97" reception_status="complete" attachment_size="0" rêﬂÀH◊ead="yes" />
+    <msg handle="02000000000001A2" subject="Dear Customer, You are missing o" datetime="20171117T061045" sender_name="IA-IDEA" sender_addressing="11" recipient_addressing="11" type="SMS_GSM" size="126" reception_status="complete" attachment_size="0" read="yes" />
+    <msg handle="02000000000001A1" subject="LST USG:0.680MB,Pack:3GB Pack,BA" datetime="20171116T170359" sender_name="IA-IDEA" sender_addressing="11" recipient_addressing="11" type="SMS_GSM" êﬂÀH◊size="97" reception_status="complete" attachment_size="0" read="yes" />
+    <msg handle="02000000000001A0" subject="LST USG:1.201MB,Pack:3GB Pack,BA" datetime="20171116T124319" sender_name="IA-IDEA" sender_addressing="11" recipient_addressing="11" type="SMS_GSM" size="97" reception_status="complete" attachment_size="0" read="yes" />
+    <msg handle="020000000000019F" subject="Dear Customer, You are missing o" datetime="20171116T120419" sender_name="IA-IDEA" senderêﬂÀH◊_addressing="11" recipient_addressing="11" type="SMS_GSM" size="126" reception_status="complete" attachment_size="0" read="yes" />
+    <msg handle="020000000000019E" subject="LST USG:0.280MB,Pack:3GB Pack,BA" datetime="20171116T080500" sender_name="IA-IDEA" sender_addressing="11" recipient_addressing="11" type="SMS_GSM" size="97" reception_status="complete" attachment_size="0" read="yes" />
+    <msg handle="020000000000019D" subject="LST USG:20.299MB,Pack:3GB PackêﬂÀH◊,B" datetime="20171116T000641" sender_name="IA-IDEA" sender_addressing="11" recipient_addressing="11" type="SMS_GSM" size="98" reception_status="complete" attachment_size="0" read="yes" />
+    <msg handle="020000000000019C" subject="LST USG:0.760MB,Pack:3GB Pack,BA" datetime="20171114T121441" sender_name="IA-IDEA" sender_addressing="11" recipient_addressing="11" type="SMS_GSM" size="97" reception_status="complete" attachment_size="0" read="yes" />
+    <msg handle=êﬂÀH◊"020000000000019B" subject="LST USG:0.160MB,Pack:3GB Pack,BA" datetime="20171114T105608" sender_name="IA-IDEA" sender_addressing="11" recipient_addressing="11" type="SMS_GSM" size="97" reception_status="complete" attachment_size="0" read="yes" />
+    <msg handle="020000000000019A" subject="LST USG:0.560MB,Pack:3GB Pack,BA" datetime="20171114T065658" sender_name="IA-IDEA" sender_addressing="11" recipient_addressing="11" type="SMS_GSM" size="97" reception_status="co†PÀIHmplete" attachment_size="0" read="yes" />
+    <msg handle="0200000000000199" subject="Dear Customer, You are missing o" datetime="20171114T024742" sender_name="IA-IDEA" sender_addressing="11" recipient_addressing="11" type="SMS_GSM" size="126" reception_status="complete" attachment_size="0" read="yes" />
+</MAP-msg-listing>
+
+A2DP STREAMING STOP 0
+A2DP STREAMING START 0
+A2DP STREAMING STOP 0
+A2DP STREAMING START 0
+A2DP STREAMING STOP 0
+A2DP STREAMING START 0
+A2DP STREAMING STOP 0
+A2DP STREAMING START 0
+A2DP STREAMING STOP 0
+A2DP STREAMING START 0
+A2DP STREAMING STOP 0
+A2DP STREAMING START 0
+A2DP STREAMING STOP 0
+A2DP STREAMING START 0
+A2DP STREAMING STOP 0
+A2DP STREAMING START 0
+A2DP STREAMING STOP 0
+A2DP STREAMING START 0
+A2DP STREAMING STOP 0
+A2DP STREAMING START 0
+A2DP STREAMING STOP 0
+A2DP STREAMING START 0
+A2DP STREAMING STOP 0
+A2DP STREAMING START 0
+A2DP STREAMING STOP 0
+A2DP STREAMING START 0
+A2DP STREAMING STOP 0

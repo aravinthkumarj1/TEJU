@@ -1,0 +1,53 @@
+
+arch=arm
+baudrate=115200
+board=apalis_imx6
+board_name=apalis_imx6
+board_rev=011c
+bootargs=console=ttymxc0,115200 init=/init video=mxcfb0:dev=ldb,bpp=32 video=mxcfb1:dev=hdmi,1280x1024M@60,if=RGB24,bpp=32 video=mxcfb2:off vido=mxcfb3:off vmalloc=256M androidboot.console=ttymxc0 consoleblank=0 androidboot.hardware=freescale cma=384M androidboot.selinux=disabled androidboot.dm_verity=disabled androidboot.storage_type=sd
+bootcmd=boota mmc0
+bootdelay=1
+cpu=armv7
+ethact=FEC
+ethaddr=00:14:2d:4e:87:13
+ethprime=FEC
+fastboot_dev=mmc0
+fdt_high=0xffffffff
+initrd_high=0xffffffff
+ipaddr=192.168.10.2
+loadaddr=0x12000000
+netmask=255.255.255.0
+serial#=05146387
+serverip=192.168.10.1
+soc=mx6
+splashpos=m,m
+vendor=toradex
+ver=U-Boot 2017.03-dirty (Dec 26 2017 - 11:56:53 +0530)
+
+Environment size: 816/8188 bytes
+Apalis iMX6 # env defaut lt -f -a
+## Resetting to default environment
+Apalis iMX6 # pri
+arch=arm
+baudrate=115200
+board=apalis_imx6
+board_name=apalis_imx6
+bootdelay=1
+cpu=armv7
+ethprime=FEC
+ipaddr=192.168.10.2
+loadaddr=0x12000000
+netmask=255.255.255.0
+serverip=192.168.10.1
+soc=mx6
+vendor=toradex
+
+Environment size: 235/8188 bytes
+Apalis iMX6 # env save
+Saving Environment to MMC...
+Writing to MMC(0)... done
+Apalis iMX6 # 
+
+
+
+

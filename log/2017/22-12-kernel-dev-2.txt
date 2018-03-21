@@ -1,0 +1,1550 @@
+
+
+U-Boot 2017.03-dirty (Dec 15 2017 - 14:13:51 +0530)
+
+CPU:   Freescale i.MX6Q rev1.5 at 792 MHz
+Reset cause: POR
+I2C:   ready
+DRAM:  2 GiB
+PMIC: device id: 0x10, revision id: 0x21
+PMIC: programmed
+MMC:   FSL_SDHC: 0, FSL_SDHC: 1, FSL_SDHC: 2
+auto-detected panel vga-rgb
+Aravinth: Display: vga-rgb (640x480)
+In:    serial
+Out:   serial
+Err:   serial
+Model: Toradex Apalis iMX6 Quad 2GB IT V1.1C, Serial# 05146387
+flash target is MMC:0
+Net:   using PHY at 7
+FEC [PRIME]
+Fastboot: Normal
+Hit any key to stop autoboot:  1  0 
+boota mmc1 
+CACHE: Misaligned operation at range [8ffb7060, 8ffb70e0]
+CACHE: Misaligned operation at range [8ffb7060, 8ffb70e0]
+kernel   @ 14008000 (9803560)
+ramdisk  @ 15000000 (1628346)
+fdt      @ 14f00000 (53146)
+## Booting Android Image at 0x12000000 ...
+Kernel load addr 0x14008000 size 9574 KiB
+Kernel command line: console=ttymxc0,115200 init=/init video=mxcfb0:dev=hdmi,1920x1080M@60,if=RGB24 video=mxcfb1:off video=mxcfb2:off vido=mxcfb3:off vmalloc=256M androidboot.console=ttymxc0 consoleblank=0 androidboot.hardware=freescale cma=384M androidboot.selinux=disabled androidboot.dm_verity=disabled androidboot.serialno=1b2429d4ea997115 androidboot.storage_type=emmc
+## Flattened Device Tree blob at 14f00000
+   Booting using the fdt blob at 0x14f00000
+   Loading Kernel Image ... OK
+   Loading Device Tree to 8df38000, end 8df47f99 ... OK
+
+Starting kernel ...
+
+Uncompressing Linux... done, booting the kernel.
+
+
+U-Boot 2017.03-dirty (Dec 15 2017 - 14:13:51 +0530)
+
+CPU:   Freescale i.MX6Q rev1.5 at 792 MHz
+Reset cause: POR
+I2C:   ready
+DRAM:  2 GiB
+PMIC: device id: 0x10, revision id: 0x21
+PMIC: programmed
+MMC:   FSL_SDHC: 0, FSL_SDHC: 1, FSL_SDHC: 2
+auto-detected panel vga-rgb
+Aravinth: Display: vga-rgb (640x480)
+In:    serial
+Out:   serial
+Err:   serial
+Model: Toradex Apalis iMX6 Quad 2GB IT V1.1C, Serial# 05146387
+flash target is MMC:0
+Net:   using PHY at 7
+FEC [PRIME]
+Fastboot: Normal
+Hit any key to stop autoboot:  1  0
+Apalis iMX6 # pri
+arch=arm
+baudrate=115200
+board=apalis_imx6
+board_name=apalis_imx6
+board_rev=011c
+bootargs=console=ttymxc0,115200 init=/init video=mxcfb0:dev=hdmi,1920x1080M@60,if=RGB24 video=mxcfb1:off video=mxcfb2:off vido=mxcfb3:off vmalloc=256M androidboot.console=ttymxc0 consoleblank=0 androidboot.hardware=freescale cma=384M androidboot.selinux=disabled androidboot.dm_verity=disabled
+bootcmd=boota mmc1
+bootdelay=1
+cpu=armv7
+ethact=FEC
+ethaddr=00:14:2d:4e:87:13
+ethprime=FEC
+fastboot_dev=mmc0
+initrd_high=0xffffffff
+ipaddr=192.168.10.2
+loadaddr=0x12000000
+netmask=255.255.255.0
+serial#=05146387
+serverip=192.168.10.1
+soc=mx6
+splashpos=m,m
+vendor=toradex
+ver=U-Boot 2017.03-dirty (Dec 15 2017 - 14:13:51 +0530)
+
+Environment size: 748/8188 bytes
+Apalis iMX6 # setenv fdt_high=0xffffffff0xffffffff  0xffffffff
+Apalis iMX6 # saveenv
+Saving Environment to MMC...
+Writing to MMC(0)... done
+Apalis iMX6 # res
+resetting ...
+
+
+U-Boot 2017.03-dirty (Dec 15 2017 - 14:13:51 +0530)
+
+CPU:   Freescale i.MX6Q rev1.5 at 792 MHz
+Reset cause: WDOG
+I2C:   ready
+DRAM:  2 GiB
+PMIC: device id: 0x10, revision id: 0x21
+PMIC: programmed
+MMC:   FSL_SDHC: 0, FSL_SDHC: 1, FSL_SDHC: 2
+auto-detected panel vga-rgb
+Aravinth: Display: vga-rgb (640x480)
+In:    serial
+Out:   serial
+Err:   serial
+Model: Toradex Apalis iMX6 Quad 2GB IT V1.1C, Serial# 05146387
+flash target is MMC:0
+Net:   using PHY at 7
+FEC [PRIME]
+Fastboot: Normal
+Hit any key to stop autoboot:  1  0 
+boota mmc1 
+CACHE: Misaligned operation at range [8ffb7060, 8ffb70e0]
+CACHE: Misaligned operation at range [8ffb7060, 8ffb70e0]
+kernel   @ 14008000 (9803560)
+ramdisk  @ 15000000 (1628346)
+fdt      @ 14f00000 (53146)
+## Booting Android Image at 0x12000000 ...
+Kernel load addr 0x14008000 size 9574 KiB
+Kernel command line: console=ttymxc0,115200 init=/init video=mxcfb0:dev=hdmi,1920x1080M@60,if=RGB24 video=mxcfb1:off video=mxcfb2:off vido=mxcfb3:off vmalloc=256M androidboot.console=ttymxc0 consoleblank=0 androidboot.hardware=freescale cma=384M androidboot.selinux=disabled androidboot.dm_verity=disabled androidboot.serialno=1b2429d4ea997115 androidboot.storage_type=emmc
+## Flattened Device Tree blob at 14f00000
+   Booting using the fdt blob at 0x14f00000
+   Loading Kernel Image ... OK
+   Using Device Tree in place at 14f00000, end 14f0ff99
+
+Starting kernel ...
+
+Uncompressing Linux... done, booting the kernel.
+[    0.000000] Booting Linux on physical CPU 0x0
+[    0.000000] Linux version 4.9.67-07228-gdc437277d928-dirty (embadmin@ubuntu) (gcc version 4.9 20150123 (prerelease) (GCC) ) #6 SMP PREEMPT Fri Dec 22 12:22:51 IST 2017
+[    0.000000] CPU: ARMv7 Processor [412fc09a] revision 10 (ARMv7), cr=10c53c7d
+[    0.000000] CPU: PIPT / VIPT nonaliasing data cache, VIPT aliasing instruction cache
+[    0.000000] OF: fdt:Machine model: Aravinth Toradex Apalis iMX6Q/D Module on Ixora V1.1 Carrier Board
+[    0.000000] cma: Reserved 384 MiB at 0x26000000
+[    0.000000] Memory policy: Data cache writealloc
+[    0.000000] percpu: Embedded 15 pages/cpu @ee6d3000 s31040 r8192 d22208 u61440
+[    0.000000] Built 1 zonelists in Zone order, mobility grouping on.  Total pages: 522768
+[    0.000000] Kernel command line: console=ttymxc0,115200 init=/init video=mxcfb0:dev=hdmi,1920x1080M@60,if=RGB24 video=mxcfb1:off video=mxcfb2:off vido=mxcfb3:off vmalloc=256M androidboot.console=ttymxc0 consoleblank=0 androidboot.hardware=freescale cma=384M androidboot.selinux=disabled androidboot.dm_verity=disabled androidboot.serialno=1b2429d4ea997115 androidboot.storage_type=emmc
+[    0.000000] PID hash table entries: 4096 (order: 2, 16384 bytes)
+[    0.000000] Dentry cache hash table entries: 131072 (order: 7, 524288 bytes)
+[    0.000000] Inode-cache hash table entries: 65536 (order: 6, 262144 bytes)
+[    0.000000] Memory: 1662712K/2097152K available (13312K kernel code, 1128K rwdata, 4016K rodata, 1024K init, 606K bss, 41224K reserved, 393216K cma-reserved, 1318912K highmem)
+[    0.000000] Virtual kernel memory layout:
+[    0.000000]     vector  : 0xffff0000 - 0xffff1000   (   4 kB)
+[    0.000000]     fixmap  : 0xffc00000 - 0xfff00000   (3072 kB)
+[    0.000000]     vmalloc : 0xf0000000 - 0xff800000   ( 248 MB)
+[    0.000000]     lowmem  : 0xc0000000 - 0xef800000   ( 760 MB)
+[    0.000000]     pkmap   : 0xbfe00000 - 0xc0000000   (   2 MB)
+[    0.000000]     modules : 0xbf000000 - 0xbfe00000   (  14 MB)
+[    0.000000]       .text : 0xc0008000 - 0xc0e00000   (14304 kB)
+[    0.000000]       .init : 0xc1300000 - 0xc1400000   (1024 kB)
+[    0.000000]       .data : 0xc1400000 - 0xc151a218   (1129 kB)
+[    0.000000]        .bss : 0xc151a218 - 0xc15b1be0   ( 607 kB)
+[    0.000000] SLUB: HWalign=64, Order=0-3, MinObjects=0, CPUs=4, Nodes=1
+[    0.000000] Preemptible hierarchical RCU implementation.
+[    0.000000] 	Build-time adjustment of leaf fanout to 32.
+[    0.000000] NR_IRQS:16 nr_irqs:16 16
+[    0.000000] L2C-310 errata 752271 769419 enabled
+[    0.000000] L2C-310 enabling early BRESP for Cortex-A9
+[    0.000000] L2C-310 full line of zeros enabled for Cortex-A9
+[    0.000000] L2C-310 ID prefetch enabled, offset 16 lines
+[    0.000000] L2C-310 dynamic clock gating enabled, standby mode enabled
+[    0.000000] L2C-310 cache controller enabled, 16 ways, 1024 kB
+[    0.000000] L2C-310: CACHE_ID 0x410000c7, AUX_CTRL 0x76470001
+[    0.000000] Switching to timer-based delay loop, resolution 333ns
+[    0.000006] sched_clock: 32 bits at 3000kHz, resolution 333ns, wraps every 715827882841ns
+[    0.000024] clocksource: mxc_timer1: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 637086815595 ns
+[    0.001574] Console: colour dummy device 80x30
+[    0.001597] Calibrating delay loop (skipped), value calculated using timer frequency.. 6.00 BogoMIPS (lpj=30000)
+[    0.001613] pid_max: default: 32768 minimum: 301
+[    0.001687] Security Framework initialized
+[    0.001698] SELinux:  Initializing.
+[    0.001795] Mount-cache hash table entries: 2048 (order: 1, 8192 bytes)
+[    0.001807] Mountpoint-cache hash table entries: 2048 (order: 1, 8192 bytes)
+[    0.002622] CPU: Testing write buffer coherency: ok
+[    0.003029] CPU0: update cpu_capacity 1024
+[    0.003045] CPU0: thread -1, cpu 0, socket 0, mpidr 80000000
+[    0.003112] Setting up static identity map for 0x10100000 - 0x10100058
+[    0.169922] CPU1: update cpu_capacity 1024
+[    0.169930] CPU1: thread -1, cpu 1, socket 0, mpidr 80000001
+[    0.239913] CPU2: update cpu_capacity 1024
+[    0.239919] CPU2: thread -1, cpu 2, socket 0, mpidr 80000002
+[    0.309909] CPU3: update cpu_capacity 1024
+[    0.309916] CPU3: thread -1, cpu 3, socket 0, mpidr 80000003
+[    0.310025] Brought up 4 CPUs
+[    0.310062] SMP: Total of 4 processors activated (24.00 BogoMIPS).
+[    0.310071] CPU: All CPU(s) started in SVC mode.
+[    0.310120] CPU3: update max cpu_capacity 1024
+[    0.311212] devtmpfs: initialized
+[    0.319929] CPU2: update max cpu_capacity 1024
+[    0.325740] VFP support v0.3: implementor 41 architecture 3 part 30 variant 9 rev 4
+[    0.326158] clocksource: jiffies: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 19112604462750000 ns
+[    0.326183] futex hash table entries: 1024 (order: 4, 65536 bytes)
+[    0.346337] pinctrl core: initialized pinctrl subsystem
+[    0.347652] NET: Registered protocol family 16
+[    0.356828] DMA: preallocated 256 KiB pool for atomic coherent allocations
+[    0.379577] cpuidle: using governor menu
+[    0.380356] CPU identified as i.MX6Q, silicon rev 1.5
+[    0.407744] hw-breakpoint: found 5 (+1 reserved) breakpoint and 1 watchpoint registers.
+[    0.407761] hw-breakpoint: maximum watchpoint size is 4 bytes.
+[    0.409406] imx6q-pinctrl 20e0000.iomuxc: initialized IMX pinctrl driver
+[    0.413220] imx-gpc 20dc000.gpc: no fsl,ldo-bypass found!
+[    0.413339] imx-gpc 20dc000.gpc: Registered imx-gpc
+[    0.475640] mxs-dma 110000.dma-apbh: initialized
+[    0.478271] usb_host_vbus: supplied by usb_host_vbus_hub
+[    0.480072] SCSI subsystem initialized
+[    0.480579] usbcore: registered new interface driver usbfs
+[    0.480654] usbcore: registered new interface driver hub
+[    0.480756] usbcore: registered new device driver usb
+[    0.480950] 2000000.aips-bus:usbphy_nop1 supply vcc not found, using dummy regulator
+[    0.481102] 2000000.aips-bus:usbphy_nop2 supply vcc not found, using dummy regulator
+[    0.482335] i2c i2c-1: IMX I2C adapter registered
+[    0.482358] i2c i2c-1: can't use DMA, using PIO instead.
+[    0.490257] stmpe-i2c 2-0041: stmpe811 detected, chip id: 0x811
+[    0.580731] i2c i2c-2: IMX I2C adapter registered
+[    0.580750] i2c i2c-2: can't use DMA, using PIO instead.
+[    0.581566] i2c i2c-3: IMX I2C adapter registered
+[    0.581585] i2c i2c-3: can't use DMA, using PIO instead.
+[    0.581749] Linux video capture interface: v2.00
+[    0.581822] pps_core: LinuxPPS API ver. 1 registered
+[    0.581831] pps_core: Software ver. 5.3.6 - Copyright 2005-2007 Rodolfo Giometti <giometti@linux.it>
+[    0.581857] PTP clock support registered
+[    0.609637] imx-ipuv3 2400000.ipu: IPU DMFC NORMAL mode: 1(0~1), 5B(4,5), 5F(6,7)
+[    0.639632] imx-ipuv3 2800000.ipu: IPU DMFC NORMAL mode: 1(0~1), 5B(4,5), 5F(6,7)
+[    0.641027] mxc_mipi_csi2 21dc000.mipi_csi: i.MX MIPI CSI2 driver probed ipu0 csi1
+[    0.641044] mxc_mipi_csi2 21dc000.mipi_csi: i.MX MIPI CSI2 dphy version is 0x3130302a
+[    0.641140] MIPI CSI2 driver module loaded
+[    0.641516] imx rpmsg driver is registered.
+[    0.641708] Advanced Linux Sound Architecture Driver Initialized.
+[    0.642977] Bluetooth: Core ver 2.22
+[    0.643024] NET: Registered protocol family 31
+[    0.643035] Bluetooth: HCI device and connection manager initialized
+[    0.643052] Bluetooth: HCI socket layer initialized
+[    0.643066] Bluetooth: L2CAP socket layer initialized
+[    0.643109] Bluetooth: SCO socket layer initialized
+[    0.660395] clocksource: Switched to clocksource mxc_timer1
+[    0.733165] VFS: Disk quotas dquot_6.6.0
+[    0.733264] VFS: Dquot-cache hash table entries: 1024 (order 0, 4096 bytes)
+[    0.744560] NET: Registered protocol family 2
+[    0.745328] TCP established hash table entries: 8192 (order: 3, 32768 bytes)
+[    0.745431] TCP bind hash table entries: 8192 (order: 4, 65536 bytes)
+[    0.745592] TCP: Hash tables configured (established 8192 bind 8192)
+[    0.745782] UDP hash table entries: 512 (order: 2, 16384 bytes)
+[    0.745833] UDP-Lite hash table entries: 512 (order: 2, 16384 bytes)
+[    0.746056] NET: Registered protocol family 1
+[    0.746716] RPC: Registered named UNIX socket transport module.
+[    0.746729] RPC: Registered udp transport module.
+[    0.746738] RPC: Registered tcp transport module.
+[    0.746747] RPC: Registered tcp NFSv4.1 backchannel transport module.
+[    0.747070] Trying to unpack rootfs image as initramfs...
+[    0.856799] Freeing initrd memory: 1592K
+[    0.857951] hw perfevents: enabled with armv7_cortex_a9 PMU driver, 7 counters available
+[    0.861217] Bus freq driver module loaded
+[    0.862770] audit: initializing netlink subsys (disabled)
+[    0.862846] audit: type=2000 audit(0.860:1): initialized
+[    0.863874] workingset: timestamp_bits=30 max_order=19 bucket_order=0
+[    0.871507] NFS: Registering the id_resolver key type
+[    0.871543] Key type id_resolver registered
+[    0.871554] Key type id_legacy registered
+[    0.871607] ntfs: driver 2.1.32 [Flags: R/W DEBUG].
+[    0.871880] jffs2: version 2.2. (NAND) © 2001-2006 Red Hat, Inc.
+[    0.872445] fuse init (API version 7.26)
+[    0.880684] bounce: pool size: 64 pages
+[    0.880700] io scheduler noop registered
+[    0.880711] io scheduler deadline registered
+[    0.880767] io scheduler cfq registered (default)
+[    0.883832] backlight supply power not found, using dummy regulator
+[    0.886269] ldb 2000000.aips-bus:ldb@020e0008: crtc not specified or invalid
+[    0.886296] ldb: probe of 2000000.aips-bus:ldb@020e0008 failed with error -22
+[    0.888076] Aravinth: mxcfb_probe ---->
+[    0.888119] mxc_sdc_fb fb@0: NO mxc display driver found!
+[    0.888172] Aravinth: mxcfb_probe ---->
+[    0.888205] mxc_sdc_fb fb@1: Can't get fb option for mxcfb1!
+[    0.888251] Aravinth: mxcfb_probe ---->
+[    0.888283] mxc_sdc_fb fb@2: Can't get fb option for mxcfb2!
+[    0.888331] Aravinth: mxcfb_probe ---->
+[    0.888361] mxc_sdc_fb fb@3: NO mxc display driver found!
+[    0.890632] imx-sdma 20ec000.sdma: no iram assigned, using external mem
+[    0.891164] imx-sdma 20ec000.sdma: loaded firmware 3.3
+[    0.896511] pfuze100-regulator 2-0008: Full layer: 2, Metal layer: 1
+[    0.897236] pfuze100-regulator 2-0008: FAB: 0, FIN: 0
+[    0.897254] pfuze100-regulator 2-0008: pfuze100 found.
+[    0.915695] 2020000.serial: ttymxc0 at MMIO 0x2020000 (irq = 29, base_baud = 5000000) is a IMX
+[    1.831288] console [ttymxc0] enabled
+[    1.835960] 21e8000.serial: ttymxc1 at MMIO 0x21e8000 (irq = 78, base_baud = 5000000) is a IMX
+[    1.845215] 21f0000.serial: ttymxc3 at MMIO 0x21f0000 (irq = 79, base_baud = 5000000) is a IMX
+[    1.854447] 21f4000.serial: ttymxc4 at MMIO 0x21f4000 (irq = 80, base_baud = 5000000) is a IMX
+[    1.865817] imx sema4 driver is registered.
+[    1.870060] [drm] Initialized
+[    1.873624] [drm] Initialized vivante 1.0.0 20120216 on minor 0
+[    1.892268] brd: module loaded
+[    1.903493] loop: module loaded
+[    1.907487] zram: Added device: zram0
+[    1.912966] ahci-imx 2200000.sata: fsl,transmit-level-mV not specified, using 00000024
+[    1.920936] ahci-imx 2200000.sata: fsl,transmit-boost-mdB not specified, using 00000480
+[    1.928954] ahci-imx 2200000.sata: fsl,transmit-atten-16ths not specified, using 00002000
+[    1.937192] ahci-imx 2200000.sata: fsl,receive-eq-mdB not specified, using 05000000
+[    1.948330] ahci-imx 2200000.sata: SSS flag set, parallel bus scan disabled
+[    1.955360] ahci-imx 2200000.sata: AHCI 0001.0300 32 slots 1 ports 3 Gbps 0x1 impl platform mode
+[    1.964187] ahci-imx 2200000.sata: flags: ncq sntf stag pm led clo only pmp pio slum part ccc apst 
+[    1.974785] scsi host0: ahci-imx
+[    1.978378] ata1: SATA max UDMA/133 mmio [mem 0x02200000-0x02203fff] port 0x100 irq 87
+[    1.990921] spi_imx 2008000.ecspi: probed
+[    1.995730] libphy: Fixed MDIO Bus: probed
+[    2.000226] tun: Universal TUN/TAP device driver, 1.6
+[    2.005322] tun: (C) 1999-2004 Max Krasnyansky <maxk@qualcomm.com>
+[    2.011728] CAN device driver interface
+[    2.015898] 2090000.flexcan supply xceiver not found, using dummy regulator
+[    2.023794] flexcan 2090000.flexcan: device registered (reg_base=f02f4000, irq=38)
+[    2.031582] 2094000.flexcan supply xceiver not found, using dummy regulator
+[    2.039354] flexcan 2094000.flexcan: device registered (reg_base=f02fc000, irq=39)
+[    2.048530] 2188000.ethernet supply phy not found, using dummy regulator
+[    2.066874] pps pps0: new PPS source ptp0
+[    2.072123] libphy: fec_enet_mii_bus: probed
+[    2.088401] fec 2188000.ethernet eth0: registered PHC device 0
+[    2.095248] PPP generic driver version 2.4.2
+[    2.099745] PPP BSD Compression module registered
+[    2.104485] PPP Deflate Compression module registered
+[    2.109566] PPP MPPE Compression module registered
+[    2.114386] NET: Registered protocol family 24
+[    2.118923] usbcore: registered new interface driver kaweth
+[    2.124525] pegasus: v0.9.3 (2013/04/25), Pegasus/Pegasus II USB Ethernet driver
+[    2.131999] usbcore: registered new interface driver pegasus
+[    2.137715] usbcore: registered new interface driver rtl8150
+[    2.143472] usbcore: registered new interface driver r8152
+[    2.149024] usbcore: registered new interface driver asix
+[    2.154518] usbcore: registered new interface driver ax88179_178a
+[    2.160693] usbcore: registered new interface driver cdc_ether
+[    2.166580] usbcore: registered new interface driver cdc_eem
+[    2.172315] usbcore: registered new interface driver net1080
+[    2.178029] usbcore: registered new interface driver cdc_subset
+[    2.184029] usbcore: registered new interface driver zaurus
+[    2.189674] usbcore: registered new interface driver cdc_ncm
+[    2.195367] ehci_hcd: USB 2.0 'Enhanced' Host Controller (EHCI) Driver
+[    2.201980] ehci-mxc: Freescale On-Chip EHCI Host driver
+[    2.207516] usbcore: registered new interface driver cdc_acm
+[    2.213204] cdc_acm: USB Abstract Control Model driver for USB modems and ISDN adapters
+[    2.221304] usbcore: registered new interface driver usb-storage
+[    2.227431] usbcore: registered new interface driver usbserial
+[    2.233340] usbcore: registered new interface driver usbserial_generic
+[    2.239911] usbserial: USB Serial support registered for generic
+[    2.245987] usbcore: registered new interface driver ftdi_sio
+[    2.251794] usbserial: USB Serial support registered for FTDI USB Serial Device
+[    2.259151] usbcore: registered new interface driver option
+[    2.264786] usbserial: USB Serial support registered for GSM modem (1-port)
+[    2.271850] usbcore: registered new interface driver usbtest
+[    2.277568] usbcore: registered new interface driver usb_ehset_test
+[    2.285169] 2184800.usbmisc supply vbus-wakeup not found, using dummy regulator
+[    2.304534] ci_hdrc ci_hdrc.1: EHCI Host Controller
+[    2.309449] ci_hdrc ci_hdrc.1: new USB bus registered, assigned bus number 1
+[    2.312065] ata1: SATA link down (SStatus 0 SControl 300)
+[    2.312104] ahci-imx 2200000.sata: no device found, disabling link.
+[    2.312110] ahci-imx 2200000.sata: pass ahci_imx..hotplug=1 to enable hotplug
+[    2.360435] ci_hdrc ci_hdrc.1: USB 2.0 started, EHCI 1.00
+[    2.366060] usb usb1: New USB device found, idVendor=1d6b, idProduct=0002
+[    2.372893] usb usb1: New USB device strings: Mfr=3, Product=2, SerialNumber=1
+[    2.380125] usb usb1: Product: EHCI Host Controller
+[    2.385034] usb usb1: Manufacturer: Linux 4.9.67-07228-gdc437277d928-dirty ehci_hcd
+[    2.392716] usb usb1: SerialNumber: ci_hdrc.1
+[    2.397830] hub 1-0:1.0: USB hub found
+[    2.401675] hub 1-0:1.0: 1 port detected
+[    2.406914] mousedev: PS/2 mouse device common for all mice
+[    2.413514] usbcore: registered new interface driver xpad
+[    2.418983] usbcore: registered new interface driver usb_acecad
+[    2.425007] usbcore: registered new interface driver aiptek
+[    2.430680] usbcore: registered new interface driver gtco
+[    2.436137] usbcore: registered new interface driver hanwang
+[    2.441885] usbcore: registered new interface driver kbtab
+[    2.458362] input: stmpe-ts as /devices/soc0/soc/2100000.aips-bus/21a4000.i2c/i2c-2/2-0041/stmpe-ts/input/input0
+[    2.471056] snvs_rtc 20cc000.snvs:snvs-rtc-lp: rtc core: registered 20cc000.snvs:snvs-r as rtc0
+[    2.479902] i2c /dev entries driver
+[    2.484369] IR NEC protocol handler initialized
+[    2.488907] IR RC5(x/sz) protocol handler initialized
+[    2.493996] IR RC6 protocol handler initialized
+[    2.498532] IR JVC protocol handler initialized
+[    2.503088] IR Sony protocol handler initialized
+[    2.507712] IR SANYO protocol handler initialized
+[    2.512556] IR Sharp protocol handler initialized
+[    2.517271] IR MCE Keyboard/mouse protocol handler initialized
+[    2.523132] IR XMP protocol handler initialized
+[    2.529874] ov564x_mipi 3-003c: found pwm2, period=0
+[    2.760436] usb 1-1: new high-speed USB device number 2 using ci_hdrc
+[    2.780752] ov5640_read_reg:write reg error:reg=300a
+[    2.785733] camera ov5640_mipi is not found
+[    2.791367] usbcore: registered new interface driver uvcvideo
+[    2.797122] USB Video Class driver (1.1.1)
+[    2.803361] imx2-wdt 20bc000.wdog: timeout 60 sec (nowayout=0)
+[    2.809892] device-mapper: uevent: version 1.0.3
+[    2.814921] device-mapper: ioctl: 4.35.0-ioctl (2016-06-23) initialised: dm-devel@redhat.com
+[    2.823620] Bluetooth: HCI UART driver ver 2.3
+[    2.828079] Bluetooth: HCI UART protocol H4 registered
+[    2.833364] Bluetooth: HCI UART protocol BCSP registered
+[    2.838684] Bluetooth: HCI UART protocol ATH3K registered
+[    2.844201] usbcore: registered new interface driver btusb
+[    2.850684] sdhci: Secure Digital Host Controller Interface driver
+[    2.856873] sdhci: Copyright(c) Pierre Ossman
+[    2.861265] sdhci-pltfm: SDHCI platform and OF driver helper
+[    2.867917] sdhci-esdhc-imx 2190000.usdhc: could not get ultra high speed state, work on normal mode
+[    2.877133] sdhci-esdhc-imx 2190000.usdhc: Got CD GPIO
+[    2.940622] mmc1: SDHCI controller on 2190000.usdhc [2190000.usdhc] using ADMA
+[    2.957946] usb 1-1: New USB device found, idVendor=0424, idProduct=2514
+[    2.964737] usb 1-1: New USB device strings: Mfr=0, Product=0, SerialNumber=0
+[    2.973974] sdhci-esdhc-imx 2198000.usdhc: could not get ultra high speed state, work on normal mode
+[    2.990911] hub 1-1:1.0: USB hub found
+[    2.996909] hub 1-1:1.0: 4 ports detected
+[    3.038082] mmc1: host does not support reading read-only switch, assuming write-enable
+[    3.051103] mmc0: SDHCI controller on 2198000.usdhc [2198000.usdhc] using ADMA
+[    3.060580] mmc1: new high speed SDHC card at address 59b4
+[    3.067151] mxc_vpu 2040000.vpu_fsl: VPU initialized
+[    3.079043] mxc_vdoa 21e4000.vdoa: i.MX Video Data Order Adapter(VDOA) driver probed
+[    3.081874] mmcblk1: mmc1:59b4 USD   7.48 GiB 
+[    3.093958] mxc_hdmi_cec soc:hdmi_cec@00120000: HDMI CEC initialized
+[    3.094113] random: fast init done
+[    3.105076] Galcore version 6.2.2.96445
+[    3.111482]  mmcblk1: p1 p2 p3 p4 p5 p6 p7 p8 p9 p10 p11
+[    3.176626] mmc0: new DDR MMC card at address 0001
+[    3.182832] mmcblk0: mmc0:0001 Q2J54A 3.59 GiB 
+[    3.188146] mmcblk0boot0: mmc0:0001 Q2J54A partition 1 16.0 MiB
+[    3.194932] mmcblk0boot1: mmc0:0001 Q2J54A partition 2 16.0 MiB
+[    3.206013] Alternate GPT is invalid, using primary GPT.
+[    3.211578]  mmcblk0: p1 p2 p3 p4 p5 p6 p7 p8 p9 p10 p11
+[    3.905981] caam 2100000.caam: ERA source: CAAMVID.
+[    3.910945] caam 2100000.caam: AXI pipeline throttling enabled.
+[    3.918178] caam 2100000.caam: Instantiated RNG4 SH1
+[    3.923196] caam 2100000.caam: device ID = 0x0a16010000000000 (Era 4)
+[    3.929649] caam 2100000.caam: job rings = 2, qi = 0
+[    3.944981] caam algorithms registered in /proc/crypto
+[    3.954420] caam_jr 2101000.jr0: registering rng-caam
+[    3.960531] platform caam_sm: blkkey_ex: 4 keystore units available
+[    3.966997] platform caam_sm: 64-bit clear key:
+[    3.971625] platform caam_sm: [0000] 00 01 02 03 04 0f 06 07
+[    3.977298] platform caam_sm: 64-bit black key:
+[    3.981862] platform caam_sm: [0000] 93 05 3e fc 14 5f 6f 86
+[    3.987532] platform caam_sm: [0008] 2c 38 de c7 ba bb 66 4d
+[    3.993219] platform caam_sm: 128-bit clear key:
+[    3.997849] platform caam_sm: [0000] 00 01 02 03 04 0f 06 07
+[    4.003539] platform caam_sm: [0008] 08 09 0a 0b 0c 0d 0e 0f
+[    4.009207] platform caam_sm: 128-bit black key:
+[    4.014112] platform caam_sm: [0000] c9 af 77 1b 33 fd 79 2d
+[    4.019784] platform caam_sm: [0008] 09 f4 3e cc 19 3d f4 56
+[    4.025479] platform caam_sm: 192-bit clear key:
+[    4.030107] platform caam_sm: [0000] 00 01 02 03 04 0f 06 07
+[    4.035797] platform caam_sm: [0008] 08 09 0a 0b 0c 0d 0e 0f
+[    4.041501] platform caam_sm: [0016] 10 11 12 13 14 15 16 17
+[    4.047169] platform caam_sm: 192-bit black key:
+[    4.051821] platform caam_sm: [0000] a3 20 2d f3 50 53 a0 dd
+[    4.057492] platform caam_sm: [0008] dc 3d 56 7f 4c 8a c1 2e
+[    4.063192] platform caam_sm: [0016] 49 54 b5 26 be 48 2b 11
+[    4.068861] platform caam_sm: [0024] 6e 8f 88 ee 15 23 2a 63
+[    4.074548] platform caam_sm: 256-bit clear key:
+[    4.079175] platform caam_sm: [0000] 00 01 02 03 04 0f 06 07
+[    4.084922] platform caam_sm: [0008] 08 09 0a 0b 0c 0d 0e 0f
+[    4.090615] platform caam_sm: [0016] 10 11 12 13 14 15 16 17
+[    4.096284] platform caam_sm: [0024] 18 19 1a 1b 1c 1d 1e 1f
+[    4.101967] platform caam_sm: 256-bit black key:
+[    4.106596] platform caam_sm: [0000] f7 c9 ad f6 64 80 be 09
+[    4.112284] platform caam_sm: [0008] 65 d4 09 2f 1d aa d4 97
+[    4.117952] platform caam_sm: [0016] 18 c3 48 5c ef 2d 43 c6
+[    4.123640] platform caam_sm: [0024] a7 57 a5 42 cc 64 2b 55
+[    4.129307] platform caam_sm: 64-bit unwritten blob:
+[    4.134298] platform caam_sm: [0000] 00 00 00 00 00 00 00 00
+[    4.139966] platform caam_sm: [0008] 00 00 00 00 00 00 00 00
+[    4.145653] platform caam_sm: [0016] 00 00 00 00 00 00 00 00
+[    4.151340] platform caam_sm: [0024] 00 00 00 00 00 00 00 00
+[    4.157008] platform caam_sm: [0032] 00 00 00 00 00 00 00 00
+[    4.162743] platform caam_sm: [0040] 00 00 00 00 00 00 00 00
+[    4.168455] platform caam_sm: [0048] 00 00 00 00 00 00 00 00
+[    4.174160] platform caam_sm: [0056] 00 00 00 00 00 00 00 00
+[    4.179832] platform caam_sm: [0064] 00 00 00 00 00 00 00 00
+[    4.185522] platform caam_sm: [0072] 00 00 00 00 00 00 00 00
+[    4.191211] platform caam_sm: [0080] 00 00 00 00 00 00 00 00
+[    4.196880] platform caam_sm: [0088] 00 00 00 00 00 00 00 00
+[    4.202566] platform caam_sm: 128-bit unwritten blob:
+[    4.207627] platform caam_sm: [0000] 00 00 00 00 00 00 00 00
+[    4.213313] platform caam_sm: [0008] 00 00 00 00 00 00 00 00
+[    4.218983] platform caam_sm: [0016] 00 00 00 00 00 00 00 00
+[    4.224669] platform caam_sm: [0024] 00 00 00 00 00 00 00 00
+[    4.230337] platform caam_sm: [0032] 00 00 00 00 00 00 00 00
+[    4.236024] platform caam_sm: [0040] 00 00 00 00 00 00 00 00
+[    4.241711] platform caam_sm: [0048] 00 00 00 00 00 00 00 00
+[    4.247380] platform caam_sm: [0056] 00 00 00 00 00 00 00 00
+[    4.253067] platform caam_sm: [0064] 00 00 00 00 00 00 00 00
+[    4.258737] platform caam_sm: [0072] 00 00 00 00 00 00 00 00
+[    4.264424] platform caam_sm: [0080] 00 00 00 00 00 00 00 00
+[    4.270093] platform caam_sm: [0088] 00 00 00 00 00 00 00 00
+[    4.275777] platform caam_sm: 196-bit unwritten blob:
+[    4.280856] platform caam_sm: [0000] 00 00 00 00 00 00 00 00
+[    4.286525] platform caam_sm: [0008] 00 00 00 00 00 00 00 00
+[    4.292210] platform caam_sm: [0016] 00 00 00 00 00 00 00 00
+[    4.297879] platform caam_sm: [0024] 00 00 00 00 00 00 00 00
+[    4.303565] platform caam_sm: [0032] 00 00 00 00 00 00 00 00
+[    4.309234] platform caam_sm: [0040] 00 00 00 00 00 00 00 00
+[    4.314919] platform caam_sm: [0048] 00 00 00 00 00 00 00 00
+[    4.320606] platform caam_sm: [0056] 00 00 00 00 00 00 00 00
+[    4.326274] platform caam_sm: [0064] 00 00 00 00 00 00 00 00
+[    4.331960] platform caam_sm: [0072] 00 00 00 00 00 00 00 00
+[    4.337628] platform caam_sm: [0080] 00 00 00 00 00 00 00 00
+[    4.343316] platform caam_sm: [0088] 00 00 00 00 00 00 00 00
+[    4.348983] platform caam_sm: 256-bit unwritten blob:
+[    4.354062] platform caam_sm: [0000] 00 00 00 00 00 00 00 00
+[    4.359730] platform caam_sm: [0008] 00 00 00 00 00 00 00 00
+[    4.365416] platform caam_sm: [0016] 00 00 00 00 00 00 00 00
+[    4.371102] platform caam_sm: [0024] 00 00 00 00 00 00 00 00
+[    4.376770] platform caam_sm: [0032] 00 00 00 00 00 00 00 00
+[    4.382456] platform caam_sm: [0040] 00 00 00 00 00 00 00 00
+[    4.388124] platform caam_sm: [0048] 00 00 00 00 00 00 00 00
+[    4.393809] platform caam_sm: [0056] 00 00 00 00 00 00 00 00
+[    4.399478] platform caam_sm: [0064] 00 00 00 00 00 00 00 00
+[    4.405164] platform caam_sm: [0072] 00 00 00 00 00 00 00 00
+[    4.410851] platform caam_sm: [0080] 00 00 00 00 00 00 00 00
+[    4.416519] platform caam_sm: [0088] 00 00 00 00 00 00 00 00
+[    4.422448] platform caam_sm: 64-bit black key in blob:
+[    4.427687] platform caam_sm: [0000] 67 b9 8a ce f1 31 0f 11
+[    4.433384] platform caam_sm: [0008] de f0 2b 9c 36 f2 8c 76
+[    4.439053] platform caam_sm: [0016] 88 ce f3 ac b1 7e 95 ba
+[    4.444741] platform caam_sm: [0024] d5 8b 56 b4 73 d5 f8 9a
+[    4.450430] platform caam_sm: [0032] da 72 af 2f 14 97 c5 8f
+[    4.456099] platform caam_sm: [0040] 94 14 56 a5 88 10 61 cc
+[    4.461785] platform caam_sm: [0048] 8f 87 a0 09 7a ad fc 63
+[    4.467456] platform caam_sm: [0056] 00 00 00 00 00 00 00 00
+[    4.473143] platform caam_sm: [0064] 00 00 00 00 00 00 00 00
+[    4.478812] platform caam_sm: [0072] 00 00 00 00 00 00 00 00
+[    4.484499] platform caam_sm: [0080] 00 00 00 00 00 00 00 00
+[    4.490168] platform caam_sm: [0088] 00 00 00 00 00 00 00 00
+[    4.495851] platform caam_sm: 128-bit black key in blob:
+[    4.501194] platform caam_sm: [0000] 1b 19 11 97 5d fe 9c c0
+[    4.506863] platform caam_sm: [0008] 99 c0 de 91 8b 91 35 ba
+[    4.512549] platform caam_sm: [0016] 8c 21 fa 79 35 b3 d6 06
+[    4.518219] platform caam_sm: [0024] 99 8d c5 4b 5f 8f 92 54
+[    4.523906] platform caam_sm: [0032] 4c 0f 60 76 fc ca 3e 92
+[    4.529574] platform caam_sm: [0040] ec c3 2d 4d 77 b6 11 cf
+[    4.535260] platform caam_sm: [0048] b0 4e 26 c8 aa 4f 97 1d
+[    4.540946] platform caam_sm: [0056] 90 cb 54 18 45 cd 56 b0
+[    4.546615] platform caam_sm: [0064] 00 00 00 00 00 00 00 00
+[    4.552301] platform caam_sm: [0072] 00 00 00 00 00 00 00 00
+[    4.557970] platform caam_sm: [0080] 00 00 00 00 00 00 00 00
+[    4.563657] platform caam_sm: [0088] 00 00 00 00 00 00 00 00
+[    4.569323] platform caam_sm: 192-bit black key in blob:
+[    4.574663] platform caam_sm: [0000] 51 66 7f eb 00 fd 92 36
+[    4.580332] platform caam_sm: [0008] 48 c1 26 36 61 7a a6 48
+[    4.586017] platform caam_sm: [0016] 4c 42 7e 9b 99 a1 46 25
+[    4.591704] platform caam_sm: [0024] c9 07 a5 8b fa fd 49 41
+[    4.597374] platform caam_sm: [0032] 2b 34 02 e3 06 96 0b 3e
+[    4.603061] platform caam_sm: [0040] 0d 47 ea e9 e3 d0 9e a1
+[    4.608729] platform caam_sm: [0048] 03 f8 1b cc 75 68 92 bf
+[    4.614415] platform caam_sm: [0056] 75 cf ec 7e 40 cb f7 43
+[    4.620084] platform caam_sm: [0064] 3c 46 5c b0 f8 f2 3e 1b
+[    4.625771] platform caam_sm: [0072] 00 00 00 00 00 00 00 00
+[    4.631458] platform caam_sm: [0080] 00 00 00 00 00 00 00 00
+[    4.637127] platform caam_sm: [0088] 00 00 00 00 00 00 00 00
+[    4.642813] platform caam_sm: 256-bit black key in blob:
+[    4.648136] platform caam_sm: [0000] 8f 87 55 7f f1 00 ed 33
+[    4.653822] platform caam_sm: [0008] bf a9 51 c4 22 4e d3 0a
+[    4.659490] platform caam_sm: [0016] 2e c9 27 76 f7 37 40 cb
+[    4.665176] platform caam_sm: [0024] 66 01 03 c6 a2 ec 4a 6c
+[    4.670864] platform caam_sm: [0032] f3 8d 2d f2 1a 0a b4 e6
+[    4.676533] platform caam_sm: [0040] 61 b3 c7 45 aa 46 f9 b4
+[    4.682230] platform caam_sm: [0048] 71 74 4a 15 e0 d7 b1 69
+[    4.687900] platform caam_sm: [0056] af c0 39 df 0b 85 86 09
+[    4.693591] platform caam_sm: [0064] 60 62 24 80 39 a0 4f 64
+[    4.699261] platform caam_sm: [0072] 53 19 d5 39 a8 24 28 98
+[    4.704948] platform caam_sm: [0080] 00 00 00 00 00 00 00 00
+[    4.710635] platform caam_sm: [0088] 00 00 00 00 00 00 00 00
+[    4.716517] platform caam_sm: restored 64-bit black key:
+[    4.721868] platform caam_sm: [0000] 70 aa 09 da 7d 2f 9a 4f
+[    4.727538] platform caam_sm: [0008] 0c 22 b2 41 61 8b 54 5f
+[    4.733223] platform caam_sm: restored 128-bit black key:
+[    4.738631] platform caam_sm: [0000] c9 af 77 1b 33 fd 79 2d
+[    4.744318] platform caam_sm: [0008] 09 f4 3e cc 19 3d f4 56
+[    4.749983] platform caam_sm: restored 192-bit black key:
+[    4.755409] platform caam_sm: [0000] a3 20 2d f3 50 53 a0 dd
+[    4.761096] platform caam_sm: [0008] dc 3d 56 7f 4c 8a c1 2e
+[    4.766765] platform caam_sm: [0016] ac 12 43 3f 34 a5 c5 db
+[    4.772451] platform caam_sm: [0024] 37 18 cd d4 db 07 36 91
+[    4.778117] platform caam_sm: restored 256-bit black key:
+[    4.783544] platform caam_sm: [0000] f7 c9 ad f6 64 80 be 09
+[    4.789212] platform caam_sm: [0008] 65 d4 09 2f 1d aa d4 97
+[    4.794899] platform caam_sm: [0016] 18 c3 48 5c ef 2d 43 c6
+[    4.800585] platform caam_sm: [0024] a7 57 a5 42 cc 64 2b 55
+[    4.806543] snvs-secvio 20cc000.caam-snvs: can't get snvs clock
+[    4.812557] snvs-secvio 20cc000.caam-snvs: violation handlers armed - non-secure state
+[    4.821385] hidraw: raw HID events driver (C) Jiri Kosina
+[    4.829814] usbcore: registered new interface driver usbhid
+[    4.835435] usbhid: USB HID core driver
+[    4.840170] ashmem: initialized
+[    4.844971] usbcore: registered new interface driver snd-usb-audio
+[    4.854138] sgtl5000 2-000a: sgtl5000 revision 0x11
+[    4.891000] fsl-ssi-dai 2028000.ssi: No cache defaults, reading back from HW
+[    4.999187] fsl-hdmi-dai soc:hdmi_audio@00120000: failed to probe. Load HDMI-video first.
+[    5.007413] fsl-hdmi-dai: probe of soc:hdmi_audio@00120000 failed with error -12
+[    5.032581] imx-sgtl5000 sound: sgtl5000 <-> 2028000.ssi mapping ok
+[    5.044616] imx-spdif sound-spdif: snd-soc-dummy-dai <-> 2004000.spdif mapping ok
+[    5.053935] imx-audio-hdmi sound-hdmi: initialize HDMI-audio failed. load HDMI-video first!
+[    5.062569] NET: Registered protocol family 26
+[    5.067029] u32 classifier
+[    5.069741]     Actions configured
+[    5.073177] Netfilter messages via NETLINK v0.30.
+[    5.078244] nf_conntrack version 0.5.0 (16384 buckets, 65536 max)
+[    5.084721] ctnetlink v0.93: registering with nfnetlink.
+[    5.090870] xt_time: kernel timezone is -0000
+[    5.095522] ip_tables: (C) 2000-2006 Netfilter Core Team
+[    5.101083] arp_tables: arp_tables: (C) 2002 David S. Miller
+[    5.106795] Initializing XFRM netlink socket
+[    5.111665] NET: Registered protocol family 10
+[    5.117349] mip6: Mobile IPv6
+[    5.120351] ip6_tables: (C) 2000-2006 Netfilter Core Team
+[    5.125986] sit: IPv6, IPv4 and MPLS over IPv4 tunneling driver
+[    5.132750] NET: Registered protocol family 17
+[    5.137228] NET: Registered protocol family 15
+[    5.141723] can: controller area network core (rev 20120528 abi 9)
+[    5.147993] NET: Registered protocol family 29
+[    5.152575] can: raw protocol (rev 20120528)
+[    5.156856] can: broadcast manager protocol (rev 20161123 t)
+[    5.162560] can: netlink gateway (rev 20130117) max_hops=1
+[    5.168349] Bluetooth: RFCOMM TTY layer initialized
+[    5.173310] Bluetooth: RFCOMM socket layer initialized
+[    5.178483] Bluetooth: RFCOMM ver 1.11
+[    5.182281] Bluetooth: BNEP (Ethernet Emulation) ver 1.3
+[    5.187600] Bluetooth: BNEP filters: protocol multicast
+[    5.192894] Bluetooth: BNEP socket layer initialized
+[    5.197868] Bluetooth: HIDP (Human Interface Emulation) ver 1.2
+[    5.203818] Bluetooth: HIDP socket layer initialized
+[    5.208853] 8021q: 802.1Q VLAN Support v1.8
+[    5.213296] Key type dns_resolver registered
+[    5.220670] cpu cpu0: Registered imx6q-cpufreq
+[    5.225962] registered taskstats version 1
+[    5.249706] imx_thermal 2000000.aips-bus:tempmon: Industrial CPU temperature grade - max:105C critical:100C passive:95C
+[    5.261233] dhd_module_init in
+[    5.265427] input: gpio-keys as /devices/soc0/gpio-keys/input/input1
+[    5.272301] snvs_rtc 20cc000.snvs:snvs-rtc-lp: setting system clock to 1970-01-01 00:00:02 UTC (2)
+[    5.282149] usb_otg_vbus: disabling
+[    5.285669] ALSA device list:
+[    5.288647]   #0: imx6q-apalis-sgtl5000
+[    5.292527]   #1: imx-spdif
+[    5.298135] Freeing unused kernel memory: 1024K
+[    5.308421] init: init first stage started!
+[    5.324491] SELinux:  Permission validate_trans in class security not defined in policy.
+[    5.333088] SELinux:  Class cap_userns not defined in policy.
+[    5.338843] SELinux:  Class cap2_userns not defined in policy.
+[    5.344710] SELinux: the above unknown classes and permissions will be denied
+[    5.417651] audit: type=1403 audit(5.401:2): policy loaded auid=4294967295 ses=4294967295
+[    5.426837] audit: type=1404 audit(5.411:3): enforcing=1 old_enforcing=0 auid=4294967295 ses=4294967295
+[    5.480666] init: (Initializing SELinux enforcing took 0.17s.)
+[    5.495477] init: init second stage started!
+[    5.522130] init: Running restorecon...
+[    5.635829] init: waitpid failed: No child processes
+[    5.641852] init: (Loading properties from /default.prop took 0.00s.)
+[    5.653132] init: (Parsing /init.environ.rc took 0.00s.)
+[    5.659863] init: (Parsing /init.usb.rc took 0.00s.)
+[    5.668420] init: (Parsing init.freescale.usb.rc took 0.00s.)
+[    5.674402] init: (Parsing init.freescale.i.MX6Q.rc took 0.00s.)
+[    5.680592] init: (Parsing init.freescale.emmc.rc took 0.00s.)
+[    5.686461] init: (Parsing /init.freescale.rc took 0.02s.)
+[    5.700116] ueventd: ueventd started!
+[    6.168720] ueventd: Coldboot took 0.46s.
+[    6.202255] watchdogd: started (interval 10, margin 20)!
+[    7.198824] EXT4-fs (mmcblk1p3): mounted filesystem with ordered data mode. Opts: barrier=1
+[    7.209024] EXT4-fs (mmcblk1p10): Ignoring removed nomblk_io_submit option
+[    7.253627] EXT4-fs (mmcblk1p10): mounted filesystem with ordered data mode. Opts: nomblk_io_submit,noauto_da_alloc,errors=panic
+[    7.296127] EXT4-fs (mmcblk1p4): Ignoring removed nomblk_io_submit option
+[    7.322382] EXT4-fs (mmcblk1p4): mounted filesystem with ordered data mode. Opts: nomblk_io_submit
+[    7.337291] EXT4-fs (mmcblk1p5): mounted filesystem with ordered data mode. Opts: (null)
+[    8.325585] file system registered
+[    8.341069] using random self ethernet address
+[    8.345529] using random host ethernet address
+[    8.370250] zram0: detected capacity change from 0 to 314572800
+[    8.569502] logd.auditd: start
+[    8.573265] logd.klogd: 8572852667
+[    8.581461] Adding 307196k swap on /dev/block/zram0.  Priority:-1 extents:1 across:307196k SS
+[    9.315892] binder: 260:260 transaction failed 29189, size 0-0
+[    9.318134] logd.daemon: reinit
+sabresd_6dq:/ # 
+sabresd_6dq:/ # 
+sabresd_6dq:/ # 
+sabresd_6dq:/ # 
+sabresd_6dq:/ # 
+[   10.333468] healthd: No battery devices found
+sabresd_6dq:/ # [   10.682405] init: Service 'magd' (pid 279) exited with status 255
+lo[   11.240342] ERROR: v4l2 capture: slave not found! V4L2_CID_HUE
+[   11.252005] ERROR: v4l2 capture: slave not found! V4L2_CID_HUE
+gcat [   12.186787] init: Service 'surfaceflinger' (pid 264) killed by signal 11
+[   12.195585] init: Service 'surfaceflinger' (pid 264) killing any children in process group
+[   12.204368] init: Service 'zygote' is being killed...
+[   12.219427] init: Service 'zygote' (pid 267) killed by signal 9
+[   12.225522] init: Service 'zygote' (pid 267) killing any children in process group
+[   12.233776] init: write_file: Unable to open '/sys/android_power/request_state': No such file or directory
+[   12.245996] init: write_file: Unable to write to '/sys/power/state': Invalid argument
+[   12.254245] init: Service 'audioserver' is being killed...
+[   12.259999] init: Service 'cameraserver' is being killed...
+-c
+sabresd_6dq:/ # 
+sabresd_6dq:/ # 
+sabresd_6dq:/ # 
+sabresd_6dq:/ # sabresd_6dq:/ # logcat -c                                                      
+[   14.764533] ERROR: v4l2 capture: slave not found! V4L2_CID_HUE
+[   14.771825] ERROR: v4l2 capture: slave not found! V4L2_CID_HUE
+sabresd_6dq:/ # 
+sabresd_6dq:/ # 
+sabresd_6dq:/ # 
+sabresd_6dq:/ # sabresd_6dq:/ # logcat -c                                                      [   15.883379] init: Service 'surfaceflinger' (pid 359) killed by signal 11
+[   15.890144] init: Service 'surfaceflinger' (pid 359) killing any children in process group
+[   15.898902] init: Service 'zygote' is being killed...
+[   15.912834] init: Service 'zygote' (pid 354) killed by signal 9
+[   15.918856] init: Service 'zygote' (pid 354) killing any children in process group
+[   15.927207] init: write_file: Unable to open '/sys/android_power/request_state': No such file or directory
+[   15.937286] init: write_file: Unable to write to '/sys/power/state': Invalid argument
+[   15.945703] init: Service 'audioserver' is being killed...
+[   15.952042] init: Service 'cameraserver' is being killed...
+[   15.957883] init: Service 'media' is being killed...
+   
+--------- beginning of main
+01-01 00:00:14.826   355   355 W audio_hw_primary: card 0, id imx6qapalissgtl ,driver imx6q-apalis-sg, name imx6q-apalis-sgtl5000
+01-01 00:00:14.827   355   355 W audio_hw_primary: unrecognized card found.
+01-01 00:00:14.827   355   355 W audio_hw_primary: card 1, id imxspdif ,driver imx-spdif, name imx-spdif
+01-01 00:00:14.827   355   355 W audio_hw_primary: out rate 44100
+01-01 00:00:14.841   355   355 W audio_hw_primary: in rate 44100, channels 2 format 3
+01-01 00:00:14.841   355   355 I AudioFlinger: loadHwModule() Loaded primary audio interface from Freescale i.MX Audio HW HAL (audio) handle 10
+01-01 00:00:14.841   355   355 I AudioFlinger: openOutput(), module 10 Device 2, SamplingRate 44100, Format 0x000001, Channels 3, flags 2
+01-01 00:00:14.841   355   355 W audio_hw_primary: open output stream devices 2, format 1, channels 3, sample_rate 44100, flag 2
+01-01 00:00:14.842   355   355 W audio_hw_primary: opened out stream...-1319291584, type 1
+01-01 00:00:14.842   355   355 I AudioFlinger: HAL output buffer size 192 frames, normal sink buffer size 768 frames
+01-01 00:00:14.860   355   355 I BufferProvider: found effect "Multichannel Downmix To Stereo" from The Android Open Source Project
+01-01 00:00:14.861   355   355 I AudioFlinger: Using module 10 has the primary audio interface
+01-01 00:00:14.861   355   380 I AudioFlinger: AudioFlinger's thread 0xb1083cc0 ready to run
+01-01 00:00:14.862   355   380 W BatteryNotifier: batterystats service unavailable!
+01-01 00:00:14.862   355   380 W BatteryNotifier: batterystats service unavailable!
+01-01 00:00:14.863   355   380 W BatteryNotifier: batterystats service unavailable!
+01-01 00:00:14.863   355   380 W audio_hw_primary: out_set_parameters routing=2, ret 0, out -1319291584
+01-01 00:00:14.863   355   380 W AudioFlinger: no wake lock to update, system not ready yet
+01-01 00:00:14.866   355   355 W audio_hw_primary: In channels 2, rate 48000, devices 0x80000004
+01-01 00:00:14.866   355   355 W audio_hw_primary: get_input_buffer_size size = 208, channel_count = 2
+01-01 00:00:14.866   355   355 W audio_hw_primary: get_input_buffer_size size = 208, channel_count = 2
+01-01 00:00:14.868   355   382 I AudioFlinger: AudioFlinger's thread 0xb0c03d00 ready to run
+01-01 00:00:14.870   355   355 I bt_a2dp_hw: adev_open:  adev_open in A2dp_hw module
+01-01 00:00:14.870   355   355 I AudioFlinger: loadHwModule() Loaded a2dp audio interface from A2DP Audio HW HAL (audio) handle 18
+01-01 00:00:14.873   355   355 I AudioFlinger: loadHwModule() Loaded usb audio interface from USB audio HW HAL (audio) handle 26
+01-01 00:00:14.874   355   381 E FastThread: did not receive expected priority boost
+01-01 00:00:14.875   355   355 I r_submix: adev_open(name=audio_hw_if)
+01-01 00:00:14.876   355   355 I r_submix: adev_init_check()
+01-01 00:00:14.876   355   355 I AudioFlinger: loadHwModule() Loaded r_submix audio interface from Wifi Display audio HAL (audio) handle 34
+01-01 00:00:14.876   355   355 D r_submix: adev_open_input_stream(addr=0)
+01-01 00:00:14.876   355   355 D r_submix: submix_audio_device_create_pipe_l(addr=0, idx=9)
+01-01 00:00:14.876   355   355 D r_submix:   now using address 0 for route 9
+01-01 00:00:14.879   355   383 I AudioFlinger: AudioFlinger's thread 0xb0903600 ready to run
+01-01 00:00:14.879   355   355 D r_submix: adev_close_input_stream()
+01-01 00:00:14.880   355   355 D r_submix: submix_audio_device_release_pipe_l(idx=9) addr=0
+01-01 00:00:14.880   355   355 D r_submix: submix_audio_device_destroy_pipe_l(): pipe destroyed
+01-01 00:00:14.881   355   355 I RadioService: RadioService
+01-01 00:00:14.881   355   355 I RadioService: onFirstRef
+01-01 00:00:14.882   355   355 E RadioService: couldn't load radio module radio.primary (No such file or directory)
+01-01 00:00:14.882   355   355 E SoundTriggerHwService: couldn't load sound trigger module sound_trigger.primary (No such file or directory)
+01-01 00:00:15.130   357   357 I mediaserver: ServiceManager: 0xaef193e0
+01-01 00:00:15.133   357   357 W BatteryNotifier: batterystats service unavailable!
+01-01 00:00:15.367   359   359 E gralloc : int gralloc1_device_open(const struct hw_module_t *, const char *, hw_device_t **) invalid name:fb0
+01-01 00:00:15.369   359   359 I hwcomposer: hwc_device_open,435
+01-01 00:00:15.369   359   359 I SurfaceFlinger: Using composer version 1.3
+--------- beginning of crash
+01-01 00:00:15.408   359   359 F libc    : Fatal signal 11 (SIGSEGV), code 1, fault addr 0xfffffff4 in tid 359 (surfaceflinger)
+01-01 00:00:15.409   244   244 W         : debuggerd: handling request: pid=359 uid=1000 gid=1003 tid=359
+01-01 00:00:15.410   359   404 W display : open /sys/class/graphics/fb0/vsync failed, fallback to fake vsync
+01-01 00:00:15.424   406   406 E         : debuggerd: Unable to connect to activity manager (connect failed: Connection refused)
+01-01 00:00:15.475   406   406 F DEBUG   : *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** ***
+01-01 00:00:15.475   406   406 F DEBUG   : Build fingerprint: 'Android/sabresd_6dq/sabresd_6dq:7.1.2/2.0.0-rfp-rc6/20170930:user/release-keys'
+01-01 00:00:15.475   406   406 F DEBUG   : Revision: '0'
+01-01 00:00:15.475   406   406 F DEBUG   : ABI: 'arm'
+01-01 00:00:15.476   406   406 F DEBUG   : pid: 359, tid: 359, name: surfaceflinger  >>> /system/bin/surfaceflinger <<<
+01-01 00:00:15.476   406   406 F DEBUG   : signal 11 (SIGSEGV), code 1 (SEGV_MAPERR), fault addr 0xfffffff4
+01-01 00:00:15.476   406   406 F DEBUG   :     r0 00000000  r1 00000001  r2 00000000  r3 00000001
+01-01 00:00:15.476   406   406 F DEBUG   :     r4 b4fbfdcc  r5 ac0721c0  r6 ffffffdc  r7 be909848
+01-01 00:00:15.476   406   406 F DEBUG   :     r8 b4d05e50  r9 b4d05f61  sl 00000000  fp be909648
+01-01 00:00:15.476   406   406 F DEBUG   :     ip b519dc74  sp be9095e8  lr b5193c13  pc b4d045ec  cpsr 800e0030
+01-01 00:00:15.486   406   406 F DEBUG   : 
+01-01 00:00:15.486   406   406 F DEBUG   : backtrace:
+01-01 00:00:15.486   406   406 F DEBUG   :     #00 pc 000015ec  /system/lib/hw/hwcomposer.imx6.so
+01-01 00:00:15.487   406   406 F DEBUG   :     #01 pc 000319b5  /system/lib/libsurfaceflinger.so
+01-01 00:00:15.487   406   406 F DEBUG   :     #02 pc 000314c1  /system/lib/libsurfaceflinger.so
+01-01 00:00:15.487   406   406 F DEBUG   :     #03 pc 00027bd9  /system/lib/libsurfaceflinger.so (_ZN7android14SurfaceFlinger4initEv+312)
+01-01 00:00:15.487   406   406 F DEBUG   :     #04 pc 00000fdd  /system/bin/surfaceflinger
+01-01 00:00:15.487   406   406 F DEBUG   :     #05 pc 00016c4d  /system/lib/libc.so (__libc_init+48)
+01-01 00:00:15.487   406   406 F DEBUG   :     #06 pc 00000e90  /system/bin/surfaceflinger
+01-01 00:00:15.790   356   356 I ServiceManager: Waiting for service media.camera.proxy...
+01-01 00:00:15.882   244   244 W         : debuggerd: resuming target 359
+01-01 00:00:15.956   263   263 I ServiceManager: service 'media.sound_trigger_hw' died
+01-01 00:00:15.956   263   263 I ServiceManager: service 'media.radio' died
+01-01 00:00:15.956   263   263 I ServiceManager: service 'media.audio_flinger' died
+01-01 00:00:15.956   263   263 I ServiceManager: service 'media.audio_policy' died
+01-01 00:00:15.970   263   263 I ServiceManager: service 'media.player' died
+01-01 00:00:15.970   263   263 I ServiceManager: service 'media.resource_manager' died
+01-01 00:00:20.229   432   432 I Netd    : Netd 1.0 starting
+01-01 00:00:20.229   432   432 D TetherController: Setting IP forward enable = 0
+01-01 00:00:20.281   433   433 I SurfaceFlinger: SurfaceFlinger is starting
+01-01 00:00:20.281   433   433 I SurfaceFlinger: SurfaceFlinger's main thread ready to run. Initializing graphics H/W...
+01-01 00:00:20.294   433   433 D libEGL  : loaded /system/lib/egl/libEGL_VIVANTE.so
+01-01 00:00:20.324   433   433 D libEGL  : loaded /system/lib/egl/libGLESv1_CM_VIVANTE.so
+[   20.361816] ERROR: v4l2 capture: slave not found! V4L2_CID_HUE
+[   20.367811] ERROR: v4l2 capture: slave not found! V4L2_CID_HUE
+01-01 00:00:20.326   430   430 I cameraserver: ServiceManager: 0xa7b99380
+01-01 00:00:20.326   430   430 I CameraService: CameraService started (pid=430)
+01-01 00:00:20.326   430   430 I CameraService: CameraService process starting
+01-01 00:00:20.327   430   430 W BatteryNotifier: batterystats service unavailable!
+01-01 00:00:20.327   430   430 W BatteryNotifier: batterystats service unavailable!
+01-01 00:00:20.361   430   430 I FslCameraHAL: void CameraHAL::enumSensorSet()
+01-01 00:00:20.361   430   430 I FslCameraHAL: int32_t CameraHAL::matchDevNodes()
+01-01 00:00:20.361   430   430 I FslCameraHAL: getNodeName: dev path:/dev/video1
+01-01 00:00:20.367   430   430 W FslCameraHAL: int32_t CameraHAL::getNodeName(const char *, char *, size_t) open dev path:/dev/video1 failed:Try again
+01-01 00:00:20.367   430   430 I FslCameraHAL: getNodeName: dev path:/dev/video0
+01-01 00:00:20.390   430   430 W FslCameraHAL: int32_t CameraHAL::getNodeName(const char *, char *, size_t) open dev path:/dev/video0 failed:Try again
+01-01 00:00:20.390   430   430 I FslCameraHAL: matchPropertyName: index:0, ov5640_mipi,ov5642_camera,ov5640_camera
+01-01 00:00:20.390   430   430 I FslCameraHAL: index:0, propName:ov5640_mipi
+01-01 00:00:20.390   430   430 I FslCameraHAL: int32_t CameraHAL::matchNodeName(const char *, nodeSet *, int32_t)
+01-01 00:00:20.390   430   430 I FslCameraHAL: index:0, propName:ov5642_camera
+01-01 00:00:20.390   430   430 I FslCameraHAL: int32_t CameraHAL::matchNodeName(const char *, nodeSet *, int32_t)
+01-01 00:00:20.390   430   430 I FslCameraHAL: index:0, propName:ov5640_camera
+01-01 00:00:20.390   430   430 I FslCameraHAL: int32_t CameraHAL::matchNodeName(const char *, nodeSet *, int32_t)
+01-01 00:00:20.390   430   430 I FslCameraHAL: matchPropertyName: index:1, uvc,ov5642_camera,ov5640_camera
+01-01 00:00:20.390   430   430 I FslCameraHAL: index:1, propName:uvc
+01-01 00:00:20.390   430   430 I FslCameraHAL: int32_t CameraHAL::matchNodeName(const char *, nodeSet *, int32_t)
+01-01 00:00:20.390   430   430 I FslCameraHAL: index:1, propName:ov5642_camera
+01-01 00:00:20.390   430   430 I FslCameraHAL: int32_t CameraHAL::matchNodeName(const char *, nodeSet *, int32_t)
+01-01 00:00:20.390   430   430 I FslCameraHAL: index:1, propName:ov5640_camera
+01-01 00:00:20.390   430   430 I FslCameraHAL: int32_t CameraHAL::matchNodeName(const char *, nodeSet *, int32_t)
+01-01 00:00:20.390   430   430 I FslCameraHAL: camera number is 0
+01-01 00:00:20.391   430   430 I CameraService: Loaded "Default Camera HAL" camera module
+01-01 00:00:20.392   430   430 I ServiceManager: Waiting for service media.camera.proxy...
+01-01 00:00:20.459   433   433 D libEGL  : loaded /system/lib/egl/libGLESv2_VIVANTE.so
+01-01 00:00:20.528   429   429 I         : sMaxFastTracks = 8
+01-01 00:00:20.540   429   429 I audioserver: ServiceManager: 0xabe19380
+01-01 00:00:20.541   429   429 W BatteryNotifier: batterystats service unavailable!
+01-01 00:00:20.541   429   429 I AudioFlinger: Using default 3000 mSec as standby time.
+01-01 00:00:20.542   429   429 I AudioPolicyService: AudioPolicyService CSTOR in new mode
+01-01 00:00:20.573   429   429 W audio_hw_primary: card 0, id imx6qapalissgtl ,driver imx6q-apalis-sg, name imx6q-apalis-sgtl5000
+01-01 00:00:20.573   429   429 W audio_hw_primary: unrecognized card found.
+01-01 00:00:20.573   429   429 W audio_hw_primary: card 1, id imxspdif ,driver imx-spdif, name imx-spdif
+01-01 00:00:20.574   429   429 W audio_hw_primary: out rate 44100
+01-01 00:00:20.581   429   429 W audio_hw_primary: in rate 44100, channels 2 format 3
+01-01 00:00:20.581   429   429 I AudioFlinger: loadHwModule() Loaded primary audio interface from Freescale i.MX Audio HW HAL (audio) handle 10
+01-01 00:00:20.581   429   429 I AudioFlinger: openOutput(), module 10 Device 2, SamplingRate 44100, Format 0x000001, Channels 3, flags 2
+01-01 00:00:20.581   429   429 W audio_hw_primary: open output stream devices 2, format 1, channels 3, sample_rate 44100, flag 2
+01-01 00:00:20.582   429   429 W audio_hw_primary: opened out stream...-1411041984, type 1
+01-01 00:00:20.582   429   429 I AudioFlinger: HAL output buffer size 192 frames, normal sink buffer size 768 frames
+01-01 00:00:20.618   429   429 I BufferProvider: found effect "Multichannel Downmix To Stereo" from The Android Open Source Project
+01-01 00:00:20.619   429   429 I AudioFlinger: Using module 10 has the primary audio interface
+01-01 00:00:20.619   429   449 I AudioFlinger: AudioFlinger's thread 0xab903740 ready to run
+01-01 00:00:20.620   429   449 W BatteryNotifier: batterystats service unavailable!
+01-01 00:00:20.620   429   449 W BatteryNotifier: batterystats service unavailable!
+01-01 00:00:20.621   429   449 W BatteryNotifier: batterystats service unavailable!
+01-01 00:00:20.622   429   449 W audio_hw_primary: out_set_parameters routing=2, ret 0, out -1411041984
+01-01 00:00:20.622   429   449 W AudioFlinger: no wake lock to update, system not ready yet
+01-01 00:00:20.624   429   429 W audio_hw_primary: In channels 2, rate 48000, devices 0x80000004
+01-01 00:00:20.624   429   429 W audio_hw_primary: get_input_buffer_size size = 208, channel_count = 2
+01-01 00:00:20.624   429   429 W audio_hw_primary: get_input_buffer_size size = 208, channel_count = 2
+01-01 00:00:20.640   429   451 I AudioFlinger: AudioFlinger's thread 0xab483c00 ready to run
+01-01 00:00:20.640   429   450 E FastThread: did not receive expected priority boost
+01-01 00:00:20.643   429   429 I bt_a2dp_hw: adev_open:  adev_open in A2dp_hw module
+01-01 00:00:20.644   429   429 I AudioFlinger: loadHwModule() Loaded a2dp audio interface from A2DP Audio HW HAL (audio) handle 18
+01-01 00:00:20.647   429   429 I AudioFlinger: loadHwModule() Loaded usb audio interface from USB audio HW HAL (audio) handle 26
+01-01 00:00:20.649   429   429 I r_submix: adev_open(name=audio_hw_if)
+01-01 00:00:20.649   429   429 I r_submix: adev_init_check()
+01-01 00:00:20.649   429   429 I AudioFlinger: loadHwModule() Loaded r_submix audio interface from Wifi Display audio HAL (audio) handle 34
+01-01 00:00:20.649   429   429 D r_submix: adev_open_input_stream(addr=0)
+01-01 00:00:20.649   429   429 D r_submix: submix_audio_device_create_pipe_l(addr=0, idx=9)
+01-01 00:00:20.649   429   429 D r_submix:   now using address 0 for route 9
+01-01 00:00:20.670   429   452 I AudioFlinger: AudioFlinger's thread 0xab383240 ready to run
+01-01 00:00:20.670   429   429 D r_submix: adev_close_input_stream()
+01-01 00:00:20.670   429   429 D r_submix: submix_audio_device_release_pipe_l(idx=9) addr=0
+01-01 00:00:20.670   429   429 D r_submix: submix_audio_device_destroy_pipe_l(): pipe destroyed
+01-01 00:00:20.672   429   429 I RadioService: RadioService
+01-01 00:00:20.672   429   429 I RadioService: onFirstRef
+01-01 00:00:20.672   429   429 E RadioService: couldn't load radio module radio.primary (No such file or directory)
+01-01 00:00:20.673   429   429 E SoundTriggerHwService: couldn't load sound trigger module sound_trigger.primary (No such file or directory)
+01-01 00:00:20.736   431   431 I mediaserver: ServiceManager: 0xaad993e0
+01-01 00:00:20.738   431   431 W BatteryNotifier: batterystats service unavailable!
+01-01 00:00:21.086   433   433 E gralloc : int gralloc1_device_open(const struct hw_module_t *, const char *, hw_device_t **) invalid name:fb0
+01-01 00:00:21.087   433   433 I hwcomposer: hwc_device_open,435
+01-01 00:00:21.087   433   433 I SurfaceFlinger: Using composer version 1.3
+01-01 00:00:21.119   433   474 W display : open /sys/class/graphics/fb0/vsync failed, fallback to fake vsync
+01-01 00:00:21.119   433   433 F libc    : Fatal signal 11 (SIGSEGV), code 1, fault addr 0xfffffff4 in tid 433 (surfaceflinger)
+01-01 00:00:21.120   244   244 W         : debuggerd: handling request: pid=433 uid=1000 gid=1003 tid=433
+01-01 00:00:21.150   476   476 E         : debuggerd: Unable to connect to activity manager (connect failed: Connection refused)
+01-01 00:00:21.151   476   476 F DEBUG   : *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** ***
+01-01 00:00:21.151   476   476 F DEBUG   : Build fingerprint: 'Android/sabresd_6dq/sabresd_6dq:7.1.2/2.0.0-rfp-rc6/20170930:user/release-keys'
+01-01 00:00:21.151   476   476 F DEBUG   : Revision: '0'
+01-01 00:00:21.151   476   476 F DEBUG   : ABI: 'arm'
+01-01 00:00:21.151   476   476 F DEBUG   : pid: 433, tid: 433, name: surfaceflinger  >>> /system/bin/surfaceflinger <<<
+01-01 00:00:21.152   476   476 F DEBUG   : signal 11 (SIGSEGV), code 1 (SEGV_MAPERR), fault addr 0xfffffff4
+01-01 00:00:21.152   476   476 F DEBUG   :     r0 00000000  r1 00000001  r2 00000000  r3 00000001
+01-01 00:00:21.152   476   476 F DEBUG   :     r4 aa88fdcc  r5 a19721c0  r6 ffffffdc  r7 bece2848
+01-01 00:00:21.152   476   476 F DEBUG   :     r8 aa695e50  r9 aa695f61  sl 00000000  fp bece2648
+01-01 00:00:21.152   476   476 F DEBUG   :     ip aab0dc74  sp bece25e8  lr aab03c13  pc aa6945ec  cpsr 800e0030
+01-01 00:00:21.162   476   476 F DEBUG   : 
+01-01 00:00:21.162   476   476 F DEBUG   : backtrace:
+01-01 00:00:21.162   476   476 F DEBUG   :     #00 pc 000015ec  /system/lib/hw/hwcomposer.imx6.so
+01-01 00:00:21.162   476   476 F DEBUG   :     #01 pc 000319b5  /system/lib/libsurfaceflinger.so
+01-01 00:00:21.163   476   476 F DEBUG   :     #02 pc 000314c1  /system/lib/libsurfaceflinger.so
+01-01 00:00:21.163   476   476 F DEBUG   :     #03 pc 00027bd9  /system/lib/libsurfaceflinger.so (_ZN7android14SurfaceFlinger4initEv+312)
+01-01 00:00:21.163   476   476 F DEBUG   :     #04 pc 00000fdd  /system/bin/surfaceflinger
+01-01 00:00:21.163   476   476 F DEBUG   :     #05 pc 00016c4d  /system/lib/libc.so (__libc_init+48)
+01-01 00:00:21.163   476   476 F DEBUG   :     #06 pc 00000e90  /system/bin/surfaceflinger
+01-01 00:00:21.392   430   430 I ServiceManager: Waiting for service media.camera.proxy...
+01-01 00:00:21.552   244   244 W         : debuggerd: resuming ta[   21.557808] init: Service 'surfaceflinger' (pid 433) killed by signal 11
+rget 433
+[   21.568148] init: Service 'surfaceflinger' (pid 433) killing any children in process group
+[   21.576664] init: Service 'zygote' is being killed...
+[   21.590332] init: Service 'zygote' (pid 428) killed by signal 9
+[   21.598615] init: Service 'zygote' (pid 428) killing any children in process group
+[   21.606429] init: write_file: Unable to open '/sys/android_power/request_state': No such file or directory
+[   21.616743] init: write_file: Unable to write to '/sys/power/state': Invalid argument
+[   21.626906] init: Service 'audioserver' is being killed...
+[   21.633215] init: Service 'cameraserver' is being killed...
+01-01 00:00:21.636   263   263 I [   21.639060] init: Service 'media' is being killed...
+ServiceManager: service 'media.sound_trigger_hw' died
+01-01 00:00:21.636   263   263 I ServiceManager: service 'media.radio' died
+01-01 00:00:21.636   263   263 I ServiceManager: service 'media.audio_flinger' died
+01-01 00:00:21.636   263   263 I ServiceManager: service 'media.audio_policy' died
+01-01 00:00:21.650   263   263 I ServiceManager: service 'media.player' died
+01-01 00:00:21.650   263   263 I ServiceManager: service 'media.resource_manager' died
+^C
+130|sabresd_6dq:/ # [   25.122880] ERROR: v4l2 capture: slave not found! V4L2_CID_HUE
+[   25.128893] ERROR: v4l2 capture: slave not found! V4L2_CID_HUE
+[   27.071695] random: crng init done
+[   27.211447] init: Service 'surfaceflinger' (pid 537) killed by signal 11
+[   27.220637] init: Service 'surfaceflinger' (pid 537) killing any children in process group
+[   27.228999] init: Service 'zygote' is being killed...
+[   27.245425] init: Service 'zygote' (pid 494) killed by signal 9
+[   27.251573] init: Service 'zygote' (pid 494) killing any children in process group
+[   27.259326] init: write_file: Unable to open '/sys/android_power/request_state': No such file or directory
+[   27.270347] init: write_file: Unable to write to '/sys/power/state': Invalid argument
+[   27.278551] init: Service 'audioserver' is being killed...
+[   27.284612] init: Service 'cameraserver' is being killed...
+[   27.290504] init: Service 'media' is being killed...
+
+
+U-Boot 2017.03-dirty (Dec 15 2017 - 14:13:51 +0530)
+
+CPU:   Freescale i.MX6Q rev1.5 at 792 MHz
+Reset cause: POR
+I2C:   ready
+DRAM:  2 GiB
+PMIC: device id: 0x10, revision id: 0x21
+PMIC: programmed
+MMC:   FSL_SDHC: 0, FSL_SDHC: 1, FSL_SDHC: 2
+auto-detected panel vga-rgb
+Aravinth: Display: vga-rgb (640x480)
+In:    serial
+Out:   serial
+Err:   serial
+Model: Toradex Apalis iMX6 Quad 2GB IT V1.1C, Serial# 05146387
+flash target is MMC:0
+Net:   using PHY at 7
+FEC [PRIME]
+Fastboot: Normal
+Hit any key to stop autoboot:  1  0 
+Apalis iMX6 # setenv bootargs console=ttymxc0,115200 init=/init video=mxcfb0:dev=ldb,bpp=32 video=mxcfb1:dev=hdmi,1280x1024M@60,if=RGB24,bpp=32 video=mxcfb2:off vido=mxcfb3:off vmalloc=256M androidboot.console=ttymxc0 consoleblank=0 androidboot.hardware=freescale cma=384M androidboot.selinux=disabled androidboot.dm_verity=disabled
+Apalis iMX6 # saveenv
+Saving Environment to MMC...
+Writing to MMC(0)... done
+Apalis iMX6 # boot
+boota mmc1 
+CACHE: Misaligned operation at range [8ffb7060, 8ffb70e0]
+CACHE: Misaligned operation at range [8ffb7060, 8ffb70e0]
+kernel   @ 14008000 (9803560)
+ramdisk  @ 15000000 (1628346)
+fdt      @ 14f00000 (53146)
+## Booting Android Image at 0x12000000 ...
+Kernel load addr 0x14008000 size 9574 KiB
+Kernel command line: console=ttymxc0,115200 init=/init video=mxcfb0:dev=ldb,bpp=32 video=mxcfb1:dev=hdmi,1280x1024M@60,if=RGB24,bpp=32 video=mxcfb2:off vido=mxcfb3:off vmalloc=256M androidboot.console=ttymxc0 consoleblank=0 androidboot.hardware=freescale cma=384M androidboot.selinux=disabled androidboot.dm_verity=disabled androidboot.serialno=1b2429d4ea997115 androidboot.storage_type=emmc
+## Flattened Device Tree blob at 14f00000
+   Booting using the fdt blob at 0x14f00000
+   Loading Kernel Image ... OK
+   Using Device Tree in place at 14f00000, end 14f0ff99
+
+Starting kernel ...
+
+Uncompressing Linux... done, booting the kernel.
+[    0.000000] Booting Linux on physical CPU 0x0
+[    0.000000] Linux version 4.9.67-07228-gdc437277d928-dirty (embadmin@ubuntu) (gcc version 4.9 20150123 (prerelease) (GCC) ) #6 SMP PREEMPT Fri Dec 22 12:22:51 IST 2017
+[    0.000000] CPU: ARMv7 Processor [412fc09a] revision 10 (ARMv7), cr=10c53c7d
+[    0.000000] CPU: PIPT / VIPT nonaliasing data cache, VIPT aliasing instruction cache
+[    0.000000] OF: fdt:Machine model: Aravinth Toradex Apalis iMX6Q/D Module on Ixora V1.1 Carrier Board
+[    0.000000] cma: Reserved 384 MiB at 0x26000000
+[    0.000000] Memory policy: Data cache writealloc
+[    0.000000] percpu: Embedded 15 pages/cpu @ee6d3000 s31040 r8192 d22208 u61440
+[    0.000000] Built 1 zonelists in Zone order, mobility grouping on.  Total pages: 522768
+[    0.000000] Kernel command line: console=ttymxc0,115200 init=/init video=mxcfb0:dev=ldb,bpp=32 video=mxcfb1:dev=hdmi,1280x1024M@60,if=RGB24,bpp=32 video=mxcfb2:off vido=mxcfb3:off vmalloc=256M androidboot.console=ttymxc0 consoleblank=0 androidboot.hardware=freescale cma=384M androidboot.selinux=disabled androidboot.dm_verity=disabled androidboot.serialno=1b2429d4ea997115 androidboot.storage_type=emmc
+[    0.000000] PID hash table entries: 4096 (order: 2, 16384 bytes)
+[    0.000000] Dentry cache hash table entries: 131072 (order: 7, 524288 bytes)
+[    0.000000] Inode-cache hash table entries: 65536 (order: 6, 262144 bytes)
+[    0.000000] Memory: 1662712K/2097152K available (13312K kernel code, 1128K rwdata, 4016K rodata, 1024K init, 606K bss, 41224K reserved, 393216K cma-reserved, 1318912K highmem)
+[    0.000000] Virtual kernel memory layout:
+[    0.000000]     vector  : 0xffff0000 - 0xffff1000   (   4 kB)
+[    0.000000]     fixmap  : 0xffc00000 - 0xfff00000   (3072 kB)
+[    0.000000]     vmalloc : 0xf0000000 - 0xff800000   ( 248 MB)
+[    0.000000]     lowmem  : 0xc0000000 - 0xef800000   ( 760 MB)
+[    0.000000]     pkmap   : 0xbfe00000 - 0xc0000000   (   2 MB)
+[    0.000000]     modules : 0xbf000000 - 0xbfe00000   (  14 MB)
+[    0.000000]       .text : 0xc0008000 - 0xc0e00000   (14304 kB)
+[    0.000000]       .init : 0xc1300000 - 0xc1400000   (1024 kB)
+[    0.000000]       .data : 0xc1400000 - 0xc151a218   (1129 kB)
+[    0.000000]        .bss : 0xc151a218 - 0xc15b1be0   ( 607 kB)
+[    0.000000] SLUB: HWalign=64, Order=0-3, MinObjects=0, CPUs=4, Nodes=1
+[    0.000000] Preemptible hierarchical RCU implementation.
+[    0.000000] 	Build-time adjustment of leaf fanout to 32.
+[    0.000000] NR_IRQS:16 nr_irqs:16 16
+[    0.000000] L2C-310 errata 752271 769419 enabled
+[    0.000000] L2C-310 enabling early BRESP for Cortex-A9
+[    0.000000] L2C-310 full line of zeros enabled for Cortex-A9
+[    0.000000] L2C-310 ID prefetch enabled, offset 16 lines
+[    0.000000] L2C-310 dynamic clock gating enabled, standby mode enabled
+[    0.000000] L2C-310 cache controller enabled, 16 ways, 1024 kB
+[    0.000000] L2C-310: CACHE_ID 0x410000c7, AUX_CTRL 0x76470001
+[    0.000000] Switching to timer-based delay loop, resolution 333ns
+[    0.000006] sched_clock: 32 bits at 3000kHz, resolution 333ns, wraps every 715827882841ns
+[    0.000024] clocksource: mxc_timer1: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 637086815595 ns
+[    0.001568] Console: colour dummy device 80x30
+[    0.001592] Calibrating delay loop (skipped), value calculated using timer frequency.. 6.00 BogoMIPS (lpj=30000)
+[    0.001608] pid_max: default: 32768 minimum: 301
+[    0.001684] Security Framework initialized
+[    0.001696] SELinux:  Initializing.
+[    0.001789] Mount-cache hash table entries: 2048 (order: 1, 8192 bytes)
+[    0.001804] Mountpoint-cache hash table entries: 2048 (order: 1, 8192 bytes)
+[    0.002611] CPU: Testing write buffer coherency: ok
+[    0.003011] CPU0: update cpu_capacity 1024
+[    0.003026] CPU0: thread -1, cpu 0, socket 0, mpidr 80000000
+[    0.003092] Setting up static identity map for 0x10100000 - 0x10100058
+[    0.169926] CPU1: update cpu_capacity 1024
+[    0.169933] CPU1: thread -1, cpu 1, socket 0, mpidr 80000001
+[    0.239917] CPU2: update cpu_capacity 1024
+[    0.239923] CPU2: thread -1, cpu 2, socket 0, mpidr 80000002
+[    0.309914] CPU3: update cpu_capacity 1024
+[    0.309921] CPU3: thread -1, cpu 3, socket 0, mpidr 80000003
+[    0.310023] Brought up 4 CPUs
+[    0.310056] SMP: Total of 4 processors activated (24.00 BogoMIPS).
+[    0.310065] CPU: All CPU(s) started in SVC mode.
+[    0.310112] CPU3: update max cpu_capacity 1024
+[    0.311208] devtmpfs: initialized
+[    0.319932] CPU2: update max cpu_capacity 1024
+[    0.325727] VFP support v0.3: implementor 41 architecture 3 part 30 variant 9 rev 4
+[    0.326137] clocksource: jiffies: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 19112604462750000 ns
+[    0.326160] futex hash table entries: 1024 (order: 4, 65536 bytes)
+[    0.345748] pinctrl core: initialized pinctrl subsystem
+[    0.347044] NET: Registered protocol family 16
+[    0.356232] DMA: preallocated 256 KiB pool for atomic coherent allocations
+[    0.379583] cpuidle: using governor menu
+[    0.380360] CPU identified as i.MX6Q, silicon rev 1.5
+[    0.407679] hw-breakpoint: found 5 (+1 reserved) breakpoint and 1 watchpoint registers.
+[    0.407694] hw-breakpoint: maximum watchpoint size is 4 bytes.
+[    0.409347] imx6q-pinctrl 20e0000.iomuxc: initialized IMX pinctrl driver
+[    0.413141] imx-gpc 20dc000.gpc: no fsl,ldo-bypass found!
+[    0.413260] imx-gpc 20dc000.gpc: Registered imx-gpc
+[    0.475631] mxs-dma 110000.dma-apbh: initialized
+[    0.478266] usb_host_vbus: supplied by usb_host_vbus_hub
+[    0.480079] SCSI subsystem initialized
+[    0.480585] usbcore: registered new interface driver usbfs
+[    0.480660] usbcore: registered new interface driver hub
+[    0.480761] usbcore: registered new device driver usb
+[    0.480953] 2000000.aips-bus:usbphy_nop1 supply vcc not found, using dummy regulator
+[    0.481106] 2000000.aips-bus:usbphy_nop2 supply vcc not found, using dummy regulator
+[    0.482332] i2c i2c-1: IMX I2C adapter registered
+[    0.482355] i2c i2c-1: can't use DMA, using PIO instead.
+[    0.490261] stmpe-i2c 2-0041: stmpe811 detected, chip id: 0x811
+[    0.580726] i2c i2c-2: IMX I2C adapter registered
+[    0.580747] i2c i2c-2: can't use DMA, using PIO instead.
+[    0.581552] i2c i2c-3: IMX I2C adapter registered
+[    0.581570] i2c i2c-3: can't use DMA, using PIO instead.
+[    0.581733] Linux video capture interface: v2.00
+[    0.581807] pps_core: LinuxPPS API ver. 1 registered
+[    0.581819] pps_core: Software ver. 5.3.6 - Copyright 2005-2007 Rodolfo Giometti <giometti@linux.it>
+[    0.581844] PTP clock support registered
+[    0.609640] imx-ipuv3 2400000.ipu: IPU DMFC NORMAL mode: 1(0~1), 5B(4,5), 5F(6,7)
+[    0.639633] imx-ipuv3 2800000.ipu: IPU DMFC NORMAL mode: 1(0~1), 5B(4,5), 5F(6,7)
+[    0.641031] mxc_mipi_csi2 21dc000.mipi_csi: i.MX MIPI CSI2 driver probed ipu0 csi1
+[    0.641047] mxc_mipi_csi2 21dc000.mipi_csi: i.MX MIPI CSI2 dphy version is 0x3130302a
+[    0.641143] MIPI CSI2 driver module loaded
+[    0.641514] imx rpmsg driver is registered.
+[    0.641709] Advanced Linux Sound Architecture Driver Initialized.
+[    0.642965] Bluetooth: Core ver 2.22
+[    0.643012] NET: Registered protocol family 31
+[    0.643023] Bluetooth: HCI device and connection manager initialized
+[    0.643041] Bluetooth: HCI socket layer initialized
+[    0.643056] Bluetooth: L2CAP socket layer initialized
+[    0.643098] Bluetooth: SCO socket layer initialized
+[    0.660416] clocksource: Switched to clocksource mxc_timer1
+[    0.733163] VFS: Disk quotas dquot_6.6.0
+[    0.733262] VFS: Dquot-cache hash table entries: 1024 (order 0, 4096 bytes)
+[    0.744536] NET: Registered protocol family 2
+[    0.745304] TCP established hash table entries: 8192 (order: 3, 32768 bytes)
+[    0.745409] TCP bind hash table entries: 8192 (order: 4, 65536 bytes)
+[    0.745564] TCP: Hash tables configured (established 8192 bind 8192)
+[    0.745764] UDP hash table entries: 512 (order: 2, 16384 bytes)
+[    0.745815] UDP-Lite hash table entries: 512 (order: 2, 16384 bytes)
+[    0.746030] NET: Registered protocol family 1
+[    0.746686] RPC: Registered named UNIX socket transport module.
+[    0.746700] RPC: Registered udp transport module.
+[    0.746708] RPC: Registered tcp transport module.
+[    0.746717] RPC: Registered tcp NFSv4.1 backchannel transport module.
+[    0.747043] Trying to unpack rootfs image as initramfs...
+[    0.856940] Freeing initrd memory: 1592K
+[    0.858086] hw perfevents: enabled with armv7_cortex_a9 PMU driver, 7 counters available
+[    0.861367] Bus freq driver module loaded
+[    0.862928] audit: initializing netlink subsys (disabled)
+[    0.863003] audit: type=2000 audit(0.860:1): initialized
+[    0.864051] workingset: timestamp_bits=30 max_order=19 bucket_order=0
+[    0.871695] NFS: Registering the id_resolver key type
+[    0.871729] Key type id_resolver registered
+[    0.871739] Key type id_legacy registered
+[    0.871790] ntfs: driver 2.1.32 [Flags: R/W DEBUG].
+[    0.872055] jffs2: version 2.2. (NAND) © 2001-2006 Red Hat, Inc.
+[    0.872620] fuse init (API version 7.26)
+[    0.880824] bounce: pool size: 64 pages
+[    0.880842] io scheduler noop registered
+[    0.880853] io scheduler deadline registered
+[    0.880909] io scheduler cfq registered (default)
+[    0.883974] backlight supply power not found, using dummy regulator
+[    0.886371] ldb 2000000.aips-bus:ldb@020e0008: crtc not specified or invalid
+[    0.886398] ldb: probe of 2000000.aips-bus:ldb@020e0008 failed with error -22
+[    0.888137] Aravinth: mxcfb_probe ---->
+[    0.888184] mxc_sdc_fb fb@0: NO mxc display driver found!
+[    0.888236] Aravinth: mxcfb_probe ---->
+[    0.888270] mxc_sdc_fb fb@1: NO mxc display driver found!
+[    0.888318] Aravinth: mxcfb_probe ---->
+[    0.888346] mxc_sdc_fb fb@2: Can't get fb option for mxcfb2!
+[    0.888395] Aravinth: mxcfb_probe ---->
+[    0.888425] mxc_sdc_fb fb@3: NO mxc display driver found!
+[    0.890701] imx-sdma 20ec000.sdma: no iram assigned, using external mem
+[    0.891237] imx-sdma 20ec000.sdma: loaded firmware 3.3
+[    0.896602] pfuze100-regulator 2-0008: Full layer: 2, Metal layer: 1
+[    0.897327] pfuze100-regulator 2-0008: FAB: 0, FIN: 0
+[    0.897343] pfuze100-regulator 2-0008: pfuze100 found.
+[    0.915695] 2020000.serial: ttymxc0 at MMIO 0x2020000 (irq = 29, base_baud = 5000000) is a IMX
+[    1.832576] console [ttymxc0] enabled
+[    1.837248] 21e8000.serial: ttymxc1 at MMIO 0x21e8000 (irq = 78, base_baud = 5000000) is a IMX
+[    1.846495] 21f0000.serial: ttymxc3 at MMIO 0x21f0000 (irq = 79, base_baud = 5000000) is a IMX
+[    1.855732] 21f4000.serial: ttymxc4 at MMIO 0x21f4000 (irq = 80, base_baud = 5000000) is a IMX
+[    1.867074] imx sema4 driver is registered.
+[    1.871349] [drm] Initialized
+[    1.874899] [drm] Initialized vivante 1.0.0 20120216 on minor 0
+[    1.893617] brd: module loaded
+[    1.904899] loop: module loaded
+[    1.908889] zram: Added device: zram0
+[    1.914357] ahci-imx 2200000.sata: fsl,transmit-level-mV not specified, using 00000024
+[    1.922370] ahci-imx 2200000.sata: fsl,transmit-boost-mdB not specified, using 00000480
+[    1.930387] ahci-imx 2200000.sata: fsl,transmit-atten-16ths not specified, using 00002000
+[    1.938624] ahci-imx 2200000.sata: fsl,receive-eq-mdB not specified, using 05000000
+[    1.949795] ahci-imx 2200000.sata: SSS flag set, parallel bus scan disabled
+[    1.956827] ahci-imx 2200000.sata: AHCI 0001.0300 32 slots 1 ports 3 Gbps 0x1 impl platform mode
+[    1.965650] ahci-imx 2200000.sata: flags: ncq sntf stag pm led clo only pmp pio slum part ccc apst 
+[    1.976283] scsi host0: ahci-imx
+[    1.979877] ata1: SATA max UDMA/133 mmio [mem 0x02200000-0x02203fff] port 0x100 irq 87
+[    1.992448] spi_imx 2008000.ecspi: probed
+[    1.997272] libphy: Fixed MDIO Bus: probed
+[    2.001816] tun: Universal TUN/TAP device driver, 1.6
+[    2.006875] tun: (C) 1999-2004 Max Krasnyansky <maxk@qualcomm.com>
+[    2.013284] CAN device driver interface
+[    2.017450] 2090000.flexcan supply xceiver not found, using dummy regulator
+[    2.025381] flexcan 2090000.flexcan: device registered (reg_base=f02f4000, irq=38)
+[    2.033170] 2094000.flexcan supply xceiver not found, using dummy regulator
+[    2.041008] flexcan 2094000.flexcan: device registered (reg_base=f02fc000, irq=39)
+[    2.050151] 2188000.ethernet supply phy not found, using dummy regulator
+[    2.068487] pps pps0: new PPS source ptp0
+[    2.073746] libphy: fec_enet_mii_bus: probed
+[    2.090049] fec 2188000.ethernet eth0: registered PHC device 0
+[    2.096902] PPP generic driver version 2.4.2
+[    2.101424] PPP BSD Compression module registered
+[    2.106138] PPP Deflate Compression module registered
+[    2.111267] PPP MPPE Compression module registered
+[    2.116070] NET: Registered protocol family 24
+[    2.120626] usbcore: registered new interface driver kaweth
+[    2.126208] pegasus: v0.9.3 (2013/04/25), Pegasus/Pegasus II USB Ethernet driver
+[    2.133724] usbcore: registered new interface driver pegasus
+[    2.139443] usbcore: registered new interface driver rtl8150
+[    2.145198] usbcore: registered new interface driver r8152
+[    2.150808] usbcore: registered new interface driver asix
+[    2.156279] usbcore: registered new interface driver ax88179_178a
+[    2.162457] usbcore: registered new interface driver cdc_ether
+[    2.168346] usbcore: registered new interface driver cdc_eem
+[    2.174117] usbcore: registered new interface driver net1080
+[    2.179832] usbcore: registered new interface driver cdc_subset
+[    2.185829] usbcore: registered new interface driver zaurus
+[    2.191502] usbcore: registered new interface driver cdc_ncm
+[    2.197169] ehci_hcd: USB 2.0 'Enhanced' Host Controller (EHCI) Driver
+[    2.203770] ehci-mxc: Freescale On-Chip EHCI Host driver
+[    2.209298] usbcore: registered new interface driver cdc_acm
+[    2.214988] cdc_acm: USB Abstract Control Model driver for USB modems and ISDN adapters
+[    2.223090] usbcore: registered new interface driver usb-storage
+[    2.229216] usbcore: registered new interface driver usbserial
+[    2.235126] usbcore: registered new interface driver usbserial_generic
+[    2.241721] usbserial: USB Serial support registered for generic
+[    2.247777] usbcore: registered new interface driver ftdi_sio
+[    2.253583] usbserial: USB Serial support registered for FTDI USB Serial Device
+[    2.260964] usbcore: registered new interface driver option
+[    2.266578] usbserial: USB Serial support registered for GSM modem (1-port)
+[    2.273644] usbcore: registered new interface driver usbtest
+[    2.279362] usbcore: registered new interface driver usb_ehset_test
+[    2.286947] 2184800.usbmisc supply vbus-wakeup not found, using dummy regulator
+[    2.306347] ci_hdrc ci_hdrc.1: EHCI Host Controller
+[    2.311292] ci_hdrc ci_hdrc.1: new USB bus registered, assigned bus number 1
+[    2.312082] ata1: SATA link down (SStatus 0 SControl 300)
+[    2.312120] ahci-imx 2200000.sata: no device found, disabling link.
+[    2.312126] ahci-imx 2200000.sata: pass ahci_imx..hotplug=1 to enable hotplug
+[    2.360459] ci_hdrc ci_hdrc.1: USB 2.0 started, EHCI 1.00
+[    2.366084] usb usb1: New USB device found, idVendor=1d6b, idProduct=0002
+[    2.372914] usb usb1: New USB device strings: Mfr=3, Product=2, SerialNumber=1
+[    2.380149] usb usb1: Product: EHCI Host Controller
+[    2.385056] usb usb1: Manufacturer: Linux 4.9.67-07228-gdc437277d928-dirty ehci_hcd
+[    2.392740] usb usb1: SerialNumber: ci_hdrc.1
+[    2.397856] hub 1-0:1.0: USB hub found
+[    2.401726] hub 1-0:1.0: 1 port detected
+[    2.406978] mousedev: PS/2 mouse device common for all mice
+[    2.413551] usbcore: registered new interface driver xpad
+[    2.419020] usbcore: registered new interface driver usb_acecad
+[    2.425080] usbcore: registered new interface driver aiptek
+[    2.430751] usbcore: registered new interface driver gtco
+[    2.436208] usbcore: registered new interface driver hanwang
+[    2.441989] usbcore: registered new interface driver kbtab
+[    2.458461] input: stmpe-ts as /devices/soc0/soc/2100000.aips-bus/21a4000.i2c/i2c-2/2-0041/stmpe-ts/input/input0
+[    2.471156] snvs_rtc 20cc000.snvs:snvs-rtc-lp: rtc core: registered 20cc000.snvs:snvs-r as rtc0
+[    2.480003] i2c /dev entries driver
+[    2.484480] IR NEC protocol handler initialized
+[    2.489023] IR RC5(x/sz) protocol handler initialized
+[    2.494111] IR RC6 protocol handler initialized
+[    2.498648] IR JVC protocol handler initialized
+[    2.503205] IR Sony protocol handler initialized
+[    2.507830] IR SANYO protocol handler initialized
+[    2.512672] IR Sharp protocol handler initialized
+[    2.517387] IR MCE Keyboard/mouse protocol handler initialized
+[    2.523249] IR XMP protocol handler initialized
+[    2.529984] ov564x_mipi 3-003c: found pwm2, period=0
+[    2.760457] usb 1-1: new high-speed USB device number 2 using ci_hdrc
+[    2.780782] ov5640_read_reg:write reg error:reg=300a
+[    2.785764] camera ov5640_mipi is not found
+[    2.791432] usbcore: registered new interface driver uvcvideo
+[    2.797186] USB Video Class driver (1.1.1)
+[    2.803395] imx2-wdt 20bc000.wdog: timeout 60 sec (nowayout=0)
+[    2.809932] device-mapper: uevent: version 1.0.3
+[    2.814999] device-mapper: ioctl: 4.35.0-ioctl (2016-06-23) initialised: dm-devel@redhat.com
+[    2.833714] Bluetooth: HCI UART driver ver 2.3
+[    2.838168] Bluetooth: HCI UART protocol H4 registered
+[    2.843367] Bluetooth: HCI UART protocol BCSP registered
+[    2.848686] Bluetooth: HCI UART protocol ATH3K registered
+[    2.854238] usbcore: registered new interface driver btusb
+[    2.860765] sdhci: Secure Digital Host Controller Interface driver
+[    2.866955] sdhci: Copyright(c) Pierre Ossman
+[    2.871379] sdhci-pltfm: SDHCI platform and OF driver helper
+[    2.878036] sdhci-esdhc-imx 2190000.usdhc: could not get ultra high speed state, work on normal mode
+[    2.887252] sdhci-esdhc-imx 2190000.usdhc: Got CD GPIO
+[    2.950770] mmc1: SDHCI controller on 2190000.usdhc [2190000.usdhc] using ADMA
+[    2.960232] usb 1-1: New USB device found, idVendor=0424, idProduct=2514
+[    2.971057] usb 1-1: New USB device strings: Mfr=0, Product=0, SerialNumber=0
+[    2.981890] sdhci-esdhc-imx 2198000.usdhc: could not get ultra high speed state, work on normal mode
+[    3.000946] hub 1-1:1.0: USB hub found
+[    3.010036] hub 1-1:1.0: 4 ports detected
+[    3.048091] mmc1: host does not support reading read-only switch, assuming write-enable
+[    3.061102] mmc0: SDHCI controller on 2198000.usdhc [2198000.usdhc] using ADMA
+[    3.070598] mmc1: new high speed SDHC card at address 59b4
+[    3.077360] mmcblk1: mmc1:59b4 USD   7.48 GiB 
+[    3.088389] mxc_vpu 2040000.vpu_fsl: VPU initialized
+[    3.094012] mxc_vdoa 21e4000.vdoa: i.MX Video Data Order Adapter(VDOA) driver probed
+[    3.112344] mxc_hdmi_cec soc:hdmi_cec@00120000: HDMI CEC initialized
+[    3.114376] random: fast init done
+[    3.128026] Galcore version 6.2.2.96445
+[    3.141732]  mmcblk1: p1 p2 p3 p4 p5 p6 p7 p8 p9 p10 p11
+[    3.206632] mmc0: new DDR MMC card at address 0001
+[    3.223139] mmcblk0: mmc0:0001 Q2J54A 3.59 GiB 
+[    3.228479] mmcblk0boot0: mmc0:0001 Q2J54A partition 1 16.0 MiB
+[    3.245659] mmcblk0boot1: mmc0:0001 Q2J54A partition 2 16.0 MiB
+[    3.256739] Alternate GPT is invalid, using primary GPT.
+[    3.262341]  mmcblk0: p1 p2 p3 p4 p5 p6 p7 p8 p9 p10 p11
+[    3.924062] caam 2100000.caam: ERA source: CAAMVID.
+[    3.928990] caam 2100000.caam: AXI pipeline throttling enabled.
+[    3.936253] caam 2100000.caam: Instantiated RNG4 SH1
+[    3.941271] caam 2100000.caam: device ID = 0x0a16010000000000 (Era 4)
+[    3.947722] caam 2100000.caam: job rings = 2, qi = 0
+[    3.963735] caam algorithms registered in /proc/crypto
+[    3.973079] caam_jr 2101000.jr0: registering rng-caam
+[    3.979137] platform caam_sm: blkkey_ex: 4 keystore units available
+[    3.985644] platform caam_sm: 64-bit clear key:
+[    3.990190] platform caam_sm: [0000] 00 01 02 03 04 0f 06 07
+[    3.995885] platform caam_sm: 64-bit black key:
+[    4.000463] platform caam_sm: [0000] 7d 04 97 a8 69 8a ac 3c
+[    4.006134] platform caam_sm: [0008] 52 cd 25 77 47 47 24 89
+[    4.011821] platform caam_sm: 128-bit clear key:
+[    4.016449] platform caam_sm: [0000] 00 01 02 03 04 0f 06 07
+[    4.022145] platform caam_sm: [0008] 08 09 0a 0b 0c 0d 0e 0f
+[    4.027811] platform caam_sm: 128-bit black key:
+[    4.032456] platform caam_sm: [0000] 50 0b 45 90 f3 ff 42 84
+[    4.038127] platform caam_sm: [0008] 6e 52 14 5a 61 fd 7c 51
+[    4.043813] platform caam_sm: 192-bit clear key:
+[    4.048443] platform caam_sm: [0000] 00 01 02 03 04 0f 06 07
+[    4.054129] platform caam_sm: [0008] 08 09 0a 0b 0c 0d 0e 0f
+[    4.059798] platform caam_sm: [0016] 10 11 12 13 14 15 16 17
+[    4.065483] platform caam_sm: 192-bit black key:
+[    4.070113] platform caam_sm: [0000] 1a f5 da 2f 75 78 be f2
+[    4.075805] platform caam_sm: [0008] 93 03 b1 e4 93 50 26 43
+[    4.081533] platform caam_sm: [0016] 14 06 36 f1 e2 77 50 29
+[    4.087205] platform caam_sm: [0024] 43 a7 78 fd 56 51 46 3f
+[    4.092898] platform caam_sm: 256-bit clear key:
+[    4.097527] platform caam_sm: [0000] 00 01 02 03 04 0f 06 07
+[    4.103216] platform caam_sm: [0008] 08 09 0a 0b 0c 0d 0e 0f
+[    4.108886] platform caam_sm: [0016] 10 11 12 13 14 15 16 17
+[    4.114573] platform caam_sm: [0024] 18 19 1a 1b 1c 1d 1e 1f
+[    4.120238] platform caam_sm: 256-bit black key:
+[    4.124883] platform caam_sm: [0000] 96 84 c9 5b 30 cb 28 0d
+[    4.130571] platform caam_sm: [0008] 61 6e 71 e0 8e 46 3a 08
+[    4.136240] platform caam_sm: [0016] 54 73 5f 06 04 d1 37 db
+[    4.141929] platform caam_sm: [0024] 4f aa a9 95 80 c5 5e 2a
+[    4.147596] platform caam_sm: 64-bit unwritten blob:
+[    4.152587] platform caam_sm: [0000] 00 00 00 00 00 00 00 00
+[    4.158257] platform caam_sm: [0008] 00 00 00 00 00 00 00 00
+[    4.163941] platform caam_sm: [0016] 00 00 00 00 00 00 00 00
+[    4.169609] platform caam_sm: [0024] 00 00 00 00 00 00 00 00
+[    4.175297] platform caam_sm: [0032] 00 00 00 00 00 00 00 00
+[    4.180984] platform caam_sm: [0040] 00 00 00 00 00 00 00 00
+[    4.186653] platform caam_sm: [0048] 00 00 00 00 00 00 00 00
+[    4.192338] platform caam_sm: [0056] 00 00 00 00 00 00 00 00
+[    4.198008] platform caam_sm: [0064] 00 00 00 00 00 00 00 00
+[    4.203695] platform caam_sm: [0072] 00 00 00 00 00 00 00 00
+[    4.209363] platform caam_sm: [0080] 00 00 00 00 00 00 00 00
+[    4.215049] platform caam_sm: [0088] 00 00 00 00 00 00 00 00
+[    4.220735] platform caam_sm: 128-bit unwritten blob:
+[    4.225796] platform caam_sm: [0000] 00 00 00 00 00 00 00 00
+[    4.231481] platform caam_sm: [0008] 00 00 00 00 00 00 00 00
+[    4.237150] platform caam_sm: [0016] 00 00 00 00 00 00 00 00
+[    4.242835] platform caam_sm: [0024] 00 00 00 00 00 00 00 00
+[    4.248503] platform caam_sm: [0032] 00 00 00 00 00 00 00 00
+[    4.254189] platform caam_sm: [0040] 00 00 00 00 00 00 00 00
+[    4.259858] platform caam_sm: [0048] 00 00 00 00 00 00 00 00
+[    4.265544] platform caam_sm: [0056] 00 00 00 00 00 00 00 00
+[    4.271232] platform caam_sm: [0064] 00 00 00 00 00 00 00 00
+[    4.276902] platform caam_sm: [0072] 00 00 00 00 00 00 00 00
+[    4.282590] platform caam_sm: [0080] 00 00 00 00 00 00 00 00
+[    4.288259] platform caam_sm: [0088] 00 00 00 00 00 00 00 00
+[    4.293943] platform caam_sm: 196-bit unwritten blob:
+[    4.299005] platform caam_sm: [0000] 00 00 00 00 00 00 00 00
+[    4.304700] platform caam_sm: [0008] 00 00 00 00 00 00 00 00
+[    4.310370] platform caam_sm: [0016] 00 00 00 00 00 00 00 00
+[    4.316057] platform caam_sm: [0024] 00 00 00 00 00 00 00 00
+[    4.321745] platform caam_sm: [0032] 00 00 00 00 00 00 00 00
+[    4.327413] platform caam_sm: [0040] 00 00 00 00 00 00 00 00
+[    4.333099] platform caam_sm: [0048] 00 00 00 00 00 00 00 00
+[    4.338769] platform caam_sm: [0056] 00 00 00 00 00 00 00 00
+[    4.344456] platform caam_sm: [0064] 00 00 00 00 00 00 00 00
+[    4.350124] platform caam_sm: [0072] 00 00 00 00 00 00 00 00
+[    4.355809] platform caam_sm: [0080] 00 00 00 00 00 00 00 00
+[    4.361495] platform caam_sm: [0088] 00 00 00 00 00 00 00 00
+[    4.367161] platform caam_sm: 256-bit unwritten blob:
+[    4.372238] platform caam_sm: [0000] 00 00 00 00 00 00 00 00
+[    4.377907] platform caam_sm: [0008] 00 00 00 00 00 00 00 00
+[    4.383593] platform caam_sm: [0016] 00 00 00 00 00 00 00 00
+[    4.389261] platform caam_sm: [0024] 00 00 00 00 00 00 00 00
+[    4.394946] platform caam_sm: [0032] 00 00 00 00 00 00 00 00
+[    4.400633] platform caam_sm: [0040] 00 00 00 00 00 00 00 00
+[    4.406303] platform caam_sm: [0048] 00 00 00 00 00 00 00 00
+[    4.411988] platform caam_sm: [0056] 00 00 00 00 00 00 00 00
+[    4.417657] platform caam_sm: [0064] 00 00 00 00 00 00 00 00
+[    4.423344] platform caam_sm: [0072] 00 00 00 00 00 00 00 00
+[    4.429012] platform caam_sm: [0080] 00 00 00 00 00 00 00 00
+[    4.434697] platform caam_sm: [0088] 00 00 00 00 00 00 00 00
+[    4.440645] platform caam_sm: 64-bit black key in blob:
+[    4.445885] platform caam_sm: [0000] c2 f7 59 52 0f ae 91 ab
+[    4.451582] platform caam_sm: [0008] ba 9e 95 50 31 c9 6e 3e
+[    4.457253] platform caam_sm: [0016] 52 7c 4f 3b de 88 93 b5
+[    4.462941] platform caam_sm: [0024] 49 c5 f4 18 13 46 3f 2b
+[    4.468611] platform caam_sm: [0032] 78 0b 15 d7 d0 c8 2b e1
+[    4.474297] platform caam_sm: [0040] c5 af 45 1f 02 d3 bb e9
+[    4.479965] platform caam_sm: [0048] df c2 74 78 2b 29 c3 25
+[    4.485653] platform caam_sm: [0056] 00 00 00 00 00 00 00 00
+[    4.491341] platform caam_sm: [0064] 00 00 00 00 00 00 00 00
+[    4.497011] platform caam_sm: [0072] 00 00 00 00 00 00 00 00
+[    4.502697] platform caam_sm: [0080] 00 00 00 00 00 00 00 00
+[    4.508367] platform caam_sm: [0088] 00 00 00 00 00 00 00 00
+[    4.514051] platform caam_sm: 128-bit black key in blob:
+[    4.519374] platform caam_sm: [0000] ff 7f 84 f1 a1 4d 69 dc
+[    4.525061] platform caam_sm: [0008] a6 96 e8 ab 60 4f 76 2c
+[    4.530748] platform caam_sm: [0016] b7 d4 38 59 18 c5 be 04
+[    4.536416] platform caam_sm: [0024] 21 86 86 c6 41 90 b6 89
+[    4.542103] platform caam_sm: [0032] 80 42 44 44 4f 33 22 94
+[    4.547770] platform caam_sm: [0040] 84 62 93 3a da 14 73 9f
+[    4.553456] platform caam_sm: [0048] 01 96 ee a6 8a 0a 6a 56
+[    4.559124] platform caam_sm: [0056] 55 b3 55 b2 43 3d 2c 4d
+[    4.564811] platform caam_sm: [0064] 00 00 00 00 00 00 00 00
+[    4.570497] platform caam_sm: [0072] 00 00 00 00 00 00 00 00
+[    4.576165] platform caam_sm: [0080] 00 00 00 00 00 00 00 00
+[    4.581850] platform caam_sm: [0088] 00 00 00 00 00 00 00 00
+[    4.587517] platform caam_sm: 192-bit black key in blob:
+[    4.592859] platform caam_sm: [0000] 04 25 5a 9c 70 55 0c cc
+[    4.598528] platform caam_sm: [0008] f1 a1 a1 83 c2 f1 bc 4a
+[    4.604214] platform caam_sm: [0016] 8b 4f 4c bb d0 01 cf 8e
+[    4.609882] platform caam_sm: [0024] 02 7b c9 ea 53 9d 34 bc
+[    4.615570] platform caam_sm: [0032] f0 93 62 a5 c0 23 88 fb
+[    4.621258] platform caam_sm: [0040] 7a 11 58 0d 82 a2 5a a1
+[    4.626926] platform caam_sm: [0048] ee 5d 29 b5 4c fb 74 fc
+[    4.632612] platform caam_sm: [0056] 07 d9 80 27 b6 7a 41 c8
+[    4.638283] platform caam_sm: [0064] 10 2e 89 8f 21 c7 6f c1
+[    4.643970] platform caam_sm: [0072] 00 00 00 00 00 00 00 00
+[    4.649638] platform caam_sm: [0080] 00 00 00 00 00 00 00 00
+[    4.655323] platform caam_sm: [0088] 00 00 00 00 00 00 00 00
+[    4.661008] platform caam_sm: 256-bit black key in blob:
+[    4.666331] platform caam_sm: [0000] 17 2b 85 ac f1 c1 b4 b8
+[    4.672017] platform caam_sm: [0008] 17 c3 f7 4c 06 43 81 6f
+[    4.677686] platform caam_sm: [0016] 99 d6 d8 42 28 b7 30 18
+[    4.683373] platform caam_sm: [0024] 49 92 a7 f6 6c 1e 2c 47
+[    4.689043] platform caam_sm: [0032] bf 03 30 eb 5b f3 cd 6d
+[    4.694728] platform caam_sm: [0040] ed b4 fe 78 ff 37 10 1a
+[    4.700398] platform caam_sm: [0048] fe fb b3 9e 78 f1 c6 e1
+[    4.706096] platform caam_sm: [0056] 09 be d9 6d 01 5f 0e 73
+[    4.711786] platform caam_sm: [0064] c0 c0 94 6f aa db f6 4c
+[    4.717455] platform caam_sm: [0072] 0e b1 34 c5 ce 9b d9 f4
+[    4.723144] platform caam_sm: [0080] 00 00 00 00 00 00 00 00
+[    4.728812] platform caam_sm: [0088] 00 00 00 00 00 00 00 00
+[    4.734708] platform caam_sm: restored 64-bit black key:
+[    4.740034] platform caam_sm: [0000] c1 02 42 09 b1 8f c2 7b
+[    4.745726] platform caam_sm: [0008] 24 8a 12 f2 5a dc 3a 00
+[    4.751412] platform caam_sm: restored 128-bit black key:
+[    4.756821] platform caam_sm: [0000] 50 0b 45 90 f3 ff 42 84
+[    4.762509] platform caam_sm: [0008] 6e 52 14 5a 61 fd 7c 51
+[    4.768174] platform caam_sm: restored 192-bit black key:
+[    4.773601] platform caam_sm: [0000] 1a f5 da 2f 75 78 be f2
+[    4.779270] platform caam_sm: [0008] 93 03 b1 e4 93 50 26 43
+[    4.784958] platform caam_sm: [0016] 6b 15 04 7c 70 c3 a2 bb
+[    4.790646] platform caam_sm: [0024] eb 01 7f df c2 d0 3a 9a
+[    4.796312] platform caam_sm: restored 256-bit black key:
+[    4.801738] platform caam_sm: [0000] 96 84 c9 5b 30 cb 28 0d
+[    4.807408] platform caam_sm: [0008] 61 6e 71 e0 8e 46 3a 08
+[    4.813093] platform caam_sm: [0016] 54 73 5f 06 04 d1 37 db
+[    4.818761] platform caam_sm: [0024] 4f aa a9 95 80 c5 5e 2a
+[    4.824734] snvs-secvio 20cc000.caam-snvs: can't get snvs clock
+[    4.830747] snvs-secvio 20cc000.caam-snvs: violation handlers armed - non-secure state
+[    4.839532] hidraw: raw HID events driver (C) Jiri Kosina
+[    4.847986] usbcore: registered new interface driver usbhid
+[    4.853607] usbhid: USB HID core driver
+[    4.858357] ashmem: initialized
+[    4.863193] usbcore: registered new interface driver snd-usb-audio
+[    4.872329] sgtl5000 2-000a: sgtl5000 revision 0x11
+[    4.909135] fsl-ssi-dai 2028000.ssi: No cache defaults, reading back from HW
+[    5.027242] fsl-hdmi-dai soc:hdmi_audio@00120000: failed to probe. Load HDMI-video first.
+[    5.035472] fsl-hdmi-dai: probe of soc:hdmi_audio@00120000 failed with error -12
+[    5.060719] imx-sgtl5000 sound: sgtl5000 <-> 2028000.ssi mapping ok
+[    5.072701] imx-spdif sound-spdif: snd-soc-dummy-dai <-> 2004000.spdif mapping ok
+[    5.082085] imx-audio-hdmi sound-hdmi: initialize HDMI-audio failed. load HDMI-video first!
+[    5.090715] NET: Registered protocol family 26
+[    5.095175] u32 classifier
+[    5.097887]     Actions configured
+[    5.101320] Netfilter messages via NETLINK v0.30.
+[    5.106395] nf_conntrack version 0.5.0 (16384 buckets, 65536 max)
+[    5.112858] ctnetlink v0.93: registering with nfnetlink.
+[    5.118907] xt_time: kernel timezone is -0000
+[    5.123602] ip_tables: (C) 2000-2006 Netfilter Core Team
+[    5.129131] arp_tables: arp_tables: (C) 2002 David S. Miller
+[    5.134878] Initializing XFRM netlink socket
+[    5.139697] NET: Registered protocol family 10
+[    5.145418] mip6: Mobile IPv6
+[    5.148421] ip6_tables: (C) 2000-2006 Netfilter Core Team
+[    5.154063] sit: IPv6, IPv4 and MPLS over IPv4 tunneling driver
+[    5.160823] NET: Registered protocol family 17
+[    5.165302] NET: Registered protocol family 15
+[    5.169754] can: controller area network core (rev 20120528 abi 9)
+[    5.176061] NET: Registered protocol family 29
+[    5.180608] can: raw protocol (rev 20120528)
+[    5.184888] can: broadcast manager protocol (rev 20161123 t)
+[    5.190592] can: netlink gateway (rev 20130117) max_hops=1
+[    5.196364] Bluetooth: RFCOMM TTY layer initialized
+[    5.201292] Bluetooth: RFCOMM socket layer initialized
+[    5.206465] Bluetooth: RFCOMM ver 1.11
+[    5.210231] Bluetooth: BNEP (Ethernet Emulation) ver 1.3
+[    5.215575] Bluetooth: BNEP filters: protocol multicast
+[    5.220835] Bluetooth: BNEP socket layer initialized
+[    5.225808] Bluetooth: HIDP (Human Interface Emulation) ver 1.2
+[    5.231762] Bluetooth: HIDP socket layer initialized
+[    5.236798] 8021q: 802.1Q VLAN Support v1.8
+[    5.241237] Key type dns_resolver registered
+[    5.248546] cpu cpu0: Registered imx6q-cpufreq
+[    5.253900] registered taskstats version 1
+[    5.277591] imx_thermal 2000000.aips-bus:tempmon: Industrial CPU temperature grade - max:105C critical:100C passive:95C
+[    5.289071] dhd_module_init in
+[    5.293325] input: gpio-keys as /devices/soc0/gpio-keys/input/input1
+[    5.300145] snvs_rtc 20cc000.snvs:snvs-rtc-lp: setting system clock to 1970-01-01 00:00:02 UTC (2)
+[    5.309960] usb_otg_vbus: disabling
+[    5.313509] ALSA device list:
+[    5.316491]   #0: imx6q-apalis-sgtl5000
+[    5.320337]   #1: imx-spdif
+[    5.326134] Freeing unused kernel memory: 1024K
+[    5.336381] init: init first stage started!
+[    5.352456] SELinux:  Permission validate_trans in class security not defined in policy.
+[    5.361068] SELinux:  Class cap_userns not defined in policy.
+[    5.366823] SELinux:  Class cap2_userns not defined in policy.
+[    5.372689] SELinux: the above unknown classes and permissions will be denied
+[    5.447656] audit: type=1403 audit(5.439:2): policy loaded auid=4294967295 ses=4294967295
+[    5.456855] audit: type=1404 audit(5.449:3): enforcing=1 old_enforcing=0 auid=4294967295 ses=4294967295
+[    5.510687] init: (Initializing SELinux enforcing took 0.17s.)
+[    5.525613] init: init second stage started!
+[    5.552185] init: Running restorecon...
+[    5.665788] init: waitpid failed: No child processes
+[    5.671813] init: (Loading properties from /default.prop took 0.00s.)
+[    5.683087] init: (Parsing /init.environ.rc took 0.00s.)
+[    5.689792] init: (Parsing /init.usb.rc took 0.00s.)
+[    5.698311] init: (Parsing init.freescale.usb.rc took 0.00s.)
+[    5.704293] init: (Parsing init.freescale.i.MX6Q.rc took 0.00s.)
+[    5.710485] init: (Parsing init.freescale.emmc.rc took 0.00s.)
+[    5.716355] init: (Parsing /init.freescale.rc took 0.02s.)
+[    5.729925] ueventd: ueventd started!
+[    6.196467] ueventd: Coldboot took 0.46s.
+[    6.231789] watchdogd: started (interval 10, margin 20)!
+[    7.228233] EXT4-fs (mmcblk1p3): mounted filesystem with ordered data mode. Opts: barrier=1
+[    7.238434] EXT4-fs (mmcblk1p10): Ignoring removed nomblk_io_submit option
+[    7.490482] EXT4-fs (mmcblk1p10): recovery complete
+[    7.498816] EXT4-fs (mmcblk1p10): mounted filesystem with ordered data mode. Opts: nomblk_io_submit,noauto_da_alloc,errors=panic
+[    7.518496] EXT4-fs (mmcblk1p4): Ignoring removed nomblk_io_submit option
+[    7.580502] EXT4-fs (mmcblk1p4): recovery complete
+[    7.588156] EXT4-fs (mmcblk1p4): mounted filesystem with ordered data mode. Opts: nomblk_io_submit
+[    7.613728] EXT4-fs (mmcblk1p5): mounted filesystem with ordered data mode. Opts: (null)
+[    8.644714] file system registered
+[    8.650095] using random self ethernet address
+[    8.654592] using random host ethernet address
+[    8.680654] zram0: detected capacity change from 0 to 314572800
+[    8.891728] logd.auditd: start
+[    8.895469] logd.klogd: 8895026000
+[    8.899825] Adding 307196k swap on /dev/block/zram0.  Priority:-1 extents:1 across:307196k SS
+[    9.462195] binder: 260:260 transaction failed 29189, size 0-0
+[    9.495341] logd.daemon: reinit
+sabresd_6dq:/ # [   10.472179] healthd: No battery devices found
+[   11.055045] ERROR: v4l2 capture: slave not found! V4L2_CID_HUE
+[   11.077583] ERROR: v4l2 capture: slave not found! V4L2_CID_HUE
+[   12.512663] init: Service 'surfaceflinger' (pid 264) killed by signal 11
+[   12.519418] init: Service 'surfaceflinger' (pid 264) killing any children in process group
+[   12.530619] init: Service 'zygote' is being killed...
+[   12.543267] init: Service 'zygote' (pid 268) killed by signal 9
+[   12.549252] init: Service 'zygote' (pid 268) killing any children in process group
+[   12.557780] init: write_file: Unable to open '/sys/android_power/request_state': No such file or directory
+[   12.567916] init: write_file: Unable to write to '/sys/power/state': Invalid argument
+[   12.576033] init: Service 'audioserver' is being killed...
+[   12.582169] init: Service 'cameraserver' is being killed...
+[   12.588037] init: Service 'media' is being killed...
+[   15.055933] ERROR: v4l2 capture: slave not found! V4L2_CID_HUE
+[   15.080753] ERROR: v4l2 capture: slave not found! V4L2_CID_HUE
+[   19.216359] init: Starting service 'zygote'...
+[   19.223356] init: Starting service 'audioserver'...
+[   19.235050] init: Starting service 'cameraserver'...
+[   19.243227] init: Starting service 'media'...
+[   19.250001] init: couldn't write 441 to /dev/cpuset/camera-daemon/tasks: No such file or directory
+[   19.261172] init: Starting service 'netd'...
+[   19.263957] init: Starting service 'surfaceflinger'...
+[   19.668045] ERROR: v4l2 capture: slave not found! V4L2_CID_HUE
+[   19.690764] ERROR: v4l2 capture: slave not found! V4L2_CID_HUE
+[   20.854744] init: Service 'surfaceflinger' (pid 444) killed by signal 11
+[   20.861563] init: Service 'surfaceflinger' (pid 444) killing any children in process group
+[   20.870040] init: Service 'zygote' is being killed...

@@ -1,0 +1,620 @@
+logcat
+--------- beginning of main
+01-01 00:00:00.870   235   235 W auditd  : type=2000 audit(0.0:1): initialized
+01-01 00:00:05.810   235   235 I auditd  : type=1403 audit(0.0:2): policy loaded auid=4294967295 ses=4294967295
+01-01 00:00:05.820   235   235 W auditd  : type=1404 audit(0.0:3): enforcing=1 old_enforcing=0 auid=4294967295 ses=4294967295
+01-01 00:00:08.693   242   242 I         : debuggerd: starting
+--------- beginning of system
+01-01 00:00:08.803   243   243 I vold    : Vold 3.0 (the awakening) firing up
+01-01 00:00:08.803   243   243 V vold    : Detected support for: ext4 f2fs vfat
+01-01 00:00:08.818   243   243 W Vold    : Tearing down stale mount /mnt/shm
+01-01 00:00:08.932   243   250 D vold    : e4crypt_init_user0
+01-01 00:00:08.933   243   250 D vold    : e4crypt_prepare_user_storage for volume null, user 0, serial 0, flags 1
+01-01 00:00:08.933   243   250 D vold    : Preparing: /data/system/users/0
+01-01 00:00:08.933   243   250 D vold    : Preparing: /data/misc/profiles/cur/0
+01-01 00:00:08.934   243   250 D vold    : Preparing: /data/misc/profiles/cur/0/foreign-dex
+01-01 00:00:08.935   243   250 D vold    : Preparing: /data/system_de/0
+01-01 00:00:08.936   243   250 D vold    : Preparing: /data/misc_de/0
+01-01 00:00:08.937   243   250 D vold    : Preparing: /data/user_de/0
+01-01 00:00:08.938   243   250 D vold    : e4crypt_unlock_user_key 0 serial=0 token_present=0
+01-01 00:00:08.941     1     1 I vdc     : 200 247 Command succeeded
+01-01 00:00:08.988   251   251 I /system/bin/tzdatacheck: tzdata file /data/misc/zoneinfo/current/tzdata does not exist. No action required.
+01-01 00:00:09.154   255   255 I lowmemorykiller: Using in-kernel low memory killer interface
+01-01 00:00:09.497   272   272 D MagDaemon: init_sensors
+01-01 00:00:09.551   265   265 I         : installd firing up
+01-01 00:00:09.600   257   257 I SurfaceFlinger: SurfaceFlinger is starting
+01-01 00:00:09.601   257   257 I SurfaceFlinger: SurfaceFlinger's main thread ready to run. Initializing graphics H/W...
+01-01 00:00:09.623   273   273 I gatekeeperd: Starting gatekeeperd...
+01-01 00:00:09.623   266   266 I keystore: Found keymaster0 module Keymaster OpenSSL HAL, version 2
+01-01 00:00:09.624   266   266 I SoftKeymaster: system/keymaster/soft_keymaster_device.cpp, Line 131: Creating device
+01-01 00:00:09.624   266   266 D SoftKeymaster: system/keymaster/soft_keymaster_device.cpp, Line 132: Device address: 0xb1db2000
+01-01 00:00:09.624   266   266 I keystore: Keymaster0 module is software-only.  Using SoftKeymasterDevice instead.
+01-01 00:00:09.624   266   266 I SoftKeymaster: system/keymaster/soft_keymaster_device.cpp, Line 131: Creating device
+01-01 00:00:09.624   266   266 D SoftKeymaster: system/keymaster/soft_keymaster_device.cpp, Line 132: Device address: 0xb1db2200
+01-01 00:00:09.626   273   273 W gatekeeperd: falling back to software GateKeeper
+01-01 00:00:09.627   257   257 D libEGL  : loaded /system/lib/egl/libEGL_VIVANTE.so
+01-01 00:00:09.677   271   271 I Netd    : Netd 1.0 starting
+01-01 00:00:09.678   271   271 D TetherController: Setting IP forward enable = 0
+01-01 00:00:09.770   257   257 D libEGL  : loaded /system/lib/egl/libGLESv1_CM_VIVANTE.so
+01-01 00:00:09.911   257   257 D libEGL  : loaded /system/lib/egl/libGLESv2_VIVANTE.so
+01-01 00:00:10.352   270   270 I mediaserver: ServiceManager: 0xa71993e0
+01-01 00:00:10.403   269   269 V MediaUtils: physMem: 2107817984
+01-01 00:00:10.403   269   269 V MediaUtils: requested limit: 421563580
+01-01 00:00:10.403   269   269 V MediaUtils: actual limit: 3221225472
+01-01 00:00:10.403   269   269 V MediaUtils: original limits: 4294967295/4294967295
+01-01 00:00:10.403   269   269 V MediaUtils: new limits: 3221225472/4294967295
+01-01 00:00:10.410   269   269 W /system/bin/mediaextractor: libminijail: allowing syscall: clock_gettime
+01-01 00:00:10.411   269   269 W /system/bin/mediaextractor: libminijail: allowing syscall: connect
+01-01 00:00:10.411   269   269 W /system/bin/mediaextractor: libminijail: allowing syscall: fcntl64
+01-01 00:00:10.411   269   269 W /system/bin/mediaextractor: libminijail: allowing syscall: socket
+01-01 00:00:10.411   269   269 W /system/bin/mediaextractor: libminijail: allowing syscall: writev
+01-01 00:00:10.430   269   269 W /system/bin/mediaextractor: libminijail: logging seccomp filter failures
+01-01 00:00:10.433   270   270 W BatteryNotifier: batterystats service unavailable!
+01-01 00:00:10.442   267   267 I mediacodec: @@@ mediacodecservice starting
+01-01 00:00:10.452   267   267 W /system/bin/mediacodec: libminijail: allowing syscall: clock_gettime
+01-01 00:00:10.452   267   267 W /system/bin/mediacodec: libminijail: allowing syscall: connect
+01-01 00:00:10.452   267   267 W /system/bin/mediacodec: libminijail: allowing syscall: fcntl64
+01-01 00:00:10.452   267   267 W /system/bin/mediacodec: libminijail: allowing syscall: socket
+01-01 00:00:10.452   267   267 W /system/bin/mediacodec: libminijail: allowing syscall: writev
+01-01 00:00:10.455   267   267 W /system/bin/mediacodec: libminijail: logging seccomp filter failures
+01-01 00:00:10.526   263   263 I cameraserver: ServiceManager: 0xb4819380
+01-01 00:00:10.526   263   263 I CameraService: CameraService started (pid=263)
+01-01 00:00:10.526   263   263 I CameraService: CameraService process starting
+01-01 00:00:10.527   263   263 W BatteryNotifier: batterystats service unavailable!
+01-01 00:00:10.528   263   263 W BatteryNotifier: batterystats service unavailable!
+01-01 00:00:10.565   262   262 I         : sMaxFastTracks = 8
+01-01 00:00:10.567   262   262 I audioserver: ServiceManager: 0xb5f99380
+01-01 00:00:10.568   257   257 E gralloc : int gralloc1_device_open(const struct hw_module_t *, const char *, hw_device_t **) invalid name:fb0
+01-01 00:00:10.571   257   257 I hwcomposer: hwc_device_open,435
+01-01 00:00:10.571   257   257 I SurfaceFlinger: Using composer version 1.3
+01-01 00:00:10.573   263   263 I FslCameraHAL: void CameraHAL::enumSensorSet()
+01-01 00:00:10.573   263   263 I FslCameraHAL: int32_t CameraHAL::matchDevNodes()
+01-01 00:00:10.574   263   263 I FslCameraHAL: getNodeName: dev path:/dev/video1
+01-01 00:00:10.580   263   263 W FslCameraHAL: int32_t CameraHAL::getNodeName(const char *, char *, size_t) open dev path:/dev/video1 failed:Try again
+01-01 00:00:10.580   262   262 W BatteryNotifier: batterystats service unavailable!
+01-01 00:00:10.580   263   263 I FslCameraHAL: getNodeName: dev path:/dev/video19
+01-01 00:00:10.580   262   262 I AudioFlinger: Using default 3000 mSec as standby time.
+01-01 00:00:10.581   262   262 I AudioPolicyService: AudioPolicyService CSTOR in new mode
+01-01 00:00:10.590   272   272 D MagDaemon: couldn't find 'FreescaleAccelerometer' input device
+01-01 00:00:10.590   272   272 D MagDaemon: inital sensor error
+01-01 00:00:10.593   263   263 W FslCameraHAL: int32_t CameraHAL::getNodeName(const char *, char *, size_t) dev path:/dev/video19 is not capture
+01-01 00:00:10.593   263   263 I FslCameraHAL: getNodeName: dev path:/dev/video17
+01-01 00:00:10.600   263   263 W FslCameraHAL: int32_t CameraHAL::getNodeName(const char *, char *, size_t) dev path:/dev/video17 is not capture
+01-01 00:00:10.600   263   263 I FslCameraHAL: getNodeName: dev path:/dev/video0
+01-01 00:00:10.607   257   257 I display : entry:fb1 get fb1
+01-01 00:00:10.607   257   257 I display : fb1 is overlay device
+01-01 00:00:10.607   257   257 I display : entry:fb2 get fb2
+01-01 00:00:10.608   257   257 I display : fb2 is hdmi
+01-01 00:00:10.608   257   257 I display :  device
+01-01 00:00:10.608   257   257 I display : fb2 device plugin
+01-01 00:00:10.620   263   263 W FslCameraHAL: int32_t CameraHAL::getNodeName(const char *, char *, size_t) open dev path:/dev/video0 failed:Try again
+01-01 00:00:10.620   263   263 I FslCameraHAL: getNodeName: dev path:/dev/video18
+01-01 00:00:10.625   262   262 W audio_hw_primary: card 0, id imx6qapalissgtl ,driver imx6q-apalis-sg, name imx6q-apalis-sgtl5000
+01-01 00:00:10.626   262   262 W audio_hw_primary: unrecognized card found.
+01-01 00:00:10.626   262   262 W audio_hw_primary: card 1, id imxspdif ,driver imx-spdif, name imx-spdif
+01-01 00:00:10.626   262   262 W audio_hw_primary: out rate 44100
+01-01 00:00:10.628   262   262 W audio_hw_primary: in rate 44100, channels 2 format 3
+01-01 00:00:10.628   262   262 W audio_hw_primary: card 2, id imxhdmisoc ,driver imx-hdmi-soc, name imx-hdmi-soc
+01-01 00:00:10.628   262   262 W audio_hw_primary: out rate 0
+01-01 00:00:10.629   262   262 W audio_hw_primary: in rate 0, channels 0 format 0
+01-01 00:00:10.629   262   262 I AudioFlinger: loadHwModule() Loaded primary audio interface from Freescale i.MX Audio HW HAL (audio) handle 10
+01-01 00:00:10.629   262   262 I AudioFlinger: openOutput(), module 10 Device 2, SamplingRate 44100, Format 0x000001, Channels 3, flags 2
+01-01 00:00:10.629   262   262 W audio_hw_primary: open output stream devices 2, format 1, channels 3, sample_rate 44100, flag 2
+01-01 00:00:10.629   262   262 W audio_hw_primary: opened out stream...-1241696512, type 1
+01-01 00:00:10.630   262   262 I AudioFlinger: HAL output buffer size 192 frames, normal sink buffer size 768 frames
+01-01 00:00:10.630   263   263 W FslCameraHAL: int32_t CameraHAL::getNodeName(const char *, char *, size_t) dev path:/dev/video18 is not capture
+01-01 00:00:10.631   263   263 I FslCameraHAL: getNodeName: dev path:/dev/video16
+01-01 00:00:10.631   263   263 W FslCameraHAL: int32_t CameraHAL::getNodeName(const char *, char *, size_t) open dev path:/dev/video16 failed:Permission denied
+01-01 00:00:10.631   263   263 I FslCameraHAL: matchPropertyName: index:0, ov5640_mipi,ov5642_camera,ov5640_camera
+01-01 00:00:10.631   263   263 I FslCameraHAL: index:0, propName:ov5640_mipi
+01-01 00:00:10.631   263   263 I FslCameraHAL: int32_t CameraHAL::matchNodeName(const char *, nodeSet *, int32_t)
+01-01 00:00:10.631   263   263 I FslCameraHAL: index:0, propName:ov5642_camera
+01-01 00:00:10.631   263   263 I FslCameraHAL: int32_t CameraHAL::matchNodeName(const char *, nodeSet *, int32_t)
+01-01 00:00:10.631   263   263 I FslCameraHAL: index:0, propName:ov5640_camera
+01-01 00:00:10.631   263   263 I FslCameraHAL: int32_t CameraHAL::matchNodeName(const char *, nodeSet *, int32_t)
+01-01 00:00:10.631   263   263 I FslCameraHAL: matchPropertyName: index:1, uvc,ov5642_camera,ov5640_camera
+01-01 00:00:10.631   263   263 I FslCameraHAL: index:1, propName:uvc
+01-01 00:00:10.631   263   263 I FslCameraHAL: int32_t CameraHAL::matchNodeName(const char *, nodeSet *, int32_t)
+01-01 00:00:10.631   263   263 I FslCameraHAL: index:1, propName:ov5642_camera
+01-01 00:00:10.631   263   263 I FslCameraHAL: int32_t CameraHAL::matchNodeName(const char *, nodeSet *, int32_t)
+01-01 00:00:10.631   263   263 I FslCameraHAL: index:1, propName:ov5640_camera
+01-01 00:00:10.631   263   263 I FslCameraHAL: int32_t CameraHAL::matchNodeName(const char *, nodeSet *, int32_t)
+01-01 00:00:10.631   263   263 I FslCameraHAL: camera number is 0
+01-01 00:00:10.632   263   263 I CameraService: Loaded "Default Camera HAL" camera module
+01-01 00:00:10.632   263   263 I ServiceManager: Waiting for service media.camera.proxy...
+01-01 00:00:10.711   262   262 I BufferProvider: found effect "Multichannel Downmix To Stereo" from The Android Open Source Project
+01-01 00:00:10.712   262   262 I AudioFlinger: Using module 10 has the primary audio interface
+01-01 00:00:10.712   262   307 I AudioFlinger: AudioFlinger's thread 0xb5a831c0 ready to run
+01-01 00:00:10.713   262   307 W BatteryNotifier: batterystats service unavailable!
+01-01 00:00:10.713   262   307 W BatteryNotifier: batterystats service unavailable!
+01-01 00:00:10.714   262   307 W BatteryNotifier: batterystats service unavailable!
+01-01 00:00:10.714   262   307 W audio_hw_primary: out_set_parameters routing=2, ret 0, out -1241696512
+01-01 00:00:10.714   262   307 W AudioFlinger: no wake lock to update, system not ready yet
+01-01 00:00:10.716   262   262 W audio_hw_primary: In channels 2, rate 48000, devices 0x80000004
+01-01 00:00:10.716   262   262 W audio_hw_primary: get_input_buffer_size size = 208, channel_count = 2
+01-01 00:00:10.716   262   262 W audio_hw_primary: get_input_buffer_size size = 208, channel_count = 2
+01-01 00:00:10.720   262   309 I AudioFlinger: AudioFlinger's thread 0xb56032c0 ready to run
+01-01 00:00:10.720   262   308 E FastThread: did not receive expected priority boost
+01-01 00:00:10.725   262   262 I bt_a2dp_hw: adev_open:  adev_open in A2dp_hw module
+01-01 00:00:10.725   262   262 I AudioFlinger: loadHwModule() Loaded a2dp audio interface from A2DP Audio HW HAL (audio) handle 18
+01-01 00:00:10.731   262   262 I AudioFlinger: loadHwModule() Loaded usb audio interface from USB audio HW HAL (audio) handle 26
+01-01 00:00:10.734   262   262 I r_submix: adev_open(name=audio_hw_if)
+01-01 00:00:10.735   262   262 I r_submix: adev_init_check()
+01-01 00:00:10.735   262   262 I AudioFlinger: loadHwModule() Loaded r_submix audio interface from Wifi Display audio HAL (audio) handle 34
+01-01 00:00:10.735   262   262 D r_submix: adev_open_input_stream(addr=0)
+01-01 00:00:10.735   262   262 D r_submix: submix_audio_device_create_pipe_l(addr=0, idx=9)
+01-01 00:00:10.735   262   262 D r_submix:   now using address 0 for route 9
+01-01 00:00:10.736   262   311 I AudioFlinger: AudioFlinger's thread 0xb5503580 ready to run
+01-01 00:00:10.736   262   262 D r_submix: adev_close_input_stream()
+01-01 00:00:10.737   262   262 D r_submix: submix_audio_device_release_pipe_l(idx=9) addr=0
+01-01 00:00:10.737   262   262 D r_submix: submix_audio_device_destroy_pipe_l(): pipe destroyed
+01-01 00:00:10.738   262   262 I RadioService: RadioService
+01-01 00:00:10.738   262   262 I RadioService: onFirstRef
+01-01 00:00:10.739   262   262 E RadioService: couldn't load radio module radio.primary (No such file or directory)
+01-01 00:00:10.740   262   262 E SoundTriggerHwService: couldn't load sound trigger module sound_trigger.primary (No such file or directory)
+01-01 00:00:10.764   257   257 W display : xres         = 1920 px
+01-01 00:00:10.764   257   257 W display : yres         = 1080 px
+01-01 00:00:10.764   257   257 W display : fps          = 60.00 Hz
+01-01 00:00:10.764   257   257 W display : bpp          = 32
+01-01 00:00:10.764   257   257 W display : r            =  0:8
+01-01 00:00:10.764   257   257 W display : g            =  8:8
+01-01 00:00:10.764   257   257 W display : b            = 16:8
+01-01 00:00:10.769   257   257 I display : GPUManager exists
+01-01 00:00:10.770   257   257 I display : entry:fb0 get fb0
+01-01 00:00:10.771   257   257 I display : fb0 is ldb
+01-01 00:00:10.771   257   257 I display :  device
+01-01 00:00:10.771   257   257 W display : xres         = 1024 px
+01-01 00:00:10.771   257   257 W display : yres         = 768 px
+01-01 00:00:10.771   257   257 W display : fps          = 60.01 Hz
+01-01 00:00:10.771   257   257 W display : bpp          = 32
+01-01 00:00:10.771   257   257 W display : r            =  0:8
+01-01 00:00:10.771   257   257 W display : g            =  8:8
+01-01 00:00:10.771   257   257 W display : b            = 16:8
+01-01 00:00:10.771   257   257 I display : entry:fb3 get fb3
+01-01 00:00:10.772   257   257 I display : fb3 is overlay device
+01-01 00:00:10.772   257   257 E hwcomposer: unknown display attribute 6
+01-01 00:00:10.772   257   257 E hwcomposer: unknown display attribute 6
+01-01 00:00:10.772   257   257 W SurfaceFlinger: no suitable EGLConfig found, trying a simpler query
+01-01 00:00:10.773   257   257 I SurfaceFlinger: EGL information:
+01-01 00:00:10.773   257   257 I SurfaceFlinger: vendor    : Android
+01-01 00:00:10.773   257   257 I SurfaceFlinger: version   : 1.4 Android META-EGL
+01-01 00:00:10.773   257   257 I SurfaceFlinger: extensions: EGL_KHR_get_all_proc_addresses EGL_ANDROID_presentation_time EGL_KHR_swap_buffers_with_damage EGL_ANDROID_create_native_client_buffer EGL_ANDROID_front_buffer_auto_refresh EGL_KHR_image EGL_KHR_image_base EGL_KHR_image_pixmap EGL_KHR_lock_surface EGL_KHR_gl_texture_2D_image EGL_KHR_gl_texture_cubemap_image EGL_KHR_gl_renderbuffer_image EGL_KHR_reusable_sync EGL_KHR_fence_sync EGL_KHR_create_context EGL_KHR_surfaceless_context EGL_EXT_create_context_robustness EGL_ANDROID_image_native_buffer EGL_KHR_wait_sync EGL_ANDROID_recordable EGL_EXT_buffer_age 
+01-01 00:00:10.773   257   257 I SurfaceFlinger: Client API: OpenGL_ES
+01-01 00:00:10.773   257   257 I SurfaceFlinger: EGLSurface: 8-8-8-8, config=0x15
+01-01 00:00:10.803   257   257 I SurfaceFlinger: OpenGL ES informations:
+01-01 00:00:10.803   257   257 I SurfaceFlinger: vendor    : Vivante Corporation
+01-01 00:00:10.804   257   257 I SurfaceFlinger: renderer  : Vivante GC2000
+01-01 00:00:10.804   257   257 I SurfaceFlinger: version   : OpenGL ES 3.0 V6.2.2.P1.96445
+01-01 00:00:10.804   257   257 I SurfaceFlinger: extensions: GL_EXT_debug_marker GL_OES_vertex_type_10_10_10_2 GL_OES_vertex_half_float GL_OES_element_index_uint GL_OES_mapbuffer GL_OES_vertex_array_object GL_OES_compressed_ETC1_RGB8_texture GL_OES_compressed_paletted_texture GL_OES_texture_npot GL_OES_rgb8_rgba8 GL_OES_depth_texture GL_OES_depth_texture_cube_map GL_OES_depth24 GL_OES_depth32 GL_OES_packed_depth_stencil GL_OES_fbo_render_mipmap GL_OES_get_program_binary GL_OES_fragment_precision_high GL_OES_standard_derivatives GL_OES_EGL_image GL_OES_EGL_image_external GL_OES_EGL_sync GL_OES_required_internalformat GL_OES_surfaceless_context GL_OES_texture_half_float GL_OES_texture_float GL_EXT_texture_type_2_10_10_10_REV GL_EXT_texture_filter_anisotropic GL_EXT_texture_format_BGRA8888 GL_EXT_read_format_bgra GL_EXT_multi_draw_arrays GL_EXT_frag_depth GL_EXT_discard_framebuffer GL_EXT_blend_minmax GL_EXT_multisampled_render_to_texture GL_EXT_robustness GL_EXT_texture_sRGB_decode GL_EXT_texture_rg GL_VIV_direct_texture 
+01-01 00:00:10.804   257   257 I SurfaceFlinger: GL_MAX_TEXTURE_SIZE = 8192
+01-01 00:00:10.804   257   257 I SurfaceFlinger: GL_MAX_VIEWPORT_DIMS = 8192
+01-01 00:00:10.809   257   257 E gralloc : int gralloc1_device_open(const struct hw_module_t *, const char *, hw_device_t **) invalid name:fb0
+01-01 00:00:10.809   257   257 I v_egl   : FramebufferSurface: bufferCount=3
+01-01 00:00:10.810   257   257 E libEGL  : eglSetSwapRectangleANDROID:1979 error 300d (EGL_BAD_SURFACE)
+01-01 00:00:10.811   257   257 E gralloc : int gralloc1_device_open(const struct hw_module_t *, const char *, hw_device_t **) invalid name:fb0
+01-01 00:00:10.811   257   257 I v_egl   : FramebufferSurface: bufferCount=3
+01-01 00:00:10.811   257   257 E libEGL  : eglSetSwapRectangleANDROID:1979 error 300d (EGL_BAD_SURFACE)
+01-01 00:00:10.812   257   257 D SurfaceFlinger: marking display 1 as acquired/unblanked
+01-01 00:00:10.835   268   268 I mediaserver: ServiceManager: 0xa86193e0
+01-01 00:00:11.228   257   257 D SurfaceFlinger: shader cache generated - 24 shaders in 411.447021 ms
+01-01 00:00:11.231   257   257 D SurfaceFlinger: Set power mode=2, type=0 flinger=0xb4ab2000
+01-01 00:00:11.633   263   263 I ServiceManager: Waiting for service media.camera.proxy...
+01-01 00:00:12.029   261   261 D AndroidRuntime: >>>>>> START com.android.internal.os.ZygoteInit uid 0 <<<<<<
+01-01 00:00:12.112   261   261 D AndroidRuntime: CheckJNI is OFF
+01-01 00:00:12.126   261   261 I art     : option[0]=-Xzygote
+01-01 00:00:12.126   261   261 I art     : option[1]=-Xstacktracefile:/data/anr/traces.txt
+01-01 00:00:12.126   261   261 I art     : option[2]=exit
+01-01 00:00:12.126   261   261 I art     : option[3]=vfprintf
+01-01 00:00:12.126   261   261 I art     : option[4]=sensitiveThread
+01-01 00:00:12.126   261   261 I art     : option[5]=-verbose:gc
+01-01 00:00:12.126   261   261 I art     : option[6]=-Xms8m
+01-01 00:00:12.126   261   261 I art     : option[7]=-Xmx384m
+01-01 00:00:12.126   261   261 I art     : option[8]=-XX:HeapGrowthLimit=128m
+01-01 00:00:12.127   261   261 I art     : option[9]=-XX:HeapMinFree=512k
+01-01 00:00:12.127   261   261 I art     : option[10]=-XX:HeapMaxFree=8m
+01-01 00:00:12.127   261   261 I art     : option[11]=-XX:HeapTargetUtilization=0.75
+01-01 00:00:12.127   261   261 I art     : option[12]=-Xusejit:true
+01-01 00:00:12.127   261   261 I art     : option[13]=-Xjitsaveprofilinginfo
+01-01 00:00:12.127   261   261 I art     : option[14]=-agentlib:jdwp=transport=dt_android_adb,suspend=n,server=y
+01-01 00:00:12.127   261   261 I art     : option[15]=-Ximage-compiler-option
+01-01 00:00:12.127   261   261 I art     : option[16]=--runtime-arg
+01-01 00:00:12.127   261   261 I art     : option[17]=-Ximage-compiler-option
+01-01 00:00:12.127   261   261 I art     : option[18]=-Xms64m
+01-01 00:00:12.127   261   261 I art     : option[19]=-Ximage-compiler-option
+01-01 00:00:12.127   261   261 I art     : option[20]=--runtime-arg
+01-01 00:00:12.127   261   261 I art     : option[21]=-Ximage-compiler-option
+01-01 00:00:12.127   261   261 I art     : option[22]=-Xmx64m
+01-01 00:00:12.127   261   261 I art     : option[23]=-Ximage-compiler-option
+01-01 00:00:12.127   261   261 I art     : option[24]=--image-classes=/system/etc/preloaded-classes
+01-01 00:00:12.127   261   261 I art     : option[25]=-Ximage-compiler-option
+01-01 00:00:12.127   261   261 I art     : option[26]=--compiled-classes=/system/etc/compiled-classes
+01-01 00:00:12.127   261   261 I art     : option[27]=-Xcompiler-option
+01-01 00:00:12.127   261   261 I art     : option[28]=--runtime-arg
+01-01 00:00:12.127   261   261 I art     : option[29]=-Xcompiler-option
+01-01 00:00:12.127   261   261 I art     : option[30]=-Xms64m
+01-01 00:00:12.127   261   261 I art     : option[31]=-Xcompiler-option
+01-01 00:00:12.128   261   261 I art     : option[32]=--runtime-arg
+01-01 00:00:12.128   261   261 I art     : option[33]=-Xcompiler-option
+01-01 00:00:12.128   261   261 I art     : option[34]=-Xmx512m
+01-01 00:00:12.128   261   261 I art     : option[35]=-Ximage-compiler-option
+01-01 00:00:12.128   261   261 I art     : option[36]=--instruction-set-variant=cortex-a9
+01-01 00:00:12.128   261   261 I art     : option[37]=-Xcompiler-option
+01-01 00:00:12.128   261   261 I art     : option[38]=--instruction-set-variant=cortex-a9
+01-01 00:00:12.128   261   261 I art     : option[39]=-Ximage-compiler-option
+01-01 00:00:12.128   261   261 I art     : option[40]=--instruction-set-features=default
+01-01 00:00:12.128   261   261 I art     : option[41]=-Xcompiler-option
+01-01 00:00:12.128   261   261 I art     : option[42]=--instruction-set-features=default
+01-01 00:00:12.128   261   261 I art     : option[43]=-Duser.locale=en-US
+01-01 00:00:12.128   261   261 I art     : option[44]=--cpu-abilist=armeabi-v7a,armeabi
+01-01 00:00:12.128   261   261 I art     : option[45]=-Xfingerprint:Android/sabresd_6dq/sabresd_6dq:7.1.2/2.0.0-rfp-rc6/20170930:user/release-keys
+01-01 00:00:12.633   263   263 I ServiceManager: Waiting for service media.camera.proxy...
+01-01 00:00:12.873   334   392 D libEGL  : loaded /system/lib/egl/libEGL_VIVANTE.so
+01-01 00:00:12.906   334   392 D libEGL  : loaded /system/lib/egl/libGLESv1_CM_VIVANTE.so
+01-01 00:00:13.067   334   392 D libEGL  : loaded /system/lib/egl/libGLESv2_VIVANTE.so
+01-01 00:00:13.144   261   261 D ICU     : No timezone override file found: /data/misc/zoneinfo/current/icu/icu_tzdata.dat
+01-01 00:00:13.634   263   263 I ServiceManager: Waiting for service media.camera.proxy...
+01-01 00:00:13.645   261   261 E memtrack: Couldn't load memtrack module (No such file or directory)
+01-01 00:00:13.645   261   261 E android.os.Debug: failed to load memtrack module: -2
+01-01 00:00:13.650   261   261 I Radio-JNI: register_android_hardware_Radio DONE
+01-01 00:00:13.699   261   261 I SamplingProfilerIntegration: Profiling disabled.
+01-01 00:00:13.700   261   261 D Zygote  : begin preload
+01-01 00:00:13.700   261   261 I Zygote  : Installing ICU cache reference pinning...
+01-01 00:00:13.712   261   261 I Zygote  : Preloading ICU data...
+01-01 00:00:13.720   262   307 W BatteryNotifier: batterystats service unavailable!
+01-01 00:00:13.795   334   392 I display : GPUManager exists
+01-01 00:00:13.962   261   261 I Zygote  : Preloading classes...
+01-01 00:00:13.973   261   261 W Zygote  : Class not found for preloading: [Landroid.view.Display$ColorTransform;
+01-01 00:00:14.805   261   261 E Typeface: Error mapping font file /system/fonts/DroidSansFallback.ttf
+01-01 00:00:15.328   261   261 I art     : Thread[1,tid=261,Native,Thread*=0xb2f85400,peer=0x12c060d0,"main"] recursive attempt to load library "/system/lib/libmedia_jni.so"
+01-01 00:00:15.329   261   261 D MtpDeviceJNI: register_android_mtp_MtpDevice
+01-01 00:00:15.330   261   261 I art     : Thread[1,tid=261,Native,Thread*=0xb2f85400,peer=0x12c060d0,"main"] recursive attempt to load library "/system/lib/libmedia_jni.so"
+01-01 00:00:15.330   261   261 I art     : Thread[1,tid=261,Native,Thread*=0xb2f85400,peer=0x12c060d0,"main"] recursive attempt to load library "/system/lib/libmedia_jni.so"
+01-01 00:00:15.681   261   261 W Zygote  : Class not found for preloading: android.view.Display$ColorTransform
+01-01 00:00:15.682   261   261 W Zygote  : Class not found for preloading: android.view.Display$ColorTransform$1
+01-01 00:00:16.030   261   261 I System  : Loaded time zone names for "" in 126ms (121ms in ICU)
+01-01 00:00:16.094   271   271 V NatController: runCmd(/system/bin/iptables -w -F natctrl_FORWARD) res=0
+01-01 00:00:16.096   261   261 I System  : Loaded time zone names for "en_US" in 66ms (60ms in ICU)
+01-01 00:00:16.119   271   271 V NatController: runCmd(/system/bin/ip6tables -w -F natctrl_FORWARD) res=0
+01-01 00:00:16.146   271   271 V NatController: runCmd(/system/bin/iptables -w -A natctrl_FORWARD -j DROP) res=0
+01-01 00:00:16.169   271   271 V NatController: runCmd(/system/bin/iptables -w -t nat -F natctrl_nat_POSTROUTING) res=0
+01-01 00:00:16.174   261   261 I Zygote  : ...preloaded 4158 classes in 2212ms.
+01-01 00:00:16.174   261   261 I art     : VMRuntime.preloadDexCaches starting
+01-01 00:00:16.193   271   271 V NatController: runCmd(/system/bin/ip6tables -w -t raw -F natctrl_raw_PREROUTING) res=0
+01-01 00:00:16.218   271   271 V NatController: runCmd(/system/bin/iptables -w -F natctrl_tether_counters) res=1
+01-01 00:00:16.244   271   271 V NatController: runCmd(/system/bin/ip6tables -w -F natctrl_tether_counters) res=1
+01-01 00:00:16.267   271   271 V NatController: runCmd(/system/bin/iptables -w -X natctrl_tether_counters) res=1
+01-01 00:00:16.292   271   271 V NatController: runCmd(/system/bin/ip6tables -w -X natctrl_tether_counters) res=1
+01-01 00:00:16.318   271   271 V NatController: runCmd(/system/bin/iptables -w -N natctrl_tether_counters) res=0
+01-01 00:00:16.342   271   271 V NatController: runCmd(/system/bin/ip6tables -w -N natctrl_tether_counters) res=0
+01-01 00:00:16.368   271   271 V NatController: runCmd(/system/bin/iptables -w -t mangle -A natctrl_mangle_FORWARD -p tcp --tcp-flags SYN SYN -j TCPMSS --clamp-mss-to-pmtu) res=0
+01-01 00:00:16.539   261   261 I art     : VMRuntime.preloadDexCaches strings total=284392 before=39790 after=39790
+01-01 00:00:16.539   261   261 I art     : VMRuntime.preloadDexCaches types total=23616 before=7880 after=7908
+01-01 00:00:16.539   261   261 I art     : VMRuntime.preloadDexCaches fields total=112271 before=40953 after=41170
+01-01 00:00:16.540   261   261 I art     : VMRuntime.preloadDexCaches methods total=197813 before=82503 after=83069
+01-01 00:00:16.540   261   261 I art     : VMRuntime.preloadDexCaches finished
+01-01 00:00:16.543   261   261 I Zygote  : Preloading resources...
+01-01 00:00:16.690   261   261 W Resources: Preloaded drawable resource #0x108025c (android:drawable/dialog_background_material) that varies with configuration!!
+01-01 00:00:16.692   261   261 W Resources: Preloaded drawable resource #0x1080298 (android:drawable/editbox_dropdown_background_dark) that varies with configuration!!
+01-01 00:00:16.702   261   261 W Resources: Preloaded color resource #0x10600ea (android:color/material_grey_800) that varies with configuration!!
+01-01 00:00:16.702   261   261 W Resources: Preloaded drawable resource #0x10802c9 (android:drawable/floating_popup_background_dark) that varies with configuration!!
+01-01 00:00:16.734   271   271 E Netd    : cannot find interface dummy0
+01-01 00:00:16.748   261   261 W Resources: Preloaded drawable resource #0x108030b (android:drawable/ic_clear_disabled) that varies with configuration!!
+01-01 00:00:16.749   261   261 W Resources: Preloaded drawable resource #0x1080310 (android:drawable/ic_clear_normal) that varies with configuration!!
+01-01 00:00:16.750   271   271 D MDnsDS  : MDnsSdListener::Hander starting up
+01-01 00:00:16.750   271   524 D MDnsDS  : MDnsSdListener starting to monitor
+01-01 00:00:16.750   271   524 D MDnsDS  : Going to poll with pollCount 1
+01-01 00:00:16.755   261   261 W Resources: Preloaded drawable resource #0x1080359 (android:drawable/ic_go) that varies with configuration!!
+01-01 00:00:16.762   261   261 W Resources: Preloaded drawable resource #0x1080038 (android:drawable/ic_menu_close_clear_cancel) that varies with configuration!!
+01-01 00:00:16.766   261   261 W Resources: Preloaded drawable resource #0x1080045 (android:drawable/ic_menu_more) that varies with configuration!!
+01-01 00:00:16.783   261   261 W Resources: Preloaded drawable resource #0x10804eb (android:drawable/menu_background_fill_parent_width) that varies with configuration!!
+01-01 00:00:16.856   261   261 W Resources: Preloaded drawable resource #0x1080783 (android:drawable/text_edit_paste_window) that varies with configuration!!
+01-01 00:00:16.862   261   261 W Resources: Preloaded drawable resource #0x1080096 (android:drawable/toast_frame) that varies with configuration!!
+01-01 00:00:16.862   261   261 I Zygote  : ...preloaded 114 resources in 319ms.
+01-01 00:00:16.871   261   261 W Resources: Preloaded color resource #0x1060114 (android:color/background_cache_hint_selector_material_dark) that varies with configuration!!
+01-01 00:00:16.872   261   261 W Resources: Preloaded color resource #0x1060119 (android:color/btn_default_material_dark) that varies with configuration!!
+01-01 00:00:16.875   261   261 I Zygote  : ...preloaded 41 resources in 13ms.
+01-01 00:00:16.886   261   261 D libEGL  : loaded /system/lib/egl/libEGL_VIVANTE.so
+01-01 00:00:16.909   261   261 D libEGL  : loaded /system/lib/egl/libGLESv1_CM_VIVANTE.so
+01-01 00:00:17.056   261   261 D libEGL  : loaded /system/lib/egl/libGLESv2_VIVANTE.so
+01-01 00:00:17.169   261   261 I Zygote  : Preloading shared libraries...
+01-01 00:00:17.210   261   261 I Zygote  : Uninstalled ICU cache reference pinning...
+01-01 00:00:17.213   261   261 I Zygote  : Installed AndroidKeyStoreProvider in 3ms.
+01-01 00:00:17.262   261   261 I Zygote  : Warmed up JCA providers in 49ms.
+01-01 00:00:17.262   261   261 D Zygote  : end preload
+01-01 00:00:17.262   261   261 I art     : Waiting for a blocking GC Explicit
+01-01 00:00:17.282   261   261 I art     : WaitForGcToComplete blocked for 19.720ms for cause Explicit
+01-01 00:00:17.282   261   261 I art     : Starting a blocking GC Explicit
+01-01 00:00:17.309   261   261 I art     : Explicit concurrent mark sweep GC freed 114(5KB) AllocSpace objects, 0(0B) LOS objects, 39% free, 2MB/3MB, paused 572us total 25.984ms
+01-01 00:00:17.309   261   261 I art     : Starting a blocking GC Explicit
+01-01 00:00:17.334   261   261 I art     : Explicit concurrent mark sweep GC freed 5(128B) AllocSpace objects, 0(0B) LOS objects, 39% free, 2MB/3MB, paused 418us total 24.698ms
+01-01 00:00:17.370   261   414 I art     : Starting a blocking GC HeapTrim
+01-01 00:00:17.375   261   261 I art     : Starting a blocking GC Background
+01-01 00:00:17.467   261   261 I Zygote  : System server process 530 has been created
+01-01 00:00:17.471   261   261 I Zygote  : Accepting command socket connections
+01-01 00:00:17.486   530   530 I InstallerConnection: connecting...
+01-01 00:00:17.489   265   265 I         : new connection
+01-01 00:00:17.600   530   530 I InstallerConnection: disconnecting...
+01-01 00:00:17.601   265   265 E         : eof
+01-01 00:00:17.601   265   265 E         : failed to read size
+01-01 00:00:17.601   265   265 I         : closing connection
+01-01 00:00:17.747   530   530 W SystemServer: System clock is before 1970; setting to 1970.
+01-01 00:00:17.750   530   530 I SystemServer: Entered the Android system server!
+01-01 00:00:18.010   530   530 I SystemServiceManager: Starting com.android.server.pm.Installer
+01-01 00:00:18.050   530   530 I Installer: Waiting for installd to be ready.
+01-01 00:00:18.050   530   530 I InstallerConnection: connecting...
+01-01 00:00:18.050   265   265 I         : new connection
+01-01 00:00:18.051   530   530 I SystemServiceManager: Starting com.android.server.am.ActivityManagerService$Lifecycle
+01-01 00:00:18.131   530   530 I ActivityManager: Memory class: 128
+01-01 00:00:18.193   530   530 D BatteryStatsImpl: Reading daily items from /data/system/batterystats-daily.xml
+01-01 00:00:18.353   530   530 I AppOps  : No existing app ops /data/system/appops.xml; starting empty
+01-01 00:00:18.434   530   530 I IntentFirewall: Read new rules (A:0 B:0 S:0)
+01-01 00:00:18.453   530   530 D AppOps  : AppOpsService published
+01-01 00:00:18.454   530   530 I SystemServiceManager: Starting com.android.server.power.PowerManagerService
+01-01 00:00:18.477   530   530 E SWITCHPROFILE: setprop: sys.interactive = active 
+01-01 00:00:18.478   530   530 W libsuspend: Error writing 'on' to /sys/power/state: Invalid argument
+01-01 00:00:18.478   530   530 I libsuspend: Selected wakeup count
+01-01 00:00:18.478   530   553 I SWITCHPROFILE: Switchprofile thread received GOV_INTERACTIVE from Power HAL
+01-01 00:00:18.483   530   530 I SystemServiceManager: Starting com.android.server.lights.LightsService
+01-01 00:00:18.487   530   530 I lights  : max backlight file is /sys/class/backlight/backlight/max_brightness
+01-01 00:00:18.487   530   530 I lights  : backlight brightness file is /sys/class/backlight/backlight/brightness
+01-01 00:00:18.488   530   530 I SystemServiceManager: Starting com.android.server.display.DisplayManagerService
+01-01 00:00:18.506   530   530 I SystemServiceManager: Starting phase 100
+01-01 00:00:18.512   530   550 I DisplayManagerService: Display device added: DisplayDeviceInfo{"Built-in Screen": uniqueId="local:0", 1024 x 768, modeId 1, defaultModeId 1, supportedModes [{id=1, width=1024, height=768, fps=60.006}], colorMode 0, supportedColorModes [0], HdrCapabilities android.view.Display$HdrCapabilities@a69d6308, density 160, 159.568 x 159.895 dpi, appVsyncOff 1000000, presDeadline 16665000, touch INTERNAL, rotation 0, type BUILT_IN, state UNKNOWN, FLAG_DEFAULT_DISPLAY, FLAG_ROTATES_WITH_CONTENT, FLAG_SECURE, FLAG_SUPPORTS_PROTECTED_BUFFERS}
+01-01 00:00:18.514   257   257 D SurfaceFlinger: Set power mode=2, type=0 flinger=0xb4ab2000
+01-01 00:00:18.514   257   257 D SurfaceFlinger: Screen type=0 is already mode=2
+01-01 00:00:18.516   530   530 I SystemServer: StartPackageManagerService
+01-01 00:00:18.516   530   550 I DisplayManagerService: Display device added: DisplayDeviceInfo{"HDMI Screen": uniqueId="local:1", 1920 x 1080, modeId 2, defaultModeId 2, supportedModes [{id=2, width=1920, height=1080, fps=60.000004}], colorMode 0, supportedColorModes [0], HdrCapabilities android.view.Display$HdrCapabilities@a69d6308, density 320, 320.0 x 320.0 dpi, appVsyncOff 1000000, presDeadline 16666666, touch EXTERNAL, rotation 0, type HDMI, state UNKNOWN, FLAG_SECURE, FLAG_SUPPORTS_PROTECTED_BUFFERS, FLAG_PRESENTATION}
+01-01 00:00:18.517   257   257 D SurfaceFlinger: Set power mode=2, type=1 flinger=0xb4ab2000
+01-01 00:00:18.517   257   257 D SurfaceFlinger: Screen type=1 is already mode=2
+01-01 00:00:18.517   530   550 I DisplayManagerService: Display device changed state: "Built-in Screen", ON
+01-01 00:00:18.518   530   550 I DisplayManagerService: Display device changed state: "HDMI Screen", ON
+01-01 00:00:18.520   530   553 E SWITCHPROFILE: setprop: sys.interactive = active 
+01-01 00:00:18.521   530   553 E SWITCHPROFILE: Could not open cpu gov:/sys/devices/system/cpu/cpufreq/interactive/boostpulse
+01-01 00:00:18.544   530   530 W SystemConfig: No directory /system/etc/sysconfig, skipping
+01-01 00:00:18.608   530   530 D SELinuxMMAC: Using policy file /system/etc/security/mac_permissions.xml
+01-01 00:00:18.914   530   530 E art     : DexFile_getDexOptNeeded file '/system/framework/org.apache.http.legacy.jar' does not exist
+01-01 00:00:18.915   530   530 W PackageManager: Library not found: /system/framework/org.apache.http.legacy.jar
+01-01 00:00:18.922   530   530 D PackageManager: No files in app dir /vendor/overlay
+01-01 00:00:18.927   530   530 W PackageManager: Failed to parse /system/framework/arm: Missing base APK in /system/framework/arm
+01-01 00:00:19.018   530   530 W PackageManager: Failed to parse /system/framework/oat: Missing base APK in /system/framework/oat
+01-01 00:00:19.246   530   530 W PackageParser: No actions in intent filter at /system/priv-app/Contacts/Contacts.apk Binary XML file line #409
+01-01 00:00:19.408   530   530 W PackageParser: No actions in intent filter at /system/priv-app/Dialer/Dialer.apk Binary XML file line #186
+01-01 00:00:19.478   530   530 W PackageManager: Permission android.permission.DOWNLOAD_WITHOUT_NOTIFICATION from package com.android.providers.downloads in an unknown group android.permission-group.NETWORK
+01-01 00:00:19.626   530   530 W PackageManager: Permission com.android.launcher.permission.PRELOAD_WORKSPACE from package com.android.launcher in an unknown group android.permission-group.SYSTEM_TOOLS
+01-01 00:00:19.626   530   530 W PackageManager: Permission com.android.launcher.permission.INSTALL_SHORTCUT from package com.android.launcher in an unknown group android.permission-group.SYSTEM_TOOLS
+01-01 00:00:19.626   530   530 W PackageManager: Permission com.android.launcher.permission.UNINSTALL_SHORTCUT from package com.android.launcher in an unknown group android.permission-group.SYSTEM_TOOLS
+01-01 00:00:19.627   530   530 W PackageManager: Permission com.android.launcher.permission.READ_SETTINGS from package com.android.launcher in an unknown group android.permission-group.SYSTEM_TOOLS
+01-01 00:00:19.627   530   530 W PackageManager: Permission com.android.launcher.permission.WRITE_SETTINGS from package com.android.launcher in an unknown group android.permission-group.SYSTEM_TOOLS
+01-01 00:00:20.001   530   530 W PackageParser: Ignoring duplicate uses-permissions/uses-permissions-sdk-m: android.permission.USE_CREDENTIALS in package: com.android.settings at: Binary XML file line #56
+01-01 00:00:20.001   530   530 W PackageParser: Ignoring duplicate uses-permissions/uses-permissions-sdk-m: android.permission.READ_SYNC_SETTINGS in package: com.android.settings at: Binary XML file line #61
+01-01 00:00:20.001   530   530 W PackageParser: Ignoring duplicate uses-permissions/uses-permissions-sdk-m: android.permission.WRITE_SYNC_SETTINGS in package: com.android.settings at: Binary XML file line #62
+01-01 00:00:20.173   530   530 W PackageParser: Ignoring duplicate uses-permissions/uses-permissions-sdk-m: android.permission.INSTALL_GRANT_RUNTIME_PERMISSIONS in package: com.android.shell at: Binary XML file line #103
+01-01 00:00:20.343   530   530 W PackageParser: Ignoring duplicate uses-permissions/uses-permissions-sdk-m: android.permission.CONFIGURE_WIFI_DISPLAY in package: com.android.systemui at: Binary XML file line #123
+01-01 00:00:20.629   530   530 W PackageParser: Ignoring duplicate uses-permissions/uses-permissions-sdk-m: android.permission.READ_CONTACTS in package: com.android.bluetooth at: Binary XML file line #61
+01-01 00:00:20.633   530   530 W PackageParser: No actions in intent filter at /system/app/Bluetooth/Bluetooth.apk Binary XML file line #222
+01-01 00:00:20.749   530   530 W PackageManager: Non-privileged app; cap priority to 0; package: com.android.calendar activity: com.android.calendar.GoogleCalendarUriIntentFilter origPrio: 50
+01-01 00:00:20.847   530   530 W PackageManager: Non-privileged app; cap priority to 0; package: com.android.cts.ctsshim activity: com.android.cts.ctsshim.InstallPriority origPrio: 100
+01-01 00:00:20.848   530   530 W PackageManager: Non-privileged app; cap priority to 0; package: com.android.cts.ctsshim activity: com.android.cts.ctsshim.InstallPriority origPrio: 100
+01-01 00:00:20.848   530   530 W PackageManager: Non-privileged app; cap priority to 0; package: com.android.cts.ctsshim activity: com.android.cts.ctsshim.InstallPriority origPrio: 100
+01-01 00:00:20.848   530   530 W PackageManager: Non-privileged app; cap priority to 0; package: com.android.cts.ctsshim activity: com.android.cts.ctsshim.InstallPriority origPrio: 100
+01-01 00:00:20.848   530   530 W PackageManager: Non-privileged app; cap priority to 0; package: com.android.cts.ctsshim activity: com.android.cts.ctsshim.InstallPriority origPrio: 100
+01-01 00:00:21.023   530   530 W PackageParser: Ignoring duplicate uses-permissions/uses-permissions-sdk-m: android.permission.WRITE_CONTACTS in package: com.android.email at: Binary XML file line #40
+01-01 00:00:21.152   530   530 W PackageParser: Unknown element under <application>: permission at /system/app/Gallery2/Gallery2.apk Binary XML file line #253
+01-01 00:00:21.153   530   530 W PackageParser: Unknown element under <application>: permission at /system/app/Gallery2/Gallery2.apk Binary XML file line #256
+01-01 00:00:21.507   530   530 D PackageManager: No files in app dir /system/vendor/app
+01-01 00:00:21.507   530   530 D PackageManager: No files in app dir /oem/app
+01-01 00:00:21.510   530   530 D PackageManager: No files in app dir /data/app
+01-01 00:00:21.511   530   530 D PackageManager: No files in app dir /data/app-private
+01-01 00:00:21.511   530   530 D PackageManager: No files in app dir /data/app-ephemeral
+01-01 00:00:21.514   530   530 W PackageManager: Protected action; cap priority to 0; package: com.android.cts.priv.ctsshim activity: com.android.cts.priv.ctsshim.InstallPriority origPrio: 100
+01-01 00:00:21.514   530   530 W PackageManager: Protected action; cap priority to 0; package: com.android.cts.priv.ctsshim activity: com.android.cts.priv.ctsshim.InstallPriority origPrio: 100
+01-01 00:00:21.514   530   530 W PackageManager: Protected action; cap priority to 0; package: com.android.cts.priv.ctsshim activity: com.android.cts.priv.ctsshim.InstallPriority origPrio: 100
+01-01 00:00:21.514   530   530 W PackageManager: Protected action; cap priority to 0; package: com.android.cts.priv.ctsshim activity: com.android.cts.priv.ctsshim.InstallPriority origPrio: 100
+01-01 00:00:21.514   530   530 W PackageManager: Protected action; cap priority to 0; package: com.android.packageinstaller activity: com.android.packageinstaller.PackageInstallerActivity origPrio: 1
+01-01 00:00:21.514   530   530 W PackageManager: Package com.android.gallery3d desires unavailable shared library com.google.android.media.effects; ignoring!
+01-01 00:00:21.514   530   530 W PackageManager: Package com.android.gallery3d desires unavailable shared library com.google.android.media.effects; ignoring!
+01-01 00:00:21.515   530   530 I PackageManager: Adjusting ABI for com.android.providers.downloads.ui to armeabi-v7a (requirer=com.android.mtp, scannedPackage=null)
+01-01 00:00:21.516   530   530 I PackageManager: Adjusting ABI for com.android.providers.media to armeabi-v7a (requirer=com.android.mtp, scannedPackage=null)
+01-01 00:00:21.517   530   530 I PackageManager: Adjusting ABI for com.android.providers.downloads to armeabi-v7a (requirer=com.android.mtp, scannedPackage=null)
+01-01 00:00:21.517   530   530 I PackageManager: Adjusting ABI for com.android.wallpaperbackup to armeabi-v7a (requirer=android, scannedPackage=null)
+01-01 00:00:21.518   530   530 I PackageManager: Adjusting ABI for com.android.keychain to armeabi-v7a (requirer=android, scannedPackage=null)
+01-01 00:00:21.519   530   530 I PackageManager: Adjusting ABI for com.android.location.fused to armeabi-v7a (requirer=android, scannedPackage=null)
+01-01 00:00:21.520   530   530 I PackageManager: Adjusting ABI for com.android.server.telecom to armeabi-v7a (requirer=android, scannedPackage=null)
+01-01 00:00:21.521   530   530 I PackageManager: Adjusting ABI for com.android.settings to armeabi-v7a (requirer=android, scannedPackage=null)
+01-01 00:00:21.522   530   530 I PackageManager: Adjusting ABI for com.fsl.android.ota to armeabi-v7a (requirer=android, scannedPackage=null)
+01-01 00:00:21.522   530   530 I PackageManager: Adjusting ABI for com.android.inputdevices to armeabi-v7a (requirer=android, scannedPackage=null)
+01-01 00:00:21.523   530   530 I PackageManager: Adjusting ABI for com.fsl.ethernet to armeabi-v7a (requirer=android, scannedPackage=null)
+01-01 00:00:21.524   530   530 I PackageManager: Adjusting ABI for com.freescale.a2dpsinkapp to armeabi-v7a (requirer=android, scannedPackage=null)
+01-01 00:00:21.525   530   530 I PackageManager: Adjusting ABI for com.android.providers.settings to armeabi-v7a (requirer=android, scannedPackage=null)
+01-01 00:00:21.525   530   530 I PackageManager: Adjusting ABI for com.freescale.wfdsink to armeabi-v7a (requirer=android, scannedPackage=null)
+01-01 00:00:21.529   530   530 I PackageManager: Time to scan packages: 2.644 seconds
+01-01 00:00:21.531   530   530 W PackageManager: Unknown permission com.google.android.googleapps.permission.GOOGLE_AUTH in package com.android.providers.calendar
+01-01 00:00:21.531   530   530 W PackageManager: Unknown permission com.google.android.googleapps.permission.GOOGLE_AUTH.cl in package com.android.providers.calendar
+01-01 00:00:21.531   530   530 W PackageManager: Not granting permission android.permission.GLOBAL_SEARCH to package com.android.quicksearchbox (protectionLevel=18 flags=0x3808be45)
+01-01 00:00:21.532   530   530 W PackageManager: Not granting permission android.permission.BIND_WALLPAPER to package com.android.camera2 (protectionLevel=18 flags=0x3058bc45)
+01-01 00:00:21.532   530   530 W PackageManager: Unknown permission com.google.android.googleapps.permission.GOOGLE_AUTH.mail in package com.android.calendar
+01-01 00:00:21.533   530   530 W PackageManager: Not granting permission android.permission.WRITE_MEDIA_STORAGE to package com.android.gallery3d (protectionLevel=18 flags=0x3858bc45)
+01-01 00:00:21.533   530   530 W PackageManager: Unknown permission com.google.android.permission.INSTALL_WEARABLE_PACKAGES in package com.android.packageinstaller
+01-01 00:00:21.533   530   530 W PackageManager: Not granting permission android.permission.DELETE_PACKAGES to package com.svox.pico (protectionLevel=18 flags=0x3808be45)
+01-01 00:00:21.534   530   530 W PackageManager: Unknown permission android.permission.RUN_INSTRUMENTATION in package org.chromium.webview_shell
+01-01 00:00:21.534   530   530 W PackageManager: Unknown permission com.google.android.googleapps.permission.GOOGLE_AUTH in package com.android.settings
+01-01 00:00:21.535   530   530 W PackageManager: Unknown permission com.android.smspush.WAPPUSH_MANAGER_BIND in package com.android.phone
+01-01 00:00:21.536   530   530 W PackageManager: Unknown permission android.permission.ACCESS_ALL_EXTERNAL_STORAGE in package com.freescale.wfdsink
+01-01 00:00:21.536   530   530 W PackageManager: Unknown permission com.google.android.gallery3d.permission.GALLERY_PROVIDER in package com.android.bluetooth
+01-01 00:00:21.537   530   530 V PackageManager: reconcileAppsData for null u0 0x3
+01-01 00:00:21.551   265   265 I SELinux : SELinux: Loaded file_contexts contexts from /file_contexts.bin.
+01-01 00:00:22.166   530   530 V PackageManager: reconcileAppsData finished 80 packages
+01-01 00:00:22.282   530   530 E PackageManager: There should probably be a verifier, but, none were found
+01-01 00:00:22.289   530   530 I art     : Starting a blocking GC Explicit
+01-01 00:00:22.357   530   530 I art     : Explicit concurrent mark sweep GC freed 16457(940KB) AllocSpace objects, 4(80KB) LOS objects, 33% free, 3MB/4MB, paused 902us total 67.479ms
+01-01 00:00:22.360   530   530 I SystemServer: StartOtaDexOptService
+01-01 00:00:22.363   530   530 I SystemServer: StartUserManagerService
+01-01 00:00:22.364   530   530 I SystemServiceManager: Starting com.android.server.pm.UserManagerService$LifeCycle
+01-01 00:00:22.377   255   255 I lowmemorykiller: ActivityManager connected
+01-01 00:00:22.379   530   530 I SystemServiceManager: Starting com.android.server.BatteryService
+01-01 00:00:22.379   530   558 D SensorService: nuSensorService starting...
+01-01 00:00:22.380   530   558 E SensorService: couldn't load sensors module (No such file or directory)
+01-01 00:00:22.386   530   530 I SystemServiceManager: Starting com.android.server.usage.UsageStatsService
+01-01 00:00:22.401   530   530 I SystemServiceManager: Starting com.android.server.webkit.WebViewUpdateService
+01-01 00:00:22.410   530   530 I SystemServer: Reading configuration...
+01-01 00:00:22.410   530   530 I SystemServer: StartSchedulingPolicyService
+01-01 00:00:22.412   530   530 I SystemServiceManager: Starting com.android.server.telecom.TelecomLoaderService
+01-01 00:00:22.413   530   530 I SystemServer: StartTelephonyRegistry
+01-01 00:00:22.418   530   530 I SystemServer: StartEntropyMixer
+01-01 00:00:22.423   530   530 I EntropyMixer: Added HW RNG output to entropy pool
+01-01 00:00:22.423   530   530 I EntropyMixer: Writing entropy...
+01-01 00:00:22.440   530   530 I SystemServer: Camera Service
+01-01 00:00:22.441   530   530 I SystemServiceManager: Starting com.android.server.camera.CameraService
+01-01 00:00:22.445   530   530 I SystemServer: StartAccountManagerService
+01-01 00:00:22.445   530   530 I SystemServiceManager: Starting com.android.server.accounts.AccountManagerService$Lifecycle
+01-01 00:00:22.459   530   530 I SystemServer: StartContentService
+01-01 00:00:22.460   530   530 I SystemServiceManager: Starting com.android.server.content.ContentService$Lifecycle
+01-01 00:00:22.464   530   530 I SystemServer: InstallSystemProviders
+01-01 00:00:22.481   530   530 W System  : ClassLoader referenced unknown path: /system/priv-app/SettingsProvider/lib/arm
+01-01 00:00:22.518   530   530 I SystemServer: StartVibratorService
+01-01 00:00:22.522   530   530 E         : Vibrator file does not exist : -1
+01-01 00:00:22.522   530   530 E         : Vibrator device does not exist. Cannot start vibrator
+01-01 00:00:22.522   530   530 W VibratorService: Tried to stop vibrating but there is no vibrator device.
+01-01 00:00:22.525   530   530 I SystemServer: StartConsumerIrService
+01-01 00:00:22.526   530   530 E ConsumerIrService: Can't open consumer IR HW Module, error: -2
+01-01 00:00:22.527   530   530 I SystemServer: StartAlarmManagerService
+01-01 00:00:22.527   530   530 I SystemServiceManager: Starting com.android.server.AlarmManagerService
+01-01 00:00:22.532   530   530 W AlarmManagerService: no wall clock RTC found
+01-01 00:00:22.540   530   530 I SystemServer: InitWatchdog
+01-01 00:00:22.541   530   530 I SystemServer: StartInputManagerService
+01-01 00:00:22.541   530   530 I InputManager: Initializing input manager, mUseDevInputEventForAudioJack=false
+01-01 00:00:22.543   530   530 I SystemServer: StartWindowManagerService
+01-01 00:00:22.567   530   550 I WindowManager: No existing display settings /data/system/display_settings.xml; starting empty
+01-01 00:00:22.623   530   544 V WindowManager: state_cable  true
+01-01 00:00:22.629   530   530 I SystemServer: StartVrManagerService
+01-01 00:00:22.629   530   530 I SystemServiceManager: Starting com.android.server.vr.VrManagerService
+01-01 00:00:22.632   530   530 W VrManagerService: init_native: Could not open VR hardware module, error No such file or directory (-2).
+01-01 00:00:22.638   530   530 I InputManager: Starting input manager
+01-01 00:00:22.642   530   530 I SystemServiceManager: Starting com.android.server.BluetoothService
+01-01 00:00:22.645   530   564 D EventHub: No input device configuration file found for device 'stmpe-ts'.
+01-01 00:00:22.645   530   564 I EventHub: New device: id=1, fd=87, path='/dev/input/event0', name='stmpe-ts', classes=0x4, configuration='', keyLayout='', keyCharacterMap='', builtinKeyboard=false, wakeMechanism=EPOLLWAKEUP, usingClockIoctl=true
+01-01 00:00:22.645   530   564 E EventHub: could not get driver version for /dev/input/mouse0, Not a typewriter
+01-01 00:00:22.647   530   530 D BluetoothManagerService: Loading stored name and address
+01-01 00:00:22.647   530   530 D BluetoothManagerService: Stored bluetooth Name=iMX6,Address=22:22:2A:05:62:AD
+01-01 00:00:22.647   530   530 D BluetoothManagerService: Bluetooth persisted state: 0
+01-01 00:00:22.648   530   530 I SystemServer: ConnectivityMetricsLoggerService
+01-01 00:00:22.648   530   530 I SystemServiceManager: Starting com.android.server.connectivity.MetricsLoggerService
+01-01 00:00:22.650   530   530 I SystemServer: IpConnectivityMetrics
+01-01 00:00:22.650   530   530 I SystemServiceManager: Starting com.android.server.connectivity.IpConnectivityMetrics
+01-01 00:00:22.652   530   530 I SystemServer: PinnerService
+01-01 00:00:22.652   530   530 I SystemServiceManager: Starting com.android.server.PinnerService
+01-01 00:00:22.654   530   530 I SystemServiceManager: Starting com.android.server.InputMethodManagerService$Lifecycle
+01-01 00:00:22.744   530   564 E EventHub: could not get driver version for /dev/input/mouse1, Not a typewriter
+01-01 00:00:22.770   530   530 I SystemServer: StartAccessibilityManagerService
+01-01 00:00:22.786   530   530 I ActivityManager: Config changes=1df8 {1.0 ?mcc?mnc [en_US] ldltr sw768dp w1024dp h768dp 160dpi xlrg land ?uimode ?night -touch -keyb/v/h -nav/h s.2}
+01-01 00:00:22.811   530   542 I UsageStatsService: User[0] Rollover scheduled @ 1970-01-02 00:00:22(86422787)
+01-01 00:00:22.813   530   542 E AppIdleHistory: Unable to read app idle file for user 0
+01-01 00:00:22.815   530   550 I ActivityManager: Config changes=400 {1.0 ?mcc?mnc [en_US] ldltr sw768dp w1024dp h696dp 160dpi xlrg land ?uimode ?night -touch -keyb/v/h -nav/h s.3}
+01-01 00:00:22.820   530   564 D EventHub: No input device configuration file found for device 'PixArt Dell MS116 USB Optical Mouse'.
+01-01 00:00:22.821   530   564 I EventHub: New device: id=2, fd=89, path='/dev/input/event1', name='PixArt Dell MS116 USB Optical Mouse', classes=0x80000008, configuration='', keyLayout='', keyCharacterMap='', builtinKeyboard=false, wakeMechanism=EPOLLWAKEUP, usingClockIoctl=true
+01-01 00:00:22.821   530   564 D EventHub: No input device configuration file found for device 'gpio-keys'.
+01-01 00:00:22.833   530   564 W EventHub: Unable to disable kernel key repeat for /dev/input/event2: Function not implemented
+01-01 00:00:22.833   530   564 I EventHub: New device: id=3, fd=90, path='/dev/input/event2', name='gpio-keys', classes=0x1, configuration='', keyLayout='/system/usr/keylayout/Generic.kl', keyCharacterMap='/system/usr/keychars/Generic.kcm', builtinKeyboard=false, wakeMechanism=EPOLLWAKEUP, usingClockIoctl=true
+01-01 00:00:22.833   530   564 E EventHub: could not get driver version for /dev/input/mice, Not a typewriter
+01-01 00:00:22.853   530   530 I SystemServiceManager: Starting com.android.server.MountService$Lifecycle
+01-01 00:00:22.869   530   530 I SystemServiceManager: Starting com.android.server.UiModeManagerService
+01-01 00:00:22.870   530   565 D MountService: Thinking about init, mSystemReady=false, mDaemonConnected=true
+01-01 00:00:22.871   530   565 D MountService: Thinking about reset, mSystemReady=false, mDaemonConnected=true
+01-01 00:00:22.871   530   565 D MountService: Thinking about init, mSystemReady=false, mDaemonConnected=true
+01-01 00:00:22.871   530   565 D MountService: Thinking about reset, mSystemReady=false, mDaemonConnected=true
+01-01 00:00:22.872   530   565 D CryptdConnector: SND -> {1 cryptfs getfield SystemLocale}
+01-01 00:00:22.873   530   530 I ActivityManager: Config changes=200 {1.0 ?mcc?mnc [en_US] ldltr sw768dp w1024dp h696dp 160dpi xlrg land -touch -keyb/v/h -nav/h s.4}
+01-01 00:00:22.874   530   567 D CryptdConnector: RCV <- {200 1 -1}
+01-01 00:00:22.876   530   565 W MountService: No primary storage mounted!
+01-01 00:00:22.876   530   565 D VoldConnector: SND -> {1 asec list}
+01-01 00:00:22.886   530   566 D VoldConnector: RCV <- {200 1 asec operation succeeded}
+01-01 00:00:22.887   530   565 I PackageManager: No secure containers found
+01-01 00:00:22.887   530   565 W PackageManager: Unknown permission com.google.android.googleapps.permission.GOOGLE_AUTH in package com.android.providers.calendar
+01-01 00:00:22.888   530   565 W PackageManager: Unknown permission com.google.android.googleapps.permission.GOOGLE_AUTH.cl in package com.android.providers.calendar
+01-01 00:00:22.888   530   565 W PackageManager: Not granting permission android.permission.GLOBAL_SEARCH to package com.android.quicksearchbox (protectionLevel=18 flags=0x3808be45)
+01-01 00:00:22.889   530   565 W PackageManager: Not granting permission android.permission.BIND_WALLPAPER to package com.android.camera2 (protectionLevel=18 flags=0x3058bc45)
+01-01 00:00:22.889   530   565 W PackageManager: Unknown permission com.google.android.googleapps.permission.GOOGLE_AUTH.mail in package com.android.calendar
+01-01 00:00:22.890   530   565 W PackageManager: Not granting permission android.permission.WRITE_MEDIA_STORAGE to package com.android.gallery3d (protectionLevel=18 flags=0x3858bc45)
+01-01 00:00:22.890   530   565 W PackageManager: Unknown permission com.google.android.permission.INSTALL_WEARABLE_PACKAGES in package com.android.packageinstaller
+01-01 00:00:22.891   530   565 W PackageManager: Not granting permission android.permission.DELETE_PACKAGES to package com.svox.pico (protectionLevel=18 flags=0x3808be45)
+01-01 00:00:22.891   530   565 W PackageManager: Unknown permission android.permission.RUN_INSTRUMENTATION in package org.chromium.webview_shell
+01-01 00:00:22.892   530   565 W PackageManager: Unknown permission com.google.android.googleapps.permission.GOOGLE_AUTH in package com.android.settings
+01-01 00:00:22.893   530   530 I SystemServer: StartLockSettingsService
+01-01 00:00:22.893   530   565 W PackageManager: Unknown permission com.android.smspush.WAPPUSH_MANAGER_BIND in package com.android.phone
+01-01 00:00:22.893   530   530 I SystemServiceManager: Starting com.android.server.LockSettingsService$Lifecycle
+01-01 00:00:22.894   530   565 W PackageManager: Unknown permission android.permission.ACCESS_ALL_EXTERNAL_STORAGE in package com.freescale.wfdsink
+01-01 00:00:22.895   530   565 W PackageManager: Unknown permission com.google.android.gallery3d.permission.GALLERY_PROVIDER in package com.android.bluetooth
+01-01 00:00:22.909   530   530 I SystemServiceManager: Starting com.android.server.PersistentDataBlockService
+01-01 00:00:22.995   530   565 W MountService: No primary storage defined yet; hacking together a stub
+01-01 00:00:22.996   530   530 E PersistentDataBlockService: not able to find package 
+01-01 00:00:22.996   530   530 E PersistentDataBlockService: android.content.pm.PackageManager$NameNotFoundException: 
+01-01 00:00:22.996   530   530 E PersistentDataBlockService: 	at android.app.ApplicationPackageManager.getPackageUidAsUser(ApplicationPackageManager.java:256)
+01-01 00:00:22.996   530   530 E PersistentDataBlockService: 	at com.android.server.PersistentDataBlockService.getAllowedUid(PersistentDataBlockService.java:105)
+01-01 00:00:22.996   530   530 E PersistentDataBlockService: 	at com.android.server.PersistentDataBlockService.<init>(PersistentDataBlockService.java:96)
+01-01 00:00:22.996   530   530 E PersistentDataBlockService: 	at java.lang.reflect.Constructor.newInstance0(Native Method)
+01-01 00:00:22.996   530   530 E PersistentDataBlockService: 	at java.lang.reflect.Constructor.newInstance(Constructor.java:430)
+01-01 00:00:22.996   530   530 E PersistentDataBlockService: 	at com.android.server.SystemServiceManager.startService(SystemServiceManager.java:93)
+01-01 00:00:22.996   530   530 E PersistentDataBlockService: 	at com.android.server.SystemServer.startOtherServices(SystemServer.java:767)
+01-01 00:00:22.996   530   530 E PersistentDataBlockService: 	at com.android.server.SystemServer.run(SystemServer.java:340)
+01-01 00:00:22.996   530   530 E PersistentDataBlockService: 	at com.android.server.SystemServer.main(SystemServer.java:222)
+01-01 00:00:22.996   530   530 E PersistentDataBlockService: 	at java.lang.reflect.Method.invoke(Native Method)
+01-01 00:00:22.996   530   530 E PersistentDataBlockService: 	at com.android.internal.os.ZygoteInit$MethodAndArgsCaller.run(ZygoteInit.java:890)
+01-01 00:00:22.996   530   530 E PersistentDataBlockService: 	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:780)
+01-01 00:00:22.996   530   565 W MountService: No primary storage defined yet; hacking together a stub
+01-01 00:00:22.997   530   565 W MountService: No primary storage mounted!
+01-01 00:00:22.997   530   565 D VoldConnector: SND -> {2 asec list}
+01-01 00:00:22.999   530   566 D VoldConnector: RCV <- {200 2 asec operation succeeded}
+01-01 00:00:23.009   530   564 I InputReader: Device added: id=-1, name='Virtual', sources=0x00000301
+01-01 00:00:23.009   530   564 I InputReader: Device added: id=3, name='gpio-keys', sources=0x00000101
+01-01 00:00:23.018   530   564 I InputReader: Device added: id=2, name='PixArt Dell MS116 USB Optical Mouse', sources=0x00002002
+01-01 00:00:23.020   530   564 I InputReader:   Touch device 'stmpe-ts' could not query the properties of its associated display.  The device will be inoperable until the display size becomes available.
+01-01 00:00:23.020   530   564 I InputReader: Device added: id=1, name='stmpe-ts', sources=0x00002002
+01-01 00:00:23.021   530   564 I InputReader: Reconfiguring input devices.  changes=0x00000004
+01-01 00:00:23.021   530   564 I InputReader: Device reconfigured: id=1, name='stmpe-ts', size 1024x768, orientation 0, mode 4, display id 0
+01-01 00:00:23.085   530   530 I SystemServiceManager: Starting com.android.server.DeviceIdleController
+01-01 00:00:23.092   530   530 I SystemServiceManager: Starting com.android.server.devicepolicy.DevicePolicyManagerService$Lifecycle
+01-01 00:00:23.104   530   530 I SystemServer: StartStatusBarManagerService
+01-01 00:00:23.108   530   530 I SystemServer: StartCli^C
+130|sabresd_6dq:/ # 
+130|sabresd_6dq:/ # 
+130|sabresd_6dq:/ # 
+130|sabresd_6dq:/ # 
+130|sabresd_6dq:/ # 
+130|sabresd_6dq:/ # 
+130|sabresd_6dq:/ # 
+130|sabresd_6dq:/ # reboot
+[   73.531365] sysrq: SysRq : Emergency Remount R/O
+[   73.540212] EXT4-fs (mmcblk0p4): re-mounted. Opts: (null)
+[   73.569101] EXT4-fs (mmcblk0p10): re-mounted. Opts: (null)
+[   73.587482] Emergency Remount complete
+[   73.665466] imx2-wdt 20bc000.wdog: Device shutdown: Expect reboot!
+[   73.672211] ci_hdrc ci_hdrc.1: remove, state 1
+[   73.676720] usb usb1: USB disconnect, device number 1
+[   73.681928] usb 1-1: USB disconnect, device number 2
+[   73.686934] usb 1-1.3: USB disconnect, device number 3
+[   73.791578] ci_hdrc ci_hdrc.1: USB bus 1 deregistered
+[   73.798256] android_work: sent uevent USB_STATE=DISCONNECTED
+[   73.860571] reboot: Restarting system with command ''
+
+
+U-Boot 2017.03-dirty (Dec 26 2017 - 14:19:13 +0530)
+
+CPU:   Freescale i.MX6Q rev1.5 at 792 MHz
+Reset cause: WDOG
+I2C:   ready
+DRAM:  2 GiB
+PMIC: device id: 0x10, revision id: 0x21
+PMIC: programmed
+MMC:   FSL_SDHC: 0, FSL_SDHC: 1, FSL_SDHC: 2
+auto-detected panel HDMI
+Aravinth: Display: HDMI (1024x768)
+In:    serial
+Out:   serial
+Err:   serial
+Model: Toradex Apalis iMX6 Quad 2GB IT V1.1C, Serial# 05146387
+flash target is MMC:0
+Net:   using PHY at 7
+FEC [PRIME]
+Fastboot: Normal
+Hit any key to stop autoboot:  1  0 
+Apalis iMX6 # 

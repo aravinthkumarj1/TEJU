@@ -1,0 +1,3056 @@
+
+130|toradex_apalis6q:/ # 
+130|toradex_apalis6q:/ # 
+130|toradex_apalis6q:/ # 
+130|toradex_apalis6q:/ # 
+130|toradex_apalis6q:/ # reboot
+sysrq: SysRq : Emergency Remount R/O
+EXT4-fs (mmcblk0p4): re-mounted. Opts: (null)
+EXT4-fs (mmcblk0p10): re-mounted. Opts: (null)
+Emergency Remount complete
+imx2-wdt 20bc000.wdog: Device shutdown: Expect reboot!
+ci_hdrc ci_hdrc.1: remove, state 1
+usb usb1: USB disconnect, device number 1
+usb 1-1: USB disconnect, device number 2
+usb 1-1.2: USB disconnect, device number 4
+usb 1-1.3: USB disconnect, device number 3
+Aravinth: rtl8xxxu_disconnect 
+usb 1-1.3: rtl8xxxu_active_to_lps: RX poll timed out (0x05f8)
+usb 1-1.3: rtl8723bu_active_to_emu: Disabling MAC timed out
+usb 1-1.3: disconnecting
+Aravinth: usb_ifnum_to_if config->desc.bNumInterface=1 ifnum=0
+Aravinth: usb_ifnum_to_if Num=0 
+ci_hdrc ci_hdrc.1: USB bus 1 deregistered
+android_work: did not send uevent (0 0   (null))
+
+reboot: Restarting system with command ''
+
+
+U-Boot 2017.03-00002-gebf9dc2527 (Jan 31 2018 - 14:59:40 +0530)
+
+CPU:   Freescale i.MX6Q rev1.5 at 792 MHz
+Reset cause: WDOG
+I2C:   ready
+DRAM:  2 GiB
+PMIC: device id: 0x10, revision id: 0x21
+PMIC: programmed
+MMC:   FSL_SDHC: 0, FSL_SDHC: 1, FSL_SDHC: 2
+Unable to allocate framebuffer memory
+In:    serial
+Out:   serial
+Err:   serial
+Model: Toradex Apalis iMX6 Quad 2GB IT V1.1C, Serial# 05146387
+flash target is MMC:0
+Net:   using PHY at 7
+FEC [PRIME]
+Fastboot: Normal
+Hit any key to stop autoboot:  1  0
+Apalis iMX6 # 
+Apalis iMX6 # 
+Apalis iMX6 # pri
+arch=arm
+baudrate=115200
+board=apalis_imx6
+board_name=apalis_imx6
+board_rev=011c
+bootcmd=boota mmc0
+bootdelay=1
+cpu=armv7
+ethact=FEC
+ethaddr=00:14:2d:4e:87:13
+ethprime=FEC
+fastboot_dev=mmc0
+fdt_high=0xffffffff
+initrd_high=0xffffffff
+ipaddr=192.168.10.2
+loadaddr=0x12000000
+netmask=255.255.255.0
+serial#=05146387
+serverip=192.168.10.1
+soc=mx6
+splashpos=m,m
+vendor=toradex
+ver=U-Boot 2017.03-00002-gebf9dc2527 (Jan 31 2018 - 14:59:40 +0530)
+
+Environment size: 486/8188 bytes
+Apalis iMX6 # setenv bootargs 'console=ttymxc0,115200 init=/init video=mxcfb0:off video=mxcfb1:dev=hdmi,640x480M@60,if=RGB24,bpp=16 video=mxcfb2:off video=mxcfb3:off vmalloc=256M androidboot.console=ttymxc0 consoleblank=0 androidboot.hardware=freescale cma=448M androidboot.selinux=permissive androidboot.dm_verity=disabled'
+Apalis iMX6 # 
+Apalis iMX6 # 
+Apalis iMX6 # 
+Apalis iMX6 # boot
+boota mmc0 
+CACHE: Misaligned operation at range [8ffb79a0, 8ffb7a20]
+CACHE: Misaligned operation at range [8ffb79a0, 8ffb7a20]
+kernel   @ 14008000 (9921576)
+ramdisk  @ 15000000 (1629864)
+fdt      @ 14f00000 (53981)
+## Booting Android Image at 0x12000000 ...
+Kernel load addr 0x14008000 size 9690 KiB
+Kernel command line: console=ttymxc0,115200 init=/init video=mxcfb0:off video=mxcfb1:dev=hdmi,640x480M@60,if=RGB24,bpp=16 video=mxcfb2:off video=mxcfb3:off vmalloc=256M androidboot.console=ttymxc0 consoleblank=0 androidboot.hardware=freescale cma=448M androidboot.selinux=permissive androidboot.dm_verity=disabled androidboot.serialno=1b2429d4ea997115 androidboot.storage_type=emmc
+## Flattened Device Tree blob at 14f00000
+   Booting using the fdt blob at 0x14f00000
+   Loading Kernel Image ... OK
+   Using Device Tree in place at 14f00000, end 14f102dc
+
+Starting kernel ...
+
+Booting Linux on physical CPU 0x0
+Linux version 4.9.67-07229-gdc6c16ec0433-dirty (embadmin@ubuntu) (gcc version 4.9 20150123 (prerelease) (GCC) ) #59 SMP PREEMPT Wed Feb 7 18:06:19 IST 2018
+CPU: ARMv7 Processor [412fc09a] revision 10 (ARMv7), cr=10c53c7d
+CPU: PIPT / VIPT nonaliasing data cache, VIPT aliasing instruction cache
+OF: fdt:Machine model: Aravinth : Toradex Apalis iMX6Q/D Module on Ixora V1.1 Carrier Board
+cma: Reserved 448 MiB at 0x22000000
+Memory policy: Data cache writealloc
+percpu: Embedded 15 pages/cpu @ee6b3000 s31040 r8192 d22208 u61440
+Built 1 zonelists in Zone order, mobility grouping on.  Total pages: 522768
+Kernel command line: console=ttymxc0,115200 init=/init video=mxcfb0:off video=mxcfb1:dev=hdmi,640x480M@60,if=RGB24,bpp=16 video=mxcfb2:off video=mxcfb3:off vmalloc=256M androidboot.console=ttymxc0 consoleblank=0 androidboot.hardware=freescale cma=448M androidboot.selinux=permissive androidboot.dm_verity=disabled androidboot.serialno=1b2429d4ea997115 androidboot.storage_type=emmc
+PID hash table entries: 4096 (order: 2, 16384 bytes)
+Dentry cache hash table entries: 131072 (order: 7, 524288 bytes)
+Inode-cache hash table entries: 65536 (order: 6, 262144 bytes)
+Memory: 1597024K/2097152K available (13312K kernel code, 1154K rwdata, 4044K rodata, 1024K init, 604K bss, 41376K reserved, 458752K cma-reserved, 1318912K highmem)
+Virtual kernel memory layout:
+    vector  : 0xffff0000 - 0xffff1000   (   4 kB)
+    fixmap  : 0xffc00000 - 0xfff00000   (3072 kB)
+    vmalloc : 0xf0000000 - 0xff800000   ( 248 MB)
+    lowmem  : 0xc0000000 - 0xef800000   ( 760 MB)
+    pkmap   : 0xbfe00000 - 0xc0000000   (   2 MB)
+    modules : 0xbf000000 - 0xbfe00000   (  14 MB)
+      .text : 0xc0008000 - 0xc0e00000   (14304 kB)
+      .init : 0xc1300000 - 0xc1400000   (1024 kB)
+      .data : 0xc1400000 - 0xc1520b58   (1155 kB)
+       .bss : 0xc1520b58 - 0xc15b7c28   ( 605 kB)
+SLUB: HWalign=64, Order=0-3, MinObjects=0, CPUs=4, Nodes=1
+Preemptible hierarchical RCU implementation.
+	Build-time adjustment of leaf fanout to 32.
+NR_IRQS:16 nr_irqs:16 16
+L2C-310 errata 752271 769419 enabled
+L2C-310 enabling early BRESP for Cortex-A9
+L2C-310 full line of zeros enabled for Cortex-A9
+L2C-310 ID prefetch enabled, offset 16 lines
+L2C-310 dynamic clock gating enabled, standby mode enabled
+L2C-310 cache controller enabled, 16 ways, 1024 kB
+L2C-310: CACHE_ID 0x410000c7, AUX_CTRL 0x76470001
+Switching to timer-based delay loop, resolution 333ns
+sched_clock: 32 bits at 3000kHz, resolution 333ns, wraps every 715827882841ns
+clocksource: mxc_timer1: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 637086815595 ns
+Console: colour dummy device 80x30
+Calibrating delay loop (skipped), value calculated using timer frequency.. 6.00 BogoMIPS (lpj=30000)
+pid_max: default: 32768 minimum: 301
+Security Framework initialized
+SELinux:  Initializing.
+Mount-cache hash table entries: 2048 (order: 1, 8192 bytes)
+Mountpoint-cache hash table entries: 2048 (order: 1, 8192 bytes)
+CPU: Testing write buffer coherency: ok
+CPU0: update cpu_capacity 1024
+CPU0: thread -1, cpu 0, socket 0, mpidr 80000000
+Setting up static identity map for 0x10100000 - 0x10100058
+CPU1: update cpu_capacity 1024
+CPU1: thread -1, cpu 1, socket 0, mpidr 80000001
+CPU2: update cpu_capacity 1024
+CPU2: thread -1, cpu 2, socket 0, mpidr 80000002
+CPU3: update cpu_capacity 1024
+CPU3: thread -1, cpu 3, socket 0, mpidr 80000003
+Brought up 4 CPUs
+SMP: Total of 4 processors activated (24.00 BogoMIPS).
+CPU: All CPU(s) started in SVC mode.
+CPU3: update max cpu_capacity 1024
+devtmpfs: initialized
+CPU3: update max cpu_capacity 1024
+VFP support v0.3: implementor 41 architecture 3 part 30 variant 9 rev 4
+clocksource: jiffies: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 19112604462750000 ns
+futex hash table entries: 1024 (order: 4, 65536 bytes)
+pinctrl core: initialized pinctrl subsystem
+NET: Registered protocol family 16
+DMA: preallocated 256 KiB pool for atomic coherent allocations
+cpuidle: using governor menu
+CPU identified as i.MX6Q, silicon rev 1.5
+hw-breakpoint: found 5 (+1 reserved) breakpoint and 1 watchpoint registers.
+hw-breakpoint: maximum watchpoint size is 4 bytes.
+imx6q-pinctrl 20e0000.iomuxc: initialized IMX pinctrl driver
+imx-gpc 20dc000.gpc: no fsl,ldo-bypass found!
+imx-gpc 20dc000.gpc: Registered imx-gpc
+mxs-dma 110000.dma-apbh: initialized
+usb_host_vbus: supplied by usb_host_vbus_hub
+SCSI subsystem initialized
+usbcore: registered new interface driver usbfs
+usbcore: registered new interface driver hub
+usbcore: registered new device driver usb
+2000000.aips-bus:usbphy_nop1 supply vcc not found, using dummy regulator
+2000000.aips-bus:usbphy_nop2 supply vcc not found, using dummy regulator
+i2c i2c-1: IMX I2C adapter registered
+i2c i2c-1: can't use DMA, using PIO instead.
+stmpe-i2c 2-0041: stmpe811 detected, chip id: 0x811
+i2c i2c-2: IMX I2C adapter registered
+i2c i2c-2: can't use DMA, using PIO instead.
+i2c i2c-3: IMX I2C adapter registered
+i2c i2c-3: can't use DMA, using PIO instead.
+Linux video capture interface: v2.00
+pps_core: LinuxPPS API ver. 1 registered
+pps_core: Software ver. 5.3.6 - Copyright 2005-2007 Rodolfo Giometti <giometti@linux.it>
+PTP clock support registered
+imx-ipuv3 2400000.ipu: IPU DMFC NORMAL mode: 1(0~1), 5B(4,5), 5F(6,7)
+imx-ipuv3 2800000.ipu: IPU DMFC NORMAL mode: 1(0~1), 5B(4,5), 5F(6,7)
+mxc_mipi_csi2 21dc000.mipi_csi: i.MX MIPI CSI2 driver probed ipu0 csi1
+mxc_mipi_csi2 21dc000.mipi_csi: i.MX MIPI CSI2 dphy version is 0x3130302a
+MIPI CSI2 driver module loaded
+imx rpmsg driver is registered.
+Advanced Linux Sound Architecture Driver Initialized.
+Bluetooth: Core ver 2.22
+NET: Registered protocol family 31
+Bluetooth: HCI device and connection manager initialized
+Bluetooth: HCI socket layer initialized
+Bluetooth: L2CAP socket layer initialized
+Bluetooth: SCO socket layer initialized
+clocksource: Switched to clocksource mxc_timer1
+VFS: Disk quotas dquot_6.6.0
+VFS: Dquot-cache hash table entries: 1024 (order 0, 4096 bytes)
+NET: Registered protocol family 2
+TCP established hash table entries: 8192 (order: 3, 32768 bytes)
+TCP bind hash table entries: 8192 (order: 4, 65536 bytes)
+TCP: Hash tables configured (established 8192 bind 8192)
+UDP hash table entries: 512 (order: 2, 16384 bytes)
+UDP-Lite hash table entries: 512 (order: 2, 16384 bytes)
+NET: Registered protocol family 1
+RPC: Registered named UNIX socket transport module.
+RPC: Registered udp transport module.
+RPC: Registered tcp transport module.
+RPC: Registered tcp NFSv4.1 backchannel transport module.
+Trying to unpack rootfs image as initramfs...
+Freeing initrd memory: 1592K
+hw perfevents: enabled with armv7_cortex_a9 PMU driver, 7 counters available
+Bus freq driver module loaded
+audit: initializing netlink subsys (disabled)
+audit: type=2000 audit(0.870:1): initialized
+workingset: timestamp_bits=30 max_order=19 bucket_order=0
+NFS: Registering the id_resolver key type
+Key type id_resolver registered
+Key type id_legacy registered
+ntfs: driver 2.1.32 [Flags: R/W DEBUG].
+jffs2: version 2.2. (NAND) © 2001-2006 Red Hat, Inc.
+fuse init (API version 7.26)
+NET: Registered protocol family 38
+bounce: pool size: 64 pages
+io scheduler noop registered
+io scheduler deadline registered
+io scheduler cfq registered (default)
+backlight supply power not found, using dummy regulator
+20e0000.hdmi_video supply HDMI not found, using dummy regulator
+mxc_sdc_fb fb@0: Can't get fb option for mxcfb0!
+mxc_hdmi 20e0000.hdmi_video: Detected HDMI controller 0x13:0xa:0xa0:0xc1
+fbcvt: 640x480@60: CVT Name - .307M3
+mxc_sdc_fb fb@1: registered mxc display driver hdmi
+Console: switching to colour frame buffer device 80x30
+mxc_sdc_fb fb@2: Can't get fb option for mxcfb2!
+mxc_sdc_fb fb@3: Can't get fb option for mxcfb3!
+imx-sdma 20ec000.sdma: no iram assigned, using external mem
+imx-sdma 20ec000.sdma: loaded firmware 3.3
+pfuze100-regulator 2-0008: Full layer: 2, Metal layer: 1
+pfuze100-regulator 2-0008: FAB: 0, FIN: 0
+pfuze100-regulator 2-0008: pfuze100 found.
+mxc_hdmi 20e0000.hdmi_video: Read EDID again
+2020000.serial: ttymxc0 at MMIO 0x2020000 (irq = 29, base_baud = 5000000) is a IMX
+mxc_hdmi 20e0000.hdmi_video: create default modelist
+console [ttymxc0] enabled
+21e8000.serial: ttymxc1 at MMIO 0x21e8000 (irq = 78, base_baud = 5000000) is a IMX
+21f0000.serial: ttymxc3 at MMIO 0x21f0000 (irq = 79, base_baud = 5000000) is a IMX
+21f4000.serial: ttymxc4 at MMIO 0x21f4000 (irq = 80, base_baud = 5000000) is a IMX
+imx sema4 driver is registered.
+[drm] Initialized
+[drm] Initialized vivante 1.0.0 20120216 on minor 0
+brd: module loaded
+loop: module loaded
+zram: Added device: zram0
+ahci-imx 2200000.sata: fsl,transmit-level-mV not specified, using 00000024
+ahci-imx 2200000.sata: fsl,transmit-boost-mdB not specified, using 00000480
+ahci-imx 2200000.sata: fsl,transmit-atten-16ths not specified, using 00002000
+ahci-imx 2200000.sata: fsl,receive-eq-mdB not specified, using 05000000
+ahci-imx 2200000.sata: SSS flag set, parallel bus scan disabled
+ahci-imx 2200000.sata: AHCI 0001.0300 32 slots 1 ports 3 Gbps 0x1 impl platform mode
+ahci-imx 2200000.sata: flags: ncq sntf stag pm led clo only pmp pio slum part ccc apst 
+scsi host0: ahci-imx
+ata1: SATA max UDMA/133 mmio [mem 0x02200000-0x02203fff] port 0x100 irq 87
+spi_imx 2008000.ecspi: probed
+libphy: Fixed MDIO Bus: probed
+tun: Universal TUN/TAP device driver, 1.6
+tun: (C) 1999-2004 Max Krasnyansky <maxk@qualcomm.com>
+CAN device driver interface
+2090000.flexcan supply xceiver not found, using dummy regulator
+flexcan 2090000.flexcan: device registered (reg_base=f02f4000, irq=38)
+2094000.flexcan supply xceiver not found, using dummy regulator
+flexcan 2094000.flexcan: device registered (reg_base=f02fc000, irq=39)
+2188000.ethernet supply phy not found, using dummy regulator
+pps pps0: new PPS source ptp0
+libphy: fec_enet_mii_bus: probed
+fec 2188000.ethernet eth0: registered PHC device 0
+PPP generic driver version 2.4.2
+PPP BSD Compression module registered
+PPP Deflate Compression module registered
+PPP MPPE Compression module registered
+NET: Registered protocol family 24
+Aravinth: rtl8xxxu_module_init -->
+usbcore: registered new interface driver rtk_btusb
+Aravinth: rtl8xxxu_module_init <--
+usbcore: registered new interface driver kaweth
+pegasus: v0.9.3 (2013/04/25), Pegasus/Pegasus II USB Ethernet driver
+usbcore: registered new interface driver pegasus
+usbcore: registered new interface driver rtl8150
+usbcore: registered new interface driver r8152
+usbcore: registered new interface driver asix
+usbcore: registered new interface driver ax88179_178a
+usbcore: registered new interface driver cdc_ether
+usbcore: registered new interface driver cdc_eem
+usbcore: registered new interface driver net1080
+usbcore: registered new interface driver cdc_subset
+usbcore: registered new interface driver zaurus
+usbcore: registered new interface driver cdc_ncm
+ehci_hcd: USB 2.0 'Enhanced' Host Controller (EHCI) Driver
+ehci-mxc: Freescale On-Chip EHCI Host driver
+ohci_hcd: USB 1.1 'Open' Host Controller (OHCI) Driver
+usbcore: registered new interface driver cdc_acm
+cdc_acm: USB Abstract Control Model driver for USB modems and ISDN adapters
+usbcore: registered new interface driver cdc_wdm
+usbcore: registered new interface driver usb-storage
+usbcore: registered new interface driver usbserial
+usbcore: registered new interface driver usbserial_generic
+usbserial: USB Serial support registered for generic
+usbcore: registered new interface driver ftdi_sio
+usbserial: USB Serial support registered for FTDI USB Serial Device
+usbcore: registered new interface driver option
+usbserial: USB Serial support registered for GSM modem (1-port)
+usbcore: registered new interface driver usbtest
+usbcore: registered new interface driver usb_ehset_test
+2184800.usbmisc supply vbus-wakeup not found, using dummy regulator
+ci_hdrc ci_hdrc.1: EHCI Host Controller
+ci_hdrc ci_hdrc.1: new USB bus registered, assigned bus number 1
+ci_hdrc ci_hdrc.1: USB 2.0 started, EHCI 1.00
+usb usb1: New USB device found, idVendor=1d6b, idProduct=0002
+usb usb1: New USB device strings: Mfr=3, Product=2, SerialNumber=1
+usb usb1: Product: EHCI Host Controller
+usb usb1: Manufacturer: Linux 4.9.67-07229-gdc6c16ec0433-dirty ehci_hcd
+ata1: SATA link down (SStatus 0 SControl 300)
+ahci-imx 2200000.sata: no device found, disabling link.
+ahci-imx 2200000.sata: pass ahci_imx..hotplug=1 to enable hotplug
+usb usb1: SerialNumber: ci_hdrc.1
+hub 1-0:1.0: USB hub found
+hub 1-0:1.0: 1 port detected
+mousedev: PS/2 mouse device common for all mice
+usbcore: registered new interface driver xpad
+usbcore: registered new interface driver usb_acecad
+usbcore: registered new interface driver aiptek
+usbcore: registered new interface driver gtco
+usbcore: registered new interface driver hanwang
+usbcore: registered new interface driver kbtab
+input: stmpe-ts as /devices/soc0/soc/2100000.aips-bus/21a4000.i2c/i2c-2/2-0041/stmpe-ts/input/input0
+snvs_rtc 20cc000.snvs:snvs-rtc-lp: rtc core: registered 20cc000.snvs:snvs-r as rtc0
+i2c /dev entries driver
+IR NEC protocol handler initialized
+IR RC5(x/sz) protocol handler initialized
+IR RC6 protocol handler initialized
+IR JVC protocol handler initialized
+IR Sony protocol handler initialized
+IR SANYO protocol handler initialized
+IR Sharp protocol handler initialized
+IR MCE Keyboard/mouse protocol handler initialized
+IR XMP protocol handler initialized
+mxc_v4l2_output v4l2_out: V4L2 device registered as video16
+mxc_v4l2_output v4l2_out: V4L2 device registered as video17
+ov564x_mipi 3-003c: found pwm2, period=0
+usb 1-1: new high-speed USB device number 2 using ci_hdrc
+ov5640_read_reg:write reg error:reg=300a
+camera ov5640_mipi is not found
+usbcore: registered new interface driver uvcvideo
+USB Video Class driver (1.1.1)
+imx2-wdt 20bc000.wdog: timeout 60 sec (nowayout=0)
+device-mapper: uevent: version 1.0.3
+device-mapper: ioctl: 4.35.0-ioctl (2016-06-23) initialised: dm-devel@redhat.com
+Bluetooth: HCI UART driver ver 2.3
+Bluetooth: HCI UART protocol H4 registered
+Bluetooth: HCI UART protocol BCSP registered
+Bluetooth: HCI UART protocol ATH3K registered
+usbcore: registered new interface driver btusb
+sdhci: Secure Digital Host Controller Interface driver
+sdhci: Copyright(c) Pierre Ossman
+sdhci-pltfm: SDHCI platform and OF driver helper
+sdhci-esdhc-imx 2190000.usdhc: could not get ultra high speed state, work on normal mode
+sdhci-esdhc-imx 2190000.usdhc: Got CD GPIO
+mmc1: SDHCI controller on 2190000.usdhc [2190000.usdhc] using ADMA
+sdhci-esdhc-imx 2198000.usdhc: could not get ultra high speed state, work on normal mode
+usb 1-1: New USB device found, idVendor=0424, idProduct=2514
+usb 1-1: New USB device strings: Mfr=0, Product=0, SerialNumber=0
+hub 1-1:1.0: USB hub found
+hub 1-1:1.0: 4 ports detected
+Aravinth: usb_ifnum_to_if config->desc.bNumInterface=1 ifnum=0
+Aravinth: usb_ifnum_to_if Num=0 
+mmc0: SDHCI controller on 2198000.usdhc [2198000.usdhc] using ADMA
+mxc_vpu 2040000.vpu_fsl: VPU initialized
+mxc_vdoa 21e4000.vdoa: i.MX Video Data Order Adapter(VDOA) driver probed
+mxc_hdmi_cec soc:hdmi_cec@00120000: HDMI CEC initialized
+Galcore version 6.2.2.96445
+mmc0: new DDR MMC card at address 0001
+mmcblk0: mmc0:0001 Q2J54A 3.59 GiB 
+mmcblk0boot0: mmc0:0001 Q2J54A partition 1 16.0 MiB
+mmcblk0boot1: mmc0:0001 Q2J54A partition 2 16.0 MiB
+random: fast init done
+Alternate GPT is invalid, using primary GPT.
+ mmcblk0: p1 p2 p3 p4 p5 p6 p7 p8 p9 p10 p11
+usb 1-1.2: new low-speed USB device number 3 using ci_hdrc
+usb 1-1.2: New USB device found, idVendor=413c, idProduct=301a
+usb 1-1.2: New USB device strings: Mfr=1, Product=2, SerialNumber=0
+usb 1-1.2: Product: Dell MS116 USB Optical Mouse
+usb 1-1.2: Manufacturer: PixArt
+usb 1-1.3: new high-speed USB device number 4 using ci_hdrc
+usb 1-1.3: New USB device found, idVendor=7392, idProduct=a611
+usb 1-1.3: New USB device strings: Mfr=1, Product=2, SerialNumber=3
+usb 1-1.3: Product: Edimax Wi-Fi N150 Bluetooth4.0 USB Adapter
+usb 1-1.3: Manufacturer: Realtek
+usb 1-1.3: SerialNumber: 00e04c000001
+Aravinth: usb_ifnum_to_if config->desc.bNumInterface=3 ifnum=1
+Aravinth: usb_ifnum_to_if Num=0 
+Aravinth: usb_ifnum_to_if Num=1 
+Aravinth: usb_driver_claim_interface 1-->
+Aravinth: usb_driver_claim_interface 2-->
+Aravinth: rtl8xxxu_probe 
+Aravinth: rtl8xxxu_probe 
+usb 1-1.3: This Realtek USB WiFi dongle (0x7392:0xa611) is untested!
+usb 1-1.3: Please report results to Jes.Sorensen@gmail.com
+Aravinth: rtl8xxxu_identify_chip 
+caam 2100000.caam: ERA source: CAAMVID.
+caam 2100000.caam: AXI pipeline throttling enabled.
+caam 2100000.caam: Instantiated RNG4 SH1
+caam 2100000.caam: device ID = 0x0a16010000000000 (Era 4)
+caam 2100000.caam: job rings = 2, qi = 0
+caam algorithms registered in /proc/crypto
+caam_jr 2101000.jr0: registering rng-caam
+platform caam_sm: blkkey_ex: 4 keystore units available
+platform caam_sm: 64-bit clear key:
+platform caam_sm: [0000] 00 01 02 03 04 0f 06 07
+platform caam_sm: 64-bit black key:
+platform caam_sm: [0000] 24 71 0b ba c7 2f e6 af
+platform caam_sm: [0008] 5f ec 16 d7 28 55 27 c9
+platform caam_sm: 128-bit clear key:
+platform caam_sm: [0000] 00 01 02 03 04 0f 06 07
+platform caam_sm: [0008] 08 09 0a 0b 0c 0d 0e 0f
+platform caam_sm: 128-bit black key:
+platform caam_sm: [0000] 51 b1 43 af 86 04 b2 77
+platform caam_sm: [0008] ca 25 5f 82 ce 0b fa 12
+platform caam_sm: 192-bit clear key:
+platform caam_sm: [0000] 00 01 02 03 04 0f 06 07
+platform caam_sm: [0008] 08 09 0a 0b 0c 0d 0e 0f
+platform caam_sm: [0016] 10 11 12 13 14 15 16 17
+platform caam_sm: 192-bit black key:
+platform caam_sm: [0000] 94 43 83 c9 c5 da 8e 7f
+platform caam_sm: [0008] a9 dc 11 eb 53 0f a0 b4
+platform caam_sm: [0016] cf 71 f7 4f 49 7f 60 00
+platform caam_sm: [0024] 4d 3e d0 65 36 72 0b 49
+platform caam_sm: 256-bit clear key:
+platform caam_sm: [0000] 00 01 02 03 04 0f 06 07
+platform caam_sm: [0008] 08 09 0a 0b 0c 0d 0e 0f
+platform caam_sm: [0016] 10 11 12 13 14 15 16 17
+platform caam_sm: [0024] 18 19 1a 1b 1c 1d 1e 1f
+platform caam_sm: 256-bit black key:
+platform caam_sm: [0000] 02 0a b0 fb 69 f3 50 47
+platform caam_sm: [0008] 19 3c 18 a1 44 19 f8 22
+platform caam_sm: [0016] cd 23 3d 37 20 5e ab 50
+platform caam_sm: [0024] b5 ed a3 08 75 60 d0 e8
+platform caam_sm: 64-bit unwritten blob:
+usb 1-1.3: Vendor: Realtek
+usb 1-1.3: Product: Edimax Wi-Fi N150 Bluetooth4.0 USB Adapte
+usb 1-1.3: rtl8723bu_parse_efuse: dumping efuse (0x200 bytes):
+usb 1-1.3: 00: 29 81 03 7c 01 08 21 00
+usb 1-1.3: 08: 40 07 05 35 10 00 00 00
+usb 1-1.3: 10: 2f 2f 2f 2e 2e 2e 30 30
+usb 1-1.3: 18: 30 2f 2f f3 ff ff ff ff
+usb 1-1.3: 20: ff ff ff ff ff ff ff ff
+usb 1-1.3: 28: ff ff ff ff ff ff ff ff
+usb 1-1.3: 30: ff ff ff ff ff ff ff ff
+usb 1-1.3: 38: ff ff 2d 2d 2d 2d 2d 2d
+usb 1-1.3: 40: 2d 2d 2d 2d 2d 00 ff ff
+usb 1-1.3: 48: ff ff ff ff ff ff ff ff
+usb 1-1.3: 50: ff ff ff ff ff ff ff ff
+usb 1-1.3: 58: ff ff ff ff ff ff ff ff
+usb 1-1.3: 60: ff ff ff ff ff ff ff ff
+usb 1-1.3: 68: ff ff ff ff ff ff ff ff
+usb 1-1.3: 70: ff ff ff ff ff ff ff ff
+usb 1-1.3: 78: ff ff ff ff ff ff ff ff
+usb 1-1.3: 80: ff ff ff ff ff ff ff ff
+usb 1-1.3: 88: ff ff ff ff ff ff ff ff
+usb 1-1.3: 90: ff ff ff ff ff ff ff ff
+usb 1-1.3: 98: ff ff ff ff ff ff ff ff
+usb 1-1.3: a0: ff ff ff ff ff ff ff ff
+usb 1-1.3: a8: ff ff ff ff ff ff ff ff
+usb 1-1.3: b0: ff ff ff ff ff ff ff ff
+usb 1-1.3: b8: 22 1f 1c 00 00 00 ff ff
+usb 1-1.3: c0: ff 28 20 11 00 00 00 ff
+usb 1-1.3: c8: 00 ff ff ff ff ff ff ff
+usb 1-1.3: d0: ff ff ff ff ff ff ff ff
+usb 1-1.3: d8: ff ff ff ff ff ff ff ff
+usb 1-1.3: e0: ff ff ff ff ff ff ff ff
+usb 1-1.3: e8: ff ff ff ff ff ff ff ff
+usb 1-1.3: f0: ff ff ff ff ff ff ff ff
+usb 1-1.3: f8: ff ff ff ff ff ff ff ff
+usb 1-1.3: 100: 92 73 11 a6 e7 47 03 74
+usb 1-1.3: 108: da 38 d6 32 38 09 03 52
+usb 1-1.3: 110: 65 61 6c 74 65 6b 2c 03
+usb 1-1.3: 118: 45 64 69 6d 61 78 20 57
+usb 1-1.3: 120: 69 2d 46 69 20 4e 31 35
+usb 1-1.3: 128: 30 20 42 6c 75 65 74 6f
+usb 1-1.3: 130: 6f 74 68 34 2e 30 20 55
+usb 1-1.3: 138: 53 42 20 41 64 61 70 74
+usb 1-1.3: 140: 65 72 00 ff ff ff ff 0f
+usb 1-1.3: 148: ff ff ff ff ff ff ff ff
+usb 1-1.3: 150: ff ff ff ff ff ff ff ff
+usb 1-1.3: 158: ff ff ff ff ff ff ff ff
+usb 1-1.3: 160: ff ff ff ff ff ff ff ff
+usb 1-1.3: 168: ff ff ff ff ff ff ff ff
+usb 1-1.3: 170: ff ff ff ff ff ff ff ff
+usb 1-1.3: 178: ff ff ff ff ff ff ff ff
+usb 1-1.3: 180: ff ff ff ff ff ff ff ff
+usb 1-1.3: 188: ff ff ff ff ff ff ff ff
+usb 1-1.3: 190: ff ff ff ff ff ff ff ff
+usb 1-1.3: 198: ff ff ff ff ff ff ff ff
+usb 1-1.3: 1a0: ff ff ff ff ff ff ff ff
+usb 1-1.3: 1a8: ff ff ff ff ff ff ff ff
+usb 1-1.3: 1b0: ff ff ff ff ff ff ff ff
+usb 1-1.3: 1b8: ff ff ff ff ff ff ff ff
+usb 1-1.3: 1c0: ff ff ff ff ff ff ff ff
+usb 1-1.3: 1c8: ff ff ff ff ff ff ff ff
+usb 1-1.3: 1d0: ff ff ff ff ff ff ff ff
+usb 1-1.3: 1d8: ff ff ff ff ff ff ff ff
+usb 1-1.3: 1e0: ff ff ff ff ff ff ff ff
+usb 1-1.3: 1e8: ff ff ff ff ff ff ff ff
+usb 1-1.3: 1f0: ff ff ff ff ff ff ff ff
+usb 1-1.3: 1f8: ff ff ff ff ff ff ff ff
+Aravinth: rtl8xxxu_print_chipinfo 
+usb 1-1.3: RTL8723BU rev E (SMIC) 1T1R, TX queues 3, WiFi=1, BT=1, GPS=0, HI PA=0
+usb 1-1.3: RTL8723BU MAC: 74:da:38:d6:32:38
+Aravinth: rtl8723bu_load_firmware --> priv->enable_bluetooth=0
+Aravinth: rtl8xxxu_load_firmware 
+usb 1-1.3: rtk_btusb: Loading firmware rtlwifi/rtl8723bu_nic.bin
+Aravinth :rtk_btusb: Loading firmware rtlwifi/rtl8723bu_nic.bin
+Aravinth:path= fw_id=rtlwifi/rtl8723bu_nic.bin
+Aravinth:path= fw_id=rtlwifi/rtl8723bu_nic.bin
+ i=0
+Aravinth:path= fw_id=rtlwifi/rtl8723bu_nic.bin
+ i=1
+Aravinth:path=/system/lib/firmware/updates/4.9.67-07229-gdc6c16ec0433-dirty/rtlwifi/rtl8723bu_nic.bin fw_id=rtlwifi/rtl8723bu_nic.bin len=87
+Aravinth:path=/system/lib/firmware/updates/4.9.67-07229-gdc6c16ec0433-dirty/rtlwifi/rtl8723bu_nic.bin fw_id=rtlwifi/rtl8723bu_nic.bin
+ i=2
+Aravinth:path=/system/lib/firmware/updates/rtlwifi/rtl8723bu_nic.bin fw_id=rtlwifi/rtl8723bu_nic.bin len=54
+Aravinth:path=/system/lib/firmware/updates/rtlwifi/rtl8723bu_nic.bin fw_id=rtlwifi/rtl8723bu_nic.bin
+ i=3
+Aravinth:path=/system/lib/firmware/4.9.67-07229-gdc6c16ec0433-dirty/rtlwifi/rtl8723bu_nic.bin fw_id=rtlwifi/rtl8723bu_nic.bin len=79
+Aravinth:path=/system/lib/firmware/4.9.67-07229-gdc6c16ec0433-dirty/rtlwifi/rtl8723bu_nic.bin fw_id=rtlwifi/rtl8723bu_nic.bin
+ i=4
+Aravinth:path=/system/lib/firmware/rtlwifi/rtl8723bu_nic.bin fw_id=rtlwifi/rtl8723bu_nic.bin len=46
+usb 1-1.3: Direct firmware load for rtlwifi/rtl8723bu_nic.bin failed with error -2
+usb 1-1.3: Falling back to user helper
+platform caam_sm: [0000] 00 00 00 00 00 00 00 00
+platform caam_sm: [0008] 00 00 00 00 00 00 00 00
+platform caam_sm: [0016] 00 00 00 00 00 00 00 00
+platform caam_sm: [0024] 00 00 00 00 00 00 00 00
+platform caam_sm: [0032] 00 00 00 00 00 00 00 00
+platform caam_sm: [0040] 00 00 00 00 00 00 00 00
+platform caam_sm: [0048] 00 00 00 00 00 00 00 00
+platform caam_sm: [0056] 00 00 00 00 00 00 00 00
+platform caam_sm: [0064] 00 00 00 00 00 00 00 00
+platform caam_sm: [0072] 00 00 00 00 00 00 00 00
+platform caam_sm: [0080] 00 00 00 00 00 00 00 00
+platform caam_sm: [0088] 00 00 00 00 00 00 00 00
+platform caam_sm: 128-bit unwritten blob:
+platform caam_sm: [0000] 00 00 00 00 00 00 00 00
+platform caam_sm: [0008] 00 00 00 00 00 00 00 00
+platform caam_sm: [0016] 00 00 00 00 00 00 00 00
+platform caam_sm: [0024] 00 00 00 00 00 00 00 00
+platform caam_sm: [0032] 00 00 00 00 00 00 00 00
+platform caam_sm: [0040] 00 00 00 00 00 00 00 00
+platform caam_sm: [0048] 00 00 00 00 00 00 00 00
+platform caam_sm: [0056] 00 00 00 00 00 00 00 00
+platform caam_sm: [0064] 00 00 00 00 00 00 00 00
+platform caam_sm: [0072] 00 00 00 00 00 00 00 00
+platform caam_sm: [0080] 00 00 00 00 00 00 00 00
+platform caam_sm: [0088] 00 00 00 00 00 00 00 00
+platform caam_sm: 196-bit unwritten blob:
+platform caam_sm: [0000] 00 00 00 00 00 00 00 00
+platform caam_sm: [0008] 00 00 00 00 00 00 00 00
+platform caam_sm: [0016] 00 00 00 00 00 00 00 00
+platform caam_sm: [0024] 00 00 00 00 00 00 00 00
+platform caam_sm: [0032] 00 00 00 00 00 00 00 00
+platform caam_sm: [0040] 00 00 00 00 00 00 00 00
+platform caam_sm: [0048] 00 00 00 00 00 00 00 00
+platform caam_sm: [0056] 00 00 00 00 00 00 00 00
+platform caam_sm: [0064] 00 00 00 00 00 00 00 00
+platform caam_sm: [0072] 00 00 00 00 00 00 00 00
+platform caam_sm: [0080] 00 00 00 00 00 00 00 00
+platform caam_sm: [0088] 00 00 00 00 00 00 00 00
+platform caam_sm: 256-bit unwritten blob:
+platform caam_sm: [0000] 00 00 00 00 00 00 00 00
+platform caam_sm: [0008] 00 00 00 00 00 00 00 00
+platform caam_sm: [0016] 00 00 00 00 00 00 00 00
+platform caam_sm: [0024] 00 00 00 00 00 00 00 00
+platform caam_sm: [0032] 00 00 00 00 00 00 00 00
+platform caam_sm: [0040] 00 00 00 00 00 00 00 00
+platform caam_sm: [0048] 00 00 00 00 00 00 00 00
+platform caam_sm: [0056] 00 00 00 00 00 00 00 00
+platform caam_sm: [0064] 00 00 00 00 00 00 00 00
+platform caam_sm: [0072] 00 00 00 00 00 00 00 00
+platform caam_sm: [0080] 00 00 00 00 00 00 00 00
+platform caam_sm: [0088] 00 00 00 00 00 00 00 00
+platform caam_sm: 64-bit black key in blob:
+platform caam_sm: [0000] 9d 97 2d ea 5e 9c 61 de
+platform caam_sm: [0008] 2b d0 53 a7 a3 18 f7 60
+platform caam_sm: [0016] c0 ad 35 9e 88 35 ec 21
+platform caam_sm: [0024] 9f 3d d3 41 36 7d 05 e1
+platform caam_sm: [0032] 0b c4 b1 ea 88 0a 63 45
+platform caam_sm: [0040] c3 03 e3 4c d2 84 ca d4
+platform caam_sm: [0048] 40 48 47 91 23 88 db cb
+platform caam_sm: [0056] 00 00 00 00 00 00 00 00
+platform caam_sm: [0064] 00 00 00 00 00 00 00 00
+platform caam_sm: [0072] 00 00 00 00 00 00 00 00
+platform caam_sm: [0080] 00 00 00 00 00 00 00 00
+platform caam_sm: [0088] 00 00 00 00 00 00 00 00
+platform caam_sm: 128-bit black key in blob:
+platform caam_sm: [0000] 43 73 44 04 15 8c 29 6f
+platform caam_sm: [0008] bc 14 89 ca 44 cc 2c ff
+platform caam_sm: [0016] 77 55 ac 88 fe 01 5d 1a
+platform caam_sm: [0024] 5e ce 7c a1 66 06 27 de
+platform caam_sm: [0032] 5b cd 21 78 b6 62 48 a3
+platform caam_sm: [0040] 02 4c 46 c2 cf 5f 53 4a
+platform caam_sm: [0048] 9d f5 c0 d9 c7 fa 20 25
+platform caam_sm: [0056] f6 cb fd 81 55 fa f4 b4
+platform caam_sm: [0064] 00 00 00 00 00 00 00 00
+platform caam_sm: [0072] 00 00 00 00 00 00 00 00
+platform caam_sm: [0080] 00 00 00 00 00 00 00 00
+platform caam_sm: [0088] 00 00 00 00 00 00 00 00
+platform caam_sm: 192-bit black key in blob:
+platform caam_sm: [0000] 05 d4 86 e1 bb af 08 bc
+platform caam_sm: [0008] 2e 20 71 a8 cd 46 43 b9
+platform caam_sm: [0016] 9a e3 b7 d2 55 59 f6 bd
+platform caam_sm: [0024] 65 43 3c 12 a9 ef 24 75
+platform caam_sm: [0032] 30 1c cb 55 89 52 3c c4
+platform caam_sm: [0040] 3c 3a f0 eb 3d 5d 8d 6d
+platform caam_sm: [0048] 08 38 9b 7e ca 8f b2 f3
+platform caam_sm: [0056] 5c 05 55 8b aa 87 a0 2f
+platform caam_sm: [0064] 0a a5 46 c9 b7 cd 8b 62
+platform caam_sm: [0072] 00 00 00 00 00 00 00 00
+platform caam_sm: [0080] 00 00 00 00 00 00 00 00
+platform caam_sm: [0088] 00 00 00 00 00 00 00 00
+platform caam_sm: 256-bit black key in blob:
+platform caam_sm: [0000] 98 10 ac 9d 73 83 c4 1d
+platform caam_sm: [0008] 96 c3 b7 75 2e 37 41 17
+platform caam_sm: [0016] 8b 7f 05 41 ac 69 d9 a9
+platform caam_sm: [0024] 5d 82 d6 10 ef e9 12 f9
+platform caam_sm: [0032] 75 a8 64 cd 06 e1 6a f1
+platform caam_sm: [0040] 10 3d 13 6b 64 1e 2c 7c
+platform caam_sm: [0048] bb 0a 62 b2 0a b2 77 a6
+platform caam_sm: [0056] 68 4b 4b 40 45 59 96 b5
+platform caam_sm: [0064] 13 aa 0f fe 01 36 7f 41
+platform caam_sm: [0072] 45 22 78 b1 e6 e4 02 3a
+platform caam_sm: [0080] 00 00 00 00 00 00 00 00
+platform caam_sm: [0088] 00 00 00 00 00 00 00 00
+platform caam_sm: restored 64-bit black key:
+platform caam_sm: [0000] 65 d8 3d 99 33 7d dc 19
+platform caam_sm: [0008] c8 23 61 99 d0 b6 6f 00
+platform caam_sm: restored 128-bit black key:
+platform caam_sm: [0000] 51 b1 43 af 86 04 b2 77
+platform caam_sm: [0008] ca 25 5f 82 ce 0b fa 12
+platform caam_sm: restored 192-bit black key:
+platform caam_sm: [0000] 94 43 83 c9 c5 da 8e 7f
+platform caam_sm: [0008] a9 dc 11 eb 53 0f a0 b4
+platform caam_sm: [0016] 63 7e ae c1 f7 f3 b1 0f
+platform caam_sm: [0024] ea af 39 13 c7 aa ce 43
+platform caam_sm: restored 256-bit black key:
+platform caam_sm: [0000] 02 0a b0 fb 69 f3 50 47
+platform caam_sm: [0008] 19 3c 18 a1 44 19 f8 22
+platform caam_sm: [0016] cd 23 3d 37 20 5e ab 50
+platform caam_sm: [0024] b5 ed a3 08 75 60 d0 e8
+snvs-secvio 20cc000.caam-snvs: can't get snvs clock
+snvs-secvio 20cc000.caam-snvs: violation handlers armed - non-secure state
+hidraw: raw HID events driver (C) Jiri Kosina
+input: PixArt Dell MS116 USB Optical Mouse as /devices/soc0/soc/2100000.aips-bus/2184200.usb/ci_hdrc.1/usb1/1-1/1-1.2/1-1.2:1.0/0003:413C:301A.0001/input/input1
+hid-generic 0003:413C:301A.0001: input,hidraw0: USB HID v1.11 Mouse [PixArt Dell MS116 USB Optical Mouse] on usb-ci_hdrc.1-1.2/input0
+usbcore: registered new interface driver usbhid
+usbhid: USB HID core driver
+ashmem: initialized
+usbcore: registered new interface driver snd-usb-audio
+sgtl5000 2-000a: sgtl5000 revision 0x11
+fsl-ssi-dai 2028000.ssi: No cache defaults, reading back from HW
+imx-sgtl5000 sound: sgtl5000 <-> 2028000.ssi mapping ok
+imx-spdif sound-spdif: snd-soc-dummy-dai <-> 2004000.spdif mapping ok
+imx-audio-hdmi sound-hdmi: hdmi-hifi.0 <-> soc:hdmi_audio@00120000 mapping ok
+NET: Registered protocol family 26
+u32 classifier
+    Actions configured
+Netfilter messages via NETLINK v0.30.
+nf_conntrack version 0.5.0 (16384 buckets, 65536 max)
+ctnetlink v0.93: registering with nfnetlink.
+xt_time: kernel timezone is -0000
+ip_tables: (C) 2000-2006 Netfilter Core Team
+arp_tables: arp_tables: (C) 2002 David S. Miller
+Initializing XFRM netlink socket
+NET: Registered protocol family 10
+mip6: Mobile IPv6
+ip6_tables: (C) 2000-2006 Netfilter Core Team
+sit: IPv6, IPv4 and MPLS over IPv4 tunneling driver
+NET: Registered protocol family 17
+NET: Registered protocol family 15
+bridge: filtering via arp/ip/ip6tables is no longer available by default. Update your scripts to load br_netfilter if you need this.
+can: controller area network core (rev 20120528 abi 9)
+NET: Registered protocol family 29
+can: raw protocol (rev 20120528)
+can: broadcast manager protocol (rev 20161123 t)
+can: netlink gateway (rev 20130117) max_hops=1
+Bluetooth: RFCOMM TTY layer initialized
+Bluetooth: RFCOMM socket layer initialized
+Bluetooth: RFCOMM ver 1.11
+Bluetooth: BNEP (Ethernet Emulation) ver 1.3
+Bluetooth: BNEP filters: protocol multicast
+Bluetooth: BNEP socket layer initialized
+Bluetooth: HIDP (Human Interface Emulation) ver 1.2
+Bluetooth: HIDP socket layer initialized
+8021q: 802.1Q VLAN Support v1.8
+Key type dns_resolver registered
+cpu cpu0: Registered imx6q-cpufreq
+registered taskstats version 1
+imx_thermal 2000000.aips-bus:tempmon: Industrial CPU temperature grade - max:105C critical:100C passive:95C
+dhd_module_init in
+input: gpio-keys as /devices/soc0/gpio-keys/input/input2
+snvs_rtc 20cc000.snvs:snvs-rtc-lp: setting system clock to 1970-01-01 00:03:51 UTC (231)
+usb_otg_vbus: disabling
+ALSA device list:
+  #0: imx6q-apalis-sgtl5000
+  #1: imx-spdif
+  #2: imx-hdmi-soc
+Freeing unused kernel memory: 1024K
+init: init first stage started!
+SELinux:  Permission validate_trans in class security not defined in policy.
+SELinux:  Class cap_userns not defined in policy.
+SELinux:  Class cap2_userns not defined in policy.
+SELinux: the above unknown classes and permissions will be denied
+audit: type=1403 audit(231.620:2): policy loaded auid=4294967295 ses=4294967295
+init: (Initializing SELinux non-enforcing took 0.11s.)
+init: init second stage started!
+init: Running restorecon...
+init: waitpid failed: No child processes
+init: (Loading properties from /default.prop took 0.00s.)
+init: (Parsing /init.environ.rc took 0.00s.)
+init: (Parsing /init.usb.rc took 0.00s.)
+init: /init.freescale.rc: 154: invalid keyword 'setprop'
+init: /init.freescale.rc: 155: invalid keyword 'setprop'
+init: /init.freescale.rc: 159: invalid keyword 'chown'
+init: /init.freescale.rc: 160: invalid keyword 'mkdir'
+ueventd: ueventd started!
+ueventd: Coldboot took 0.45s.
+Console: switching to colour dummy device 80x30
+watchdogd: started (interval 10, margin 20)!
+EXT4-fs (mmcblk0p3): mounted filesystem with ordered data mode. Opts: barrier=1
+EXT4-fs (mmcblk0p10): Ignoring removed nomblk_io_submit option
+EXT4-fs (mmcblk0p10): mounted filesystem with ordered data mode. Opts: nomblk_io_submit,noauto_da_alloc,errors=panic
+EXT4-fs (mmcblk0p4): Ignoring removed nomblk_io_submit option
+EXT4-fs (mmcblk0p4): mounted filesystem with ordered data mode. Opts: nomblk_io_submit
+Aravinth: rtl8xxxu_load_firmware 1 fw=-797541952
+Aravinth: rtl8xxxu_load_firmware 1
+Aravinth: rtl8xxxu_load_firmware 2 priv->fw_size=32076 fw->size=32108
+Aravinth: rtl8xxxu_load_firmware 2
+Aravinth: Firmware revision 35.0 (signature 0x5301)
+Aravinth: rtl8723bu_load_firmware --> ret=0
+Aravinth: rtl8xxxu_init_device 
+Aravinth: rtl8723bu_power_on -->
+EXT4-fs (mmcblk0p5): mounted filesystem with ordered data mode. Opts: (null)
+Aravinth: rtl8723bu_power_on -->1
+Aravinth: rtl8xxxu_download_firmware 
+Aravinth: rtl8xxxu_start_firmware 
+Aravinth: rtl8xxxu_init_mac 
+file system registered
+using random self ethernet address
+using random host ethernet address
+zram0: detected capacity change from 0 to 314572800
+logd.auditd: start
+logd.klogd: 7533503667
+Adding 307196k swap on /dev/block/zram0.  Priority:-1 extents:1 across:307196k SS
+Aravinth: rtl8xxxu_probe -->
+binder: 261:261 transaction failed 29189, size 0-0
+logd.daemon: reinit
+type=1400 audit(234.450:3): avc: denied { entrypoint } for pid=267 comm="init" path="/system/bin/can-config.sh" dev="mmcblk0p3" ino=256 scontext=u:r:obd:s0 tcontext=u:object_r:system_file:s0 tclass=file permissive=1
+type=1400 audit(234.460:4): avc: denied { read execute } for pid=267 comm="can-config.sh" path="/system/bin/sh" dev="mmcblk0p3" ino=439 scontext=u:r:obd:s0 tcontext=u:object_r:shell_exec:s0 tclass=file permissive=1
+type=1400 audit(234.460:5): avc: denied { getattr } for pid=267 comm="can-config.sh" path="/system/bin/sh" dev="mmcblk0p3" ino=439 scontext=u:r:obd:s0 tcontext=u:object_r:shell_exec:s0 tclass=file permissive=1
+type=1400 audit(234.460:6): avc: denied { getattr } for pid=267 comm="can-config.sh" path="/vendor" dev="rootfs" ino=6500 scontext=u:r:obd:s0 tcontext=u:object_r:rootfs:s0 tclass=lnk_file permissive=1
+type=1400 audit(234.520:7): avc: denied { execute_no_trans } for pid=282 comm="can-config.sh" path="/system/bin/ip" dev="mmcblk0p3" ino=331 scontext=u:r:obd:s0 tcontext=u:object_r:system_file:s0 tclass=file permissive=1
+type=1400 audit(234.520:8): avc: denied { create } for pid=268 comm="obd" scontext=u:r:obd:s0 tcontext=u:r:obd:s0 tclass=socket permissive=1
+type=1400 audit(234.520:9): avc: denied { ioctl } for pid=268 comm="obd" path="socket:[10829]" dev="sockfs" ino=10829 ioctlcmd=0x8933 scontext=u:r:obd:s0 tcontext=u:r:obd:s0 tclass=socket permissive=1
+toradex_apalis6q:/ # IPv6: ADDRCONF(NETDEV_CHANGE): can0: link becomes ready
+healthd: No battery devices found
+ERROR: v4l2 capture: slave not found! V4L2_CID_HUE
+ERROR: v4l2 capture: slave not found! V4L2_CID_HUE
+imx-hdmi-audio imx-hdmi-audio: HDMI Video is not ready!
+imx-hdmi-audio imx-hdmi-audio: ASoC: can't open platform imx-hdmi-audio: -22
+imx-hdmi-audio imx-hdmi-audio: HDMI Video is not ready!
+imx-hdmi-audio imx-hdmi-audio: ASoC: can't open platform imx-hdmi-audio: -22
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+capability: warning: `main' uses 32-bit capabilities (legacy support in use)
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+type=1400 audit(243.480:35): avc: denied { write } for pid=268 comm="obd" path="socket:[10829]" dev="sockfs" ino=10829 scontext=u:r:obd:s0 tcontext=u:r:obd:s0 tclass=socket permissive=1
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+init: write_file: Unable to open '/sys/devices/system/cpu/cpufreq/interactive/timer_rate': No such file or directory
+init: write_file: Unable to open '/sys/devices/system/cpu/cpufreq/interactive/min_sample_time': No such file or directory
+init: write_file: Unable to open '/sys/devices/system/cpu/cpufreq/interactive/go_hispeed_load': No such file or directory
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+random: crng init done
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+init: write_file: Unable to open '/proc/sys/vm/extra_free_kbytes': No such file or directory
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+toradex_apalis6q:/ # 
+toradex_apalis6q:/ # 
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+toradex_apalis6q:/ # mxc_sdc_fb fb@1: can't update screen when fb is blank
+
+toradex_apalis6q:/ # mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+
+toradex_apalis6q:/ # mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+
+toradex_apalis6q:/ # init: write_file: Unable to write to '/config/usb_gadget/g1/UDC': No such device
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+acc_open
+acc_release
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+Micrel KSZ9031 Gigabit PHY 2188000.ethernet-1:07: attached PHY driver [Micrel KSZ9031 Gigabit PHY] (mii_bus:phy_addr=2188000.ethernet-1:07, irq=120)
+IPv6: ADDRCONF(NETDEV_UP): eth0: link is not ready
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+type=1400 audit(253.230:36): avc: denied { write } for pid=268 comm="obd" path="socket:[10829]" dev="sockfs" ino=10829 scontext=u:r:obd:s0 tcontext=u:r:obd:s0 tclass=socket permissive=1
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+init: Service 'bootanim' (pid 343) exited with status 0
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+init: Starting service 'exec 3 (/system/bin/bootstat)'...
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+init: Service 'exec 3 (/system/bin/bootstat)' (pid 945) exited with status 0
+init: Starting service 'exec 4 (/system/bin/bootstat)'...
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+init: Service 'exec 4 (/system/bin/bootstat)' (pid 950) exited with status 0
+init: Starting service 'exec 5 (/system/bin/bootstat)'...
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+init: Service 'exec 5 (/system/bin/bootstat)' (pid 954) exited with status 0
+init: Starting service 'exec 6 (/system/bin/bootstat)'...
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+init: Service 'exec 6 (/system/bin/bootstat)' (pid 958) exited with status 0
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+type=1400 audit(259.170:37): avc: denied { write } for pid=268 comm="obd" path="socket:[10829]" dev="sockfs" ino=10829 scontext=u:r:obd:s0 tcontext=u:r:obd:s0 tclass=socket permissive=1
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+mxc_sdc_fb fb@1: can't update screen when fb is blank
+type=1400 audit(267.760:38): avc: denied { write } for pid=268 comm="obd" path="socket:[10829]" dev="sockfs" ino=10829 scontext=u:r:obd:s0 tcontext=u:r:obd:s0 tclass=socket permissive=1
+type=1400 audit(268.540:39): avc: denied { write } for pid=1215 comm="Thread-2" name="vcan" dev="tmpfs" ino=10831 scontext=u:r:untrusted_app:s0:c512,c768 tcontext=u:object_r:socket_device:s0 tclass=sock_file permissive=1
+type=1400 audit(268.560:40): avc: denied { connectto } for pid=1215 comm="Thread-2" path="/dev/socket/vcan" scontext=u:r:untrusted_app:s0:c512,c768 tcontext=u:r:obd:s0 tclass=unix_stream_socket permissive=1
+
+toradex_apalis6q:/ # 
+toradex_apalis6q:/ # 
+toradex_apalis6q:/ # 
+toradex_apalis6q:/ # reboot
+sysrq: SysRq : Emergency Remount R/O
+EXT4-fs (mmcblk0p4): re-mounted. Opts: (null)
+EXT4-fs (mmcblk0p10): re-mounted. Opts: (null)
+Emergency Remount complete
+imx2-wdt 20bc000.wdog: Device shutdown: Expect reboot!
+ci_hdrc ci_hdrc.1: remove, state 1
+usb usb1: USB disconnect, device number 1
+usb 1-1: USB disconnect, device number 2
+usb 1-1.2: USB disconnect, device number 3
+usb 1-1.3: USB disconnect, device number 4
+Aravinth: rtl8xxxu_disconnect 
+usb 1-1.3: rtl8xxxu_active_to_lps: RX poll timed out (0x05f8)
+usb 1-1.3: rtl8723bu_active_to_emu: Disabling MAC timed out
+usb 1-1.3: disconnecting
+Aravinth: usb_ifnum_to_if config->desc.bNumInterface=1 ifnum=0
+Aravinth: usb_ifnum_to_if Num=0 
+ci_hdrc ci_hdrc.1: USB bus 1 deregistered
+android_work: did not send uevent (0 0   (null))
+reboot: Restarting system with command ''
+
+
+U-Boot 2017.03-00002-gebf9dc2527 (Jan 31 2018 - 14:59:40 +0530)
+
+CPU:   Freescale i.MX6Q rev1.5 at 792 MHz
+Reset cause: WDOG
+I2C:   ready
+DRAM:  2 GiB
+PMIC: device id: 0x10, revision id: 0x21
+PMIC: programmed
+MMC:   FSL_SDHC: 0, FSL_SDHC: 1, FSL_SDHC: 2
+Unable to allocate framebuffer memory
+In:    serial
+Out:   serial
+Err:   serial
+Model: Toradex Apalis iMX6 Quad 2GB IT V1.1C, Serial# 05146387
+flash target is MMC:0
+Net:   using PHY at 7
+FEC [PRIME]
+Fastboot: Normal
+Hit any key to stop autoboot:  1  0 
+Apalis iMX6 # setenv bootargs 'console=ttymxc0,115200 init=/init video=mxcfb0:dev=hdmi,640x480M@60,if=RGB24,bpp=16 video=mxcfb1:off video=mxcfb2:off video=mxcfb3:off vmalloc=256M androidboot.console=ttymxc0 consoleblank=0 androidboot.hardware=freescale cma=448M androidboot.selinux=permissive androidboot.dm_verity=disabled'
+Apalis iMX6 # boot
+boota mmc0 
+CACHE: Misaligned operation at range [8ffb79a0, 8ffb7a20]
+CACHE: Misaligned operation at range [8ffb79a0, 8ffb7a20]
+kernel   @ 14008000 (9921576)
+ramdisk  @ 15000000 (1629864)
+fdt      @ 14f00000 (53981)
+## Booting Android Image at 0x12000000 ...
+Kernel load addr 0x14008000 size 9690 KiB
+Kernel command line: console=ttymxc0,115200 init=/init video=mxcfb0:dev=hdmi,640x480M@60,if=RGB24,bpp=16 video=mxcfb1:off video=mxcfb2:off video=mxcfb3:off vmalloc=256M androidboot.console=ttymxc0 consoleblank=0 androidboot.hardware=freescale cma=448M androidboot.selinux=permissive androidboot.dm_verity=disabled androidboot.serialno=1b2429d4ea997115 androidboot.storage_type=emmc
+## Flattened Device Tree blob at 14f00000
+   Booting using the fdt blob at 0x14f00000
+   Loading Kernel Image ... OK
+   Using Device Tree in place at 14f00000, end 14f102dc
+
+Starting kernel ...
+
+Booting Linux on physical CPU 0x0
+Linux version 4.9.67-07229-gdc6c16ec0433-dirty (embadmin@ubuntu) (gcc version 4.9 20150123 (prerelease) (GCC) ) #59 SMP PREEMPT Wed Feb 7 18:06:19 IST 2018
+CPU: ARMv7 Processor [412fc09a] revision 10 (ARMv7), cr=10c53c7d
+CPU: PIPT / VIPT nonaliasing data cache, VIPT aliasing instruction cache
+OF: fdt:Machine model: Aravinth : Toradex Apalis iMX6Q/D Module on Ixora V1.1 Carrier Board
+cma: Reserved 448 MiB at 0x22000000
+Memory policy: Data cache writealloc
+percpu: Embedded 15 pages/cpu @ee6b3000 s31040 r8192 d22208 u61440
+Built 1 zonelists in Zone order, mobility grouping on.  Total pages: 522768
+Kernel command line: console=ttymxc0,115200 init=/init video=mxcfb0:dev=hdmi,640x480M@60,if=RGB24,bpp=16 video=mxcfb1:off video=mxcfb2:off video=mxcfb3:off vmalloc=256M androidboot.console=ttymxc0 consoleblank=0 androidboot.hardware=freescale cma=448M androidboot.selinux=permissive androidboot.dm_verity=disabled androidboot.serialno=1b2429d4ea997115 androidboot.storage_type=emmc
+PID hash table entries: 4096 (order: 2, 16384 bytes)
+Dentry cache hash table entries: 131072 (order: 7, 524288 bytes)
+Inode-cache hash table entries: 65536 (order: 6, 262144 bytes)
+Memory: 1597024K/2097152K available (13312K kernel code, 1154K rwdata, 4044K rodata, 1024K init, 604K bss, 41376K reserved, 458752K cma-reserved, 1318912K highmem)
+Virtual kernel memory layout:
+    vector  : 0xffff0000 - 0xffff1000   (   4 kB)
+    fixmap  : 0xffc00000 - 0xfff00000   (3072 kB)
+    vmalloc : 0xf0000000 - 0xff800000   ( 248 MB)
+    lowmem  : 0xc0000000 - 0xef800000   ( 760 MB)
+    pkmap   : 0xbfe00000 - 0xc0000000   (   2 MB)
+    modules : 0xbf000000 - 0xbfe00000   (  14 MB)
+      .text : 0xc0008000 - 0xc0e00000   (14304 kB)
+      .init : 0xc1300000 - 0xc1400000   (1024 kB)
+      .data : 0xc1400000 - 0xc1520b58   (1155 kB)
+       .bss : 0xc1520b58 - 0xc15b7c28   ( 605 kB)
+SLUB: HWalign=64, Order=0-3, MinObjects=0, CPUs=4, Nodes=1
+Preemptible hierarchical RCU implementation.
+	Build-time adjustment of leaf fanout to 32.
+NR_IRQS:16 nr_irqs:16 16
+L2C-310 errata 752271 769419 enabled
+L2C-310 enabling early BRESP for Cortex-A9
+L2C-310 full line of zeros enabled for Cortex-A9
+L2C-310 ID prefetch enabled, offset 16 lines
+L2C-310 dynamic clock gating enabled, standby mode enabled
+L2C-310 cache controller enabled, 16 ways, 1024 kB
+L2C-310: CACHE_ID 0x410000c7, AUX_CTRL 0x76470001
+Switching to timer-based delay loop, resolution 333ns
+sched_clock: 32 bits at 3000kHz, resolution 333ns, wraps every 715827882841ns
+clocksource: mxc_timer1: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 637086815595 ns
+Console: colour dummy device 80x30
+Calibrating delay loop (skipped), value calculated using timer frequency.. 6.00 BogoMIPS (lpj=30000)
+pid_max: default: 32768 minimum: 301
+Security Framework initialized
+SELinux:  Initializing.
+Mount-cache hash table entries: 2048 (order: 1, 8192 bytes)
+Mountpoint-cache hash table entries: 2048 (order: 1, 8192 bytes)
+CPU: Testing write buffer coherency: ok
+CPU0: update cpu_capacity 1024
+CPU0: thread -1, cpu 0, socket 0, mpidr 80000000
+Setting up static identity map for 0x10100000 - 0x10100058
+CPU1: update cpu_capacity 1024
+CPU1: thread -1, cpu 1, socket 0, mpidr 80000001
+CPU2: update cpu_capacity 1024
+CPU2: thread -1, cpu 2, socket 0, mpidr 80000002
+CPU3: update cpu_capacity 1024
+CPU3: thread -1, cpu 3, socket 0, mpidr 80000003
+Brought up 4 CPUs
+SMP: Total of 4 processors activated (24.00 BogoMIPS).
+CPU: All CPU(s) started in SVC mode.
+CPU3: update max cpu_capacity 1024
+devtmpfs: initialized
+CPU2: update max cpu_capacity 1024
+VFP support v0.3: implementor 41 architecture 3 part 30 variant 9 rev 4
+clocksource: jiffies: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 19112604462750000 ns
+futex hash table entries: 1024 (order: 4, 65536 bytes)
+pinctrl core: initialized pinctrl subsystem
+NET: Registered protocol family 16
+DMA: preallocated 256 KiB pool for atomic coherent allocations
+cpuidle: using governor menu
+CPU identified as i.MX6Q, silicon rev 1.5
+hw-breakpoint: found 5 (+1 reserved) breakpoint and 1 watchpoint registers.
+hw-breakpoint: maximum watchpoint size is 4 bytes.
+imx6q-pinctrl 20e0000.iomuxc: initialized IMX pinctrl driver
+imx-gpc 20dc000.gpc: no fsl,ldo-bypass found!
+imx-gpc 20dc000.gpc: Registered imx-gpc
+mxs-dma 110000.dma-apbh: initialized
+usb_host_vbus: supplied by usb_host_vbus_hub
+SCSI subsystem initialized
+usbcore: registered new interface driver usbfs
+usbcore: registered new interface driver hub
+usbcore: registered new device driver usb
+2000000.aips-bus:usbphy_nop1 supply vcc not found, using dummy regulator
+2000000.aips-bus:usbphy_nop2 supply vcc not found, using dummy regulator
+i2c i2c-1: IMX I2C adapter registered
+i2c i2c-1: can't use DMA, using PIO instead.
+stmpe-i2c 2-0041: stmpe811 detected, chip id: 0x811
+i2c i2c-2: IMX I2C adapter registered
+i2c i2c-2: can't use DMA, using PIO instead.
+i2c i2c-3: IMX I2C adapter registered
+i2c i2c-3: can't use DMA, using PIO instead.
+Linux video capture interface: v2.00
+pps_core: LinuxPPS API ver. 1 registered
+pps_core: Software ver. 5.3.6 - Copyright 2005-2007 Rodolfo Giometti <giometti@linux.it>
+PTP clock support registered
+imx-ipuv3 2400000.ipu: IPU DMFC NORMAL mode: 1(0~1), 5B(4,5), 5F(6,7)
+imx-ipuv3 2800000.ipu: IPU DMFC NORMAL mode: 1(0~1), 5B(4,5), 5F(6,7)
+mxc_mipi_csi2 21dc000.mipi_csi: i.MX MIPI CSI2 driver probed ipu0 csi1
+mxc_mipi_csi2 21dc000.mipi_csi: i.MX MIPI CSI2 dphy version is 0x3130302a
+MIPI CSI2 driver module loaded
+imx rpmsg driver is registered.
+Advanced Linux Sound Architecture Driver Initialized.
+Bluetooth: Core ver 2.22
+NET: Registered protocol family 31
+Bluetooth: HCI device and connection manager initialized
+Bluetooth: HCI socket layer initialized
+Bluetooth: L2CAP socket layer initialized
+Bluetooth: SCO socket layer initialized
+clocksource: Switched to clocksource mxc_timer1
+VFS: Disk quotas dquot_6.6.0
+VFS: Dquot-cache hash table entries: 1024 (order 0, 4096 bytes)
+NET: Registered protocol family 2
+TCP established hash table entries: 8192 (order: 3, 32768 bytes)
+TCP bind hash table entries: 8192 (order: 4, 65536 bytes)
+TCP: Hash tables configured (established 8192 bind 8192)
+UDP hash table entries: 512 (order: 2, 16384 bytes)
+UDP-Lite hash table entries: 512 (order: 2, 16384 bytes)
+NET: Registered protocol family 1
+RPC: Registered named UNIX socket transport module.
+RPC: Registered udp transport module.
+RPC: Registered tcp transport module.
+RPC: Registered tcp NFSv4.1 backchannel transport module.
+Trying to unpack rootfs image as initramfs...
+Freeing initrd memory: 1592K
+hw perfevents: enabled with armv7_cortex_a9 PMU driver, 7 counters available
+Bus freq driver module loaded
+audit: initializing netlink subsys (disabled)
+audit: type=2000 audit(0.870:1): initialized
+workingset: timestamp_bits=30 max_order=19 bucket_order=0
+NFS: Registering the id_resolver key type
+Key type id_resolver registered
+Key type id_legacy registered
+ntfs: driver 2.1.32 [Flags: R/W DEBUG].
+jffs2: version 2.2. (NAND) © 2001-2006 Red Hat, Inc.
+fuse init (API version 7.26)
+NET: Registered protocol family 38
+bounce: pool size: 64 pages
+io scheduler noop registered
+io scheduler deadline registered
+io scheduler cfq registered (default)
+backlight supply power not found, using dummy regulator
+20e0000.hdmi_video supply HDMI not found, using dummy regulator
+mxc_hdmi 20e0000.hdmi_video: Detected HDMI controller 0x13:0xa:0xa0:0xc1
+fbcvt: 640x480@60: CVT Name - .307M3
+mxc_sdc_fb fb@0: registered mxc display driver hdmi
+Console: switching to colour frame buffer device 80x30
+mxc_sdc_fb fb@1: Can't get fb option for mxcfb1!
+mxc_sdc_fb fb@2: Can't get fb option for mxcfb2!
+mxc_sdc_fb fb@3: Can't get fb option for mxcfb3!
+imx-sdma 20ec000.sdma: no iram assigned, using external mem
+imx-sdma 20ec000.sdma: loaded firmware 3.3
+pfuze100-regulator 2-0008: Full layer: 2, Metal layer: 1
+pfuze100-regulator 2-0008: FAB: 0, FIN: 0
+pfuze100-regulator 2-0008: pfuze100 found.
+mxc_hdmi 20e0000.hdmi_video: Read EDID again
+2020000.serial: ttymxc0 at MMIO 0x2020000 (irq = 29, base_baud = 5000000) is a IMX
+mxc_hdmi 20e0000.hdmi_video: create default modelist
+console [ttymxc0] enabled
+21e8000.serial: ttymxc1 at MMIO 0x21e8000 (irq = 78, base_baud = 5000000) is a IMX
+21f0000.serial: ttymxc3 at MMIO 0x21f0000 (irq = 79, base_baud = 5000000) is a IMX
+21f4000.serial: ttymxc4 at MMIO 0x21f4000 (irq = 80, base_baud = 5000000) is a IMX
+imx sema4 driver is registered.
+[drm] Initialized
+[drm] Initialized vivante 1.0.0 20120216 on minor 0
+brd: module loaded
+loop: module loaded
+zram: Added device: zram0
+ahci-imx 2200000.sata: fsl,transmit-level-mV not specified, using 00000024
+ahci-imx 2200000.sata: fsl,transmit-boost-mdB not specified, using 00000480
+ahci-imx 2200000.sata: fsl,transmit-atten-16ths not specified, using 00002000
+ahci-imx 2200000.sata: fsl,receive-eq-mdB not specified, using 05000000
+ahci-imx 2200000.sata: SSS flag set, parallel bus scan disabled
+ahci-imx 2200000.sata: AHCI 0001.0300 32 slots 1 ports 3 Gbps 0x1 impl platform mode
+ahci-imx 2200000.sata: flags: ncq sntf stag pm led clo only pmp pio slum part ccc apst 
+scsi host0: ahci-imx
+ata1: SATA max UDMA/133 mmio [mem 0x02200000-0x02203fff] port 0x100 irq 87
+spi_imx 2008000.ecspi: probed
+libphy: Fixed MDIO Bus: probed
+tun: Universal TUN/TAP device driver, 1.6
+tun: (C) 1999-2004 Max Krasnyansky <maxk@qualcomm.com>
+CAN device driver interface
+2090000.flexcan supply xceiver not found, using dummy regulator
+flexcan 2090000.flexcan: device registered (reg_base=f02f4000, irq=38)
+2094000.flexcan supply xceiver not found, using dummy regulator
+flexcan 2094000.flexcan: device registered (reg_base=f02fc000, irq=39)
+2188000.ethernet supply phy not found, using dummy regulator
+pps pps0: new PPS source ptp0
+libphy: fec_enet_mii_bus: probed
+fec 2188000.ethernet eth0: registered PHC device 0
+PPP generic driver version 2.4.2
+PPP BSD Compression module registered
+PPP Deflate Compression module registered
+PPP MPPE Compression module registered
+NET: Registered protocol family 24
+Aravinth: rtl8xxxu_module_init -->
+usbcore: registered new interface driver rtk_btusb
+Aravinth: rtl8xxxu_module_init <--
+usbcore: registered new interface driver kaweth
+pegasus: v0.9.3 (2013/04/25), Pegasus/Pegasus II USB Ethernet driver
+usbcore: registered new interface driver pegasus
+usbcore: registered new interface driver rtl8150
+usbcore: registered new interface driver r8152
+usbcore: registered new interface driver asix
+usbcore: registered new interface driver ax88179_178a
+usbcore: registered new interface driver cdc_ether
+usbcore: registered new interface driver cdc_eem
+usbcore: registered new interface driver net1080
+usbcore: registered new interface driver cdc_subset
+usbcore: registered new interface driver zaurus
+usbcore: registered new interface driver cdc_ncm
+ehci_hcd: USB 2.0 'Enhanced' Host Controller (EHCI) Driver
+ehci-mxc: Freescale On-Chip EHCI Host driver
+ohci_hcd: USB 1.1 'Open' Host Controller (OHCI) Driver
+usbcore: registered new interface driver cdc_acm
+cdc_acm: USB Abstract Control Model driver for USB modems and ISDN adapters
+usbcore: registered new interface driver cdc_wdm
+usbcore: registered new interface driver usb-storage
+usbcore: registered new interface driver usbserial
+usbcore: registered new interface driver usbserial_generic
+usbserial: USB Serial support registered for generic
+usbcore: registered new interface driver ftdi_sio
+usbserial: USB Serial support registered for FTDI USB Serial Device
+usbcore: registered new interface driver option
+usbserial: USB Serial support registered for GSM modem (1-port)
+usbcore: registered new interface driver usbtest
+usbcore: registered new interface driver usb_ehset_test
+2184800.usbmisc supply vbus-wakeup not found, using dummy regulator
+ci_hdrc ci_hdrc.1: EHCI Host Controller
+ci_hdrc ci_hdrc.1: new USB bus registered, assigned bus number 1
+ci_hdrc ci_hdrc.1: USB 2.0 started, EHCI 1.00
+usb usb1: New USB device found, idVendor=1d6b, idProduct=0002
+usb usb1: New USB device strings: Mfr=3, Product=2, SerialNumber=1
+usb usb1: Product: EHCI Host Controller
+usb usb1: Manufacturer: Linux 4.9.67-07229-gdc6c16ec0433-dirty ehci_hcd
+usb usb1: SerialNumber: ci_hdrc.1
+hub 1-0:1.0: USB hub found
+hub 1-0:1.0: 1 port detected
+mousedev: PS/2 mouse device common for all mice
+usbcore: registered new interface driver xpad
+usbcore: registered new interface driver usb_acecad
+usbcore: registered new interface driver aiptek
+usbcore: registered new interface driver gtco
+usbcore: registered new interface driver hanwang
+usbcore: registered new interface driver kbtab
+ata1: SATA link down (SStatus 0 SControl 300)
+ahci-imx 2200000.sata: no device found, disabling link.
+ahci-imx 2200000.sata: pass ahci_imx..hotplug=1 to enable hotplug
+input: stmpe-ts as /devices/soc0/soc/2100000.aips-bus/21a4000.i2c/i2c-2/2-0041/stmpe-ts/input/input0
+snvs_rtc 20cc000.snvs:snvs-rtc-lp: rtc core: registered 20cc000.snvs:snvs-r as rtc0
+i2c /dev entries driver
+IR NEC protocol handler initialized
+IR RC5(x/sz) protocol handler initialized
+IR RC6 protocol handler initialized
+IR JVC protocol handler initialized
+IR Sony protocol handler initialized
+IR SANYO protocol handler initialized
+IR Sharp protocol handler initialized
+IR MCE Keyboard/mouse protocol handler initialized
+IR XMP protocol handler initialized
+mxc_v4l2_output v4l2_out: V4L2 device registered as video16
+mxc_v4l2_output v4l2_out: V4L2 device registered as video17
+ov564x_mipi 3-003c: found pwm2, period=0
+usb 1-1: new high-speed USB device number 2 using ci_hdrc
+ov5640_read_reg:write reg error:reg=300a
+camera ov5640_mipi is not found
+usbcore: registered new interface driver uvcvideo
+USB Video Class driver (1.1.1)
+imx2-wdt 20bc000.wdog: timeout 60 sec (nowayout=0)
+device-mapper: uevent: version 1.0.3
+device-mapper: ioctl: 4.35.0-ioctl (2016-06-23) initialised: dm-devel@redhat.com
+Bluetooth: HCI UART driver ver 2.3
+Bluetooth: HCI UART protocol H4 registered
+Bluetooth: HCI UART protocol BCSP registered
+Bluetooth: HCI UART protocol ATH3K registered
+usbcore: registered new interface driver btusb
+sdhci: Secure Digital Host Controller Interface driver
+sdhci: Copyright(c) Pierre Ossman
+sdhci-pltfm: SDHCI platform and OF driver helper
+sdhci-esdhc-imx 2190000.usdhc: could not get ultra high speed state, work on normal mode
+sdhci-esdhc-imx 2190000.usdhc: Got CD GPIO
+usb 1-1: New USB device found, idVendor=0424, idProduct=2514
+usb 1-1: New USB device strings: Mfr=0, Product=0, SerialNumber=0
+hub 1-1:1.0: USB hub found
+hub 1-1:1.0: 4 ports detected
+Aravinth: usb_ifnum_to_if config->desc.bNumInterface=1 ifnum=0
+Aravinth: usb_ifnum_to_if Num=0 
+mmc1: SDHCI controller on 2190000.usdhc [2190000.usdhc] using ADMA
+sdhci-esdhc-imx 2198000.usdhc: could not get ultra high speed state, work on normal mode
+mmc0: SDHCI controller on 2198000.usdhc [2198000.usdhc] using ADMA
+mxc_vpu 2040000.vpu_fsl: VPU initialized
+mxc_vdoa 21e4000.vdoa: i.MX Video Data Order Adapter(VDOA) driver probed
+mxc_hdmi_cec soc:hdmi_cec@00120000: HDMI CEC initialized
+Galcore version 6.2.2.96445
+random: fast init done
+mmc0: new DDR MMC card at address 0001
+mmcblk0: mmc0:0001 Q2J54A 3.59 GiB 
+mmcblk0boot0: mmc0:0001 Q2J54A partition 1 16.0 MiB
+mmcblk0boot1: mmc0:0001 Q2J54A partition 2 16.0 MiB
+Alternate GPT is invalid, using primary GPT.
+ mmcblk0: p1 p2 p3 p4 p5 p6 p7 p8 p9 p10 p11
+usb 1-1.2: new low-speed USB device number 3 using ci_hdrc
+usb 1-1.2: New USB device found, idVendor=413c, idProduct=301a
+usb 1-1.2: New USB device strings: Mfr=1, Product=2, SerialNumber=0
+usb 1-1.2: Product: Dell MS116 USB Optical Mouse
+usb 1-1.2: Manufacturer: PixArt
+usb 1-1.3: new high-speed USB device number 4 using ci_hdrc
+usb 1-1.3: New USB device found, idVendor=7392, idProduct=a611
+usb 1-1.3: New USB device strings: Mfr=1, Product=2, SerialNumber=3
+usb 1-1.3: Product: Edimax Wi-Fi N150 Bluetooth4.0 USB Adapter
+usb 1-1.3: Manufacturer: Realtek
+usb 1-1.3: SerialNumber: 00e04c000001
+Aravinth: usb_ifnum_to_if config->desc.bNumInterface=3 ifnum=1
+Aravinth: usb_ifnum_to_if Num=0 
+Aravinth: usb_ifnum_to_if Num=1 
+Aravinth: usb_driver_claim_interface 1-->
+Aravinth: usb_driver_claim_interface 2-->
+Aravinth: rtl8xxxu_probe 
+Aravinth: rtl8xxxu_probe 
+usb 1-1.3: This Realtek USB WiFi dongle (0x7392:0xa611) is untested!
+usb 1-1.3: Please report results to Jes.Sorensen@gmail.com
+Aravinth: rtl8xxxu_identify_chip 
+caam 2100000.caam: ERA source: CAAMVID.
+caam 2100000.caam: AXI pipeline throttling enabled.
+caam 2100000.caam: Instantiated RNG4 SH1
+caam 2100000.caam: device ID = 0x0a16010000000000 (Era 4)
+caam 2100000.caam: job rings = 2, qi = 0
+caam algorithms registered in /proc/crypto
+caam_jr 2101000.jr0: registering rng-caam
+platform caam_sm: blkkey_ex: 4 keystore units available
+platform caam_sm: 64-bit clear key:
+platform caam_sm: [0000] 00 01 02 03 04 0f 06 07
+platform caam_sm: 64-bit black key:
+platform caam_sm: [0000] bd 4d 9e f6 08 03 a9 b7
+platform caam_sm: [0008] b1 67 15 bd 9d b6 f2 3a
+platform caam_sm: 128-bit clear key:
+platform caam_sm: [0000] 00 01 02 03 04 0f 06 07
+platform caam_sm: [0008] 08 09 0a 0b 0c 0d 0e 0f
+platform caam_sm: 128-bit black key:
+platform caam_sm: [0000] 45 6d ad 5a 03 59 46 0c
+platform caam_sm: [0008] cc 80 2e ec b0 53 c7 2f
+platform caam_sm: 192-bit clear key:
+platform caam_sm: [0000] 00 01 02 03 04 0f 06 07
+platform caam_sm: [0008] 08 09 0a 0b 0c 0d 0e 0f
+platform caam_sm: [0016] 10 11 12 13 14 15 16 17
+platform caam_sm: 192-bit black key:
+platform caam_sm: [0000] 5e cd 92 5b 4e 4c 9b 87
+platform caam_sm: [0008] 03 8b 82 21 c4 8b 13 13
+platform caam_sm: [0016] c4 10 29 16 fb db 60 cf
+platform caam_sm: [0024] 2b 72 78 fd 4b 59 4f 8f
+platform caam_sm: 256-bit clear key:
+platform caam_sm: [0000] 00 01 02 03 04 0f 06 07
+platform caam_sm: [0008] 08 09 0a 0b 0c 0d 0e 0f
+platform caam_sm: [0016] 10 11 12 13 14 15 16 17
+platform caam_sm: [0024] 18 19 1a 1b 1c 1d 1e 1f
+platform caam_sm: 256-bit black key:
+platform caam_sm: [0000] 6e 4e 3f 32 7b 53 f9 d9
+platform caam_sm: [0008] 98 72 ff 75 37 e9 b3 d1
+platform caam_sm: [0016] 4f 60 70 73 b0 cd 34 b2
+platform caam_sm: [0024] 03 a9 4b 0c 30 97 a8 87
+platform caam_sm: 64-bit unwritten blob:
+platform caam_sm: [0000] 00 00 00 00 00 00 00 00
+platform caam_sm: [0008] 00 00 00 00 00 00 00 00
+usb 1-1.3: Vendor: Realtek
+usb 1-1.3: Product: Edimax Wi-Fi N150 Bluetooth4.0 USB Adapte
+usb 1-1.3: rtl8723bu_parse_efuse: dumping efuse (0x200 bytes):
+usb 1-1.3: 00: 29 81 03 7c 01 08 21 00
+usb 1-1.3: 08: 40 07 05 35 10 00 00 00
+usb 1-1.3: 10: 2f 2f 2f 2e 2e 2e 30 30
+usb 1-1.3: 18: 30 2f 2f f3 ff ff ff ff
+usb 1-1.3: 20: ff ff ff ff ff ff ff ff
+usb 1-1.3: 28: ff ff ff ff ff ff ff ff
+usb 1-1.3: 30: ff ff ff ff ff ff ff ff
+usb 1-1.3: 38: ff ff 2d 2d 2d 2d 2d 2d
+usb 1-1.3: 40: 2d 2d 2d 2d 2d 00 ff ff
+usb 1-1.3: 48: ff ff ff ff ff ff ff ff
+usb 1-1.3: 50: ff ff ff ff ff ff ff ff
+usb 1-1.3: 58: ff ff ff ff ff ff ff ff
+usb 1-1.3: 60: ff ff ff ff ff ff ff ff
+usb 1-1.3: 68: ff ff ff ff ff ff ff ff
+usb 1-1.3: 70: ff ff ff ff ff ff ff ff
+usb 1-1.3: 78: ff ff ff ff ff ff ff ff
+usb 1-1.3: 80: ff ff ff ff ff ff ff ff
+usb 1-1.3: 88: ff ff ff ff ff ff ff ff
+usb 1-1.3: 90: ff ff ff ff ff ff ff ff
+usb 1-1.3: 98: ff ff ff ff ff ff ff ff
+usb 1-1.3: a0: ff ff ff ff ff ff ff ff
+usb 1-1.3: a8: ff ff ff ff ff ff ff ff
+usb 1-1.3: b0: ff ff ff ff ff ff ff ff
+usb 1-1.3: b8: 22 1f 1c 00 00 00 ff ff
+usb 1-1.3: c0: ff 28 20 11 00 00 00 ff
+usb 1-1.3: c8: 00 ff ff ff ff ff ff ff
+usb 1-1.3: d0: ff ff ff ff ff ff ff ff
+usb 1-1.3: d8: ff ff ff ff ff ff ff ff
+usb 1-1.3: e0: ff ff ff ff ff ff ff ff
+usb 1-1.3: e8: ff ff ff ff ff ff ff ff
+usb 1-1.3: f0: ff ff ff ff ff ff ff ff
+usb 1-1.3: f8: ff ff ff ff ff ff ff ff
+usb 1-1.3: 100: 92 73 11 a6 e7 47 03 74
+usb 1-1.3: 108: da 38 d6 32 38 09 03 52
+usb 1-1.3: 110: 65 61 6c 74 65 6b 2c 03
+usb 1-1.3: 118: 45 64 69 6d 61 78 20 57
+usb 1-1.3: 120: 69 2d 46 69 20 4e 31 35
+usb 1-1.3: 128: 30 20 42 6c 75 65 74 6f
+usb 1-1.3: 130: 6f 74 68 34 2e 30 20 55
+usb 1-1.3: 138: 53 42 20 41 64 61 70 74
+usb 1-1.3: 140: 65 72 00 ff ff ff ff 0f
+usb 1-1.3: 148: ff ff ff ff ff ff ff ff
+usb 1-1.3: 150: ff ff ff ff ff ff ff ff
+usb 1-1.3: 158: ff ff ff ff ff ff ff ff
+usb 1-1.3: 160: ff ff ff ff ff ff ff ff
+usb 1-1.3: 168: ff ff ff ff ff ff ff ff
+usb 1-1.3: 170: ff ff ff ff ff ff ff ff
+usb 1-1.3: 178: ff ff ff ff ff ff ff ff
+usb 1-1.3: 180: ff ff ff ff ff ff ff ff
+usb 1-1.3: 188: ff ff ff ff ff ff ff ff
+usb 1-1.3: 190: ff ff ff ff ff ff ff ff
+usb 1-1.3: 198: ff ff ff ff ff ff ff ff
+usb 1-1.3: 1a0: ff ff ff ff ff ff ff ff
+usb 1-1.3: 1a8: ff ff ff ff ff ff ff ff
+usb 1-1.3: 1b0: ff ff ff ff ff ff ff ff
+usb 1-1.3: 1b8: ff ff ff ff ff ff ff ff
+usb 1-1.3: 1c0: ff ff ff ff ff ff ff ff
+usb 1-1.3: 1c8: ff ff ff ff ff ff ff ff
+usb 1-1.3: 1d0: ff ff ff ff ff ff ff ff
+usb 1-1.3: 1d8: ff ff ff ff ff ff ff ff
+usb 1-1.3: 1e0: ff ff ff ff ff ff ff ff
+usb 1-1.3: 1e8: ff ff ff ff ff ff ff ff
+usb 1-1.3: 1f0: ff ff ff ff ff ff ff ff
+usb 1-1.3: 1f8: ff ff ff ff ff ff ff ff
+Aravinth: rtl8xxxu_print_chipinfo 
+usb 1-1.3: RTL8723BU rev E (SMIC) 1T1R, TX queues 3, WiFi=1, BT=1, GPS=0, HI PA=0
+usb 1-1.3: RTL8723BU MAC: 74:da:38:d6:32:38
+Aravinth: rtl8723bu_load_firmware --> priv->enable_bluetooth=0
+Aravinth: rtl8xxxu_load_firmware 
+usb 1-1.3: rtk_btusb: Loading firmware rtlwifi/rtl8723bu_nic.bin
+Aravinth :rtk_btusb: Loading firmware rtlwifi/rtl8723bu_nic.bin
+Aravinth:path= fw_id=rtlwifi/rtl8723bu_nic.bin
+Aravinth:path= fw_id=rtlwifi/rtl8723bu_nic.bin
+ i=0
+Aravinth:path= fw_id=rtlwifi/rtl8723bu_nic.bin
+ i=1
+Aravinth:path=/system/lib/firmware/updates/4.9.67-07229-gdc6c16ec0433-dirty/rtlwifi/rtl8723bu_nic.bin fw_id=rtlwifi/rtl8723bu_nic.bin len=87
+Aravinth:path=/system/lib/firmware/updates/4.9.67-07229-gdc6c16ec0433-dirty/rtlwifi/rtl8723bu_nic.bin fw_id=rtlwifi/rtl8723bu_nic.bin
+ i=2
+Aravinth:path=/system/lib/firmware/updates/rtlwifi/rtl8723bu_nic.bin fw_id=rtlwifi/rtl8723bu_nic.bin len=54
+Aravinth:path=/system/lib/firmware/updates/rtlwifi/rtl8723bu_nic.bin fw_id=rtlwifi/rtl8723bu_nic.bin
+ i=3
+Aravinth:path=/system/lib/firmware/4.9.67-07229-gdc6c16ec0433-dirty/rtlwifi/rtl8723bu_nic.bin fw_id=rtlwifi/rtl8723bu_nic.bin len=79
+Aravinth:path=/system/lib/firmware/4.9.67-07229-gdc6c16ec0433-dirty/rtlwifi/rtl8723bu_nic.bin fw_id=rtlwifi/rtl8723bu_nic.bin
+ i=4
+Aravinth:path=/system/lib/firmware/rtlwifi/rtl8723bu_nic.bin fw_id=rtlwifi/rtl8723bu_nic.bin len=46
+usb 1-1.3: Direct firmware load for rtlwifi/rtl8723bu_nic.bin failed with error -2
+usb 1-1.3: Falling back to user helper
+platform caam_sm: [0016] 00 00 00 00 00 00 00 00
+platform caam_sm: [0024] 00 00 00 00 00 00 00 00
+platform caam_sm: [0032] 00 00 00 00 00 00 00 00
+platform caam_sm: [0040] 00 00 00 00 00 00 00 00
+platform caam_sm: [0048] 00 00 00 00 00 00 00 00
+platform caam_sm: [0056] 00 00 00 00 00 00 00 00
+platform caam_sm: [0064] 00 00 00 00 00 00 00 00
+platform caam_sm: [0072] 00 00 00 00 00 00 00 00
+platform caam_sm: [0080] 00 00 00 00 00 00 00 00
+platform caam_sm: [0088] 00 00 00 00 00 00 00 00
+platform caam_sm: 128-bit unwritten blob:
+platform caam_sm: [0000] 00 00 00 00 00 00 00 00
+platform caam_sm: [0008] 00 00 00 00 00 00 00 00
+platform caam_sm: [0016] 00 00 00 00 00 00 00 00
+platform caam_sm: [0024] 00 00 00 00 00 00 00 00
+platform caam_sm: [0032] 00 00 00 00 00 00 00 00
+platform caam_sm: [0040] 00 00 00 00 00 00 00 00
+platform caam_sm: [0048] 00 00 00 00 00 00 00 00
+platform caam_sm: [0056] 00 00 00 00 00 00 00 00
+platform caam_sm: [0064] 00 00 00 00 00 00 00 00
+platform caam_sm: [0072] 00 00 00 00 00 00 00 00
+platform caam_sm: [0080] 00 00 00 00 00 00 00 00
+platform caam_sm: [0088] 00 00 00 00 00 00 00 00
+platform caam_sm: 196-bit unwritten blob:
+platform caam_sm: [0000] 00 00 00 00 00 00 00 00
+platform caam_sm: [0008] 00 00 00 00 00 00 00 00
+platform caam_sm: [0016] 00 00 00 00 00 00 00 00
+platform caam_sm: [0024] 00 00 00 00 00 00 00 00
+platform caam_sm: [0032] 00 00 00 00 00 00 00 00
+platform caam_sm: [0040] 00 00 00 00 00 00 00 00
+platform caam_sm: [0048] 00 00 00 00 00 00 00 00
+platform caam_sm: [0056] 00 00 00 00 00 00 00 00
+platform caam_sm: [0064] 00 00 00 00 00 00 00 00
+platform caam_sm: [0072] 00 00 00 00 00 00 00 00
+platform caam_sm: [0080] 00 00 00 00 00 00 00 00
+platform caam_sm: [0088] 00 00 00 00 00 00 00 00
+platform caam_sm: 256-bit unwritten blob:
+platform caam_sm: [0000] 00 00 00 00 00 00 00 00
+platform caam_sm: [0008] 00 00 00 00 00 00 00 00
+platform caam_sm: [0016] 00 00 00 00 00 00 00 00
+platform caam_sm: [0024] 00 00 00 00 00 00 00 00
+platform caam_sm: [0032] 00 00 00 00 00 00 00 00
+platform caam_sm: [0040] 00 00 00 00 00 00 00 00
+platform caam_sm: [0048] 00 00 00 00 00 00 00 00
+platform caam_sm: [0056] 00 00 00 00 00 00 00 00
+platform caam_sm: [0064] 00 00 00 00 00 00 00 00
+platform caam_sm: [0072] 00 00 00 00 00 00 00 00
+platform caam_sm: [0080] 00 00 00 00 00 00 00 00
+platform caam_sm: [0088] 00 00 00 00 00 00 00 00
+platform caam_sm: 64-bit black key in blob:
+platform caam_sm: [0000] 3f 8a aa 32 cc 09 00 50
+platform caam_sm: [0008] 1f 50 4f 13 e9 03 a6 cc
+platform caam_sm: [0016] 49 8c 0b 91 f4 3b 3b ee
+platform caam_sm: [0024] 80 06 aa b8 c5 16 6b bb
+platform caam_sm: [0032] 5a bc 96 82 e2 93 f5 83
+platform caam_sm: [0040] 0d ad 8f 92 65 0a 85 e4
+platform caam_sm: [0048] e3 c8 b0 fa 7d 7f 0d a8
+platform caam_sm: [0056] 00 00 00 00 00 00 00 00
+platform caam_sm: [0064] 00 00 00 00 00 00 00 00
+platform caam_sm: [0072] 00 00 00 00 00 00 00 00
+platform caam_sm: [0080] 00 00 00 00 00 00 00 00
+platform caam_sm: [0088] 00 00 00 00 00 00 00 00
+platform caam_sm: 128-bit black key in blob:
+platform caam_sm: [0000] 5b 3c 0f 56 6c 90 04 c0
+platform caam_sm: [0008] 3f 81 87 2a a7 15 63 c1
+platform caam_sm: [0016] 43 64 99 83 fa eb 7c cc
+platform caam_sm: [0024] 39 85 83 e9 66 05 a0 c4
+platform caam_sm: [0032] 00 f5 cc ef 54 95 3c 93
+platform caam_sm: [0040] fd 19 fc c6 56 f7 8f ca
+platform caam_sm: [0048] 02 88 ee 52 da 3f c3 d5
+platform caam_sm: [0056] a0 78 5c b2 46 ee 99 6c
+platform caam_sm: [0064] 00 00 00 00 00 00 00 00
+platform caam_sm: [0072] 00 00 00 00 00 00 00 00
+platform caam_sm: [0080] 00 00 00 00 00 00 00 00
+platform caam_sm: [0088] 00 00 00 00 00 00 00 00
+platform caam_sm: 192-bit black key in blob:
+platform caam_sm: [0000] 6d 80 72 a9 ba a1 25 0d
+platform caam_sm: [0008] 52 f3 19 de 8f 61 61 41
+platform caam_sm: [0016] 31 8b 1c f7 23 f6 41 2f
+platform caam_sm: [0024] 70 0a 81 87 1b 78 b1 57
+platform caam_sm: [0032] 06 65 30 18 ef 73 8c ab
+platform caam_sm: [0040] 7a 1d 64 73 5b df c3 a3
+platform caam_sm: [0048] 48 d8 a0 13 2b 47 9f 17
+platform caam_sm: [0056] 83 6f 6e 9c e7 ce 54 66
+platform caam_sm: [0064] 0b d1 8b a3 1e 6d 7c 06
+platform caam_sm: [0072] 00 00 00 00 00 00 00 00
+platform caam_sm: [0080] 00 00 00 00 00 00 00 00
+platform caam_sm: [0088] 00 00 00 00 00 00 00 00
+platform caam_sm: 256-bit black key in blob:
+platform caam_sm: [0000] 84 50 e1 d2 82 49 b0 66
+platform caam_sm: [0008] 4f a4 35 32 16 9e c1 cf
+platform caam_sm: [0016] 1f 98 08 07 e0 64 41 08
+platform caam_sm: [0024] 26 75 6c 4d 5f 23 a9 90
+platform caam_sm: [0032] 01 0c be 86 12 af b1 61
+platform caam_sm: [0040] 11 cf 7f 0d fe 59 56 4e
+platform caam_sm: [0048] d6 67 ba 58 8e e2 3b 85
+platform caam_sm: [0056] bb da fa b8 2e 7e 1a 1d
+platform caam_sm: [0064] d2 7f d7 29 92 99 3b 28
+platform caam_sm: [0072] 14 89 b3 84 cc 63 51 5d
+platform caam_sm: [0080] 00 00 00 00 00 00 00 00
+platform caam_sm: [0088] 00 00 00 00 00 00 00 00
+platform caam_sm: restored 64-bit black key:
+platform caam_sm: [0000] 5a c4 98 48 74 a3 66 c4
+platform caam_sm: [0008] c2 29 b6 10 41 8d bc 6a
+platform caam_sm: restored 128-bit black key:
+platform caam_sm: [0000] 45 6d ad 5a 03 59 46 0c
+platform caam_sm: [0008] cc 80 2e ec b0 53 c7 2f
+platform caam_sm: restored 192-bit black key:
+platform caam_sm: [0000] 5e cd 92 5b 4e 4c 9b 87
+platform caam_sm: [0008] 03 8b 82 21 c4 8b 13 13
+platform caam_sm: [0016] cc f7 fb 8d f4 2a 54 a5
+platform caam_sm: [0024] f7 f7 b6 db 8d e9 79 81
+platform caam_sm: restored 256-bit black key:
+platform caam_sm: [0000] 6e 4e 3f 32 7b 53 f9 d9
+platform caam_sm: [0008] 98 72 ff 75 37 e9 b3 d1
+platform caam_sm: [0016] 4f 60 70 73 b0 cd 34 b2
+platform caam_sm: [0024] 03 a9 4b 0c 30 97 a8 87
+snvs-secvio 20cc000.caam-snvs: can't get snvs clock
+snvs-secvio 20cc000.caam-snvs: violation handlers armed - non-secure state
+hidraw: raw HID events driver (C) Jiri Kosina
+input: PixArt Dell MS116 USB Optical Mouse as /devices/soc0/soc/2100000.aips-bus/2184200.usb/ci_hdrc.1/usb1/1-1/1-1.2/1-1.2:1.0/0003:413C:301A.0001/input/input1
+hid-generic 0003:413C:301A.0001: input,hidraw0: USB HID v1.11 Mouse [PixArt Dell MS116 USB Optical Mouse] on usb-ci_hdrc.1-1.2/input0
+usbcore: registered new interface driver usbhid
+usbhid: USB HID core driver
+ashmem: initialized
+usbcore: registered new interface driver snd-usb-audio
+sgtl5000 2-000a: sgtl5000 revision 0x11
+fsl-ssi-dai 2028000.ssi: No cache defaults, reading back from HW
+imx-sgtl5000 sound: sgtl5000 <-> 2028000.ssi mapping ok
+imx-spdif sound-spdif: snd-soc-dummy-dai <-> 2004000.spdif mapping ok
+imx-audio-hdmi sound-hdmi: hdmi-hifi.0 <-> soc:hdmi_audio@00120000 mapping ok
+NET: Registered protocol family 26
+u32 classifier
+    Actions configured
+Netfilter messages via NETLINK v0.30.
+nf_conntrack version 0.5.0 (16384 buckets, 65536 max)
+ctnetlink v0.93: registering with nfnetlink.
+xt_time: kernel timezone is -0000
+ip_tables: (C) 2000-2006 Netfilter Core Team
+arp_tables: arp_tables: (C) 2002 David S. Miller
+Initializing XFRM netlink socket
+NET: Registered protocol family 10
+mip6: Mobile IPv6
+ip6_tables: (C) 2000-2006 Netfilter Core Team
+sit: IPv6, IPv4 and MPLS over IPv4 tunneling driver
+NET: Registered protocol family 17
+NET: Registered protocol family 15
+bridge: filtering via arp/ip/ip6tables is no longer available by default. Update your scripts to load br_netfilter if you need this.
+can: controller area network core (rev 20120528 abi 9)
+NET: Registered protocol family 29
+can: raw protocol (rev 20120528)
+can: broadcast manager protocol (rev 20161123 t)
+can: netlink gateway (rev 20130117) max_hops=1
+Bluetooth: RFCOMM TTY layer initialized
+Bluetooth: RFCOMM socket layer initialized
+Bluetooth: RFCOMM ver 1.11
+Bluetooth: BNEP (Ethernet Emulation) ver 1.3
+Bluetooth: BNEP filters: protocol multicast
+Bluetooth: BNEP socket layer initialized
+Bluetooth: HIDP (Human Interface Emulation) ver 1.2
+Bluetooth: HIDP socket layer initialized
+8021q: 802.1Q VLAN Support v1.8
+Key type dns_resolver registered
+cpu cpu0: Registered imx6q-cpufreq
+registered taskstats version 1
+imx_thermal 2000000.aips-bus:tempmon: Industrial CPU temperature grade - max:105C critical:100C passive:95C
+dhd_module_init in
+input: gpio-keys as /devices/soc0/gpio-keys/input/input2
+snvs_rtc 20cc000.snvs:snvs-rtc-lp: setting system clock to 1970-01-01 00:04:48 UTC (288)
+usb_otg_vbus: disabling
+ALSA device list:
+  #0: imx6q-apalis-sgtl5000
+  #1: imx-spdif
+  #2: imx-hdmi-soc
+Freeing unused kernel memory: 1024K
+init: init first stage started!
+SELinux:  Permission validate_trans in class security not defined in policy.
+SELinux:  Class cap_userns not defined in policy.
+SELinux:  Class cap2_userns not defined in policy.
+SELinux: the above unknown classes and permissions will be denied
+audit: type=1403 audit(288.620:2): policy loaded auid=4294967295 ses=4294967295
+init: (Initializing SELinux non-enforcing took 0.11s.)
+init: init second stage started!
+init: Running restorecon...
+init: waitpid failed: No child processes
+init: (Loading properties from /default.prop took 0.00s.)
+init: (Parsing /init.environ.rc took 0.00s.)
+init: (Parsing /init.usb.rc took 0.00s.)
+init: /init.freescale.rc: 154: invalid keyword 'setprop'
+init: /init.freescale.rc: 155: invalid keyword 'setprop'
+init: /init.freescale.rc: 159: invalid keyword 'chown'
+init: /init.freescale.rc: 160: invalid keyword 'mkdir'
+ueventd: ueventd started!
+ueventd: Coldboot took 0.44s.
+Console: switching to colour dummy device 80x30
+watchdogd: started (interval 10, margin 20)!
+EXT4-fs (mmcblk0p3): mounted filesystem with ordered data mode. Opts: barrier=1
+EXT4-fs (mmcblk0p10): Ignoring removed nomblk_io_submit option
+EXT4-fs (mmcblk0p10): mounted filesystem with ordered data mode. Opts: nomblk_io_submit,noauto_da_alloc,errors=panic
+EXT4-fs (mmcblk0p4): Ignoring removed nomblk_io_submit option
+Aravinth: rtl8xxxu_load_firmware 1 fw=-797475648
+Aravinth: rtl8xxxu_load_firmware 1
+Aravinth: rtl8xxxu_load_firmware 2 priv->fw_size=32076 fw->size=32108
+EXT4-fs (mmcblk0p4): mounted filesystem with ordered data mode. Opts: nomblk_io_submit
+Aravinth: rtl8xxxu_load_firmware 2
+EXT4-fs (mmcblk0p5): mounted filesystem with ordered data mode. Opts: (null)
+Aravinth: Firmware revision 35.0 (signature 0x5301)
+Aravinth: rtl8723bu_load_firmware --> ret=0
+Aravinth: rtl8xxxu_init_device 
+Aravinth: rtl8723bu_power_on -->
+Aravinth: rtl8723bu_power_on -->1
+Aravinth: rtl8xxxu_download_firmware 
+Aravinth: rtl8xxxu_start_firmware 
+Aravinth: rtl8xxxu_init_mac 
+file system registered
+using random self ethernet address
+using random host ethernet address
+zram0: detected capacity change from 0 to 314572800
+logd.auditd: start
+logd.klogd: 7229926667
+Adding 307196k swap on /dev/block/zram0.  Priority:-1 extents:1 across:307196k SS
+Aravinth: rtl8xxxu_probe -->
+binder: 261:261 transaction failed 29189, size 0-0
+type=1400 audit(291.340:3): avc: denied { entrypoint } for pid=267 comm="init" path="/system/bin/can-config.sh" dev="mmcblk0p3" ino=256 scontext=u:r:obd:s0 tcontext=u:object_r:system_file:s0 tclass=file permissive=1
+logd.daemon: reinit
+type=1400 audit(291.360:4): avc: denied { read execute } for pid=267 comm="can-config.sh" path="/system/bin/sh" dev="mmcblk0p3" ino=439 scontext=u:r:obd:s0 tcontext=u:object_r:shell_exec:s0 tclass=file permissive=1
+toradex_apalis6q:/ # type=1400 audit(291.370:5): avc: denied { getattr } for pid=267 comm="can-config.sh" path="/system/bin/sh" dev="mmcblk0p3" ino=439 scontext=u:r:obd:s0 tcontext=u:object_r:shell_exec:s0 tclass=file permissive=1
+type=1400 audit(291.370:6): avc: denied { getattr } for pid=267 comm="can-config.sh" path="/vendor" dev="rootfs" ino=6500 scontext=u:r:obd:s0 tcontext=u:object_r:rootfs:s0 tclass=lnk_file permissive=1
+type=1400 audit(291.490:7): avc: denied { execute_no_trans } for pid=283 comm="can-config.sh" path="/system/bin/ip" dev="mmcblk0p3" ino=331 scontext=u:r:obd:s0 tcontext=u:object_r:system_file:s0 tclass=file permissive=1
+type=1400 audit(291.520:8): avc: denied { create } for pid=268 comm="obd" scontext=u:r:obd:s0 tcontext=u:r:obd:s0 tclass=socket permissive=1
+type=1400 audit(291.520:9): avc: denied { ioctl } for pid=268 comm="obd" path="socket:[11811]" dev="sockfs" ino=11811 ioctlcmd=0x8933 scontext=u:r:obd:s0 tcontext=u:r:obd:s0 tclass=socket permissive=1
+IPv6: ADDRCONF(NETDEV_CHANGE): can0: link becomes ready
+healthd: No battery devices found
+ERROR: v4l2 capture: slave not found! V4L2_CID_HUE
+ERROR: v4l2 capture: slave not found! V4L2_CID_HUE
+capability: warning: `main' uses 32-bit capabilities (legacy support in use)
+type=1400 audit(299.740:34): avc: denied { write } for pid=268 comm="obd" path="socket:[11811]" dev="sockfs" ino=11811 scontext=u:r:obd:s0 tcontext=u:r:obd:s0 tclass=socket permissive=1
+init: write_file: Unable to open '/sys/devices/system/cpu/cpufreq/interactive/timer_rate': No such file or directory
+init: write_file: Unable to open '/sys/devices/system/cpu/cpufreq/interactive/min_sample_time': No such file or directory
+init: write_file: Unable to open '/sys/devices/system/cpu/cpufreq/interactive/go_hispeed_load': No such file or directory
+
+toradex_apalis6q:/ # 
+toradex_apalis6q:/ # 
+toradex_apalis6q:/ # 
+toradex_apalis6q:/ # 
+toradex_apalis6q:/ # 
+toradex_apalis6q:/ # cd random: crng init done
+/
+toradex_apalis6q:/ # init: write_file: Unable to open '/proc/sys/vm/extra_free_kbytes': No such file or directory
+init: write_file: Unable to write to '/config/usb_gadget/g1/UDC': No such device
+acc_open
+acc_release
+Micrel KSZ9031 Gigabit PHY 2188000.ethernet-1:07: attached PHY driver [Micrel KSZ9031 Gigabit PHY] (mii_bus:phy_addr=2188000.ethernet-1:07, irq=120)
+IPv6: ADDRCONF(NETDEV_UP): eth0: link is not ready
+type=1400 audit(307.260:35): avc: denied { write } for pid=268 comm="obd" path="socket:[11811]" dev="sockfs" ino=11811 scontext=u:r:obd:s0 tcontext=u:r:obd:s0 tclass=socket permissive=1
+init: Service 'bootanim' (pid 343) exited with status 0
+init: Starting service 'exec 3 (/system/bin/bootstat)'...
+init: Service 'exec 3 (/system/bin/bootstat)' (pid 899) exited with status 0
+init: Starting service 'exec 4 (/system/bin/bootstat)'...
+type=1400 audit(311.910:36): avc: denied { write } for pid=268 comm="obd" path="socket:[11811]" dev="sockfs" ino=11811 scontext=u:r:obd:s0 tcontext=u:r:obd:s0 tclass=socket permissive=1
+init: Service 'exec 4 (/system/bin/bootstat)' (pid 917) exited with status 0
+init: Starting service 'exec 5 (/system/bin/bootstat)'...
+init: Service 'exec 5 (/system/bin/bootstat)' (pid 925) exited with status 0
+init: Starting service 'exec 6 (/system/bin/bootstat)'...
+init: Service 'exec 6 (/system/bin/bootstat)' (pid 932) exited with status 0
+type=1400 audit(318.240:37): avc: denied { write } for pid=268 comm="obd" path="socket:[11811]" dev="sockfs" ino=11811 scontext=u:r:obd:s0 tcontext=u:r:obd:s0 tclass=socket permissive=1
+type=1400 audit(319.960:38): avc: denied { write } for pid=1220 comm="Thread-2" name="vcan" dev="tmpfs" ino=7720 scontext=u:r:untrusted_app:s0:c512,c768 tcontext=u:object_r:socket_device:s0 tclass=sock_file permissive=1
+type=1400 audit(319.960:39): avc: denied { connectto } for pid=1220 comm="Thread-2" path="/dev/socket/vcan" scontext=u:r:untrusted_app:s0:c512,c768 tcontext=u:r:obd:s0 tclass=unix_stream_socket permissive=1
+
+toradex_apalis6q:/ # 
+toradex_apalis6q:/ # 
+toradex_apalis6q:/ # 
+toradex_apalis6q:/ # 
+toradex_apalis6q:/ # 
+toradex_apalis6q:/ # 
+toradex_apalis6q:/ # cd /
+toradex_apalis6q:/ # 
+
+U-Boot 2017.03-00002-gebf9dc2527 (Jan 31 2018 - 14:59:40 +0530)
+
+CPU:   Freescale i.MX6Q rev1.5 at 792 MHz
+Reset cause: POR
+I2C:   ready
+DRAM:  2 GiB
+PMIC: device id: 0x10, revision id: 0x21
+PMIC: programmed
+MMC:   FSL_SDHC: 0, FSL_SDHC: 1, FSL_SDHC: 2
+Unable to allocate framebuffer memory
+In:    serial
+Out:   serial
+Err:   serial
+Model: Toradex Apalis iMX6 Quad 2GB IT V1.1C, Serial# 05146387
+flash target is MMC:0
+Net:   using PHY at 7
+FEC [PRIME]
+Fastboot: Normal
+Hit any key to stop autoboot:  1  0 
+Apalis iMX6 # setenv bootargs 'console=ttymxc0,115200 init=/init video=mxcfb0:dev=lcd,640x480M@60,if=RGB24,bpp=16 video=mxcfb1:off video=mxcfb2:off video=mxcfb3:off vmalloc=256M androidboot.console=ttymxc0 consoleblank=0 androidboot.hardware=freescale cma=448M androidboot.selinux=permissive androidboot.dm_verity=disabled'
+Apalis iMX6 # boot
+boota mmc0 
+CACHE: Misaligned operation at range [8ffb79a0, 8ffb7a20]
+CACHE: Misaligned operation at range [8ffb79a0, 8ffb7a20]
+kernel   @ 14008000 (9921576)
+ramdisk  @ 15000000 (1629864)
+fdt      @ 14f00000 (53981)
+## Booting Android Image at 0x12000000 ...
+Kernel load addr 0x14008000 size 9690 KiB
+Kernel command line: console=ttymxc0,115200 init=/init video=mxcfb0:dev=lcd,640x480M@60,if=RGB24,bpp=16 video=mxcfb1:off video=mxcfb2:off video=mxcfb3:off vmalloc=256M androidboot.console=ttymxc0 consoleblank=0 androidboot.hardware=freescale cma=448M androidboot.selinux=permissive androidboot.dm_verity=disabled androidboot.serialno=1b2429d4ea997115 androidboot.storage_type=emmc
+## Flattened Device Tree blob at 14f00000
+   Booting using the fdt blob at 0x14f00000
+   Loading Kernel Image ... OK
+   Using Device Tree in place at 14f00000, end 14f102dc
+
+Starting kernel ...
+
+Booting Linux on physical CPU 0x0
+Linux version 4.9.67-07229-gdc6c16ec0433-dirty (embadmin@ubuntu) (gcc version 4.9 20150123 (prerelease) (GCC) ) #59 SMP PREEMPT Wed Feb 7 18:06:19 IST 2018
+CPU: ARMv7 Processor [412fc09a] revision 10 (ARMv7), cr=10c53c7d
+CPU: PIPT / VIPT nonaliasing data cache, VIPT aliasing instruction cache
+OF: fdt:Machine model: Aravinth : Toradex Apalis iMX6Q/D Module on Ixora V1.1 Carrier Board
+cma: Reserved 448 MiB at 0x22000000
+Memory policy: Data cache writealloc
+percpu: Embedded 15 pages/cpu @ee6b3000 s31040 r8192 d22208 u61440
+Built 1 zonelists in Zone order, mobility grouping on.  Total pages: 522768
+Kernel command line: console=ttymxc0,115200 init=/init video=mxcfb0:dev=lcd,640x480M@60,if=RGB24,bpp=16 video=mxcfb1:off video=mxcfb2:off video=mxcfb3:off vmalloc=256M androidboot.console=ttymxc0 consoleblank=0 androidboot.hardware=freescale cma=448M androidboot.selinux=permissive androidboot.dm_verity=disabled androidboot.serialno=1b2429d4ea997115 androidboot.storage_type=emmc
+PID hash table entries: 4096 (order: 2, 16384 bytes)
+Dentry cache hash table entries: 131072 (order: 7, 524288 bytes)
+Inode-cache hash table entries: 65536 (order: 6, 262144 bytes)
+Memory: 1597024K/2097152K available (13312K kernel code, 1154K rwdata, 4044K rodata, 1024K init, 604K bss, 41376K reserved, 458752K cma-reserved, 1318912K highmem)
+Virtual kernel memory layout:
+    vector  : 0xffff0000 - 0xffff1000   (   4 kB)
+    fixmap  : 0xffc00000 - 0xfff00000   (3072 kB)
+    vmalloc : 0xf0000000 - 0xff800000   ( 248 MB)
+    lowmem  : 0xc0000000 - 0xef800000   ( 760 MB)
+    pkmap   : 0xbfe00000 - 0xc0000000   (   2 MB)
+    modules : 0xbf000000 - 0xbfe00000   (  14 MB)
+      .text : 0xc0008000 - 0xc0e00000   (14304 kB)
+      .init : 0xc1300000 - 0xc1400000   (1024 kB)
+      .data : 0xc1400000 - 0xc1520b58   (1155 kB)
+       .bss : 0xc1520b58 - 0xc15b7c28   ( 605 kB)
+SLUB: HWalign=64, Order=0-3, MinObjects=0, CPUs=4, Nodes=1
+Preemptible hierarchical RCU implementation.
+	Build-time adjustment of leaf fanout to 32.
+NR_IRQS:16 nr_irqs:16 16
+L2C-310 errata 752271 769419 enabled
+L2C-310 enabling early BRESP for Cortex-A9
+L2C-310 full line of zeros enabled for Cortex-A9
+L2C-310 ID prefetch enabled, offset 16 lines
+L2C-310 dynamic clock gating enabled, standby mode enabled
+L2C-310 cache controller enabled, 16 ways, 1024 kB
+L2C-310: CACHE_ID 0x410000c7, AUX_CTRL 0x76470001
+Switching to timer-based delay loop, resolution 333ns
+sched_clock: 32 bits at 3000kHz, resolution 333ns, wraps every 715827882841ns
+clocksource: mxc_timer1: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 637086815595 ns
+Console: colour dummy device 80x30
+Calibrating delay loop (skipped), value calculated using timer frequency.. 6.00 BogoMIPS (lpj=30000)
+pid_max: default: 32768 minimum: 301
+Security Framework initialized
+SELinux:  Initializing.
+Mount-cache hash table entries: 2048 (order: 1, 8192 bytes)
+Mountpoint-cache hash table entries: 2048 (order: 1, 8192 bytes)
+CPU: Testing write buffer coherency: ok
+CPU0: update cpu_capacity 1024
+CPU0: thread -1, cpu 0, socket 0, mpidr 80000000
+Setting up static identity map for 0x10100000 - 0x10100058
+CPU1: update cpu_capacity 1024
+CPU1: thread -1, cpu 1, socket 0, mpidr 80000001
+CPU2: update cpu_capacity 1024
+CPU2: thread -1, cpu 2, socket 0, mpidr 80000002
+CPU3: update cpu_capacity 1024
+CPU3: thread -1, cpu 3, socket 0, mpidr 80000003
+Brought up 4 CPUs
+SMP: Total of 4 processors activated (24.00 BogoMIPS).
+CPU: All CPU(s) started in SVC mode.
+CPU3: update max cpu_capacity 1024
+devtmpfs: initialized
+CPU2: update max cpu_capacity 1024
+VFP support v0.3: implementor 41 architecture 3 part 30 variant 9 rev 4
+clocksource: jiffies: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 19112604462750000 ns
+futex hash table entries: 1024 (order: 4, 65536 bytes)
+pinctrl core: initialized pinctrl subsystem
+NET: Registered protocol family 16
+DMA: preallocated 256 KiB pool for atomic coherent allocations
+cpuidle: using governor menu
+CPU identified as i.MX6Q, silicon rev 1.5
+hw-breakpoint: found 5 (+1 reserved) breakpoint and 1 watchpoint registers.
+hw-breakpoint: maximum watchpoint size is 4 bytes.
+imx6q-pinctrl 20e0000.iomuxc: initialized IMX pinctrl driver
+imx-gpc 20dc000.gpc: no fsl,ldo-bypass found!
+imx-gpc 20dc000.gpc: Registered imx-gpc
+mxs-dma 110000.dma-apbh: initialized
+usb_host_vbus: supplied by usb_host_vbus_hub
+SCSI subsystem initialized
+usbcore: registered new interface driver usbfs
+usbcore: registered new interface driver hub
+usbcore: registered new device driver usb
+2000000.aips-bus:usbphy_nop1 supply vcc not found, using dummy regulator
+2000000.aips-bus:usbphy_nop2 supply vcc not found, using dummy regulator
+i2c i2c-1: IMX I2C adapter registered
+i2c i2c-1: can't use DMA, using PIO instead.
+stmpe-i2c 2-0041: stmpe811 detected, chip id: 0x811
+i2c i2c-2: IMX I2C adapter registered
+i2c i2c-2: can't use DMA, using PIO instead.
+i2c i2c-3: IMX I2C adapter registered
+i2c i2c-3: can't use DMA, using PIO instead.
+Linux video capture interface: v2.00
+pps_core: LinuxPPS API ver. 1 registered
+pps_core: Software ver. 5.3.6 - Copyright 2005-2007 Rodolfo Giometti <giometti@linux.it>
+PTP clock support registered
+imx-ipuv3 2400000.ipu: IPU DMFC NORMAL mode: 1(0~1), 5B(4,5), 5F(6,7)
+imx-ipuv3 2800000.ipu: IPU DMFC NORMAL mode: 1(0~1), 5B(4,5), 5F(6,7)
+mxc_mipi_csi2 21dc000.mipi_csi: i.MX MIPI CSI2 driver probed ipu0 csi1
+mxc_mipi_csi2 21dc000.mipi_csi: i.MX MIPI CSI2 dphy version is 0x3130302a
+MIPI CSI2 driver module loaded
+imx rpmsg driver is registered.
+Advanced Linux Sound Architecture Driver Initialized.
+Bluetooth: Core ver 2.22
+NET: Registered protocol family 31
+Bluetooth: HCI device and connection manager initialized
+Bluetooth: HCI socket layer initialized
+Bluetooth: L2CAP socket layer initialized
+Bluetooth: SCO socket layer initialized
+clocksource: Switched to clocksource mxc_timer1
+VFS: Disk quotas dquot_6.6.0
+VFS: Dquot-cache hash table entries: 1024 (order 0, 4096 bytes)
+NET: Registered protocol family 2
+TCP established hash table entries: 8192 (order: 3, 32768 bytes)
+TCP bind hash table entries: 8192 (order: 4, 65536 bytes)
+TCP: Hash tables configured (established 8192 bind 8192)
+UDP hash table entries: 512 (order: 2, 16384 bytes)
+UDP-Lite hash table entries: 512 (order: 2, 16384 bytes)
+NET: Registered protocol family 1
+RPC: Registered named UNIX socket transport module.
+RPC: Registered udp transport module.
+RPC: Registered tcp transport module.
+RPC: Registered tcp NFSv4.1 backchannel transport module.
+Trying to unpack rootfs image as initramfs...
+Freeing initrd memory: 1592K
+hw perfevents: enabled with armv7_cortex_a9 PMU driver, 7 counters available
+Bus freq driver module loaded
+audit: initializing netlink subsys (disabled)
+audit: type=2000 audit(0.870:1): initialized
+workingset: timestamp_bits=30 max_order=19 bucket_order=0
+NFS: Registering the id_resolver key type
+Key type id_resolver registered
+Key type id_legacy registered
+ntfs: driver 2.1.32 [Flags: R/W DEBUG].
+jffs2: version 2.2. (NAND) © 2001-2006 Red Hat, Inc.
+fuse init (API version 7.26)
+NET: Registered protocol family 38
+bounce: pool size: 64 pages
+io scheduler noop registered
+io scheduler deadline registered
+io scheduler cfq registered (default)
+backlight supply power not found, using dummy regulator
+20e0000.hdmi_video supply HDMI not found, using dummy regulator
+fbcvt: 640x480@60: CVT Name - .307M3
+mxc_sdc_fb fb@0: registered mxc display driver lcd
+Console: switching to colour frame buffer device 80x30
+mxc_sdc_fb fb@1: Can't get fb option for mxcfb1!
+mxc_sdc_fb fb@2: Can't get fb option for mxcfb2!
+mxc_sdc_fb fb@3: Can't get fb option for mxcfb3!
+imx-sdma 20ec000.sdma: no iram assigned, using external mem
+imx-sdma 20ec000.sdma: loaded firmware 3.3
+pfuze100-regulator 2-0008: Full layer: 2, Metal layer: 1
+pfuze100-regulator 2-0008: FAB: 0, FIN: 0
+pfuze100-regulator 2-0008: pfuze100 found.
+2020000.serial: ttymxc0 at MMIO 0x2020000 (irq = 29, base_baud = 5000000) is a IMX
+console [ttymxc0] enabled
+21e8000.serial: ttymxc1 at MMIO 0x21e8000 (irq = 78, base_baud = 5000000) is a IMX
+21f0000.serial: ttymxc3 at MMIO 0x21f0000 (irq = 79, base_baud = 5000000) is a IMX
+21f4000.serial: ttymxc4 at MMIO 0x21f4000 (irq = 80, base_baud = 5000000) is a IMX
+imx sema4 driver is registered.
+[drm] Initialized
+[drm] Initialized vivante 1.0.0 20120216 on minor 0
+brd: module loaded
+loop: module loaded
+zram: Added device: zram0
+ahci-imx 2200000.sata: fsl,transmit-level-mV not specified, using 00000024
+ahci-imx 2200000.sata: fsl,transmit-boost-mdB not specified, using 00000480
+ahci-imx 2200000.sata: fsl,transmit-atten-16ths not specified, using 00002000
+ahci-imx 2200000.sata: fsl,receive-eq-mdB not specified, using 05000000
+ahci-imx 2200000.sata: SSS flag set, parallel bus scan disabled
+ahci-imx 2200000.sata: AHCI 0001.0300 32 slots 1 ports 3 Gbps 0x1 impl platform mode
+ahci-imx 2200000.sata: flags: ncq sntf stag pm led clo only pmp pio slum part ccc apst 
+scsi host0: ahci-imx
+ata1: SATA max UDMA/133 mmio [mem 0x02200000-0x02203fff] port 0x100 irq 87
+spi_imx 2008000.ecspi: probed
+libphy: Fixed MDIO Bus: probed
+tun: Universal TUN/TAP device driver, 1.6
+tun: (C) 1999-2004 Max Krasnyansky <maxk@qualcomm.com>
+CAN device driver interface
+2090000.flexcan supply xceiver not found, using dummy regulator
+flexcan 2090000.flexcan: device registered (reg_base=f02f4000, irq=38)
+2094000.flexcan supply xceiver not found, using dummy regulator
+flexcan 2094000.flexcan: device registered (reg_base=f02fc000, irq=39)
+2188000.ethernet supply phy not found, using dummy regulator
+pps pps0: new PPS source ptp0
+libphy: fec_enet_mii_bus: probed
+fec 2188000.ethernet eth0: registered PHC device 0
+PPP generic driver version 2.4.2
+PPP BSD Compression module registered
+PPP Deflate Compression module registered
+PPP MPPE Compression module registered
+NET: Registered protocol family 24
+Aravinth: rtl8xxxu_module_init -->
+usbcore: registered new interface driver rtk_btusb
+Aravinth: rtl8xxxu_module_init <--
+usbcore: registered new interface driver kaweth
+pegasus: v0.9.3 (2013/04/25), Pegasus/Pegasus II USB Ethernet driver
+usbcore: registered new interface driver pegasus
+usbcore: registered new interface driver rtl8150
+usbcore: registered new interface driver r8152
+usbcore: registered new interface driver asix
+usbcore: registered new interface driver ax88179_178a
+usbcore: registered new interface driver cdc_ether
+usbcore: registered new interface driver cdc_eem
+usbcore: registered new interface driver net1080
+usbcore: registered new interface driver cdc_subset
+usbcore: registered new interface driver zaurus
+usbcore: registered new interface driver cdc_ncm
+ehci_hcd: USB 2.0 'Enhanced' Host Controller (EHCI) Driver
+ehci-mxc: Freescale On-Chip EHCI Host driver
+ohci_hcd: USB 1.1 'Open' Host Controller (OHCI) Driver
+usbcore: registered new interface driver cdc_acm
+cdc_acm: USB Abstract Control Model driver for USB modems and ISDN adapters
+usbcore: registered new interface driver cdc_wdm
+usbcore: registered new interface driver usb-storage
+usbcore: registered new interface driver usbserial
+usbcore: registered new interface driver usbserial_generic
+usbserial: USB Serial support registered for generic
+usbcore: registered new interface driver ftdi_sio
+usbserial: USB Serial support registered for FTDI USB Serial Device
+usbcore: registered new interface driver option
+usbserial: USB Serial support registered for GSM modem (1-port)
+usbcore: registered new interface driver usbtest
+usbcore: registered new interface driver usb_ehset_test
+2184800.usbmisc supply vbus-wakeup not found, using dummy regulator
+ci_hdrc ci_hdrc.1: EHCI Host Controller
+ci_hdrc ci_hdrc.1: new USB bus registered, assigned bus number 1
+ci_hdrc ci_hdrc.1: USB 2.0 started, EHCI 1.00
+usb usb1: New USB device found, idVendor=1d6b, idProduct=0002
+usb usb1: New USB device strings: Mfr=3, Product=2, SerialNumber=1
+ata1: SATA link down (SStatus 0 SControl 300)
+ahci-imx 2200000.sata: no device found, disabling link.
+ahci-imx 2200000.sata: pass ahci_imx..hotplug=1 to enable hotplug
+usb usb1: Product: EHCI Host Controller
+usb usb1: Manufacturer: Linux 4.9.67-07229-gdc6c16ec0433-dirty ehci_hcd
+usb usb1: SerialNumber: ci_hdrc.1
+hub 1-0:1.0: USB hub found
+hub 1-0:1.0: 1 port detected
+mousedev: PS/2 mouse device common for all mice
+usbcore: registered new interface driver xpad
+usbcore: registered new interface driver usb_acecad
+usbcore: registered new interface driver aiptek
+usbcore: registered new interface driver gtco
+usbcore: registered new interface driver hanwang
+usbcore: registered new interface driver kbtab
+input: stmpe-ts as /devices/soc0/soc/2100000.aips-bus/21a4000.i2c/i2c-2/2-0041/stmpe-ts/input/input0
+snvs_rtc 20cc000.snvs:snvs-rtc-lp: rtc core: registered 20cc000.snvs:snvs-r as rtc0
+i2c /dev entries driver
+IR NEC protocol handler initialized
+IR RC5(x/sz) protocol handler initialized
+IR RC6 protocol handler initialized
+IR JVC protocol handler initialized
+IR Sony protocol handler initialized
+IR SANYO protocol handler initialized
+IR Sharp protocol handler initialized
+IR MCE Keyboard/mouse protocol handler initialized
+IR XMP protocol handler initialized
+mxc_v4l2_output v4l2_out: V4L2 device registered as video16
+mxc_v4l2_output v4l2_out: V4L2 device registered as video17
+ov564x_mipi 3-003c: found pwm2, period=0
+usb 1-1: new high-speed USB device number 2 using ci_hdrc
+ov5640_read_reg:write reg error:reg=300a
+camera ov5640_mipi is not found
+usbcore: registered new interface driver uvcvideo
+USB Video Class driver (1.1.1)
+imx2-wdt 20bc000.wdog: timeout 60 sec (nowayout=0)
+device-mapper: uevent: version 1.0.3
+device-mapper: ioctl: 4.35.0-ioctl (2016-06-23) initialised: dm-devel@redhat.com
+Bluetooth: HCI UART driver ver 2.3
+Bluetooth: HCI UART protocol H4 registered
+Bluetooth: HCI UART protocol BCSP registered
+Bluetooth: HCI UART protocol ATH3K registered
+usbcore: registered new interface driver btusb
+sdhci: Secure Digital Host Controller Interface driver
+sdhci: Copyright(c) Pierre Ossman
+sdhci-pltfm: SDHCI platform and OF driver helper
+sdhci-esdhc-imx 2190000.usdhc: could not get ultra high speed state, work on normal mode
+sdhci-esdhc-imx 2190000.usdhc: Got CD GPIO
+mmc1: SDHCI controller on 2190000.usdhc [2190000.usdhc] using ADMA
+sdhci-esdhc-imx 2198000.usdhc: could not get ultra high speed state, work on normal mode
+usb 1-1: New USB device found, idVendor=0424, idProduct=2514
+usb 1-1: New USB device strings: Mfr=0, Product=0, SerialNumber=0
+hub 1-1:1.0: USB hub found
+hub 1-1:1.0: 4 ports detected
+Aravinth: usb_ifnum_to_if config->desc.bNumInterface=1 ifnum=0
+Aravinth: usb_ifnum_to_if Num=0 
+mmc0: SDHCI controller on 2198000.usdhc [2198000.usdhc] using ADMA
+mxc_vpu 2040000.vpu_fsl: VPU initialized
+mxc_vdoa 21e4000.vdoa: i.MX Video Data Order Adapter(VDOA) driver probed
+mxc_hdmi_cec soc:hdmi_cec@00120000: HDMI CEC initialized
+Galcore version 6.2.2.96445
+mmc0: new DDR MMC card at address 0001
+mmcblk0: mmc0:0001 Q2J54A 3.59 GiB 
+mmcblk0boot0: mmc0:0001 Q2J54A partition 1 16.0 MiB
+mmcblk0boot1: mmc0:0001 Q2J54A partition 2 16.0 MiB
+random: fast init done
+Alternate GPT is invalid, using primary GPT.
+ mmcblk0: p1 p2 p3 p4 p5 p6 p7 p8 p9 p10 p11
+usb 1-1.2: new low-speed USB device number 3 using ci_hdrc
+usb 1-1.2: New USB device found, idVendor=413c, idProduct=301a
+usb 1-1.2: New USB device strings: Mfr=1, Product=2, SerialNumber=0
+usb 1-1.2: Product: Dell MS116 USB Optical Mouse
+usb 1-1.2: Manufacturer: PixArt
+usb 1-1.3: new high-speed USB device number 4 using ci_hdrc
+usb 1-1.3: New USB device found, idVendor=7392, idProduct=a611
+usb 1-1.3: New USB device strings: Mfr=1, Product=2, SerialNumber=3
+usb 1-1.3: Product: Edimax Wi-Fi N150 Bluetooth4.0 USB Adapter
+usb 1-1.3: Manufacturer: Realtek
+usb 1-1.3: SerialNumber: 00e04c000001
+Aravinth: usb_ifnum_to_if config->desc.bNumInterface=3 ifnum=1
+Aravinth: usb_ifnum_to_if Num=0 
+Aravinth: usb_ifnum_to_if Num=1 
+Aravinth: usb_driver_claim_interface 1-->
+Aravinth: usb_driver_claim_interface 2-->
+Aravinth: rtl8xxxu_probe 
+Aravinth: rtl8xxxu_probe 
+usb 1-1.3: This Realtek USB WiFi dongle (0x7392:0xa611) is untested!
+usb 1-1.3: Please report results to Jes.Sorensen@gmail.com
+Aravinth: rtl8xxxu_identify_chip 
+caam 2100000.caam: ERA source: CAAMVID.
+caam 2100000.caam: AXI pipeline throttling enabled.
+caam 2100000.caam: Instantiated RNG4 SH1
+caam 2100000.caam: device ID = 0x0a16010000000000 (Era 4)
+caam 2100000.caam: job rings = 2, qi = 0
+caam algorithms registered in /proc/crypto
+caam_jr 2101000.jr0: registering rng-caam
+platform caam_sm: blkkey_ex: 4 keystore units available
+platform caam_sm: 64-bit clear key:
+platform caam_sm: [0000] 00 01 02 03 04 0f 06 07
+platform caam_sm: 64-bit black key:
+platform caam_sm: [0000] f2 49 fe e3 e7 3f 2d 90
+usb 1-1.3: Vendor: Realtek
+usb 1-1.3: Product: Edimax Wi-Fi N150 Bluetooth4.0 USB Adapte
+usb 1-1.3: rtl8723bu_parse_efuse: dumping efuse (0x200 bytes):
+usb 1-1.3: 00: 29 81 03 7c 01 08 21 00
+usb 1-1.3: 08: 40 07 05 35 10 00 00 00
+usb 1-1.3: 10: 2f 2f 2f 2e 2e 2e 30 30
+usb 1-1.3: 18: 30 2f 2f f3 ff ff ff ff
+usb 1-1.3: 20: ff ff ff ff ff ff ff ff
+usb 1-1.3: 28: ff ff ff ff ff ff ff ff
+usb 1-1.3: 30: ff ff ff ff ff ff ff ff
+usb 1-1.3: 38: ff ff 2d 2d 2d 2d 2d 2d
+usb 1-1.3: 40: 2d 2d 2d 2d 2d 00 ff ff
+usb 1-1.3: 48: ff ff ff ff ff ff ff ff
+usb 1-1.3: 50: ff ff ff ff ff ff ff ff
+usb 1-1.3: 58: ff ff ff ff ff ff ff ff
+usb 1-1.3: 60: ff ff ff ff ff ff ff ff
+usb 1-1.3: 68: ff ff ff ff ff ff ff ff
+usb 1-1.3: 70: ff ff ff ff ff ff ff ff
+usb 1-1.3: 78: ff ff ff ff ff ff ff ff
+usb 1-1.3: 80: ff ff ff ff ff ff ff ff
+usb 1-1.3: 88: ff ff ff ff ff ff ff ff
+usb 1-1.3: 90: ff ff ff ff ff ff ff ff
+usb 1-1.3: 98: ff ff ff ff ff ff ff ff
+usb 1-1.3: a0: ff ff ff ff ff ff ff ff
+usb 1-1.3: a8: ff ff ff ff ff ff ff ff
+usb 1-1.3: b0: ff ff ff ff ff ff ff ff
+usb 1-1.3: b8: 22 1f 1c 00 00 00 ff ff
+usb 1-1.3: c0: ff 28 20 11 00 00 00 ff
+usb 1-1.3: c8: 00 ff ff ff ff ff ff ff
+usb 1-1.3: d0: ff ff ff ff ff ff ff ff
+usb 1-1.3: d8: ff ff ff ff ff ff ff ff
+usb 1-1.3: e0: ff ff ff ff ff ff ff ff
+usb 1-1.3: e8: ff ff ff ff ff ff ff ff
+usb 1-1.3: f0: ff ff ff ff ff ff ff ff
+usb 1-1.3: f8: ff ff ff ff ff ff ff ff
+usb 1-1.3: 100: 92 73 11 a6 e7 47 03 74
+usb 1-1.3: 108: da 38 d6 32 38 09 03 52
+usb 1-1.3: 110: 65 61 6c 74 65 6b 2c 03
+usb 1-1.3: 118: 45 64 69 6d 61 78 20 57
+usb 1-1.3: 120: 69 2d 46 69 20 4e 31 35
+usb 1-1.3: 128: 30 20 42 6c 75 65 74 6f
+usb 1-1.3: 130: 6f 74 68 34 2e 30 20 55
+usb 1-1.3: 138: 53 42 20 41 64 61 70 74
+usb 1-1.3: 140: 65 72 00 ff ff ff ff 0f
+usb 1-1.3: 148: ff ff ff ff ff ff ff ff
+usb 1-1.3: 150: ff ff ff ff ff ff ff ff
+usb 1-1.3: 158: ff ff ff ff ff ff ff ff
+usb 1-1.3: 160: ff ff ff ff ff ff ff ff
+usb 1-1.3: 168: ff ff ff ff ff ff ff ff
+usb 1-1.3: 170: ff ff ff ff ff ff ff ff
+usb 1-1.3: 178: ff ff ff ff ff ff ff ff
+usb 1-1.3: 180: ff ff ff ff ff ff ff ff
+usb 1-1.3: 188: ff ff ff ff ff ff ff ff
+usb 1-1.3: 190: ff ff ff ff ff ff ff ff
+usb 1-1.3: 198: ff ff ff ff ff ff ff ff
+usb 1-1.3: 1a0: ff ff ff ff ff ff ff ff
+usb 1-1.3: 1a8: ff ff ff ff ff ff ff ff
+usb 1-1.3: 1b0: ff ff ff ff ff ff ff ff
+usb 1-1.3: 1b8: ff ff ff ff ff ff ff ff
+usb 1-1.3: 1c0: ff ff ff ff ff ff ff ff
+usb 1-1.3: 1c8: ff ff ff ff ff ff ff ff
+usb 1-1.3: 1d0: ff ff ff ff ff ff ff ff
+usb 1-1.3: 1d8: ff ff ff ff ff ff ff ff
+usb 1-1.3: 1e0: ff ff ff ff ff ff ff ff
+usb 1-1.3: 1e8: ff ff ff ff ff ff ff ff
+usb 1-1.3: 1f0: ff ff ff ff ff ff ff ff
+usb 1-1.3: 1f8: ff ff ff ff ff ff ff ff
+Aravinth: rtl8xxxu_print_chipinfo 
+usb 1-1.3: RTL8723BU rev E (SMIC) 1T1R, TX queues 3, WiFi=1, BT=1, GPS=0, HI PA=0
+usb 1-1.3: RTL8723BU MAC: 74:da:38:d6:32:38
+Aravinth: rtl8723bu_load_firmware --> priv->enable_bluetooth=0
+Aravinth: rtl8xxxu_load_firmware 
+usb 1-1.3: rtk_btusb: Loading firmware rtlwifi/rtl8723bu_nic.bin
+Aravinth :rtk_btusb: Loading firmware rtlwifi/rtl8723bu_nic.bin
+Aravinth:path= fw_id=rtlwifi/rtl8723bu_nic.bin
+Aravinth:path= fw_id=rtlwifi/rtl8723bu_nic.bin
+ i=0
+Aravinth:path= fw_id=rtlwifi/rtl8723bu_nic.bin
+ i=1
+Aravinth:path=/system/lib/firmware/updates/4.9.67-07229-gdc6c16ec0433-dirty/rtlwifi/rtl8723bu_nic.bin fw_id=rtlwifi/rtl8723bu_nic.bin len=87
+Aravinth:path=/system/lib/firmware/updates/4.9.67-07229-gdc6c16ec0433-dirty/rtlwifi/rtl8723bu_nic.bin fw_id=rtlwifi/rtl8723bu_nic.bin
+ i=2
+Aravinth:path=/system/lib/firmware/updates/rtlwifi/rtl8723bu_nic.bin fw_id=rtlwifi/rtl8723bu_nic.bin len=54
+Aravinth:path=/system/lib/firmware/updates/rtlwifi/rtl8723bu_nic.bin fw_id=rtlwifi/rtl8723bu_nic.bin
+ i=3
+Aravinth:path=/system/lib/firmware/4.9.67-07229-gdc6c16ec0433-dirty/rtlwifi/rtl8723bu_nic.bin fw_id=rtlwifi/rtl8723bu_nic.bin len=79
+Aravinth:path=/system/lib/firmware/4.9.67-07229-gdc6c16ec0433-dirty/rtlwifi/rtl8723bu_nic.bin fw_id=rtlwifi/rtl8723bu_nic.bin
+ i=4
+Aravinth:path=/system/lib/firmware/rtlwifi/rtl8723bu_nic.bin fw_id=rtlwifi/rtl8723bu_nic.bin len=46
+usb 1-1.3: Direct firmware load for rtlwifi/rtl8723bu_nic.bin failed with error -2
+usb 1-1.3: Falling back to user helper
+platform caam_sm: [0008] d1 ed 46 6e a1 32 a1 9d
+platform caam_sm: 128-bit clear key:
+platform caam_sm: [0000] 00 01 02 03 04 0f 06 07
+platform caam_sm: [0008] 08 09 0a 0b 0c 0d 0e 0f
+platform caam_sm: 128-bit black key:
+platform caam_sm: [0000] e1 b6 e9 24 1a 4a cb ed
+platform caam_sm: [0008] de 6b c4 56 0b db 2a 86
+platform caam_sm: 192-bit clear key:
+platform caam_sm: [0000] 00 01 02 03 04 0f 06 07
+platform caam_sm: [0008] 08 09 0a 0b 0c 0d 0e 0f
+platform caam_sm: [0016] 10 11 12 13 14 15 16 17
+platform caam_sm: 192-bit black key:
+platform caam_sm: [0000] 5f 8b a6 91 b8 62 2a 31
+platform caam_sm: [0008] 6f 14 ba 19 93 8f f2 be
+platform caam_sm: [0016] 3a d8 c5 85 e8 52 70 74
+platform caam_sm: [0024] 0a 8f cf 95 fe fc cc e4
+platform caam_sm: 256-bit clear key:
+platform caam_sm: [0000] 00 01 02 03 04 0f 06 07
+platform caam_sm: [0008] 08 09 0a 0b 0c 0d 0e 0f
+platform caam_sm: [0016] 10 11 12 13 14 15 16 17
+platform caam_sm: [0024] 18 19 1a 1b 1c 1d 1e 1f
+platform caam_sm: 256-bit black key:
+platform caam_sm: [0000] 43 6f c2 15 24 37 59 98
+platform caam_sm: [0008] 17 eb a9 e2 ea bb 0f 8c
+platform caam_sm: [0016] d5 1f 73 90 1a 71 5b dd
+platform caam_sm: [0024] 48 a7 eb 33 22 68 e3 54
+platform caam_sm: 64-bit unwritten blob:
+platform caam_sm: [0000] 00 00 00 00 00 00 00 00
+platform caam_sm: [0008] 00 00 00 00 00 00 00 00
+platform caam_sm: [0016] 00 00 00 00 00 00 00 00
+platform caam_sm: [0024] 00 00 00 00 00 00 00 00
+platform caam_sm: [0032] 00 00 00 00 00 00 00 00
+platform caam_sm: [0040] 00 00 00 00 00 00 00 00
+platform caam_sm: [0048] 00 00 00 00 00 00 00 00
+platform caam_sm: [0056] 00 00 00 00 00 00 00 00
+platform caam_sm: [0064] 00 00 00 00 00 00 00 00
+platform caam_sm: [0072] 00 00 00 00 00 00 00 00
+platform caam_sm: [0080] 00 00 00 00 00 00 00 00
+platform caam_sm: [0088] 00 00 00 00 00 00 00 00
+platform caam_sm: 128-bit unwritten blob:
+platform caam_sm: [0000] 00 00 00 00 00 00 00 00
+platform caam_sm: [0008] 00 00 00 00 00 00 00 00
+platform caam_sm: [0016] 00 00 00 00 00 00 00 00
+platform caam_sm: [0024] 00 00 00 00 00 00 00 00
+platform caam_sm: [0032] 00 00 00 00 00 00 00 00
+platform caam_sm: [0040] 00 00 00 00 00 00 00 00
+platform caam_sm: [0048] 00 00 00 00 00 00 00 00
+platform caam_sm: [0056] 00 00 00 00 00 00 00 00
+platform caam_sm: [0064] 00 00 00 00 00 00 00 00
+platform caam_sm: [0072] 00 00 00 00 00 00 00 00
+platform caam_sm: [0080] 00 00 00 00 00 00 00 00
+platform caam_sm: [0088] 00 00 00 00 00 00 00 00
+platform caam_sm: 196-bit unwritten blob:
+platform caam_sm: [0000] 00 00 00 00 00 00 00 00
+platform caam_sm: [0008] 00 00 00 00 00 00 00 00
+platform caam_sm: [0016] 00 00 00 00 00 00 00 00
+platform caam_sm: [0024] 00 00 00 00 00 00 00 00
+platform caam_sm: [0032] 00 00 00 00 00 00 00 00
+platform caam_sm: [0040] 00 00 00 00 00 00 00 00
+platform caam_sm: [0048] 00 00 00 00 00 00 00 00
+platform caam_sm: [0056] 00 00 00 00 00 00 00 00
+platform caam_sm: [0064] 00 00 00 00 00 00 00 00
+platform caam_sm: [0072] 00 00 00 00 00 00 00 00
+platform caam_sm: [0080] 00 00 00 00 00 00 00 00
+platform caam_sm: [0088] 00 00 00 00 00 00 00 00
+platform caam_sm: 256-bit unwritten blob:
+platform caam_sm: [0000] 00 00 00 00 00 00 00 00
+platform caam_sm: [0008] 00 00 00 00 00 00 00 00
+platform caam_sm: [0016] 00 00 00 00 00 00 00 00
+platform caam_sm: [0024] 00 00 00 00 00 00 00 00
+platform caam_sm: [0032] 00 00 00 00 00 00 00 00
+platform caam_sm: [0040] 00 00 00 00 00 00 00 00
+platform caam_sm: [0048] 00 00 00 00 00 00 00 00
+platform caam_sm: [0056] 00 00 00 00 00 00 00 00
+platform caam_sm: [0064] 00 00 00 00 00 00 00 00
+platform caam_sm: [0072] 00 00 00 00 00 00 00 00
+platform caam_sm: [0080] 00 00 00 00 00 00 00 00
+platform caam_sm: [0088] 00 00 00 00 00 00 00 00
+platform caam_sm: 64-bit black key in blob:
+platform caam_sm: [0000] 00 53 3a 92 67 ae 4f 99
+platform caam_sm: [0008] a5 ca 8a 2d e1 32 f7 ba
+platform caam_sm: [0016] 13 20 f1 b1 c3 8a cf cd
+platform caam_sm: [0024] ab 07 f0 f5 ee e0 a1 f7
+platform caam_sm: [0032] 82 0d e7 5d a3 a9 d7 80
+platform caam_sm: [0040] 1f 22 f6 bf c1 43 71 ef
+platform caam_sm: [0048] 29 78 d0 2c 31 3e b6 1c
+platform caam_sm: [0056] 00 00 00 00 00 00 00 00
+platform caam_sm: [0064] 00 00 00 00 00 00 00 00
+platform caam_sm: [0072] 00 00 00 00 00 00 00 00
+platform caam_sm: [0080] 00 00 00 00 00 00 00 00
+platform caam_sm: [0088] 00 00 00 00 00 00 00 00
+platform caam_sm: 128-bit black key in blob:
+platform caam_sm: [0000] 35 8c 02 1b 19 54 27 1b
+platform caam_sm: [0008] ff 65 5a d0 b9 60 45 65
+platform caam_sm: [0016] 85 c4 41 78 4e 85 97 41
+platform caam_sm: [0024] a9 6a 52 7f a8 72 73 38
+platform caam_sm: [0032] a9 ea 32 c5 cb c9 aa 39
+platform caam_sm: [0040] 1f c0 dc db a8 6d 4f d2
+platform caam_sm: [0048] 32 1d 85 3f a9 a0 96 79
+platform caam_sm: [0056] 1d 4c 99 49 0b 29 90 7d
+platform caam_sm: [0064] 00 00 00 00 00 00 00 00
+platform caam_sm: [0072] 00 00 00 00 00 00 00 00
+platform caam_sm: [0080] 00 00 00 00 00 00 00 00
+platform caam_sm: [0088] 00 00 00 00 00 00 00 00
+platform caam_sm: 192-bit black key in blob:
+platform caam_sm: [0000] aa 44 fc c5 fa 7b 5f b1
+platform caam_sm: [0008] 29 f7 51 47 51 84 70 62
+platform caam_sm: [0016] e3 e9 f5 5b d8 f8 a7 75
+platform caam_sm: [0024] 2f de d6 e1 f8 6a 21 4d
+platform caam_sm: [0032] cd 95 4b 4d 1a 53 18 d9
+platform caam_sm: [0040] c6 89 3a 26 e9 19 ab 5c
+platform caam_sm: [0048] 08 e4 5b 79 64 e3 2d 6f
+platform caam_sm: [0056] d7 e8 cb 24 89 10 a2 1d
+platform caam_sm: [0064] 3c 7d 9a 9a cb c6 78 a9
+platform caam_sm: [0072] 00 00 00 00 00 00 00 00
+platform caam_sm: [0080] 00 00 00 00 00 00 00 00
+platform caam_sm: [0088] 00 00 00 00 00 00 00 00
+platform caam_sm: 256-bit black key in blob:
+platform caam_sm: [0000] f7 50 a0 53 ed 28 81 b0
+platform caam_sm: [0008] 0e 81 63 f9 3f ef 7a 94
+platform caam_sm: [0016] 0f 39 9e 50 4b 0c ae 88
+platform caam_sm: [0024] 9e b1 dc f7 c5 78 f9 95
+platform caam_sm: [0032] 38 23 82 68 8d a2 3f db
+platform caam_sm: [0040] 43 a1 e6 73 a4 ab a9 d1
+platform caam_sm: [0048] db f6 e3 e0 e5 c4 68 ec
+platform caam_sm: [0056] a7 92 5d 68 7e e0 b1 73
+platform caam_sm: [0064] e5 d9 d7 46 f0 a0 db dd
+platform caam_sm: [0072] 32 bf b3 c6 7d f8 6e 6a
+platform caam_sm: [0080] 00 00 00 00 00 00 00 00
+platform caam_sm: [0088] 00 00 00 00 00 00 00 00
+platform caam_sm: restored 64-bit black key:
+platform caam_sm: [0000] c3 21 22 21 dd 98 96 74
+platform caam_sm: [0008] 9c 50 00 ce 1c 36 86 e4
+platform caam_sm: restored 128-bit black key:
+platform caam_sm: [0000] e1 b6 e9 24 1a 4a cb ed
+platform caam_sm: [0008] de 6b c4 56 0b db 2a 86
+platform caam_sm: restored 192-bit black key:
+platform caam_sm: [0000] 5f 8b a6 91 b8 62 2a 31
+platform caam_sm: [0008] 6f 14 ba 19 93 8f f2 be
+platform caam_sm: [0016] 05 6c f5 6e 61 e5 31 5c
+platform caam_sm: [0024] 0f f8 8e 81 56 30 57 d8
+platform caam_sm: restored 256-bit black key:
+platform caam_sm: [0000] 43 6f c2 15 24 37 59 98
+platform caam_sm: [0008] 17 eb a9 e2 ea bb 0f 8c
+platform caam_sm: [0016] d5 1f 73 90 1a 71 5b dd
+platform caam_sm: [0024] 48 a7 eb 33 22 68 e3 54
+snvs-secvio 20cc000.caam-snvs: can't get snvs clock
+snvs-secvio 20cc000.caam-snvs: violation handlers armed - non-secure state
+hidraw: raw HID events driver (C) Jiri Kosina
+input: PixArt Dell MS116 USB Optical Mouse as /devices/soc0/soc/2100000.aips-bus/2184200.usb/ci_hdrc.1/usb1/1-1/1-1.2/1-1.2:1.0/0003:413C:301A.0001/input/input1
+hid-generic 0003:413C:301A.0001: input,hidraw0: USB HID v1.11 Mouse [PixArt Dell MS116 USB Optical Mouse] on usb-ci_hdrc.1-1.2/input0
+usbcore: registered new interface driver usbhid
+usbhid: USB HID core driver
+ashmem: initialized
+usbcore: registered new interface driver snd-usb-audio
+sgtl5000 2-000a: sgtl5000 revision 0x11
+fsl-ssi-dai 2028000.ssi: No cache defaults, reading back from HW
+fsl-hdmi-dai soc:hdmi_audio@00120000: failed to probe. Load HDMI-video first.
+fsl-hdmi-dai: probe of soc:hdmi_audio@00120000 failed with error -12
+imx-sgtl5000 sound: sgtl5000 <-> 2028000.ssi mapping ok
+imx-spdif sound-spdif: snd-soc-dummy-dai <-> 2004000.spdif mapping ok
+imx-audio-hdmi sound-hdmi: initialize HDMI-audio failed. load HDMI-video first!
+NET: Registered protocol family 26
+u32 classifier
+    Actions configured
+Netfilter messages via NETLINK v0.30.
+nf_conntrack version 0.5.0 (16384 buckets, 65536 max)
+ctnetlink v0.93: registering with nfnetlink.
+xt_time: kernel timezone is -0000
+ip_tables: (C) 2000-2006 Netfilter Core Team
+arp_tables: arp_tables: (C) 2002 David S. Miller
+Initializing XFRM netlink socket
+NET: Registered protocol family 10
+mip6: Mobile IPv6
+ip6_tables: (C) 2000-2006 Netfilter Core Team
+sit: IPv6, IPv4 and MPLS over IPv4 tunneling driver
+NET: Registered protocol family 17
+NET: Registered protocol family 15
+bridge: filtering via arp/ip/ip6tables is no longer available by default. Update your scripts to load br_netfilter if you need this.
+can: controller area network core (rev 20120528 abi 9)
+NET: Registered protocol family 29
+can: raw protocol (rev 20120528)
+can: broadcast manager protocol (rev 20161123 t)
+can: netlink gateway (rev 20130117) max_hops=1
+Bluetooth: RFCOMM TTY layer initialized
+Bluetooth: RFCOMM socket layer initialized
+Bluetooth: RFCOMM ver 1.11
+Bluetooth: BNEP (Ethernet Emulation) ver 1.3
+Bluetooth: BNEP filters: protocol multicast
+Bluetooth: BNEP socket layer initialized
+Bluetooth: HIDP (Human Interface Emulation) ver 1.2
+Bluetooth: HIDP socket layer initialized
+8021q: 802.1Q VLAN Support v1.8
+Key type dns_resolver registered
+cpu cpu0: Registered imx6q-cpufreq
+registered taskstats version 1
+imx_thermal 2000000.aips-bus:tempmon: Industrial CPU temperature grade - max:105C critical:100C passive:95C
+dhd_module_init in
+input: gpio-keys as /devices/soc0/gpio-keys/input/input2
+snvs_rtc 20cc000.snvs:snvs-rtc-lp: setting system clock to 1970-01-01 00:00:03 UTC (3)
+usb_otg_vbus: disabling
+ALSA device list:
+  #0: imx6q-apalis-sgtl5000
+  #1: imx-spdif
+Freeing unused kernel memory: 1024K
+init: init first stage started!
+SELinux:  Permission validate_trans in class security not defined in policy.
+SELinux:  Class cap_userns not defined in policy.
+SELinux:  Class cap2_userns not defined in policy.
+SELinux: the above unknown classes and permissions will be denied
+audit: type=1403 audit(5.450:2): policy loaded auid=4294967295 ses=4294967295
+init: (Initializing SELinux non-enforcing took 0.11s.)
+init: init second stage started!
+init: Running restorecon...
+init: waitpid failed: No child processes
+init: (Loading properties from /default.prop took 0.00s.)
+init: (Parsing /init.environ.rc took 0.00s.)
+init: (Parsing /init.usb.rc took 0.00s.)
+init: /init.freescale.rc: 154: invalid keyword 'setprop'
+init: /init.freescale.rc: 155: invalid keyword 'setprop'
+init: /init.freescale.rc: 159: invalid keyword 'chown'
+init: /init.freescale.rc: 160: invalid keyword 'mkdir'
+ueventd: ueventd started!
+ueventd: Coldboot took 0.45s.
+Console: switching to colour dummy device 80x30
+watchdogd: started (interval 10, margin 20)!
+EXT4-fs (mmcblk0p3): mounted filesystem with ordered data mode. Opts: barrier=1
+EXT4-fs (mmcblk0p10): Ignoring removed nomblk_io_submit option
+Aravinth: rtl8xxxu_load_firmware 1 fw=-797608192
+Aravinth: rtl8xxxu_load_firmware 1
+Aravinth: rtl8xxxu_load_firmware 2 priv->fw_size=32076 fw->size=32108
+Aravinth: rtl8xxxu_load_firmware 2
+Aravinth: Firmware revision 35.0 (signature 0x5301)
+Aravinth: rtl8723bu_load_firmware --> ret=0
+Aravinth: rtl8xxxu_init_device 
+Aravinth: rtl8723bu_power_on -->
+Aravinth: rtl8723bu_power_on -->1
+Aravinth: rtl8xxxu_download_firmware 
+Aravinth: rtl8xxxu_start_firmware 
+Aravinth: rtl8xxxu_init_mac 
+EXT4-fs (mmcblk0p10): recovery complete
+EXT4-fs (mmcblk0p10): mounted filesystem with ordered data mode. Opts: nomblk_io_submit,noauto_da_alloc,errors=panic
+EXT4-fs (mmcblk0p4): Ignoring removed nomblk_io_submit option
+EXT4-fs (mmcblk0p4): recovery complete
+EXT4-fs (mmcblk0p4): mounted filesystem with ordered data mode. Opts: nomblk_io_submit
+EXT4-fs (mmcblk0p5): mounted filesystem with ordered data mode. Opts: (null)
+Aravinth: rtl8xxxu_probe -->
+file system registered
+using random self ethernet address
+using random host ethernet address
+zram0: detected capacity change from 0 to 314572800
+logd.auditd: start
+logd.klogd: 8034934667
+Adding 307196k swap on /dev/block/zram0.  Priority:-1 extents:1 across:307196k SS
+binder: 259:259 transaction failed 29189, size 0-0
+type=1400 audit(8.520:3): avc: denied { entrypoint } for pid=266 comm="init" path="/system/bin/can-config.sh" dev="mmcblk0p3" ino=256 scontext=u:r:obd:s0 tcontext=u:object_r:system_file:s0 tclass=file permissive=1
+logd.daemon: reinit
+type=1400 audit(8.540:4): avc: denied { read execute } for pid=266 comm="can-config.sh" path="/system/bin/sh" dev="mmcblk0p3" ino=439 scontext=u:r:obd:s0 tcontext=u:object_r:shell_exec:s0 tclass=file permissive=1
+type=1400 audit(8.540:5): avc: denied { getattr } for pid=267 comm="obd" path="/vendor" dev="rootfs" ino=6500 scontext=u:r:obd:s0 tcontext=u:object_r:rootfs:s0 tclass=lnk_file permissive=1
+toradex_apalis6q:/ # type=1400 audit(8.550:6): avc: denied { getattr } for pid=266 comm="can-config.sh" path="/system/bin/sh" dev="mmcblk0p3" ino=439 scontext=u:r:obd:s0 tcontext=u:object_r:shell_exec:s0 tclass=file permissive=1
+type=1400 audit(8.610:7): avc: denied { create } for pid=267 comm="obd" scontext=u:r:obd:s0 tcontext=u:r:obd:s0 tclass=socket permissive=1
+type=1400 audit(8.610:8): avc: denied { ioctl } for pid=267 comm="obd" path="socket:[11339]" dev="sockfs" ino=11339 ioctlcmd=0x8933 scontext=u:r:obd:s0 tcontext=u:r:obd:s0 tclass=socket permissive=1
+type=1400 audit(8.610:9): avc: denied { bind } for pid=267 comm="obd" scontext=u:r:obd:s0 tcontext=u:r:obd:s0 tclass=socket permissive=1
+IPv6: ADDRCONF(NETDEV_CHANGE): can0: link becomes ready
+healthd: No battery devices found
+ERROR: v4l2 capture: slave not found! V4L2_CID_HUE
+ERROR: v4l2 capture: slave not found! V4L2_CID_HUE
+init: Starting service 'bootanim'...
+capability: warning: `main' uses 32-bit capabilities (legacy support in use)
+
+toradex_apalis6q:/ # 
+toradex_apalis6q:/ # type=1400 audit(16.840:35): avc: denied { write } for pid=267 comm="obd" path="socket:[11339]" dev="sockfs" ino=11339 scontext=u:r:obd:s0 tcontext=u:r:obd:s0 tclass=socket permissive=1
+init: write_file: Unable to open '/sys/devices/system/cpu/cpufreq/interactive/timer_rate': No such file or directory
+init: write_file: Unable to open '/sys/devices/system/cpu/cpufreq/interactive/min_sample_time': No such file or directory
+init: write_file: Unable to open '/sys/devices/system/cpu/cpufreq/interactive/go_hispeed_load': No such file or directory
+
+toradex_apalis6q:/ # random: crng init done
+
+toradex_apalis6q:/ # init: write_file: Unable to open '/proc/sys/vm/extra_free_kbytes': No such file or directory
+
+toradex_apalis6q:/ # 
+toradex_apalis6q:/ # init: write_file: Unable to write to '/config/usb_gadget/g1/UDC': No such device
+acc_open
+acc_release
+Micrel KSZ9031 Gigabit PHY 2188000.ethernet-1:07: attached PHY driver [Micrel KSZ9031 Gigabit PHY] (mii_bus:phy_addr=2188000.ethernet-1:07, irq=120)
+IPv6: ADDRCONF(NETDEV_UP): eth0: link is not ready
+init: Service 'bootanim' (pid 340) exited with status 0
+init: Starting service 'exec 3 (/system/bin/bootstat)'...
+init: Service 'exec 3 (/system/bin/bootstat)' (pid 951) exited with status 0
+init: Starting service 'exec 4 (/system/bin/bootstat)'...
+init: Service 'exec 4 (/system/bin/bootstat)' (pid 962) exited with status 0
+init: Starting service 'exec 5 (/system/bin/bootstat)'...
+type=1400 audit(29.990:36): avc: denied { write } for pid=267 comm="obd" path="socket:[11339]" dev="sockfs" ino=11339 scontext=u:r:obd:s0 tcontext=u:r:obd:s0 tclass=socket permissive=1
+init: Service 'exec 5 (/system/bin/bootstat)' (pid 964) exited with status 0
+init: Starting service 'exec 6 (/system/bin/bootstat)'...
+init: Service 'exec 6 (/system/bin/bootstat)' (pid 965) exited with status 0
+type=1400 audit(35.540:37): avc: denied { write } for pid=1212 comm="Thread-2" name="vcan" dev="tmpfs" ino=11352 scontext=u:r:untrusted_app:s0:c512,c768 tcontext=u:object_r:socket_device:s0 tclass=sock_file permissive=1
+type=1400 audit(35.540:38): avc: denied { connectto } for pid=1212 comm="Thread-2" path="/dev/socket/vcan" scontext=u:r:untrusted_app:s0:c512,c768 tcontext=u:r:obd:s0 tclass=unix_stream_socket permissive=1
+type=1400 audit(36.310:39): avc: denied { write } for pid=267 comm="obd" path="socket:[11339]" dev="sockfs" ino=11339 scontext=u:r:obd:s0 tcontext=u:r:obd:s0 tclass=socket permissive=1

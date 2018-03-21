@@ -1,0 +1,341 @@
+
+
+U-Boot 2017.03-dirty (Dec 15 2017 - 14:13:51 +0530)
+
+CPU:   Freescale i.MX6Q rev1.5 at 792 MHz
+Reset cause: POR
+I2C:   ready
+DRAM:  2 GiB
+PMIC: device id: 0x10, revision id: 0x21
+PMIC: programmed
+MMC:   FSL_SDHC: 0, FSL_SDHC: 1, FSL_SDHC: 2
+auto-detected panel HDMI
+Aravinth: Display: HDMI (1024x768)
+In:    serial
+Out:   serial
+Err:   serial
+Model: Toradex Apalis iMX6 Quad 2GB IT V1.1C, Serial# 05146387
+flash target is MMC:0
+Net:   using PHY at 7
+FEC [PRIME]
+Fastboot: Normal
+Hit any key to stop autoboot:  1  0 
+Apalis iMX6 # 
+
+U-Boot 2017.03-dirty (Dec 15 2017 - 14:13:51 +0530)
+
+CPU:   Freescale i.MX6Q rev1.5 at 792 MHz
+Reset cause: POR
+I2C:   ready
+DRAM:  2 GiB
+PMIC: device id: 0x10, revision id: 0x21
+PMIC: programmed
+MMC:   FSL_SDHC: 0, FSL_SDHC: 1, FSL_SDHC: 2
+auto-detected panel HDMI
+Aravinth: Display: HDMI (1024x768)
+In:    serial
+Out:   serial
+Err:   serial
+Model: Toradex Apalis iMX6 Quad 2GB IT V1.1C, Serial# 05146387
+flash target is MMC:0
+Net:   using PHY at 7
+FEC [PRIME]
+Fastboot: Normal
+Hit any key to stop autoboot:  1  0 
+boota mmc0 
+CACHE: Misaligned operation at range [8ffb7060, 8ffb70e0]
+CACHE: Misaligned operation at range [8ffb7060, 8ffb70e0]
+kernel   @ 10808000 (6253776)
+ramdisk  @ 11800000 (1628348)
+fdt      @ 11700000 (50486)
+## Booting Android Image at 0x12000000 ...
+Android's image name: mx6q_sabresd
+Kernel load addr 0x10808000 size 6108 KiB
+Kernel command line: console=ttymxc0,115200 init=/init rw video=mxcfb0 vmalloc=400M androidboot.serialno=1b2429d4ea997115 androidboot.storage_type=emmc
+## Flattened Device Tree blob at 11700000
+   Booting using the fdt blob at 0x11700000
+   Loading Kernel Image ... OK
+   Loading Ramdisk to 8ddbb000, end 8df488bc ... CACHE: Misaligned operation at range [8ddbb000, 8df488bc]
+OK
+   Loading Device Tree to 8ddab000, end 8ddba535 ... OK
+
+Starting kernel ...
+
+
+
+U-Boot 2017.03-dirty (Dec 15 2017 - 14:13:51 +0530)
+
+CPU:   Freescale i.MX6Q rev1.5 at 792 MHz
+Reset cause: POR
+I2C:   ready
+DRAM:  2 GiB
+PMIC: device id: 0x10, revision id: 0x21
+PMIC: programmed
+MMC:   FSL_SDHC: 0, FSL_SDHC: 1, FSL_SDHC: 2
+auto-detected panel HDMI
+Aravinth: Display: HDMI (1024x768)
+In:    serial
+Out:   serial
+Err:   serial
+Model: Toradex Apalis iMX6 Quad 2GB IT V1.1C, Serial# 05146387
+flash target is MMC:0
+Net:   using PHY at 7
+FEC [PRIME]
+Fastboot: Normal
+Hit any key to stop autoboot:  1  0 
+boota mmc0 
+CACHE: Misaligned operation at range [8ffb7060, 8ffb70e0]
+CACHE: Misaligned operation at range [8ffb7060, 8ffb70e0]
+kernel   @ 10808000 (6253776)
+ramdisk  @ 11800000 (1628348)
+fdt      @ 11700000 (50486)
+## Booting Android Image at 0x12000000 ...
+Android's image name: mx6q_sabresd
+Kernel load addr 0x10808000 size 6108 KiB
+Kernel command line: console=ttymxc0,115200 init=/init rw video=mxcfb0 vmalloc=400M androidboot.serialno=1b2429d4ea997115 androidboot.storage_type=emmc
+## Flattened Device Tree blob at 11700000
+   Booting using the fdt blob at 0x11700000
+   Loading Kernel Image ... OK
+   Loading Ramdisk to 8ddbb000, end 8df488bc ... CACHE: Misaligned operation at range [8ddbb000, 8df488bc]
+OK
+   Loading Device Tree to 8ddab000, end 8ddba535 ... OK
+
+Starting kernel ...
+
+
+
+U-Boot 2017.03-dirty (Dec 15 2017 - 14:13:51 +0530)
+
+CPU:   Freescale i.MX6Q rev1.5 at 792 MHz
+Reset cause: POR
+I2C:   ready
+DRAM:  2 GiB
+PMIC: device id: 0x10, revision id: 0x21
+PMIC: programmed
+MMC:   FSL_SDHC: 0, FSL_SDHC: 1, FSL_SDHC: 2
+auto-detected panel HDMI
+Aravinth: Display: HDMI (1024x768)
+In:    serial
+Out:   serial
+Err:   serial
+Model: Toradex Apalis iMX6 Quad 2GB IT V1.1C, Serial# 05146387
+flash target is MMC:0
+Net:   using PHY at 7
+FEC [PRIME]
+Fastboot: Normal
+Hit any key to stop autoboot:  1  0 
+Apalis iMX6 # pri
+arch=arm
+baudrate=115200
+board=apalis_imx6
+board_name=apalis_imx6
+board_rev=011c
+bootcmd=boota mmc0
+bootdelay=1
+cpu=armv7
+ethact=FEC
+ethaddr=00:14:2d:4e:87:13
+ethprime=FEC
+fastboot_dev=mmc0
+ipaddr=192.168.10.2
+loadaddr=0x12000000
+netmask=255.255.255.0
+serial#=05146387
+serverip=192.168.10.1
+soc=mx6
+vendor=toradex
+ver=U-Boot 2017.03-dirty (Dec 15 2017 - 14:13:51 +0530)
+
+Environment size: 411/8188 bytes
+Apalis iMX6 # editenv bootdelay 
+edit: 1 3
+Apalis iMX6 # saveenv
+Saving Environment to MMC...
+Writing to MMC(0)... done
+Apalis iMX6 # b boot
+boota mmc0 
+CACHE: Misaligned operation at range [8ffb7060, 8ffb70e0]
+CACHE: Misaligned operation at range [8ffb7060, 8ffb70e0]
+kernel   @ 10808000 (6253776)
+ramdisk  @ 11800000 (1628348)
+fdt      @ 11700000 (50486)
+## Booting Android Image at 0x12000000 ...
+Android's image name: mx6q_sabresd
+Kernel load addr 0x10808000 size 6108 KiB
+Kernel command line: console=ttymxc0,115200 init=/init rw video=mxcfb0 vmalloc=400M androidboot.serialno=1b2429d4ea997115 androidboot.storage_type=emmc
+## Flattened Device Tree blob at 11700000
+   Booting using the fdt blob at 0x11700000
+   Loading Kernel Image ... OK
+   Loading Ramdisk to 8ddbb000, end 8df488bc ... CACHE: Misaligned operation at range [8ddbb000, 8df488bc]
+OK
+   Loading Device Tree to 8ddab000, end 8ddba535 ... OK
+
+Starting kernel ...
+
+
+
+U-Boot 2017.03-dirty (Dec 15 2017 - 14:13:51 +0530)
+
+CPU:   Freescale i.MX6Q rev1.5 at 792 MHz
+Reset cause: POR
+I2C:   ready
+DRAM:  2 GiB
+PMIC: device id: 0x10, revision id: 0x21
+PMIC: programmed
+MMC:   FSL_SDHC: 0, FSL_SDHC: 1, FSL_SDHC: 2
+auto-detected panel HDMI
+Aravinth: Display: HDMI (1024x768)
+In:    serial
+Out:   serial
+Err:   serial
+Model: Toradex Apalis iMX6 Quad 2GB IT V1.1C, Serial# 05146387
+flash target is MMC:0
+Net:   using PHY at 7
+FEC [PRIME]
+Fastboot: Normal
+Hit any key to stop autoboot:  3  2  1  0 
+boota mmc0 
+CACHE: Misaligned operation at range [8ffb7060, 8ffb70e0]
+CACHE: Misaligned operation at range [8ffb7060, 8ffb70e0]
+kernel   @ 10808000 (6253776)
+ramdisk  @ 11800000 (1628348)
+fdt      @ 11700000 (50486)
+## Booting Android Image at 0x12000000 ...
+Android's image name: mx6q_sabresd
+Kernel load addr 0x10808000 size 6108 KiB
+Kernel command line: console=ttymxc0,115200 init=/init rw video=mxcfb0 vmalloc=400M androidboot.serialno=1b2429d4ea997115 androidboot.storage_type=emmc
+## Flattened Device Tree blob at 11700000
+   Booting using the fdt blob at 0x11700000
+   Loading Kernel Image ... OK
+   Loading Ramdisk to 8ddbb000, end 8df488bc ... CACHE: Misaligned operation at range [8ddbb000, 8df488bc]
+OK
+   Loading Device Tree to 8ddab000, end 8ddba535 ... OK
+
+Starting kernel ...
+
+
+
+U-Boot 2017.03-dirty (Dec 15 2017 - 14:13:51 +0530)
+
+CPU:   Freescale i.MX6Q rev1.5 at 792 MHz
+Reset cause: POR
+I2C:   ready
+DRAM:  2 GiB
+PMIC: device id: 0x10, revision id: 0x21
+PMIC: programmed
+MMC:   FSL_SDHC: 0, FSL_SDHC: 1, FSL_SDHC: 2
+auto-detected panel HDMI
+Aravinth: Display: HDMI (1024x768)
+In:    serial
+Out:   serial
+Err:   serial
+Model: Toradex Apalis iMX6 Quad 2GB IT V1.1C, Serial# 05146387
+flash target is MMC:0
+Net:   using PHY at 7
+FEC [PRIME]
+Fastboot: Normal
+Hit any key to stop autoboot:  3  0 
+Apalis iMX6 # boot
+boota mmc0 
+CACHE: Misaligned operation at range [8ffb7060, 8ffb70e0]
+CACHE: Misaligned operation at range [8ffb7060, 8ffb70e0]
+kernel   @ 10808000 (6253776)
+ramdisk  @ 11800000 (1628348)
+fdt      @ 11700000 (50486)
+## Booting Android Image at 0x12000000 ...
+Android's image name: mx6q_sabresd
+Kernel load addr 0x10808000 size 6108 KiB
+Kernel command line: console=ttymxc0,115200 init=/init rw video=mxcfb0 vmalloc=400M androidboot.serialno=1b2429d4ea997115 androidboot.storage_type=emmc
+## Flattened Device Tree blob at 11700000
+   Booting using the fdt blob at 0x11700000
+   Loading Kernel Image ... OK
+   Loading Ramdisk to 8ddbb000, end 8df488bc ... CACHE: Misaligned operation at range [8ddbb000, 8df488bc]
+OK
+   Loading Device Tree to 8ddab000, end 8ddba535 ... OK
+
+Starting kernel ...
+
+
+
+U-Boot 2017.03-dirty (Dec 15 2017 - 14:13:51 +0530)
+
+CPU:   Freescale i.MX6Q rev1.5 at 792 MHz
+Reset cause: POR
+I2C:   ready
+DRAM:  2 GiB
+PMIC: device id: 0x10, revision id: 0x21
+PMIC: programmed
+MMC:   FSL_SDHC: 0, FSL_SDHC: 1, FSL_SDHC: 2
+auto-detected panel HDMI
+Aravinth: Display: HDMI (1024x768)
+In:    serial
+Out:   serial
+Err:   serial
+Model: Toradex Apalis iMX6 Quad 2GB IT V1.1C, Serial# 05146387
+flash target is MMC:0
+Net:   using PHY at 7
+FEC [PRIME]
+Fastboot: Normal
+Hit any key to stop autoboot:  3  0 
+Apalis iMX6 # boot
+boota mmc0 
+CACHE: Misaligned operation at range [8ffb7060, 8ffb70e0]
+CACHE: Misaligned operation at range [8ffb7060, 8ffb70e0]
+kernel   @ 10808000 (6253776)
+ramdisk  @ 11800000 (1628348)
+fdt      @ 11700000 (50486)
+## Booting Android Image at 0x12000000 ...
+Android's image name: mx6q_sabresd
+Kernel load addr 0x10808000 size 6108 KiB
+Kernel command line: console=ttymxc0,115200 init=/init rw video=mxcfb0 vmalloc=400M androidboot.serialno=1b2429d4ea997115 androidboot.storage_type=emmc
+## Flattened Device Tree blob at 11700000
+   Booting using the fdt blob at 0x11700000
+   Loading Kernel Image ... OK
+   Loading Ramdisk to 8ddbb000, end 8df488bc ... CACHE: Misaligned operation at range [8ddbb000, 8df488bc]
+OK
+   Loading Device Tree to 8ddab000, end 8ddba535 ... OK
+
+Starting kernel ...
+
+
+
+U-Boot 2017.03-dirty (Dec 15 2017 - 14:13:51 +0530)
+
+CPU:   Freescale i.MX6Q rev1.5 at 792 MHz
+Reset cause: POR
+I2C:   ready
+DRAM:  2 GiB
+PMIC: device id: 0x10, revision id: 0x21
+PMIC: programmed
+MMC:   FSL_SDHC: 0, FSL_SDHC: 1, FSL_SDHC: 2
+auto-detected panel HDMI
+Aravinth: Display: HDMI (1024x768)
+In:    serial
+Out:   serial
+Err:   serial
+Model: Toradex Apalis iMX6 Quad 2GB IT V1.1C, Serial# 05146387
+flash target is MMC:0
+Net:   using PHY at 7
+FEC [PRIME]
+Fastboot: Normal
+Hit any key to stop autoboot:  3  0 
+Apalis iMX6 # boot
+boota mmc0 
+CACHE: Misaligned operation at range [8ffb7060, 8ffb70e0]
+CACHE: Misaligned operation at range [8ffb7060, 8ffb70e0]
+kernel   @ 10808000 (6253776)
+ramdisk  @ 11800000 (1628348)
+fdt      @ 11700000 (50486)
+## Booting Android Image at 0x12000000 ...
+Android's image name: mx6q_sabresd
+Kernel load addr 0x10808000 size 6108 KiB
+Kernel command line: console=ttymxc0,115200 init=/init rw video=mxcfb0 vmalloc=400M androidboot.serialno=1b2429d4ea997115 androidboot.storage_type=emmc
+## Flattened Device Tree blob at 11700000
+   Booting using the fdt blob at 0x11700000
+   Loading Kernel Image ... OK
+   Loading Ramdisk to 8ddbb000, end 8df488bc ... CACHE: Misaligned operation at range [8ddbb000, 8df488bc]
+OK
+   Loading Device Tree to 8ddab000, end 8ddba535 ... OK
+
+Starting kernel ...
+

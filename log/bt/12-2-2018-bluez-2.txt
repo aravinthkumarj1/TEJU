@@ -1,0 +1,1054 @@
+
+toradex_apalis6q:/ # 
+toradex_apalis6q:/ # 
+toradex_apalis6q:/ # 
+toradex_apalis6q:/ # 
+toradex_apalis6q:/ # logcat | grep Aravinth
+01-01 00:00:09.786   271   271 W audio_hw_primary: Aravinth: card 0, id imx6qapalissgtl ,driver imx6q-apalis-sg, name imx6q-apalis-sgtl5000
+01-01 00:00:09.786   271   271 W audio_hw_primary: Aravinth: scan_available_device >0 name:imx6q-sgtl5000
+01-01 00:00:09.786   271   271 W audio_hw_primary: Aravinth: scan_available_device >0 Cardname:imx6q-apalis-sg
+01-01 00:00:09.786   271   271 W audio_hw_primary: Aravinth: scan_available_device >0 name:wm8958-audio
+01-01 00:00:09.786   271   271 W audio_hw_primary: Aravinth: scan_available_device >0 Cardname:imx6q-apalis-sg
+01-01 00:00:09.786   271   271 W audio_hw_primary: Aravinth: scan_available_device >0 name:wm8962-audio
+01-01 00:00:09.786   271   271 W audio_hw_primary: Aravinth: scan_available_device >0 Cardname:imx6q-apalis-sg
+01-01 00:00:09.786   271   271 W audio_hw_primary: Aravinth: scan_available_device >0 name:imx-hdmi-soc
+01-01 00:00:09.786   271   271 W audio_hw_primary: Aravinth: scan_available_device >0 Cardname:imx6q-apalis-sg
+01-01 00:00:09.786   271   271 W audio_hw_primary: Aravinth: scan_available_device >0 name:imx-spdif
+01-01 00:00:09.786   271   271 W audio_hw_primary: Aravinth: scan_available_device >0 Cardname:imx6q-apalis-sg
+01-01 00:00:09.786   271   271 W audio_hw_primary: Aravinth: scan_available_device >0 name:cs42888-audio
+01-01 00:00:09.786   271   271 W audio_hw_primary: Aravinth: scan_available_device >0 Cardname:imx6q-apalis-sg
+01-01 00:00:09.786   271   271 W audio_hw_primary: Aravinth: scan_available_device >0 name:wm8960-audio
+01-01 00:00:09.786   271   271 W audio_hw_primary: Aravinth: scan_available_device >0 Cardname:imx6q-apalis-sg
+01-01 00:00:09.786   271   271 W audio_hw_primary: Aravinth: scan_available_device >0 name:sii902x-audio
+01-01 00:00:09.786   271   271 W audio_hw_primary: Aravinth: scan_available_device >0 Cardname:imx6q-apalis-sg
+01-01 00:00:09.786   271   271 W audio_hw_primary: Aravinth: scan_available_device >0 name:rpmsg-audio
+01-01 00:00:09.786   271   271 W audio_hw_primary: Aravinth: scan_available_device >0 Cardname:imx6q-apalis-sg
+01-01 00:00:09.786   271   271 W audio_hw_primary: Aravinth: scan_available_device >0 name:null_card
+01-01 00:00:09.786   271   271 W audio_hw_primary: Aravinth: scan_available_device >0 Cardname:imx6q-apalis-sg
+01-01 00:00:09.786   271   271 W audio_hw_primary: Aravinth: scan_available_device >4
+01-01 00:00:09.786   271   271 W audio_hw_primary: Aravinth: card 1, id imxspdif ,driver imx-spdif, name imx-spdif
+01-01 00:00:09.786   271   271 W audio_hw_primary: Aravinth: scan_available_device >0 name:imx6q-sgtl5000
+01-01 00:00:09.787   271   271 W audio_hw_primary: Aravinth: scan_available_device >0 Cardname:imx-spdif
+01-01 00:00:09.787   271   271 W audio_hw_primary: Aravinth: scan_available_device >0 name:wm8958-audio
+01-01 00:00:09.787   271   271 W audio_hw_primary: Aravinth: scan_available_device >0 Cardname:imx-spdif
+01-01 00:00:09.787   271   271 W audio_hw_primary: Aravinth: scan_available_device >0 name:wm8962-audio
+01-01 00:00:09.787   271   271 W audio_hw_primary: Aravinth: scan_available_device >0 Cardname:imx-spdif
+01-01 00:00:09.787   271   271 W audio_hw_primary: Aravinth: scan_available_device >0 name:imx-hdmi-soc
+01-01 00:00:09.787   271   271 W audio_hw_primary: Aravinth: scan_available_device >0 Cardname:imx-spdif
+01-01 00:00:09.787   271   271 W audio_hw_primary: Aravinth: scan_available_device >0 name:imx-spdif
+01-01 00:00:09.787   271   271 W audio_hw_primary: Aravinth: scan_available_device >0 Cardname:imx-spdif
+01-01 00:00:09.787   271   271 W audio_hw_primary: Aravinth: scan_available_device >1
+01-01 00:00:09.787   271   271 W audio_hw_primary: Aravinth: scan_available_device >2
+01-01 00:00:09.787   271   271 W audio_hw_primary: Aravinth: scan_available_device >3
+01-01 00:00:09.789   271   271 W audio_hw_primary: Aravinth: scan_available_device >4
+01-01 00:00:09.789   271   271 W audio_hw_primary: Aravinth: card 2, id imxhdmisoc ,driver imx-hdmi-soc, name imx-hdmi-soc
+01-01 00:00:09.789   271   271 W audio_hw_primary: Aravinth: scan_available_device >0 name:imx6q-sgtl5000
+01-01 00:00:09.789   271   271 W audio_hw_primary: Aravinth: scan_available_device >0 Cardname:imx-hdmi-soc
+01-01 00:00:09.789   271   271 W audio_hw_primary: Aravinth: scan_available_device >0 name:wm8958-audio
+01-01 00:00:09.789   271   271 W audio_hw_primary: Aravinth: scan_available_device >0 Cardname:imx-hdmi-soc
+01-01 00:00:09.789   271   271 W audio_hw_primary: Aravinth: scan_available_device >0 name:wm8962-audio
+01-01 00:00:09.789   271   271 W audio_hw_primary: Aravinth: scan_available_device >0 Cardname:imx-hdmi-soc
+01-01 00:00:09.789   271   271 W audio_hw_primary: Aravinth: scan_available_device >0 name:imx-hdmi-soc
+01-01 00:00:09.789   271   271 W audio_hw_primary: Aravinth: scan_available_device >0 Cardname:imx-hdmi-soc
+01-01 00:00:09.789   271   271 W audio_hw_primary: Aravinth: scan_available_device >1
+01-01 00:00:09.789   271   271 W audio_hw_primary: Aravinth: scan_available_device >2
+01-01 00:00:09.789   271   271 W audio_hw_primary: Aravinth: scan_available_device >3
+01-01 00:00:09.837   271   271 W audio_hw_primary: Aravinth: scan_available_device >4
+01-01 00:00:09.837   271   271 W audio_hw_primary: Aravinth: adev_open >0 
+01-01 00:00:09.837   271   271 W audio_hw_primary: Aravinth: select_output_device >0 out_device=2
+01-01 00:00:34.850   620   620 D BlueZ   : external/bluetooth/bluez/android/hal-bluetooth.c:init()  Aravinth:1
+01-01 00:00:35.007   620   620 D BlueZ   : external/bluetooth/bluez/android/hal-bluetooth.c:get_profile_interface()  Aravinth: profile_id:socket
+01-01 00:00:35.007   620   620 D BlueZ   : external/bluetooth/bluez/android/hal-bluetooth.c:get_profile_interface()  Aravinth: interface_ready:1
+01-01 00:00:35.007   620   620 D BlueZ   : external/bluetooth/bluez/android/hal-bluetooth.c:get_profile_interface()  Aravinth: 1
+01-01 00:00:35.013   620   696 D BlueZ   : external/bluetooth/bluez/android/hal-utils.c:btproperty2str()  Aravinth: property->type=2
+01-01 00:00:35.016   620   696 D BlueZ   : external/bluetooth/bluez/android/hal-utils.c:btproperty2str()  Aravinth: property->type=1
+01-01 00:00:35.023   620   620 D BlueZ   : external/bluetooth/bluez/android/hal-bluetooth.c:get_profile_interface()  Aravinth: profile_id:sdp
+01-01 00:00:35.024   620   620 D BlueZ   : external/bluetooth/bluez/android/hal-bluetooth.c:get_profile_interface()  Aravinth: interface_ready:1
+01-01 00:00:35.024   620   620 D BlueZ   : external/bluetooth/bluez/android/hal-bluetooth.c:get_profile_interface()  Aravinth: 1
+01-01 00:00:55.531   271   301 W audio_hw_primary: Aravinth: out_set_parameters >1
+01-01 00:00:55.531   271   301 W audio_hw_primary: Aravinth: select_output_device >0 out_device=400
+01-01 00:00:55.543   271   301 W audio_hw_primary: Aravinth: start_output_stream_primary >1
+01-01 00:00:55.544   271   301 W audio_hw_primary: Aravinth: select_output_device >0 out_device=400
+01-01 00:00:55.545   271   301 W audio_hw_primary: Aravinth: start_output_stream_primary >2
+01-01 00:01:01.069   271   301 W audio_hw_primary: Aravinth: start_output_stream_primary >1
+01-01 00:01:01.069   271   301 W audio_hw_primary: Aravinth: select_output_device >0 out_device=400
+01-01 00:01:01.070   271   301 W audio_hw_primary: Aravinth: start_output_stream_primary >2
+^C
+130|toradex_apalis6q:/ # 130|toradex_apalis6q:/ # logcat | grep Aravinth                                        BlueZ
+01-01 00:00:09.978   271   271 D BlueZ   : external/bluetooth/bluez/android/hal-audio.c:audio_open() 
+01-01 00:00:09.978   271   271 D BlueZ   : external/bluetooth/bluez/android/hal-audio.c:audio_ipc_init() 
+01-01 00:00:09.979   271   271 E BlueZ   : APTX: failed to open library libbt-aptx.so (dlopen failed: library "libbt-aptx.so" not found)
+01-01 00:00:09.979   271   271 D BlueZ   : external/bluetooth/bluez/android/hal-audio.c:audio_init_check() 
+01-01 00:00:09.979   271   271 D BlueZ   : external/bluetooth/bluez/android/hal-audio.c:audio_set_master_volume() 
+01-01 00:00:09.979   271   271 D BlueZ   : external/bluetooth/bluez/android/hal-audio.c:set_master_mute() 
+01-01 00:00:09.996   271   307 D BlueZ   : external/bluetooth/bluez/android/hal-audio.c:ipc_handler() 
+01-01 00:00:09.996   271   307 D BlueZ   : external/bluetooth/bluez/android/hal-audio.c:ipc_handler() Waiting for connection ...
+01-01 00:00:33.156   271   607 D BlueZ   : external/bluetooth/bluez/android/hal-audio.c:audio_set_mic_mute() 
+01-01 00:00:34.615   271   271 D BlueZ   : external/bluetooth/bluez/android/hal-audio.c:audio_set_parameters() 
+01-01 00:00:34.813   620   620 D BlueZ   : external/bluetooth/bluez/android/hal-bluetooth.c:open_bluetooth() 
+01-01 00:00:34.813   620   620 D BlueZ   : external/bluetooth/bluez/android/hal-bluetooth.c:get_bluetooth_interface() 
+01-01 00:00:34.850   620   620 D BlueZ   : external/bluetooth/bluez/android/hal-bluetooth.c:init()  Aravinth:1
+01-01 00:00:35.003   620   620 I BlueZ   : IPC connected
+01-01 00:00:35.007   620   620 D BlueZ   : external/bluetooth/bluez/android/hal-bluetooth.c:set_os_callouts() callouts: 0xac190198
+01-01 00:00:35.007   620   620 D BlueZ   : external/bluetooth/bluez/android/hal-bluetooth.c:get_profile_interface()  Aravinth: profile_id:socket
+01-01 00:00:35.007   620   620 D BlueZ   : external/bluetooth/bluez/android/hal-bluetooth.c:get_profile_interface()  Aravinth: interface_ready:1
+01-01 00:00:35.007   620   620 D BlueZ   : external/bluetooth/bluez/android/hal-bluetooth.c:get_profile_interface()  Aravinth: 1
+01-01 00:00:35.013   620   620 D BlueZ   : external/bluetooth/bluez/android/hal-bluetooth.c:get_adapter_property() prop: BT_PROPERTY_BDADDR (2)
+01-01 00:00:35.013   620   620 D BlueZ   : external/bluetooth/bluez/android/hal-bluetooth.c:get_adapter_property() prop: BT_PROPERTY_BDNAME (1)
+01-01 00:00:35.013   620   696 D BlueZ   : external/bluetooth/bluez/android/hal-bluetooth.c:handle_adapter_props_changed() 
+01-01 00:00:35.013   620   696 D BlueZ   : external/bluetooth/bluez/android/hal-utils.c:btproperty2str()  Aravinth: property->type=2
+01-01 00:00:35.013   620   696 D BlueZ   : external/bluetooth/bluez/android/hal-bluetooth.c:adapter_props_to_hal() prop[0]: type=BT_PROPERTY_BDADDR len=6 val=74:da:38:d6:32:39
+01-01 00:00:35.016   620   696 D BlueZ   : external/bluetooth/bluez/android/hal-bluetooth.c:handle_adapter_props_changed() 
+01-01 00:00:35.016   620   696 D BlueZ   : external/bluetooth/bluez/android/hal-utils.c:btproperty2str()  Aravinth: property->type=1
+01-01 00:00:35.016   620   696 D BlueZ   : external/bluetooth/bluez/android/hal-bluetooth.c:adapter_props_to_hal() prop[0]: type=BT_PROPERTY_BDNAME len=13 val=TORADEX-MX6DQ
+01-01 00:00:35.023   620   620 D BlueZ   : external/bluetooth/bluez/android/hal-bluetooth.c:get_profile_interface()  Aravinth: profile_id:sdp
+01-01 00:00:35.024   620   620 D BlueZ   : external/bluetooth/bluez/android/hal-bluetooth.c:get_profile_interface()  Aravinth: interface_ready:1
+01-01 00:00:35.024   620   620 D BlueZ   : external/bluetooth/bluez/android/hal-bluetooth.c:get_profile_interface()  Aravinth: 1
+01-01 00:00:37.810   620   620 D BlueZ   : external/bluetooth/bluez/android/hal-bluetooth.c:cleanup() 
+01-01 00:00:37.839   620   696 D BlueZ   : external/bluetooth/bluez/android/hal-ipc.c:notification_handler() exit
+01-01 00:00:37.969   271   271 D BlueZ   : external/bluetooth/bluez/android/hal-audio.c:audio_set_mic_mute() 
+01-01 00:00:40.731   271   607 D BlueZ   : external/bluetooth/bluez/android/hal-audio.c:audio_set_parameters() 
+01-01 00:00:40.751   271   296 D BlueZ   : external/bluetooth/bluez/android/hal-audio.c:audio_set_parameters() 
+^C
+130|toradex_apalis6q:/ # 
+130|toradex_apalis6q:/ # 
+130|toradex_apalis6q:/ # logcat -c
+toradex_apalis6q:/ # 
+toradex_apalis6q:/ # 
+toradex_apalis6q:/ # toradex_apalis6q:/ # logcat -c                                                    
+--------- beginning of system
+01-01 00:02:03.079  1309  1309 W ViewRootImpl[Launcher]: Cancelling event due to no window focus: MotionEvent { action=ACTION_CANCEL, actionButton=0, id[0]=0, x[0]=433.22806, y[0]=375.6946, toolType[0]=TOOL_TYPE_MOUSE, buttonState=0, metaState=0, flags=0x0, edgeFlags=0x0, pointerCount=1, historySize=0, eventTime=123077, downTime=65381, deviceId=2, source=0x2002 }
+01-01 00:02:03.079  1309  1309 W ViewRootImpl[Launcher]: Cancelling event due to no window focus: MotionEvent { action=ACTION_CANCEL, actionButton=0, id[0]=0, x[0]=433.22806, y[0]=375.6946, toolType[0]=TOOL_TYPE_MOUSE, buttonState=0, metaState=0, flags=0x0, edgeFlags=0x0, pointerCount=1, historySize=0, eventTime=123077, downTime=65381, deviceId=2, source=0x2002 }
+01-01 00:02:03.079  1309  1309 W ViewRootImpl[Launcher]: Cancelling event due to no window focus: MotionEvent { action=ACTION_CANCEL, actionButton=0, id[0]=0, x[0]=433.22806, y[0]=375.6946, toolType[0]=TOOL_TYPE_MOUSE, buttonState=0, metaState=0, flags=0x0, edgeFlags=0x0, pointerCount=1, historySize=0, eventTime=123077, downTime=65381, deviceId=2, source=0x2002 }
+01-01 00:02:03.080  1309  1309 W ViewRootImpl[Launcher]: Cancelling event due to no window focus: MotionEvent { action=ACTION_CANCEL, actionButton=0, id[0]=0, x[0]=433.22806, y[0]=375.6946, toolType[0]=TOOL_TYPE_MOUSE, buttonState=0, metaState=0, flags=0x0, edgeFlags=0x0, pointerCount=1, historySize=0, eventTime=123077, downTime=65381, deviceId=2, source=0x2002 }
+01-01 00:02:04.275   546   556 I ActivityManager: START u0 {flg=0x8000 cmp=com.android.settings/.Settings$BluetoothSettingsActivity (has extras)} from uid 1000 on display 0
+--------- beginning of main
+01-01 00:02:04.277   271   301 I audio_hw_primary: start_output_stream_primary... -1271056640, device 1024
+01-01 00:02:04.277   271   301 W audio_hw_primary: Aravinth: start_output_stream_primary >1
+01-01 00:02:04.277   271   301 W audio_hw_primary: Aravinth: select_output_device >0 out_device=400
+01-01 00:02:04.277   271   301 W audio_hw_primary: headphone 0 ,headset 1024 ,speaker 0, earpiece 0, bt_on 0
+01-01 00:02:04.278   271   301 W audio_hw_primary: HDMI: card 2, port 0 device 0x400
+01-01 00:02:04.278   271   301 W audio_hw_primary: HDMI: rate 44100, channel 2 period_size 0x300
+01-01 00:02:04.278   271   301 W audio_hw_primary: Aravinth: start_output_stream_primary >2
+01-01 00:02:04.493   546   580 I InputDispatcher: Dropping event because there is no touchable window at (290, 432).
+01-01 00:02:04.503   546   580 I InputDispatcher: Dropping event because there is no touchable window at (289, 433).
+01-01 00:02:04.510   546   580 I InputDispatcher: Dropping event because there is no touchable window at (288, 434).
+01-01 00:02:04.517   546   580 I InputDispatcher: Dropping event because there is no touchable window at (287, 436).
+01-01 00:02:04.525   546   580 I InputDispatcher: Dropping event because there is no touchable window at (285, 439).
+01-01 00:02:04.533   546   580 I InputDispatcher: Dropping event because there is no touchable window at (284, 441).
+01-01 00:02:04.543   546   580 I InputDispatcher: Dropping event because there is no touchable window at (283, 443).
+01-01 00:02:04.549   546   580 I InputDispatcher: Dropping event because there is no touchable window at (282, 444).
+01-01 00:02:04.555   809   809 D LocalBluetoothManager: setting foreground activity to non-null context
+01-01 00:02:04.558   546   580 I InputDispatcher: Dropping event because there is no touchable window at (280, 448).
+01-01 00:02:04.566   546   580 I InputDispatcher: Dropping event because there is no touchable window at (279, 449).
+01-01 00:02:04.570   809  1427 D Index   : Indexing locale 'en_US' took 31 millis
+01-01 00:02:04.581   546   580 I InputDispatcher: Dropping event because there is no touchable window at (279, 451).
+01-01 00:02:04.591   546   580 I InputDispatcher: Dropping event because there is no touchable window at (278, 452).
+01-01 00:02:04.631   546   580 I InputDispatcher: Dropping event because there is no touchable window at (278, 453).
+01-01 00:02:04.638   546   580 I InputDispatcher: Dropping event because there is no touchable window at (277, 454).
+01-01 00:02:04.664   809   819 I art     : Background partial concurrent mark sweep GC freed 14721(738KB) AllocSpace objects, 3(80KB) LOS objects, 40% free, 3MB/5MB, paused 3.293ms total 130.040ms
+01-01 00:02:04.665   809  1425 D Index   : Indexing locale 'en_US' took 46 millis
+01-01 00:02:04.752   809  1425 D Index   : Deleting data for locale 'en_US' took 3 millis
+01-01 00:02:04.754   809  1425 D Index   : Indexing locale 'en_US' took 2 millis
+01-01 00:02:04.841   546   566 I ActivityManager: Displayed com.android.settings/.Settings$BluetoothSettingsActivity: +549ms
+01-01 00:02:04.967   809   895 D OpenGLRenderer: endAllActiveAnimators on 0x900f5780 (RippleDrawable) with handle 0x90343070
+01-01 00:02:06.575   546   792 D BluetoothManagerService: enable(com.android.settings):  mBluetooth =null mBinding = false mState = OFF
+01-01 00:02:06.576   546   565 D BluetoothManagerService: MESSAGE_ENABLE(0): mBluetooth = null
+01-01 00:02:06.576   546   792 D BluetoothManagerService: enable returning
+01-01 00:02:06.608   546   565 I ActivityManager: Start proc 1428:com.android.bluetooth/1002 for service com.android.bluetooth/.btservice.AdapterService
+01-01 00:02:06.781  1428  1428 D AdapterServiceConfig: Adding HeadsetService
+01-01 00:02:06.781  1428  1428 D AdapterServiceConfig: Adding A2dpService
+01-01 00:02:06.781  1428  1428 D AdapterServiceConfig: Adding A2dpSinkService
+01-01 00:02:06.782  1428  1428 D AdapterServiceConfig: Adding HidService
+01-01 00:02:06.782  1428  1428 D AdapterServiceConfig: Adding HealthService
+01-01 00:02:06.782  1428  1428 D AdapterServiceConfig: Adding PanService
+01-01 00:02:06.782  1428  1428 D AdapterServiceConfig: Adding GattService
+01-01 00:02:06.782  1428  1428 D AdapterServiceConfig: Adding BluetoothMapService
+01-01 00:02:06.782  1428  1428 D AdapterServiceConfig: Adding AvrcpControllerService
+01-01 00:02:06.822  1428  1428 D Bluinit: Starting service 'bluetoothd'...
+eZ   : external/bluetooth/bluez/android/hal-bluetooth.c:open_bluetooth() 
+01-01 00:02:06.822  1428  1428 D BlueZ   : external/bltype=1400 audit(126.840:50): avc: denied { getattr } for pid=1443 comm="bluetoothd" path="/vendor" dev="rootfs" ino=6500 scontext=u:r:bluetoothd:s0 tcontext=u:object_r:rootfs:s0 tclass=lnk_file permissive=1
+uetooth/bluez/android/hal-bluetooth.c:get_bluetooth_interface() 
+01-01 00:02:06.827  1428  1428 D BluetoothAdapterService: onCreate()
+01-01 00:02:06.836  1428  1428 D BluetoothAdapterState: make() - Creating AdapterState
+01-01 00:02:06.842  1428  1428 D BlueZ   : external/bluetooth/bluez/android/hal-bluetooth.c:init()  Aravinth:1
+01-01 00:02:06.842  1428  1442 I BluetoothAdapterState: Entering OffState
+01-01 00:02:06.840  1443  1443 I bluetoothd: type=1400 audit(0.0:50): avc: denied { getattr } for path="/vendor" dev="rootfs" ino=6500 scontext=u:r:bluetoothd:s0 tcontext=u:object_r:rootfs:s0 tclass=lnk_file permissive=1
+01-01 00:02:06.886  1443  1443 I bluetoothd: Bluetooth daemon 5.48
+01-01 00:02:06.886  1443  1443 I bluetoothd: Starting SDP server
+01-01 00:02:06.887  1443  1443 I bluetoothd: Bluetooth management interface 1.14 initialized
+01-01 00:02:06.887  1443  1443 I bluetoothd: Kernel connection control will be used
+01-01 00:02:06.889  1443  1443 I bluetoothd: Max LE advertising instances: 5
+01-01 00:02:06.890  1443  1443 I bluetoothd: Adapter initialized
+01-01 00:02:06.891  1443  1443 I bluetoothd: IPC: successfully connected (with notifications)
+01-01 00:02:06.891  1428  1428 I BlueZ   : IPC connected
+01-01 00:02:06.892  1443  1443 I bluetoothd: Service ID=1 registered
+01-01 00:02:06.893  1443  1443 I bluetoothd: Service ID=2 registered
+01-01 00:02:06.893  1428  1428 D BlueZ   : external/bluetooth/bluez/android/hal-bluetooth.c:set_os_callouts() callouts: 0xac170198
+01-01 00:02:06.893  1428  1428 D BlueZ   : external/bluetooth/bluez/android/hal-bluetooth.c:get_profile_interface()  Aravinth: profile_id:socket
+01-01 00:02:06.893  1428  1428 D BlueZ   : external/bluetooth/bluez/android/hal-bluetooth.c:get_profile_interface()  Aravinth: interface_ready:1
+01-01 00:02:06.893  1428  1428 D BlueZ   : external/bluetooth/bluez/android/hal-bluetooth.c:get_profile_interface()  Aravinth: 1
+01-01 00:02:06.894  1428  1428 D BlueZ   : external/bluetooth/bluez/android/hal-bluetooth.c:get_adapter_property() prop: BT_PROPERTY_BDADDR (2)
+01-01 00:02:06.894  1428  1428 D BlueZ   : external/bluetooth/bluez/android/hal-bluetooth.c:get_adapter_property() prop: BT_PROPERTY_BDNAME (1)
+01-01 00:02:06.894  1428  1444 D BlueZ   : external/bluetooth/bluez/android/hal-bluetooth.c:handle_adapter_props_changed() 
+01-01 00:02:06.895  1428  1444 D BlueZ   : external/bluetooth/bluez/android/hal-utils.c:btproperty2str()  Aravinth: property->type=2
+01-01 00:02:06.895  1428  1444 D BlueZ   : external/bluetooth/bluez/android/hal-bluetooth.c:adapter_props_to_hal() prop[0]: type=BT_PROPERTY_BDADDR len=6 val=74:da:38:d6:32:39
+01-01 00:02:06.895  1428  1444 I BluetoothAdapterProperties: adapterPropertyChangedCallback with type:2 len:6
+01-01 00:02:06.897  1428  1444 D BluetoothAdapterProperties: Address is:74:DA:38:D6:32:39
+01-01 00:02:06.897  1428  1444 D BlueZ   : external/bluetooth/bluez/android/hal-bluetooth.c:handle_adapter_props_changed() 
+01-01 00:02:06.897  1428  1444 D BlueZ   : external/bluetooth/bluez/android/hal-utils.c:btproperty2str()  Aravinth: property->type=1
+01-01 00:02:06.897  1428  1444 D BlueZ   : external/bluetooth/bluez/android/hal-bluetooth.c:adapter_props_to_hal() prop[0]: type=BT_PROPERTY_BDNAME len=13 val=TORADEX-MX6DQ
+01-01 00:02:06.897  1428  1444 I BluetoothAdapterProperties: adapterPropertyChangedCallback with type:1 len:13
+01-01 00:02:06.900   546   546 D BluetoothManagerService: Bluetooth Adapter name changed to TORADEX-MX6DQ
+01-01 00:02:06.900  1428  1444 D BluetoothAdapterProperties: Name is: TORADEX-MX6DQ
+01-01 00:02:06.900   546   546 D BluetoothManagerService: Stored Bluetooth name: TORADEX-MX6DQ
+01-01 00:02:06.901  1428  1428 D BlueZ   : external/bluetooth/bluez/android/hal-bluetooth.c:get_profile_interface()  Aravinth: profile_id:sdp
+01-01 00:02:06.901  1428  1428 D BlueZ   : external/bluetooth/bluez/android/hal-bluetooth.c:get_profile_interface()  Aravinth: interface_ready:1
+01-01 00:02:06.901  1428  1428 D BlueZ   : external/bluetooth/bluez/android/hal-bluetooth.c:get_profile_interface()  Aravinth: 1
+01-01 00:02:06.901  1428  1428 E BluetoothSdpJni: Error getting SDP client interface
+01-01 00:02:06.906  1428  1428 D BluetoothAdapterService: setAdapterService() - set to: null
+01-01 00:02:06.906  1428  1428 D BluetoothAdapterService: onBind()
+01-01 00:02:06.907   546   546 D BluetoothManagerService: BluetoothServiceConnection: com.android.bluetooth.btservice.AdapterService
+01-01 00:02:06.907   546   565 D BluetoothManagerService: MESSAGE_BLUETOOTH_SERVICE_CONNECTED: 1
+01-01 00:02:06.908  1428  1439 D BlueZ   : external/bluetooth/bluez/android/hal-bluetooth.c:config_hci_snoop_log() enable 0
+01-01 00:02:06.911   546   565 D BluetoothManagerService: Broadcasting onBluetoothServiceUp() to 5 receivers.
+01-01 00:02:06.912   546   565 D BluetoothAdapter: onBluetoothServiceUp: android.bluetooth.IBluetooth$Stub$Proxy@7321801
+01-01 00:02:06.913   809   822 D BluetoothAdapter: onBluetoothServiceUp: android.bluetooth.IBluetooth$Stub$Proxy@8f00aa3
+01-01 00:02:06.913  1428  1439 D BluetoothAdapter: onBluetoothServiceUp: com.android.bluetooth.btservice.AdapterService$AdapterServiceBinder@c3590fd
+01-01 00:02:06.913   739   750 D BluetoothAdapter: onBluetoothServiceUp: android.bluetooth.IBluetooth$Stub$Proxy@44abaf1
+01-01 00:02:06.914   657   793 D BluetoothAdapter: onBluetoothServiceUp: android.bluetooth.IBluetooth$Stub$Proxy@fb0037
+01-01 00:02:06.914  1428  1439 D BluetoothAdapterService: enable() - Enable called with quiet mode status =  false
+01-01 00:02:06.915  1428  1442 D BluetoothAdapterState: Current state: OFF, message: 0
+01-01 00:02:06.915  1428  1442 D BluetoothAdapterProperties: Setting state to 14
+01-01 00:02:06.915  1428  1442 I BluetoothAdapterState: Bluetooth adapter state changed: 10-> 14
+01-01 00:02:06.915  1428  1442 D BluetoothAdapterService: updateAdapterState() - Broadcasting state to 1 receivers.
+01-01 00:02:06.916  1428  1442 D BluetoothAdapterService: BleOnProcessStart()
+01-01 00:02:06.916   546   565 D BluetoothManagerService: MESSAGE_BLUETOOTH_STATE_CHANGE: OFF > BLE_TURNING_ON
+01-01 00:02:06.916   546   565 D BluetoothManagerService: Sending BLE State Change: OFF > BLE_TURNING_ON
+01-01 00:02:06.916  1428  1442 D BluetoothAdapterService: BleOnProcessStart() - Make Bond State Machine
+01-01 00:02:06.917  1428  1442 D BluetoothBondStateMachine: make
+01-01 00:02:06.920  1428  1445 I BluetoothBondStateMachine: StableState(): Entering Off State
+01-01 00:02:06.920  1428  1442 D BluetoothAdapterService: setProfileServiceState() - Starting service com.android.bluetooth.gatt.GattService
+01-01 00:02:06.926  1428  1428 I BtGatt.JNI: classInitNative(L922): classInitNative: Success!
+01-01 00:02:06.927  1428  1442 I BluetoothAdapterState: Entering PendingCommandState
+01-01 00:02:06.931  1428  1428 D BtGatt.DebugUtils: handleDebugAction() action=null
+01-01 00:02:06.932  1428  1428 D BluetoothAdapterService: getAdapterService() - returning com.android.bluetooth.btservice.AdapterService@5e3f566
+01-01 00:02:06.932  1428  1428 D BtGatt.GattService: Received start request. Starting profile...
+01-01 00:02:06.932  1428  1428 D BtGatt.GattService: start()
+01-01 00:02:06.932  1428  1428 D BlueZ   : external/bluetooth/bluez/android/hal-bluetooth.c:get_profile_interface()  Aravinth: profile_id:gatt
+01-01 00:02:06.933  1428  1428 D BlueZ   : external/bluetooth/bluez/android/hal-bluetooth.c:get_profile_interface()  Aravinth: interface_ready:1
+01-01 00:02:06.933  1428  1428 D BlueZ   : external/bluetooth/bluez/android/hal-bluetooth.c:get_profile_interface()  Aravinth: 1
+01-01 00:02:06.933  1428  1428 D BlueZ   : external/bluetooth/bluez/android/hal-gatt.c:init()  Aravinth:0
+01-01 00:02:06.936  1443  1443 I bluetoothd: gatt: LE: enabled BR/EDR: enabled
+01-01 00:02:06.936  1443  1443 I bluetoothd: Service ID=9 registered
+01-01 00:02:06.936  1428  1428 D BlueZ   : external/bluetooth/bluez/android/hal-gatt.c:init()  Aravinth: ret:0
+01-01 00:02:06.936  1428  1444 D BlueZ   : external/bluetooth/bluez/android/hal-bluetooth.c:handle_adapter_props_changed() 
+01-01 00:02:06.936  1428  1444 D BlueZ   : external/bluetooth/bluez/android/hal-utils.c:btproperty2str()  Aravinth: property->type=3
+01-01 00:02:06.936  1428  1444 D BlueZ   : external/bluetooth/bluez/android/hal-bluetooth.c:adapter_props_to_hal() prop[0]: type=BT_PROPERTY_UUIDS len=80 val={00001801, 0000180a, 00001800, 0000113b, 00001200}
+01-01 00:02:06.936  1428  1444 I BluetoothAdapterProperties: adapterPropertyChangedCallback with type:3 len:80
+01-01 00:02:06.937  1428  1428 D BluetoothAdapterService: getAdapterService() - returning com.android.bluetooth.btservice.AdapterService@5e3f566
+01-01 00:02:06.937  1428  1428 D BtGatt.AdvertiseManager: advertise manager created
+01-01 00:02:06.937  1428  1444 D BlueZ   : external/bluetooth/bluez/android/hal-bluetooth.c:handle_adapter_props_changed() 
+01-01 00:02:06.937  1428  1444 D BlueZ   : external/bluetooth/bluez/android/hal-utils.c:btproperty2str()  Aravinth: property->type=3
+01-01 00:02:06.937  1428  1444 D BlueZ   : external/bluetooth/bluez/android/hal-bluetooth.c:adapter_props_to_hal() prop[0]: type=BT_PROPERTY_UUIDS len=80 val={00001801, 0000180a, 00001800, 0000113b, 00001200}
+01-01 00:02:06.937  1428  1444 I BluetoothAdapterProperties: adapterPropertyChangedCallback with type:3 len:80
+01-01 00:02:06.937  1428  1444 D BlueZ   : external/bluetooth/bluez/android/hal-bluetooth.c:handle_adapter_props_changed() 
+01-01 00:02:06.937  1428  1444 D BlueZ   : external/bluetooth/bluez/android/hal-utils.c:btproperty2str()  Aravinth: property->type=3
+01-01 00:02:06.938  1428  1444 D BlueZ   : external/bluetooth/bluez/android/hal-bluetooth.c:adapter_props_to_hal() prop[0]: type=BT_PROPERTY_UUIDS len=80 val={00001801, 0000180a, 00001800, 0000113b, 00001200}
+01-01 00:02:06.938  1428  1444 I BluetoothAdapterProperties: adapterPropertyChangedCallback with type:3 len:80
+01-01 00:02:06.944  1428  1428 D BluetoothAdapterService: getAdapterService() - returning com.android.bluetooth.btservice.AdapterService@5e3f566
+01-01 00:02:06.945  1428  1428 D BluetoothAdapterService: handleMessage() - Message: 1
+01-01 00:02:06.945  1428  1428 D BluetoothAdapterService: handleMessage() - MESSAGE_PROFILE_SERVICE_STATE_CHANGED
+01-01 00:02:06.946  1428  1428 D BluetoothAdapterService: processProfileServiceStateChanged() serviceName=com.android.bluetooth.gatt.GattService, state=12, doUpdate=true
+01-01 00:02:06.946  1428  1428 V BluetoothAdapterState: isTurningOff()=false
+01-01 00:02:06.946  1428  1428 V BluetoothAdapterState: isTurningOn()=false
+01-01 00:02:06.946  1428  1428 V BluetoothAdapterState: isBleTurningOn()=true
+01-01 00:02:06.946  1428  1428 V BluetoothAdapterState: isBleTurningOff()=false
+01-01 00:02:06.947  1428  1428 D BluetoothAdapterService: processProfileServiceStateChanged() - serviceName=com.android.bluetooth.gatt.GattService isTurningOn=false isTurningOff=false isBleTurningOn=true isBleTurningOff=false
+01-01 00:02:06.947  1428  1428 D BluetoothAdapterService: GattService is started
+01-01 00:02:06.947  1428  1442 D BluetoothAdapterState: Current state: PENDING_COMMAND, message: 4
+01-01 00:02:06.950  1428  1442 D BlueZ   : external/bluetooth/bluez/android/hal-bluetooth.c:enable() 
+01-01 00:02:06.950  1428  1444 D BlueZ   : external/bluetooth/bluez/android/hal-bluetooth.c:handle_adapter_props_changed() 
+01-01 00:02:06.950  1428  1444 D BlueZ   : external/bluetooth/bluez/android/hal-utils.c:btproperty2str()  Aravinth: property->type=2
+01-01 00:02:06.950  1428  1444 D BlueZ   : external/bluetooth/bluez/android/hal-bluetooth.c:adapter_props_to_hal() prop[0]: type=BT_PROPERTY_BDADDR len=6 val=74:da:38:d6:32:39
+01-01 00:02:06.950  1428  1444 D BlueZ   : external/bluetooth/bluez/android/hal-utils.c:btproperty2str()  Aravinth: property->type=1
+01-01 00:02:06.950  1443  1443 E bluetoothd: Failed to set mode: Blocked through rfkill (0x12)
+01-01 00:02:06.950  1428  1444 D BlueZ   : external/bluetooth/bluez/android/hal-bluetooth.c:adapter_props_to_hal() prop[1]: type=BT_PROPERTY_BDNAME len=13 val=TORADEX-MX6DQ
+01-01 00:02:06.950  1428  1444 D BlueZ   : external/bluetooth/bluez/android/hal-utils.c:btproperty2str()  Aravinth: property->type=4
+01-01 00:02:06.950  1428  1444 D BlueZ   : external/bluetooth/bluez/android/hal-bluetooth.c:adapter_props_to_hal() prop[2]: type=BT_PROPERTY_CLASS_OF_DEVICE len=4 val=000000
+01-01 00:02:06.950  1428  1444 D BlueZ   : external/bluetooth/bluez/android/hal-utils.c:btproperty2str()  Aravinth: property->type=5
+01-01 00:02:06.950  1428  1444 D BlueZ   : external/bluetooth/bluez/android/hal-bluetooth.c:adapter_props_to_hal() prop[3]: type=BT_PROPERTY_TYPE_OF_DEVICE len=4 val=BT_DEVICE_DEVTYPE_DUAL
+01-01 00:02:06.950  1428  1444 D BlueZ   : external/bluetooth/bluez/android/hal-utils.c:btproperty2str()  Aravinth: property->type=7
+01-01 00:02:06.950  1428  1444 D BlueZ   : external/bluetooth/bluez/android/hal-bluetooth.c:adapter_props_to_hal() prop[4]: type=BT_PROPERTY_ADAPTER_SCAN_MODE len=4 val=BT_SCAN_MODE_NONE
+01-01 00:02:06.950  1428  1444 D BlueZ   : external/bluetooth/bluez/android/hal-utils.c:btproperty2str()  Aravinth: property->type=9
+01-01 00:02:06.950  1428  1444 D BlueZ   : external/bluetooth/bluez/android/hal-bluetooth.c:adapter_props_to_hal() prop[5]: type=BT_PROPERTY_ADAPTER_DISCOVERY_TIMEOUT len=4 val=120
+01-01 00:02:06.950  1428  1444 D BlueZ   : external/bluetooth/bluez/android/hal-utils.c:btproperty2str()  Aravinth: property->type=8
+01-01 00:02:06.950  1428  1444 D BlueZ   : external/bluetooth/bluez/android/hal-bluetooth.c:adapter_props_to_hal() prop[6]: type=BT_PROPERTY_ADAPTER_BONDED_DEVICES len=0 val={}
+01-01 00:02:06.950  1428  1444 D BlueZ   : external/bluetooth/bluez/android/hal-utils.c:btproperty2str()  Aravinth: property->type=3
+01-01 00:02:06.950  1428  1444 D BlueZ   : external/bluetooth/bluez/android/hal-bluetooth.c:adapter_props_to_hal() prop[7]: type=BT_PROPERTY_UUIDS len=80 val={00001801, 0000180a, 00001800, 0000113b, 00001200}
+01-01 00:02:06.951  1428  1444 D BlueZ   : external/bluetooth/bluez/android/hal-utils.c:btproperty2str()  Aravinth: property->type=13
+01-01 00:02:06.951  1428  1444 D BlueZ   : external/bluetooth/bluez/android/hal-utils.c:local_le_feat2string()  Aravinth: 1
+01-01 00:02:06.951  1428  1444 D BlueZ   : external/bluetooth/bluez/android/hal-bluetooth.c:adapter_props_to_hal() prop[8]: type=BT_PROPERTY_LOCAL_LE_FEATURES len=8 val={
+01-01 00:02:06.951  1428  1444 D BlueZ   : Privacy supported: FALSE,
+01-01 00:02:06.951  1428  1444 D BlueZ   : Num of advertising instances: 0,
+01-01 00:02:06.951  1428  1444 D BlueZ   : PRA offloading support: FALSE,
+01-01 00:02:06.951  1428  1444 D BlueZ   : Num of offloaded IRKs: 0,
+01-01 00:02:06.951  1428  1444 D BlueZ   : Num of offloaded scan filters: 0,
+01-01 00:02:06.951  1428  1444 D BlueZ   : Num of offloaded scan results: 0,
+01-01 00:02:06.951  1428  1444 D BlueZ   : Activity & energy report support: FALSE
+01-01 00:02:06.951  1428  1444 D BlueZ   : }
+01-01 00:02:06.951  1428  1444 I BluetoothAdapterProperties: adapterPropertyChangedCallback with type:2 len:6
+01-01 00:02:06.951  1428  1444 D BluetoothAdapterProperties: Address is:74:DA:38:D6:32:39
+01-01 00:02:06.951  1428  1444 I BluetoothAdapterProperties: adapterPropertyChangedCallback with type:1 len:13
+01-01 00:02:06.953  1428  1444 D BluetoothAdapterProperties: Name is: TORADEX-MX6DQ
+01-01 00:02:06.953   546   546 D BluetoothManagerService: Bluetooth Adapter name changed to TORADEX-MX6DQ
+01-01 00:02:06.953  1428  1444 I BluetoothAdapterProperties: adapterPropertyChangedCallback with type:4 len:4
+01-01 00:02:06.953  1428  1444 D BluetoothAdapterProperties: BT Class:0
+01-01 00:02:06.953   546   546 D BluetoothManagerService: Stored Bluetooth name: TORADEX-MX6DQ
+01-01 00:02:06.953  1428  1444 I BluetoothAdapterProperties: adapterPropertyChangedCallback with type:5 len:4
+01-01 00:02:06.953  1428  1444 E BluetoothAdapterProperties: Property change not handled in Java land:5
+01-01 00:02:06.953  1428  1444 I BluetoothAdapterProperties: adapterPropertyChangedCallback with type:7 len:4
+01-01 00:02:06.955  1428  1444 D BluetoothAdapterProperties: Scan Mode:20
+01-01 00:02:06.955  1428  1444 I BluetoothAdapterProperties: adapterPropertyChangedCallback with type:9 len:4
+01-01 00:02:06.955  1428  1444 D BluetoothAdapterProperties: Discoverable Timeout:120
+01-01 00:02:06.955  1428  1444 I BluetoothAdapterProperties: adapterPropertyChangedCallback with type:8 len:0
+01-01 00:02:06.955  1428  1444 I BluetoothAdapterProperties: adapterPropertyChangedCallback with type:3 len:80
+01-01 00:02:06.955  1428  1444 I BluetoothAdapterProperties: adapterPropertyChangedCallback with type:13 len:8
+01-01 00:02:06.955  1428  1444 D BluetoothAdapterProperties: updateFeatureSupport val:[B@6bae2b5
+01-01 00:02:06.955  1428  1444 D BluetoothAdapterProperties: Aravinth:updateFeatureSupport init
+01-01 00:02:06.956  1428  1444 E BluetoothServiceJni: An exception was thrown by callback 'adapter_properties_callback'.
+01-01 00:02:06.956  1428  1444 W System.err: java.lang.ArrayIndexOutOfBoundsException: length=8; index=9
+01-01 00:02:06.956  1428  1444 W System.err: 	at com.android.bluetooth.btservice.AdapterProperties.updateFeatureSupport(AdapterProperties.java:546)
+01-01 00:02:06.956  1428  1444 W System.err: 	at com.android.bluetooth.btservice.AdapterProperties.adapterPropertyChangedCallback(AdapterProperties.java:527)
+01-01 00:02:06.957  1428  1444 W System.err: 	at com.android.bluetooth.btservice.JniCallbacks.adapterPropertyChangedCallback(JniCallbacks.java:82)
+01-01 00:02:06.957  1428  1444 E BluetoothServiceJni: An exception was thrown by callback1 'adapter_properties_callback'.
+01-01 00:02:06.957  1428  1444 E BluetoothServiceJni: java.lang.ArrayIndexOutOfBoundsException: length=8; index=9
+01-01 00:02:06.957  1428  1444 E BluetoothServiceJni: 	at com.android.bluetooth.btservice.AdapterProperties.updateFeatureSupport(AdapterProperties.java:546)
+01-01 00:02:06.957  1428  1444 E BluetoothServiceJni: 	at com.android.bluetooth.btservice.AdapterProperties.adapterPropertyChangedCallback(AdapterProperties.java:527)
+01-01 00:02:06.957  1428  1444 E BluetoothServiceJni: 	at com.android.bluetooth.btservice.JniCallbacks.adapterPropertyChangedCallback(JniCallbacks.java:82)
+01-01 00:02:09.683   271   301 W audio_hw_primary: do_out_standby... -1271056640
+01-01 00:02:18.962  1428  1442 D BluetoothAdapterState: Current state: PENDING_COMMAND, message: 101
+01-01 00:02:18.962  1428  1442 E BluetoothAdapterState: Error enabling Bluetooth (enable tiinit: Service 'bluetoothd' (pid 1443) exited with status 0
+meout)
+01-01 00:02:18.963  1428  1442 D BluetoothAdapterProperties: Setting state to 10
+01-01 00:02:18.963  1428  1442 I BluetoothAdapterState: Bluetooth adapter state changed: 14-> 10
+01-01 00:02:18.963  1428  1442 D BluetoothAdapterService: updateAdapterState() - Broadcasting state to 1 receivers.
+01-01 00:02:18.963   546   565 D BluetoothManagerService: MESSAGE_BLUETOOTH_STATE_CHANGE: BLE_TURNING_ON > OFF
+01-01 00:02:18.964   546   565 D BluetoothManagerService: Bluetooth is complete send Service Down
+01-01 00:02:18.964  1428  1442 I BluetoothAdapterState: Entering OffState
+01-01 00:02:18.964   546   565 D BluetoothManagerService: Broadcasting onBluetoothServiceDown() to 5 receivers.
+01-01 00:02:18.964   546   565 D BluetoothAdapter: onBluetoothServiceDown: android.bluetooth.IBluetooth$Stub$Proxy@7321801
+01-01 00:02:18.965   809  1410 D BluetoothAdapter: onBluetoothServiceDown: android.bluetooth.IBluetooth$Stub$Proxy@8f00aa3
+01-01 00:02:18.965   546   565 D BluetoothManagerService: unbindAndFinish(): android.bluetooth.IBluetooth$Stub$Proxy@7321801 mBinding = false mUnbinding = false
+01-01 00:02:18.965  1428  1440 D BluetoothAdapter: onBluetoothServiceDown: com.android.bluetooth.btservice.AdapterService$AdapterServiceBinder@c3590fd
+01-01 00:02:18.965   657   684 D BluetoothAdapter: onBluetoothServiceDown: android.bluetooth.IBluetooth$Stub$Proxy@fb0037
+01-01 00:02:18.965   739   751 D BluetoothAdapter: onBluetoothServiceDown: android.bluetooth.IBluetooth$Stub$Proxy@44abaf1
+01-01 00:02:18.971   546   565 D BluetoothManagerService: Sending BLE State Change: BLE_TURNING_ON > OFF
+01-01 00:02:18.972  1428  1428 D BluetoothAdapterService: onUnbind() - calling cleanup
+01-01 00:02:18.972  1428  1428 D BluetoothAdapterService: cleanup()
+01-01 00:02:18.974  1428  1428 W BluetoothSdpJni: Cleaning up Bluetooth SDP object
+01-01 00:02:18.974  1428  1428 D BluetoothAdapterService: cleanup() - Cleaning up adapter native
+01-01 00:02:18.974  1428  1428 D BlueZ   : external/bluetooth/bluez/android/hal-bluetooth.c:cleanup() 
+01-01 00:02:18.974  1443  1443 I bluetoothd: IPC: command socket closed
+01-01 00:02:18.975  1443  1443 I bluetoothd: Switching controller off
+01-01 00:02:18.976  1443  1443 I bluetoothd: Stopping SDP server
+01-01 00:02:18.977  1443  1443 I bluetoothd: Exit
+01-01 00:02:18.979  1428  1444 D BlueZ   : external/bluetooth/bluez/android/hal-ipc.c:notification_handler() exit
+01-01 00:02:18.980  1428  1428 I BluetoothServiceJni: cleanupNative: return from cleanup
+01-01 00:02:18.984  1428  1428 I art     : System.exit called, status: 0
+01-01 00:02:18.985  1428  1428 I AndroidRuntime: VM exiting with result code 0, cleanup skipped.
+01-01 00:02:19.061   546   556 I ActivityManager: Process com.android.bluetooth (pid 1428) has died
+01-01 00:02:19.061   546   556 D ActivityManager: cleanUpApplicationRecord -- 1428
+01-01 00:02:19.062   546   556 W ActivityManager: Scheduling restart of crashed service com.android.bluetooth/.gatt.GattService in 1000ms
+
+
+U-Boot 2017.03-00002-gebf9dc2527 (Jan 29 2018 - 17:39:17 +0530)
+
+CPU:   Freescale i.MX6Q rev1.5 at 792 MHz
+Reset cause: POR
+I2C:   ready
+DRAM:  2 GiB
+PMIC: device id: 0x10, revision id: 0x21
+PMIC: programmed
+MMC:   FSL_SDHC: 0, FSL_SDHC: 1, FSL_SDHC: 2
+Unable to allocate framebuffer memory
+In:    serial
+Out:   serial
+Err:   serial
+Model: Toradex Apalis iMX6 Quad 2GB IT V1.1C, Serial# 05146387
+flash target is MMC:0
+Net:   using PHY at 7
+FEC [PRIME]
+Fastboot: Normal
+Hit any key to stop autoboot:  1  0 
+Apalis iMX6 # bmode usb
+resetting ...
+
+
+U-Boot 2017.03-dirty (Dec 14 2017 - 17:25:07 +0530)
+
+CPU:   Freescale i.MX6Q rev1.5 at 792 MHz
+Reset cause: WDOG
+I2C:   ready
+DRAM:  2 GiB
+PMIC: device id: 0x10, revision id: 0x21
+PMIC: programmed
+MMC:   FSL_SDHC: 0, FSL_SDHC: 1, FSL_SDHC: 2
+auto-detected panel HDMI
+Aravinth: Display: HDMI (1024x768)
+In:    serial
+Out:   serial
+Err:   serial
+Model: Toradex Apalis iMX6 Quad 2GB IT V1.1C, Serial# 05146387
+Net:   using PHY at 7
+FEC [PRIME]
+Boot from USB for mfgtools
+Use default environment for 				 mfgtools
+Run bootcmd_mfg: run mfgtool_args;bootz 0x12000000 0x12C00000 0x18000000;
+Hit any key to stop autoboot:  0 
+Kernel image @ 0x12000000 [ 0x000000 - 0x5f06e8 ]
+## Loading init Ramdisk from Legacy Image at 12c00000 ...
+   Image Name:   fsl-image-mfgtool-initramfs-imx6
+   Image Type:   ARM Linux RAMDisk Image (gzip compressed)
+   Data Size:    8597466 Bytes = 8.2 MiB
+   Load Address: 00000000
+   Entry Point:  00000000
+   Verifying Checksum ... OK
+## Flattened Device Tree blob at 18000000
+   Booting using the fdt blob at 0x18000000
+   Using Device Tree in place at 18000000, end 180102d8
+
+Starting kernel ...
+
+Booting Linux on physical CPU 0x0
+Linux version 4.9.67+ (embadmin@ubuntu) (gcc version 4.9 20150123 (prerelease) (GCC) ) #9 SMP PREEMPT Fri Dec 22 16:56:14 IST 2017
+CPU: ARMv7 Processor [412fc09a] revision 10 (ARMv7), cr=10c5387d
+CPU: PIPT / VIPT nonaliasing data cache, VIPT aliasing instruction cache
+OF: fdt:Machine model: Aravinth Toradex Apalis iMX6Q/D Module on Ixora V1.1 Carrier Board
+cma: Reserved 320 MiB at 0x6c000000
+Memory policy: Data cache writealloc
+percpu: Embedded 14 pages/cpu @daef7000 s25728 r8192 d23424 u57344
+Built 1 zonelists in Zone order, mobility grouping on.  Total pages: 520704
+Kernel command line: console=ttymxc0,115200 rdinit=/linuxrc g_mass_storage.stall=0 g_mass_storage.removable=1 g_mass_storage.file=/fat g_mass_storage.ro=1 g_mass_storage.idVendor=0x066F g_mass_storage.idProduct=0x37FF g_mass_storage.iSerialNumber= enable_wait_mode=off
+PID hash table entries: 4096 (order: 2, 16384 bytes)
+Dentry cache hash table entries: 262144 (order: 8, 1048576 bytes)
+Inode-cache hash table entries: 131072 (order: 7, 524288 bytes)
+Memory: 1728936K/2097152K available (8192K kernel code, 334K rwdata, 2548K rodata, 1024K init, 448K bss, 40536K reserved, 327680K cma-reserved, 262144K highmem)
+Virtual kernel memory layout:
+    vector  : 0xffff0000 - 0xffff1000   (   4 kB)
+    fixmap  : 0xffc00000 - 0xfff00000   (3072 kB)
+    vmalloc : 0xf0800000 - 0xff800000   ( 240 MB)
+    lowmem  : 0x80000000 - 0xf0000000   (1792 MB)
+    pkmap   : 0x7fe00000 - 0x80000000   (   2 MB)
+    modules : 0x7f000000 - 0x7fe00000   (  14 MB)
+      .text : 0x80008000 - 0x80900000   (9184 kB)
+      .init : 0x80c00000 - 0x80d00000   (1024 kB)
+      .data : 0x80d00000 - 0x80d539c0   ( 335 kB)
+       .bss : 0x80d539c0 - 0x80dc3aac   ( 449 kB)
+SLUB: HWalign=64, Order=0-3, MinObjects=0, CPUs=4, Nodes=1
+Preemptible hierarchical RCU implementation.
+	Build-time adjustment of leaf fanout to 32.
+NR_IRQS:16 nr_irqs:16 16
+L2C-310 errata 752271 769419 enabled
+L2C-310 enabling early BRESP for Cortex-A9
+L2C-310 full line of zeros enabled for Cortex-A9
+L2C-310 ID prefetch enabled, offset 16 lines
+L2C-310 dynamic clock gating enabled, standby mode enabled
+L2C-310 cache controller enabled, 16 ways, 1024 kB
+L2C-310: CACHE_ID 0x410000c7, AUX_CTRL 0x76470001
+Switching to timer-based delay loop, resolution 333ns
+sched_clock: 32 bits at 3000kHz, resolution 333ns, wraps every 715827882841ns
+clocksource: mxc_timer1: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 637086815595 ns
+Console: colour dummy device 80x30
+Calibrating delay loop (skipped), value calculated using timer frequency.. 6.00 BogoMIPS (lpj=30000)
+pid_max: default: 32768 minimum: 301
+Mount-cache hash table entries: 4096 (order: 2, 16384 bytes)
+Mountpoint-cache hash table entries: 4096 (order: 2, 16384 bytes)
+CPU: Testing write buffer coherency: ok
+CPU0: update cpu_capacity 1024
+CPU0: thread -1, cpu 0, socket 0, mpidr 80000000
+Setting up static identity map for 0x10100000 - 0x10100070
+CPU1: update cpu_capacity 1024
+CPU1: thread -1, cpu 1, socket 0, mpidr 80000001
+CPU2: update cpu_capacity 1024
+CPU2: thread -1, cpu 2, socket 0, mpidr 80000002
+CPU3: update cpu_capacity 1024
+CPU3: thread -1, cpu 3, socket 0, mpidr 80000003
+Brought up 4 CPUs
+SMP: Total of 4 processors activated (24.00 BogoMIPS).
+CPU: All CPU(s) started in SVC mode.
+devtmpfs: initialized
+VFP support v0.3: implementor 41 architecture 3 part 30 variant 9 rev 4
+clocksource: jiffies: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 19112604462750000 ns
+futex hash table entries: 1024 (order: 4, 65536 bytes)
+pinctrl core: initialized pinctrl subsystem
+NET: Registered protocol family 16
+DMA: preallocated 256 KiB pool for atomic coherent allocations
+cpuidle: using governor menu
+CPU identified as i.MX6Q, silicon rev 1.5
+hw-breakpoint: found 5 (+1 reserved) breakpoint and 1 watchpoint registers.
+hw-breakpoint: maximum watchpoint size is 4 bytes.
+imx6q-pinctrl 20e0000.iomuxc: initialized IMX pinctrl driver
+imx-gpc 20dc000.gpc: no fsl,ldo-bypass found!
+imx-gpc 20dc000.gpc: Registered imx-gpc
+mxs-dma 110000.dma-apbh: initialized
+usb_host_vbus: supplied by usb_host_vbus_hub
+SCSI subsystem initialized
+usbcore: registered new interface driver usbfs
+usbcore: registered new interface driver hub
+usbcore: registered new device driver usb
+2000000.aips-bus:usbphy_nop1 supply vcc not found, using dummy regulator
+2000000.aips-bus:usbphy_nop2 supply vcc not found, using dummy regulator
+i2c i2c-1: IMX I2C adapter registered
+i2c i2c-1: can't use DMA, using PIO instead.
+stmpe-i2c 2-0041: stmpe811 detected, chip id: 0x811
+i2c i2c-2: IMX I2C adapter registered
+i2c i2c-2: can't use DMA, using PIO instead.
+i2c i2c-3: IMX I2C adapter registered
+i2c i2c-3: can't use DMA, using PIO instead.
+Linux video capture interface: v2.00
+pps_core: LinuxPPS API ver. 1 registered
+pps_core: Software ver. 5.3.6 - Copyright 2005-2007 Rodolfo Giometti <giometti@linux.it>
+PTP clock support registered
+imx-ipuv3 2400000.ipu: IPU DMFC NORMAL mode: 1(0~1), 5B(4,5), 5F(6,7)
+imx-ipuv3 2800000.ipu: IPU DMFC NORMAL mode: 1(0~1), 5B(4,5), 5F(6,7)
+imx rpmsg driver is registered.
+Advanced Linux Sound Architecture Driver Initialized.
+clocksource: Switched to clocksource mxc_timer1
+VFS: Disk quotas dquot_6.6.0
+VFS: Dquot-cache hash table entries: 1024 (order 0, 4096 bytes)
+NET: Registered protocol family 2
+TCP established hash table entries: 16384 (order: 4, 65536 bytes)
+TCP bind hash table entries: 16384 (order: 5, 131072 bytes)
+TCP: Hash tables configured (established 16384 bind 16384)
+UDP hash table entries: 1024 (order: 3, 32768 bytes)
+UDP-Lite hash table entries: 1024 (order: 3, 32768 bytes)
+NET: Registered protocol family 1
+RPC: Registered named UNIX socket transport module.
+RPC: Registered udp transport module.
+RPC: Registered tcp transport module.
+RPC: Registered tcp NFSv4.1 backchannel transport module.
+Trying to unpack rootfs image as initramfs...
+Freeing initrd memory: 8400K
+hw perfevents: enabled with armv7_cortex_a9 PMU driver, 7 counters available
+Bus freq driver module loaded
+workingset: timestamp_bits=30 max_order=19 bucket_order=0
+NFS: Registering the id_resolver key type
+Key type id_resolver registered
+Key type id_legacy registered
+jffs2: version 2.2. (NAND) © 2001-2006 Red Hat, Inc.
+fuse init (API version 7.26)
+bounce: pool size: 64 pages
+io scheduler noop registered
+io scheduler deadline registered
+io scheduler cfq registered (default)
+backlight supply power not found, using dummy regulator
+Aravinth: mxcfb_probe ---->
+mxc_sdc_fb fb@0: NO mxc display driver found!
+Aravinth: mxcfb_probe ---->
+mxc_sdc_fb fb@1: NO mxc display driver found!
+Aravinth: mxcfb_probe ---->
+mxc_sdc_fb fb@2: registered mxc display driver lcd
+Console: switching to colour frame buffer device 100x30
+Aravinth: mxcfb_probe Done ---->
+Aravinth: mxcfb_probe ---->
+mxc_sdc_fb fb@3: NO mxc display driver found!
+imx-sdma 20ec000.sdma: no iram assigned, using external mem
+imx-sdma 20ec000.sdma: loaded firmware 3.3
+pfuze100-regulator 2-0008: Full layer: 2, Metal layer: 1
+pfuze100-regulator 2-0008: FAB: 0, FIN: 0
+pfuze100-regulator 2-0008: pfuze100 found.
+2020000.serial: ttymxc0 at MMIO 0x2020000 (irq = 29, base_baud = 5000000) is a IMX
+console [ttymxc0] enabled
+21e8000.serial: ttymxc1 at MMIO 0x21e8000 (irq = 78, base_baud = 5000000) is a IMX
+21f0000.serial: ttymxc3 at MMIO 0x21f0000 (irq = 79, base_baud = 5000000) is a IMX
+21f4000.serial: ttymxc4 at MMIO 0x21f4000 (irq = 80, base_baud = 5000000) is a IMX
+imx sema4 driver is registered.
+[drm] Initialized
+[drm] Initialized vivante 1.0.0 20120216 on minor 0
+brd: module loaded
+loop: module loaded
+ahci-imx 2200000.sata: fsl,transmit-level-mV not specified, using 00000024
+ahci-imx 2200000.sata: fsl,transmit-boost-mdB not specified, using 00000480
+ahci-imx 2200000.sata: fsl,transmit-atten-16ths not specified, using 00002000
+ahci-imx 2200000.sata: fsl,receive-eq-mdB not specified, using 05000000
+ahci-imx 2200000.sata: SSS flag set, parallel bus scan disabled
+ahci-imx 2200000.sata: AHCI 0001.0300 32 slots 1 ports 3 Gbps 0x1 impl platform mode
+ahci-imx 2200000.sata: flags: ncq sntf stag pm led clo only pmp pio slum part ccc apst 
+scsi host0: ahci-imx
+ata1: SATA max UDMA/133 mmio [mem 0x02200000-0x02203fff] port 0x100 irq 87
+spi_imx 2008000.ecspi: probed
+libphy: Fixed MDIO Bus: probed
+2188000.ethernet supply phy not found, using dummy regulator
+pps pps0: new PPS source ptp0
+libphy: fec_enet_mii_bus: probed
+fec 2188000.ethernet eth0: registered PHC device 0
+ehci_hcd: USB 2.0 'Enhanced' Host Controller (EHCI) Driver
+ehci-mxc: Freescale On-Chip EHCI Host driver
+usbcore: registered new interface driver usb-storage
+2184800.usbmisc supply vbus-wakeup not found, using dummy regulator
+ci_hdrc ci_hdrc.1: EHCI Host Controller
+ci_hdrc ci_hdrc.1: new USB bus registered, assigned bus number 1
+ci_hdrc ci_hdrc.1: USB 2.0 started, EHCI 1.00
+hub 1-0:1.0: USB hub found
+hub 1-0:1.0: 1 port detected
+Mass Storage Function, version: 2009/09/11
+LUN: removable file: (no medium)
+LUN: removable read only file: /fat
+Number of LUNs=1
+g_mass_storage gadget: Mass Storage Gadget, version: 2009/09/11
+g_mass_storage gadget: g_mass_storage ready
+mousedev: PS/2 mouse device common for all mice
+input: stmpe-ts as /devices/soc0/soc/2100000.aips-bus/21a4000.i2c/i2c-2/2-0041/stmpe-ts/input/input0
+snvs_rtc 20cc000.snvs:snvs-rtc-lp: rtc core: registered 20cc000.snvs:snvs-r as rtc0
+i2c /dev entries driver
+IR NEC protocol handler initialized
+IR RC5(x/sz) protocol handler initialized
+IR RC6 protocol handler initialized
+IR JVC protocol handler initialized
+IR Sony protocol handler initialized
+IR SANYO protocol handler initialized
+IR Sharp protocol handler initialized
+IR MCE Keyboard/mouse protocol handler initialized
+IR XMP protocol handler initialized
+imx2-wdt 20bc000.wdog: timeout 60 sec (nowayout=0)
+sdhci: Secure Digital Host Controller Interface driver
+sdhci: Copyright(c) Pierre Ossman
+sdhci-pltfm: SDHCI platform and OF driver helper
+sdhci-esdhc-imx 2190000.usdhc: could not get ultra high speed state, work on normal mode
+sdhci-esdhc-imx 2190000.usdhc: Got CD GPIO
+ata1: SATA link down (SStatus 0 SControl 300)
+ahci-imx 2200000.sata: no device found, disabling link.
+ahci-imx 2200000.sata: pass ahci_imx..hotplug=1 to enable hotplug
+mmc1: SDHCI controller on 2190000.usdhc [2190000.usdhc] using ADMA
+sdhci-esdhc-imx 2198000.usdhc: could not get ultra high speed state, work on normal mode
+g_mass_storage gadget: high-speed config #1: Linux File-Backed Storage
+mmc0: SDHCI controller on 2198000.usdhc [2198000.usdhc] using ADMA
+mxc_vpu 2040000.vpu_fsl: VPU initialized
+mxc_vdoa 21e4000.vdoa: i.MX Video Data Order Adapter(VDOA) driver probed
+usbcore: registered new interface driver usbhid
+usbhid: USB HID core driver
+random: fast init done
+sgtl5000 2-000a: sgtl5000 revision 0x11
+fsl-ssi-dai 2028000.ssi: No cache defaults, reading back from HW
+usb 1-1: new high-speed USB device number 2 using ci_hdrc
+mmc0: new DDR MMC card at address 0001
+mmcblk0: mmc0:0001 Q2J54A 3.59 GiB 
+mmcblk0boot0: mmc0:0001 Q2J54A partition 1 16.0 MiB
+mmcblk0boot1: mmc0:0001 Q2J54A partition 2 16.0 MiB
+Alternate GPT is invalid, using primary GPT.
+ mmcblk0: p1 p2 p3 p4 p5 p6 p7 p8 p9 p10 p11
+imx-sgtl5000 sound: sgtl5000 <-> 2028000.ssi mapping ok
+imx-spdif sound-spdif: snd-soc-dummy-dai <-> 2004000.spdif mapping ok
+NET: Registered protocol family 10
+sit: IPv6, IPv4 and MPLS over IPv4 tunneling driver
+NET: Registered protocol family 17
+Key type dns_resolver registered
+cpu cpu0: Registered imx6q-cpufreq
+Registering SWP/SWPB emulation handler
+imx_thermal 2000000.aips-bus:tempmon: Industrial CPU temperature grade - max:105C critical:100C passive:95C
+input: gpio-keys as /devices/soc0/gpio-keys/input/input1
+hub 1-1:1.0: USB hub found
+hub 1-1:1.0: 4 ports detected
+snvs_rtc 20cc000.snvs:snvs-rtc-lp: setting system clock to 1970-01-01 00:00:00 UTC (0)
+usb_otg_vbus: disabling
+ALSA device list:
+  #0: imx6q-apalis-sgtl5000
+  #1: imx-spdif
+Freeing unused kernel memory: 1024K
+Starting UTP
+uuc 0.5 [built Apr 27 2017 13:40:16]
+UTP: Waiting for device to appear
+UTP: file/device node /dev/utp already exists
+cpu_id is 0
+UTP: received command '$ while [ ! -e /dev/mmcblk0 ]; do sleep 1; echo waiting...; done '
+UTP: executing "while [ ! -e /dev/mmcblk0 ]; do sleep 1; echo waiting...; done "
+UTP: sending Success to kernel for command $ while [ ! -e /dev/mmcblk0 ]; do sleep 1; echo waiting...; done .
+usb 1-1.2: new low-speed USB device number 3 using ci_hdrc
+utp_poll: pass returned.
+UTP: received command '$ ls -l /dev/mmc* '
+UTP: executing "ls -l /dev/mmc* "
+brw------- 1 root root 179,  0 Jan  1 00:00 /dev/mmcblk0
+brw------- 1 root root 179, 16 Jan  1 00:00 /dev/mmcblk0boot0
+brw------- 1 root root 179, 32 Jan  1 00:00 /dev/mmcblk0boot1
+brw------- 1 root root 179,  1 Jan  1 00:00 /dev/mmcblk0p1
+brw------- 1 root root 179, 10 Jan  1 00:00 /dev/mmcblk0p10
+brw------- 1 root root 179, 11 Jan  1 00:00 /dev/mmcblk0p11
+brw------- 1 root root 179,  2 Jan  1 00:00 /dev/mmcblk0p2
+brw------- 1 root root 179,  3 Jan  1 00:00 /dev/mmcblk0p3
+brw------- 1 root root 179,  4 Jan  1 00:00 /dev/mmcblk0p4
+brw------- 1 root root 179,  5 Jan  1 00:00 /dev/mmcblk0p5
+brw------- 1 root root 179,  6 Jan  1 00:00 /dev/mmcblk0p6
+brw------- 1 root root 179,  7 Jan  1 0input: PixArt Dell MS116 USB Optical Mouse as /devices/soc0/soc/2100000.aips-bus/2184200.usb/ci_hdrc.1/usb1/1-1/1-1.2/1-1.2:1.0/0003:413C:301A.0001/input/input2
+0:00 /dev/mmcblk0p7
+brw------- 1hid-generic 0003:413C:301A.0001: input: USB HID v1.11 Mouse [PixArt Dell MS116 USB Optical Mouse] on usb-ci_hdrc.1-1.2/input0
+ root root 179,  8 Jan  1 00:00 /dev/mmcblk0p8
+brw------- 1 root root 179,  9 Jan  1 00:00 /dev/mmcblk0p9
+UTP: sending Success to kernel for command $ ls -l /dev/mmc* .
+usb 1-1.3: new high-speed USB device number 4 using ci_hdrc
+utp_poll: pass returned.
+UTP: received command '$ dd if=/dev/zero of=/dev/mmcblk0 bs=1k seek=768 conv=fsync count=136'
+UTP: executing "dd if=/dev/zero of=/dev/mmcblk0 bs=1k seek=768 conv=fsync count=136"
+136+0 records in
+136+0 records out
+139264 bytes (139 kB, 136 KiB) copied, 0.3967 s, 351 kB/s
+UTP: sending Success to kernel for command $ dd if=/dev/zero of=/dev/mmcblk0 bs=1k seek=768 conv=fsync count=136.
+utp_poll: pass returned.
+UTP: received command '$ echo 0 > /sys/block/mmcblk0boot0/force_ro'
+UTP: executing "echo 0 > /sys/block/mmcblk0boot0/force_ro"
+UTP: sending Success to kernel for command $ echo 0 > /sys/block/mmcblk0boot0/force_ro.
+utp_poll: pass returned.
+UTP: received command 'send'
+UTP: sending Success to kernel for command send.
+UTP: received command '$ dd if=$FILE of=/dev/mmcblk0boot0 bs=512 seek=2'
+UTP: executing "dd if=$FILE of=/dev/mmcblk0boot0 bs=512 seek=2"
+686+0 records in
+686+0 records out
+351232 bytes (351 kB, 343 KiB) copied, 0.137879 s, 2.5 MB/s
+UTP: sending Success to kernel for command $ dd if=$FILE of=/dev/mmcblk0boot0 bs=512 seek=2.
+utp_poll: pass returned.
+UTP: received command '$ echo 1 > /sys/block/mmcblk0boot0/force_ro'
+UTP: executing "echo 1 > /sys/block/mmcblk0boot0/force_ro"
+UTP: sending Success to kernel for command $ echo 1 > /sys/block/mmcblk0boot0/force_ro.
+utp_poll: pass returned.
+UTP: received command '$ mmc bootpart enable 1 1 /dev/mmcblk0'
+UTP: executing "mmc bootpart enable 1 1 /dev/mmcblk0"
+UTP: sending Success to kernel for command $ mmc bootpart enable 1 1 /dev/mmcblk0.
+utp_poll: pass returned.
+UTP: received command '$ ls -l /dev/mmc* '
+UTP: executing "ls -l /dev/mmc* "
+brw------- 1 root root 179,  0 Jan  1 00:00 /dev/mmcblk0
+brw------- 1 root root 179, 16 Jan  1 00:00 /dev/mmcblk0boot0
+brw------- 1 root root 179, 32 Jan  1 00:00 /dev/mmcblk0boot1
+brw------- 1 root root 179,  1 Jan  1 00:00 /dev/mmcblk0p1
+brw------- 1 root root 179, 10 Jan  1 00:00 /dev/mmcblk0p10
+brw------- 1 root root 179, 11 Jan  1 00:00 /dev/mmcblk0p11
+brw------- 1 root root 179,  2 Jan  1 00:00 /dev/mmcblk0p2
+brw------- 1 root root 179,  3 Jan  1 00:00 /dev/mmcblk0p3
+brw------- 1 root root 179,  4 Jan  1 00:00 /dev/mmcblk0p4
+brw------- 1 root root 179,  5 Jan  1 00:00 /dev/mmcblk0p5
+brw------- 1 root root 179,  6 Jan  1 00:00 /dev/mmcblk0p6
+brw------- 1 root root 179,  7 Jan  1 00:00 /dev/mmcblk0p7
+brw------- 1 root root 179,  8 Jan  1 00:00 /dev/mmcblk0p8
+brw------- 1 root root 179,  9 Jan  1 00:00 /dev/mmcblk0p9
+UTP: sending Success to kernel for command $ ls -l /dev/mmc* .
+utp_poll: pass returned.
+UTP: received command 'send'
+UTP: sending Success to kernel for command send.
+UTP: received command '$ dd if=$FILE of=/dev/mmcblk0'
+UTP: executing "dd if=$FILE of=/dev/mmcblk0"
+67+0 records in
+67+0 records out
+34304 bytes (34 kB, 34 KiB) copied, 0.0150983 s, 2.3 MB/s
+UTP: sending Success to kernel for command $ dd if=$FILE of=/dev/mmcblk0.
+utp_poll: pass returned.
+UTP: received command '$ hdparm -z /dev/mmcblk0'
+UTP: executing "hdparm -z /dev/mmcblk0"
+
+/dev/mmcblk0:
+ re-reading partition table
+Alternate GPT is invalid, using primary GPT.
+ mmcblk0: p1 p2 p3 p4 p5 p6 p7 p8 p9 p10 p11
+UTP: sending Success to kernel for command $ hdparm -z /dev/mmcblk0.
+utp_poll: pass returned.
+UTP: received command '$ gdisk -l /dev/mmcblk0 '
+UTP: executing "gdisk -l /dev/mmcblk0 "
+GPT fdisk (gdisk) version 1.0.1
+
+Caution: invalid backup GPT header, but valid main header; regenerating
+backup header from main header.
+
+Warning! One or more CRCs don't match. You should repair the disk!
+
+Partition table scan:
+  MBR: protective
+  BSD: not present
+  APM: not present
+  GPT: damaged
+
+****************************************************************************
+Caution: Found protective or hybrid MBR and corrupt GPT. Using GPT, but disk
+verification and recovery are STRONGLY recommended.
+****************************************************************************
+Disk /dev/mmcblk0: 7520256 sectors, 3.6 GiB
+Logical sector size: 512 bytes
+Disk identifier (GUID): 19AB8570-19A3-4674-855A-1E10511C9045
+Partition table holds up to 128 entries
+First usable sector is 34, last usable sector is 7339998
+Partitions will be aligned on 2048-sector boundaries
+Total free space is 4029 sectors (2.0 MiB)
+
+Number  Start (sector)    End (sector)  Size       Code  Name
+   1            2048           67583   32.0 MiB    FFFF  boot
+   2           67584          133119   32.0 MiB    8300  recovery
+   3          133120         3278847   1.5 GiB     FFFF  system
+   4         3278848         4327423   512.0 MiB   FFFF  cache
+   5         4327424         4343807   8.0 MiB     FFFF  device
+   6         4343808         4351999   4.0 MiB     FFFF  misc
+   7         4352000         4356095   2.0 MiB     FFFF  datafooter
+   8         4356096         4360191   2.0 MiB     FFFF  metadata
+   9         4360192         4362239   1024.0 KiB  FFFF  presistdata
+  10         4362240         7335935   1.4 GiB     FFFF  userdata
+  11         7335936         7337983   1024.0 KiB  0700  fbmisc
+UTP: sending Success to kernel for command $ gdisk -l /dev/mmcblk0 .
+utp_poll: pass returned.
+UTP: received command 'send'
+UTP: sending Success to kernel for command send.
+UTP: received command '$ echo `gdisk -l /dev/mmcblk0 | grep -w boot | awk '{print $1}'` > /tmp/partIdx'
+UTP: executing "echo `gdisk -l /dev/mmcblk0 | grep -w boot | awk '{print $1}'` > /tmp/partIdx"
+Caution: invalid backup GPT header, but valid main header; regenerating
+backup header from main header.
+
+Warning! One or more CRCs don't match. You should repair the disk!
+
+UTP: sending Success to kernel for command $ echo `gdisk -l /dev/mmcblk0 | grep -w boot | awk '{print $1}'` > /tmp/partIdx.
+utp_poll: pass returned.
+UTP: received command '$ dd if=$FILE of=/dev/mmcblk0p`cat /tmp/partIdx`'
+UTP: executing "dd if=$FILE of=/dev/mmcblk0p`cat /tmp/partIdx`"
+22678+1 records in
+22678+1 records out
+11611432 bytes (12 MB, 11 MiB) copied, 1.83983 s, 6.3 MB/s
+UTP: sending Success to kernel for command $ dd if=$FILE of=/dev/mmcblk0p`cat /tmp/partIdx`.
+utp_poll: pass returned.
+UTP: received command '$ ls -l /dev/mmc* '
+UTP: executing "ls -l /dev/mmc* "
+brw------- 1 root root 179,  0 Jan  1 00:00 /dev/mmcblk0
+brw------- 1 root root 179, 16 Jan  1 00:00 /dev/mmcblk0boot0
+brw------- 1 root root 179, 32 Jan  1 00:00 /dev/mmcblk0boot1
+brw------- 1 root root 179,  1 Jan  1 00:00 /dev/mmcblk0p1
+brw------- 1 root root 179, 10 Jan  1 00:00 /dev/mmcblk0p10
+brw------- 1 root root 179, 11 Jan  1 00:00 /dev/mmcblk0p11
+brw------- 1 root root 179,  2 Jan  1 00:00 /dev/mmcblk0p2
+brw------- 1 root root 179,  3 Jan  1 00:00 /dev/mmcblk0p3
+brw------- 1 root root 179,  4 Jan  1 00:00 /dev/mmcblk0p4
+brw------- 1 root root 179,  5 Jan  1 00:00 /dev/mmcblk0p5
+brw------- 1 root root 179,  6 Jan  1 00:00 /dev/mmcblk0p6
+brw------- 1 root root 179,  7 Jan  1 00:00 /dev/mmcblk0p7
+brw------- 1 root root 179,  8 Jan  1 00:00 /dev/mmcblk0p8
+brw------- 1 root root 179,  9 Jan  1 00:00 /dev/mmcblk0p9
+UTP: sending Success to kernel for command $ ls -l /dev/mmc* .
+utp_poll: pass returned.
+UTP: received command '$ echo `gdisk -l /dev/mmcblk0 | grep -w cache | awk '{print $1}'` > /tmp/partIdx'
+UTP: executing "echo `gdisk -l /dev/mmcblk0 | grep -w cache | awk '{print $1}'` > /tmp/partIdx"
+Caution: invalid backup GPT header, but valid main header; regenerating
+backup header from main header.
+
+Warning! One or more CRCs don't match. You should repair the disk!
+
+UTP: sending Success to kernel for command $ echo `gdisk -l /dev/mmcblk0 | grep -w cache | awk '{print $1}'` > /tmp/partIdx.
+utp_poll: pass returned.
+UTP: received command '$ mkfs.ext4 -F -E nodiscard /dev/mmcblk0p`cat /tmp/partIdx`'
+UTP: executing "mkfs.ext4 -F -E nodiscard /dev/mmcblk0p`cat /tmp/partIdx`"
+mke2fs 1.43 (17-May-2016)
+/dev/mmcblk0p4 contains a ext4 file system
+	last mounted on Thu Jan  1 00:00:07 1970
+Creating filesystem with 131072 4k blocks and 32768 inodes
+Filesystem UUID: f70a807c-59e9-4467-bf0a-9f30d5263406
+Superblock backups stored on blocks: 
+	32768, 98304
+
+Allocating group tables: 0/4   done                            
+Writing inode tables: 0/4   done                            
+Creating journal (4096 blocks): done
+Writing superblocks and filesystem accounting information: 0/4   done
+
+UTP: sending Success to kernel for command $ mkfs.ext4 -F -E nodiscard /dev/mmcblk0p`cat /tmp/partIdx`.
+utp_poll: pass returned.
+UTP: received command '$ echo `gdisk -l /dev/mmcblk0 | grep -w device | awk '{print $1}'` > /tmp/partIdx'
+UTP: executing "echo `gdisk -l /dev/mmcblk0 | grep -w device | awk '{print $1}'` > /tmp/partIdx"
+Caution: invalid backup GPT header, but valid main header; regenerating
+backup header from main header.
+
+Warning! One or more CRCs don't match. You should repair the disk!
+
+UTP: sending Success to kernel for command $ echo `gdisk -l /dev/mmcblk0 | grep -w device | awk '{print $1}'` > /tmp/partIdx.
+utp_poll: pass returned.
+UTP: received command '$ mkfs.ext4 -F -E nodiscard /dev/mmcblk0p`cat /tmp/partIdx`'
+UTP: executing "mkfs.ext4 -F -E nodiscard /dev/mmcblk0p`cat /tmp/partIdx`"
+mke2fs 1.43 (17-May-2016)
+/dev/mmcblk0p5 contains a ext4 file system
+	created on Thu Jan  1 00:00:11 1970
+Creating filesystem with 8192 1k blocks and 2048 inodes
+
+Allocating group tables: 0/1   done                            
+Writing inode tables: 0/1   done                            
+Creating journal (1024 blocks): done
+Writing superblocks and filesystem accounting information: 0/1   done
+
+UTP: sending Success to kernel for command $ mkfs.ext4 -F -E nodiscard /dev/mmcblk0p`cat /tmp/partIdx`.
+utp_poll: pass returned.
+UTP: received command '$ echo `gdisk -l /dev/mmcblk0 | grep -w userdata | awk '{print $1}'` > /tmp/partIdx'
+UTP: executing "echo `gdisk -l /dev/mmcblk0 | grep -w userdata | awk '{print $1}'` > /tmp/partIdx"
+Caution: invalid backup GPT header, but valid main header; regenerating
+backup header from main header.
+
+Warning! One or more CRCs don't match. You should repair the disk!
+
+UTP: sending Success to kernel for command $ echo `gdisk -l /dev/mmcblk0 | grep -w userdata | awk '{print $1}'` > /tmp/partIdx.
+utp_poll: pass returned.
+UTP: received command '$ mkfs.ext4 -F -E nodiscard -b 4096 -m 0 -O ^flex_bg,^uninit_bg /dev/mmcblk0p`cat /tmp/partIdx`'
+UTP: executing "mkfs.ext4 -F -E nodiscard -b 4096 -m 0 -O ^flex_bg,^uninit_bg /dev/mmcblk0p`cat /tmp/partIdx`"
+mke2fs 1.43 (17-May-2016)
+/dev/mmcblk0p10 contains a ext4 file system
+	last mounted on /data on Thu Jan  1 00:00:07 1970
+Creating filesystem with 371712 4k blocks and 92928 inodes
+Filesystem UUID: 472d05da-703d-4b9f-b827-19959f66c3b7
+Superblock backups stored on blocks: 
+	32768, 98304, 163840, 229376, 294912
+
+Allocating group tables:  0/12     done                            
+Writing inode tables:  0/12     done                            
+Creating journal (8192 blocks): done
+Writing superblocks and filesystem accounting information:  0/12     done
+
+UTP: sending Success to kernel for command $ mkfs.ext4 -F -E nodiscard -b 4096 -m 0 -O ^flex_bg,^uninit_bg /dev/mmcblk0p`cat /tmp/partIdx`.
+utp_poll: pass returned.
+UTP: received command '$ mount -o remount,size=1024M rootfs /'
+UTP: executing "mount -o remount,size=1024M rootfs /"
+UTP: sending Success to kernel for command $ mount -o remount,size=1024M rootfs /.
+utp_poll: pass returned.
+UTP: received command 'send'
+UTP: sending Success to kernel for command send.
+random: crng init done
+UTP: received command '$ echo `gdisk -l /dev/mmcblk0 | grep -w system | awk '{print $1}'` > /tmp/partIdx'
+UTP: executing "echo `gdisk -l /dev/mmcblk0 | grep -w system | awk '{print $1}'` > /tmp/partIdx"
+Caution: invalid backup GPT header, but valid main header; regenerating
+backup header from main header.
+
+Warning! One or more CRCs don't match. You should repair the disk!
+
+UTP: sending Success to kernel for command $ echo `gdisk -l /dev/mmcblk0 | grep -w system | awk '{print $1}'` > /tmp/partIdx.
+utp_poll: pass returned.
+UTP: received command '$ simg2img $FILE /dev/mmcblk0p`cat /tmp/partIdx`'
+UTP: executing "simg2img $FILE /dev/mmcblk0p`cat /tmp/partIdx`"
+UTP: sending Success to kernel for command $ simg2img $FILE /dev/mmcblk0p`cat /tmp/partIdx`.
+utp_poll: pass returned.
+UTP: received command 'send'
+UTP: sending Success to kernel for command send.
+UTP: received command '$ echo `gdisk -l /dev/mmcblk0 | grep -w 'recovery$' | awk '{print $1}'` > /tmp/partIdx'
+UTP: executing "echo `gdisk -l /dev/mmcblk0 | grep -w 'recovery$' | awk '{print $1}'` > /tmp/partIdx"
+Caution: invalid backup GPT header, but valid main header; regenerating
+backup header from main header.
+
+Warning! One or more CRCs don't match. You should repair the disk!
+
+UTP: sending Success to kernel for command $ echo `gdisk -l /dev/mmcblk0 | grep -w 'recovery$' | awk '{print $1}'` > /tmp/partIdx.
+utp_poll: pass returned.
+UTP: received command '$ dd if=$FILE of=/dev/mmcblk0p`cat /tmp/partIdx`'
+UTP: executing "dd if=$FILE of=/dev/mmcblk0p`cat /tmp/partIdx`"
+27218+1 records in
+27218+1 records out
+13935916 bytes (14 MB, 13 MiB) copied, 2.19755 s, 6.3 MB/s
+UTP: sending Success to kernel for command $ dd if=$FILE of=/dev/mmcblk0p`cat /tmp/partIdx`.
+utp_poll: pass returned.
+UTP: received command '$ sync'
+UTP: executing "sync"
+UTP: sending Success to kernel for command $ sync.
+utp_poll: pass returned.
+UTP: received command 'frf'
+UTP: closing the file
+UTP: sending Success to kernel for command frf.
+utp_poll: pass returned.
+UTP: received command '$ echo Update Complete!'
+UTP: executing "echo Update Complete!"
+Update Complete!
+UTP: sending Success to kernel for command $ echo Update Complete!.
+utp_poll: pass returned.
+
+
+U-Boot 2017.03-00002-gebf9dc2527 (Jan 29 2018 - 17:39:17 +0530)
+
+CPU:   Freescale i.MX6Q rev1.5 at 792 MHz
+Reset cause: POR
+I2C:   ready
+DRAM:  2 GiB
+PMIC: device id: 0x10, revision id: 0x21
+PMIC: programmed
+MMC:   FSL_SDHC: 0, FSL_SDHC: 1, FSL_SDHC: 2
+Unable to allocate framebuffer memory
+In:    serial
+Out:   serial
+Err:   serial
+Model: Toradex Apalis iMX6 Quad 2GB IT V1.1C, Serial# 05146387
+flash target is MMC:0
+Net:   using PHY at 7
+FEC [PRIME]
+Fastboot: Normal
+Hit any key to stop autoboot:  1  0 
+boota mmc0 
+CACHE: Misaligned operation at range [8ffb79a0, 8ffb7a20]
+CACHE: Misaligned operation at range [8ffb79a0, 8ffb7a20]
+kernel   @ 14008000 (9921576)
+ramdisk  @ 15000000 (1629864)
+fdt      @ 14f00000 (53981)
+## Booting Android Image at 0x12000000 ...
+Kernel load addr 0x14008000 size 9690 KiB
+Kernel command line: console=ttymxc0,115200 init=/init video=mxcfb0:dev=ldb,fbpix=RGB32,bpp=32 video=mxcfb1:dev=hdmi,640x480M@60,if=RGB24,bpp=16 video=mxcfb2:off video=mxcfb3:off vmalloc=256M androidboot.console=ttymxc0 consoleblank=0 androidboot.hardware=freescale cma=448M androidboot.selinux=permissive androidboot.dm_verity=disabled buildvariant=user androidboot.serialno=1b2429d4ea997115 androidboot.storage_type=emmc
+## Flattened Device Tree blob at 14f00000
+   Booting using the fdt blob at 0x14f00000
+   Loading Kernel Image ... OK
+   Using Device Tree in place at 14f00000, end 14f102dc
+
+Starting kernel ...
+
+Booting Linux on physical CPU 0x0
+Linux version 4.9.67-07229-gdc6c16ec0433-dirty (embadmin@ubuntu) (gcc version 4.9 20150123 (prerelease) (GCC) ) #59 SMP PREEMPT Wed Feb 7 18:06:19 IST 2018
+CPU: ARMv7 Processor [412fc09a] revision 10 (ARMv7), cr=10c53c7d
+CPU: PIPT / VIPT nonaliasing data cache, VIPT aliasing instruction cache
+OF: fdt:Machine model: Aravinth : Toradex Apalis iMX6Q/D Module on Ixora V1.1 Carrier Board
+cma: Reserved 448 MiB at 0x22000000
+Memory policy: Data cache writealloc
+percpu: Embedded 15 pages/cpu @ee6b3000 s31040 r8192 d22208 u61440
+Built 1 zonelists in Zone order, mobility grouping on.  Total pages: 522768
+Kernel command line: console=ttymxc0,115200 init=/init video=mxcfb0:dev=ldb,fbpix=RGB32,bpp=32 video=mxcfb1:dev=hdmi,640x480M@60,if=RGB24,bpp=16 video=mxcfb2:off video=mxcfb3:off vmalloc=256M androidboot.console=ttymxc0 consoleblank=0 androidboot.hardware=freescale cma=448M androidboot.selinux=permissive androidboot.dm_verity=disabled buildvariant=user androidboot.serialno=1b2429d4ea997115 androidboot.storage_type=emmc
+PID hash table entries: 4096 (order: 2, 16384 bytes)
+Dentry cache hash table entries: 131072 (order: 7, 524288 bytes)
+Inode-cache hash table entries: 65536 (order: 6, 262144 bytes)
+Memory: 1597024K/2097152K available (13312K kernel code, 1154K rwdata, 4044K rodata, 1024K init, 604K bss, 41376K reserved, 458752K cma-reserved, 1318912K highmem)
+Virtual kernel memory layout:
+    vector  : 0xffff0000 - 0xffff1000   (   4 kB)
+    fixmap  : 0xffc00000 - 0xfff00000   (3072 kB)
+    vmalloc : 0xf0000000 - 0xff800000   ( 248 MB)
+    lowmem  : 0xc0000000 - 0xef800000   ( 760 MB)
+    pkmap   : 0xbfe00000 - 0xc0000000   (   2 MB)
+    modules : 0xbf000000 - 0xbfe00000   (  14 MB)
+      .text : 0xc0008000 - 0xc0e00000   (14304 kB)
+      .init : 0xc1300000 - 0xc1400000   (1024 kB)
+      .data : 0xc1400000 - 0xc1520b58   (1155 kB)
+       .bss : 0xc1520b58 - 0xc15b7c28   ( 605 kB)
+SLUB: HWalign=64, Order=0-3, MinObjects=0, CPUs=4, Nodes=1
+Preemptible hierarchical RCU implementation.
+	Build-time adjustment of leaf fanout to 32.
+NR_IRQS:16 nr_irqs:16 16
+L2C-310 errata 752271 769419 enabled
+L2C-310 enabling early BRESP for Cortex-A9
+L2C-310 full line of zeros enabled for Cortex-A9
+L2C-310 ID prefetch enabled, offset 16 lines
+L2C-310 dynamic clock gating enabled, standby mode enabled
+L2C-310 cache controller enabled, 16 ways, 1024 kB
+L2C-310: CACHE_ID 0x410000c7, AUX_CTRL 0x76470001
+Switching to timer-based delay loop, resolution 333ns
+sched_clock: 32 bits at 3000kHz, resolution 333ns, wraps every 715827882841ns
+clocksource: mxc_timer1: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 637086815595 ns
+Console: colour dummy device 80x30
+Calibrating delay loop (skipped), value calculated using timer frequency.. 6.00 BogoMIPS (lpj=30000)
+pid_max: default: 32768 minimum: 301
+Security Framework initialized
+SELinux:  Initializing.
+Mount-cache hash table entries: 2048 (order: 1, 8192 bytes)
+Mountpoint-cache hash table entries: 2048 (order: 1, 8192 bytes)
+CPU: Testing write buffer coherency: ok
+CPU0: update cpu_capacity 1024
+CPU0: thread -1, cpu 0, socket 0, mpidr 80000000
+Setting up static identity map for 0x10100000 - 0x10100058
+CPU1: update cpu_capacity 1024
+CPU1: thread -1, cpu 1, socket 0, mpidr 80000001
+CPU2: update cpu_capacity 1024
+CPU2: thread -1, cpu 2, socket 0, mpidr 80000002
+CPU3: update cpu_capacity 1024
+CPU3: thread -1, cpu 3, socket 0, mpidr 80000003
+Brought up 4 CPUs
+SMP: Total of 4 processors activated (24.00 BogoMIPS).
+CPU: All CPU(s) started in SVC mode.
+CPU3: update max cpu_capacity 1024
+devtmpfs: i

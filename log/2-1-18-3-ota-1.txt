@@ -1,0 +1,1996 @@
+capability: warning: `main' uses 32-bit capabilities (legacy support in use)
+init: write_file: Unable to open '/sys/devices/system/cpu/cpufreq/interactive/timer_rate': No such file or directory
+
+init: write_file: Unable to open '/sys/devices/system/cpu/cpufreq/interactive/min_sample_time': No such file or directory
+init: write_file: Unable to open '/sys/devices/system/cpu/cpufreq/interactive/go_hispeed_load': No such file or directory
+toradex_apalis6q:/ # 
+toradex_apalis6q:/ # 
+toradex_apalis6q:/ # 
+toradex_apalis6q:/ # 
+toradex_apalis6q:/ # 
+toradex_apalis6q:/ # 
+toradex_apalis6q:/ # 
+toradex_apalis6q:/ # 
+toradex_apalis6q:/ # 
+toradex_apalis6q:/ # 
+toradex_apalis6q:/ # 
+toradex_apalis6q:/ # reboot
+sysrq: SysRq : Emergency Remount R/O
+EXT4-fs (mmcblk0p4): re-mounted. Opts: (null)
+EXT4-fs (mmcblk0p10): re-mounted. Opts: (null)
+Emergency Remount complete
+imx2-wdt 20bc000.wdog: Device shutdown: Expect reboot!
+ci_hdrc ci_hdrc.1: remove, state 1
+usb usb1: USB disconnect, device number 1
+usb 1-1: USB disconnect, device number 2
+usb 1-1.3: USB disconnect, device number 3
+ci_hdrc ci_hdrc.1: USB bus 1 deregistered
+reboot: Restarting system with command ''
+
+
+U-Boot 2017.03-00001-g610928540e-dirty (Dec 29 2017 - 11:49:28 +0530)
+
+CPU:   Freescale i.MX6Q rev1.5 at 792 MHz
+Reset cause: WDOG
+I2C:   ready
+DRAM:  2 GiB
+PMIC: device id: 0x10, revision id: 0x21
+PMIC: programmed
+MMC:   FSL_SDHC: 0, FSL_SDHC: 1, FSL_SDHC: 2
+auto-detected panel HDMI
+Aravinth: Display: HDMI (1024x768)
+In:    serial
+Out:   serial
+Err:   serial
+Model: Toradex Apalis iMX6 Quad 2GB IT V1.1C, Serial# 05146387
+flash target is MMC:0
+Net:   using PHY at 7
+FEC [PRIME]
+Fastboot: Normal
+Hit any key to stop autoboot:  1  0
+Apalis iMX6 # 
+Apalis iMX6 # 
+Apalis iMX6 # 
+Apalis iMX6 # fastboot
+fastboot - use USB Fastboot protocol
+
+Usage:
+fastboot <USB_controller>
+    - run as a fastboot usb device
+Apalis iMX6 # fastboot
+fastboot - use USB Fastboot protocol
+
+Usage:
+fastboot <USB_controller>
+    - run as a fastboot usb device
+Apalis iMX6 # fastboot usb
+Apalis iMX6 # 
+Apalis iMX6 # 
+Apalis iMX6 # 
+Apalis iMX6 # fastboot usb    
+fastboot - use USB Fastboot protocol
+
+Usage:
+fastboot <USB_controller>
+    - run as a fastboot usb device
+Apalis iMX6 # fastboot        usb
+  usb usbboot
+Apalis iMX6 # usb
+usb - USB sub-system
+
+Usage:
+usb start - start (scan) USB controller
+usb reset - reset (rescan) USB controller
+usb stop [f] - stop USB [f]=force stop
+usb tree - show USB device tree
+usb info [dev] - show available USB devices
+usb test [dev] [port] [mode] - set USB 2.0 test mode
+    (specify port 0 to indicate the device's upstream port)
+    Available modes: J, K, S[E0_NAK], P[acket], F[orce_Enable]
+usb storage - show details of USB storage devices
+usb dev [dev] - show or set current USB storage device
+usb part [dev] - print partition table of one or all USB storage    devices
+usb read addr blk# cnt - read `cnt' blocks starting at block `blk#'
+    to memory address `addr'
+usb write addr blk# cnt - write `cnt' blocks starting at block `blk#'
+    from memory address `addr'
+Apalis iMX6 # usb stt art
+starting USB...
+USB0:   Port not available.
+USB1:   USB EHCI 1.00
+scanning bus 1 for devices... 3 USB Device(s) found
+       scanning usb for storage devices... 0 Storage Device(s) found
+       scanning usb for ethernet devices... 0 Ethernet Device(s) found
+Apalis iMX6 # 
+Apalis iMX6 # 
+Apalis iMX6 # usb start     info
+1: Hub,  USB Revision 2.0
+ - u-boot EHCI Host Controller 
+ - Class: Hub
+ - PacketSize: 64  Configurations: 1
+ - Vendor: 0x0000  Product 0x0000 Version 1.0
+   Configuration: 1
+   - Interfaces: 1 Self Powered 0mA
+     Interface: 0
+     - Alternate Setting 0, Endpoints: 1
+     - Class Hub
+     - Endpoint 1 In Interrupt MaxPacket 8 Interval 255ms
+
+2: Hub,  USB Revision 2.0
+ - Class: Hub
+ - PacketSize: 64  Configurations: 1
+ - Vendor: 0x0424  Product 0x2514 Version 11.179
+   Configuration: 1
+   - Interfaces: 1 Self Powered Remote Wakeup 2mA
+     Interface: 0
+     - Alternate Setting 0, Endpoints: 1
+     - Class Hub
+     - Endpoint 1 In Interrupt MaxPacket 1 Interval 12ms
+     - Endpoint 1 In Interrupt MaxPacket 1 Interval 12ms
+
+3: Human Interface,  USB Revision 2.0
+ - PixArt Dell MS116 USB Optical Mouse 
+ - Class: (from Interface) Human Interface
+ - PacketSize: 8  Configurations: 1
+ - Vendor: 0x413c  Product 0x301a Version 1.0
+   Configuration: 1
+   - Interfaces: 1 Bus Powered Remote Wakeup 100mA
+     Interface: 0
+     - Alternate Setting 0, Endpoints: 1
+     - Class Human Interface, Subclass: Boot Mouse
+     - Endpoint 1 In Interrupt MaxPacket 4 Interval 10ms
+
+Apalis iMX6 # usb
+  usb usbboot
+Apalis iMX6 # usbboot 
+** No device specified **
+Apalis iMX6 # fastboot 
+fastboot - use USB Fastboot protocol
+
+Usage:
+fastboot <USB_controller>
+    - run as a fastboot usb device
+Apalis iMX6 # fastboot usb
+Apalis iMX6 # boot
+boota mmc0 
+CACHE: Misaligned operation at range [8ffb70a0, 8ffb7120]
+CACHE: Misaligned operation at range [8ffb70a0, 8ffb7120]
+kernel   @ 14008000 (9802376)
+ramdisk  @ 15000000 (1628386)
+fdt      @ 14f00000 (53981)
+## Booting Android Image at 0x12000000 ...
+Kernel load addr 0x14008000 size 9573 KiB
+Kernel command line: console=ttymxc0,115200 init=/init video=mxcfb0:dev=ldb,fbpix=RGB32,bpp=32 video=mxcfb1:dev=hdmi,640x480M@60,if=RGB24,bpp=16 video=mxcfb2:off video=mxcfb3:off vmalloc=256M androidboot.console=ttymxc0 consoleblank=0 androidboot.hardware=freescale cma=448M androidboot.selinux=permissive androidboot.dm_verity=disabled buildvariant=user androidboot.serialno=1b2429d4ea997115 androidboot.storage_type=emmc
+## Flattened Device Tree blob at 14f00000
+   Booting using the fdt blob at 0x14f00000
+   Loading Kernel Image ... OK
+   Using Device Tree in place at 14f00000, end 14f102dc
+
+Starting kernel ...
+
+Booting Linux on physical CPU 0x0
+Linux version 4.9.67-07229-gdc6c16ec0433-dirty (embadmin@ubuntu) (gcc version 4.9 20150123 (prerelease) (GCC) ) #15 SMP PREEMPT Wed Dec 27 15:15:47 IST 2017
+CPU: ARMv7 Processor [412fc09a] revision 10 (ARMv7), cr=10c53c7d
+CPU: PIPT / VIPT nonaliasing data cache, VIPT aliasing instruction cache
+OF: fdt:Machine model: Aravinth :UJET Toradex Apalis iMX6Q/D Module on Ixora V1.1 Carrier Board
+cma: Reserved 448 MiB at 0x22000000
+Memory policy: Data cache writealloc
+percpu: Embedded 15 pages/cpu @ee6b3000 s31040 r8192 d22208 u61440
+Built 1 zonelists in Zone order, mobility grouping on.  Total pages: 522768
+Kernel command line: console=ttymxc0,115200 init=/init video=mxcfb0:dev=ldb,fbpix=RGB32,bpp=32 video=mxcfb1:dev=hdmi,640x480M@60,if=RGB24,bpp=16 video=mxcfb2:off video=mxcfb3:off vmalloc=256M androidboot.console=ttymxc0 consoleblank=0 androidboot.hardware=freescale cma=448M androidboot.selinux=permissive androidboot.dm_verity=disabled buildvariant=user androidboot.serialno=1b2429d4ea997115 androidboot.storage_type=emmc
+PID hash table entries: 4096 (order: 2, 16384 bytes)
+Dentry cache hash table entries: 131072 (order: 7, 524288 bytes)
+Inode-cache hash table entries: 65536 (order: 6, 262144 bytes)
+Memory: 1597048K/2097152K available (13312K kernel code, 1128K rwdata, 4016K rodata, 1024K init, 606K bss, 41352K reserved, 458752K cma-reserved, 1318912K highmem)
+Virtual kernel memory layout:
+    vector  : 0xffff0000 - 0xffff1000   (   4 kB)
+    fixmap  : 0xffc00000 - 0xfff00000   (3072 kB)
+    vmalloc : 0xf0000000 - 0xff800000   ( 248 MB)
+    lowmem  : 0xc0000000 - 0xef800000   ( 760 MB)
+    pkmap   : 0xbfe00000 - 0xc0000000   (   2 MB)
+    modules : 0xbf000000 - 0xbfe00000   (  14 MB)
+      .text : 0xc0008000 - 0xc0e00000   (14304 kB)
+      .init : 0xc1300000 - 0xc1400000   (1024 kB)
+      .data : 0xc1400000 - 0xc151a218   (1129 kB)
+       .bss : 0xc151a218 - 0xc15b1be0   ( 607 kB)
+SLUB: HWalign=64, Order=0-3, MinObjects=0, CPUs=4, Nodes=1
+Preemptible hierarchical RCU implementation.
+	Build-time adjustment of leaf fanout to 32.
+NR_IRQS:16 nr_irqs:16 16
+L2C-310 errata 752271 769419 enabled
+L2C-310 enabling early BRESP for Cortex-A9
+L2C-310 full line of zeros enabled for Cortex-A9
+L2C-310 ID prefetch enabled, offset 16 lines
+L2C-310 dynamic clock gating enabled, standby mode enabled
+L2C-310 cache controller enabled, 16 ways, 1024 kB
+L2C-310: CACHE_ID 0x410000c7, AUX_CTRL 0x76470001
+Switching to timer-based delay loop, resolution 333ns
+sched_clock: 32 bits at 3000kHz, resolution 333ns, wraps every 715827882841ns
+clocksource: mxc_timer1: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 637086815595 ns
+Console: colour dummy device 80x30
+Calibrating delay loop (skipped), value calculated using timer frequency.. 6.00 BogoMIPS (lpj=30000)
+pid_max: default: 32768 minimum: 301
+Security Framework initialized
+SELinux:  Initializing.
+Mount-cache hash table entries: 2048 (order: 1, 8192 bytes)
+Mountpoint-cache hash table entries: 2048 (order: 1, 8192 bytes)
+CPU: Testing write buffer coherency: ok
+CPU0: update cpu_capacity 1024
+CPU0: thread -1, cpu 0, socket 0, mpidr 80000000
+Setting up static identity map for 0x10100000 - 0x10100058
+CPU1: update cpu_capacity 1024
+CPU1: thread -1, cpu 1, socket 0, mpidr 80000001
+CPU2: update cpu_capacity 1024
+CPU2: thread -1, cpu 2, socket 0, mpidr 80000002
+CPU3: update cpu_capacity 1024
+CPU3: thread -1, cpu 3, socket 0, mpidr 80000003
+Brought up 4 CPUs
+SMP: Total of 4 processors activated (24.00 BogoMIPS).
+CPU: All CPU(s) started in SVC mode.
+CPU3: update max cpu_capacity 1024
+devtmpfs: initialized
+CPU2: update max cpu_capacity 1024
+VFP support v0.3: implementor 41 architecture 3 part 30 variant 9 rev 4
+clocksource: jiffies: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 19112604462750000 ns
+futex hash table entries: 1024 (order: 4, 65536 bytes)
+pinctrl core: initialized pinctrl subsystem
+NET: Registered protocol family 16
+DMA: preallocated 256 KiB pool for atomic coherent allocations
+cpuidle: using governor menu
+CPU identified as i.MX6Q, silicon rev 1.5
+hw-breakpoint: found 5 (+1 reserved) breakpoint and 1 watchpoint registers.
+hw-breakpoint: maximum watchpoint size is 4 bytes.
+imx6q-pinctrl 20e0000.iomuxc: initialized IMX pinctrl driver
+imx-gpc 20dc000.gpc: no fsl,ldo-bypass found!
+imx-gpc 20dc000.gpc: Registered imx-gpc
+mxs-dma 110000.dma-apbh: initialized
+usb_host_vbus: supplied by usb_host_vbus_hub
+SCSI subsystem initialized
+usbcore: registered new interface driver usbfs
+usbcore: registered new interface driver hub
+usbcore: registered new device driver usb
+2000000.aips-bus:usbphy_nop1 supply vcc not found, using dummy regulator
+2000000.aips-bus:usbphy_nop2 supply vcc not found, using dummy regulator
+i2c i2c-1: IMX I2C adapter registered
+i2c i2c-1: can't use DMA, using PIO instead.
+stmpe-i2c 2-0041: stmpe811 detected, chip id: 0x811
+i2c i2c-2: IMX I2C adapter registered
+i2c i2c-2: can't use DMA, using PIO instead.
+i2c i2c-3: IMX I2C adapter registered
+i2c i2c-3: can't use DMA, using PIO instead.
+Linux video capture interface: v2.00
+pps_core: LinuxPPS API ver. 1 registered
+pps_core: Software ver. 5.3.6 - Copyright 2005-2007 Rodolfo Giometti <giometti@linux.it>
+PTP clock support registered
+imx-ipuv3 2400000.ipu: IPU DMFC NORMAL mode: 1(0~1), 5B(4,5), 5F(6,7)
+imx-ipuv3 2800000.ipu: IPU DMFC NORMAL mode: 1(0~1), 5B(4,5), 5F(6,7)
+mxc_mipi_csi2 21dc000.mipi_csi: i.MX MIPI CSI2 driver probed ipu0 csi1
+mxc_mipi_csi2 21dc000.mipi_csi: i.MX MIPI CSI2 dphy version is 0x3130302a
+MIPI CSI2 driver module loaded
+imx rpmsg driver is registered.
+Advanced Linux Sound Architecture Driver Initialized.
+Bluetooth: Core ver 2.22
+NET: Registered protocol family 31
+Bluetooth: HCI device and connection manager initialized
+Bluetooth: HCI socket layer initialized
+Bluetooth: L2CAP socket layer initialized
+Bluetooth: SCO socket layer initialized
+clocksource: Switched to clocksource mxc_timer1
+VFS: Disk quotas dquot_6.6.0
+VFS: Dquot-cache hash table entries: 1024 (order 0, 4096 bytes)
+NET: Registered protocol family 2
+TCP established hash table entries: 8192 (order: 3, 32768 bytes)
+TCP bind hash table entries: 8192 (order: 4, 65536 bytes)
+TCP: Hash tables configured (established 8192 bind 8192)
+UDP hash table entries: 512 (order: 2, 16384 bytes)
+UDP-Lite hash table entries: 512 (order: 2, 16384 bytes)
+NET: Registered protocol family 1
+RPC: Registered named UNIX socket transport module.
+RPC: Registered udp transport module.
+RPC: Registered tcp transport module.
+RPC: Registered tcp NFSv4.1 backchannel transport module.
+Trying to unpack rootfs image as initramfs...
+Freeing initrd memory: 1592K
+hw perfevents: enabled with armv7_cortex_a9 PMU driver, 7 counters available
+Bus freq driver module loaded
+audit: initializing netlink subsys (disabled)
+audit: type=2000 audit(0.870:1): initialized
+workingset: timestamp_bits=30 max_order=19 bucket_order=0
+NFS: Registering the id_resolver key type
+Key type id_resolver registered
+Key type id_legacy registered
+ntfs: driver 2.1.32 [Flags: R/W DEBUG].
+jffs2: version 2.2. (NAND) © 2001-2006 Red Hat, Inc.
+fuse init (API version 7.26)
+bounce: pool size: 64 pages
+io scheduler noop registered
+io scheduler deadline registered
+io scheduler cfq registered (default)
+backlight supply power not found, using dummy regulator
+20e0000.hdmi_video supply HDMI not found, using dummy regulator
+mxc_sdc_fb fb@0: registered mxc display driver ldb
+imx-ipuv3 2800000.ipu: IPU DMFC DP HIGH RESOLUTION: 1(0,1), 5B(2~5), 5F(6,7)
+Console: switching to colour frame buffer device 128x48
+mxc_hdmi 20e0000.hdmi_video: Detected HDMI controller 0x13:0xa:0xa0:0xc1
+fbcvt: 640x480@60: CVT Name - .307M3
+mxc_sdc_fb fb@1: registered mxc display driver hdmi
+mxc_sdc_fb fb@2: Can't get fb option for mxcfb2!
+mxc_sdc_fb fb@3: Can't get fb option for mxcfb3!
+imx-sdma 20ec000.sdma: no iram assigned, using external mem
+imx-sdma 20ec000.sdma: loaded firmware 3.3
+pfuze100-regulator 2-0008: Full layer: 2, Metal layer: 1
+pfuze100-regulator 2-0008: FAB: 0, FIN: 0
+pfuze100-regulator 2-0008: pfuze100 found.
+mxc_hdmi 20e0000.hdmi_video: Read EDID again
+2020000.serial: ttymxc0 at MMIO 0x2020000 (irq = 29, base_baud = 5000000) is a IMX
+mxc_hdmi 20e0000.hdmi_video: create default modelist
+console [ttymxc0] enabled
+21e8000.serial: ttymxc1 at MMIO 0x21e8000 (irq = 78, base_baud = 5000000) is a IMX
+21f0000.serial: ttymxc3 at MMIO 0x21f0000 (irq = 79, base_baud = 5000000) is a IMX
+21f4000.serial: ttymxc4 at MMIO 0x21f4000 (irq = 80, base_baud = 5000000) is a IMX
+imx sema4 driver is registered.
+[drm] Initialized
+[drm] Initialized vivante 1.0.0 20120216 on minor 0
+brd: module loaded
+loop: module loaded
+zram: Added device: zram0
+ahci-imx 2200000.sata: fsl,transmit-level-mV not specified, using 00000024
+ahci-imx 2200000.sata: fsl,transmit-boost-mdB not specified, using 00000480
+ahci-imx 2200000.sata: fsl,transmit-atten-16ths not specified, using 00002000
+ahci-imx 2200000.sata: fsl,receive-eq-mdB not specified, using 05000000
+ahci-imx 2200000.sata: SSS flag set, parallel bus scan disabled
+ahci-imx 2200000.sata: AHCI 0001.0300 32 slots 1 ports 3 Gbps 0x1 impl platform mode
+ahci-imx 2200000.sata: flags: ncq sntf stag pm led clo only pmp pio slum part ccc apst 
+scsi host0: ahci-imx
+ata1: SATA max UDMA/133 mmio [mem 0x02200000-0x02203fff] port 0x100 irq 87
+spi_imx 2008000.ecspi: probed
+libphy: Fixed MDIO Bus: probed
+tun: Universal TUN/TAP device driver, 1.6
+tun: (C) 1999-2004 Max Krasnyansky <maxk@qualcomm.com>
+CAN device driver interface
+2090000.flexcan supply xceiver not found, using dummy regulator
+flexcan 2090000.flexcan: device registered (reg_base=f02f4000, irq=38)
+2094000.flexcan supply xceiver not found, using dummy regulator
+flexcan 2094000.flexcan: device registered (reg_base=f02fc000, irq=39)
+2188000.ethernet supply phy not found, using dummy regulator
+pps pps0: new PPS source ptp0
+libphy: fec_enet_mii_bus: probed
+fec 2188000.ethernet eth0: registered PHC device 0
+PPP generic driver version 2.4.2
+PPP BSD Compression module registered
+PPP Deflate Compression module registered
+PPP MPPE Compression module registered
+NET: Registered protocol family 24
+usbcore: registered new interface driver kaweth
+pegasus: v0.9.3 (2013/04/25), Pegasus/Pegasus II USB Ethernet driver
+usbcore: registered new interface driver pegasus
+usbcore: registered new interface driver rtl8150
+usbcore: registered new interface driver r8152
+usbcore: registered new interface driver asix
+usbcore: registered new interface driver ax88179_178a
+usbcore: registered new interface driver cdc_ether
+usbcore: registered new interface driver cdc_eem
+usbcore: registered new interface driver net1080
+usbcore: registered new interface driver cdc_subset
+usbcore: registered new interface driver zaurus
+usbcore: registered new interface driver cdc_ncm
+ehci_hcd: USB 2.0 'Enhanced' Host Controller (EHCI) Driver
+ehci-mxc: Freescale On-Chip EHCI Host driver
+usbcore: registered new interface driver cdc_acm
+cdc_acm: USB Abstract Control Model driver for USB modems and ISDN adapters
+usbcore: registered new interface driver usb-storage
+usbcore: registered new interface driver usbserial
+usbcore: registered new interface driver usbserial_generic
+usbserial: USB Serial support registered for generic
+usbcore: registered new interface driver ftdi_sio
+usbserial: USB Serial support registered for FTDI USB Serial Device
+usbcore: registered new interface driver option
+usbserial: USB Serial support registered for GSM modem (1-port)
+usbcore: registered new interface driver usbtest
+usbcore: registered new interface driver usb_ehset_test
+2184800.usbmisc supply vbus-wakeup not found, using dummy regulator
+ci_hdrc ci_hdrc.1: EHCI Host Controller
+ci_hdrc ci_hdrc.1: new USB bus registered, assigned bus number 1
+ci_hdrc ci_hdrc.1: USB 2.0 started, EHCI 1.00
+usb usb1: New USB device found, idVendor=1d6b, idProduct=0002
+usb usb1: New USB device strings: Mfr=3, Product=2, SerialNumber=1
+usb usb1: Product: EHCI Host Controller
+usb usb1: Manufacturer: Linux 4.9.67-07229-gdc6c16ec0433-dirty ehci_hcd
+usb usb1: SerialNumber: ci_hdrc.1
+hub 1-0:1.0: USB hub found
+hub 1-0:1.0: 1 port detected
+mousedev: PS/2 mouse device common for all mice
+usbcore: registered new interface driver xpad
+ata1: SATA link down (SStatus 0 SControl 300)
+ahci-imx 2200000.sata: no device found, disabling link.
+ahci-imx 2200000.sata: pass ahci_imx..hotplug=1 to enable hotplug
+usbcore: registered new interface driver usb_acecad
+usbcore: registered new interface driver aiptek
+usbcore: registered new interface driver gtco
+usbcore: registered new interface driver hanwang
+usbcore: registered new interface driver kbtab
+input: stmpe-ts as /devices/soc0/soc/2100000.aips-bus/21a4000.i2c/i2c-2/2-0041/stmpe-ts/input/input0
+snvs_rtc 20cc000.snvs:snvs-rtc-lp: rtc core: registered 20cc000.snvs:snvs-r as rtc0
+i2c /dev entries driver
+IR NEC protocol handler initialized
+IR RC5(x/sz) protocol handler initialized
+IR RC6 protocol handler initialized
+IR JVC protocol handler initialized
+IR Sony protocol handler initialized
+IR SANYO protocol handler initialized
+IR Sharp protocol handler initialized
+IR MCE Keyboard/mouse protocol handler initialized
+IR XMP protocol handler initialized
+mxc_v4l2_output v4l2_out: V4L2 device registered as video16
+mxc_v4l2_output v4l2_out: V4L2 device registered as video17
+mxc_v4l2_output v4l2_out: V4L2 device registered as video18
+mxc_v4l2_output v4l2_out: V4L2 device registered as video19
+ov564x_mipi 3-003c: found pwm2, period=0
+usb 1-1: new high-speed USB device number 2 using ci_hdrc
+ov5640_read_reg:write reg error:reg=300a
+camera ov5640_mipi is not found
+usbcore: registered new interface driver uvcvideo
+USB Video Class driver (1.1.1)
+imx2-wdt 20bc000.wdog: timeout 60 sec (nowayout=0)
+device-mapper: uevent: version 1.0.3
+device-mapper: ioctl: 4.35.0-ioctl (2016-06-23) initialised: dm-devel@redhat.com
+Bluetooth: HCI UART driver ver 2.3
+Bluetooth: HCI UART protocol H4 registered
+Bluetooth: HCI UART protocol BCSP registered
+Bluetooth: HCI UART protocol ATH3K registered
+usbcore: registered new interface driver btusb
+sdhci: Secure Digital Host Controller Interface driver
+sdhci: Copyright(c) Pierre Ossman
+sdhci-pltfm: SDHCI platform and OF driver helper
+sdhci-esdhc-imx 2190000.usdhc: could not get ultra high speed state, work on normal mode
+sdhci-esdhc-imx 2190000.usdhc: Got CD GPIO
+mmc1: SDHCI controller on 2190000.usdhc [2190000.usdhc] using ADMA
+sdhci-esdhc-imx 2198000.usdhc: could not get ultra high speed state, work on normal mode
+usb 1-1: New USB device found, idVendor=0424, idProduct=2514
+usb 1-1: New USB device strings: Mfr=0, Product=0, SerialNumber=0
+hub 1-1:1.0: USB hub found
+hub 1-1:1.0: 4 ports detected
+mmc0: SDHCI controller on 2198000.usdhc [2198000.usdhc] using ADMA
+mxc_vpu 2040000.vpu_fsl: VPU initialized
+mxc_vdoa 21e4000.vdoa: i.MX Video Data Order Adapter(VDOA) driver probed
+mxc_hdmi_cec soc:hdmi_cec@00120000: HDMI CEC initialized
+Galcore version 6.2.2.96445
+mmc0: new DDR MMC card at address 0001
+random: fast init done
+mmcblk0: mmc0:0001 Q2J54A 3.59 GiB 
+mmcblk0boot0: mmc0:0001 Q2J54A partition 1 16.0 MiB
+mmcblk0boot1: mmc0:0001 Q2J54A partition 2 16.0 MiB
+Alternate GPT is invalid, using primary GPT.
+ mmcblk0: p1 p2 p3 p4 p5 p6 p7 p8 p9 p10 p11
+usb 1-1.3: new low-speed USB device number 3 using ci_hdrc
+usb 1-1.3: New USB device found, idVendor=413c, idProduct=301a
+usb 1-1.3: New USB device strings: Mfr=1, Product=2, SerialNumber=0
+usb 1-1.3: Product: Dell MS116 USB Optical Mouse
+usb 1-1.3: Manufacturer: PixArt
+caam 2100000.caam: ERA source: CAAMVID.
+caam 2100000.caam: AXI pipeline throttling enabled.
+caam 2100000.caam: Instantiated RNG4 SH1
+caam 2100000.caam: device ID = 0x0a16010000000000 (Era 4)
+caam 2100000.caam: job rings = 2, qi = 0
+caam algorithms registered in /proc/crypto
+caam_jr 2101000.jr0: registering rng-caam
+platform caam_sm: blkkey_ex: 4 keystore units available
+platform caam_sm: 64-bit clear key:
+platform caam_sm: [0000] 00 01 02 03 04 0f 06 07
+platform caam_sm: 64-bit black key:
+platform caam_sm: [0000] e6 44 f6 f3 b3 54 60 88
+platform caam_sm: [0008] ca 12 a6 31 89 88 24 58
+platform caam_sm: 128-bit clear key:
+platform caam_sm: [0000] 00 01 02 03 04 0f 06 07
+platform caam_sm: [0008] 08 09 0a 0b 0c 0d 0e 0f
+platform caam_sm: 128-bit black key:
+platform caam_sm: [0000] 5b 36 00 46 be a8 47 d2
+platform caam_sm: [0008] 96 3c da 82 72 d4 15 3e
+platform caam_sm: 192-bit clear key:
+platform caam_sm: [0000] 00 01 02 03 04 0f 06 07
+platform caam_sm: [0008] 08 09 0a 0b 0c 0d 0e 0f
+platform caam_sm: [0016] 10 11 12 13 14 15 16 17
+platform caam_sm: 192-bit black key:
+platform caam_sm: [0000] 94 2f ac 69 60 60 ef b8
+platform caam_sm: [0008] d2 b7 5d 18 97 fa 70 36
+platform caam_sm: [0016] d7 2d 30 9a cb 86 2c 05
+platform caam_sm: [0024] fc 5f e9 41 c8 9c 28 f3
+platform caam_sm: 256-bit clear key:
+platform caam_sm: [0000] 00 01 02 03 04 0f 06 07
+platform caam_sm: [0008] 08 09 0a 0b 0c 0d 0e 0f
+platform caam_sm: [0016] 10 11 12 13 14 15 16 17
+platform caam_sm: [0024] 18 19 1a 1b 1c 1d 1e 1f
+platform caam_sm: 256-bit black key:
+platform caam_sm: [0000] ed 52 a3 ab a8 dd ca e4
+platform caam_sm: [0008] 33 fb 09 0d 25 24 91 ec
+platform caam_sm: [0016] e5 de d5 aa db b3 25 6c
+platform caam_sm: [0024] de bd 60 bc a4 8c 7e 69
+platform caam_sm: 64-bit unwritten blob:
+platform caam_sm: [0000] 00 00 00 00 00 00 00 00
+platform caam_sm: [0008] 00 00 00 00 00 00 00 00
+platform caam_sm: [0016] 00 00 00 00 00 00 00 00
+platform caam_sm: [0024] 00 00 00 00 00 00 00 00
+platform caam_sm: [0032] 00 00 00 00 00 00 00 00
+platform caam_sm: [0040] 00 00 00 00 00 00 00 00
+platform caam_sm: [0048] 00 00 00 00 00 00 00 00
+platform caam_sm: [0056] 00 00 00 00 00 00 00 00
+platform caam_sm: [0064] 00 00 00 00 00 00 00 00
+platform caam_sm: [0072] 00 00 00 00 00 00 00 00
+platform caam_sm: [0080] 00 00 00 00 00 00 00 00
+platform caam_sm: [0088] 00 00 00 00 00 00 00 00
+platform caam_sm: 128-bit unwritten blob:
+platform caam_sm: [0000] 00 00 00 00 00 00 00 00
+platform caam_sm: [0008] 00 00 00 00 00 00 00 00
+platform caam_sm: [0016] 00 00 00 00 00 00 00 00
+platform caam_sm: [0024] 00 00 00 00 00 00 00 00
+platform caam_sm: [0032] 00 00 00 00 00 00 00 00
+platform caam_sm: [0040] 00 00 00 00 00 00 00 00
+platform caam_sm: [0048] 00 00 00 00 00 00 00 00
+platform caam_sm: [0056] 00 00 00 00 00 00 00 00
+platform caam_sm: [0064] 00 00 00 00 00 00 00 00
+platform caam_sm: [0072] 00 00 00 00 00 00 00 00
+platform caam_sm: [0080] 00 00 00 00 00 00 00 00
+platform caam_sm: [0088] 00 00 00 00 00 00 00 00
+platform caam_sm: 196-bit unwritten blob:
+platform caam_sm: [0000] 00 00 00 00 00 00 00 00
+platform caam_sm: [0008] 00 00 00 00 00 00 00 00
+platform caam_sm: [0016] 00 00 00 00 00 00 00 00
+platform caam_sm: [0024] 00 00 00 00 00 00 00 00
+platform caam_sm: [0032] 00 00 00 00 00 00 00 00
+platform caam_sm: [0040] 00 00 00 00 00 00 00 00
+platform caam_sm: [0048] 00 00 00 00 00 00 00 00
+platform caam_sm: [0056] 00 00 00 00 00 00 00 00
+platform caam_sm: [0064] 00 00 00 00 00 00 00 00
+platform caam_sm: [0072] 00 00 00 00 00 00 00 00
+platform caam_sm: [0080] 00 00 00 00 00 00 00 00
+platform caam_sm: [0088] 00 00 00 00 00 00 00 00
+platform caam_sm: 256-bit unwritten blob:
+platform caam_sm: [0000] 00 00 00 00 00 00 00 00
+platform caam_sm: [0008] 00 00 00 00 00 00 00 00
+platform caam_sm: [0016] 00 00 00 00 00 00 00 00
+platform caam_sm: [0024] 00 00 00 00 00 00 00 00
+platform caam_sm: [0032] 00 00 00 00 00 00 00 00
+platform caam_sm: [0040] 00 00 00 00 00 00 00 00
+platform caam_sm: [0048] 00 00 00 00 00 00 00 00
+platform caam_sm: [0056] 00 00 00 00 00 00 00 00
+platform caam_sm: [0064] 00 00 00 00 00 00 00 00
+platform caam_sm: [0072] 00 00 00 00 00 00 00 00
+platform caam_sm: [0080] 00 00 00 00 00 00 00 00
+platform caam_sm: [0088] 00 00 00 00 00 00 00 00
+platform caam_sm: 64-bit black key in blob:
+platform caam_sm: [0000] 6c a0 80 98 94 58 00 f5
+platform caam_sm: [0008] 9b b1 8f 4f c4 ff c8 9b
+platform caam_sm: [0016] eb 6d 0b 27 75 94 65 5f
+platform caam_sm: [0024] 71 b2 fc a9 9a 67 b1 8b
+platform caam_sm: [0032] 94 4b 96 68 6b ca 2b 76
+platform caam_sm: [0040] 38 ae 26 88 8e 6e b8 a8
+platform caam_sm: [0048] 34 47 03 8d 73 a4 4a 39
+platform caam_sm: [0056] 00 00 00 00 00 00 00 00
+platform caam_sm: [0064] 00 00 00 00 00 00 00 00
+platform caam_sm: [0072] 00 00 00 00 00 00 00 00
+platform caam_sm: [0080] 00 00 00 00 00 00 00 00
+platform caam_sm: [0088] 00 00 00 00 00 00 00 00
+platform caam_sm: 128-bit black key in blob:
+platform caam_sm: [0000] 7d 03 e1 9b 1e 36 a1 a4
+platform caam_sm: [0008] 61 95 7e 18 70 ec 4e 67
+platform caam_sm: [0016] ff 9f fe 00 bc f9 e9 25
+platform caam_sm: [0024] 99 4b 93 4c 52 4b 47 c3
+platform caam_sm: [0032] 2c e3 8e 3e 5a 82 6a 26
+platform caam_sm: [0040] 1c ef 46 4c d0 13 ce 6c
+platform caam_sm: [0048] ab a3 6f 6b 7c e7 0f 85
+platform caam_sm: [0056] 76 a7 74 f8 0e 93 2f 27
+platform caam_sm: [0064] 00 00 00 00 00 00 00 00
+platform caam_sm: [0072] 00 00 00 00 00 00 00 00
+platform caam_sm: [0080] 00 00 00 00 00 00 00 00
+platform caam_sm: [0088] 00 00 00 00 00 00 00 00
+platform caam_sm: 192-bit black key in blob:
+platform caam_sm: [0000] 3f 53 4e 2d 44 c8 e7 8d
+platform caam_sm: [0008] c8 80 02 68 2c b6 94 02
+platform caam_sm: [0016] 6b 49 55 e6 e3 4f 8b 93
+platform caam_sm: [0024] d0 0e f5 c4 13 3a 37 ee
+platform caam_sm: [0032] bb 81 b1 3d 10 e2 27 05
+platform caam_sm: [0040] 24 60 48 0a b0 f6 d1 7d
+platform caam_sm: [0048] 66 03 ab 57 df 0e 19 e6
+platform caam_sm: [0056] f0 7a dd 5b 31 85 a0 9e
+platform caam_sm: [0064] 81 0d 2b 83 17 bb ab 51
+platform caam_sm: [0072] 00 00 00 00 00 00 00 00
+platform caam_sm: [0080] 00 00 00 00 00 00 00 00
+platform caam_sm: [0088] 00 00 00 00 00 00 00 00
+platform caam_sm: 256-bit black key in blob:
+platform caam_sm: [0000] ae f8 09 de 27 fd 9b 67
+platform caam_sm: [0008] 46 8b 75 7c ed bf cc f9
+platform caam_sm: [0016] ed 14 d4 67 b7 72 46 12
+platform caam_sm: [0024] f8 86 c7 9d c0 2a d3 5b
+platform caam_sm: [0032] 65 28 25 39 1a 6a ae 52
+platform caam_sm: [0040] 10 26 e3 01 fa 46 e3 0d
+platform caam_sm: [0048] 1e ad 1d 93 c8 66 b2 d2
+platform caam_sm: [0056] b2 b9 c3 a0 4e 96 eb f4
+platform caam_sm: [0064] a9 b3 02 7b b2 56 97 c1
+platform caam_sm: [0072] 66 d7 40 e9 7c 97 a0 f9
+platform caam_sm: [0080] 00 00 00 00 00 00 00 00
+platform caam_sm: [0088] 00 00 00 00 00 00 00 00
+platform caam_sm: restored 64-bit black key:
+platform caam_sm: [0000] 79 17 a2 89 75 f5 00 80
+platform caam_sm: [0008] d8 ac e6 20 bb 5b e0 13
+platform caam_sm: restored 128-bit black key:
+platform caam_sm: [0000] 5b 36 00 46 be a8 47 d2
+platform caam_sm: [0008] 96 3c da 82 72 d4 15 3e
+platform caam_sm: restored 192-bit black key:
+platform caam_sm: [0000] 94 2f ac 69 60 60 ef b8
+platform caam_sm: [0008] d2 b7 5d 18 97 fa 70 36
+platform caam_sm: [0016] 60 8d 17 5f fb 97 92 41
+platform caam_sm: [0024] ad 18 66 e7 61 be 8b 91
+platform caam_sm: restored 256-bit black key:
+platform caam_sm: [0000] ed 52 a3 ab a8 dd ca e4
+platform caam_sm: [0008] 33 fb 09 0d 25 24 91 ec
+platform caam_sm: [0016] e5 de d5 aa db b3 25 6c
+platform caam_sm: [0024] de bd 60 bc a4 8c 7e 69
+snvs-secvio 20cc000.caam-snvs: can't get snvs clock
+snvs-secvio 20cc000.caam-snvs: violation handlers armed - non-secure state
+hidraw: raw HID events driver (C) Jiri Kosina
+input: PixArt Dell MS116 USB Optical Mouse as /devices/soc0/soc/2100000.aips-bus/2184200.usb/ci_hdrc.1/usb1/1-1/1-1.3/1-1.3:1.0/0003:413C:301A.0001/input/input1
+hid-generic 0003:413C:301A.0001: input,hidraw0: USB HID v1.11 Mouse [PixArt Dell MS116 USB Optical Mouse] on usb-ci_hdrc.1-1.3/input0
+usbcore: registered new interface driver usbhid
+usbhid: USB HID core driver
+ashmem: initialized
+usbcore: registered new interface driver snd-usb-audio
+sgtl5000 2-000a: sgtl5000 revision 0x11
+fsl-ssi-dai 2028000.ssi: No cache defaults, reading back from HW
+imx-sgtl5000 sound: sgtl5000 <-> 2028000.ssi mapping ok
+imx-spdif sound-spdif: snd-soc-dummy-dai <-> 2004000.spdif mapping ok
+imx-audio-hdmi sound-hdmi: hdmi-hifi.0 <-> soc:hdmi_audio@00120000 mapping ok
+NET: Registered protocol family 26
+u32 classifier
+    Actions configured
+Netfilter messages via NETLINK v0.30.
+nf_conntrack version 0.5.0 (16384 buckets, 65536 max)
+ctnetlink v0.93: registering with nfnetlink.
+xt_time: kernel timezone is -0000
+ip_tables: (C) 2000-2006 Netfilter Core Team
+arp_tables: arp_tables: (C) 2002 David S. Miller
+Initializing XFRM netlink socket
+NET: Registered protocol family 10
+mip6: Mobile IPv6
+ip6_tables: (C) 2000-2006 Netfilter Core Team
+sit: IPv6, IPv4 and MPLS over IPv4 tunneling driver
+NET: Registered protocol family 17
+NET: Registered protocol family 15
+can: controller area network core (rev 20120528 abi 9)
+NET: Registered protocol family 29
+can: raw protocol (rev 20120528)
+can: broadcast manager protocol (rev 20161123 t)
+can: netlink gateway (rev 20130117) max_hops=1
+Bluetooth: RFCOMM TTY layer initialized
+Bluetooth: RFCOMM socket layer initialized
+Bluetooth: RFCOMM ver 1.11
+Bluetooth: BNEP (Ethernet Emulation) ver 1.3
+Bluetooth: BNEP filters: protocol multicast
+Bluetooth: BNEP socket layer initialized
+Bluetooth: HIDP (Human Interface Emulation) ver 1.2
+Bluetooth: HIDP socket layer initialized
+8021q: 802.1Q VLAN Support v1.8
+Key type dns_resolver registered
+cpu cpu0: Registered imx6q-cpufreq
+registered taskstats version 1
+imx_thermal 2000000.aips-bus:tempmon: Industrial CPU temperature grade - max:105C critical:100C passive:95C
+dhd_module_init in
+input: gpio-keys as /devices/soc0/gpio-keys/input/input2
+snvs_rtc 20cc000.snvs:snvs-rtc-lp: setting system clock to 1970-01-01 00:03:16 UTC (196)
+usb_otg_vbus: disabling
+ALSA device list:
+  #0: imx6q-apalis-sgtl5000
+  #1: imx-spdif
+  #2: imx-hdmi-soc
+Freeing unused kernel memory: 1024K
+init: init first stage started!
+SELinux:  Permission validate_trans in class security not defined in policy.
+SELinux:  Class cap_userns not defined in policy.
+SELinux:  Class cap2_userns not defined in policy.
+SELinux: the above unknown classes and permissions will be denied
+audit: type=1403 audit(196.620:2): policy loaded auid=4294967295 ses=4294967295
+init: (Initializing SELinux non-enforcing took 0.11s.)
+init: init second stage started!
+init: Running restorecon...
+init: waitpid failed: No child processes
+init: (Loading properties from /default.prop took 0.00s.)
+init: (Parsing /init.environ.rc took 0.00s.)
+init: (Parsing /init.usb.rc took 0.00s.)
+init: (Parsing init.freescale.usb.rc took 0.00s.)
+init: (Parsing init.freescale.i.MX6Q.rc took 0.00s.)
+init: (Parsing init.freescale.emmc.rc took 0.00s.)
+init: (Parsing /init.freescale.rc took 0.02s.)
+ueventd: ueventd started!
+ueventd: Coldboot took 0.44s.
+Console: switching to colour dummy device 80x30
+watchdogd: started (interval 10, margin 20)!
+EXT4-fs (mmcblk0p3): mounted filesystem with ordered data mode. Opts: barrier=1
+EXT4-fs (mmcblk0p10): Ignoring removed nomblk_io_submit option
+EXT4-fs (mmcblk0p10): mounted filesystem with ordered data mode. Opts: nomblk_io_submit,noauto_da_alloc,errors=panic
+EXT4-fs (mmcblk0p4): Ignoring removed nomblk_io_submit option
+EXT4-fs (mmcblk0p4): mounted filesystem with ordered data mode. Opts: nomblk_io_submit
+EXT4-fs (mmcblk0p5): mounted filesystem with ordered data mode. Opts: (null)
+file system registered
+using random self ethernet address
+using random host ethernet address
+zram0: detected capacity change from 0 to 314572800
+logd.auditd: start
+logd.klogd: 7321543333
+Adding 307196k swap on /dev/block/zram0.  Priority:-1 extents:1 across:307196k SS
+binder: 254:254 transaction failed 29189, size 0-0
+logd.daemon: reinit
+toradex_apalis6q:/ # ERROR: v4l2 capture: slave not found! V4L2_CID_HUE
+ERROR: v4l2 capture: slave not found! V4L2_CID_HUE
+healthd: No battery devices found
+usb 1-1.2: new full-speed USB device number 4 using ci_hdrc
+imx-hdmi-audio imx-hdmi-audio: HDMI Video is not ready!
+imx-hdmi-audio imx-hdmi-audio: ASoC: can't open platform imx-hdmi-audio: -22
+imx-hdmi-audio imx-hdmi-audio: HDMI Video is not ready!
+imx-hdmi-audio imx-hdmi-audio: ASoC: can't open platform imx-hdmi-audio: -22
+usb 1-1.2: new high-speed USB device number 5 using ci_hdrc
+usb 1-1.2: New USB device found, idVendor=14cd, idProduct=121f
+usb 1-1.2: New USB device strings: Mfr=1, Product=3, SerialNumber=2
+usb 1-1.2: Product: Mass Storage Device
+usb 1-1.2: Manufacturer: Generic
+usb 1-1.2: SerialNumber: 121F20110712
+usb-storage 1-1.2:1.0: USB Mass Storage device detected
+scsi host1: usb-storage 1-1.2:1.0
+init: Starting service 'bootanim'...
+scsi 1:0:0:0: Direct-Access     Mass     Storage Device   1.00 PQ: 0 ANSI: 0 CCS
+
+toradex_apalis6q:/ # 
+toradex_apalis6q:/ # 
+toradex_apalis6q:/ # 
+toradex_apalis6q:/ # capability: warning: `main' uses 32-bit capabilities (legacy support in use)
+
+toradex_apalis6q:/ # sd 1:0:0:0: [sda] 15677440 512-byte logical blocks: (8.03 GB/7.48 GiB)
+sd 1:0:0:0: [sda] Write Protect is off
+sd 1:0:0:0: [sda] No Caching mode page found
+sd 1:0:0:0: [sda] Assuming drive cache: write through
+sd 1:0:0:0: [sda] tag#0 FAILED Result: hostbyte=DID_OK driverbyte=DRIVER_SENSE
+sd 1:0:0:0: [sda] tag#0 Sense Key : Medium Error [current] 
+sd 1:0:0:0: [sda] tag#0 Add. Sense: Unrecovered read error
+sd 1:0:0:0: [sda] tag#0 CDB: Read(10) 28 00 00 00 00 00 00 00 08 00
+blk_update_request: critical medium error, dev sda, sector 0
+Buffer I/O error on dev sda, logical block 0, async page read
+sd 1:0:0:0: [sda] tag#0 FAILED Result: hostbyte=DID_OK driverbyte=DRIVER_SENSE
+sd 1:0:0:0: [sda] tag#0 Sense Key : Medium Error [current] 
+sd 1:0:0:0: [sda] tag#0 Add. Sense: Unrecovered read error
+sd 1:0:0:0: [sda] tag#0 CDB: Read(10) 28 00 00 00 00 00 00 00 08 00
+blk_update_request: critical medium error, dev sda, sector 0
+Buffer I/O error on dev sda, logical block 0, async page read
+ sda: unable to read partition table
+sd 1:0:0:0: [sda] Attached SCSI removable disk
+init: write_file: Unable to open '/sys/devices/system/cpu/cpufreq/interactive/timer_rate': No such file or directory
+init: write_file: Unable to open '/sys/devices/system/cpu/cpufreq/interactive/min_sample_time': No such file or directory
+init: write_file: Unable to open '/sys/devices/system/cpu/cpufreq/interactive/go_hispeed_load': No such file or directory
+sd 1:0:0:0: [sda] tag#0 FAILED Result: hostbyte=DID_OK driverbyte=DRIVER_SENSE
+sd 1:0:0:0: [sda] tag#0 Sense Key : Medium Error [current] 
+sd 1:0:0:0: [sda] tag#0 Add. Sense: Unrecovered read error
+sd 1:0:0:0: [sda] tag#0 CDB: Read(10) 28 00 00 00 00 00 00 00 20 00
+blk_update_request: critical medium error, dev sda, sector 0
+sd 1:0:0:0: [sda] tag#0 FAILED Result: hostbyte=DID_OK driverbyte=DRIVER_SENSE
+sd 1:0:0:0: [sda] tag#0 Sense Key : Medium Error [current] 
+sd 1:0:0:0: [sda] tag#0 Add. Sense: Unrecovered read error
+sd 1:0:0:0: [sda] tag#0 CDB: Read(10) 28 00 00 00 00 00 00 00 08 00
+blk_update_request: critical medium error, dev sda, sector 0
+Buffer I/O error on dev sda, logical block 0, async page read
+sd 1:0:0:0: [sda] tag#0 FAILED Result: hostbyte=DID_OK driverbyte=DRIVER_SENSE
+sd 1:0:0:0: [sda] tag#0 Sense Key : Medium Error [current] 
+sd 1:0:0:0: [sda] tag#0 Add. Sense: Unrecovered read error
+sd 1:0:0:0: [sda] tag#0 CDB: Read(10) 28 00 00 00 00 00 00 00 08 00
+blk_update_request: critical medium error, dev sda, sector 0
+Buffer I/O error on dev sda, logical block 0, async page read
+sd 1:0:0:0: [sda] tag#0 FAILED Result: hostbyte=DID_OK driverbyte=DRIVER_SENSE
+sd 1:0:0:0: [sda] tag#0 Sense Key : Medium Error [current] 
+sd 1:0:0:0: [sda] tag#0 Add. Sense: Unrecovered read error
+sd 1:0:0:0: [sda] tag#0 CDB: Read(10) 28 00 00 00 00 00 00 00 08 00
+blk_update_request: critical medium error, dev sda, sector 0
+Buffer I/O error on dev sda, logical block 0, async page read
+random: crng init done
+sd 1:0:0:0: [sda] tag#0 FAILED Result: hostbyte=DID_OK driverbyte=DRIVER_SENSE
+sd 1:0:0:0: [sda] tag#0 Sense Key : Medium Error [current] 
+sd 1:0:0:0: [sda] tag#0 Add. Sense: Unrecovered read error
+sd 1:0:0:0: [sda] tag#0 CDB: Read(10) 28 00 00 ef 37 80 00 00 08 00
+blk_update_request: critical medium error, dev sda, sector 15677312
+sd 1:0:0:0: [sda] tag#0 FAILED Result: hostbyte=DID_OK driverbyte=DRIVER_SENSE
+sd 1:0:0:0: [sda] tag#0 Sense Key : Medium Error [current] 
+sd 1:0:0:0: [sda] tag#0 Add. Sense: Unrecovered read error
+sd 1:0:0:0: [sda] tag#0 CDB: Read(10) 28 00 00 ef 37 80 00 00 08 00
+blk_update_request: critical medium error, dev sda, sector 15677312
+Buffer I/O error on dev sda, logical block 1959664, async page read
+init: write_file: Unable to open '/proc/sys/vm/extra_free_kbytes': No such file or directory
+sd 1:0:0:0: [sda] tag#0 FAILED Result: hostbyte=DID_OK driverbyte=DRIVER_SENSE
+sd 1:0:0:0: [sda] tag#0 Sense Key : Medium Error [current] 
+sd 1:0:0:0: [sda] tag#0 Add. Sense: Unrecovered read error
+sd 1:0:0:0: [sda] tag#0 CDB: Read(10) 28 00 00 00 00 00 00 00 80 00
+blk_update_request: critical medium error, dev sda, sector 0
+init: write_file: Unable to write to '/config/usb_gadget/g1/UDC': No such device
+acc_open
+acc_release
+android_work: sent uevent USB_STATE=CONNECTED
+Micrel KSZ9031 Gigabit PHY 2188000.ethernet-1:07: attached PHY driver [Micrel KSZ9031 Gigabit PHY] (mii_bus:phy_addr=2188000.ethernet-1:07, irq=120)
+IPv6: ADDRCONF(NETDEV_UP): eth0: link is not ready
+sd 1:0:0:0: [sda] tag#0 FAILED Result: hostbyte=DID_OK driverbyte=DRIVER_SENSE
+sd 1:0:0:0: [sda] tag#0 Sense Key : Medium Error [current] 
+sd 1:0:0:0: [sda] tag#0 Add. Sense: Unrecovered read error
+sd 1:0:0:0: [sda] tag#0 CDB: Read(10) 28 00 00 00 00 00 00 00 08 00
+blk_update_request: critical medium error, dev sda, sector 0
+Buffer I/O error on dev sda, logical block 0, async page read
+configfs-gadget gadget: high-speed config #1: b
+android_work: sent uevent USB_STATE=CONFIGURED
+sd 1:0:0:0: [sda] tag#0 FAILED Result: hostbyte=DID_OK driverbyte=DRIVER_SENSE
+sd 1:0:0:0: [sda] tag#0 Sense Key : Medium Error [current] 
+sd 1:0:0:0: [sda] tag#0 Add. Sense: Unrecovered read error
+sd 1:0:0:0: [sda] tag#0 CDB: Read(10) 28 00 00 00 02 10 00 00 08 00
+blk_update_request: critical medium error, dev sda, sector 528
+sd 1:0:0:0: [sda] tag#0 FAILED Result: hostbyte=DID_OK driverbyte=DRIVER_SENSE
+sd 1:0:0:0: [sda] tag#0 Sense Key : Medium Error [current] 
+sd 1:0:0:0: [sda] tag#0 Add. Sense: Unrecovered read error
+sd 1:0:0:0: [sda] tag#0 CDB: Read(10) 28 00 00 00 02 10 00 00 08 00
+blk_update_request: critical medium error, dev sda, sector 528
+Buffer I/O error on dev sda, logical block 66, async page read
+sd 1:0:0:0: [sda] tag#0 FAILED Result: hostbyte=DID_OK driverbyte=DRIVER_SENSE
+android_work: sent uevent USB_STATE=DISCONNECTED
+sd 1:0:0:0: [sda] tag#0 Sense Key : Medium Error [current] 
+sd 1:0:0:0: [sda] tag#0 Add. Sense: Unrecovered read error
+sd 1:0:0:0: [sda] tag#0 CDB: Read(10) 28 00 00 00 02 10 00 00 08 00
+blk_update_request: critical medium error, dev sda, sector 528
+Buffer I/O error on dev sda, logical block 66, async page read
+android_work: sent uevent USB_STATE=CONNECTED
+android_work: sent uevent USB_STATE=DISCONNECTED
+android_work: sent uevent USB_STATE=CONNECTED
+android_work: sent uevent USB_STATE=DISCONNECTED
+android_work: sent uevent USB_STATE=CONNECTED
+android_work: sent uevent USB_STATE=DISCONNECTED
+android_work: sent uevent USB_STATE=CONNECTED
+android_work: sent uevent USB_STATE=DISCONNECTED
+android_work: sent uevent USB_STATE=CONNECTED
+configfs-gadget gadget: high-speed config #1: b
+android_work: sent uevent USB_STATE=CONFIGURED
+sd 1:0:0:0: [sda] tag#0 FAILED Result: hostbyte=DID_OK driverbyte=DRIVER_SENSE
+sd 1:0:0:0: [sda] tag#0 Sense Key : Medium Error [current] 
+sd 1:0:0:0: [sda] tag#0 Add. Sense: Unrecovered read error
+sd 1:0:0:0: [sda] tag#0 CDB: Read(10) 28 00 00 00 00 00 00 00 20 00
+blk_update_request: critical medium error, dev sda, sector 0
+sd 1:0:0:0: [sda] tag#0 FAILED Result: hostbyte=DID_OK driverbyte=DRIVER_SENSE
+sd 1:0:0:0: [sda] tag#0 Sense Key : Medium Error [current] 
+sd 1:0:0:0: [sda] tag#0 Add. Sense: Unrecovered read error
+sd 1:0:0:0: [sda] tag#0 CDB: Read(10) 28 00 00 00 00 00 00 00 08 00
+blk_update_request: critical medium error, dev sda, sector 0
+Buffer I/O error on dev sda, logical block 0, async page read
+sd 1:0:0:0: [sda] tag#0 FAILED Result: hostbyte=DID_OK driverbyte=DRIVER_SENSE
+sd 1:0:0:0: [sda] tag#0 Sense Key : Medium Error [current] 
+sd 1:0:0:0: [sda] tag#0 Add. Sense: Unrecovered read error
+sd 1:0:0:0: [sda] tag#0 CDB: Read(10) 28 00 00 00 00 00 00 00 08 00
+blk_update_request: critical medium error, dev sda, sector 0
+Buffer I/O error on dev sda, logical block 0, async page read
+sd 1:0:0:0: [sda] tag#0 FAILED Result: hostbyte=DID_OK driverbyte=DRIVER_SENSE
+sd 1:0:0:0: [sda] tag#0 Sense Key : Medium Error [current] 
+sd 1:0:0:0: [sda] tag#0 Add. Sense: Unrecovered read error
+sd 1:0:0:0: [sda] tag#0 CDB: Read(10) 28 00 00 00 00 00 00 00 08 00
+blk_update_request: critical medium error, dev sda, sector 0
+Buffer I/O error on dev sda, logical block 0, async page read
+sd 1:0:0:0: [sda] tag#0 FAILED Result: hostbyte=DID_OK driverbyte=DRIVER_SENSE
+sd 1:0:0:0: [sda] tag#0 Sense Key : Medium Error [current] 
+sd 1:0:0:0: [sda] tag#0 Add. Sense: Unrecovered read error
+sd 1:0:0:0: [sda] tag#0 CDB: Read(10) 28 00 00 ef 37 80 00 00 08 00
+blk_update_request: critical medium error, dev sda, sector 15677312
+sd 1:0:0:0: [sda] tag#0 FAILED Result: hostbyte=DID_OK driverbyte=DRIVER_SENSE
+sd 1:0:0:0: [sda] tag#0 Sense Key : Medium Error [current] 
+sd 1:0:0:0: [sda] tag#0 Add. Sense: Unrecovered read error
+sd 1:0:0:0: [sda] tag#0 CDB: Read(10) 28 00 00 ef 37 80 00 00 08 00
+blk_update_request: critical medium error, dev sda, sector 15677312
+Buffer I/O error on dev sda, logical block 1959664, async page read
+init: Service 'bootanim' (pid 348) exited with status 0
+init: Starting service 'exec 3 (/system/bin/bootstat)'...
+sd 1:0:0:0: [sda] tag#0 FAILED Result: hostbyte=DID_OK driverbyte=DRIVER_SENSE
+sd 1:0:0:0: [sda] tag#0 Sense Key : Medium Error [current] 
+sd 1:0:0:0: [sda] tag#0 Add. Sense: Unrecovered read error
+sd 1:0:0:0: [sda] tag#0 CDB: Read(10) 28 00 00 00 00 00 00 00 80 00
+blk_update_request: critical medium error, dev sda, sector 0
+init: Service 'exec 3 (/system/bin/bootstat)' (pid 951) exited with status 0
+init: Starting service 'exec 4 (/system/bin/bootstat)'...
+init: Service 'exec 4 (/system/bin/bootstat)' (pid 962) exited with status 0
+init: Starting service 'exec 5 (/system/bin/bootstat)'...
+init: Service 'exec 5 (/system/bin/bootstat)' (pid 964) exited with status 0
+init: Starting service 'exec 6 (/system/bin/bootstat)'...
+init: Service 'exec 6 (/system/bin/bootstat)' (pid 965) exited with status 0
+sd 1:0:0:0: [sda] tag#0 FAILED Result: hostbyte=DID_OK driverbyte=DRIVER_SENSE
+sd 1:0:0:0: [sda] tag#0 Sense Key : Medium Error [current] 
+sd 1:0:0:0: [sda] tag#0 Add. Sense: Unrecovered read error
+sd 1:0:0:0: [sda] tag#0 CDB: Read(10) 28 00 00 00 00 00 00 00 08 00
+blk_update_request: critical medium error, dev sda, sector 0
+Buffer I/O error on dev sda, logical block 0, async page read
+sd 1:0:0:0: [sda] tag#0 FAILED Result: hostbyte=DID_OK driverbyte=DRIVER_SENSE
+sd 1:0:0:0: [sda] tag#0 Sense Key : Medium Error [current] 
+sd 1:0:0:0: [sda] tag#0 Add. Sense: Unrecovered read error
+sd 1:0:0:0: [sda] tag#0 CDB: Read(10) 28 00 00 00 02 10 00 00 08 00
+blk_update_request: critical medium error, dev sda, sector 528
+sd 1:0:0:0: [sda] tag#0 FAILED Result: hostbyte=DID_OK driverbyte=DRIVER_SENSE
+sd 1:0:0:0: [sda] tag#0 Sense Key : Medium Error [current] 
+sd 1:0:0:0: [sda] tag#0 Add. Sense: Unrecovered read error
+sd 1:0:0:0: [sda] tag#0 CDB: Read(10) 28 00 00 00 02 10 00 00 08 00
+blk_update_request: critical medium error, dev sda, sector 528
+
+Buffer I/O error on dev sda, logical block 66, async page read
+toradex_apalis6q:/ # sd 1:0:0:0: [sda] tag#0 FAILED Result: hostbyte=DID_OK driverbyte=DRIVER_SENSE
+sd 1:0:0:0: [sda] tag#0 Sense Key : Medium Error [current] 
+sd 1:0:0:0: [sda] tag#0 Add. Sense: Unrecovered read error
+sd 1:0:0:0: [sda] tag#0 CDB: Read(10) 28 00 00 00 02 10 00 00 08 00
+blk_update_request: critical medium error, dev sda, sector 528
+Buffer I/O error on dev sda, logical block 66, async page read
+
+toradex_apalis6q:/ # 
+toradex_apalis6q:/ # 
+toradex_apalis6q:/ # sd 1:0:0:0: [sda] tag#0 FAILED Result: hostbyte=DID_OK driverbyte=DRIVER_SENSE
+sd 1:0:0:0: [sda] tag#0 Sense Key : Medium Error [current] 
+sd 1:0:0:0: [sda] tag#0 Add. Sense: Unrecovered read error
+sd 1:0:0:0: [sda] tag#0 CDB: Read(10) 28 00 00 ef 37 80 00 00 08 00
+blk_update_request: critical medium error, dev sda, sector 15677312
+
+sd 1:0:0:0: [sda] tag#0 FAILED Result: hostbyte=DID_OK driverbyte=DRIVER_SENSE
+sd 1:0:0:0: [sda] tag#0 Sense Key : Medium Error [current] 
+sd 1:0:0:0: [sda] tag#0 Add. Sense: Unrecovered read error
+sd 1:0:0:0: [sda] tag#0 CDB: Read(10) 28 00 00 ef 37 80 00 00 08 00
+blk_update_request: critical medium error, dev sda, sector 15677312
+Buffer I/O error on dev sda, logical block 1959664, async page read
+toradex_apalis6q:/ # 
+toradex_apalis6q:/ # 
+toradex_apalis6q:/ # 
+toradex_apalis6q:/ # 
+toradex_apalis6q:/ # 
+toradex_apalis6q:/ # 
+toradex_apalis6q:/ # 
+toradex_apalis6q:/ # 
+sd 1:0:0:0: [sda] tag#0 FAILED Result: hostbyte=DID_OK driverbyte=DRIVER_SENSE
+sd 1:0:0:0: [sda] tag#0 Sense Key : Medium Error [current] 
+sd 1:0:0:0: [sda] tag#0 Add. Sense: Unrecovered read error
+sd 1:0:0:0: [sda] tag#0 CDB: Read(10) 28 00 00 00 00 00 00 00 80 00
+blk_update_request: critical medium error, dev sda, sector 0
+toradex_apalis6q:/ # 
+toradex_apalis6q:/ # 
+toradex_apalis6q:/ # sd 1:0:0:0: [sda] tag#0 FAILED Result: hostbyte=DID_OK driverbyte=DRIVER_SENSE
+sd 1:0:0:0: [sda] tag#0 Sense Key : Medium Error [current] 
+sd 1:0:0:0: [sda] tag#0 Add. Sense: Unrecovered read error
+sd 1:0:0:0: [sda] tag#0 CDB: Read(10) 28 00 00 00 00 00 00 00 08 00
+blk_update_request: critical medium error, dev sda, sector 0
+Buffer I/O error on dev sda, logical block 0, async page read
+sd 1:0:0:0: [sda] tag#0 FAILED Result: hostbyte=DID_OK driverbyte=DRIVER_SENSE
+sd 1:0:0:0: [sda] tag#0 Sense Key : Medium Error [current] 
+sd 1:0:0:0: [sda] tag#0 Add. Sense: Unrecovered read error
+sd 1:0:0:0: [sda] tag#0 CDB: Read(10) 28 00 00 00 02 10 00 00 08 00
+blk_update_request: critical medium error, dev sda, sector 528
+sd 1:0:0:0: [sda] tag#0 FAILED Result: hostbyte=DID_OK driverbyte=DRIVER_SENSE
+sd 1:0:0:0: [sda] tag#0 Sense Key : Medium Error [current] 
+sd 1:0:0:0: [sda] tag#0 Add. Sense: Unrecovered read error
+sd 1:0:0:0: [sda] tag#0 CDB: Read(10) 28 00 00 00 02 10 00 00 08 00
+blk_update_request: critical medium error, dev sda, sector 528
+Buffer I/O error on dev sda, logical block 66, async page read
+sd 1:0:0:0: [sda] tag#0 FAILED Result: hostbyte=DID_OK driverbyte=DRIVER_SENSE
+sd 1:0:0:0: [sda] tag#0 Sense Key : Medium Error [current] 
+sd 1:0:0:0: [sda] tag#0 Add. Sense: Unrecovered read error
+sd 1:0:0:0: [sda] tag#0 CDB: Read(10) 28 00 00 00 02 10 00 00 08 00
+blk_update_request: critical medium error, dev sda, sector 528
+Buffer I/O error on dev sda, logical block 66, async page read
+android_work: sent uevent USB_STATE=DISCONNECTED
+android_work: sent uevent USB_STATE=CONNECTED
+usb 1-1.3: USB disconnect, device number 3
+android_work: sent uevent USB_STATE=DISCONNECTED
+android_work: did not send uevent (0 0   (null))
+android_work: sent uevent USB_STATE=CONNECTED
+android_work: sent uevent USB_STATE=DISCONNECTED
+android_work: sent uevent USB_STATE=CONNECTED
+android_work: sent uevent USB_STATE=DISCONNECTED
+android_work: sent uevent USB_STATE=CONNECTED
+ci_hdrc ci_hdrc.0: freeing queued request
+android_work: sent uevent USB_STATE=DISCONNECTED
+android_work: sent uevent USB_STATE=CONNECTED
+android_work: sent uevent USB_STATE=DISCONNECTED
+android_work: sent uevent USB_STATE=CONNECTED
+ci_hdrc ci_hdrc.0: freeing queued request
+android_work: sent uevent USB_STATE=DISCONNECTED
+android_work: sent uevent USB_STATE=CONNECTED
+configfs-gadget gadget: high-speed config #1: b
+android_work: sent uevent USB_STATE=CONFIGURED
+mtp_open
+mtp_release
+android_work: sent uevent USB_STATE=DISCONNECTED
+android_work: sent uevent USB_STATE=CONNECTED
+android_work: sent uevent USB_STATE=DISCONNECTED
+android_work: sent uevent USB_STATE=CONNECTED
+android_work: sent uevent USB_STATE=DISCONNECTED
+android_work: sent uevent USB_STATE=CONNECTED
+android_work: sent uevent USB_STATE=DISCONNECTED
+android_work: sent uevent USB_STATE=CONNECTED
+android_work: sent uevent USB_STATE=DISCONNECTED
+android_work: sent uevent USB_STATE=CONNECTED
+configfs-gadget gadget: high-speed config #1: b
+android_work: sent uevent USB_STATE=CONFIGURED
+mtp_open
+usb 1-1.2: USB disconnect, device number 5
+mtp_release
+android_work: sent uevent USB_STATE=DISCONNECTED
+usb 1-1.3: new full-speed USB device number 6 using ci_hdrc
+usb 1-1.3: new high-speed USB device number 7 using ci_hdrc
+usb 1-1.3: New USB device found, idVendor=14cd, idProduct=121f
+usb 1-1.3: New USB device strings: Mfr=1, Product=3, SerialNumber=2
+usb 1-1.3: Product: Mass Storage Device
+usb 1-1.3: Manufacturer: Generic
+usb 1-1.3: SerialNumber: 121F20110712
+usb-storage 1-1.3:1.0: USB Mass Storage device detected
+scsi host1: usb-storage 1-1.3:1.0
+scsi 1:0:0:0: Direct-Access     Mass     Storage Device   1.00 PQ: 0 ANSI: 0 CCS
+
+toradex_apalis6q:/ # 
+toradex_apalis6q:/ # 
+toradex_apalis6q:/ # 
+toradex_apalis6q:/ # sd 1:0:0:0: [sda] 15677440 512-byte logical blocks: (8.03 GB/7.48 GiB)
+sd 1:0:0:0: [sda] Write Protect is off
+sd 1:0:0:0: [sda] No Caching mode page found
+sd 1:0:0:0: [sda] Assuming drive cache: write through
+sd 1:0:0:0: [sda] tag#0 FAILED Result: hostbyte=DID_OK driverbyte=DRIVER_SENSE
+sd 1:0:0:0: [sda] tag#0 Sense Key : Medium Error [current] 
+sd 1:0:0:0: [sda] tag#0 Add. Sense: Unrecovered read error
+sd 1:0:0:0: [sda] tag#0 CDB: Read(10) 28 00 00 00 00 00 00 00 08 00
+blk_update_request: critical medium error, dev sda, sector 0
+Buffer I/O error on dev sda, logical block 0, async page read
+
+toradex_apalis6q:/ # 
+toradex_apalis6q:/ # sd 1:0:0:0: [sda] tag#0 FAILED Result: hostbyte=DID_OK driverbyte=DRIVER_SENSE
+sd 1:0:0:0: [sda] tag#0 Sense Key : Medium Error [current] 
+sd 1:0:0:0: [sda] tag#0 Add. Sense: Unrecovered read error
+sd 1:0:0:0: [sda] tag#0 CDB: Read(10) 28 00 00 00 00 00 00 00 08 00
+blk_update_request: critical medium error, dev sda, sector 0
+Buffer I/O error on dev sda, logical block 0, async page read
+ sda: unable to read partition table
+sd 1:0:0:0: [sda] Attached SCSI removable disk
+sd 1:0:0:0: [sda] tag#0 FAILED Result: hostbyte=DID_OK driverbyte=DRIVER_SENSE
+sd 1:0:0:0: [sda] tag#0 Sense Key : Medium Error [current] 
+sd 1:0:0:0: [sda] tag#0 Add. Sense: Unrecovered read error
+sd 1:0:0:0: [sda] tag#0 CDB: Read(10) 28 00 00 00 00 00 00 00 20 00
+blk_update_request: critical medium error, dev sda, sector 0
+sd 1:0:0:0: [sda] tag#0 FAILED Result: hostbyte=DID_OK driverbyte=DRIVER_SENSE
+sd 1:0:0:0: [sda] tag#0 Sense Key : Medium Error [current] 
+sd 1:0:0:0: [sda] tag#0 Add. Sense: Unrecovered read error
+sd 1:0:0:0: [sda] tag#0 CDB: Read(10) 28 00 00 00 00 00 00 00 08 00
+
+blk_update_request: critical medium error, dev sda, sector 0
+Buffer I/O error on dev sda, logical block 0, async page read
+toradex_apalis6q:/ # 
+
+toradex_apalis6q:/ # 
+toradex_apalis6q:/ # 
+toradex_apalis6q:/ # 
+toradex_apalis6q:/ # 
+toradex_apalis6q:/ # 
+toradex_apalis6q:/ # sd 1:0:0:0: [sda] tag#0 FAILED Result: hostbyte=DID_OK driverbyte=DRIVER_SENSE
+
+sd 1:0:0:0: [sda] tag#0 Sense Key : Medium Error [current] 
+sd 1:0:0:0: [sda] tag#0 Add. Sense: Unrecovered read error
+sd 1:0:0:0: [sda] tag#0 CDB: Read(10) 28 00 00 00 00 00 00 00 08 00
+blk_update_request: critical medium error, dev sda, sector 0
+Buffer I/O error on dev sda, logical block 0, async page read
+toradex_apalis6q:/ # 
+toradex_apalis6q:/ # 
+toradex_apalis6q:/ # 
+toradex_apalis6q:/ # 
+toradex_apalis6q:/ # 
+toradex_apalis6q:/ # 
+toradex_apalis6q:/ # 
+toradex_apalis6q:/ # 
+toradex_apalis6q:/ # 
+toradex_apalis6q:/ # sd 1:0:0:0: [sda] tag#0 FAILED Result: hostbyte=DID_OK driverbyte=DRIVER_SENSE
+sd 1:0:0:0: [sda] tag#0 Sense Key : Medium Error [current] 
+sd 1:0:0:0: [sda] tag#0 Add. Sense: Unrecovered read error
+sd 1:0:0:0: [sda] tag#0 CDB: Read(10) 28 00 00 00 00 00 00 00 08 00
+blk_update_request: critical medium error, dev sda, sector 0
+Buffer I/O error on dev sda, logical block 0, async page read
+sd 1:0:0:0: [sda] tag#0 FAILED Result: hostbyte=DID_OK driverbyte=DRIVER_SENSE
+sd 1:0:0:0: [sda] tag#0 Sense Key : Medium Error [current] 
+sd 1:0:0:0: [sda] tag#0 Add. Sense: Unrecovered read error
+sd 1:0:0:0: [sda] tag#0 CDB: Read(10) 28 00 00 ef 37 80 00 00 08 00
+blk_update_request: critical medium error, dev sda, sector 15677312
+sd 1:0:0:0: [sda] tag#0 FAILED Result: hostbyte=DID_OK driverbyte=DRIVER_SENSE
+sd 1:0:0:0: [sda] tag#0 Sense Key : Medium Error [current] 
+sd 1:0:0:0: [sda] tag#0 Add. Sense: Unrecovered read error
+sd 1:0:0:0: [sda] tag#0 CDB: Read(10) 28 00 00 ef 37 80 00 00 08 00
+blk_update_request: critical medium error, dev sda, sector 15677312
+Buffer I/O error on dev sda, logical block 1959664, async page read
+sd 1:0:0:0: [sda] tag#0 FAILED Result: hostbyte=DID_OK driverbyte=DRIVER_SENSE
+sd 1:0:0:0: [sda] tag#0 Sense Key : Medium Error [current] 
+sd 1:0:0:0: [sda] tag#0 Add. Sense: Unrecovered read error
+sd 1:0:0:0: [sda] tag#0 CDB: Read(10) 28 00 00 00 00 00 00 00 80 00
+blk_update_request: critical medium error, dev sda, sector 0
+
+
+U-Boot 2017.03-00001-g610928540e-dirty (Dec 29 2017 - 11:49:28 +0530)
+
+CPU:   Freescale i.MX6Q rev1.5 at 792 MHz
+Reset cause: POR
+I2C:   ready
+DRAM:  2 GiB
+PMIC: device id: 0x10, revision id: 0x21
+PMIC: programmed
+MMC:   FSL_SDHC: 0, FSL_SDHC: 1, FSL_SDHC: 2
+auto-detected panel HDMI
+Aravinth: Display: HDMI (1024x768)
+In:    serial
+Out:   serial
+Err:   serial
+Model: Toradex Apalis iMX6 Quad 2GB IT V1.1C, Serial# 05146387
+flash target is MMC:0
+Net:   using PHY at 7
+FEC [PRIME]
+Fastboot: Normal
+Hit any key to stop autoboot:  1  0 
+boota mmc0 
+CACHE: Misaligned operation at range [8ffb70a0, 8ffb7120]
+CACHE: Misaligned operation at range [8ffb70a0, 8ffb7120]
+kernel   @ 14008000 (9802376)
+ramdisk  @ 15000000 (1628386)
+fdt      @ 14f00000 (53981)
+## Booting Android Image at 0x12000000 ...
+Kernel load addr 0x14008000 size 9573 KiB
+Kernel command line: console=ttymxc0,115200 init=/init video=mxcfb0:dev=ldb,fbpix=RGB32,bpp=32 video=mxcfb1:dev=hdmi,640x480M@60,if=RGB24,bpp=16 video=mxcfb2:off video=mxcfb3:off vmalloc=256M androidboot.console=ttymxc0 consoleblank=0 androidboot.hardware=freescale cma=448M androidboot.selinux=permissive androidboot.dm_verity=disabled buildvariant=user androidboot.serialno=1b2429d4ea997115 androidboot.storage_type=emmc
+## Flattened Device Tree blob at 14f00000
+   Booting using the fdt blob at 0x14f00000
+   Loading Kernel Image ... OK
+   Using Device Tree in place at 14f00000, end 14f102dc
+
+Starting kernel ...
+
+Booting Linux on physical CPU 0x0
+Linux version 4.9.67-07229-gdc6c16ec0433-dirty (embadmin@ubuntu) (gcc version 4.9 20150123 (prerelease) (GCC) ) #15 SMP PREEMPT Wed Dec 27 15:15:47 IST 2017
+CPU: ARMv7 Processor [412fc09a] revision 10 (ARMv7), cr=10c53c7d
+CPU: PIPT / VIPT nonaliasing data cache, VIPT aliasing instruction cache
+OF: fdt:Machine model: Aravinth :UJET Toradex Apalis iMX6Q/D Module on Ixora V1.1 Carrier Board
+cma: Reserved 448 MiB at 0x22000000
+Memory policy: Data cache writealloc
+percpu: Embedded 15 pages/cpu @ee6b3000 s31040 r8192 d22208 u61440
+Built 1 zonelists in Zone order, mobility grouping on.  Total pages: 522768
+Kernel command line: console=ttymxc0,115200 init=/init video=mxcfb0:dev=ldb,fbpix=RGB32,bpp=32 video=mxcfb1:dev=hdmi,640x480M@60,if=RGB24,bpp=16 video=mxcfb2:off video=mxcfb3:off vmalloc=256M androidboot.console=ttymxc0 consoleblank=0 androidboot.hardware=freescale cma=448M androidboot.selinux=permissive androidboot.dm_verity=disabled buildvariant=user androidboot.serialno=1b2429d4ea997115 androidboot.storage_type=emmc
+PID hash table entries: 4096 (order: 2, 16384 bytes)
+Dentry cache hash table entries: 131072 (order: 7, 524288 bytes)
+Inode-cache hash table entries: 65536 (order: 6, 262144 bytes)
+Memory: 1597048K/2097152K available (13312K kernel code, 1128K rwdata, 4016K rodata, 1024K init, 606K bss, 41352K reserved, 458752K cma-reserved, 1318912K highmem)
+Virtual kernel memory layout:
+    vector  : 0xffff0000 - 0xffff1000   (   4 kB)
+    fixmap  : 0xffc00000 - 0xfff00000   (3072 kB)
+    vmalloc : 0xf0000000 - 0xff800000   ( 248 MB)
+    lowmem  : 0xc0000000 - 0xef800000   ( 760 MB)
+    pkmap   : 0xbfe00000 - 0xc0000000   (   2 MB)
+    modules : 0xbf000000 - 0xbfe00000   (  14 MB)
+      .text : 0xc0008000 - 0xc0e00000   (14304 kB)
+      .init : 0xc1300000 - 0xc1400000   (1024 kB)
+      .data : 0xc1400000 - 0xc151a218   (1129 kB)
+       .bss : 0xc151a218 - 0xc15b1be0   ( 607 kB)
+SLUB: HWalign=64, Order=0-3, MinObjects=0, CPUs=4, Nodes=1
+Preemptible hierarchical RCU implementation.
+	Build-time adjustment of leaf fanout to 32.
+NR_IRQS:16 nr_irqs:16 16
+L2C-310 errata 752271 769419 enabled
+L2C-310 enabling early BRESP for Cortex-A9
+L2C-310 full line of zeros enabled for Cortex-A9
+L2C-310 ID prefetch enabled, offset 16 lines
+L2C-310 dynamic clock gating enabled, standby mode enabled
+L2C-310 cache controller enabled, 16 ways, 1024 kB
+L2C-310: CACHE_ID 0x410000c7, AUX_CTRL 0x76470001
+Switching to timer-based delay loop, resolution 333ns
+sched_clock: 32 bits at 3000kHz, resolution 333ns, wraps every 715827882841ns
+clocksource: mxc_timer1: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 637086815595 ns
+Console: colour dummy device 80x30
+Calibrating delay loop (skipped), value calculated using timer frequency.. 6.00 BogoMIPS (lpj=30000)
+pid_max: default: 32768 minimum: 301
+Security Framework initialized
+SELinux:  Initializing.
+Mount-cache hash table entries: 2048 (order: 1, 8192 bytes)
+Mountpoint-cache hash table entries: 2048 (order: 1, 8192 bytes)
+CPU: Testing write buffer coherency: ok
+CPU0: update cpu_capacity 1024
+CPU0: thread -1, cpu 0, socket 0, mpidr 80000000
+Setting up static identity map for 0x10100000 - 0x10100058
+CPU1: update cpu_capacity 1024
+CPU1: thread -1, cpu 1, socket 0, mpidr 80000001
+CPU2: update cpu_capacity 1024
+CPU2: thread -1, cpu 2, socket 0, mpidr 80000002
+CPU3: update cpu_capacity 1024
+CPU3: thread -1, cpu 3, socket 0, mpidr 80000003
+Brought up 4 CPUs
+SMP: Total of 4 processors activated (24.00 BogoMIPS).
+CPU: All CPU(s) started in SVC mode.
+CPU3: update max cpu_capacity 1024
+devtmpfs: initialized
+CPU2: update max cpu_capacity 1024
+VFP support v0.3: implementor 41 architecture 3 part 30 variant 9 rev 4
+clocksource: jiffies: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 19112604462750000 ns
+futex hash table entries: 1024 (order: 4, 65536 bytes)
+pinctrl core: initialized pinctrl subsystem
+NET: Registered protocol family 16
+DMA: preallocated 256 KiB pool for atomic coherent allocations
+cpuidle: using governor menu
+CPU identified as i.MX6Q, silicon rev 1.5
+hw-breakpoint: found 5 (+1 reserved) breakpoint and 1 watchpoint registers.
+hw-breakpoint: maximum watchpoint size is 4 bytes.
+imx6q-pinctrl 20e0000.iomuxc: initialized IMX pinctrl driver
+imx-gpc 20dc000.gpc: no fsl,ldo-bypass found!
+imx-gpc 20dc000.gpc: Registered imx-gpc
+mxs-dma 110000.dma-apbh: initialized
+usb_host_vbus: supplied by usb_host_vbus_hub
+SCSI subsystem initialized
+usbcore: registered new interface driver usbfs
+usbcore: registered new interface driver hub
+usbcore: registered new device driver usb
+2000000.aips-bus:usbphy_nop1 supply vcc not found, using dummy regulator
+2000000.aips-bus:usbphy_nop2 supply vcc not found, using dummy regulator
+i2c i2c-1: IMX I2C adapter registered
+i2c i2c-1: can't use DMA, using PIO instead.
+stmpe-i2c 2-0041: stmpe811 detected, chip id: 0x811
+i2c i2c-2: IMX I2C adapter registered
+i2c i2c-2: can't use DMA, using PIO instead.
+i2c i2c-3: IMX I2C adapter registered
+i2c i2c-3: can't use DMA, using PIO instead.
+Linux video capture interface: v2.00
+pps_core: LinuxPPS API ver. 1 registered
+pps_core: Software ver. 5.3.6 - Copyright 2005-2007 Rodolfo Giometti <giometti@linux.it>
+PTP clock support registered
+imx-ipuv3 2400000.ipu: IPU DMFC NORMAL mode: 1(0~1), 5B(4,5), 5F(6,7)
+imx-ipuv3 2800000.ipu: IPU DMFC NORMAL mode: 1(0~1), 5B(4,5), 5F(6,7)
+mxc_mipi_csi2 21dc000.mipi_csi: i.MX MIPI CSI2 driver probed ipu0 csi1
+mxc_mipi_csi2 21dc000.mipi_csi: i.MX MIPI CSI2 dphy version is 0x3130302a
+MIPI CSI2 driver module loaded
+imx rpmsg driver is registered.
+Advanced Linux Sound Architecture Driver Initialized.
+Bluetooth: Core ver 2.22
+NET: Registered protocol family 31
+Bluetooth: HCI device and connection manager initialized
+Bluetooth: HCI socket layer initialized
+Bluetooth: L2CAP socket layer initialized
+Bluetooth: SCO socket layer initialized
+clocksource: Switched to clocksource mxc_timer1
+VFS: Disk quotas dquot_6.6.0
+VFS: Dquot-cache hash table entries: 1024 (order 0, 4096 bytes)
+NET: Registered protocol family 2
+TCP established hash table entries: 8192 (order: 3, 32768 bytes)
+TCP bind hash table entries: 8192 (order: 4, 65536 bytes)
+TCP: Hash tables configured (established 8192 bind 8192)
+UDP hash table entries: 512 (order: 2, 16384 bytes)
+UDP-Lite hash table entries: 512 (order: 2, 16384 bytes)
+NET: Registered protocol family 1
+RPC: Registered named UNIX socket transport module.
+RPC: Registered udp transport module.
+RPC: Registered tcp transport module.
+RPC: Registered tcp NFSv4.1 backchannel transport module.
+Trying to unpack rootfs image as initramfs...
+Freeing initrd memory: 1592K
+hw perfevents: enabled with armv7_cortex_a9 PMU driver, 7 counters available
+Bus freq driver module loaded
+audit: initializing netlink subsys (disabled)
+audit: type=2000 audit(0.870:1): initialized
+workingset: timestamp_bits=30 max_order=19 bucket_order=0
+NFS: Registering the id_resolver key type
+Key type id_resolver registered
+Key type id_legacy registered
+ntfs: driver 2.1.32 [Flags: R/W DEBUG].
+jffs2: version 2.2. (NAND) © 2001-2006 Red Hat, Inc.
+fuse init (API version 7.26)
+bounce: pool size: 64 pages
+io scheduler noop registered
+io scheduler deadline registered
+io scheduler cfq registered (default)
+backlight supply power not found, using dummy regulator
+20e0000.hdmi_video supply HDMI not found, using dummy regulator
+mxc_sdc_fb fb@0: registered mxc display driver ldb
+imx-ipuv3 2800000.ipu: IPU DMFC DP HIGH RESOLUTION: 1(0,1), 5B(2~5), 5F(6,7)
+Console: switching to colour frame buffer device 128x48
+mxc_hdmi 20e0000.hdmi_video: Detected HDMI controller 0x13:0xa:0xa0:0xc1
+fbcvt: 640x480@60: CVT Name - .307M3
+mxc_sdc_fb fb@1: registered mxc display driver hdmi
+mxc_sdc_fb fb@2: Can't get fb option for mxcfb2!
+mxc_sdc_fb fb@3: Can't get fb option for mxcfb3!
+imx-sdma 20ec000.sdma: no iram assigned, using external mem
+imx-sdma 20ec000.sdma: loaded firmware 3.3
+pfuze100-regulator 2-0008: Full layer: 2, Metal layer: 1
+pfuze100-regulator 2-0008: FAB: 0, FIN: 0
+pfuze100-regulator 2-0008: pfuze100 found.
+mxc_hdmi 20e0000.hdmi_video: Read EDID again
+2020000.serial: ttymxc0 at MMIO 0x2020000 (irq = 29, base_baud = 5000000) is a IMX
+mxc_hdmi 20e0000.hdmi_video: create default modelist
+console [ttymxc0] enabled
+21e8000.serial: ttymxc1 at MMIO 0x21e8000 (irq = 78, base_baud = 5000000) is a IMX
+21f0000.serial: ttymxc3 at MMIO 0x21f0000 (irq = 79, base_baud = 5000000) is a IMX
+21f4000.serial: ttymxc4 at MMIO 0x21f4000 (irq = 80, base_baud = 5000000) is a IMX
+imx sema4 driver is registered.
+[drm] Initialized
+[drm] Initialized vivante 1.0.0 20120216 on minor 0
+brd: module loaded
+loop: module loaded
+zram: Added device: zram0
+ahci-imx 2200000.sata: fsl,transmit-level-mV not specified, using 00000024
+ahci-imx 2200000.sata: fsl,transmit-boost-mdB not specified, using 00000480
+ahci-imx 2200000.sata: fsl,transmit-atten-16ths not specified, using 00002000
+ahci-imx 2200000.sata: fsl,receive-eq-mdB not specified, using 05000000
+ahci-imx 2200000.sata: SSS flag set, parallel bus scan disabled
+ahci-imx 2200000.sata: AHCI 0001.0300 32 slots 1 ports 3 Gbps 0x1 impl platform mode
+ahci-imx 2200000.sata: flags: ncq sntf stag pm led clo only pmp pio slum part ccc apst 
+scsi host0: ahci-imx
+ata1: SATA max UDMA/133 mmio [mem 0x02200000-0x02203fff] port 0x100 irq 87
+spi_imx 2008000.ecspi: probed
+libphy: Fixed MDIO Bus: probed
+tun: Universal TUN/TAP device driver, 1.6
+tun: (C) 1999-2004 Max Krasnyansky <maxk@qualcomm.com>
+CAN device driver interface
+2090000.flexcan supply xceiver not found, using dummy regulator
+flexcan 2090000.flexcan: device registered (reg_base=f02f4000, irq=38)
+2094000.flexcan supply xceiver not found, using dummy regulator
+flexcan 2094000.flexcan: device registered (reg_base=f02fc000, irq=39)
+2188000.ethernet supply phy not found, using dummy regulator
+pps pps0: new PPS source ptp0
+libphy: fec_enet_mii_bus: probed
+fec 2188000.ethernet eth0: registered PHC device 0
+PPP generic driver version 2.4.2
+PPP BSD Compression module registered
+PPP Deflate Compression module registered
+PPP MPPE Compression module registered
+NET: Registered protocol family 24
+usbcore: registered new interface driver kaweth
+pegasus: v0.9.3 (2013/04/25), Pegasus/Pegasus II USB Ethernet driver
+usbcore: registered new interface driver pegasus
+usbcore: registered new interface driver rtl8150
+usbcore: registered new interface driver r8152
+usbcore: registered new interface driver asix
+usbcore: registered new interface driver ax88179_178a
+usbcore: registered new interface driver cdc_ether
+usbcore: registered new interface driver cdc_eem
+usbcore: registered new interface driver net1080
+usbcore: registered new interface driver cdc_subset
+usbcore: registered new interface driver zaurus
+usbcore: registered new interface driver cdc_ncm
+ehci_hcd: USB 2.0 'Enhanced' Host Controller (EHCI) Driver
+ehci-mxc: Freescale On-Chip EHCI Host driver
+usbcore: registered new interface driver cdc_acm
+cdc_acm: USB Abstract Control Model driver for USB modems and ISDN adapters
+usbcore: registered new interface driver usb-storage
+usbcore: registered new interface driver usbserial
+usbcore: registered new interface driver usbserial_generic
+usbserial: USB Serial support registered for generic
+usbcore: registered new interface driver ftdi_sio
+usbserial: USB Serial support registered for FTDI USB Serial Device
+usbcore: registered new interface driver option
+usbserial: USB Serial support registered for GSM modem (1-port)
+usbcore: registered new interface driver usbtest
+usbcore: registered new interface driver usb_ehset_test
+2184800.usbmisc supply vbus-wakeup not found, using dummy regulator
+ci_hdrc ci_hdrc.1: EHCI Host Controller
+ci_hdrc ci_hdrc.1: new USB bus registered, assigned bus number 1
+ci_hdrc ci_hdrc.1: USB 2.0 started, EHCI 1.00
+usb usb1: New USB device found, idVendor=1d6b, idProduct=0002
+usb usb1: New USB device strings: Mfr=3, Product=2, SerialNumber=1
+usb usb1: Product: EHCI Host Controller
+usb usb1: Manufacturer: Linux 4.9.67-07229-gdc6c16ec0433-dirty ehci_hcd
+usb usb1: SerialNumber: ci_hdrc.1
+hub 1-0:1.0: USB hub found
+ata1: SATA link down (SStatus 0 SControl 300)
+ahci-imx 2200000.sata: no device found, disabling link.
+ahci-imx 2200000.sata: pass ahci_imx..hotplug=1 to enable hotplug
+hub 1-0:1.0: 1 port detected
+mousedev: PS/2 mouse device common for all mice
+usbcore: registered new interface driver xpad
+usbcore: registered new interface driver usb_acecad
+usbcore: registered new interface driver aiptek
+usbcore: registered new interface driver gtco
+usbcore: registered new interface driver hanwang
+usbcore: registered new interface driver kbtab
+input: stmpe-ts as /devices/soc0/soc/2100000.aips-bus/21a4000.i2c/i2c-2/2-0041/stmpe-ts/input/input0
+snvs_rtc 20cc000.snvs:snvs-rtc-lp: rtc core: registered 20cc000.snvs:snvs-r as rtc0
+i2c /dev entries driver
+IR NEC protocol handler initialized
+IR RC5(x/sz) protocol handler initialized
+IR RC6 protocol handler initialized
+IR JVC protocol handler initialized
+IR Sony protocol handler initialized
+IR SANYO protocol handler initialized
+IR Sharp protocol handler initialized
+IR MCE Keyboard/mouse protocol handler initialized
+IR XMP protocol handler initialized
+mxc_v4l2_output v4l2_out: V4L2 device registered as video16
+mxc_v4l2_output v4l2_out: V4L2 device registered as video17
+mxc_v4l2_output v4l2_out: V4L2 device registered as video18
+mxc_v4l2_output v4l2_out: V4L2 device registered as video19
+ov564x_mipi 3-003c: found pwm2, period=0
+usb 1-1: new high-speed USB device number 2 using ci_hdrc
+ov5640_read_reg:write reg error:reg=300a
+camera ov5640_mipi is not found
+usbcore: registered new interface driver uvcvideo
+USB Video Class driver (1.1.1)
+imx2-wdt 20bc000.wdog: timeout 60 sec (nowayout=0)
+device-mapper: uevent: version 1.0.3
+device-mapper: ioctl: 4.35.0-ioctl (2016-06-23) initialised: dm-devel@redhat.com
+Bluetooth: HCI UART driver ver 2.3
+Bluetooth: HCI UART protocol H4 registered
+Bluetooth: HCI UART protocol BCSP registered
+Bluetooth: HCI UART protocol ATH3K registered
+usbcore: registered new interface driver btusb
+sdhci: Secure Digital Host Controller Interface driver
+sdhci: Copyright(c) Pierre Ossman
+sdhci-pltfm: SDHCI platform and OF driver helper
+sdhci-esdhc-imx 2190000.usdhc: could not get ultra high speed state, work on normal mode
+sdhci-esdhc-imx 2190000.usdhc: Got CD GPIO
+mmc1: SDHCI controller on 2190000.usdhc [2190000.usdhc] using ADMA
+sdhci-esdhc-imx 2198000.usdhc: could not get ultra high speed state, work on normal mode
+usb 1-1: New USB device found, idVendor=0424, idProduct=2514
+usb 1-1: New USB device strings: Mfr=0, Product=0, SerialNumber=0
+hub 1-1:1.0: USB hub found
+hub 1-1:1.0: 4 ports detected
+mmc0: SDHCI controller on 2198000.usdhc [2198000.usdhc] using ADMA
+mxc_vpu 2040000.vpu_fsl: VPU initialized
+mxc_vdoa 21e4000.vdoa: i.MX Video Data Order Adapter(VDOA) driver probed
+mxc_hdmi_cec soc:hdmi_cec@00120000: HDMI CEC initialized
+Galcore version 6.2.2.96445
+mmc0: new DDR MMC card at address 0001
+mmcblk0: mmc0:0001 Q2J54A 3.59 GiB 
+mmcblk0boot0: mmc0:0001 Q2J54A partition 1 16.0 MiB
+mmcblk0boot1: mmc0:0001 Q2J54A partition 2 16.0 MiB
+random: fast init done
+Alternate GPT is invalid, using primary GPT.
+ mmcblk0: p1 p2 p3 p4 p5 p6 p7 p8 p9 p10 p11
+usb 1-1.3: new full-speed USB device number 3 using ci_hdrc
+usb 1-1.3: new high-speed USB device number 4 using ci_hdrc
+usb 1-1.3: New USB device found, idVendor=14cd, idProduct=121f
+usb 1-1.3: New USB device strings: Mfr=1, Product=3, SerialNumber=2
+usb 1-1.3: Product: Mass Storage Device
+caam 2100000.caam: ERA source: CAAMVID.
+caam 2100000.caam: AXI pipeline throttling enabled.
+caam 2100000.caam: Instantiated RNG4 SH1
+caam 2100000.caam: device ID = 0x0a16010000000000 (Era 4)
+caam 2100000.caam: job rings = 2, qi = 0
+caam algorithms registered in /proc/crypto
+caam_jr 2101000.jr0: registering rng-caam
+platform caam_sm: blkkey_ex: 4 keystore units available
+usb 1-1.3: Manufacturer: Generic
+platform caam_sm: 64-bit clear key:
+platform caam_sm: [0000] 00 01 02 03 04 0f 06 07
+platform caam_sm: 64-bit black key:
+platform caam_sm: [0000] 5c fb 2d 9b 82 69 34 46
+platform caam_sm: [0008] 38 d3 1e a7 f5 9f c3 26
+platform caam_sm: 128-bit clear key:
+platform caam_sm: [0000] 00 01 02 03 04 0f 06 07
+platform caam_sm: [0008] 08 09 0a 0b 0c 0d 0e 0f
+platform caam_sm: 128-bit black key:
+platform caam_sm: [0000] 8c 10 d0 91 ce 1c 96 d2
+platform caam_sm: [0008] eb e4 8a c2 1b 8b a6 49
+platform caam_sm: 192-bit clear key:
+platform caam_sm: [0000] 00 01 02 03 04 0f 06 07
+platform caam_sm: [0008] 08 09 0a 0b 0c 0d 0e 0f
+platform caam_sm: [0016] 10 11 12 13 14 15 16 17
+platform caam_sm: 192-bit black key:
+platform caam_sm: [0000] fd 2d 22 b3 f3 b9 b8 5c
+platform caam_sm: [0008] 07 82 59 4f 89 23 54 c9
+platform caam_sm: [0016] b1 2b b6 54 59 dd 7e 0a
+platform caam_sm: [0024] d6 37 51 61 ff 1b f3 bf
+platform caam_sm: 256-bit clear key:
+platform caam_sm: [0000] 00 01 02 03 04 0f 06 07
+platform caam_sm: [0008] 08 09 0a 0b 0c 0d 0e 0f
+platform caam_sm: [0016] 10 11 12 13 14 15 16 17
+platform caam_sm: [0024] 18 19 1a 1b 1c 1d 1e 1f
+platform caam_sm: 256-bit black key:
+platform caam_sm: [0000] b3 c9 82 b5 80 22 60 50
+platform caam_sm: [0008] 69 15 f7 3e 85 77 f1 a2
+platform caam_sm: [0016] d5 25 a3 d2 3c 57 37 d1
+platform caam_sm: [0024] ab b8 2f 1b 01 5d aa 62
+platform caam_sm: 64-bit unwritten blob:
+platform caam_sm: [0000] 00 00 00 00 00 00 00 00
+platform caam_sm: [0008] 00 00 00 00 00 00 00 00
+platform caam_sm: [0016] 00 00 00 00 00 00 00 00
+platform caam_sm: [0024] 00 00 00 00 00 00 00 00
+platform caam_sm: [0032] 00 00 00 00 00 00 00 00
+platform caam_sm: [0040] 00 00 00 00 00 00 00 00
+platform caam_sm: [0048] 00 00 00 00 00 00 00 00
+platform caam_sm: [0056] 00 00 00 00 00 00 00 00
+platform caam_sm: [0064] 00 00 00 00 00 00 00 00
+platform caam_sm: [0072] 00 00 00 00 00 00 00 00
+platform caam_sm: [0080] 00 00 00 00 00 00 00 00
+platform caam_sm: [0088] 00 00 00 00 00 00 00 00
+platform caam_sm: 128-bit unwritten blob:
+platform caam_sm: [0000] 00 00 00 00 00 00 00 00
+platform caam_sm: [0008] 00 00 00 00 00 00 00 00
+platform caam_sm: [0016] 00 00 00 00 00 00 00 00
+platform caam_sm: [0024] 00 00 00 00 00 00 00 00
+platform caam_sm: [0032] 00 00 00 00 00 00 00 00
+platform caam_sm: [0040] 00 00 00 00 00 00 00 00
+platform caam_sm: [0048] 00 00 00 00 00 00 00 00
+platform caam_sm: [0056] 00 00 00 00 00 00 00 00
+platform caam_sm: [0064] 00 00 00 00 00 00 00 00
+platform caam_sm: [0072] 00 00 00 00 00 00 00 00
+platform caam_sm: [0080] 00 00 00 00 00 00 00 00
+platform caam_sm: [0088] 00 00 00 00 00 00 00 00
+platform caam_sm: 196-bit unwritten blob:
+platform caam_sm: [0000] 00 00 00 00 00 00 00 00
+platform caam_sm: [0008] 00 00 00 00 00 00 00 00
+platform caam_sm: [0016] 00 00 00 00 00 00 00 00
+platform caam_sm: [0024] 00 00 00 00 00 00 00 00
+platform caam_sm: [0032] 00 00 00 00 00 00 00 00
+platform caam_sm: [0040] 00 00 00 00 00 00 00 00
+platform caam_sm: [0048] 00 00 00 00 00 00 00 00
+platform caam_sm: [0056] 00 00 00 00 00 00 00 00
+platform caam_sm: [0064] 00 00 00 00 00 00 00 00
+platform caam_sm: [0072] 00 00 00 00 00 00 00 00
+platform caam_sm: [0080] 00 00 00 00 00 00 00 00
+platform caam_sm: [0088] 00 00 00 00 00 00 00 00
+platform caam_sm: 256-bit unwritten blob:
+platform caam_sm: [0000] 00 00 00 00 00 00 00 00
+platform caam_sm: [0008] 00 00 00 00 00 00 00 00
+platform caam_sm: [0016] 00 00 00 00 00 00 00 00
+platform caam_sm: [0024] 00 00 00 00 00 00 00 00
+platform caam_sm: [0032] 00 00 00 00 00 00 00 00
+platform caam_sm: [0040] 00 00 00 00 00 00 00 00
+platform caam_sm: [0048] 00 00 00 00 00 00 00 00
+platform caam_sm: [0056] 00 00 00 00 00 00 00 00
+platform caam_sm: [0064] 00 00 00 00 00 00 00 00
+platform caam_sm: [0072] 00 00 00 00 00 00 00 00
+platform caam_sm: [0080] 00 00 00 00 00 00 00 00
+platform caam_sm: [0088] 00 00 00 00 00 00 00 00
+platform caam_sm: 64-bit black key in blob:
+platform caam_sm: [0000] 94 b9 38 cc d3 c4 f9 cb
+platform caam_sm: [0008] 93 bc 31 89 b0 1a a1 e8
+platform caam_sm: [0016] 38 2b 09 05 fa f5 6d cf
+platform caam_sm: [0024] b4 99 d9 f8 03 7d 56 bc
+platform caam_sm: [0032] 09 a1 ce 83 96 35 b2 1b
+platform caam_sm: [0040] fb 37 7d d0 fb fc 11 b6
+platform caam_sm: [0048] f2 9d 1b 5a c1 b5 7e 10
+platform caam_sm: [0056] 00 00 00 00 00 00 00 00
+platform caam_sm: [0064] 00 00 00 00 00 00 00 00
+platform caam_sm: [0072] 00 00 00 00 00 00 00 00
+platform caam_sm: [0080] 00 00 00 00 00 00 00 00
+platform caam_sm: [0088] 00 00 00 00 00 00 00 00
+platform caam_sm: 128-bit black key in blob:
+platform caam_sm: [0000] 16 cc a1 32 fe c4 c5 ac
+platform caam_sm: [0008] 91 c8 a9 9b f8 60 7a e9
+platform caam_sm: [0016] 75 1c 6e 50 97 22 51 f6
+platform caam_sm: [0024] 4a 6e 2b 6e 44 1b e4 42
+platform caam_sm: [0032] 7c aa 80 80 27 77 79 d6
+platform caam_sm: [0040] 98 7c ca 0f 03 03 88 1a
+platform caam_sm: [0048] 5d 2d c9 0e 20 49 93 29
+platform caam_sm: [0056] 25 c3 54 30 c0 35 b9 a6
+platform caam_sm: [0064] 00 00 00 00 00 00 00 00
+platform caam_sm: [0072] 00 00 00 00 00 00 00 00
+platform caam_sm: [0080] 00 00 00 00 00 00 00 00
+platform caam_sm: [0088] 00 00 00 00 00 00 00 00
+platform caam_sm: 192-bit black key in blob:
+platform caam_sm: [0000] 24 d2 1e a0 a2 c6 2b b4
+platform caam_sm: [0008] b8 bb 42 50 ee bf 06 12
+platform caam_sm: [0016] 5f 26 16 74 bd fd aa a1
+platform caam_sm: [0024] 99 26 59 f5 1f ba f7 f7
+platform caam_sm: [0032] b1 fe b2 07 ef 4c 3e 3c
+platform caam_sm: [0040] 0e c1 c7 1b c3 20 8c 4c
+platform caam_sm: [0048] e2 fa c8 49 ef 26 d6 27
+platform caam_sm: [0056] 05 a5 3f 81 0b c7 63 f5
+platform caam_sm: [0064] 19 37 be 38 00 73 08 c9
+platform caam_sm: [0072] 00 00 00 00 00 00 00 00
+platform caam_sm: [0080] 00 00 00 00 00 00 00 00
+platform caam_sm: [0088] 00 00 00 00 00 00 00 00
+platform caam_sm: 256-bit black key in blob:
+platform caam_sm: [0000] 71 68 1c 88 6c 90 8e fe
+platform caam_sm: [0008] 77 f0 ae 0d 8f c2 78 4c
+platform caam_sm: [0016] 0d a4 5e a4 7d 35 a0 f2
+platform caam_sm: [0024] c2 60 2b ea 84 08 9b de
+platform caam_sm: [0032] ac 69 13 38 72 80 5f 42
+platform caam_sm: [0040] 90 ad 1d f4 92 b5 ac 9c
+platform caam_sm: [0048] dc d9 8e b8 81 11 5e 67
+platform caam_sm: [0056] 0c 75 da 18 9e 00 7e 69
+platform caam_sm: [0064] 3a 6f ee e2 ee 0e 0e c2
+platform caam_sm: [0072] 93 4a 53 d0 54 42 35 8e
+platform caam_sm: [0080] 00 00 00 00 00 00 00 00
+platform caam_sm: [0088] 00 00 00 00 00 00 00 00
+platform caam_sm: restored 64-bit black key:
+platform caam_sm: [0000] c5 a0 28 ff 6b d8 2f f8
+platform caam_sm: [0008] 37 d0 78 7f 0e 9a 35 3a
+platform caam_sm: restored 128-bit black key:
+platform caam_sm: [0000] 8c 10 d0 91 ce 1c 96 d2
+platform caam_sm: [0008] eb e4 8a c2 1b 8b a6 49
+platform caam_sm: restored 192-bit black key:
+platform caam_sm: [0000] fd 2d 22 b3 f3 b9 b8 5c
+platform caam_sm: [0008] 07 82 59 4f 89 23 54 c9
+platform caam_sm: [0016] e8 1d 8c c6 ba db d4 84
+platform caam_sm: [0024] 18 36 e8 71 87 37 12 4a
+platform caam_sm: restored 256-bit black key:
+platform caam_sm: [0000] b3 c9 82 b5 80 22 60 50
+platform caam_sm: [0008] 69 15 f7 3e 85 77 f1 a2
+platform caam_sm: [0016] d5 25 a3 d2 3c 57 37 d1
+platform caam_sm: [0024] ab b8 2f 1b 01 5d aa 62
+snvs-secvio 20cc000.caam-snvs: can't get snvs clock
+snvs-secvio 20cc000.caam-snvs: violation handlers armed - non-secure state
+hidraw: raw HID events driver (C) Jiri Kosina
+usbcore: registered new interface driver usbhid
+usbhid: USB HID core driver
+ashmem: initialized
+usbcore: registered new interface driver snd-usb-audio
+sgtl5000 2-000a: sgtl5000 revision 0x11
+usb 1-1.3: SerialNumber: 121F20110712
+usb-storage 1-1.3:1.0: USB Mass Storage device detected
+scsi host1: usb-storage 1-1.3:1.0
+fsl-ssi-dai 2028000.ssi: No cache defaults, reading back from HW
+imx-sgtl5000 sound: sgtl5000 <-> 2028000.ssi mapping ok
+imx-spdif sound-spdif: snd-soc-dummy-dai <-> 2004000.spdif mapping ok
+imx-audio-hdmi sound-hdmi: hdmi-hifi.0 <-> soc:hdmi_audio@00120000 mapping ok
+NET: Registered protocol family 26
+u32 classifier
+    Actions configured
+Netfilter messages via NETLINK v0.30.
+nf_conntrack version 0.5.0 (16384 buckets, 65536 max)
+ctnetlink v0.93: registering with nfnetlink.
+xt_time: kernel timezone is -0000
+ip_tables: (C) 2000-2006 Netfilter Core Team
+arp_tables: arp_tables: (C) 2002 David S. Miller
+Initializing XFRM netlink socket
+NET: Registered protocol family 10
+mip6: Mobile IPv6
+ip6_tables: (C) 2000-2006 Netfilter Core Team
+sit: IPv6, IPv4 and MPLS over IPv4 tunneling driver
+NET: Registered protocol family 17
+NET: Registered protocol family 15
+can: controller area network core (rev 20120528 abi 9)
+NET: Registered protocol family 29
+can: raw protocol (rev 20120528)
+can: broadcast manager protocol (rev 20161123 t)
+can: netlink gateway (rev 20130117) max_hops=1
+Bluetooth: RFCOMM TTY layer initialized
+Bluetooth: RFCOMM socket layer initialized
+Bluetooth: RFCOMM ver 1.11
+Bluetooth: BNEP (Ethernet Emulation) ver 1.3
+Bluetooth: BNEP filters: protocol multicast
+Bluetooth: BNEP socket layer initialized
+Bluetooth: HIDP (Human Interface Emulation) ver 1.2
+Bluetooth: HIDP socket layer initialized
+8021q: 802.1Q VLAN Support v1.8
+Key type dns_resolver registered
+cpu cpu0: Registered imx6q-cpufreq
+registered taskstats version 1
+imx_thermal 2000000.aips-bus:tempmon: Industrial CPU temperature grade - max:105C critical:100C passive:95C
+dhd_module_init in
+input: gpio-keys as /devices/soc0/gpio-keys/input/input1
+snvs_rtc 20cc000.snvs:snvs-rtc-lp: setting system clock to 1970-01-01 00:04:23 UTC (263)
+usb_otg_vbus: disabling
+ALSA device list:
+  #0: imx6q-apalis-sgtl5000
+  #1: imx-spdif
+  #2: imx-hdmi-soc
+Freeing unused kernel memory: 1024K
+init: init first stage started!
+SELinux:  Permission validate_trans in class security not defined in policy.
+SELinux:  Class cap_userns not defined in policy.
+SELinux:  Class cap2_userns not defined in policy.
+SELinux: the above unknown classes and permissions will be denied
+audit: type=1403 audit(263.620:2): policy loaded auid=4294967295 ses=4294967295
+init: (Initializing SELinux non-enforcing took 0.11s.)
+init: init second stage started!
+init: Running restorecon...
+init: waitpid failed: No child processes
+init: (Loading properties from /default.prop took 0.00s.)
+init: (Parsing /init.environ.rc took 0.00s.)
+init: (Parsing /init.usb.rc took 0.00s.)
+init: (Parsing init.freescale.usb.rc took 0.00s.)
+init: (Parsing init.freescale.i.MX6Q.rc took 0.00s.)
+init: (Parsing init.freescale.emmc.rc took 0.00s.)
+init: (Parsing /init.freescale.rc took 0.02s.)
+ueventd: ueventd started!
+ueventd: Coldboot took 0.44s.
+scsi 1:0:0:0: Direct-Access     Mass     Storage Device   1.00 PQ: 0 ANSI: 0 CCS
+Console: switching to colour dummy device 80x30
+watchdogd: started (interval 10, margin 20)!
+EXT4-fs (mmcblk0p3): mounted filesystem with ordered data mode. Opts: barrier=1
+EXT4-fs (mmcblk0p10): Ignoring removed nomblk_io_submit option
+EXT4-fs (mmcblk0p10): recovery complete
+EXT4-fs (mmcblk0p10): mounted filesystem with ordered data mode. Opts: nomblk_io_submit,noauto_da_alloc,errors=panic
+EXT4-fs (mmcblk0p4): Ignoring removed nomblk_io_submit option
+EXT4-fs (mmcblk0p4): recovery complete
+EXT4-fs (mmcblk0p4): mounted filesystem with ordered data mode. Opts: nomblk_io_submit
+EXT4-fs (mmcblk0p5): mounted filesystem with ordered data mode. Opts: (null)
+file system registered
+using random self ethernet address
+using random host ethernet address
+zram0: detected capacity change from 0 to 314572800
+logd.auditd: start
+logd.klogd: 7586104000
+Adding 307196k swap on /dev/block/zram0.  Priority:-1 extents:1 across:307196k SS
+binder: 258:258 transaction failed 29189, size 0-0
+logd.daemon: reinit
+toradex_apalis6q:/ # ERROR: v4l2 capture: slave not found! V4L2_CID_HUE
+healthd: No battery devices found
+ERROR: v4l2 capture: slave not found! V4L2_CID_HUE
+init: Starting service 'bootanim'...
+sd 1:0:0:0: [sda] 15677440 512-byte logical blocks: (8.03 GB/7.48 GiB)
+sd 1:0:0:0: [sda] Write Protect is off
+sd 1:0:0:0: [sda] No Caching mode page found
+sd 1:0:0:0: [sda] Assuming drive cache: write through
+sd 1:0:0:0: [sda] tag#0 FAILED Result: hostbyte=DID_OK driverbyte=DRIVER_SENSE
+sd 1:0:0:0: [sda] tag#0 Sense Key : Medium Error [current] 
+sd 1:0:0:0: [sda] tag#0 Add. Sense: Unrecovered read error
+sd 1:0:0:0: [sda] tag#0 CDB: Read(10) 28 00 00 00 00 00 00 00 08 00
+blk_update_request: critical medium error, dev sda, sector 0
+Buffer I/O error on dev sda, logical block 0, async page read
+sd 1:0:0:0: [sda] tag#0 FAILED Result: hostbyte=DID_OK driverbyte=DRIVER_SENSE
+sd 1:0:0:0: [sda] tag#0 Sense Key : Medium Error [current] 
+sd 1:0:0:0: [sda] tag#0 Add. Sense: Unrecovered read error
+sd 1:0:0:0: [sda] tag#0 CDB: Read(10) 28 00 00 00 00 00 00 00 08 00
+blk_update_request: critical medium error, dev sda, sector 0
+Buffer I/O error on dev sda, logical block 0, async page read
+ sda: unable to read partition table
+sd 1:0:0:0: [sda] Attached SCSI removable disk
+sd 1:0:0:0: [sda] tag#0 FAILED Result: hostbyte=DID_OK driverbyte=DRIVER_SENSE
+sd 1:0:0:0: [sda] tag#0 Sense Key : Medium Error [current] 
+sd 1:0:0:0: [sda] tag#0 Add. Sense: Unrecovered read error
+sd 1:0:0:0: [sda] tag#0 CDB: Read(10) 28 00 00 00 00 00 00 00 20 00
+blk_update_request: critical medium error, dev sda, sector 0
+sd 1:0:0:0: [sda] tag#0 FAILED Result: hostbyte=DID_OK driverbyte=DRIVER_SENSE
+sd 1:0:0:0: [sda] tag#0 Sense Key : Medium Error [current] 
+sd 1:0:0:0: [sda] tag#0 Add. Sense: Unrecovered read error
+sd 1:0:0:0: [sda] tag#0 CDB: Read(10) 28 00 00 00 00 00 00 00 08 00
+blk_update_request: critical medium error, dev sda, sector 0
+Buffer I/O error on dev sda, logical block 0, async page read
+sd 1:0:0:0: [sda] tag#0 FAILED Result: hostbyte=DID_OK driverbyte=DRIVER_SENSE
+sd 1:0:0:0: [sda] tag#0 Sense Key : Medium Error [current] 
+sd 1:0:0:0: [sda] tag#0 Add. Sense: Unrecovered read error
+sd 1:0:0:0: [sda] tag#0 CDB: Read(10) 28 00 00 00 00 00 00 00 08 00
+blk_update_request: critical medium error, dev sda, sector 0
+Buffer I/O error on dev sda, logical block 0, async page read
+capability: warning: `main' uses 32-bit capabilities (legacy support in use)
+sd 1:0:0:0: [sda] tag#0 FAILED Result: hostbyte=DID_OK driverbyte=DRIVER_SENSE
+sd 1:0:0:0: [sda] tag#0 Sense Key : Medium Error [current] 
+sd 1:0:0:0: [sda] tag#0 Add. Sense: Unrecovered read error
+sd 1:0:0:0: [sda] tag#0 CDB: Read(10) 28 00 00 00 00 00 00 00 08 00
+blk_update_request: critical medium error, dev sda, sector 0
+Buffer I/O error on dev sda, logical block 0, async page read
+sd 1:0:0:0: [sda] tag#0 FAILED Result: hostbyte=DID_OK driverbyte=DRIVER_SENSE
+sd 1:0:0:0: [sda] tag#0 Sense Key : Medium Error [current] 
+sd 1:0:0:0: [sda] tag#0 Add. Sense: Unrecovered read error
+sd 1:0:0:0: [sda] tag#0 CDB: Read(10) 28 00 00 ef 37 80 00 00 08 00
+blk_update_request: critical medium error, dev sda, sector 15677312
+sd 1:0:0:0: [sda] tag#0 FAILED Result: hostbyte=DID_OK driverbyte=DRIVER_SENSE
+sd 1:0:0:0: [sda] tag#0 Sense Key : Medium Error [current] 
+sd 1:0:0:0: [sda] tag#0 Add. Sense: Unrecovered read error
+sd 1:0:0:0: [sda] tag#0 CDB: Read(10) 28 00 00 ef 37 80 00 00 08 00
+blk_update_request: critical medium error, dev sda, sector 15677312
+Buffer I/O error on dev sda, logical block 1959664, async page read
+sd 1:0:0:0: [sda] tag#0 FAILED Result: hostbyte=DID_OK driverbyte=DRIVER_SENSE
+sd 1:0:0:0: [sda] tag#0 Sense Key : Medium Error [current] 
+sd 1:0:0:0: [sda] tag#0 Add. Sense: Unrecovered read error
+sd 1:0:0:0: [sda] tag#0 CDB: Read(10) 28 00 00 00 00 00 00 00 80 00
+blk_update_request: critical medium error, dev sda, sector 0
+random: crng init done
+init: write_file: Unable to open '/sys/devices/system/cpu/cpufreq/interactive/timer_rate': No such file or directory
+init: write_file: Unable to open '/sys/devices/system/cpu/cpufreq/interactive/min_sample_time': No such file or directory
+init: write_file: Unable to open '/sys/devices/system/cpu/cpufreq/interactive/go_hispeed_load': No such file or directory
+usb 1-1.3: reset high-speed USB device number 4 using ci_hdrc
+usb 1-1.3: USB disconnect, device number 4
+scsi 1:0:0:0: rejecting I/O to offline device
+scsi 1:0:0:0: [sda] killing request
+scsi 1:0:0:0: [sda] FAILED Result: hostbyte=DID_NO_CONNECT driverbyte=DRIVER_OK
+scsi 1:0:0:0: [sda] CDB: Read(10) 28 00 00 00 00 00 00 00 08 00
+blk_update_request: I/O error, dev sda, sector 0
+Buffer I/O error on dev sda, logical block 0, async page read
+Buffer I/O error on dev sda, logical block 66, async page read
+Buffer I/O error on dev sda, logical block 66, async page read
+init: write_file: Unable to open '/proc/sys/vm/extra_free_kbytes': No such file or directory
+init: write_file: Unable to write to '/config/usb_gadget/g1/UDC': No such device
+acc_open
+acc_release
+Micrel KSZ9031 Gigabit PHY 2188000.ethernet-1:07: attached PHY driver [Micrel KSZ9031 Gigabit PHY] (mii_bus:phy_addr=2188000.ethernet-1:07, irq=120)
+IPv6: ADDRCONF(NETDEV_UP): eth0: link is not ready
+init: Service 'bootanim' (pid 339) exited with status 0
+init: Starting service 'exec 3 (/system/bin/bootstat)'...
+
+init: Service 'exec 3 (/system/bin/bootstat)' (pid 922) exited with status 0
+init: Starting service 'exec 4 (/system/bin/bootstat)'...
+toradex_apalis6q:/ # init: Service 'exec 4 (/system/bin/bootstat)' (pid 938) exited with status 0
+init: Starting service 'exec 5 (/system/bin/bootstat)'...
+init: Service 'exec 5 (/system/bin/bootstat)' (pid 943) exited with status 0
+init: Starting service 'exec 6 (/system/bin/bootstat)'...
+init: Service 'exec 6 (/system/bin/bootstat)' (pid 947) exited with status 0
+
+toradex_apalis6q:/ # 
+toradex_apalis6q:/ # 
+toradex_apalis6q:/ # 
+toradex_apalis6q:/ # binder: 604:604 transaction failed 29189, size 88-0
+usb 1-1.3: new full-speed USB device number 5 using ci_hdrc
+usb 1-1.3: new high-speed USB device number 6 using ci_hdrc
+usb 1-1.3: New USB device found, idVendor=14cd, idProduct=121f
+usb 1-1.3: New USB device strings: Mfr=1, Product=3, SerialNumber=2
+usb 1-1.3: Product: Mass Storage Device
+usb 1-1.3: Manufacturer: Generic
+usb 1-1.3: SerialNumber: 121F20110712
+usb-storage 1-1.3:1.0: USB Mass Storage device detected
+scsi host1: usb-storage 1-1.3:1.0
+scsi 1:0:0:0: Direct-Access     Mass     Storage Device   1.00 PQ: 0 ANSI: 0 CCS
+sd 1:0:0:0: [sda] 15677440 512-byte logical blocks: (8.03 GB/7.48 GiB)
+sd 1:0:0:0: [sda] Write Protect is off
+sd 1:0:0:0: [sda] No Caching mode page found
+sd 1:0:0:0: [sda] Assuming drive cache: write through
+sd 1:0:0:0: [sda] tag#0 FAILED Result: hostbyte=DID_OK driverbyte=DRIVER_SENSE
+sd 1:0:0:0: [sda] tag#0 Sense Key : Medium Error [current] 
+sd 1:0:0:0: [sda] tag#0 Add. Sense: Unrecovered read error
+sd 1:0:0:0: [sda] tag#0 CDB: Read(10) 28 00 00 00 00 00 00 00 08 00
+blk_update_request: critical medium error, dev sda, sector 0
+Buffer I/O error on dev sda, logical block 0, async page read
+sd 1:0:0:0: [sda] tag#0 FAILED Result: hostbyte=DID_OK driverbyte=DRIVER_SENSE
+sd 1:0:0:0: [sda] tag#0 Sense Key : Medium Error [current] 
+sd 1:0:0:0: [sda] tag#0 Add. Sense: Unrecovered read error
+sd 1:0:0:0: [sda] tag#0 CDB: Read(10) 28 00 00 00 00 00 00 00 08 00
+blk_update_request: critical medium error, dev sda, sector 0
+Buffer I/O error on dev sda, logical block 0, async page read
+ sda: unable to read partition table
+sd 1:0:0:0: [sda] Attached SCSI removable disk
+sd 1:0:0:0: [sda] tag#0 FAILED Result: hostbyte=DID_OK driverbyte=DRIVER_SENSE
+sd 1:0:0:0: [sda] tag#0 Sense Key : Medium Error [current] 
+sd 1:0:0:0: [sda] tag#0 Add. Sense: Unrecovered read error
+sd 1:0:0:0: [sda] tag#0 CDB: Read(10) 28 00 00 00 00 00 00 00 20 00
+blk_update_request: critical medium error, dev sda, sector 0
+sd 1:0:0:0: [sda] tag#0 FAILED Result: hostbyte=DID_OK driverbyte=DRIVER_SENSE
+sd 1:0:0:0: [sda] tag#0 Sense Key : Medium Error [current] 
+sd 1:0:0:0: [sda] tag#0 Add. Sense: Unrecovered read error
+sd 1:0:0:0: [sda] tag#0 CDB: Read(10) 28 00 00 00 00 00 00 00 08 00
+blk_update_request: critical medium error, dev sda, sector 0
+Buffer I/O error on dev sda, logical block 0, async page read
+sd 1:0:0:0: [sda] tag#0 FAILED Result: hostbyte=DID_OK driverbyte=DRIVER_SENSE
+sd 1:0:0:0: [sda] tag#0 Sense Key : Medium Error [current] 
+sd 1:0:0:0: [sda] tag#0 Add. Sense: Unrecovered read error
+sd 1:0:0:0: [sda] tag#0 CDB: Read(10) 28 00 00 00 00 00 00 00 08 00
+blk_update_request: critical medium error, dev sda, sector 0
+Buffer I/O error on dev sda, logical block 0, async page read
+sd 1:0:0:0: [sda] tag#0 FAILED Result: hostbyte=DID_OK driverbyte=DRIVER_SENSE
+sd 1:0:0:0: [sda] tag#0 Sense Key : Medium Error [current] 
+sd 1:0:0:0: [sda] tag#0 Add. Sense: Unrecovered read error
+sd 1:0:0:0: [sda] tag#0 CDB: Read(10) 28 00 00 00 00 00 00 00 08 00
+blk_update_request: critical medium error, dev sda, sector 0
+Buffer I/O error on dev sda, logical block 0, async page read
+sd 1:0:0:0: [sda] tag#0 FAILED Result: hostbyte=DID_OK driverbyte=DRIVER_SENSE
+sd 1:0:0:0: [sda] tag#0 Sense Key : Medium Error [current] 
+sd 1:0:0:0: [sda] tag#0 Add. Sense: Unrecovered read error
+sd 1:0:0:0: [sda] tag#0 CDB: Read(10) 28 00 00 ef 37 80 00 00 08 00
+blk_update_request: critical medium error, dev sda, sector 15677312
+sd 1:0:0:0: [sda] tag#0 FAILED Result: hostbyte=DID_OK driverbyte=DRIVER_SENSE
+sd 1:0:0:0: [sda] tag#0 Sense Key : Medium Error [current] 
+sd 1:0:0:0: [sda] tag#0 Add. Sense: Unrecovered read error
+sd 1:0:0:0: [sda] tag#0 CDB: Read(10) 28 00 00 ef 37 80 00 00 08 00
+blk_update_request: critical medium error, dev sda, sector 15677312
+Buffer I/O error on dev sda, logical block 1959664, async page read
+sd 1:0:0:0: [sda] tag#0 FAILED Result: hostbyte=DID_OK driverbyte=DRIVER_SENSE
+sd 1:0:0:0: [sda] tag#0 Sense Key : Medium Error [current] 
+sd 1:0:0:0: [sda] tag#0 Add. Sense: Unrecovered read error
+sd 1:0:0:0: [sda] tag#0 CDB: Read(10) 28 00 00 00 00 00 00 00 80 00
+blk_update_request: critical medium error, dev sda, sector 0
+sd 1:0:0:0: [sda] tag#0 FAILED Result: hostbyte=DID_OK driverbyte=DRIVER_SENSE
+sd 1:0:0:0: [sda] tag#0 Sense Key : Medium Error [current] 
+sd 1:0:0:0: [sda] tag#0 Add. Sense: Unrecovered read error
+sd 1:0:0:0: [sda] tag#0 CDB: Read(10) 28 00 00 00 00 00 00 00 08 00
+blk_update_request: critical medium error, dev sda, sector 0
+Buffer I/O error on dev sda, logical block 0, async page read
+sd 1:0:0:0: [sda] tag#0 FAILED Result: hostbyte=DID_OK driverbyte=DRIVER_SENSE
+sd 1:0:0:0: [sda] tag#0 Sense Key : Medium Error [current] 
+sd 1:0:0:0: [sda] tag#0 Add. Sense: Unrecovered read error
+sd 1:0:0:0: [sda] tag#0 CDB: Read(10) 28 00 00 00 02 10 00 00 08 00
+blk_update_request: critical medium error, dev sda, sector 528
+sd 1:0:0:0: [sda] tag#0 FAILED Result: hostbyte=DID_OK driverbyte=DRIVER_SENSE
+sd 1:0:0:0: [sda] tag#0 Sense Key : Medium Error [current] 
+sd 1:0:0:0: [sda] tag#0 Add. Sense: Unrecovered read error
+sd 1:0:0:0: [sda] tag#0 CDB: Read(10) 28 00 00 00 02 10 00 00 08 00
+blk_update_request: critical medium error, dev sda, sector 528
+Buffer I/O error on dev sda, logical block 66, async page read
+sd 1:0:0:0: [sda] tag#0 FAILED Result: hostbyte=DID_OK driverbyte=DRIVER_SENSE
+sd 1:0:0:0: [sda] tag#0 Sense Key : Medium Error [current] 
+sd 1:0:0:0: [sda] tag#0 Add. Sense: Unrecovered read error
+sd 1:0:0:0: [sda] tag#0 CDB: Read(10) 28 00 00 00 02 10 00 00 08 00
+blk_update_request: critical medium error, dev sda, sector 528
+Buffer I/O error on dev sda, logical block 66, async page read
+sd 1:0:0:0: [sda] tag#0 FAILED Result: hostbyte=DID_OK driverbyte=DRIVER_SENSE
+sd 1:0:0:0: [sda] tag#0 Sense Key : Medium Error [current] 
+sd 1:0:0:0: [sda] tag#0 Add. Sense: Unrecovered read error
+sd 1:0:0:0: [sda] tag#0 CDB: Read(10) 28 00 00 ef 37 80 00 00 08 00
+blk_update_request: critical medium error, dev sda, sector 15677312
+sd 1:0:0:0: [sda] tag#0 FAILED Result: hostbyte=DID_OK driverbyte=DRIVER_SENSE
+sd 1:0:0:0: [sda] tag#0 Sense Key : Medium Error [current] 
+sd 1:0:0:0: [sda] tag#0 Add. Sense: Unrecovered read error
+sd 1:0:0:0: [sda] tag#0 CDB: Read(10) 28 00 00 ef 37 80 00 00 08 00
+blk_update_request: critical medium error, dev sda, sector 15677312
+Buffer I/O error on dev sda, logical block 1959664, async page read
+sd 1:0:0:0: [sda] tag#0 FAILED Result: hostbyte=DID_OK driverbyte=DRIVER_SENSE
+sd 1:0:0:0: [sda] tag#0 Sense Key : Medium Error [current] 
+sd 1:0:0:0: [sda] tag#0 Add. Sense: Unrecovered read error
+sd 1:0:0:0: [sda] tag#0 CDB: Read(10) 28 00 00 00 00 00 00 00 80 00
+blk_update_request: critical medium error, dev sda, sector 0
+
+toradex_apalis6q:/ # 
+toradex_apalis6q:/ # 
+sd 1:0:0:0: [sda] tag#0 FAILED Result: hostbyte=DID_OK driverbyte=DRIVER_SENSE
+sd 1:0:0:0: [sda] tag#0 Sense Key : Medium Error [current] 
+sd 1:0:0:0: [sda] tag#0 Add. Sense: Unrecovered read error
+sd 1:0:0:0: [sda] tag#0 CDB: Read(10) 28 00 00 00 00 00 00 00 08 00
+blk_update_request: critical medium error, dev sda, sector 0
+Buffer I/O error on dev sda, logical block 0, async page read
+toradex_apalis6q:/ # 
+toradex_apalis6q:/ # df
+type=1400 audit(325.230:3): avc: denied { getattr } for pid=1261 comm="df" path="/dev/block" dev="tmpfs" ino=11689 scontext=u:r:shell:s0 tcontext=u:object_r:block_device:s0 tclass=dir permissive=1
+Filesystem            1K-blocks  type=1400 audit(325.230:4): avc: denied { getattr } for pid=1261 comm="df" path="/dev/block/mmcblk0p3" dev="tmpfs" ino=11800 scontext=u:r:shell:s0 tcontext=u:object_r:system_block_device:s0 tclass=blk_file permissive=1
+ Used Available Use% Mounted on
+type=1400 audit(325.230:5): avc: denied { getattr } for pid=1261 comm="df" path="/dev/block/mmcblk0p10" dev="tmpfs" ino=11782 scontext=u:r:shell:s0 tcontext=u:object_r:userdata_block_device:s0 tclass=blk_file permissive=1
+rootfs                   798524  sd 1:0:0:0: [sda] tag#0 FAILED Result: hostbyte=DID_OK driverbyte=DRIVER_SENSE
+ 3000    795524   1% /
+tmpfs    sd 1:0:0:0: [sda] tag#0 Sense Key : Medium Error [current] 
+               1029208    456   1sd 1:0:0:0: [sda] tag#0 Add. Sense: Unrecovered read error
+028752   1% /dev
+tmpfs          sd 1:0:0:0: [sda] tag#0 CDB: Read(10) 28 00 00 00 02 10 00 00 08 00
+         1029208      4   1029204blk_update_request: critical medium error, dev sda, sector 528
+   1% /mnt
+/dev/block/mmcblk0p3 type=1400 audit(325.230:6): avc: denied { getattr } for pid=1261 comm="df" path="/dev/block/mmcblk0p4" dev="tmpfs" ino=11772 scontext=u:r:shell:s0 tcontext=u:object_r:cache_block_device:s0 tclass=blk_file permissive=1
+   1499760 629172    870588  42% type=1400 audit(325.230:7): avc: denied { getattr } for pid=1261 comm="df" path="/dev/block/mmcblk0p5" dev="tmpfs" ino=11796 scontext=u:r:shell:s0 tcontext=u:object_r:block_device:s0 tclass=blk_file permissive=1
+/system
+/dev/block/mmcblk0p10   type=1400 audit(325.230:8): avc: denied { getattr } for pid=1261 comm="df" path="/dev/fuse" dev="tmpfs" ino=11608 scontext=u:r:shell:s0 tcontext=u:object_r:fuse_device:s0 tclass=chr_file permissive=1
+1430704  24736   1405968   2% /data
+/dev/block/mmcblk0p4     499656    412    499244   1% /cache
+/dev/block/mmcblk0p5       6907     45      6862   1% /device
+/dev/fuse               1430704  24736   1405968   2% /mnt/runtime/default/emulated
+/dev/fuse               1430704  24736   1405968   2% /mnt/runtime/read/emulated
+/dev/fuse               1430704  24736   1405968   2% /mnt/runtime/write/emulated
+toradex_apalis6q:/ # sd 1:0:0:0: [sda] tag#0 FAILED Result: hostbyte=DID_OK driverbyte=DRIVER_SENSE
+sd 1:0:0:0: [sda] tag#0 Sense Key : Medium Error [current] 
+sd 1:0:0:0: [sda] tag#0 Add. Sense: Unrecovered read error
+sd 1:0:0:0: [sda] tag#0 CDB: Read(10) 28 00 00 00 02 10 00 00 08 00
+blk_update_request: critical medium error, dev sda, sector 528
+Buffer I/O error on dev sda, logical block 66, async page read
+
+toradex_apalis6q:/ # sd 1:0:0:0: [sda] tag#0 FAILED Result: hostbyte=DID_OK driverbyte=DRIVER_SENSE
+sd 1:0:0:0: [sda] tag#0 Sense Key : Medium Error [current] 
+sd 1:0:0:0: [sda] tag#0 Add. Sense: Unrecovered read error
+sd 1:0:0:0: [sda] tag#0 CDB: Read(10) 28 00 00 00 02 10 00 00 08 00
+blk_update_request: critical medium error, dev sda, sector 528
+Buffer I/O error on dev sda, logical block 66, async page read
+
+toradex_apalis6q:/ # 
+toradex_apalis6q:/ # 
+toradex_apalis6q:/ # 
+toradex_apalis6q:/ # 
+toradex_apalis6q:/ # 
+toradex_apalis6q:/ # 
+
+toradex_apalis6q:/ # 
+toradex_apalis6q:/ # 
+toradex_apalis6q:/ # 
+toradex_apalis6q:/ # df
+Filesystem            1K-blocks   Used Available Use% Mounted on
+rootfs                   798524   3000    795524   1% /
+tmpfs                   1029208    456   1028752   1% /dev
+tmpfs                   1029208      4   1029204   1% /mnt
+/dev/block/mmcblk0p3    1499760 629172    870588  42% /system
+/dev/block/mmcblk0p10   1430704  24736   1405968   2% /data
+/dev/block/mmcblk0p4     499656    412    499244   1% /cache
+/dev/block/mmcblk0p5       6907     45      6862   1% /device
+/dev/fuse               1430704  24736   1405968   2% /mnt/runtime/default/emulated
+/dev/fuse               1430704  24736   1405968   2% /mnt/runtime/read/emulated
+/dev/fuse               1430704  24736   1405968   2% /mnt/runtime/write/emulated
+toradex_apalis6q:/ # vf\   cd /dev/bltype=1400 audit(339.210:9): avc: denied { read } for pid=259 comm="sh" name="/" dev="tmpfs" ino=6848 scontext=u:r:shell:s0 tcontext=u:object_r:device:s0 tclass=dir permissive=1
+toradex_apalis6q:/ # cd /dev/bloctype=1400 audit(339.210:10): avc: denied { open } for pid=259 comm="sh" path="/dev" dev="tmpfs" ino=6848 scontext=u:r:shell:s0 tcontext=u:object_r:device:s0 tclass=dir permissive=1
+k/                                            type=1400 audit(339.930:11): avc: denied { read } for pid=259 comm="sh" name="block" dev="tmpfs" ino=11689 scontext=u:r:shell:s0 tcontext=u:object_r:block_device:s0 tclass=dir permissive=1
+
+by-name/        mmcblk0         type=1400 audit(339.930:12): avc: denied { open } for pid=259 comm="sh" path="/dev/block" dev="tmpfs" ino=11689 scontext=u:r:shell:s0 tcontext=u:object_r:block_device:s0 tclass=dir permissive=1
+mmcblk0p5       ram11           rtype=1400 audit(339.930:13): avc: denied { getattr } for pid=259 comm="sh" path="/dev/block/mmcblk0p1" dev="tmpfs" ino=11808 scontext=u:r:shell:s0 tcontext=u:object_r:boot_block_device:s0 tclass=blk_file permissive=1
+am6
+loop0           mmcblk0boot0type=1400 audit(339.930:14): avc: denied { getattr } for pid=259 comm="sh" path="/dev/block/mmcblk0p7" dev="tmpfs" ino=11790 scontext=u:r:shell:s0 tcontext=u:object_r:metadata_block_device:s0 tclass=blk_file permissive=1
+    mmcblk0p6       ram12        type=1400 audit(339.930:15): avc: denied { getattr } for pid=259 comm="sh" path="/dev/block/mmcblk0p9" dev="tmpfs" ino=11786 scontext=u:r:shell:s0 tcontext=u:object_r:frp_block_device:s0 tclass=blk_file permissive=1
+   ram7
+loop1           mmcblk0btype=1400 audit(339.930:16): avc: denied { getattr } for pid=259 comm="sh" path="/dev/block/mmcblk0p2" dev="tmpfs" ino=11778 scontext=u:r:shell:s0 tcontext=u:object_r:recovery_block_device:s0 tclass=blk_file permissive=1
+oot1    mmcblk0p7       ram13    type=1400 audit(339.930:17): avc: denied { getattr } for pid=259 comm="sh" path="/dev/block/loop3" dev="tmpfs" ino=11714 scontext=u:r:shell:s0 tcontext=u:object_r:loop_device:s0 tclass=blk_file permissive=1
+       ram8
+loop2           mmcbtype=1400 audit(339.930:18): avc: denied { getattr } for pid=259 comm="sh" path="/dev/block/ram4" dev="tmpfs" ino=11713 scontext=u:r:shell:s0 tcontext=u:object_r:ram_device:s0 tclass=blk_file permissive=1
+lk0p1       mmcblk0p8       ram14           ram9
+loop3           mmcblk0p10      mmcblk0p9       ram15           sda
+loop4           mmcblk0p11      platform/       ram2            vold/
+loop5           mmcblk0p2       ram0            ram3            zram0
+loop6           mmcblk0p3       ram1            ram4
+loop7           mmcblk0p4       ram10           ram5
+toradex_apalis6q:/ # cd /dev/block/                                            
+toradex_apalis6q:/dev/block # ls
+by-name loop4   mmcblk0boot0 mmcblk0p2 mmcblk0p7 ram1  ram14 ram5 sda   
+loop0   loop5   mmcblk0boot1 mmcblk0p3 mmcblk0p8 ram10 ram15 ram6 vold  
+loop1   loop6   mmcblk0p1    mmcblk0p4 mmcblk0p9 ram11 ram2  ram7 zram0 
+loop2   loop7   mmcblk0p10   mmcblk0p5 platform  ram12 ram3  ram8 
+loop3   mmcblk0 mmcblk0p11   mmcblk0p6 ram0      ram13 ram4  ram9 
+toradex_apalis6q:/dev/block # usb 1-1.3: USB disconnect, device number 6

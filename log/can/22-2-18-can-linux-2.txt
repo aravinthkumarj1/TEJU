@@ -1,0 +1,264 @@
+13011] /soc/aips-bus@02100000/usdhc@02190000: voltage-ranges unspecified
+[    1.713043] sdhci-esdhc-imx 2190000.usdhc: Got CD GPIO
+[    1.714551] sdhci-esdhc-imx 2190000.usdhc: No vqmmc regulator found
+[    1.753302] mmc1: SDHCI controller on 2190000.usdhc [2190000.usdhc] using ADMA
+[    1.757010] /soc/aips-bus@02100000/usdhc@02198000: voltage-ranges unspecified
+[    1.765573] sdhci-esdhc-imx 2198000.usdhc: No vqmmc regulator found
+[    1.820538] ahci-imx 2200000.sata: no device found, disabling link.
+[    1.823185] mmc0: SDHCI controller on 2198000.usdhc [2198000.usdhc] using ADMA
+[    1.824833] mxc_vpu 2040000.vpu_fsl: VPU initialized
+[    1.825393] mxc_vdoa 21e4000.vdoa: i.MX Video Data Order Adapter(VDOA) driver probed
+[    1.828106] caam 2100000.caam: Entropy delay = 3200
+[    1.851800] ahci-imx 2200000.sata: pass ahci_imx..hotplug=1 to enable hotplug
+[    1.857452] mmc1: new high speed SDHC card at address 0001
+[    1.857855] mmcblk1: mmc1:0001 00000 7.44 GiB 
+[    1.870658]  mmcblk1: p1 p2
+[    1.888895] caam 2100000.caam: Instantiated RNG4 SH0
+[    1.949657] caam 2100000.caam: Instantiated RNG4 SH1
+[    1.954669] caam 2100000.caam: device ID = 0x0a16010000000000 (Era -524)
+[    1.958388] mmc0: MAN_BKOPS_EN bit is not set
+[    1.965784] caam 2100000.caam: job rings = 2, qi = 0
+[    1.977700] mmc0: new DDR MMC card at address 0001
+[    1.982894] mmcblk0: mmc0:0001 Q2J54A 3.59 GiB 
+[    1.987592] mmcblk0boot0: mmc0:0001 Q2J54A partition 1 16.0 MiB
+[    1.993671] mmcblk0boot1: mmc0:0001 Q2J54A partition 2 16.0 MiB
+[    2.000611]  mmcblk0: p1 p2
+[    2.023181] usb 1-1: new high-speed USB device number 2 using ci_hdrc
+[    2.059116] caam algorithms registered in /proc/crypto
+[    2.068462] caam_jr 2101000.jr0: registering rng-caam
+[    2.074496] snvs-secvio 20cc000.caam-snvs: can't get snvs clock
+[    2.080499] snvs-secvio 20cc000.caam-snvs: violation handlers armed - non-secure state
+[    2.088733] hidraw: raw HID events driver (C) Jiri Kosina
+[    2.094387] usbcore: registered new interface driver usbhid
+[    2.099984] usbhid: USB HID core driver
+[    2.109277] stmpe-adc stmpe-adc: Initialized
+[    2.117073] sgtl5000 2-000a: sgtl5000 revision 0x11
+[    2.147835] fsl-asrc 2034000.asrc: driver registered
+[    2.174371] hub 1-1:1.0: USB hub found
+[    2.178332] hub 1-1:1.0: 4 ports detected
+[    2.292571] imx-sgtl5000 sound: sgtl5000 <-> 2028000.ssi mapping ok
+[    2.301571] imx-spdif sound-spdif: snd-soc-dummy-dai <-> 2004000.spdif mapping ok
+[    2.312150] imx-audio-hdmi sound-hdmi: hdmi-hifi <-> soc:hdmi_audio@00120000 mapping ok
+[    2.320946] Netfilter messages via NETLINK v0.30.
+[    2.325722] nfnl_acct: registering with nfnetlink.
+[    2.330552] nf_conntrack version 0.5.0 (16384 buckets, 65536 max)
+[    2.337173] nf_tables: (c) 2007-2009 Patrick McHardy <kaber@trash.net>
+[    2.344167] ip_tables: (C) 2000-2006 Netfilter Core Team
+[    2.350112] NET: Registered protocol family 10
+[    2.355687] ip6_tables: (C) 2000-2006 Netfilter Core Team
+[    2.361136] NET: Registered protocol family 17
+[    2.365682] bridge: automatic filtering via arp/ip/ip6tables has been deprecated. Update your scripts to load br_netfilter if you need this.
+[    2.378370] Bridge firewalling registered
+[    2.382415] can: controller area network core (rev 20120528 abi 9)
+[    2.388688] NET: Registered protocol family 29
+[    2.393211] can: raw protocol (rev 20120528)
+[    2.397514] can: broadcast manager protocol (rev 20120528 t)
+[    2.403232] can: netlink gateway (rev 20130117) max_hops=1
+[    2.408999] Bluetooth: RFCOMM TTY layer initialized
+[    2.413939] Bluetooth: RFCOMM socket layer initialized
+[    2.419115] Bluetooth: RFCOMM ver 1.11
+[    2.422900] Bluetooth: BNEP (Ethernet Emulation) ver 1.3
+[    2.428256] Bluetooth: BNEP filters: protocol multicast
+[    2.433524] Bluetooth: BNEP socket layer initialized
+[    2.438517] Bluetooth: HIDP (Human Interface Emulation) ver 1.2
+[    2.444478] Bluetooth: HIDP socket layer initialized
+[    2.449532] 8021q: 802.1Q VLAN Support v1.8
+[    2.454117] Key type dns_resolver registered
+[    2.460423] Registering SWP/SWPB emulation handler
+[    2.465950] registered taskstats version 1
+[    2.470919] 1ffc000.pcie supply pcie-bus not found, using dummy regulator
+[    2.473185] usb 1-1.2: new low-speed USB device number 3 using ci_hdrc
+[    2.591690] input: PixArt Dell MS116 USB Optical Mouse as /devices/soc0/soc/2100000.aips-bus/2184200.usb/ci_hdrc.1/usb1/1-1/1-1.2/1-1.2:1.0/0003:413C:301A.0001/input/input2
+[    2.607704] hid-generic 0003:413C:301A.0001: input,hidraw0: USB HID v1.11 Mouse [PixArt Dell MS116 USB Optical Mouse] on usb-ci_hdrc.1-1.2/input0
+[    2.713181] usb 1-1.3: new high-speed USB device number 4 using ci_hdrc
+[    2.898829] imx6q-pcie 1ffc000.pcie: phy link never came up
+[    2.904470] imx6q-pcie 1ffc000.pcie: failed to initialize host
+[    2.910425] imx6q-pcie: probe of 1ffc000.pcie failed with error -22
+[    2.920822] rtc-ds1307 1-0068: setting system clock to 2018-02-03 15:50:42 UTC (1517673042)
+[    2.939259] usb_otg_vbus: disabling
+[    2.943027] ALSA device list:
+[    2.946084]   #0: imx6q-apalis-sgtl5000
+[    2.949947]   #1: imx-spdif
+[    2.952758]   #2: imx-hdmi-soc
+[    2.967371] EXT4-fs (mmcblk0p2): INFO: recovery required on readonly filesystem
+[    2.974774] EXT4-fs (mmcblk0p2): write access will be enabled during recovery
+[    3.318052] EXT4-fs (mmcblk0p2): recovery complete
+[    3.323692] EXT4-fs (mmcblk0p2): mounted filesystem with ordered data mode. Opts: (null)
+[    3.331906] VFS: Mounted root (ext4 filesystem) readonly on device 179:10.
+[    3.339740] devtmpfs: mounted
+[    3.343075] Freeing unused kernel memory: 372K (80a1f000 - 80a7c000)
+[    3.479253] random: systemd urandom read with 22 bits of entropy available
+[    3.490804] systemd[1]: systemd 229 running in system mode. (-PAM -AUDIT -SELINUX +IMA -APPARMOR +SMACK +SYSVINIT +UTMP -LIBCRYPTSETUP -GCRYPT -GNUTLS +ACL +XZ -LZ4 -SECCOMP +BLKID -ELFUTILS +KMOD -IDN)
+[    3.509855] systemd[1]: Detected architecture arm.
+
+Welcome to Boot to Qt for Embedded Linux 2.1.1 (krogoth)!
+
+[    3.553703] systemd[1]: Set hostname to <b2qt-apalis-imx6>.
+[    3.780732] systemd[1]: Listening on /dev/initctl Compatibility Named Pipe.
+[  OK  ] Listening on /dev/initctl Compatibility Named Pipe.
+[    3.803605] systemd[1]: Listening on Network Service Netlink Socket.
+[  OK  ] Listening on Network Service Netlink Socket.
+[    3.823720] systemd[1]: Created slice User and Session Slice.
+[  OK  ] Created slice User and Session Slice.
+[    3.868102] systemd[1]: Started Forward Password Requests to Wall Directory Watch.
+[  OK  ] Started Forward Password Requests to Wall Directory Watch.
+[    3.893643] systemd[1]: Created slice System Slice.
+[  OK  ] Created slice System Slice.
+[    3.913517] systemd[1]: Listening on Syslog Socket.
+[  OK  ] Listening on Syslog Socket.
+[    3.933358] systemd[1]: Reached target Slices.
+[  OK  ] Reached target Slices.
+[    3.953308] systemd[1]: Reached target Swap.
+[  OK  ] Reached target Swap.
+[    3.973422] systemd[1]: Listening on udev Control Socket.
+[  OK  ] Listening on udev Control Socket.
+[    3.993592] systemd[1]: Listening on udev Kernel Socket.
+[  OK  ] Listening on udev Kernel Socket.
+[    4.013829] systemd[1]: Started Dispatch Password Requests to Console Directory Watch.
+[  OK  ] Started Dispatch Password Requests to Console Directory Watch.
+[    4.044116] systemd[1]: Created slice system-serial\x2dgetty.slice.
+[  OK  ] Created slice system-serial\x2dgetty.slice.
+[    4.073482] systemd[1]: Reached target Paths.
+[  OK  ] Reached target Paths.
+[    4.093766] systemd[1]: Listening on Journal Socket.
+[  OK  ] Listening on Journal Socket.
+[    4.117845] systemd[1]: Starting Create list of required static device nodes for the current kernel...
+         Starting Create list of required st... nodes for the current kernel...
+[    4.141350] systemd[1]: Starting File System Check on Root Device...
+         Starting File System Check on Root Device...
+[    4.168028] systemd[1]: Starting Setup Virtual Console...
+         Starting Setup Virtual Console...
+[    4.181263] systemd[1]: Mounting Temporary Directory...
+         Mounting Temporary Directory...
+[    4.196325] systemd[1]: Starting Load Kernel Modules...
+         Starting Load Kernel Modules...
+[    4.206533] systemd[1]: Mounting Debug File System...
+         [    4.213223] systemd[1]: Reached target Remote File Systems.
+Mounting Debug File System...
+[    4.221156] systemd[1]: Listening on Journal Socket (/dev/log).
+[  OK  ] Reached target Remote File Systems.
+[  OK  ] Listening on Journal[    4.233750] systemd[1]: Starting Journal Service...
+ Socket (/dev/log).
+         Starting Journal Service...
+[    4.246545] systemd[1]: Mounted Debug File System.
+[  OK  ] Mounted Debug [    4.251820] systemd[1]: Mounted Temporary Directory.
+File System.
+[  OK  ] Mounted Temp[    4.260651] systemd[1]: Started Create list of required static device nodes for the current kernel.
+orary Directory.
+[    4.273808] systemd[1]: Started Setup Virtual Console.
+[  OK  ] Started Create list of required sta...ce nodes for the current kernel.
+[  OK  ] Started Setup Virtual Console.
+[    4.315952] systemd[1]: Started File System Check on Root Device.
+[  OK  ] Started File System Check on R[    4.325678] RTL871X: module init start
+oot Device.
+[    4.330553] RTL871X: rtl8723bu v4.3.6.11_12942.20141204_BTCOEX20140507-4E40
+[    4.338699] RTL871X: rtl8723bu BT-Coex version = BTCOEX20140507-4E40
+[    4.444118] systemd[1]: Starting Remount Root and Kernel File Systems...
+         Starting Remount Root and Kernel File Systems...
+[    4.476644] systemd[1]: Started Journal Service.
+[  OK  ] Started Journa[    4.482066] EXT4-fs (mmcblk0p2): re-mounted. Opts: (null)
+l Service.
+[  OK  ] Started Remount Root and Kernel File Systems.
+         Starting Create Static Device Nodes in /dev...
+         Starting udev Coldplug all Devices...
+         Starting Flush Journal to Persistent Storage...
+[  OK  ] Started Create Static Device Nodes in /dev.
+[    4.695802] RTL871X: rtw_ndev_init(wlan0)
+[    4.700977] RTL871X: rtw_ndev_init(wlan1)
+[    4.706274] usbcore: registered new interface driver rtl8723bu
+[    4.712151] RTL871X: module init ret=0
+[    4.718130] systemd-journald[201]: Received request to flush runtime journal from PID 1
+         Starting udev Kernel Device Manager...
+[  OK  ] Reached target[    4.745552] Galcore version 5.0.11.41671
+ Local File Systems (Pre).
+         Mounting /var/volatile...
+[  OK  ] Started Flush Journal to Persistent Storage.
+[  OK  ] Mounted /var/volatile.
+[  OK  ] Started udev Kernel Device Manager.
+[  OK  ] Reached target Local File Systems.
+         Starting Load/Save Random Seed...
+         Starting Create Volatile Files and Directories...
+[  OK  ] Started Load/Save Random Seed.
+[  OK  ] Started Create Volatile Files and Directories.
+         Starting Update UTMP about System Boot/Shutdown...
+         Starting Network Time Synchronization...
+[  OK  ] Started udev Coldplug all Devices.
+[  OK  ] Started Network Time Synchronization.
+[  OK  ] Found device /dev/ttymxc0.
+[  OK  ] Started Update UTMP about System Boot/Shutdown.
+[  OK  ] Found device /dev/ttymxc1.
+[    5.817111] tty0tty null modem driver v1.2
+[  OK  ] Started Load Kernel Modules.
+[  OK  ] Reached target[    5.943875] ov5647_read_reg(mipi):reg=300a ret=-5
+ Sound Card.
+[    5.951059] camera ov5647_mipi is not found
+         Mounting Configuration File System...
+         Mounting FUSE Control File System...
+         Starting Apply Kernel Variables...
+[  OK  ] Created slice system-systemd\x2dbacklight.slice.
+         Starting Load/Save Screen Backlight...htness of backlight:backlight...
+[  OK  ] Reached target System Time Synchronized.
+[  OK  ] Mounted Configuration File Sys[    6.106082] ERROR: v4l2 capture: slave not found!
+tem.
+[    6.106489] ERROR: v4l2 capture: slave not found!
+[  OK  ] Mounted FUSE Control File System.
+[  OK  ] Started Apply Kernel Variables.
+[  OK  ] Started Load/Save Screen Backlight Brightness of backlight:backlight.
+[  OK  ] Listening on Load/Save RF Kill Switch Status /dev/rfkill Watch.
+[  OK  ] Reached target System Initialization.
+[  OK  ] Listening on dropbear.socket.
+[  OK  ] Listening on RPCbind Server Activation Socket.
+[  OK  ] Started Daily Cleanup of Temporary Directories.
+[  OK  ] Reached target Timers.
+[  OK  ] Listening on D-Bus System Message Bus Socket.
+[  OK  ] Reached target Sockets.
+[  OK  ] Reached target Basic System.
+[  OK  ] Started Serial Getty on ttymxc0.
+         Starting Login Service...
+[  OK  ] Started System Logging Service.
+[  OK  ] Started D-Bus System Message Bus.
+         Starting D-BUS Session Message Bus....
+         Starting Network Service...
+[  OK  ] Started Kernel Logging Service.
+[  OK  ] Started Serial Getty on ttymxc1.
+[  OK  ] Reached target Login Prompts.
+[  OK  ] Started B2Qt user application.
+         Starting Save/Restore Sound Card State...
+[  OK  ] Started Network Service.
+[  OK  ] Started D-BUS Session Message Bus..
+         Starting Load/Save RF Kill Switch Status...
+[  OK  ] Reached target Network.
+         Starting ADB Server Daemon...
+[    6.923260] usb 1-1.1: new high-speed USB device number 5 using ci_hdrc
+         Starting Network Time Service...
+[  OK  ] Started Load/Save RF Kill Switch Status.
+[  OK  ] Started Save/Restore Sound Card State.
+[  OK  ] Started Login Service.
+[    7.025504] file system registered
+[  OK  ] Started Network Time Service.
+[    7.049679] option 1-1.1:1.0: GSM modem (1-port) converter detected
+[    7.058800] usb 1-1.1: GSM modem (1-port) converter now attached to ttyUSB0
+[    7.082977] option 1-1.1:1.1: GSM modem (1-port) converter detected
+[    7.090183] usb 1-1.1: GSM modem (1-port) converter now attached to ttyUSB1
+[    7.098350] option 1-1.1:1.2: GSM modem (1-port) converter detected
+[  OK  ] Started ADB S[    7.105686] usb 1-1.1: GSM modem (1-port) converter now attached to ttyUSB2
+erver Daemon.
+[    7.115666] option 1-1.1:1.3: GSM modem (1-port) converter detected
+[    7.123050] usb 1-1.1: GSM modem (1-port) converter now attached to ttyUSB3
+[    7.131067] option 1-1.1:1.4: GSM modem (1-port) converter detected
+[    7.138118] usb 1-1.1: GSM modem (1-port) converter now attached to ttyUSB4
+[    7.206131] read descriptors
+[    7.209122] read strings
+[    7.211791] g_ffs gadget: g_ffs ready
+[  OK  ] Reached target Multi-User System.
+[  OK  ] Reached target Custom Target.
+[  OK  ] Started Ujet Ble Service.
+[  OK  ] Started Ujet Bluetooth Audio Service.
+         Starting Update UTMP about System Runlevel Changes...
+         Starting Ujet Identify Service...
+[  OK  ] Started Ujet HTTPD Service.
+[  OK  ] Started Ujet Telemetry Service.
+[  OK  ] Started Ujet Cloud Service.
+[  OK  ] Stopped Bluetooth service.
+[  OK  ] Started Update UTMP about System Runlevel Changes.
+[    7.541139] flexcan 2090000.flexcan can0: writing ctrl=0x01232084

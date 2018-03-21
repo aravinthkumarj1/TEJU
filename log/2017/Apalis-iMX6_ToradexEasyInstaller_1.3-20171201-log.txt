@@ -1,0 +1,97 @@
+embadmin@ubuntu:~/Aravinth/Apalis-iMX6_ToradexEasyInstaller_1.3-20171201$ sudo ./recovery-linux.sh -d
+Downloading Toradex Easy Installer...
+config file <./recovery//imx_usb.conf>
+vid=0x15a2 pid=0x0054 file_name=mx6_usb_rom.conf
+-> vid=0x1b67 pid=0x4fff file_name=mx6_usb_sdp_spl.conf
+-> vid=0x1b67 pid=0x4000 file_name=mx6_usb_sdp_uboot.conf
+vid=0x15a2 pid=0x0061 file_name=mx6_usb_rom.conf
+-> vid=0x1b67 pid=0x4fff file_name=mx6_usb_sdp_spl.conf
+-> vid=0x1b67 pid=0x4000 file_name=mx6_usb_sdp_uboot.conf
+vid=0x15a2 pid=0x0076 file_name=mx7_usb_rom.conf
+-> vid=0x1b67 pid=0x4000 file_name=mx7_usb_sdp_uboot.conf
+vid=0x15a2 pid=0x0080 file_name=mx6ull_usb_rom.conf
+-> vid=0x1b67 pid=0x4000 file_name=mx6ull_usb_sdp_uboot.conf
+config file <./recovery//mx6_usb_rom.conf>
+parse ./recovery//mx6_usb_rom.conf
+Trying to open device vid=0x15a2 pid=0x0054
+Interface 0 claimed
+HAB security state: development mode (0x56787856)
+== work item
+filename SPL
+load_size 0 bytes
+load_addr 0x13f00000
+dcd 0
+clear_dcd 0
+plug 0
+jump_mode 3
+jump_addr 0x00000000
+== end work item
+
+loading binary file(SPL) to 00907400, skip=0, fsize=bc00 type=aa
+
+<<<48128, 48128 bytes>>>
+succeeded (status 0x88888888)
+jumping to 0x00907400
+config file <./recovery//mx6_usb_sdp_spl.conf>
+parse ./recovery//mx6_usb_sdp_spl.conf
+Trying to open device vid=0x1b67 pid=0x4fff.
+Interface 0 claimed
+HAB security state: development mode (0x56787856)
+== work item
+filename u-boot.img
+load_size 0 bytes
+load_addr 0x03f00001
+dcd 0
+clear_dcd 0
+plug 0
+jump_mode 3
+jump_addr 0x00000000
+== end work item
+
+loading binary file(u-boot.img) to 177fffc0, skip=0, fsize=4ced0 type=aa
+
+<<<315088, 315392 bytes>>>
+succeeded (status 0x88888888)
+jumping to 0x177fffc0
+config file <./recovery//mx6_usb_sdp_uboot.conf>
+parse ./recovery//mx6_usb_sdp_uboot.conf
+Trying to open device vid=0x1b67 pid=0x4000.
+Interface 0 claimed
+HAB security state: development mode (0x56787856)
+== work item
+filename tezi.itb
+load_size 0 bytes
+load_addr 0x12100000
+dcd 0
+clear_dcd 0
+plug 0
+jump_mode 0
+jump_addr 0x00000000
+== end work item
+load_addr=12100000
+
+loading binary file(tezi.itb) to 12100000, skip=0, fsize=13aff74 type=0
+
+<<<20643700, 20643840 bytes>>>
+succeeded (status 0x88888888)
+HAB security state: development mode (0x56787856)
+== work item
+filename boot-sdp.scr
+load_size 0 bytes
+load_addr 0x12000000
+dcd 0
+clear_dcd 0
+plug 0
+jump_mode 1
+jump_addr 0x12000000
+== end work item
+load_addr=12000000
+
+loading binary file(boot-sdp.scr) to 12000000, skip=0, fsize=16f type=aa
+
+<<<367, 1024 bytes>>>
+succeeded (status 0x88888888)
+jumping to 0x12000000
+Successfully downloaded Toradex Easy Installer.
+
+embadmin@ubuntu:~/Aravinth/Apalis-iMX6_ToradexEasyInstaller_1.3-20171201$
